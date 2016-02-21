@@ -745,3 +745,79 @@ h2.price {
     background-image: none;
     background-color: #df5c39;
 }
+
+
+
+
+
+
+
+
+
+/*todo css preloader*/
+.container-loader{
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate( -50%, -50% );
+}
+.container1 {
+	animation:fadeInUp 5s infinite;
+}
+.container2 {
+	animation:fadeInDown 5s infinite;
+}
+.container3 {
+	width : 100%;
+	text-align : center;
+}
+.circle{
+	position:absolute;
+	display:block;
+	border-radius:50%;
+	border: 2px solid #C04CFD;
+	transform-origin:50% 50%;
+	transform-style:preserve-3d;
+}
+
+.circle1 {
+	animation : rotate1 1s infinite linear;
+	border-color : #A27035;
+	height:100px;
+	width:100px;
+	margin:-50px;
+}
+.circle2 {
+	animation : rotate2 1s infinite linear;
+	border-color : #B88B4A;
+	height:70px;
+	width:70px;
+	margin:-35px;
+}
+.circle3 {
+	animation:rotate3 1s infinite linear;
+	border-color : #DDCA7D;
+	height:10px;
+	width:10px;
+	margin:-5px;
+}
+
+.color1 { color : #A27035; }
+.color2 { color : #B88B4A; }
+.color3 { color : #DDCA7D; }
+
+@keyframes rotate1{
+	0% { transform: rotateZ(20deg) rotateY(0deg) }
+	100% { transform: rotateZ(100deg) rotateY(360deg) }
+}
+@keyframes rotate2{
+	0% { transform: rotateZ(100deg) rotateX(0deg) }
+	100% { transform: rotateZ(0deg) rotateX(360deg) }
+}
+@keyframes rotate3{
+	0% { transform: rotateZ(100deg) rotateX(-360deg) }
+	100% { transform: rotateZ(-360deg) rotateX(360deg) }
+}
+
+
+
