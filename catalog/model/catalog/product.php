@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Class ModelCatalogProduct
+ * todo модель вывод продуктов
+ */
 class ModelCatalogProduct extends Model {
 	public function updateViewed($product_id) {
 		$this->db->query("UPDATE " . DB_PREFIX . "product SET viewed = (viewed + 1) WHERE product_id = '" . (int)$product_id . "'");
@@ -96,6 +101,14 @@ class ModelCatalogProduct extends Model {
 				$sql .= " AND pf.filter_id IN (" . implode(',', $implode) . ")";
 			}
 		}
+
+
+        //todo добавляем в запрос выборки товаров условие по диапазону цен
+        if (!empty($data['price_filter'])) {
+            if ($data['price_filter']['min'] != '' and $data['price_filter']['max'] != '') {
+                $sql .= " AND (p.price BETWEEN " . $data['price_filter']['min'] . " AND " . $data['price_filter']['max'] . ")";
+            }
+        }
 
 		if (!empty($data['filter_name']) || !empty($data['filter_tag'])) {
 			$sql .= " AND (";

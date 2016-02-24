@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * Class ControllerProductCategory
+ * todo вывод продуктов в категории
+ */
 class ControllerProductCategory extends Controller {
 	public function index() {
 		$this->load->language('product/category');
@@ -14,6 +19,18 @@ class ControllerProductCategory extends Controller {
 		} else {
 			$filter = '';
 		}
+
+
+        //передача параметров для фильтра цены
+        if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
+            //dd($this->request->get);
+            $PriceFrom = $this->request->get['PriceFrom'];
+            $PriceTo = $this->request->get['PriceTo'];
+        } else {
+            $PriceFrom = '';
+            $PriceTo = '';
+        }
+
 
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
@@ -171,6 +188,7 @@ class ControllerProductCategory extends Controller {
 			$filter_data = array(
 				'filter_category_id' => $category_id,
 				'filter_filter'      => $filter,
+                'price_filter'		 => array('min' => $PriceFrom, 'max' => $PriceTo), //добавлен фильтр по цене
 				'sort'               => $sort,
 				'order'              => $order,
 				'start'              => ($page - 1) * $limit,
