@@ -250,6 +250,11 @@ class ControllerProductCategory extends Controller {
 				$url .= '&filter=' . $this->request->get['filter'];
 			}
 
+            //todo добавляем цену к части урла который попалает в сортировку
+            if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
+                $url .= '&PriceFrom=' . $this->request->get['PriceFrom'].'&PriceTo=' . $this->request->get['PriceTo'];
+            }
+
 			if (isset($this->request->get['limit'])) {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
@@ -318,6 +323,11 @@ class ControllerProductCategory extends Controller {
 				$url .= '&filter=' . $this->request->get['filter'];
 			}
 
+            //todo добавляем цену к части урла который попалает в сортировку
+            if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
+                $url .= '&PriceFrom=' . $this->request->get['PriceFrom'].'&PriceTo=' . $this->request->get['PriceTo'];
+            }
+
 			if (isset($this->request->get['sort'])) {
 				$url .= '&sort=' . $this->request->get['sort'];
 			}
@@ -346,6 +356,7 @@ class ControllerProductCategory extends Controller {
 				$url .= '&filter=' . $this->request->get['filter'];
 			}
 
+
 			if (isset($this->request->get['sort'])) {
 				$url .= '&sort=' . $this->request->get['sort'];
 			}
@@ -358,6 +369,8 @@ class ControllerProductCategory extends Controller {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
 
+
+            //dd($product_total);
 			$pagination = new Pagination();
 			$pagination->total = $product_total;
 			$pagination->page = $page;

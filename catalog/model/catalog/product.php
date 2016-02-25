@@ -451,7 +451,15 @@ class ModelCatalogProduct extends Model {
 
 				$sql .= " AND pf.filter_id IN (" . implode(',', $implode) . ")";
 			}
+
 		}
+
+        //todo добавляем в запрос выборки товаров условие по диапазону цен количество товаров
+        if (!empty($data['price_filter'])) {
+            if ($data['price_filter']['min'] != '' and $data['price_filter']['max'] != '') {
+                $sql .= " AND (p.price BETWEEN " . $data['price_filter']['min'] . " AND " . $data['price_filter']['max'] . ")";
+            }
+        }
 
 		if (!empty($data['filter_name']) || !empty($data['filter_tag'])) {
 			$sql .= " AND (";
