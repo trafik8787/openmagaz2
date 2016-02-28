@@ -400,13 +400,26 @@ class ControllerProductCategory extends Controller {
 
 			$data['continue'] = $this->url->link('common/home');
 
+            $data['column_left'] = $this->load->controller('common/column_left');
+            $data['column_right'] = $this->load->controller('common/column_right');
+            $data['content_top'] = $this->load->controller('common/content_top');
+            $data['content_bottom'] = $this->load->controller('common/content_bottom');
+
 			if (in_ajax()) {
-				echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax.tpl', $data);
+
+
+//                echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax.tpl', $data);
+                if (empty($_POST['general_category'])) {
+
+                    echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax.tpl', $data);
+                } else {
+
+                   echo $this->load->view($this->config->get('config_template') . '/template/product/category.tpl', $data);
+
+                }
+
 			} else {
-				$data['column_left'] = $this->load->controller('common/column_left');
-				$data['column_right'] = $this->load->controller('common/column_right');
-				$data['content_top'] = $this->load->controller('common/content_top');
-				$data['content_bottom'] = $this->load->controller('common/content_bottom');
+
 				$data['footer'] = $this->load->controller('common/footer');
 				$data['header'] = $this->load->controller('common/header');
 

@@ -8,10 +8,54 @@ $(document).ready(function() {
 
     $('.pagination a').on('click', function(){
 
-        console.log(this.href);
         input_sort (this.href);
         return false;
     });
+
+
+    $(document).on('click', '.w-wsubcat' ,function(){
+
+        input_sort (this.href);
+        history.pushState('', '', this.href);
+        return false;
+    });
+
+
+    $(document).on('click', '.w-group-wsubcat a' ,function(){
+
+        $('.w-group-wsubcat a').removeClass('active');
+        $(this).addClass('active');
+
+    });
+
+
+
+    $('.w-general-category').on('click', function(){
+
+        $('.container-loader').show();
+
+        history.pushState('', '', this.href);
+
+        $.ajax({ // описываем наш запрос
+            type: "POST", // будем передавать данные через POST
+            dataType: "HTML", // указываем, что нам вернется JSON
+            url: this.href,
+            data: 'general_category=1', // передаем данные из формы
+            success: function (response) { // когда получаем ответ
+
+                $('.w-general-container').empty();
+                $('.w-general-container').html(response);
+                $('.container-loader').hide();
+
+                initialize_grid();
+
+            }
+
+        });
+
+        return false;
+    });
+
 
 
 });

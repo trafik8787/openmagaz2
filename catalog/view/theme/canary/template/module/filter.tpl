@@ -85,7 +85,7 @@ $(function () {
         }
 
 
-        var action = '<?php echo $action; ?>';
+        var action = window.location.href;
         redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
         history.pushState('', '', redirect);
 
@@ -145,7 +145,7 @@ $(function () {
             min_price = '&PriceFrom='+ui.values[0];
             max_price = '&PriceTo='+ui.values[1];
 
-            var action = "<?php echo $action; ?>";
+            var action = window.location.href;
             redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
             history.pushState('', '', redirect);
 

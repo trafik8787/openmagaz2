@@ -53,3 +53,18 @@ function in_ajax () {
 		return false;
 	}
 }
+
+
+function HostSite ($link = null)
+{
+    $str_link = 'http://' . $_SERVER['HTTP_HOST'];
+    if ($link != null) {
+        $str_link = 'http://' . $_SERVER['HTTP_HOST'] . $link;
+    }
+
+    return $str_link;
+}
+
+function RecuestUri () {
+    return 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+}
