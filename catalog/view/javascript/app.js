@@ -5,7 +5,7 @@
 $(document).ready(function() {
 
 
-
+    //пагинация ajax
     $('.pagination a').on('click', function(){
 
         input_sort (this.href);
@@ -13,6 +13,7 @@ $(document).ready(function() {
     });
 
 
+    //загрузка товаров из подкатегории
     $(document).on('click', '.w-wsubcat' ,function(){
 
         input_sort (this.href);
@@ -21,6 +22,7 @@ $(document).ready(function() {
     });
 
 
+    //модуль подкатегорий добавление класса по клике
     $(document).on('click', '.w-group-wsubcat a' ,function(){
 
         $('.w-group-wsubcat a').removeClass('active');
@@ -30,6 +32,7 @@ $(document).ready(function() {
 
 
 
+    //load controller general category
     $('.w-general-category').on('click', function(){
 
         $('.container-loader').show();
@@ -57,6 +60,51 @@ $(document).ready(function() {
     });
 
 
+
+
+    //загрузка продуктов
+    $(document).on('click', '.w-product-ajax' ,function(){
+
+        $('.container-loader').show();
+        //console.log(this.href);
+
+        history.pushState('', '', this.href);
+
+        $.ajax({ // описываем наш запрос
+            type: "GET", // будем передавать данные через POST
+            dataType: "HTML", // указываем, что нам вернется JSON
+            url: this.href,
+            data: this.href, // передаем данные из формы
+            success: function (response) { // когда получаем ответ
+
+
+                $('.w-general-container').empty();
+                $('.w-general-container').html(response);
+                $('.container-loader').hide();
+
+               // initialize_grid();
+
+            }
+
+        });
+
+
+        $('.date').datetimepicker({
+            pickTime: false
+        });
+
+        $('.datetime').datetimepicker({
+            pickDate: true,
+            pickTime: true
+        });
+
+        $('.time').datetimepicker({
+            pickDate: false
+        });
+
+
+        return false;
+    });
 
 });
 

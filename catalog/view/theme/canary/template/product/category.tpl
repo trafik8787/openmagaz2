@@ -106,7 +106,7 @@
                     <?php foreach ($products as $product) { ?>
                     <div class="product-layout product-list col-xs-12">
                         <div class="product-thumb">
-                            <div class="image"><a href="<?php echo $product['href']; ?>"><img
+                            <div class="image"><a href="<?php echo $product['href']; ?>" class="w-product-ajax"><img
                                     src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>"
                                     title="<?php echo $product['name']; ?>" class="img-responsive"/></a></div>
                             <div>

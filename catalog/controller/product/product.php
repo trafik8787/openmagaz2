@@ -466,18 +466,26 @@ class ControllerProductProduct extends Controller {
 
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
 
-			$data['column_left'] = $this->load->controller('common/column_left');
-			$data['column_right'] = $this->load->controller('common/column_right');
-			$data['content_top'] = $this->load->controller('common/content_top');
-			$data['content_bottom'] = $this->load->controller('common/content_bottom');
-			$data['footer'] = $this->load->controller('common/footer');
-			$data['header'] = $this->load->controller('common/header');
 
-			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
-				$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data));
-			} else {
-				$this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
-			}
+            $data['column_left'] = $this->load->controller('common/column_left');
+            $data['column_right'] = $this->load->controller('common/column_right');
+            $data['content_top'] = $this->load->controller('common/content_top');
+            $data['content_bottom'] = $this->load->controller('common/content_bottom');
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+
+            if (in_ajax()) {
+                echo $this->load->view($this->config->get('config_template') . '/template/product/product_ajax.tpl', $data);
+            } else {
+
+
+                if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
+                    $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data));
+                } else {
+                    $this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
+                }
+            }
+
 		} else {
 			$url = '';
 

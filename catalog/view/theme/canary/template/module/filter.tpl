@@ -43,6 +43,10 @@
                                value="<?php if (!empty($PriceTo)) { echo  $PriceTo; } else { echo $filter_group['dop_filter']['max']; }?>">
                     </div>
                 </div>
+
+
+                <div id="slider2"></div>
+
             </div>
         </div>
 
@@ -121,6 +125,16 @@ $(function () {
 
     var ValMin = $(".dop-filtr-price-min").val();
     var ValMax = $(".dop-filtr-price-max").val();
+
+
+    var slider2 = $('#slider2').slider({
+        min: 1,
+        max: 8,
+        range: true,
+        animate: 'slow',
+        values: [1, 8]
+    });
+
 
     var slider = $("#slider").slider({
         range: true,

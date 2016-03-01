@@ -408,13 +408,12 @@ class ControllerProductCategory extends Controller {
 			if (in_ajax()) {
 
 
-//                echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax.tpl', $data);
                 if (empty($_POST['general_category'])) {
 
                     echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax.tpl', $data);
                 } else {
 
-                   echo $this->load->view($this->config->get('config_template') . '/template/product/category.tpl', $data);
+                   echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax_general.tpl', $data);
 
                 }
 
