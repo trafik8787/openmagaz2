@@ -45,8 +45,6 @@
                 </div>
 
 
-                <div id="slider2"></div>
-
             </div>
         </div>
 
@@ -89,7 +87,7 @@ $(function () {
         }
 
 
-        var action = window.location.href;
+        var action = '<?php echo $action?>';
         redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
         history.pushState('', '', redirect);
 
@@ -127,13 +125,13 @@ $(function () {
     var ValMax = $(".dop-filtr-price-max").val();
 
 
-    var slider2 = $('#slider2').slider({
-        min: 1,
-        max: 8,
-        range: true,
-        animate: 'slow',
-        values: [1, 8]
-    });
+//    var slider2 = $('#slider2').slider({
+//        min: 1,
+//        max: 8,
+//        range: true,
+//        animate: 'slow',
+//        values: [1, 8]
+//    });
 
 
     var slider = $("#slider").slider({
@@ -159,7 +157,7 @@ $(function () {
             min_price = '&PriceFrom='+ui.values[0];
             max_price = '&PriceTo='+ui.values[1];
 
-            var action = window.location.href;
+            var action = '<?php echo $action?>';
             redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
             history.pushState('', '', redirect);
 
