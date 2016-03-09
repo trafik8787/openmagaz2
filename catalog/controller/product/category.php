@@ -20,6 +20,7 @@ class ControllerProductCategory extends Controller {
 			$filter = '';
 		}
 
+       // rapnet3();
 
         //передача параметров для фильтра цены
         if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
@@ -198,6 +199,8 @@ class ControllerProductCategory extends Controller {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
+
+           // dd($results);
 
 			foreach ($results as $result) {
 				if ($result['image']) {
@@ -404,6 +407,9 @@ class ControllerProductCategory extends Controller {
             $data['column_right'] = $this->load->controller('common/column_right');
             $data['content_top'] = $this->load->controller('common/content_top');
             $data['content_bottom'] = $this->load->controller('common/content_bottom');
+
+            //текущий url для фильтра(при нажатии на фильт обнулялась подкатегория теперь путь берется из скрытого поля <input type="hidden" class="w-action_page" >)
+            $data['action_page'] = $this->url->link('product/category', 'path=' . $this->request->get['path']);
 
 			if (in_ajax()) {
 

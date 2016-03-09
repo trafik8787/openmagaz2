@@ -71,7 +71,7 @@ $(function () {
 
 
     $('input[name^=\'filter\']').on('change', function () {
-
+        history.pushState('', '', '');
         filter = [];
         $('input[name^=\'filter\']:checked').each(function (element) {
             filter.push(this.value);
@@ -87,10 +87,11 @@ $(function () {
         }
 
 
-        var action = '<?php echo $action?>';
+        var action = $('.w-action_page').val();
         redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
         history.pushState('', '', redirect);
 
+       // console.log(location.search);
 
         $('.container-loader').show();
 
@@ -106,9 +107,7 @@ $(function () {
                 $('.w-category-ajax').html(response);
                 $('.container-loader').hide();
 
-
                 initialize_grid();
-
 
             }
         });
@@ -157,7 +156,7 @@ $(function () {
             min_price = '&PriceFrom='+ui.values[0];
             max_price = '&PriceTo='+ui.values[1];
 
-            var action = '<?php echo $action?>';
+            var action = $('.w-action_page').val();
             redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
             history.pushState('', '', redirect);
 

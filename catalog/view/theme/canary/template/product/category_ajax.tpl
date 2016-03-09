@@ -1,4 +1,5 @@
 <?php if ($thumb || $description) { ?>
+<input type="hidden" class="w-action_page" value="<?php echo $action_page?>">
 <div class="row">
     <?php if ($thumb) { ?>
     <div class="col-sm-2"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>"
