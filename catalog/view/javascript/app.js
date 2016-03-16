@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 
     //пагинация ajax
-    $('.pagination a').on('click', function(){
+    $('.w-pagination-product .pagination a').on('click', function(){
 
         input_sort (this.href);
         return false;
@@ -175,11 +175,5 @@ function initialize_grid () {
         localStorage.setItem('display', 'grid');
     });
 
-
-    $('.pagination a').on('click', function(){
-
-        input_sort (this.href);
-        return false;
-    });
 
 }
