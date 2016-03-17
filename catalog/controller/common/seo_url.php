@@ -1,5 +1,10 @@
 <?php
 class ControllerCommonSeoUrl extends Controller {
+
+    private $url_list = array(
+        'module/rapnet/getproduct' => 'diamond_page'
+    );
+
 	public function index() {
 		// Add rewrite to url class
 		if ($this->config->get('config_seo_url')) {
@@ -50,6 +55,13 @@ class ControllerCommonSeoUrl extends Controller {
 					break;
 				}
 			}
+
+
+            /* SEO Custom URL */
+            if ( $_s = $this->setURL($this->request->get['_route_']) ) {
+                $this->request->get['route'] = $_s;
+            }/* SEO Custom URL */
+
 
 			if (!isset($this->request->get['route'])) {
 				if (isset($this->request->get['product_id'])) {
@@ -105,7 +117,16 @@ class ControllerCommonSeoUrl extends Controller {
 
 					unset($data[$key]);
 				}
-			}
+
+
+                /* SEO Custom URL */
+                if( $_u = $this->getURL($data['route']) ){
+                    $url .= $_u;
+                    unset($data[$key]);
+                }/* SEO Custom URL */
+
+
+            }
 		}
 
 		if ($url) {
@@ -128,4 +149,30 @@ class ControllerCommonSeoUrl extends Controller {
 			return $link;
 		}
 	}
+
+
+
+    /* SEO Custom URL */
+    public function getURL($route) {
+        if( count($this->url_list) > 0) {
+            foreach ($this->url_list as $key => $value) {
+                if($route == $key) {
+                    return '/'.$value;
+                }
+            }
+        }
+        return false;
+    }
+    public function setURL($_route) {
+        if( count($this->url_list) > 0 ){
+            foreach ($this->url_list as $key => $value) {
+                if($_route == $value) {
+                    return $key;
+                }
+            }
+        }
+        return false;
+    }/* SEO Custom URL */
+
+
 }

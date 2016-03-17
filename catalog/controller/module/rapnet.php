@@ -361,4 +361,11 @@ class ControllerModuleRapnet extends Controller {
 
     }
 
+
+    public function getproduct (){
+        dd( $this->request->get);
+    }
+
+
+
 }
