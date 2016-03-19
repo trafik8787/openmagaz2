@@ -736,7 +736,8 @@
         $(document).on('click', '.w-pagination-diamonts .pagination li a', function(){
 
             $('.container-loader').show();
-            var $gets = parseQueryString (this.href);
+            var $gets = parseQueryString ($(this).href());
+            console.log($gets);
             $url_page = '&page='+$gets['page'];
             redirect = generate_url();
             history.pushState('', '', redirect);
@@ -790,6 +791,33 @@
             return objRes;
         }
 
+
+
+
+        $(document).on('click', '.w-product-diamonts', function(){
+
+            $('.container-loader').show();
+
+            history.pushState('', '', this.href);
+
+            $.ajax({
+                type: "GET",
+                dataType: "HTML",
+                url: '/index.php?route=module/rapnet/getproduct',
+                data: 'diamond_id='+$(this).data('id'),
+                success: function (response) {
+
+
+                    $('.w-general-container').empty();
+                    $('.w-general-container').html(response);
+                    $('.container-loader').hide();
+
+                }
+
+            });
+
+           return false;
+        });
 
 
 

@@ -2770,10 +2770,6 @@ class scss_parser {
 	 * argument, advance the position in the buffer, and return true. If it
 	 * fails then it won't advance the buffer and it will return false.
 	 *
-	 * All of these parse functions are powered by scssc::match(), which behaves
-	 * the same way, but takes a literal regular expression. Sometimes it is
-	 * more convenient to use match instead of creating a new function.
-	 *
 	 * Because of the format of the functions, to parse an entire string of
 	 * grammatical rules, you can chain them together using &&.
 	 *

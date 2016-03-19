@@ -72,7 +72,7 @@ class ControllerModuleRapnet extends Controller {
             $data_diamonds = $decod_json->response->body->diamonds;
 
             if (!empty($data_diamonds)) {
-                $result['data'] = array_chunk($data_diamonds, 4);
+                $result['data'] = $data_diamonds;
             } else {
                 $result['data'] = array();
             }
@@ -143,7 +143,7 @@ class ControllerModuleRapnet extends Controller {
 
                  $data['pagination'] = $pagination->render();
 
-                 $data['data'] = array_chunk($data_diamonds, 4);
+                 $data['data'] = $data_diamonds;
 
              } elseif ($decod_json->response->header->error_code == 4001) {
                  $data['data_error'] = $decod_json->response->header->error_message;
@@ -154,7 +154,7 @@ class ControllerModuleRapnet extends Controller {
     }
 
 
-
+    //получаем список брилиантов по критериям фильтра
     private function parse () {
 
 
@@ -363,9 +363,52 @@ class ControllerModuleRapnet extends Controller {
 
 
     public function getproduct (){
-        dd( $this->request->get);
+//        dd( $this->request->get);
+
+
+        $data['column_left'] = $this->load->controller('common/column_left');
+        $data['column_right'] = $this->load->controller('common/column_right');
+        $data['content_top'] = $this->load->controller('common/content_top');
+        $data['content_bottom'] = $this->load->controller('common/content_bottom');
+
+
+        $data['product'] = $this->getDaimondsId();
+
+        if (in_ajax()) {
+            $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_product.tpl', $data));
+        } else {
+
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+
+            if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/rapnet_product.tpl')) {
+                $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_product.tpl', $data));
+            } else {
+                $this->response->setOutput(dd('NO PAGE'));
+            }
+        }
+
+
     }
 
+    //получаем брилиант по его id
+    private function getDaimondsId () {
+
+        $data = array('request' => array('header' => array('username' => $this->config->get('rapnet_name'), 'password' => $this->config->get('rapnet_pass')),
+            'body' => array('diamond_id' => $this->request->get['diamond_id'])
+        ));
+
+        $auth_url = "https://technet.rapaport.com/HTTP/JSON/RetailFeed/GetSingleDiamond.aspx";
+        $request = curl_init($auth_url);
+        curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
+        curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); // Returns response data instead of TRUE(1)
+        curl_setopt($request, CURLOPT_POSTFIELDS, json_encode($data)); // use HTTP POST to send form data
+        curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE); // uncomment this line if you get no gateway res
+
+        $response = curl_exec($request);
+
+        return json_decode($response);
+    }
 
 
 }

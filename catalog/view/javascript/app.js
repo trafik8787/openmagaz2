@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 
     //пагинация ajax
-    $('.w-pagination-product .pagination a').on('click', function(){
+    $(document).on('click', '.w-pagination-product .pagination a', function(){
 
         input_sort (this.href);
         return false;

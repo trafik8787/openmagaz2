@@ -287,3 +287,32 @@ function setDiamondParams($shape, $size, $color, $clarity)
 
      return $price_array;
  }
+
+
+
+ function imageDiamont ($shapes) {
+
+     if ($shapes == 'Round') {
+        return '/image/catalog/shapes/round.jpg';
+     } elseif ($shapes == 'Pear') {
+         return '/image/catalog/shapes/pear.jpg';
+     } elseif ($shapes == 'Princess') {
+         return '/image/catalog/shapes/princess.jpg';
+     } elseif ($shapes == 'Marquise') {
+         return '/image/catalog/shapes/marquise.jpg';
+     } elseif ($shapes == 'Oval') {
+         return '/image/catalog/shapes/oval.jpg';
+     } elseif ($shapes == 'Radiant') {
+         return '/image/catalog/shapes/radiant.jpg';
+     } elseif ($shapes == 'Emerald') {
+         return '/image/catalog/shapes/emerald.jpg';
+     } elseif ($shapes == 'Heart') {
+         return '/image/catalog/shapes/heart.jpg';
+     } elseif ($shapes == 'Cushion Modified') {
+         return '/image/catalog/shapes/cushion.jpg';
+     } elseif ($shapes == 'Asscher') {
+         return '/image/catalog/shapes/asscher.jpg';
+     }
+
+
+ }
