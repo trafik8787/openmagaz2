@@ -1,5 +1,11 @@
-<?php echo isset($header) ? $header : ''; ?>
+<?php if (isset($header)):?>
+    <?php echo $header?>
 <div class="container w-diamonds-product w-general-container">
+
+<?endif?>
+
+    <input type="hidden" id="w-diamond_id" value="<?php echo $product->response->body->diamond->diamond_id?>">
+
     <ul class="breadcrumb">
         <li><a href="#">1</a></li>
         <li><a href="#">2</a></li>
@@ -7,9 +13,9 @@
     </ul>
     <div class="row">
         <?php echo isset($column_left) ? $column_left: ''; ?>
-        <?php if (isset($column_left) && isset($column_right)) { ?>
+        <?php if ($column_left && $column_right) { ?>
         <?php $class = 'col-sm-6'; ?>
-        <?php } elseif (isset($column_left) || isset($column_right)) { ?>
+        <?php } elseif ($column_left || $column_right) { ?>
         <?php $class = 'col-sm-9'; ?>
         <?php } else { ?>
         <?php $class = 'col-sm-12'; ?>
@@ -17,7 +23,7 @@
         <div id="content" class="<?php echo $class; ?>">
             <?php echo $content_top; ?>
             <div class="row">
-                <?php if (isset($column_left) || isset($column_right)) { ?>
+                <?php if ($column_left || $column_right) { ?>
                 <?php $class = 'col-sm-6'; ?>
                 <?php } else { ?>
                 <?php $class = 'col-sm-8'; ?>
@@ -36,7 +42,8 @@
                 <div class="<?php echo $class; ?>">
 
                     <div id="product">
-                        #product
+                        <button type="button" id="w-diamont-button-cart" data-loading-text="Loading..." class="btn btn-primary btn-lg btn-block">Add to Cart</button>
+
 
                     </div>
                 </div>
@@ -61,6 +68,38 @@
         </div>
         <?php echo $column_right; ?>
     </div>
+<?php if(isset($footer)):?>
 </div>
+<?php echo $footer?>
+<?endif?>
 
-<?php echo isset($footer) ? $footer : ''; ?>
+<script>
+
+
+    $(document).on('click', '#w-diamont-button-cart', function(){
+
+
+        $.ajax({
+            url: 'index.php?route=checkout/cart/add_diamond',
+            type: 'GET',
+            data: 'diamond_id='+$('#w-diamond_id').val(),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#w-diamont-button-cart').button('loading');
+            },
+            complete: function() {
+                $('#w-diamont-button-cart').button('reset');
+            },
+            success: function(json) {
+                console.log(json);
+                $('#cart > button').html('<i class="fa fa-shopping-cart"></i> ' + json.total);
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert('ошибочка вышла');
+            }
+        });
+
+        return false;
+    });
+
+</script>

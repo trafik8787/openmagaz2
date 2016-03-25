@@ -1,5 +1,11 @@
 <?php
 class ControllerCheckoutCart extends Controller {
+
+
+
+
+
+
 	public function index() {
 		$this->load->language('checkout/cart');
 
@@ -73,7 +79,10 @@ class ControllerCheckoutCart extends Controller {
 
 			$data['products'] = array();
 
+            //получаем продукры которые были добавлены в корзину
 			$products = $this->cart->getProducts();
+
+           // dd($products, true);
 
 			foreach ($products as $product) {
 				$product_total = 0;
@@ -93,6 +102,13 @@ class ControllerCheckoutCart extends Controller {
 				} else {
 					$image = '';
 				}
+
+
+                //картинка diamond для ресайза
+                if (isset($product['diamond'])) {
+                    $image = $product['image'];
+                }
+
 
 				$option_data = array();
 
@@ -151,8 +167,19 @@ class ControllerCheckoutCart extends Controller {
 					}
 				}
 
-				$data['products'][] = array(
+                //ссылка на страницу брилианта
+                if (isset($product['diamond'])) {
+                    $href = '/diamond_page?diamond_id='.$product['product_id'];
+                } else {
+                    $href = $this->url->link('product/product', 'product_id=' . $product['product_id']);
+                }
+
+
+
+
+                $data['products'][] = array(
 					'cart_id'   => $product['cart_id'],
+                    'diamond'   => isset($product['diamond']) ? $product['diamond'] : 0, //добавлен флаг
 					'thumb'     => $image,
 					'name'      => $product['name'],
 					'model'     => $product['model'],
@@ -163,8 +190,11 @@ class ControllerCheckoutCart extends Controller {
 					'reward'    => ($product['reward'] ? sprintf($this->language->get('text_points'), $product['reward']) : ''),
 					'price'     => $price,
 					'total'     => $total,
-					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id'])
+					'href'      => $href
 				);
+
+
+
 			}
 
 			// Gift Voucher
@@ -282,6 +312,18 @@ class ControllerCheckoutCart extends Controller {
 		}
 	}
 
+
+
+
+
+
+
+
+
+
+
+
+
 	public function add() {
 		$this->load->language('checkout/cart');
 
@@ -395,6 +437,20 @@ class ControllerCheckoutCart extends Controller {
 		$this->response->setOutput(json_encode($json));
 	}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	public function edit() {
 		$this->load->language('checkout/cart');
 
@@ -418,6 +474,16 @@ class ControllerCheckoutCart extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+
+
+
+
+
+
+
+
+
 
 	public function remove() {
 		$this->load->language('checkout/cart');
@@ -480,4 +546,68 @@ class ControllerCheckoutCart extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+
+
+
+
+
+    //todo добавить брилиант в корзину
+    public function add_diamond () {
+
+        $this->load->language('checkout/cart');
+        $this->load->model('catalog/product');
+
+        $controller_rapnet = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $this->request->get['diamond_id']));
+        $json = array();
+
+        $rapnet_decode = json_decode($controller_rapnet);
+
+
+
+        $this->cart->add($this->request->get['diamond_id'], 1, array($rapnet_decode), 0, 1);
+
+        // Totals
+        $this->load->model('extension/extension');
+
+        $total_data = array();
+        $total = 0;
+        $taxes = $this->cart->getTaxes();
+
+        $results = $this->model_extension_extension->getExtensions('total');
+
+
+        foreach ($results as $result) {
+            if ($this->config->get($result['code'] . '_status')) {
+                $this->load->model('total/' . $result['code']);
+
+                $this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
+            }
+        }
+
+        $sort_order = array();
+
+        foreach ($total_data as $key => $value) {
+            $sort_order[$key] = $value['sort_order'];
+        }
+
+        array_multisort($sort_order, SORT_ASC, $total_data);
+
+//        dd($this->cart->countProducts());
+//        dd($total);
+//        dd($this->currency->format($total));
+//        die('sdf');
+
+       // $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->get['diamond_id']), $product_info['name'], $this->url->link('checkout/cart'));
+        $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total));
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
+    }
+
+
+
+
+
+
 }

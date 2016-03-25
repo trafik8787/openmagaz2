@@ -89,7 +89,7 @@ class ControllerModuleRapnet extends Controller {
             $pagination->total = $decod_json->response->body->search_results->total_diamonds_found;
             $pagination->page = $page;
             $pagination->limit = $decod_json->response->body->search_results->diamonds_returned;
-            $pagination->url = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $this->url_paginate . '&page={page}');
+            $pagination->url = $this->url->link('product/category', $this->url_paginate . '&page={page}');
 
 
             $result['pagination'] = $pagination->render();
@@ -372,7 +372,7 @@ class ControllerModuleRapnet extends Controller {
         $data['content_bottom'] = $this->load->controller('common/content_bottom');
 
 
-        $data['product'] = $this->getDaimondsId();
+        $data['product'] = json_decode($this->getDaimondsId());
 
         if (in_ajax()) {
             $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_product.tpl', $data));
@@ -392,10 +392,16 @@ class ControllerModuleRapnet extends Controller {
     }
 
     //получаем брилиант по его id
-    private function getDaimondsId () {
+    public function getDaimondsId ($id = null) {
+
+        if ($id === null) {
+            $diamond_id = $this->request->get['diamond_id'];
+        } else {
+            $diamond_id = $id['diamond_id'];
+        }
 
         $data = array('request' => array('header' => array('username' => $this->config->get('rapnet_name'), 'password' => $this->config->get('rapnet_pass')),
-            'body' => array('diamond_id' => $this->request->get['diamond_id'])
+            'body' => array('diamond_id' => $diamond_id)
         ));
 
         $auth_url = "https://technet.rapaport.com/HTTP/JSON/RetailFeed/GetSingleDiamond.aspx";
@@ -407,7 +413,7 @@ class ControllerModuleRapnet extends Controller {
 
         $response = curl_exec($request);
 
-        return json_decode($response);
+        return $response;
     }
 
 

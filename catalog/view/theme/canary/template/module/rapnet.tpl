@@ -387,7 +387,7 @@
 
 
         $(document).on('change', '.w-group-shape input', function(){
-            $('.container-loader').show();
+
             $url_shape = '&shape='+$(this).val();
             redirect = generate_url();
             history.pushState('', '', redirect);
@@ -398,7 +398,7 @@
 
 
         $(document).on('change', '.w-group-labs input', function(){
-            $('.container-loader').show();
+
             var $labs_cecout = [];
             $('.w-group-labs input:checked').each(function (element) {
                 $labs_cecout.push(this.value);
@@ -414,7 +414,7 @@
 
 
         $(document).on('change', '.w-group-fluorescence-intensities input', function(){
-            $('.container-loader').show();
+
             var $fluorescence_intensities_cecout = [];
             $('.w-group-fluorescence-intensities input:checked').each(function (element) {
                 $fluorescence_intensities_cecout.push(this.value);
@@ -443,7 +443,7 @@
 
 
         $(document).on('change', '#w-product-sortby', function(){
-            $('.container-loader').show();
+
             $url_sortby = '&sortby='+this.value;
             redirect = generate_url();
             history.pushState('', '', redirect);
@@ -470,7 +470,7 @@
                 }
             },
             change: function( event, ui ) {
-                $('.container-loader').show();
+
                 $url_color = '&color='+ui.values[0]+','+ui.values[1];
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
@@ -497,7 +497,7 @@
                 }
             },
             change: function( event, ui ) {
-                $('.container-loader').show();
+
                 $url_clarity = '&clarity='+ui.values[0]+','+ui.values[1];
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
@@ -523,7 +523,7 @@
                 }
             },
             change: function( event, ui ) {
-                $('.container-loader').show();
+
                 $url_cut = '&cut='+ui.values[0]+','+ui.values[1];
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
@@ -549,7 +549,7 @@
                 $('.w-input-carat-to').val(ui.values[1]);
             },
             change: function( event, ui ) {
-                $('.container-loader').show();
+
                 $url_carat = '&carat='+ui.values[0]+','+ui.values[1];
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
@@ -585,7 +585,7 @@
                 $('.w-input-price-to').val(ui.values[1]);
             },
             change: function( event, ui ) {
-                $('.container-loader').show();
+
                 $url_price = '&price='+ui.values[0]+','+ui.values[1];
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
@@ -623,7 +623,7 @@
                 }
             },
             change: function( event, ui ) {
-                $('.container-loader').show();
+
                 $url_polish = '&polish='+ui.values[0]+','+ui.values[1];
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
@@ -649,7 +649,7 @@
                 }
             },
             change: function( event, ui ) {
-                $('.container-loader').show();
+
                 $url_symmetry = '&symmetry='+ui.values[0]+','+ui.values[1];
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
@@ -675,7 +675,7 @@
                 $('.w-input-depth-to').val(ui.values[1]);
             },
             change: function( event, ui ) {
-                $('.container-loader').show();
+
                 $url_depth = '&depth='+ui.values[0]+','+ui.values[1];
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
@@ -712,7 +712,7 @@
                 $('.w-input-table-to').val(ui.values[1]);
             },
             change: function( event, ui ) {
-                $('.container-loader').show();
+
                 $url_table = '&table='+ui.values[0]+','+ui.values[1];
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
@@ -735,8 +735,9 @@
 
         $(document).on('click', '.w-pagination-diamonts .pagination li a', function(){
 
-            $('.container-loader').show();
-            var $gets = parseQueryString ($(this).href());
+           //alert($(this).href());
+
+            var $gets = parseQueryString ($(this).attr("href"));
             console.log($gets);
             $url_page = '&page='+$gets['page'];
             redirect = generate_url();
@@ -758,12 +759,18 @@
                 dataType: "HTML",
                 url: '/index.php?route=module/rapnet/getjson',
                 data: redirect,
+                beforeSend: function() {
+                    $('.container-loader').show();
+                },
+                complete: function() {
+                    $('.container-loader').hide();
+                },
                 success: function (response) {
 
                     $('#w-show-product').empty();
                     $('#w-show-product').html(response);
 
-                    $('.container-loader').hide();
+
                 }
 
             });
@@ -781,6 +788,9 @@
                     objRes   = {};
             if (strQuery != '') {
                 tmp = (strQuery.substr(1)).split('&');
+                if (tmp.length == 1) {
+                    tmp = strQuery.substr(1).split('?');
+                }
                 for (i = 0; i < tmp.length; i += 1) {
                     tmp2 = tmp[i].split('=');
                     if (tmp2[0]) {

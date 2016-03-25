@@ -28,4 +28,10 @@ class ModelPaymentCOD extends Model {
 
 		return $method_data;
 	}
+
+    //добавлен метод
+    public function recurringPayments(){
+        return true;
+    }
+
 }

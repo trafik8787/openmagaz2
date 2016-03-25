@@ -2,6 +2,8 @@
 class Cart {
 	private $data = array();
 
+    private $product_data = array();
+
 	public function __construct($registry) {
 		$this->config = $registry->get('config');
 		$this->customer = $registry->get('customer');
@@ -9,6 +11,7 @@ class Cart {
 		$this->db = $registry->get('db');
 		$this->tax = $registry->get('tax');
 		$this->weight = $registry->get('weight');
+        $this->load = $registry->get('load');
 
 		// Remove all the expired carts with no customer ID
 		$this->db->query("DELETE FROM " . DB_PREFIX . "cart WHERE customer_id = '0' AND date_added < DATE_SUB(NOW(), INTERVAL 1 HOUR)");
@@ -30,9 +33,13 @@ class Cart {
 	}
 
 	public function getProducts() {
-		$product_data = array();
+		$this->product_data = array();
 
-		$cart_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
+        //add  AND diamond = 0
+		$cart_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND diamond = 0");
+
+
+//        dd($cart_diamont, true);
 
 		foreach ($cart_query->rows as $cart) {
 			$stock = true;
@@ -236,7 +243,7 @@ class Cart {
 					$recurring = false;
 				}
 
-				$product_data[] = array(
+				$this->product_data[] = array(
 					'cart_id'         => $cart['cart_id'],
 					'product_id'      => $product_query->row['product_id'],
 					'name'            => $product_query->row['name'],
@@ -267,18 +274,101 @@ class Cart {
 			}
 		}
 
-		return $product_data;
+        //добавляем в общий масив товаром брилианты
+        $this->getProductsDiamondsCart();
+
+		return $this->product_data;
 	}
 
-	public function add($product_id, $quantity = 1, $option = array(), $recurring_id = 0) {
+
+
+
+
+
+
+
+
+
+
+
+    //получаем брилианты для корзины
+    public function getProductsDiamondsCart() {
+
+        $cart_query_diamong = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND diamond = 1");
+
+        if ($cart_query_diamong->num_rows) {
+
+            foreach ($cart_query_diamong->rows as $row) {
+
+
+                if ($row['quantity'] > 0) {
+
+
+                    foreach (json_decode($row['option']) as $controller_rapnet) {
+
+                        //dd($controller_rapnet, true);
+                        $data_arr_diamond = $controller_rapnet->response->body->diamond;
+
+                        $this->product_data[] = array(
+                            'cart_id' => $row['cart_id'],
+                            'product_id' => $row['product_id'],
+                            'diamond' => 1, //флаг означает что это брилиант
+                            'name' => 'Diamond',
+                            'model' => $data_arr_diamond->size . ' Catat ' . $data_arr_diamond->color . '-' . $data_arr_diamond->clarity . ' ' . $data_arr_diamond->cut . ' Cut ' . $data_arr_diamond->shape . ' Diamond',
+                            'shipping' => 1,
+                            'image' => imageDiamont($data_arr_diamond->shape),
+                            'option' => array(),
+                            'download' => array(),
+                            'quantity' => $row['quantity'],
+                            'minimum' => 1,
+                            'subtract' => 1,
+                            'stock' => 1,
+                            'price' => $data_arr_diamond->total_sales_price,
+                            'total' => $data_arr_diamond->total_sales_price,
+                            'reward' => 0,
+                            'points' => 0,
+                            'tax_class_id' => 0, //налог
+                            'weight' => $data_arr_diamond->size,
+                            'weight_class_id' => 7,
+                            'length' => 0.00000000,
+                            'width' => 0.00000000,
+                            'height' => 0.00000000,
+                            'length_class_id' => 2,
+                            'recurring' => ''
+                        );
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //метод добавляет товар в корзину
+	public function add($product_id, $quantity = 1, $option = array(), $recurring_id = 0, $diamond = 0) {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND product_id = '" . (int)$product_id . "' AND recurring_id = '" . (int)$recurring_id . "' AND `option` = '" . $this->db->escape(json_encode($option)) . "'");
 
 		if (!$query->row['total']) {
-			$this->db->query("INSERT " . DB_PREFIX . "cart SET customer_id = '" . (int)$this->customer->getId() . "', session_id = '" . $this->db->escape($this->session->getId()) . "', product_id = '" . (int)$product_id . "', recurring_id = '" . (int)$recurring_id . "', `option` = '" . $this->db->escape(json_encode($option)) . "', quantity = '" . (int)$quantity . "', date_added = NOW()");
+			$this->db->query("INSERT " . DB_PREFIX . "cart SET customer_id = '" . (int)$this->customer->getId() . "', session_id = '" . $this->db->escape($this->session->getId()) . "', product_id = '" . (int)$product_id . "', recurring_id = '" . (int)$recurring_id . "', `option` = '" . $this->db->escape(json_encode($option)) . "', quantity = '" . (int)$quantity . "', date_added = NOW(), diamond = '".$diamond."'");
 		} else {
 			$this->db->query("UPDATE " . DB_PREFIX . "cart SET quantity = (quantity + " . (int)$quantity . ") WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND product_id = '" . (int)$product_id . "' AND recurring_id = '" . (int)$recurring_id . "' AND `option` = '" . $this->db->escape(json_encode($option)) . "'");
 		}
 	}
+
 
 	public function update($cart_id, $quantity) {
 		$this->db->query("UPDATE " . DB_PREFIX . "cart SET quantity = '" . (int)$quantity . "' WHERE cart_id = '" . (int)$cart_id . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
@@ -293,15 +383,15 @@ class Cart {
 	}
 
 	public function getRecurringProducts() {
-		$product_data = array();
+		$this->product_data = array();
 
 		foreach ($this->getProducts() as $value) {
 			if ($value['recurring']) {
-				$product_data[] = $value;
+                $this->product_data[] = $value;
 			}
 		}
 
-		return $product_data;
+		return $this->product_data;
 	}
 
 	public function getWeight() {
