@@ -305,7 +305,11 @@
               <input type="text" name="quantity" value="<?php echo $minimum; ?>" size="2" id="input-quantity" class="form-control" />
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
               <br />
-              <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
+
+                <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary btn-lg btn-block"><?php echo $button_cart; ?></button>
+
+                <button type="button" id="w-button-add-product-complect" data-loading-text="<?php echo $text_loading; ?>"
+                       data-idproduct="<?php echo $id_product;?>" data-path="<?php echo $path?>" class="btn btn-default btn-lg btn-block">Add your diamond to a ring</button>
             </div>
             <?php if ($minimum > 1) { ?>
             <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_minimum; ?></div>

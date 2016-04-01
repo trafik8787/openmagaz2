@@ -363,7 +363,8 @@ class ControllerModuleRapnet extends Controller {
 
 
     public function getproduct (){
-//        dd( $this->request->get);
+
+        $data = array();
 
 
         $data['column_left'] = $this->load->controller('common/column_left');

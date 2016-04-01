@@ -110,6 +110,154 @@ $(document).ready(function() {
 
 
 
+//добавить в complect
+$(document).on('click', '#w-button-add-product-complect', function(){
+
+    var $this = $(this);
+
+    $.ajax({
+        url: 'index.php?route=module/complect/add_product_complect',
+        type: 'post',
+        data: 'complect_id_product='+$this.data('idproduct')+'&path='+$this.data('path'),
+        dataType: 'html',
+        beforeSend: function() {
+            $this.button('loading');
+        },
+        complete: function() {
+            $this.button('reset');
+        },
+        success: function(json) {
+            $('.w-blocs-complects').empty();
+            $('.w-blocs-complects').html(json);
+            console.log(json);
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+
+        }
+    });
+
+});
+
+
+$(document).on('click', '#w-button-add-diamond-complect', function(){
+
+    var $this = $(this);
+
+
+    $.ajax({
+        url: 'index.php?route=module/complect/add_product_complect',
+        type: 'post',
+        data: 'complect_id_diamond='+$this.data('idproduct')+'&shape='+$this.data('shape'),
+        dataType: 'html',
+        beforeSend: function() {
+            $this.button('loading');
+        },
+        complete: function() {
+            $this.button('reset');
+        },
+        success: function(json) {
+            $('.w-blocs-complects').empty();
+            $('.w-blocs-complects').html(json);
+           // console.log(json);
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+
+        }
+    });
+
+
+});
+
+
+
+$(document).on('click', '.w-remowe-diamond-complect', function(){
+
+    $.ajax({
+        url: 'index.php?route=module/complect/del_complect',
+        type: 'post',
+        data: 'complect_id_diamond=1',
+        dataType: 'html',
+        beforeSend: function() {
+            //$this.button('loading');
+        },
+        complete: function() {
+            //$this.button('reset');
+        },
+        success: function(json) {
+            $('.w-blocs-complects').empty();
+            $('.w-blocs-complects').html(json);
+            // console.log(json);
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+
+        }
+    });
+
+    return false;
+
+});
+
+$(document).on('click', '.w-remowe-product-complect', function(){
+
+    $.ajax({
+        url: 'index.php?route=module/complect/del_complect',
+        type: 'post',
+        data: 'complect_id_product=1',
+        dataType: 'html',
+        beforeSend: function() {
+            //$this.button('loading');
+        },
+        complete: function() {
+            //$this.button('reset');
+        },
+        success: function(json) {
+            $('.w-blocs-complects').empty();
+            $('.w-blocs-complects').html(json);
+            // console.log(json);
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+
+        }
+    });
+
+    return false;
+
+});
+
+
+
+
+
+$(document).on('click', '#w-complide-view', function() {
+
+
+    $('.container-loader').show();
+
+    history.pushState('', '', this.href);
+
+    $.ajax({
+        type: "GET",
+        dataType: "HTML",
+        url: '/index.php?route=module/complect/complete_diamond',
+        data: '',
+        success: function (response) {
+
+
+            $('.w-general-container').empty();
+            $('.w-general-container').html(response);
+            $('.container-loader').hide();
+
+        }
+
+    });
+
+    return false;
+
+});
+
+
+
+
 
 function input_sort (value) {
     $('.container-loader').show();
