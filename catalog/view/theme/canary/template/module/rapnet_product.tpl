@@ -79,13 +79,13 @@
 
 <script>
 
-
+    //add complect diamond
     $(document).on('click', '#w-diamont-button-cart', function(){
 
 
         $.ajax({
             url: 'index.php?route=checkout/cart/add_diamond',
-            type: 'GET',
+            type: 'POST',
             data: 'diamond_id='+$('#w-diamond_id').val(),
             dataType: 'json',
             beforeSend: function() {
@@ -95,7 +95,6 @@
                 $('#w-diamont-button-cart').button('reset');
             },
             success: function(json) {
-                console.log(json);
                 $('#cart > button').html('<i class="fa fa-shopping-cart"></i> ' + json.total);
             },
             error: function(xhr, ajaxOptions, thrownError) {

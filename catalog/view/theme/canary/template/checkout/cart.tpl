@@ -49,51 +49,197 @@
                         </thead>
                         <tbody>
                         <?php foreach ($products as $product) { ?>
-                        <tr>
-                            <td class="text-center"><?php if ($product['thumb']) { ?>
-                                <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>"
-                                                                               alt="<?php echo $product['name']; ?>"
-                                                                               title="<?php echo $product['name']; ?>"
-                                                                               class="img-thumbnail" width="47"/></a>
-                                <?php } ?></td>
-                            <td class="text-left"><a
-                                    href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-                                <?php if (!$product['stock']) { ?>
-                                <span class="text-danger">***</span>
-                                <?php } ?>
-                                <?php if ($product['option']) { ?>
-                                <?php foreach ($product['option'] as $option) { ?>
-                                <br/>
-                                <small><?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
-                                <?php } ?>
-                                <?php } ?>
-                                <?php if ($product['reward']) { ?>
-                                <br/>
-                                <small><?php echo $product['reward']; ?></small>
-                                <?php } ?>
-                                <?php if ($product['recurring']) { ?>
-                                <br/>
-                                <span class="label label-info"><?php echo $text_recurring_item; ?></span>
-                                <small><?php echo $product['recurring']; ?></small>
-                                <?php } ?></td>
-                            <td class="text-left"><?php echo $product['model']; ?></td>
-                            <td class="text-left">
-                                <div class="input-group btn-block" style="max-width: 200px;">
-                                    <?php if($product['diamond'] == 1):?>
-                                    <input type="hidden" name="diamond" value="1">
-                                    <?endif?>
-                                    <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]"
-                                           value="<?php echo $product['quantity']; ?>" size="1" class="form-control"/>
-                    <span class="input-group-btn">
-                    <button type="submit" data-toggle="tooltip" title="<?php echo $button_update; ?>"
-                            class="btn btn-primary"><i class="fa fa-refresh"></i></button>
-                    <button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>"
-                            class="btn btn-danger" onclick="cart.remove('<?php echo $product['cart_id']; ?>');"><i
-                            class="fa fa-times-circle"></i></button></span></div>
-                            </td>
-                            <td class="text-right"><?php echo $product['price']; ?></td>
-                            <td class="text-right"><?php echo $product['total']; ?></td>
-                        </tr>
+
+                            <?php if (!empty($product[0])):?>
+
+                                <tr>
+                                    <td class="text-center">
+                                        <?php if ($product[0]['thumb']) { ?>
+                                        <a href="<?php echo $product[0]['href']; ?>">
+                                            <img src="<?php echo $product[0]['thumb']; ?>"
+                                                 alt="<?php echo $product[0]['name']; ?>"
+                                                 title="<?php echo $product[0]['name']; ?>"
+                                                 class="img-thumbnail" width="47"/>
+                                        </a>
+                                        <?php } ?>
+                                        <br>
+                                        <?php if ($product[1]['thumb']) { ?>
+                                        <a href="<?php echo $product[1]['href']; ?>">
+                                            <img src="<?php echo $product[1]['thumb']; ?>"
+                                                 alt="<?php echo $product[1]['name']; ?>"
+                                                 title="<?php echo $product[1]['name']; ?>"
+                                                 class="img-thumbnail" width="47"/>
+                                        </a>
+                                        <?php } ?>
+
+                                    </td>
+
+                                    <td class="text-left">
+                                        <a href="<?php echo $product[0]['href']; ?>"><?php echo $product[0]['name']; ?></a>
+                                        <?php if (!$product[0]['stock']) { ?>
+                                        <span class="text-danger">***</span>
+                                        <?php } ?>
+                                        <?php if ($product[0]['option']) { ?>
+                                        <?php foreach ($product[0]['option'] as $option) { ?>
+                                        <br/>
+                                        <small><?php echo $option[0]['name']; ?>: <?php echo $option[0]['value']; ?></small>
+                                        <?php } ?>
+                                        <?php } ?>
+                                        <?php if ($product[0]['reward']) { ?>
+                                        <br/>
+                                        <small><?php echo $product[0]['reward']; ?></small>
+                                        <?php } ?>
+                                        <?php if ($product[0]['recurring']) { ?>
+                                        <br/>
+                                        <span class="label label-info"><?php echo $text_recurring_item; ?></span>
+                                        <small><?php echo $product[0]['recurring']; ?></small>
+                                        <?php } ?>
+
+                                        <br>
+
+
+                                        <a href="<?php echo $product[1]['href']; ?>"><?php echo $product[1]['name']; ?></a>
+                                        <?php if (!$product[1]['stock']) { ?>
+                                        <span class="text-danger">***</span>
+                                        <?php } ?>
+                                        <?php if ($product[1]['option']) { ?>
+                                        <?php foreach ($product[1]['option'] as $option) { ?>
+                                        <br/>
+                                        <small><?php echo $option[1]['name']; ?>: <?php echo $option[1]['value']; ?></small>
+                                        <?php } ?>
+                                        <?php } ?>
+                                        <?php if ($product[1]['reward']) { ?>
+                                        <br/>
+                                        <small><?php echo $product[1]['reward']; ?></small>
+                                        <?php } ?>
+                                        <?php if ($product[1]['recurring']) { ?>
+                                        <br/>
+                                        <span class="label label-info"><?php echo $text_recurring_item; ?></span>
+                                        <small><?php echo $product[1]['recurring']; ?></small>
+                                        <?php } ?>
+
+
+
+                                    </td>
+
+                                    <td class="text-left">
+                                        <?php echo $product[0]['model']; ?>
+                                        <br>
+                                        <?php echo $product[1]['model']; ?>
+                                    </td>
+
+                                    <td class="text-left">
+                                        <div class="input-group btn-block" style="max-width: 200px;">
+                                            <?php if($product[0]['diamond'] == 1):?>
+                                            <input type="hidden" name="diamond" value="1">
+                                            <?endif?>
+                                            <input type="text" name="quantity[<?php echo $product[0]['cart_id']; ?>]"
+                                                   value="<?php echo $product[0]['quantity']; ?>" size="1" class="form-control"/>
+                                                    <span class="input-group-btn">
+                                                        <button type="submit" data-toggle="tooltip" title="<?php echo $button_update; ?>"
+                                                                class="btn btn-primary"><i class="fa fa-refresh"></i></button>
+                                                        <button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>"
+                                                                class="btn btn-danger" onclick="cart.remove('<?php echo $product[0]['cart_id']; ?>');">
+                                                            <i class="fa fa-times-circle"></i></button>
+                                                    </span>
+                                        </div>
+
+                                        <br>
+
+                                        <div class="input-group btn-block" style="max-width: 200px;">
+                                            <?php if($product[1]['diamond'] == 1):?>
+                                            <input type="hidden" name="diamond" value="1">
+                                            <?endif?>
+                                            <input type="text" name="quantity[<?php echo $product[1]['cart_id']; ?>]"
+                                                   value="<?php echo $product[1]['quantity']; ?>" size="1" class="form-control"/>
+                                                    <span class="input-group-btn">
+                                                        <button type="submit" data-toggle="tooltip" title="<?php echo $button_update; ?>"
+                                                                class="btn btn-primary"><i class="fa fa-refresh"></i></button>
+                                                        <button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>"
+                                                                class="btn btn-danger" onclick="cart.remove('<?php echo $product[1]['cart_id']; ?>');">
+                                                            <i class="fa fa-times-circle"></i></button>
+                                                    </span>
+                                        </div>
+
+                                    </td>
+
+                                    <td class="text-right">
+                                        <?php echo $product[0]['price']; ?>
+                                        <br>
+                                        <?php echo $product[1]['price']; ?>
+                                    </td>
+                                    <td class="text-right">
+                                        <?php echo $product[0]['total']; ?>
+                                        <br>
+                                        <?php echo $product[1]['total']; ?>
+                                    </td>
+
+                                </tr>
+
+
+
+                            <?else:?>
+                                <tr>
+                                    <td class="text-center">
+                                        <?php if ($product['thumb']) { ?>
+                                            <a href="<?php echo $product['href']; ?>">
+                                                <img src="<?php echo $product['thumb']; ?>"
+                                                                                           alt="<?php echo $product['name']; ?>"
+                                                                                           title="<?php echo $product['name']; ?>"
+                                                                                           class="img-thumbnail" width="47"/>
+                                            </a>
+                                        <?php } ?>
+                                    </td>
+
+                                    <td class="text-left">
+                                        <a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+                                        <?php if (!$product['stock']) { ?>
+                                        <span class="text-danger">***</span>
+                                        <?php } ?>
+                                        <?php if ($product['option']) { ?>
+                                        <?php foreach ($product['option'] as $option) { ?>
+                                        <br/>
+                                        <small><?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
+                                        <?php } ?>
+                                        <?php } ?>
+                                        <?php if ($product['reward']) { ?>
+                                        <br/>
+                                        <small><?php echo $product['reward']; ?></small>
+                                        <?php } ?>
+                                        <?php if ($product['recurring']) { ?>
+                                        <br/>
+                                        <span class="label label-info"><?php echo $text_recurring_item; ?></span>
+                                        <small><?php echo $product['recurring']; ?></small>
+                                        <?php } ?>
+                                    </td>
+
+                                    <td class="text-left"><?php echo $product['model']; ?></td>
+
+                                    <td class="text-left">
+                                        <div class="input-group btn-block" style="max-width: 200px;">
+                                            <?php if($product['diamond'] == 1):?>
+                                                <input type="hidden" name="diamond" value="1">
+                                            <?endif?>
+                                            <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]"
+                                                   value="<?php echo $product['quantity']; ?>" size="1" class="form-control"/>
+                                            <span class="input-group-btn">
+                                                <button type="submit" data-toggle="tooltip" title="<?php echo $button_update; ?>"
+                                                        class="btn btn-primary"><i class="fa fa-refresh"></i></button>
+                                                <button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>"
+                                                        class="btn btn-danger" onclick="cart.remove('<?php echo $product['cart_id']; ?>');">
+                                                    <i class="fa fa-times-circle"></i></button>
+                                            </span>
+                                        </div>
+                                    </td>
+
+                                    <td class="text-right"><?php echo $product['price']; ?></td>
+                                    <td class="text-right"><?php echo $product['total']; ?></td>
+
+                                </tr>
+
+                            <?endif?>
+
+
                         <?php } ?>
                         <?php foreach ($vouchers as $vouchers) { ?>
                         <tr>

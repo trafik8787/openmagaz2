@@ -2,7 +2,7 @@
 class ControllerCheckoutCart extends Controller {
 
 
-
+    private $uid = 0;
 
 
 
@@ -82,26 +82,26 @@ class ControllerCheckoutCart extends Controller {
             //получаем продукры которые были добавлены в корзину
 			$products = $this->cart->getProducts();
 
-           // dd($products, true);
+//            dd($products);
 
 			foreach ($products as $product) {
-				$product_total = 0;
+                $product_total = 0;
 
-				foreach ($products as $product_2) {
-					if ($product_2['product_id'] == $product['product_id']) {
-						$product_total += $product_2['quantity'];
-					}
-				}
+                foreach ($products as $product_2) {
+                    if ($product_2['product_id'] == $product['product_id']) {
+                        $product_total += $product_2['quantity'];
+                    }
+                }
 
-				if ($product['minimum'] > $product_total) {
-					$data['error_warning'] = sprintf($this->language->get('error_minimum'), $product['name'], $product['minimum']);
-				}
+                if ($product['minimum'] > $product_total) {
+                    $data['error_warning'] = sprintf($this->language->get('error_minimum'), $product['name'], $product['minimum']);
+                }
 
-				if ($product['image']) {
-					$image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
-				} else {
-					$image = '';
-				}
+                if ($product['image']) {
+                    $image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+                } else {
+                    $image = '';
+                }
 
 
                 //картинка diamond для ресайза
@@ -110,90 +110,133 @@ class ControllerCheckoutCart extends Controller {
                 }
 
 
-				$option_data = array();
+                $option_data = array();
 
-				foreach ($product['option'] as $option) {
-					if ($option['type'] != 'file') {
-						$value = $option['value'];
-					} else {
-						$upload_info = $this->model_tool_upload->getUploadByCode($option['value']);
+                foreach ($product['option'] as $option) {
+                    if ($option['type'] != 'file') {
+                        $value = $option['value'];
+                    } else {
+                        $upload_info = $this->model_tool_upload->getUploadByCode($option['value']);
 
-						if ($upload_info) {
-							$value = $upload_info['name'];
-						} else {
-							$value = '';
-						}
-					}
+                        if ($upload_info) {
+                            $value = $upload_info['name'];
+                        } else {
+                            $value = '';
+                        }
+                    }
 
-					$option_data[] = array(
-						'name'  => $option['name'],
-						'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
-					);
-				}
+                    $option_data[] = array(
+                        'name' => $option['name'],
+                        'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
+                    );
+                }
 
-				// Display prices
-				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-					$price = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')));
-				} else {
-					$price = false;
-				}
+                // Display prices
+                if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                    $price = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')));
+                } else {
+                    $price = false;
+                }
 
-				// Display prices
-				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-					$total = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')) * $product['quantity']);
-				} else {
-					$total = false;
-				}
+                // Display prices
+                if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                    $total = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')) * $product['quantity']);
+                } else {
+                    $total = false;
+                }
 
-				$recurring = '';
+                $recurring = '';
 
-				if ($product['recurring']) {
-					$frequencies = array(
-						'day'        => $this->language->get('text_day'),
-						'week'       => $this->language->get('text_week'),
-						'semi_month' => $this->language->get('text_semi_month'),
-						'month'      => $this->language->get('text_month'),
-						'year'       => $this->language->get('text_year'),
-					);
+                if ($product['recurring']) {
+                    $frequencies = array(
+                        'day' => $this->language->get('text_day'),
+                        'week' => $this->language->get('text_week'),
+                        'semi_month' => $this->language->get('text_semi_month'),
+                        'month' => $this->language->get('text_month'),
+                        'year' => $this->language->get('text_year'),
+                    );
 
-					if ($product['recurring']['trial']) {
-						$recurring = sprintf($this->language->get('text_trial_description'), $this->currency->format($this->tax->calculate($product['recurring']['trial_price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax'))), $product['recurring']['trial_cycle'], $frequencies[$product['recurring']['trial_frequency']], $product['recurring']['trial_duration']) . ' ';
-					}
+                    if ($product['recurring']['trial']) {
+                        $recurring = sprintf($this->language->get('text_trial_description'), $this->currency->format($this->tax->calculate($product['recurring']['trial_price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax'))), $product['recurring']['trial_cycle'], $frequencies[$product['recurring']['trial_frequency']], $product['recurring']['trial_duration']) . ' ';
+                    }
 
-					if ($product['recurring']['duration']) {
-						$recurring .= sprintf($this->language->get('text_payment_description'), $this->currency->format($this->tax->calculate($product['recurring']['price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax'))), $product['recurring']['cycle'], $frequencies[$product['recurring']['frequency']], $product['recurring']['duration']);
-					} else {
-						$recurring .= sprintf($this->language->get('text_payment_cancel'), $this->currency->format($this->tax->calculate($product['recurring']['price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax'))), $product['recurring']['cycle'], $frequencies[$product['recurring']['frequency']], $product['recurring']['duration']);
-					}
-				}
+                    if ($product['recurring']['duration']) {
+                        $recurring .= sprintf($this->language->get('text_payment_description'), $this->currency->format($this->tax->calculate($product['recurring']['price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax'))), $product['recurring']['cycle'], $frequencies[$product['recurring']['frequency']], $product['recurring']['duration']);
+                    } else {
+                        $recurring .= sprintf($this->language->get('text_payment_cancel'), $this->currency->format($this->tax->calculate($product['recurring']['price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax'))), $product['recurring']['cycle'], $frequencies[$product['recurring']['frequency']], $product['recurring']['duration']);
+                    }
+                }
 
                 //ссылка на страницу брилианта
                 if (isset($product['diamond'])) {
-                    $href = '/diamond_page?diamond_id='.$product['product_id'];
+                    $href = '/diamond_page?diamond_id=' . $product['product_id'];
                 } else {
                     $href = $this->url->link('product/product', 'product_id=' . $product['product_id']);
                 }
 
+                //если комплект
+                if ($product['complect'] != 0) {
+
+                    $tmp_complect = array();
+                    foreach ($products as $key => $product_rows) {
+                        if ($product['complect'] == $product_rows['complect']) {
+
+                            unset($products[$key]);
+
+
+                            if (isset($product_rows['diamond'])) {
+                                $href = '/diamond_page?diamond_id=' . $product_rows['product_id'];
+                                $image = $product_rows['image'];
+                            } else {
+                                $href = $this->url->link('product/product', 'product_id=' . $product_rows['product_id']);
+                            }
+
+                            $tmp_complect[] = array(
+                                'cart_id' => $product_rows['cart_id'],
+                                'diamond' => isset($product_rows['diamond']) ? $product_rows['diamond'] : 0, //добавлен флаг
+                                'thumb' => $image,
+                                'name' => $product_rows['name'],
+                                'model' => $product_rows['model'],
+                                'option' => $option_data,
+                                'recurring' => $recurring,
+                                'quantity' => $product_rows['quantity'],
+                                'stock' => $product_rows['stock'] ? true : !(!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning')),
+                                'reward' => ($product_rows['reward'] ? sprintf($this->language->get('text_points'), $product_rows['reward']) : ''),
+                                'price' => $price,
+                                'total' => $total,
+                                'href' => $href,
+                                'complect' => $product_rows['complect']
+                            );
 
 
 
-                $data['products'][] = array(
-					'cart_id'   => $product['cart_id'],
-                    'diamond'   => isset($product['diamond']) ? $product['diamond'] : 0, //добавлен флаг
-					'thumb'     => $image,
-					'name'      => $product['name'],
-					'model'     => $product['model'],
-					'option'    => $option_data,
-					'recurring' => $recurring,
-					'quantity'  => $product['quantity'],
-					'stock'     => $product['stock'] ? true : !(!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning')),
-					'reward'    => ($product['reward'] ? sprintf($this->language->get('text_points'), $product['reward']) : ''),
-					'price'     => $price,
-					'total'     => $total,
-					'href'      => $href
-				);
+                        }
+                    }
+
+                    if (!empty($tmp_complect)) {
+                        $data['products'][] = $tmp_complect;
+                    }
+                //одиночный товар
+                } else {
 
 
+                    $data['products'][] = array(
+                        'cart_id' => $product['cart_id'],
+                        'diamond' => isset($product['diamond']) ? $product['diamond'] : 0, //добавлен флаг
+                        'thumb' => $image,
+                        'name' => $product['name'],
+                        'model' => $product['model'],
+                        'option' => $option_data,
+                        'recurring' => $recurring,
+                        'quantity' => $product['quantity'],
+                        'stock' => $product['stock'] ? true : !(!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning')),
+                        'reward' => ($product['reward'] ? sprintf($this->language->get('text_points'), $product['reward']) : ''),
+                        'price' => $price,
+                        'total' => $total,
+                        'href' => $href
+                    );
+
+                }
 
 			}
 
@@ -323,7 +366,7 @@ class ControllerCheckoutCart extends Controller {
 
 
 
-
+    //доюавление продукта в корзину
 	public function add() {
 		$this->load->language('checkout/cart');
 
@@ -381,7 +424,7 @@ class ControllerCheckoutCart extends Controller {
 			}
 
 			if (!$json) {
-				$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id);
+				$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id, 0, $this->uid);
 
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
 
@@ -558,14 +601,14 @@ class ControllerCheckoutCart extends Controller {
         $this->load->language('checkout/cart');
         $this->load->model('catalog/product');
 
-        $controller_rapnet = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $this->request->get['diamond_id']));
+        $controller_rapnet = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $this->request->post['diamond_id']));
         $json = array();
 
         $rapnet_decode = json_decode($controller_rapnet);
 
 
 
-        $this->cart->add($this->request->get['diamond_id'], 1, array($rapnet_decode), 0, 1);
+        $this->cart->add($this->request->post['diamond_id'], 1, array($rapnet_decode), 0, 1, $this->uid);
 
         // Totals
         $this->load->model('extension/extension');
@@ -593,12 +636,8 @@ class ControllerCheckoutCart extends Controller {
 
         array_multisort($sort_order, SORT_ASC, $total_data);
 
-//        dd($this->cart->countProducts());
-//        dd($total);
-//        dd($this->currency->format($total));
-//        die('sdf');
 
-       // $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->get['diamond_id']), $product_info['name'], $this->url->link('checkout/cart'));
+
         $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total));
 
         $this->response->addHeader('Content-Type: application/json');
@@ -606,7 +645,19 @@ class ControllerCheckoutCart extends Controller {
     }
 
 
+    public function add_complect () {
 
+        $this->uid = uniqid();
+
+        if (!empty($this->request->post['diamond_id'])) {
+            $this->add_diamond();
+        }
+
+        if (!empty($this->request->post['product_id'])) {
+            $this->add();
+        }
+
+    }
 
 
 

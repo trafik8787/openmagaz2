@@ -124,10 +124,9 @@ class ControllerModuleComplect extends Controller {
     }
 
 
-
-
-
-
+    /**
+     * страница комплекта кольца и брилианта
+     */
     public function complete_diamond(){
 
         $data = array();

@@ -31,6 +31,10 @@
                     <div class="tab-content">
 
                         <?dd($CanaryProductCom)?>
+
+                        <input type="hidden" id="w-product-com-id" value="<?=!empty($CanaryProductCom) ?  $CanaryProductCom['id_product'] : ''?>">
+                        <input type="hidden" id="w-diamond-com-id" value="<?=!empty($CanaryDiamontCom) ?  $CanaryDiamontCom['id_product'] : ''?>">
+
                         <?dd($CanaryDiamontCom)?>
 
 
@@ -73,3 +77,37 @@
 </div>
 <?php echo $footer?>
 <?endif?>
+
+<script>
+
+
+    $(document).on('click', '#w-complect-button-cart', function(){
+
+
+        $.ajax({
+            url: 'index.php?route=checkout/cart/add_complect',
+            type: 'POST',
+            data: 'diamond_id='+$('#w-diamond-com-id').val()+'&product_id='+$('#w-product-com-id').val(),
+            dataType: 'json',
+            beforeSend: function() {
+                $('.container-loader').show();
+                $('#w-diamont-button-cart').button('loading');
+            },
+            complete: function() {
+                $('#w-diamont-button-cart').button('reset');
+                $('.container-loader').hide();
+
+            },
+            success: function(json) {
+                //console.log(json);
+                //$('#cart > button').html('<i class="fa fa-shopping-cart"></i> ' + json.total);
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert('ошибочка вышла');
+            }
+        });
+
+        return false;
+    });
+
+</script>
