@@ -82,7 +82,7 @@ class ControllerCheckoutCart extends Controller {
             //получаем продукры которые были добавлены в корзину
 			$products = $this->cart->getProducts();
 
-//            dd($products);
+            $products3_complect = $products;
 
 			foreach ($products as $product) {
                 $product_total = 0;
@@ -178,10 +178,24 @@ class ControllerCheckoutCart extends Controller {
                 if ($product['complect'] != 0) {
 
                     $tmp_complect = array();
-                    foreach ($products as $key => $product_rows) {
+                    foreach ($products3_complect as $key => $product_rows) {
                         if ($product['complect'] == $product_rows['complect']) {
 
-                            unset($products[$key]);
+                            unset($products3_complect[$key]);
+
+                            //цена
+                            if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                                $prices = $this->currency->format($this->tax->calculate($product_rows['price'], $product_rows['tax_class_id'], $this->config->get('config_tax')));
+                            } else {
+                                $prices = $product_rows['price'];
+                            }
+
+                            // Display prices
+                            if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                                $total = $this->currency->format($this->tax->calculate($product_rows['price'], $product_rows['tax_class_id'], $this->config->get('config_tax')) * $product_rows['quantity']);
+                            } else {
+                                $total = $product_rows['price'];
+                            }
 
 
                             if (isset($product_rows['diamond'])) {
@@ -202,7 +216,7 @@ class ControllerCheckoutCart extends Controller {
                                 'quantity' => $product_rows['quantity'],
                                 'stock' => $product_rows['stock'] ? true : !(!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning')),
                                 'reward' => ($product_rows['reward'] ? sprintf($this->language->get('text_points'), $product_rows['reward']) : ''),
-                                'price' => $price,
+                                'price' => $prices,
                                 'total' => $total,
                                 'href' => $href,
                                 'complect' => $product_rows['complect']

@@ -115,10 +115,13 @@ $(document).on('click', '#w-button-add-product-complect', function(){
 
     var $this = $(this);
 
+    var $select = $('#product select');
+
     $.ajax({
         url: 'index.php?route=module/complect/add_product_complect',
         type: 'post',
-        data: 'complect_id_product='+$this.data('idproduct')+'&path='+$this.data('path'),
+        //data: 'complect_id_product='+$this.data('idproduct')+'&path='+$this.data('path')+$('#product select'),
+        data: $('#product select, #product input[name=\'product_id\'], #product input[name=\'w_path\']'),
         dataType: 'html',
         beforeSend: function() {
             $this.button('loading');

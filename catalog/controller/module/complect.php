@@ -37,21 +37,31 @@ class ControllerModuleComplect extends Controller {
 
         $this->load->model('catalog/product');
         $data = array();
+        $option = array();
         $CanaryDiamontCom = array();
         $CanaryProductCom = array();
 
 
+       // dd($this->request->post, true);
+
         $data = $this->getProductsCoolies();
 
-        if (!empty($this->request->post['complect_id_product'])) {
+        if (!empty($this->request->post['product_id'])) {
 
-            $product_info = $this->model_catalog_product->getProduct($this->request->post['complect_id_product']);
+            $product_info = $this->model_catalog_product->getProduct($this->request->post['product_id']);
             $data['product_info'] = $product_info;
+
+            if (!empty($this->request->post['option'])) {
+                $option = array('option' => $this->request->post['option']);
+                $option = http_build_query($option);
+            }
 
 
             $CanaryProductCom = array('id_product' => $product_info['product_id'],
                 'img' => '/image/'.$product_info['image'],
-                'href' => $this->url->link('product/product', 'path=' . $this->request->post['path'] . '&product_id=' . $product_info['product_id']));
+                'option' => $option,
+                'href' => $this->url->link('product/product', 'path=' . $this->request->post['w_path'] . '&product_id=' . $product_info['product_id']));
+
 
             Cookie::set('CanaryProductCom', json_encode($CanaryProductCom));
 

@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<?//dd($products)?>
 <div class="container w-general-container">
     <ul class="breadcrumb">
         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -82,7 +83,7 @@
                                         <?php if ($product[0]['option']) { ?>
                                         <?php foreach ($product[0]['option'] as $option) { ?>
                                         <br/>
-                                        <small><?php echo $option[0]['name']; ?>: <?php echo $option[0]['value']; ?></small>
+                                        <small><?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
                                         <?php } ?>
                                         <?php } ?>
                                         <?php if ($product[0]['reward']) { ?>
@@ -105,7 +106,7 @@
                                         <?php if ($product[1]['option']) { ?>
                                         <?php foreach ($product[1]['option'] as $option) { ?>
                                         <br/>
-                                        <small><?php echo $option[1]['name']; ?>: <?php echo $option[1]['value']; ?></small>
+                                        <small><?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
                                         <?php } ?>
                                         <?php } ?>
                                         <?php if ($product[1]['reward']) { ?>

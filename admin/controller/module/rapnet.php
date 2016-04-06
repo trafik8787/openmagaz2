@@ -15,6 +15,9 @@ class ControllerModuleRapnet extends Controller {
         $this->document->setTitle($this->language->get('heading_title'));
         //подключаем файл модели
         $this->load->model('setting/setting');
+        $this->load->model('localisation/tax_class');
+        //налог
+        $data['tax_classes'] = $this->model_localisation_tax_class->getTaxClasses();
 
 
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
@@ -43,6 +46,8 @@ class ControllerModuleRapnet extends Controller {
         $data['button_save'] = $this->language->get('button_save');
         $data['button_cancel'] = $this->language->get('button_cancel');
 
+        $data['entry_tax_class'] = $this->language->get('entry_tax_class');
+        $data['text_none'] = $this->language->get('text_none');
 
 
         //вывод ошибок
@@ -85,6 +90,14 @@ class ControllerModuleRapnet extends Controller {
             $data['rapnet_pass'] = $this->config->get('rapnet_pass');
         }
 
+
+        if (isset($this->request->post['rapnet_tax_class_id'])) {
+            $data['rapnet_tax_class_id'] = $this->request->post['rapnet_tax_class_id'];
+        } elseif (!empty($this->config->get('rapnet_tax_class_id'))) {
+            $data['rapnet_tax_class_id'] = $this->config->get('rapnet_tax_class_id');
+        } else {
+            $data['rapnet_tax_class_id'] = 0;
+        }
 
 
 

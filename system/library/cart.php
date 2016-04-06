@@ -326,7 +326,7 @@ class Cart {
                             'total' => $data_arr_diamond->total_sales_price,
                             'reward' => 0,
                             'points' => 0,
-                            'tax_class_id' => 0, //налог
+                            'tax_class_id' => $this->config->get('rapnet_tax_class_id'), //налог
                             'weight' => $data_arr_diamond->size,
                             'weight_class_id' => 7,
                             'length' => 0.00000000,

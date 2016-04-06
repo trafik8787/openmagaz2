@@ -34,6 +34,7 @@
 
                         <input type="hidden" id="w-product-com-id" value="<?=!empty($CanaryProductCom) ?  $CanaryProductCom['id_product'] : ''?>">
                         <input type="hidden" id="w-diamond-com-id" value="<?=!empty($CanaryDiamontCom) ?  $CanaryDiamontCom['id_product'] : ''?>">
+                        <input type="hidden" id="w-product-option" value="<?=!empty($CanaryProductCom) ?  $CanaryProductCom['option'] : ''?>">
 
                         <?dd($CanaryDiamontCom)?>
 
@@ -87,7 +88,7 @@
         $.ajax({
             url: 'index.php?route=checkout/cart/add_complect',
             type: 'POST',
-            data: 'diamond_id='+$('#w-diamond-com-id').val()+'&product_id='+$('#w-product-com-id').val(),
+            data: 'diamond_id='+$('#w-diamond-com-id').val()+'&product_id='+$('#w-product-com-id').val()+'&'+$('#w-product-option').val(),
             dataType: 'json',
             beforeSend: function() {
                 $('.container-loader').show();

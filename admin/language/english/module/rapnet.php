@@ -16,3 +16,6 @@ $_['entry_status']      = 'Status';
 $_['error_permission']  = 'Warning: You do not have permission to modify HTML Content module!';
 $_['error_rapnet_name']        = 'Module Name must be between 3 and 64 characters!';
 $_['error_rapnet_pass']        = 'Module Name must be between 3 and 64 characters!';
+
+$_['entry_tax_class'] = 'Tax';
+$_['text_none'] = 'None';
