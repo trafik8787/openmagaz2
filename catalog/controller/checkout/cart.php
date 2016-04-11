@@ -627,29 +627,33 @@ class ControllerCheckoutCart extends Controller {
         // Totals
         $this->load->model('extension/extension');
 
-        $total_data = array();
-        $total = 0;
-        $taxes = $this->cart->getTaxes();
+        if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 
-        $results = $this->model_extension_extension->getExtensions('total');
+            $total_data = array();
+            $total = 0;
+            $taxes = $this->cart->getTaxes();
+
+            $results = $this->model_extension_extension->getExtensions('total');
+
+            //dd($results, true);
 
 
-        foreach ($results as $result) {
-            if ($this->config->get($result['code'] . '_status')) {
-                $this->load->model('total/' . $result['code']);
+            foreach ($results as $result) {
+                if ($this->config->get($result['code'] . '_status')) {
+                    $this->load->model('total/' . $result['code']);
 
-                $this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
+                    $this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
+                }
             }
+
+            $sort_order = array();
+
+            foreach ($total_data as $key => $value) {
+                $sort_order[$key] = $value['sort_order'];
+            }
+
+            array_multisort($sort_order, SORT_ASC, $total_data);
         }
-
-        $sort_order = array();
-
-        foreach ($total_data as $key => $value) {
-            $sort_order[$key] = $value['sort_order'];
-        }
-
-        array_multisort($sort_order, SORT_ASC, $total_data);
-
 
 
         $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total));
@@ -661,7 +665,7 @@ class ControllerCheckoutCart extends Controller {
 
     public function add_complect () {
 
-        $this->uid = uniqid();
+        $this->uid = uniqid(rand(),1);
 
         if (!empty($this->request->post['diamond_id'])) {
             $this->add_diamond();
@@ -671,6 +675,8 @@ class ControllerCheckoutCart extends Controller {
             $this->add();
         }
 
+        Cookie::delete('CanaryProductCom');
+        Cookie::delete('CanaryDiamontCom');
     }
 
 

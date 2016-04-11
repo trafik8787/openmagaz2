@@ -1,5 +1,4 @@
 <?php echo $header; ?>
-<?//dd($products)?>
 <div class="container w-general-container">
     <ul class="breadcrumb">
         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
