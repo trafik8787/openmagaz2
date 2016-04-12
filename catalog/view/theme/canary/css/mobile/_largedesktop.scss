@@ -1,0 +1,46 @@
+@media (max-width: 1700px){
+  .menu {
+    padding: 55px 0 0 365px;
+  }
+
+  .menu > ul > li > a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .logo{
+    font-size: 41px;
+  }
+
+  .search-top-f {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+
+  .top-menu-b{
+    padding-right: 120px;
+  }
+
+
+}
+
+@media (max-width: 1300px){
+  .advantages-box {
+    padding: 30px 15px 45px;
+  }
+
+  .menu > ul > li > .dropdown-inside {
+    width: inherit;
+    right: 10px;
+  }
+
+  .wrapper-block{
+    padding: 0 15px;
+  }
+
+
+
+
+
+}

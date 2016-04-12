@@ -50,7 +50,7 @@ $(document).ready(function() {
                 $('.w-general-container').html(response);
                 $('.container-loader').hide();
 
-                initialize_grid();
+                //initialize_grid();
 
             }
 

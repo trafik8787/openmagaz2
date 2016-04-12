@@ -12,6 +12,59 @@ class ModelCatalogCategory extends Model {
 		return $query->rows;
 	}
 
+    /**
+     * @param bool $flag
+     * @return array|null
+     * todo  getCategoriesNew()
+     */
+    public function getCategoriesNew($flag = false) {
+
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "category_description cd ON (c.category_id = cd.category_id) LEFT JOIN " . DB_PREFIX . "category_to_store c2s ON (c.category_id = c2s.category_id) WHERE cd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND c2s.store_id = '" . (int)$this->config->get('config_store_id') . "'  AND c.status = '1' ORDER BY c.sort_order, LCASE(cd.name)");
+
+        $cats = array();
+        foreach ($query->rows as $cat) {
+            $cats[$cat['parent_id']][$cat['category_id']] = $cat;
+        }
+
+        $result = $this->build_tree($cats, 0, false, $flag);
+        return $result;
+    }
+
+
+    /**
+     * @param $cats
+     * @param $parent_id
+     * @param bool $only_parent
+     * @param bool $flag
+     * @return array|null
+     * todo function recurs category
+     */
+    private function build_tree($cats,$parent_id,$only_parent = false, $flag = false) {
+        if(is_array($cats) and isset($cats[$parent_id])){
+            $tree = array();
+            if($only_parent==false){
+                foreach($cats[$parent_id] as $cat){
+                    if ($flag === false) {
+                        $tree[$cat['category_id']] = $cat;
+                        $tree[$cat['category_id']]['children'] = self::build_tree($cats, $cat['category_id']);
+                    } else {
+                        $tree[] = array(
+                            'name' => $cat['name'],
+                            'children' => self::build_tree($cats, $cat['category_id'],false, $flag) ? self::build_tree($cats, $cat['category_id'],false, $flag) : array(),
+                            'column' => $cat['column'] ? $cat['column'] : 1,
+                            'href' => $this->url->link('product/category', 'path=' . $cat['parent_id'].'_'.$cat['category_id'])
+                        );
+                    }
+                }
+            }
+        } else {
+            return null;
+        }
+
+        return $tree;
+    }
+
+
 	public function getCategoryFilters($category_id) {
 		$implode = array();
 

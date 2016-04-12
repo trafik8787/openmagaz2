@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,kIAAkI;EAChI,SAAS,EAAE,KAAK;;AAGlB,iDAAkD;EAChD,OAAO,EAAE,KAAK",
+"sources": ["desktop.scss"],
+"names": [],
+"file": "desktop.css"
+}

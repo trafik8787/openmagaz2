@@ -1,0 +1,61 @@
+.btn, .btn:focus, .btn:active, .btn:focus:active{
+  outline: none;
+  text-decoration: none;
+}
+
+button:hover, button:focus{
+  outline: none;
+}
+
+.brand-btn{
+  display: inline-block;
+  padding: 21px 33px;
+  color: $text-color;
+  font-size: 30px;
+  background-color: $brand-color2;
+  border-radius: 3px;
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  &:hover{
+    color: $text-color;
+    text-decoration: none;
+    background-color: lighten($brand-color2, 5);
+  }
+}
+
+.form-brand{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  font-size: 18px;
+  padding: 19px 65px;
+  background: #fac652;
+  text-transform: uppercase;
+  font-family: 'SegoeUI', sans-serif;
+  &:hover{
+    background-color: lighten(#fac652, 5);
+  }
+}
+
+.red-btn{
+  background: #ff5959;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  &:hover{
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 89, 89, 0.8);
+  }
+}
+
+.close-cart-main{
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border: 0;
+  background: url("../img/close-cart-main.png") no-repeat center / contain;
+}
