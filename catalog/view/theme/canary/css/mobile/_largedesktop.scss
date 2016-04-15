@@ -5,11 +5,11 @@
 
   .menu > ul > li > a {
     padding: 10px;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .logo{
-    font-size: 41px;
+    font-size: 39px;
   }
 
   .search-top-f {
@@ -29,18 +29,130 @@
   .advantages-box {
     padding: 30px 15px 45px;
   }
+  //
+  //.menu > ul > li > .dropdown-inside {
+  //  width: inherit;
+  //  right: 10px;
+  //}
 
-  .menu > ul > li > .dropdown-inside {
-    width: inherit;
-    right: 10px;
+  .new-products .nav.nav-tabs > li {
+    margin-right: 27px;
+  }
+
+  .diamond-spetifications-box .left-ds{
+    width: 100%;
+  }
+
+  .line-price-product > div:last-child{
+    display: block;
+  }
+
+  .diamond-spetifications-box .center-ds {
+    width: 73%;
+    padding: 0 2% 0 0;
+  }
+
+  .diamond-spetifications-box .center-ds ul:nth-child(1) {
+    padding-right: 50px;
+  }
+
+  .menu > ul > li:nth-child(5) > .dropdown-inside {
+    margin-left: -380px;
+  }
+
+  .diamond-spetifications-box .left-ds .title {
+    margin-bottom: 15px;
+  }
+
+  .diamond-spetifications-box{
+    display: block;
   }
 
   .wrapper-block{
     padding: 0 15px;
   }
 
+  .menu {
+    padding: 100px 0 0;
+  }
 
+  .logo{
+    top: 40px;
+    width: 330px;
+    left: 50%;
+    margin-left: -175px;
+  }
 
+  .top-main-r .wrapper-main-r {
+    margin: auto 8% auto 49%;
+  }
 
+  .new-products .product-panel-body .title a{
+    font-size: 20px;
+  }
+
+  .footer-menu .one-block:nth-child(1) {
+    width: 24%;
+  }
+  .footer-menu .one-block:nth-child(3) {
+    width: 21%;
+  }
+  .footer-menu .one-block:nth-child(4) {
+    width: 36%;
+  }
+
+  .filter-box .one-line .gender-filter-l {
+    width: 530px;
+    float: left;
+  }
+
+  .filter-box .one-line .gender-filter-l .box-color label, .filter-box .one-line .gender-filter-r .box-color label{
+    padding: 15px 6px 5px;
+  }
+
+  .filter-box .one-line .gender-filter-r{
+    width: 415px;
+  }
 
 }
+
+@media (max-width: 1200px){
+
+  .filter-box .left-f, .filter-box .right-f{
+    width: 48%;
+  }
+
+  .slider-lables li{
+    font-size: 14px;
+  }
+
+  .step-product .one-block {
+    padding: 20px;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .list-product .filter-product-line {
+    font-size: 18px;
+  }
+
+  .list-product .filter-product-line .show-b {
+    margin-right: 40px;
+  }
+
+  .wrapper-product-table.th-view .table{
+    margin-left: 10px;
+  }
+
+  .wrapper-product-table.th-view tbody tr{
+    width: 30%;
+    &:nth-child(4n) {
+      margin-right: 4%;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+}
+

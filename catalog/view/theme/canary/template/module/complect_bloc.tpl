@@ -80,41 +80,55 @@
 
     <?function show_diamond_complect_bloc ($index, $CanaryDiamontCom = null, $show = null) {?>
 
-        <div class="col-sm-6 col-md-4 <?= !empty($show) ? 'alert-success' : '' ?>">
-            <div class="thumbnail">
+
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <a href="#" class="one-block <?= !empty($show) ? 'active' : '' ?>">
+                <span class="box-img">
+                    <img src="catalog/view/theme/canary/img/img20.png" alt="img">
+                </span>
+                <span class="title">
+                    <span>2.CHOOSE YOUR</span>  SOLITAIRE
+                </span>
+                <span class="text">
+                    from our vast range of certified diamonds, in various carat weights and shapes like Princess, Round, Heart, Pear etc. Just a tip: Round is the most popular shape for a solitaire ring
+                </span>
+
+            </a>
+            <p>
+                <?php if (!empty($CanaryDiamontCom)):?>
                 <img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="100" alt="...">
-                <div class="caption">
-                    <h3><?=$index?>. Diamond</h3>
-                    <p>diamond</p>
-                    <p>
-                        <?php if (!empty($CanaryDiamontCom)):?>
-                            <a href="<?=$CanaryDiamontCom['href'] ?>" class="btn btn-primary" role="button">View</a>
-                            <a href="#" class="btn btn-default w-remowe-diamond-complect" role="button">Remove</a>
-                        <?endif?>
-                    </p>
-                </div>
-            </div>
+                <a href="<?=$CanaryDiamontCom['href'] ?>" class="btn btn-primary" role="button">View</a>
+                <a href="#" class="btn btn-default w-remowe-diamond-complect" role="button">Remove</a>
+                <?endif?>
+            </p>
         </div>
+
 
     <?}?>
 
 
     <? function show_product_complect_bloc ($index, $CanaryProductCom = null, $show = null) {?>
 
-        <div class="col-sm-6 col-md-4 <?= !empty($show) ? 'alert-success' : '' ?>">
-            <div class="thumbnail">
-                <img src="<?=!empty($CanaryProductCom) ? $CanaryProductCom['img'] : '' ?>" alt="...">
-                <div class="caption">
-                    <h3><?=$index?>. Ring</h3>
-                    <p>ring</p>
-                    <p>
-                        <?php if (!empty($CanaryProductCom)):?>
-                            <a href="<?=$CanaryProductCom['href'] ?>" class="btn btn-primary" role="button">View</a>
-                            <a href="#" class="btn btn-default w-remowe-product-complect" role="button">Remove</a>
-                        <?endif?>
-                    </p>
-                </div>
-            </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-4">
+            <a href="#" class="one-block <?= !empty($show) ? 'active' : '' ?>">
+                <span class="box-img">
+                    <img src="catalog/view/theme/canary/img/img19.png" alt="img">
+                </span>
+                <span class="title">
+                    <span>1.SELECT YOUR</span> SETTING
+                </span>
+                <span class="text">
+                    We offer both white gold or yellow gold either in 4 prong or 6 prongs.
+                </span>
+            </a>
+            <p>
+                <?php if (!empty($CanaryProductCom)):?>
+                <img src="<?=!empty($CanaryProductCom) ? $CanaryProductCom['img'] : '' ?>" width="100" alt="...">
+                <a href="<?=$CanaryProductCom['href'] ?>" class="btn btn-primary" role="button">View</a>
+                <a href="#" class="btn btn-default w-remowe-product-complect" role="button">Remove</a>
+                <?endif?>
+            </p>
         </div>
 
     <?}?>
@@ -125,19 +139,23 @@
 
     <? function show_complite_complect_bloc ($show=null) {?>
 
-        <div class="col-sm-6 col-md-4 <?= !empty($show) ? 'alert-success' : '' ?>">
-            <div class="thumbnail">
-                <img data-src="holder.js/300x200" alt="...">
-                <div class="caption">
-                    <h3>3. Complete</h3>
-                    <p>complete</p>
-                    <p>
-                        <?php if (!empty($show)):?>
-                            <a href="/complete_diamond" id="w-complide-view" class="btn btn-primary" role="button">View</a>
-                        <?endif?>
-                    </p>
-                </div>
-            </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 ">
+            <a href="#" class="one-block <?= !empty($show) ? 'active' : '' ?>">
+                 <span class="box-img">
+                    <img src="catalog/view/theme/canary/img/img21.png" alt="img">
+                </span>
+                <span class="title">
+                    <span>3.COMPLETE YOUR</span> RING
+                </span>
+                <span class="text">
+                    by choosing your ring size. Your ring will be couriered to you.
+                </span>
+            </a>
+            <p>
+                <?php if (!empty($show)):?>
+                <a href="/complete_diamond" id="w-complide-view" class="btn btn-primary" role="button">View</a>
+                <?endif?>
+            </p>
         </div>
 
     <?}?>

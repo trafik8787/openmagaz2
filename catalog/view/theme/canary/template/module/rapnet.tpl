@@ -1,196 +1,295 @@
-<div>
 
-    <input type="hidden" class="w-get-shape" value="">
-
-    <div class="btn-group w-group-shape" data-toggle="buttons">
-        <label class="btn btn-primary">
-            <input type="radio" value="Round" name="shape" id="shape1"> Round
-        </label>
-        <label class="btn btn-primary">
-            <input type="radio" value="Princess" name="shape" id="shape2"> Princess
-        </label>
-        <label class="btn btn-primary">
-            <input type="radio" value="Emerald" name="shape" id="shape3"> Emerald
-        </label>
-        <label class="btn btn-primary">
-            <input type="radio" value="Asscher" name="shape" id="shape4"> Asscher
-        </label>
-        <label class="btn btn-primary">
-            <input type="radio" value="Oval" name="shape" id="shape5"> Oval
-        </label>
-        <label class="btn btn-primary">
-            <input type="radio" value="Radiant" name="shape" id="shape6"> Radiant
-        </label>
-        <label class="btn btn-primary">
-            <input type="radio" value="Pear" name="shape" id="shape7"> Pear
-        </label>
-        <label class="btn btn-primary">
-            <input type="radio" value="Heart" name="shape" id="shape8"> Heart
-        </label>
-        <label class="btn btn-primary">
-            <input type="radio" value="Marquise" name="shape" id="shape9"> Marquise
-        </label>
-        <label class="btn btn-primary">
-            <input type="radio" value="Cushion" name="shape" id="shape10"> Cushion
-        </label>
-    </div>
-    <p></p>
-    Color<div id="w-slider-color"></div>
-    <ul class="list-inline">
-        <li>K</li>
-        <li>J</li>
-        <li>I</li>
-        <li>H</li>
-        <li>G</li>
-        <li>F</li>
-        <li>E</li>
-        <li>D</li>
-    </ul>
-    <p></p>
-    Clarity<div id="w-slider-clarity"></div>
-    <ul class="list-inline">
-        <li>SI3</li>
-        <li>SI2</li>
-        <li>SI1</li>
-        <li>VS2</li>
-        <li>VS1</li>
-        <li>VVS2</li>
-        <li>VVS1</li>
-        <li>IF</li>
-    </ul>
-    <p></p>
-    Cut<div id="w-slider-cut"></div>
-    <ul class="list-inline">
-        <li>Fair</li>
-        <li>Good</li>
-        <li>Very Good</li>
-        <li>Excellent</li>
-    </ul>
-    <p></p>
-    Carat<div>
-        <div id="w-slider-carat"></div>
-        <input type="text" class="text-left w-input-carat-from">
-        <input type="text" class="text-right w-input-carat-to">
-    </div>
-    <p></p>
-    Price<div>
-        <div id="w-slider-price"></div>
-        <input type="text" class="text-left w-input-price-from">
-        <input type="text" class="text-right w-input-price-to">
-    </div>
-
-    <p>advendsend</p>
-
-    <div class="panel panel-default">
-        <div class="panel-body">
-            polish
-            <div id="w-slider-polish"></div>
-            <ul class="list-inline">
-                <li>Fair</li>
-                <li>Good</li>
-                <li>Very Good</li>
-                <li>Excellent</li>
-
-            </ul>
-
-            <p></p>
-            symmetry
-            <div id="w-slider-symmetry"></div>
-            <ul class="list-inline">
-                <li>Fair</li>
-                <li>Good</li>
-                <li>Very Good</li>
-                <li>Excellent</li>
-
-            </ul>
-
-            <p></p>
-            labs
-            <div class="btn-group w-group-labs" data-toggle="buttons">
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="labs" value="GIA"> GIA
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="labs" value="IGI"> IGI
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="labs" value="AGS"> AGS
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="labs" value="HRD"> HRD
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="labs" value="EGL_USA"> EGL_USA
-                </label>
+<div class="filter-box clearfix">
+    <div class="filter-wrapper clearfix">
+        <div class="left-f">
+            <div class="one-line height-inherit">
+                <div class="title">share
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        <span class="question-filter"><i class="fa fa-question-circle"></i></span>
+                    </button>
+                </div>
+                <div class="btn-group btn-group-justified btn-group-filter w-group-shape" data-toggle="buttons">
+                    <label class="btn btn-filter">
+                        <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked> <i class="brilliant-ico2 brilliant-s1"></i>
+                    </label>
+                    <label class="btn btn-filter">
+                        <input type="radio" value="Princess" name="shape" id="option2" autocomplete="off"> <i class="brilliant-ico2 brilliant-s2"></i>
+                    </label>
+                    <label class="btn btn-filter">
+                        <input type="radio" value="Asscher"  name="shape" id="option3" autocomplete="off"> <i class="brilliant-ico2 brilliant-s3"></i>
+                    </label>
+                    <label class="btn btn-filter">
+                        <input type="radio" value="Cushion"  name="shape" id="option4" autocomplete="off"> <i class="brilliant-ico2 brilliant-s4"></i>
+                    </label>
+                    <label class="btn btn-filter">
+                        <input type="radio" value="Marquise" name="shape" id="option5" autocomplete="off"> <i class="brilliant-ico2 brilliant-s5"></i>
+                    </label>
+                    <label class="btn btn-filter">
+                        <input type="radio" value="Oval"  name="shape" id="option6" autocomplete="off"> <i class="brilliant-ico2 brilliant-s6"></i>
+                    </label>
+                    <label class="btn btn-filter">
+                        <input type="radio" value="Radiant" name="shape" id="option7" autocomplete="off"> <i class="brilliant-ico2 brilliant-s7"></i>
+                    </label>
+                    <label class="btn btn-filter">
+                        <input type="radio" value="Pear"  name="shape" id="option8" autocomplete="off"> <i class="brilliant-ico2 brilliant-s8"></i>
+                    </label>
+                    <label class="btn btn-filter">
+                        <input type="radio" value="Heart"  name="shape" id="option9" autocomplete="off"> <i class="brilliant-ico2 brilliant-s9"></i>
+                    </label>
+                    <label class="btn btn-filter">
+                        <input type="radio" value="Emerald"  name="shape" id="option10" autocomplete="off"> <i class="brilliant-ico2 brilliant-s10"></i>
+                    </label>
+                </div>
             </div>
-            <p></p>
+            <div class="box-line-l">
+                <div class="one-line">
+                    <div class="title">color
+                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                            <span class="question-filter"><i class="fa fa-question-circle"></i></span>
+                        </button>
+                    </div>
+                    <div class="filter-block filter1">
+                        <div id="w-slider-color"></div>
+                        <div class="wrapper-table">
+                            <ul class="slider-lables">
+                                <li title="slightly colored">K</li>
+                                <li title="near colorless">J</li>
+                                <li title="near colorless">I</li>
+                                <li title="near colorless">H</li>
+                                <li title="near colorless">G</li>
+                                <li title="colorless">F</li>
+                                <li title="colorless">E</li>
+                                <li title="colorless">D</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="one-line">
+                    <div class="title">clarity
+                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                            <span class="question-filter"><i class="fa fa-question-circle"></i></span>
+                        </button>
+                    </div>
+                    <div class="filter-block filter1">
+                        <div id="w-slider-clarity"></div>
+                        <div class="wrapper-table">
+                            <ul class="slider-lables">
+                                <li title="slightly colored">I1</li>
+                                <li title="near colorless">SI2</li>
+                                <li title="near colorless">SI1</li>
+                                <li title="near colorless">VS2</li>
+                                <li title="near colorless">VS1</li>
+                                <li title="colorless">VVS2</li>
+                                <li title="colorless">VVS1</li>
+                                <li title="colorless">IF</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-            Depth<div>
-                <div id="w-slider-depth"></div>
-                <input type="text" class="text-left w-input-depth-from">
-                <input type="text" class="text-right w-input-depth-to">
+
+                <!-- fancy box -->
+
             </div>
-
-            <p></p>
-            Table<div>
-                <div id="w-slider-table"></div>
-                <input type="text" class="text-left w-input-table-from">
-                <input type="text" class="text-right w-input-table-to">
-            </div>
-
-
-            <p></p>
-            fluorescence_intensities
-            <div class="btn-group w-group-fluorescence-intensities" data-toggle="buttons">
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="fluorescence_intensities" value="Very Strong"> Very Strong
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="fluorescence_intensities" value="Strong"> Strong
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="fluorescence_intensities" value="Slight"> Slight
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="fluorescence_intensities" value="Medium"> Medium
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="fluorescence_intensities" value="Faint"> Faint
-                </label>
-                <label class="btn btn-primary">
-                    <input type="checkbox" name="fluorescence_intensities" value="Very Slight"> Very Slight
-                </label>
-            </div>
-
-
         </div>
-
+        <div class="right-f">
+            <div class="one-line">
+                <div class="title">cut
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        <span class="question-filter"><i class="fa fa-question-circle"></i></span>
+                    </button>
+                </div>
+                <div class="filter-block filter1">
+                    <div id="w-slider-cut"></div>
+                    <div class="wrapper-table">
+                        <ul class="slider-lables">
+                            <li title="slightly colored">Fair</li>
+                            <li title="near colorless">Good</li>
+                            <li title="near colorless">Very Good</li>
+                            <li title="near colorless">Excellent</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="one-line">
+                <div class="title">carat
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        <span class="question-filter"><i class="fa fa-question-circle"></i></span>
+                    </button>
+                </div>
+                <div class="filter-block filter1">
+                    <div id="w-slider-carat"></div>
+                    <div class="clearfix">
+                        <input type="text" id="amountCarat1" class="input-slider-p pull-left w-input-carat-from">
+                        <input type="text" id="amountCarat2" class="input-slider-p pull-right w-input-carat-to">
+                    </div>
+                </div>
+            </div>
+            <div class="one-line">
+                <div class="title">price
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        <span class="question-filter"><i class="fa fa-question-circle"></i></span>
+                    </button>
+                </div>
+                <div class="filter-block filter1">
+                    <div id="w-slider-price"></div>
+                    <div class="clearfix">
+                        <input type="text" id="amountPrice1" class="input-slider-p pull-left w-input-price-from">
+                        <input type="text" id="amountPrice2" class="input-slider-p pull-right w-input-price-to">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="functional-filter clearfix">
+        <div class="filter-advanced-wrapper pull-left">
+            <button class="filter-advanced">advanced options</button>
+            <div class="dropdown-advanced">
+                <ul>
+                    <li data-target="polish-slider">
+                        polish
+                        <div class="filter-block filter1 filter-drop-drop">
+                            <div class="wrapper-filter-drop">
+                                <div id="w-slider-polish"></div>
+                                <div class="wrapper-table">
+                                    <ul class="slider-lables">
+                                        <li title="colorless">Fair</li>
+                                        <li title="colored">Good</li>
+                                        <li title="colorless">Very Good</li>
+                                        <li title="colorless">Excellent</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-target="symmetry-slider">
+                        symmetry
+                        <div class="filter-block filter1 filter-drop-drop">
+                            <div class="wrapper-filter-drop">
+                                <div id="w-slider-symmetry"></div>
+                                <div class="wrapper-table">
+                                    <ul class="slider-lables">
+                                        <li title="colorless">Fair</li>
+                                        <li title="colored">Good</li>
+                                        <li title="colorless">Very Good</li>
+                                        <li title="colorless">Excellent</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        lab
+                        <div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-labs"  data-toggle="buttons">
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="labs" value="GIA"> GIA
+                            </div>
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="labs" value="IGI"> IGI
+                            </div>
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="labs" value="AGS"> AGS
+                            </div>
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="labs" value="HRD"> HRD
+                            </div>
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="labs" value="EGL_USA"> EGL_USA
+                            </div>
+                        </div>
+                    </li>
+                    <li data-target="depth-slider">
+                        depth
+                        <div class="filter-block filter1 filter-drop-drop">
+                            <div class="wrapper-filter-drop">
+                                <div id="w-slider-depth"></div>
+                                <!--<div class="wrapper-table">-->
+                                    <!--<ul class="slider-lables">-->
+                                        <!--<li title="colorless">Fair</li>-->
+                                        <!--<li title="colored">Good</li>-->
+                                        <!--<li title="colorless">Very good</li>-->
+                                        <!--<li title="colorless">Excellent</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </li>
+                    <li data-target="table-slider">
+                        table
+                        <div class="filter-block filter1 filter-drop-drop">
+                            <div class="wrapper-filter-drop">
+                                <div id="w-slider-table"></div>
+                                <!--<div class="wrapper-table">-->
+                                    <!--<ul class="slider-lables">-->
+                                        <!--<li title="colorless">Fair</li>-->
+                                        <!--<li title="colored">Good</li>-->
+                                        <!--<li title="colorless">Very good</li>-->
+                                        <!--<li title="colorless">Excellent</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Fluorescence
+                        <div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-fluorescence-intensities" data-toggle="buttons">
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="fluorescence_intensities" value="Very Strong"> Very strong
+                            </div>
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="fluorescence_intensities" value="Strong"> Strong
+                            </div>
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="fluorescence_intensities" value="Slight"> Slight
+                            </div>
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="fluorescence_intensities" value="Medium"> Medium
+                            </div>
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="fluorescence_intensities" value="Faint"> Feint
+                            </div>
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="fluorescence_intensities" value="Very Slight"> Very slight
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="filter-default-result pull-right">clear filter</button>
+        <button class="filter-change pull-right">close filter</button>
     </div>
 
-    <select name="show" id="w-product-show">
-        <option selected value="15">15</option>
-        <option value="25">25</option>
-        <option value="50">50</option>
-    </select>
-
-    <select name="sortby" id="w-product-sortby">
-        <option value="size_Asc">Carat: low to high</option>
-        <option value="size_Desc">Carat: high to low</option>
-        <option value="Color_Asc">Color: low to high</option>
-        <option value="Color_Desc">Color: high to low</option>
-        <option value="Clarity_Asc">Clarity: low to high</option>
-        <option value="Clarity_Desc">Clarity: high to low</option>
-        <option value="Cut_Asc">Cut: low to high</option>
-        <option value="Cut_Desc">Cut: high to low</option>
-        <option selected value="Price_Asc">Price: low to high</option>
-        <option value="Price_Desc">Price: high to low</option>
-    </select>
-
 </div>
 
-<div id="w-show-product">
-    <?php echo $data;?>
-</div>
+
+
+
+
+    <!--<select name="show" id="w-product-show">-->
+        <!--<option selected value="15">15</option>-->
+        <!--<option value="25">25</option>-->
+        <!--<option value="50">50</option>-->
+    <!--</select>-->
+
+    <!--<select name="sortby" id="w-product-sortby">-->
+        <!--<option value="size_Asc">Carat: low to high</option>-->
+        <!--<option value="size_Desc">Carat: high to low</option>-->
+        <!--<option value="Color_Asc">Color: low to high</option>-->
+        <!--<option value="Color_Desc">Color: high to low</option>-->
+        <!--<option value="Clarity_Asc">Clarity: low to high</option>-->
+        <!--<option value="Clarity_Desc">Clarity: high to low</option>-->
+        <!--<option value="Cut_Asc">Cut: low to high</option>-->
+        <!--<option value="Cut_Desc">Cut: high to low</option>-->
+        <!--<option selected value="Price_Asc">Price: low to high</option>-->
+        <!--<option value="Price_Desc">Price: high to low</option>-->
+    <!--</select>-->
+
+
+
+<!--<div id="w-show-product">-->
+    <!--<?php //echo $data;?>-->
+<!--</div>-->
 
 
 <script type="text/javascript">
@@ -399,25 +498,48 @@
 
         $(document).on('change', '.w-group-labs input', function(){
 
+            if ($(this).prop("checked")){
+                $(this).closest('li').addClass('change');
+            } else {
+                $(this).closest('li').removeClass('change');
+            }
+
             var $labs_cecout = [];
             $('.w-group-labs input:checked').each(function (element) {
                 $labs_cecout.push(this.value);
+
+                if ($(this).prop("checked")){
+                    $(this).closest('li').addClass('change');
+                }
             });
+
 
             $url_labs = '&labs='+$labs_cecout.join(',');
             redirect = generate_url();
             history.pushState('', '', redirect);
-
             ajaxdata(redirect);
 
         });
 
 
+
         $(document).on('change', '.w-group-fluorescence-intensities input', function(){
+
+
+            if ($(this).prop("checked")){
+                $(this).closest('li').addClass('change');
+            } else {
+                $(this).closest('li').removeClass('change');
+            }
 
             var $fluorescence_intensities_cecout = [];
             $('.w-group-fluorescence-intensities input:checked').each(function (element) {
                 $fluorescence_intensities_cecout.push(this.value);
+
+                if ($(this).prop("checked")){
+                    $(this).closest('li').addClass('change');
+                }
+
             });
 
             $url_fluorescence_intensities = '&fluorescence_intensities='+$fluorescence_intensities_cecout.join(',');
@@ -574,7 +696,7 @@
 
         var $w_slider_price = $('#w-slider-price').slider({
             min: 200,
-            max: 10000,
+            max: 999000,
             range: true,
             step: 100,
             animate: 'slow',
@@ -621,6 +743,13 @@
                 if (ui.values[1] <= ui.values[0]) {
                     return false;
                 }
+
+                if (Number(ui.values[0])!= 0 || Number(ui.values[1])!= 4){
+                    $("[data-target=polish-slider]").addClass('change');
+                } else {
+                    $("[data-target=polish-slider]").removeClass('change');
+                }
+
             },
             change: function( event, ui ) {
 
@@ -641,6 +770,13 @@
             animate: 'slow',
             values: [$get_symmetry_from, $get_symmetry_to],
             slide: function( event, ui ) {
+
+                if (Number(ui.values[0])!=0||Number(ui.values[1])!=4){
+                    $("[data-target=symmetry-slider]").addClass('change');
+                } else {
+                    $("[data-target=symmetry-slider]").removeClass('change');
+                }
+
                 if (ui.values[0] >= ui.values[1]) {
                     return false;
                 }
@@ -671,6 +807,13 @@
             animate: 'slow',
             values: [$get_depth_from, $get_depth_to],
             slide: function( event, ui ) {
+
+                if (Number(ui.values[0])!=0||Number(ui.values[1])!=4){
+                    $("[data-target=depth-slider]").addClass('change');
+                } else {
+                    $("[data-target=depth-slider]").removeClass('change');
+                }
+
                 $('.w-input-depth-from').val(ui.values[0]);
                 $('.w-input-depth-to').val(ui.values[1]);
             },
@@ -708,6 +851,13 @@
             animate: 'slow',
             values: [$get_table_from, $get_table_to],
             slide: function( event, ui ) {
+
+                if (Number(ui.values[0])!=0||Number(ui.values[1])!=4){
+                    $("[data-target=table-slider]").addClass('change');
+                } else {
+                    $("[data-target=table-slider]").removeClass('change');
+                }
+
                 $('.w-input-table-from').val(ui.values[0]);
                 $('.w-input-table-to').val(ui.values[1]);
             },
@@ -748,8 +898,8 @@
 
         });
 
-
-
+        //alert(location.href);
+        ajaxdata(location.href);
 
 
         function ajaxdata (redirect) {
@@ -767,8 +917,11 @@
                 },
                 success: function (response) {
 
-                    $('#w-show-product').empty();
-                    $('#w-show-product').html(response);
+//                    $('#w-show-product').empty();
+//                    $('#w-show-product').html(response);
+
+                    $('.w-category-ajax').empty();
+                    $('.w-category-ajax').html(response);
 
 
                 }
@@ -829,6 +982,13 @@
            return false;
         });
 
+
+
+
+        $(".filter-default-result").on('click', function() {
+            $('#w-slider-color').slider('values',0,8);
+
+        });
 
 
 

@@ -67,7 +67,7 @@
     //    location = '<?php echo $action; ?>&filter=' + filter.join(',');
     //});
 
-$(function () {
+$(document).ready(function () {
 
 
     $('input[name^=\'filter\']').on('change', function () {

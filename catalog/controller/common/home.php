@@ -9,6 +9,12 @@ class ControllerCommonHome extends Controller {
 			$this->document->addLink(HTTP_SERVER, 'canonical');
 		}
 
+
+        // Menu for mobile
+        $this->load->model('catalog/category');
+        $data['categories'] = $this->model_catalog_category->getCategoriesNew(true);
+
+
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');

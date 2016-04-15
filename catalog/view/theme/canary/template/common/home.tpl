@@ -1,5 +1,6 @@
 
 <?php echo $header; ?>
+<?//dd($categories)?>
 <main class="w-general-container">
     <section class="top-main-r top-main-r1">
         <div class="wrapper-main-r">
@@ -23,34 +24,34 @@
                 <div class="panel-body">
                     <ul class="brilliant-style clearfix">
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s1"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Round"><span class="box-ico"><i class="brilliant-ico2 brilliant-s1"></i></span><span>Round Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s2"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Princess"><span class="box-ico"><i class="brilliant-ico2 brilliant-s2"></i></span><span>Princess Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s3"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Emerald"><span class="box-ico"><i class="brilliant-ico2 brilliant-s3"></i></span><span>Emerald Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s4"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Asscher"><span class="box-ico"><i class="brilliant-ico2 brilliant-s4"></i></span><span>Asscher Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s5"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Oval"><span class="box-ico"><i class="brilliant-ico2 brilliant-s5"></i></span><span>Oval Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s6"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Radiant"><span class="box-ico"><i class="brilliant-ico2 brilliant-s6"></i></span><span>Radiant Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s7"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Pear"><span class="box-ico"><i class="brilliant-ico2 brilliant-s7"></i></span><span>Pear Shaped</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s8"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Heart"><span class="box-ico"><i class="brilliant-ico2 brilliant-s8"></i></span><span>Heart Shaped</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s9"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Marquise"><span class="box-ico"><i class="brilliant-ico2 brilliant-s9"></i></span><span>Marquise Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s10"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Cushion"><span class="box-ico"><i class="brilliant-ico2 brilliant-s10"></i></span><span>Cushion Cut</span></a>
                         </li>
                     </ul>
                 </div>
@@ -60,40 +61,20 @@
             <div class="panel-heading collapse-add" role="tab">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-m2" aria-expanded="false">
-                        ENGAGEMENT RINGS
+                        <?php echo $categories[1]['name']?><!--ENGAGEMENT RINGS-->
                     </a>
                 </h4>
             </div>
             <div id="collapse-m2" class="panel-collapse collapse" role="tabpanel">
                 <div class="panel-body">
                     <ul class="brilliant-style">
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s1"></i></span><span>Solitare</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s2"></i></span><span>Pave</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s3"></i></span><span>Channel set</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s4"></i></span><span>Side - Stone</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s5"></i></span><span>Three - Stone</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s6"></i></span><span>Tension</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s7"></i></span><span>Halo</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s8"></i></span><span>Vintage</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s9"></i></span><span>Bridal set</span></a>
-                        </li>
+
+                        <?foreach ($categories[1]['children'] as $key =>$row):?>
+                            <li>
+                                <a href="<?=$row['href']?>"><span class="box-ico"><i class="brilliant-ico brilliant-s<?=$key+1?>"></i></span><span><?=$row['name']?></span></a>
+                            </li>
+                        <?endforeach?>
+
                     </ul>
                 </div>
             </div>
@@ -633,7 +614,7 @@
                             <div class="col-xs-3 col-sm-3 col-md-3">
                                 <div class="wrapper-block">
                                     <div class="box-img">
-                                        <a href="#"><img src="catalog/view/theme/canary/mg/img10.png" alt="img"></a>
+                                        <a href="#"><img src="catalog/view/theme/canary/img/img10.png" alt="img"></a>
                                     </div>
                                     <div class="title"><a href="#">Engagament rings</a></div>
                                 </div>

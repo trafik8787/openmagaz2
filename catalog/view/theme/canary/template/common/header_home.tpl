@@ -28,6 +28,11 @@
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/css/style.css"/>
+    <link rel="stylesheet" href="catalog/view/theme/canary/css/w_style.css"/>
+
+    <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
+
     <?php foreach ($analytics as $analytic) { ?>
     <?php echo $analytic; ?>
     <?php } ?>
@@ -35,13 +40,13 @@
 
 
 
-
+<?//dd($categories)?>
 
 <body>
 <header>
     <div class="user-line index-page">
         <div class="center-bl clearfix">
-            <a href="#" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+            <a href="/" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
             <div class="telephone">
                 <i class="ico-telephone"></i>
                 <span><?php echo $telephone; ?> | 24/7</span>
@@ -97,7 +102,7 @@
     </div>
     <div class="center-bl">
         <div class="menu">
-            <a href="#" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+            <a href="/" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
             <ul>
                 <li class="dropdown-b"><!--DIAMONDS-->
                     <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a>
@@ -156,38 +161,17 @@
                         </div>
                     </div>
                 </li>
-                <li class="dropdown-b">
-                    <a href="#"><?php echo $categories[1]['name']?></a>
+                <li class="dropdown-b"><!--engagement rings-->
+                    <a href="<?php echo $categories[1]['href']?>"><?php echo $categories[1]['name']?></a>
                     <div class="dropdown-inside">
                         <div class="title">engagement setting rings</div>
                         <ul class="brilliant-style">
-                            <li>
-                                <a href="<?php echo $categories[1]['children'][0]['href']?>"><i class="brilliant-ico brilliant-s1"></i><br/><?php echo $categories[1]['children'][0]['name']?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $categories[1]['children'][1]['href']?>"><i class="brilliant-ico brilliant-s2"></i><br/><?php echo $categories[1]['children'][1]['name']?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $categories[1]['children'][2]['href']?>"><i class="brilliant-ico brilliant-s3"></i><br/><?php echo $categories[1]['children'][2]['name']?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $categories[1]['children'][3]['href']?>"><i class="brilliant-ico brilliant-s4"></i><br/><?php echo $categories[1]['children'][3]['name']?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $categories[1]['children'][4]['href']?>"><i class="brilliant-ico brilliant-s5"></i><br/><?php echo $categories[1]['children'][4]['name']?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $categories[1]['children'][5]['href']?>"><i class="brilliant-ico brilliant-s6"></i><br/><?php echo $categories[1]['children'][5]['name']?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $categories[1]['children'][6]['href']?>"><i class="brilliant-ico brilliant-s7"></i><br/><?php echo $categories[1]['children'][6]['name']?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $categories[1]['children'][7]['href']?>"><i class="brilliant-ico brilliant-s8"></i><br/><?php echo $categories[1]['children'][7]['name']?></a>
-                            </li>
-                            <li>
-                                <a href="<?php echo $categories[1]['children'][8]['href']?>"><i class="brilliant-ico brilliant-s9"></i><br/><?php echo $categories[1]['children'][8]['name']?></a>
-                            </li>
+                            <?foreach ($categories[1]['children'] as $key => $row):?>
+                                <li>
+                                    <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$key+1?>"></i><br/><?php echo $row['name']?></a>
+                                </li>
+                            <?endforeach?>
+
                         </ul>
                         <div class="row clearfix">
                             <div class="col-md-5 col-sm-5 col-xs-5">
@@ -222,29 +206,30 @@
                     <div class="dropdown-inside">
                         <div class="row clearfix">
                             <div class="col-md-8 col-sm-8 col-xs-8">
-                                <div class="title"><?php echo $categories[2]['children'][1]['name']?></div><!--woman-->
+                                <div class="title">WOMAN</div><!--woman-->
                                 <ul class="brilliant-style brilliant-style-long ul-first-drop">
-                                    <?php foreach ($categories[2]['children'][1]['children'] as $key => $row_woman):?>
+
+                                    <?php for ($x=0; $x<5; $x++) {?>
                                         <li>
-                                            <a href="<?=$row_woman['href']?>"><i class="wedding<?=$key+1?>"></i><br/><?=$row_woman['name']?></a>
+                                            <a href="<?php echo $categories[2]['children'][$x]['href']?>"><i class="wedding<?=$x+1?>"></i><br/><?php echo $categories[2]['children'][$x]['name']?></a>
                                         </li>
-                                    <?endforeach?>
+                                    <?}?>
 
                                 </ul>
-                                <div class="title"><?php echo $categories[2]['children'][0]['name']?></div><!--man-->
+                                <div class="title">MAN</div><!--man-->
                                 <ul class="brilliant-style brilliant-style-long ul-first-drop">
 
                                     <li>
-                                        <a href="<?php echo $categories[2]['children'][0]['children'][0]['href']?>"><i class="wedding1"></i><br/><?php echo $categories[2]['children'][0]['children'][0]['name']?></a>
+                                        <a href="<?php echo $categories[2]['children'][5]['href']?>"><i class="wedding1"></i><br/><?php echo $categories[2]['children'][5]['name']?></a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo $categories[2]['children'][0]['children'][1]['href']?>"><i class="wedding6"></i><br/><?php echo $categories[2]['children'][0]['children'][1]['name']?></a>
+                                        <a href="<?php echo $categories[2]['children'][6]['href']?>"><i class="wedding6"></i><br/><?php echo $categories[2]['children'][6]['name']?></a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo $categories[2]['children'][0]['children'][2]['href']?>"><i class="wedding3"></i><br/><?php echo $categories[2]['children'][0]['children'][2]['name']?></a>
+                                        <a href="<?php echo $categories[2]['children'][7]['href']?>"><i class="wedding3"></i><br/><?php echo $categories[2]['children'][7]['name']?></a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo $categories[2]['children'][0]['children'][3]['href']?>"><i class="wedding7"></i><br/><?php echo $categories[2]['children'][0]['children'][3]['name']?></a>
+                                        <a href="<?php echo $categories[2]['children'][8]['href']?>"><i class="wedding7"></i><br/><?php echo $categories[2]['children'][8]['name']?></a>
                                     </li>
                                 </ul>
                             </div>

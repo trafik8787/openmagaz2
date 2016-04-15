@@ -1,125 +1,576 @@
-<!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<!--[if IE 8 ]><html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>" class="ie8"><![endif]-->
-<!--[if IE 9 ]><html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>" class="ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html dir="<?php echo $direction; ?>" lang="<?php echo $lang; ?>">
-<!--<![endif]-->
+<!doctype html>
+<html lang="en-US">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><?php echo $title; ?></title>
-<base href="<?php echo $base; ?>" />
-<?php if ($description) { ?>
-<meta name="description" content="<?php echo $description; ?>" />
-<?php } ?>
-<?php if ($keywords) { ?>
-<meta name="keywords" content= "<?php echo $keywords; ?>" />
-<?php } ?>
-<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title><?php echo $title; ?></title>
 
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <base href="<?php echo $base; ?>"/>
 
-<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
-<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
-<link href="catalog/view/theme/canary/stylesheet/stylesheet.css" rel="stylesheet">
+    <?php if ($description) { ?>
+        <meta name="description" content="<?php echo $description; ?>"/>
+    <?php } ?>
 
+    <?php if ($keywords) { ?>
+        <meta name="keywords" content="<?php echo $keywords; ?>"/>
+    <?php } ?>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="catalog/view/theme/canary/css/normalize.css"/>
+    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
+    <link href="catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
+    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
+    <link rel="stylesheet" href="catalog/view/theme/canary/css/style.css"/>
+    <link rel="stylesheet" href="catalog/view/theme/canary/css/w_style.css"/>
 
-<?php foreach ($styles as $style) { ?>
-<link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
-<?php } ?>
-<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
-<script src="catalog/view/javascript/app.js" type="text/javascript"></script>
-<?php foreach ($links as $link) { ?>
-<link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
-<?php } ?>
-<?php foreach ($scripts as $script) { ?>
-<script src="<?php echo $script; ?>" type="text/javascript"></script>
-<?php } ?>
-<?php foreach ($analytics as $analytic) { ?>
-<?php echo $analytic; ?>
-<?php } ?>
+    <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
+
 </head>
-<body class="<?php echo $class; ?>">
-<nav id="top">
-  <div class="container">
-    <?php echo $currency; ?>
-    <?php echo $language; ?>
-    <div id="top-links" class="nav pull-right">
-      <ul class="list-inline">
-        <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></li>
-        <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
-          <ul class="dropdown-menu dropdown-menu-right">
-            <?php if ($logged) { ?>
-            <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-            <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-            <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-            <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-            <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
-            <?php } else { ?>
-            <li><a href="<?php echo $register; ?>"><?php echo $text_register; ?></a></li>
-            <li><a href="<?php echo $login; ?>"><?php echo $text_login; ?></a></li>
-            <?php } ?>
-          </ul>
-        </li>
-        <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="fa fa-heart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_wishlist; ?></span></a></li>
-        <li><a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_shopping_cart; ?></span></a></li>
-        <li><a href="<?php echo $checkout; ?>" title="<?php echo $text_checkout; ?>"><i class="fa fa-share"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_checkout; ?></span></a></li>
-      </ul>
+<body class="static-page">
+<div class="menu-mobile-l">
+    <div class="login-menu">
+        <a href="#">Login/Sign in</a>
     </div>
-  </div>
-</nav>
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <div id="logo">
-          <?php if ($logo) { ?>
-          <a href="/"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
-          <?php } else { ?>
-          <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-          <?php } ?>
-        </div>
-      </div>
-      <div class="col-sm-5"><?php echo $search; ?>
-      </div>
-      <div class="col-sm-3"><?php echo $cart; ?></div>
-    </div>
-  </div>
-</header>
-<?php if ($categories) { ?>
-<div class="container">
-  <nav id="menu" class="navbar">
-    <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
-      <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
-    </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">
-        <?php foreach ($categories as $category) { ?>
-        <?php if ($category['children']) { ?>
-        <li class="dropdown"><a href="<?php echo $category['href']; ?>" class="dropdown-toggle w-general-category" ><?php echo $category['name']; ?></a>
-          <div class="dropdown-menu">
-            <div class="dropdown-inner">
-              <?php foreach (array_chunk($category['children'], ceil(count($category['children']) / $category['column'])) as $children) { ?>
-              <ul class="list-unstyled">
-                <?php foreach ($children as $child) { ?>
-                <li><a class="w-wsubcat" href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a></li>
-                <?php } ?>
-              </ul>
-              <?php } ?>
+    <div class="panel-group brilliant-panel-main" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading collapse-add" role="tab">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-m1" aria-expanded="false">
+                        DIAMONDS
+                    </a>
+                </h4>
             </div>
-            <a href="<?php echo $category['href']; ?>" class="see-all"><?php echo $text_all; ?> <?php echo $category['name']; ?></a> </div>
-        </li>
-        <?php } else { ?>
-        <li><a href="<?php echo $category['href']; ?>" class="w-general-category"><?php echo $category['name']; ?></a></li>
-        <?php } ?>
-        <?php } ?>
-      </ul>
+            <div id="collapse-m1" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                    <ul class="brilliant-style clearfix">
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s1"></i></span><span>Round</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s2"></i></span><span>Round</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s3"></i></span><span>Round</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s4"></i></span><span>Round</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s5"></i></span><span>Round</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s6"></i></span><span>Round</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s7"></i></span><span>Round</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s8"></i></span><span>Round</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s9"></i></span><span>Round</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s10"></i></span><span>Round</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading collapse-add" role="tab">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-m2" aria-expanded="false">
+                        ENGAGEMENT RINGS
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-m2" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                    <ul class="brilliant-style">
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s1"></i></span><span>Solitare</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s2"></i></span><span>Pave</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s3"></i></span><span>Channel set</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s4"></i></span><span>Side - Stone</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s5"></i></span><span>Three - Stone</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s6"></i></span><span>Tension</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s7"></i></span><span>Halo</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s8"></i></span><span>Vintage</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s9"></i></span><span>Bridal set</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading collapse-add" role="tab">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-m3" aria-expanded="false">
+                        WEDDING RINGS
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-m3" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                    <div class="title">woman</div>
+                    <ul class="brilliant-style brilliant-style-long ul-first-drop clearfix">
+                        <li>
+                            <a href="#"><i class="wedding1"></i>classik</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="wedding2"></i>carved</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="wedding3"></i>diamond</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="wedding4"></i>aniversary</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="wedding5"></i>eternity</a>
+                        </li>
+                    </ul>
+                    <div class="title">man</div>
+                    <ul class="brilliant-style brilliant-style-long ul-first-drop clearfix">
+                        <li>
+                            <a href="#"><i class="wedding1"></i>classik</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="wedding6"></i>carved</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="wedding3"></i>diamond</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="wedding7"></i>alternative</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button"  data-parent="#accordion" href="#" aria-expanded="false">
+                        GEMSTONES
+                    </a>
+                </h4>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading collapse-add" role="tab">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-m4" aria-expanded="false">
+                        FINE JEWELRY
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-m4" class="panel-collapse collapse" role="tabpanel">
+                <div class="panel-body">
+                    <ul class="style-br-long ul-first-drop fine-jewerly-ul">
+                        <li>
+                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span>Diamond studs</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span>Matching Gemstone Pairs</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span>Diamond studs</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
+    <ul class="mobile-link-menu">
+        <li><a href="#">EDUCATION</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">ABOUT</a></li>
+    </ul>
+    <div class="newsletter-main clearfix">
+        <div class="newsletter-form">
+            <div class="wrapper-form">
+                <div class="title">
+                    NEWSLETTER
+                </div>
+                <div class="text">
+                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.<br>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat i
+                </div>
+                <form action="" class="form-nl">
+                    <div class="gender clearfix">
+                        <div class="one-block active">
+                            <i class="fa fa-venus"></i> woman
+                        </div>
+                        <div class="one-block">
+                            <i class="fa fa-mars"></i> man
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <input type="text" placeholder="Enter your email adress...">
+                        <button class="form-brand">subskribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bg-right"></div>
+    </div>
+    <div class="copyright">
+        ©2016.
+    </div>
 </div>
-<?php } ?>
+<div class="wrapper-page">
+    <header>
+        <div class="user-line">
+            <div class="center-bl clearfix">
+                <button class="menu-l-open"><i class="fa fa-bars"></i></button>
+                <a href="/" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+                <div class="telephone">
+                    <i class="ico-telephone"></i>
+                    <span>877-826-9866 | 24/7</span>
+                </div>
+                <ul class="top-menu-b main-page">
+                    <li><a href="#"><i class="man-ico"></i><span>login</span></a></li>
+                    <li><a href="#"><i class="heart-ico"></i><span>wish list ( 1 )</span></a></li>
+                    <li class="cart-bl">
+                        <a href="#"><i class="cart-ico"></i><span>cart ( 1 )</span></a>
+                        <div class="cart-basket">
+                            <button class="close-cart-main"></button>
+                            <div class="product-box">
+                                <div class="one-product clearfix">
+                                    <div class="box-img">
+                                        <img src="catalog/view/theme/canary/img/img15.png" alt="img">
+                                    </div>
+                                    <div class="text-block">
+                                        <div class="title"><a href="#">Engagament rings</a></div>
+                                        X1: <span class="red-text">$450.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper-text">
+                                <p>Sub-Total: $450.000</p>
+                                <p>Total: $450.000</p>
+                                <div class="box-btn clearfix">
+                                    <a href="#" class="red-btn pull-left"><i class="cart-white-ico"></i>view cart</a>
+                                    <a href="#" class="red-btn pull-right">checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--<li class="triangle"><a href="#">currency usd</a></li>-->
+                </ul>
+
+                <?php echo $search; ?>
+
+            </div>
+        </div>
+        <div class="center-bl">
+
+            <div class="menu">
+                <button class="menu-l-open"><i class="fa fa-bars"></i></button>
+                <a href="#" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+                <ul>
+                    <li class="dropdown-b" data-target="menu1">
+                        <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a><!--DIAMONDS-->
+                        <div class="dropdown-inside">
+                            <div class="title">search diamond gallery</div>
+                            <ul class="brilliant-style">
+                                <li>
+                                    <a href="/diamonds?&shape=Round"><i class="brilliant-ico2 brilliant-s1"></i><br/>Round Cut</a>
+                                </li>
+                                <li>
+                                    <a href="/diamonds?&shape=Princess"><i class="brilliant-ico2 brilliant-s2"></i><br/>Princess Cut</a>
+                                </li>
+                                <li>
+                                    <a href="/diamonds?&shape=Emerald"><i class="brilliant-ico2 brilliant-s3"></i><br/>Emerald Cut</a>
+                                </li>
+                                <li>
+                                    <a href="/diamonds?&shape=Asscher"><i class="brilliant-ico2 brilliant-s4"></i><br/>Asscher Cut</a>
+                                </li>
+                                <li>
+                                    <a href="/diamonds?&shape=Oval"><i class="brilliant-ico2 brilliant-s5"></i><br/>Oval Cut</a>
+                                </li>
+                                <li>
+                                    <a href="/diamonds?&shape=Radiant"><i class="brilliant-ico2 brilliant-s6"></i><br/>Radiant Cut</a>
+                                </li>
+                                <li>
+                                    <a href="/diamonds?&shape=Pear"><i class="brilliant-ico2 brilliant-s7"></i><br/>Pear Shaped</a>
+                                </li>
+                                <li>
+                                    <a href="/diamonds?&shape=Heart"><i class="brilliant-ico2 brilliant-s8"></i><br/>Heart Shaped</a>
+                                </li>
+                                <li>
+                                    <a href="/diamonds?&shape=Marquise"><i class="brilliant-ico2 brilliant-s9"></i><br/>Marquise Cut</a>
+                                </li>
+                                <li>
+                                    <a href="/diamonds?&shape=Cushion"><i class="brilliant-ico2 brilliant-s10"></i><br/>Cushion Cut</a>
+                                </li>
+                            </ul>
+                            <div class="row clearfix">
+                                <div class="col-md-5 col-sm-5 col-xs-5">
+                                    <div class="title">desighn your own</div>
+                                    <ul class="style-br-long">
+                                        <li>
+                                            <a href="#"><span class="wrap-ico"><i class="own-b own-b-7"></i></span> <span>Diamond engagement rings</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico"><i class="own-b own-b-1"></i></span> <span>Diamond studs</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico"><i class="own-b own-b-4"></i></span> <span>Diamond pendant</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7 text-right">
+                                    <img src="catalog/view/theme/canary/img/img14.png" alt="img" class="img-under-style">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown-b" data-target="menu2"><!--ENGAGEMENT RINGS-->
+                        <a href="<?php echo $categories[1]['href']?>"><?php echo $categories[1]['name']?></a>
+                        <div class="dropdown-inside">
+                            <div class="title">engagement setting rings</div>
+                            <ul class="brilliant-style">
+                                <li>
+                                    <a href="#"><i class="brilliant-ico brilliant-s1"></i><br/>solitare</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="brilliant-ico brilliant-s2"></i><br/>PAVE</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="brilliant-ico brilliant-s3"></i><br/>CHANNEL SET</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="brilliant-ico brilliant-s4"></i><br/>SIDE - STONE</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="brilliant-ico brilliant-s5"></i><br/>THREE - STONE</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="brilliant-ico brilliant-s6"></i><br/>TENSION</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="brilliant-ico brilliant-s7"></i><br/>HALO</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="brilliant-ico brilliant-s8"></i><br/>VINTAGE</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="brilliant-ico brilliant-s9"></i><br/>BRIDAL SET</a>
+                                </li>
+                            </ul>
+                            <div class="row clearfix">
+                                <div class="col-md-5 col-sm-5 col-xs-5">
+                                    <div class="title">designer  preset colections</div>
+                                    <ul class="style-br-long">
+                                        <li>
+                                            <a href="#"><i class="brilliant-ico brilliant-s7"></i> <span>Designer  preset colections</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="brilliant-ico brilliant-s7"></i> <span>Designer  preset colections</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-7 col-sm-7 col-xs-7 text-right">
+                                    <img src="catalog/view/theme/canary/img/img13.png" alt="img" class="img-under-style">
+                                </div>
+                            </div>
+                            <div class="clearfix link-drop-menu">
+                                <div class="pull-left">
+                                    <a href="#">START WITH A SETTING </a>
+                                    <a href="#">START WITH A DIAMOND</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#">inspiration gallery</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown-b" data-target="menu3">
+                        <a href="#">WEDDING RINGS</a>
+                        <div class="dropdown-inside">
+                            <div class="row clearfix">
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                    <div class="title">woman</div>
+                                    <ul class="brilliant-style brilliant-style-long ul-first-drop">
+                                        <li>
+                                            <a href="#"><i class="wedding1"></i><br/>classik</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="wedding2"></i><br/>carved</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="wedding3"></i><br/>diamond</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="wedding4"></i><br/>aniversary</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="wedding5"></i><br/>eternity</a>
+                                        </li>
+                                    </ul>
+                                    <div class="title">man</div>
+                                    <ul class="brilliant-style brilliant-style-long ul-first-drop">
+                                        <li>
+                                            <a href="#"><i class="wedding1"></i><br/>classik</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="wedding6"></i><br/>carved</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="wedding3"></i><br/>diamond</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="wedding7"></i><br/>alternative</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                                    <img src="catalog/view/theme/canary/img/img17.png" alt="img" class="img-under-style">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown-b" data-target="menu4">
+                        <a href="#">GEMSTONES</a>
+                        <div class="dropdown-inside">
+                            <div class="row clearfix">
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <div class="title">search gemstones gallery</div>
+                                    <ul class="brilliant-style gemstones-box">
+                                        <li>
+                                            <a href="#"><i class="gemstones gemstones1"></i><span>blue suphire</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="gemstones gemstones2"></i><span>blue suphire</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="gemstones gemstones3"></i><span>blue suphire</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="gemstones gemstones4"></i><span>blue suphire</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="gemstones gemstones5"></i><span>blue suphire</span></a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <div class="title">desighn your own</div>
+                                    <ul class="style-br-long ul-first-drop">
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-13"></i></span> <span>Diamond engagement rings</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span>Diamond studs</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-14"></i></span> <span>Diamond pendant</span></a>
+                                        </li>
+                                        <li class="last-li-destones">
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span>Matching Gemstone Pairs</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <div class="title">mille coeurs colections</div>
+                                    <ul class="style-br-long ul-first-drop">
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-11"></i></span> <span>Diamond engagement rings</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span>Diamond studs</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-12"></i></span> <span>Diamond pendant</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <img src="catalog/view/theme/canary/img/img18.png" alt="img" class="img-under-style">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="dropdown-b" data-target="menu5">
+                        <a href="#">FINE JEWELRY</a>
+                        <div class="dropdown-inside">
+                            <div class="row clearfix">
+                                <div class="col-md-5 col-sm-5 col-xs-5">
+                                    <div class="title">studs&earrings</div>
+                                    <ul class="style-br-long ul-first-drop">
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span>Diamond studs</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span>Matching Gemstone Pairs</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span>Diamond studs</span></a>
+                                        </li>
+                                    </ul>
+                                    <div class="title">rings:</div>
+                                    <ul class="style-br-long">
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-13"></i></span> <span>Diamond engagement rings</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-11"></i></span> <span>Diamond engagement rings</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <div class="title">desighn your own</div>
+                                    <ul class="style-br-long">
+                                        <li>
+                                            <a href="#"><span class="wrap-ico3"><i class="own-b own-b-14"></i></span> <span>Diamond pendant</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico3"><i class="own-b own-b-12"></i></span> <span>Diamond pendant</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="wrap-ico3"><i class="own-b own-b-14"></i></span> <span>Diamond pendant</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                                    <img src="catalog/view/theme/canary/img/img16.png" alt="img" class="img-under-style">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bord-l"></li>
+                    <li>
+                        <a href="#">EDUCATION</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#">ABOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>

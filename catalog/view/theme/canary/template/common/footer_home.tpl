@@ -101,15 +101,24 @@
 
 </footer>
 
-<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+<div class="container-loader container1" style="display: none">
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+</div>
+
+
+
 <script type="text/javascript" src="catalog/view/theme/canary/vendor/slickslider/slick.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery.sliderPro/jquery.sliderPro.min.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
+
 <script type="text/javascript" src="catalog/view/theme/canary/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/canary/js/script.js"></script>
 <script type="text/javascript" src="catalog/view/theme/canary/js/device.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/app.js" ></script>
+<script type="text/javascript" src="catalog/view/javascript/common.js" ></script>
+
 
 </body>
 </html>

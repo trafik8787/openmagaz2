@@ -43,7 +43,7 @@ $(document).ready(function() {
             type: "POST", // будем передавать данные через POST
             dataType: "HTML", // указываем, что нам вернется JSON
             url: this.href,
-            data: 'general_category=1', // передаем данные из формы
+            data: 'general_category=1',
             success: function (response) { // когда получаем ответ
 
                 $('.w-general-container').empty();

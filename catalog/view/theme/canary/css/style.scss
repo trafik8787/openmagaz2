@@ -28,7 +28,6 @@
 }
 .brilliant-panel-main{
   display: none;
-
   .panel-heading{
     padding: 0;
     a{
@@ -310,6 +309,7 @@
       display: inline-block;
     }
     & > li{
+      width: 915px;
       display: inline;
       & > a{
         padding: 10px;
@@ -335,11 +335,6 @@
           }
         }
       }
-      &:nth-child(1){
-        & > .dropdown-inside{
-          width: 865px;
-        }
-      }
       .link-drop-menu{
         padding-top: 50px;
         a{
@@ -353,31 +348,15 @@
           }
         }
       }
-      &:nth-child(2){
-        & > .dropdown-inside{
-          width: 915px;
+      .img-under-style{
+        margin-top: 20px;
+      }
+      &[data-target=menu3]{
+        .img-under-style{
+          margin-top: 40px;
         }
       }
-      &:nth-child(3){
-        & > .dropdown-inside{
-          width: 915px;
-          .img-under-style{
-            margin-top: 40px;
-          }
-          .title {
-            margin-bottom: 15px;
-          }
-          .brilliant-style{
-            a{
-              text-transform: uppercase;
-            }
-          }
-          .ul-first-drop {
-            margin-bottom: 15px!important;
-          }
-        }
-      }
-      &:nth-child(4){
+      &[data-target=menu4]{
         position: relative;
         & > .dropdown-inside{
           width: 800px;
@@ -391,7 +370,7 @@
           }
         }
       }
-      &:nth-child(5){
+      &[data-target=menu5]{
         position: relative;
         & > .dropdown-inside{
           width: 720px;
@@ -404,7 +383,8 @@
         }
       }
       & > .dropdown-inside{
-        padding: 40px;
+        width: 915px;
+        padding: 50px;
         position: absolute;
         z-index: 70;
         left: 0;
@@ -1028,22 +1008,6 @@
 
 .login-continue {
   font-size: 18px;
-}
-
-.rating{
-  text-align: left;
-  display: inline-block;
-  @include transition(0.4s);
-  .star{
-    width: 18px;
-    height: 17px;
-    display: inline-block;
-    vertical-align: middle;
-    background: url("../img/star-ico.png") no-repeat center / contain;
-    &.active{
-      background: url("../img/star-active-ico.png") no-repeat center / contain;
-    }
-  }
 }
 
 
@@ -3702,7 +3666,7 @@
     }
     .dropdown{
       width: 120px;
-      height: 40px;
+      height: 50px;
       margin-left: 15px;
       margin-right: 10px;
       position: relative;
@@ -3737,7 +3701,7 @@
       float: right;
     }
     .view-product{
-      padding-top: 9px;
+      padding-top: 15px;
       float: right;
       .btn-view{
         margin-left: 5px;
@@ -5213,6 +5177,13 @@
         }
       }
     }
+  }
+}
+
+.dropdown{
+  .select-simulate-btn.active ~ .select-simulate-list {
+    background-color: white;
+    z-index: 20;
   }
 }
 

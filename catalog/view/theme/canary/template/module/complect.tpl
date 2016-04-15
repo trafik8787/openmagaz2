@@ -1,4 +1,4 @@
-<h5>Complect</h5>
-<div class="w-blocs-complects">
+
+<div class="step-product clearfix row">
     <?=$render?>
 </div>
