@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="catalog/view/theme/canary/css/normalize.css"/>
+    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/css/style.css"/>
@@ -162,13 +163,13 @@
                     </div>
                 </li>
                 <li class="dropdown-b"><!--engagement rings-->
-                    <a href="<?php echo $categories[1]['href']?>"><?php echo $categories[1]['name']?></a>
+                    <a href="<?php echo $categories[1]['href']?>" class="w-general-category"><?php echo $categories[1]['name']?></a>
                     <div class="dropdown-inside">
                         <div class="title">engagement setting rings</div>
                         <ul class="brilliant-style">
                             <?foreach ($categories[1]['children'] as $key => $row):?>
                                 <li>
-                                    <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$key+1?>"></i><br/><?php echo $row['name']?></a>
+                                    <a href="<?php echo $row['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s<?=$key+1?>"></i><br/><?php echo $row['name']?></a>
                                 </li>
                             <?endforeach?>
 

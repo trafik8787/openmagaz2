@@ -7,17 +7,19 @@
         <div class="center-bl clearfix">
             <div class="pull-left left-drop-f">
                 <span>Sort By:</span>
-                <li class="dropdown">
-                    <input type="text" class="shipping-input select-simulate-input" id="sort1" required>
-                    <label for="sort1" class="shipping-label">Default</label>
-                    <a href="#" class="select-simulate-btn"></a>
-                    <ul class="select-simulate-list">
-                        <li><a href="#" data-value="Default">Default</a></li>
-                        <li><a href="#" data-value="Sort 1">Sort 1</a></li>
-                        <li><a href="#" data-value="Sort 2">Sort 2</a></li>
-                    </ul>
-                </li>
-                <span>Product compare (0)</span>
+                <select name="sortby" id="w-product-sortby">
+                    <option value="size_Asc">Carat: low to high</option>
+                    <option value="size_Desc">Carat: high to low</option>
+                    <option value="Color_Asc">Color: low to high</option>
+                    <option value="Color_Desc">Color: high to low</option>
+                    <option value="Clarity_Asc">Clarity: low to high</option>
+                    <option value="Clarity_Desc">Clarity: high to low</option>
+                    <option value="Cut_Asc">Cut: low to high</option>
+                    <option value="Cut_Desc">Cut: high to low</option>
+                    <option selected value="Price_Asc">Price: low to high</option>
+                    <option value="Price_Desc">Price: high to low</option>
+                </select>
+                <!--<span>Product compare (0)</span>-->
             </div>
 
             <div class="view-product">
@@ -27,14 +29,11 @@
             <div class="show-b">
                 <span>Show:</span>
                 <li class="dropdown">
-                    <input type="text" class="shipping-input select-simulate-input" id="sort2" required>
-                    <label for="sort2" class="shipping-label">10</label>
-                    <a href="#" class="select-simulate-btn"></a>
-                    <ul class="select-simulate-list">
-                        <li><a href="#" data-value="10">10</a></li>
-                        <li><a href="#" data-value="20">20</a></li>
-                        <li><a href="#" data-value="30">30</a></li>
-                    </ul>
+                    <select name="show" id="w-product-show">
+                        <option value="15">15</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                    </select>
                 </li>
             </div>
         </div>

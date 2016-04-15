@@ -38,7 +38,7 @@
             <div class="panel-heading collapse-add" role="tab">
                 <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-m1" aria-expanded="false">
-                        DIAMONDS
+                        <?php echo $categories[0]['name']?>
                     </a>
                 </h4>
             </div>
@@ -46,34 +46,34 @@
                 <div class="panel-body">
                     <ul class="brilliant-style clearfix">
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s1"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Round"><span class="box-ico"><i class="brilliant-ico2 brilliant-s1"></i></span><span>Round Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s2"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Princess"><span class="box-ico"><i class="brilliant-ico2 brilliant-s2"></i></span><span>Princess Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s3"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Emerald"><span class="box-ico"><i class="brilliant-ico2 brilliant-s3"></i></span><span>Emerald Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s4"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Asscher"><span class="box-ico"><i class="brilliant-ico2 brilliant-s4"></i></span><span>Asscher Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s5"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Oval"><span class="box-ico"><i class="brilliant-ico2 brilliant-s5"></i></span><span>Oval Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s6"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Radiant"><span class="box-ico"><i class="brilliant-ico2 brilliant-s6"></i></span><span>Radiant Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s7"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Pear"><span class="box-ico"><i class="brilliant-ico2 brilliant-s7"></i></span><span>Pear Shaped</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s8"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Heart"><span class="box-ico"><i class="brilliant-ico2 brilliant-s8"></i></span><span>Heart Shaped</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s9"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Marquise"><span class="box-ico"><i class="brilliant-ico2 brilliant-s9"></i></span><span>Marquise Cut</span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico2 brilliant-s10"></i></span><span>Round</span></a>
+                            <a href="/diamonds?&shape=Cushion"><span class="box-ico"><i class="brilliant-ico2 brilliant-s10"></i></span><span>Cushion Cut</span></a>
                         </li>
                     </ul>
                 </div>
@@ -83,7 +83,7 @@
             <div class="panel-heading collapse-add" role="tab">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-m2" aria-expanded="false">
-                        ENGAGEMENT RINGS
+                        <?php echo $categories[1]['name']?><!--ENGAGEMENT RINGS-->
                     </a>
                 </h4>
             </div>
@@ -250,7 +250,22 @@
                     <span>877-826-9866 | 24/7</span>
                 </div>
                 <ul class="top-menu-b main-page">
-                    <li><a href="#"><i class="man-ico"></i><span>login</span></a></li>
+                    <li>
+
+                        <?php if ($logged) { ?>
+                        <a href="<?php echo $account; ?>">
+                            <i class="man-ico"></i>
+                            <span><?php echo $text_account; ?></span>
+                        </a>
+                        <?php } else { ?>
+
+                        <a href="<?php echo $login; ?>">
+                            <i class="man-ico"></i>
+                            <span><?php echo $text_login; ?></span>
+                        </a>
+                        <?php } ?>
+
+                    </li>
                     <li><a href="#"><i class="heart-ico"></i><span>wish list ( 1 )</span></a></li>
                     <li class="cart-bl">
                         <a href="#"><i class="cart-ico"></i><span>cart ( 1 )</span></a>
@@ -352,33 +367,11 @@
                         <div class="dropdown-inside">
                             <div class="title">engagement setting rings</div>
                             <ul class="brilliant-style">
-                                <li>
-                                    <a href="#"><i class="brilliant-ico brilliant-s1"></i><br/>solitare</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="brilliant-ico brilliant-s2"></i><br/>PAVE</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="brilliant-ico brilliant-s3"></i><br/>CHANNEL SET</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="brilliant-ico brilliant-s4"></i><br/>SIDE - STONE</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="brilliant-ico brilliant-s5"></i><br/>THREE - STONE</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="brilliant-ico brilliant-s6"></i><br/>TENSION</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="brilliant-ico brilliant-s7"></i><br/>HALO</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="brilliant-ico brilliant-s8"></i><br/>VINTAGE</a>
-                                </li>
-                                <li>
-                                    <a href="#"><i class="brilliant-ico brilliant-s9"></i><br/>BRIDAL SET</a>
-                                </li>
+                                <?foreach ($categories[1]['children'] as $key => $row):?>
+                                    <li>
+                                        <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$key+1?>"></i><br/><?php echo $row['name']?></a>
+                                    </li>
+                                <?endforeach?>
                             </ul>
                             <div class="row clearfix">
                                 <div class="col-md-5 col-sm-5 col-xs-5">

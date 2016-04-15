@@ -366,7 +366,7 @@
 
 
         //sort
-
+//
         if (queryStr['show'] != undefined) {
             $url_show = '&show='+queryStr['show'];
             $('#w-product-show :contains('+queryStr["show"]+')').attr("selected", "selected");
@@ -913,6 +913,7 @@
                     $('.container-loader').show();
                 },
                 complete: function() {
+
                     $('.container-loader').hide();
                 },
                 success: function (response) {
