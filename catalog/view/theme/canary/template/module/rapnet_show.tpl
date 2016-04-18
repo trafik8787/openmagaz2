@@ -7,7 +7,7 @@
         <div class="center-bl clearfix">
             <div class="pull-left left-drop-f">
                 <span>Sort By:</span>
-                <select name="sortby" id="w-product-sortby">
+                <select name="sortby" class="form-control" id="w-product-sortby">
                     <option value="size_Asc">Carat: low to high</option>
                     <option value="size_Desc">Carat: high to low</option>
                     <option value="Color_Asc">Color: low to high</option>
@@ -29,7 +29,7 @@
             <div class="show-b">
                 <span>Show:</span>
                 <li class="dropdown">
-                    <select name="show" id="w-product-show">
+                    <select name="show" class="form-control" id="w-product-show">
                         <option value="15">15</option>
                         <option value="25">25</option>
                         <option value="50">50</option>

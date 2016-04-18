@@ -363,13 +363,13 @@
                         </div>
                     </li>
                     <li class="dropdown-b" data-target="menu2"><!--ENGAGEMENT RINGS-->
-                        <a href="<?php echo $categories[1]['href']?>"><?php echo $categories[1]['name']?></a>
+                        <a href="<?php echo $categories[1]['href']?>" class="w-general-category"><?php echo $categories[1]['name']?></a>
                         <div class="dropdown-inside">
                             <div class="title">engagement setting rings</div>
                             <ul class="brilliant-style">
                                 <?foreach ($categories[1]['children'] as $key => $row):?>
                                     <li>
-                                        <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$key+1?>"></i><br/><?php echo $row['name']?></a>
+                                        <a href="<?php echo $row['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s<?=$key+1?>"></i><br/><?php echo $row['name']?></a>
                                     </li>
                                 <?endforeach?>
                             </ul>
@@ -401,42 +401,36 @@
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown-b" data-target="menu3">
-                        <a href="#">WEDDING RINGS</a>
+
+                    <li class="dropdown-b"><!--WEDDING RINGS-->
+                        <a href="<?php echo $categories[2]['href']?>" class="w-general-category"><?php echo $categories[2]['name']?></a>
                         <div class="dropdown-inside">
                             <div class="row clearfix">
                                 <div class="col-md-8 col-sm-8 col-xs-8">
-                                    <div class="title">woman</div>
+                                    <div class="title">WOMAN</div><!--woman-->
                                     <ul class="brilliant-style brilliant-style-long ul-first-drop">
+
+                                        <?php for ($x=0; $x<5; $x++) {?>
                                         <li>
-                                            <a href="#"><i class="wedding1"></i><br/>classik</a>
+                                            <a href="<?php echo $categories[2]['children'][$x]['href']?>" class="w-general-category"><i class="wedding<?=$x+1?>"></i><br/><?php echo $categories[2]['children'][$x]['name']?></a>
                                         </li>
-                                        <li>
-                                            <a href="#"><i class="wedding2"></i><br/>carved</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="wedding3"></i><br/>diamond</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="wedding4"></i><br/>aniversary</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="wedding5"></i><br/>eternity</a>
-                                        </li>
+                                        <?}?>
+
                                     </ul>
-                                    <div class="title">man</div>
+                                    <div class="title">MAN</div><!--man-->
                                     <ul class="brilliant-style brilliant-style-long ul-first-drop">
+
                                         <li>
-                                            <a href="#"><i class="wedding1"></i><br/>classik</a>
+                                            <a href="<?php echo $categories[2]['children'][5]['href']?>" class="w-general-category"><i class="wedding1"></i><br/><?php echo $categories[2]['children'][5]['name']?></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="wedding6"></i><br/>carved</a>
+                                            <a href="<?php echo $categories[2]['children'][6]['href']?>" class="w-general-category"><i class="wedding6"></i><br/><?php echo $categories[2]['children'][6]['name']?></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="wedding3"></i><br/>diamond</a>
+                                            <a href="<?php echo $categories[2]['children'][7]['href']?>" class="w-general-category"><i class="wedding3"></i><br/><?php echo $categories[2]['children'][7]['name']?></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="wedding7"></i><br/>alternative</a>
+                                            <a href="<?php echo $categories[2]['children'][8]['href']?>" class="w-general-category"><i class="wedding7"></i><br/><?php echo $categories[2]['children'][8]['name']?></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -446,81 +440,81 @@
                             </div>
                         </div>
                     </li>
-                    <li class="dropdown-b" data-target="menu4">
-                        <a href="#">GEMSTONES</a>
-                        <div class="dropdown-inside">
-                            <div class="row clearfix">
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="title">search gemstones gallery</div>
-                                    <ul class="brilliant-style gemstones-box">
-                                        <li>
-                                            <a href="#"><i class="gemstones gemstones1"></i><span>blue suphire</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="gemstones gemstones2"></i><span>blue suphire</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="gemstones gemstones3"></i><span>blue suphire</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="gemstones gemstones4"></i><span>blue suphire</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="gemstones gemstones5"></i><span>blue suphire</span></a>
-                                        </li>
+                    <!--<li class="dropdown-b" data-target="menu4">-->
+                        <!--<a href="#">GEMSTONES</a>-->
+                        <!--<div class="dropdown-inside">-->
+                            <!--<div class="row clearfix">-->
+                                <!--<div class="col-md-4 col-sm-4 col-xs-4">-->
+                                    <!--<div class="title">search gemstones gallery</div>-->
+                                    <!--<ul class="brilliant-style gemstones-box">-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><i class="gemstones gemstones1"></i><span>blue suphire</span></a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><i class="gemstones gemstones2"></i><span>blue suphire</span></a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><i class="gemstones gemstones3"></i><span>blue suphire</span></a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><i class="gemstones gemstones4"></i><span>blue suphire</span></a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><i class="gemstones gemstones5"></i><span>blue suphire</span></a>-->
+                                        <!--</li>-->
 
-                                    </ul>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="title">desighn your own</div>
-                                    <ul class="style-br-long ul-first-drop">
-                                        <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-13"></i></span> <span>Diamond engagement rings</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span>Diamond studs</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-14"></i></span> <span>Diamond pendant</span></a>
-                                        </li>
-                                        <li class="last-li-destones">
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span>Matching Gemstone Pairs</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="title">mille coeurs colections</div>
-                                    <ul class="style-br-long ul-first-drop">
-                                        <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-11"></i></span> <span>Diamond engagement rings</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span>Diamond studs</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-12"></i></span> <span>Diamond pendant</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <img src="catalog/view/theme/canary/img/img18.png" alt="img" class="img-under-style">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="dropdown-b" data-target="menu5">
-                        <a href="#">FINE JEWELRY</a>
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<div class="col-md-4 col-sm-4 col-xs-4">-->
+                                    <!--<div class="title">desighn your own</div>-->
+                                    <!--<ul class="style-br-long ul-first-drop">-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-13"></i></span> <span>Diamond engagement rings</span></a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span>Diamond studs</span></a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-14"></i></span> <span>Diamond pendant</span></a>-->
+                                        <!--</li>-->
+                                        <!--<li class="last-li-destones">-->
+                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span>Matching Gemstone Pairs</span></a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<div class="col-md-4 col-sm-4 col-xs-4">-->
+                                    <!--<div class="title">mille coeurs colections</div>-->
+                                    <!--<ul class="style-br-long ul-first-drop">-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-11"></i></span> <span>Diamond engagement rings</span></a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span>Diamond studs</span></a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-12"></i></span> <span>Diamond pendant</span></a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--<img src="catalog/view/theme/canary/img/img18.png" alt="img" class="img-under-style">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <li class="dropdown-b">
+                        <a href="<?php echo $categories[3]['href']?>" class="w-general-category"><?php echo $categories[3]['name']?></a>
                         <div class="dropdown-inside">
                             <div class="row clearfix">
                                 <div class="col-md-5 col-sm-5 col-xs-5">
                                     <div class="title">studs&earrings</div>
                                     <ul class="style-br-long ul-first-drop">
                                         <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span>Diamond studs</span></a>
+                                            <a href="<?php echo $categories[3]['children'][0]['href']?>"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span><?php echo $categories[3]['children'][0]['name']?></span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span>Matching Gemstone Pairs</span></a>
+                                            <a href="<?php echo $categories[3]['children'][1]['href']?>"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span><?php echo $categories[3]['children'][1]['name']?></span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span>Diamond studs</span></a>
+                                            <a href="<?php echo $categories[3]['children'][2]['href']?>"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span><?php echo $categories[3]['children'][2]['name']?></span></a>
                                         </li>
                                     </ul>
                                     <div class="title">rings:</div>
@@ -537,13 +531,13 @@
                                     <div class="title">desighn your own</div>
                                     <ul class="style-br-long">
                                         <li>
-                                            <a href="#"><span class="wrap-ico3"><i class="own-b own-b-14"></i></span> <span>Diamond pendant</span></a>
+                                            <a href="<?php echo $categories[3]['children'][3]['href']?>"><span class="wrap-ico3"><i class="own-b own-b-14"></i></span> <span><?php echo $categories[3]['children'][3]['name']?></span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span class="wrap-ico3"><i class="own-b own-b-12"></i></span> <span>Diamond pendant</span></a>
+                                            <a href="<?php echo $categories[3]['children'][4]['href']?>"><span class="wrap-ico3"><i class="own-b own-b-12"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span class="wrap-ico3"><i class="own-b own-b-14"></i></span> <span>Diamond pendant</span></a>
+                                            <a href="<?php echo $categories[3]['children'][5]['href']?>"><span class="wrap-ico3"><i class="own-b own-b-14"></i></span> <span><?php echo $categories[3]['children'][5]['name']?></span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -551,8 +545,11 @@
                                     <img src="catalog/view/theme/canary/img/img16.png" alt="img" class="img-under-style">
                                 </div>
                             </div>
+
                         </div>
                     </li>
+
+
                     <li class="bord-l"></li>
                     <li>
                         <a href="#">EDUCATION</a>

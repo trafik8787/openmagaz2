@@ -119,19 +119,11 @@ $( document ).ready(function( $ ) {
     });
 
     $(document).on('click', '.filter-change', function() {
-        var th=$(".filter-wrapper");
-        var speed=500;
-        if ($(".filter-box").hasClass('open')){
-            th.slideDown(speed);
-            setTimeout(function(){
-                $(".filter-box").removeClass('open');
-            }, speed);
-        } else {
-            th.slideUp(speed);
-            setTimeout(function(){
-                $(".filter-box").addClass('open');
-            }, speed);
-        }
+
+        $(".filter-wrapper").slideToggle(500, function(){
+            $(".filter-box").toggleClass('open');
+        });
+
     });
 
     $(".product-p-5 label.btn-filter").click(function(){

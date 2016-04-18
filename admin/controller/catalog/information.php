@@ -275,12 +275,14 @@ class ControllerCatalogInformation extends Controller {
 		$data['entry_keyword'] = $this->language->get('entry_keyword');
 		$data['entry_store'] = $this->language->get('entry_store');
 		$data['entry_bottom'] = $this->language->get('entry_bottom');
+        $data['entry_top'] = $this->language->get('entry_top');
 		$data['entry_sort_order'] = $this->language->get('entry_sort_order');
 		$data['entry_status'] = $this->language->get('entry_status');
 		$data['entry_layout'] = $this->language->get('entry_layout');
 
 		$data['help_keyword'] = $this->language->get('help_keyword');
 		$data['help_bottom'] = $this->language->get('help_bottom');
+		$data['help_top'] = $this->language->get('help_top');
 
 		$data['button_save'] = $this->language->get('button_save');
 		$data['button_cancel'] = $this->language->get('button_cancel');
@@ -398,6 +400,15 @@ class ControllerCatalogInformation extends Controller {
 		} else {
 			$data['bottom'] = 0;
 		}
+
+        if (isset($this->request->post['top'])) {
+            $data['top'] = $this->request->post['top'];
+        } elseif (!empty($information_info)) {
+            $data['top'] = $information_info['top'];
+        } else {
+            $data['top'] = 0;
+        }
+
 
 		if (isset($this->request->post['status'])) {
 			$data['status'] = $this->request->post['status'];
