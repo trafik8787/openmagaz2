@@ -1,7 +1,7 @@
-<?php echo $header; ?>
+<?php echo !empty($header) ? $header : '' ?>
 
 
-<main>
+<main class="w-general-container">
     <section class="static-page">
         <div class="center-bl">
             <ul class="breadcrumbs">
@@ -15,7 +15,7 @@
         </div>
         <div class="about-page">
             <div class="center-bl">
-                <div class="about-page-title">About us</div>
+                <div class="about-page-title"><?php echo $heading_title; ?></div>
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="row">
@@ -68,4 +68,4 @@
 
 
 
-<?php echo $footer; ?>
+<?php echo !empty($footer) ? $footer : '' ?>

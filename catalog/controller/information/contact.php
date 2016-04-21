@@ -152,8 +152,10 @@ class ControllerInformationContact extends Controller {
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
-		$data['footer'] = $this->load->controller('common/footer');
-		$data['header'] = $this->load->controller('common/header');
+        if (!in_ajax()) {
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+        }
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/information/contact.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/information/contact.tpl', $data));
@@ -163,28 +165,31 @@ class ControllerInformationContact extends Controller {
 	}
 
 	protected function validate() {
-		if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
-			$this->error['name'] = $this->language->get('error_name');
-		}
 
-		if (!preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $this->request->post['email'])) {
-			$this->error['email'] = $this->language->get('error_email');
-		}
+        if (!empty($this->request->post['name'])) {
+            if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 32)) {
+                $this->error['name'] = $this->language->get('error_name');
+            }
 
-		if ((utf8_strlen($this->request->post['enquiry']) < 10) || (utf8_strlen($this->request->post['enquiry']) > 3000)) {
-			$this->error['enquiry'] = $this->language->get('error_enquiry');
-		}
+            if (!preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $this->request->post['email'])) {
+                $this->error['email'] = $this->language->get('error_email');
+            }
 
-		// Captcha
-		if ($this->config->get($this->config->get('config_captcha') . '_status') && in_array('contact', (array)$this->config->get('config_captcha_page'))) {
-			$captcha = $this->load->controller('captcha/' . $this->config->get('config_captcha') . '/validate');
+            if ((utf8_strlen($this->request->post['enquiry']) < 10) || (utf8_strlen($this->request->post['enquiry']) > 3000)) {
+                $this->error['enquiry'] = $this->language->get('error_enquiry');
+            }
 
-			if ($captcha) {
-				$this->error['captcha'] = $captcha;
-			}
-		}
+            // Captcha
+            if ($this->config->get($this->config->get('config_captcha') . '_status') && in_array('contact', (array)$this->config->get('config_captcha_page'))) {
+                $captcha = $this->load->controller('captcha/' . $this->config->get('config_captcha') . '/validate');
 
-		return !$this->error;
+                if ($captcha) {
+                    $this->error['captcha'] = $captcha;
+                }
+            }
+
+            return !$this->error;
+        }
 	}
 
 	public function success() {

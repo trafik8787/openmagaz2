@@ -508,22 +508,22 @@
                                     <div class="title">studs&earrings</div>
                                     <ul class="style-br-long ul-first-drop">
                                         <li>
-                                            <a href="<?php echo $categories[3]['children'][0]['href']?>"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span><?php echo $categories[3]['children'][0]['name']?></span></a>
+                                            <a href="<?php echo $categories[3]['children'][0]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span><?php echo $categories[3]['children'][0]['name']?></span></a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo $categories[3]['children'][1]['href']?>"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span><?php echo $categories[3]['children'][1]['name']?></span></a>
+                                            <a href="<?php echo $categories[3]['children'][1]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span><?php echo $categories[3]['children'][1]['name']?></span></a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo $categories[3]['children'][2]['href']?>"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span><?php echo $categories[3]['children'][2]['name']?></span></a>
+                                            <a href="<?php echo $categories[3]['children'][2]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span><?php echo $categories[3]['children'][2]['name']?></span></a>
                                         </li>
                                     </ul>
                                     <div class="title">rings:</div>
                                     <ul class="style-br-long">
                                         <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-13"></i></span> <span>Diamond engagement rings</span></a>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-13"  class="w-general-category"></i></span> <span>Diamond engagement rings</span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-11"></i></span> <span>Diamond engagement rings</span></a>
+                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-11"  class="w-general-category"></i></span> <span>Diamond engagement rings</span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -531,13 +531,13 @@
                                     <div class="title">desighn your own</div>
                                     <ul class="style-br-long">
                                         <li>
-                                            <a href="<?php echo $categories[3]['children'][3]['href']?>"><span class="wrap-ico3"><i class="own-b own-b-14"></i></span> <span><?php echo $categories[3]['children'][3]['name']?></span></a>
+                                            <a href="<?php echo $categories[3]['children'][3]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-14"></i></span> <span><?php echo $categories[3]['children'][3]['name']?></span></a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo $categories[3]['children'][4]['href']?>"><span class="wrap-ico3"><i class="own-b own-b-12"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a>
+                                            <a href="<?php echo $categories[3]['children'][4]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-12"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a>
                                         </li>
                                         <li>
-                                            <a href="<?php echo $categories[3]['children'][5]['href']?>"><span class="wrap-ico3"><i class="own-b own-b-14"></i></span> <span><?php echo $categories[3]['children'][5]['name']?></span></a>
+                                            <a href="<?php echo $categories[3]['children'][5]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-14"></i></span> <span><?php echo $categories[3]['children'][5]['name']?></span></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -552,13 +552,13 @@
 
                     <li class="bord-l"></li>
                     <li>
-                        <a href="#">EDUCATION</a>
+                        <a href="/education" class="w-general-category">EDUCATION</a>
                     </li>
                     <li>
-                        <a href="#">FAQ</a>
+                        <a href="/faq" class="w-general-category">FAQ</a>
                     </li>
                     <li>
-                        <a href="#">ABOUT</a>
+                        <a href="/about_us" class="w-general-category">ABOUT</a>
                     </li>
                 </ul>
             </div>

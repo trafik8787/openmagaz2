@@ -1,54 +1,83 @@
 <div class="panel panel-default">
+    <?//dd($filter_groups)?>
     <div class="panel-heading"><?php echo $heading_title; ?></div>
     <div class="list-group">
         <?php foreach ($filter_groups as $filter_group):?>
-        <a class="list-group-item"><?php echo $filter_group['name']; ?></a>
+            <a class="list-group-item"><?php echo $filter_group['name']; ?></a>
 
-        <?php if (!empty($filter_group['filter'])):?>
+            <?php if (!empty($filter_group['filter'])):?>
 
-        <div class="list-group-item">
-            <div id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
-                <?php foreach ($filter_group['filter'] as $filter) { ?>
-                <div class="checkbox">
-                    <label>
-                        <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
-                        <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>"
-                               checked="checked"/>
-                        <?php echo $filter['name']; ?>
-                        <?php } else { ?>
-                        <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>"/>
-                        <?php echo $filter['name']; ?>
-                        <?php } ?>
-                    </label>
-                </div>
-                <?php } ?>
-            </div>
-        </div>
+                <?php if ($filter_group['type_control'] == 'checkbox'):?>
 
-        <?php endif?>
-
-        <?php if (!empty($filter_group['dop_filter'])):?>
-
-        <div class="list-group-item">
-            <div id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
-
-                <div id="slider"></div>
-                <div class="row" style="margin-top: 10px">
-                    <div class="col-md-6">
-                        <input type="text" class="dop-filtr-price-min form-control" name="min_price"
-                               value="<?php if (!empty($PriceFrom)) { echo $PriceFrom; } else { echo $filter_group['dop_filter']['min']; }?>">
+                    <div class="list-group-item">
+                        <div id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
+                            <?php foreach ($filter_group['filter'] as $filter) { ?>
+                            <div class="checkbox">
+                                <label>
+                                    <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
+                                    <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>"
+                                           checked="checked"/>
+                                    <?php echo $filter['name']; ?>
+                                    <?php } else { ?>
+                                    <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>"/>
+                                    <?php echo $filter['name']; ?>
+                                    <?php } ?>
+                                </label>
+                            </div>
+                            <?php } ?>
+                        </div>
                     </div>
-                    <div class="col-md-6 text-right">
-                        <input type="text" class="dop-filtr-price-max form-control" name="max_price"
-                               value="<?php if (!empty($PriceTo)) { echo  $PriceTo; } else { echo $filter_group['dop_filter']['max']; }?>">
+
+
+                <?elseif($filter_group['type_control'] == 'radio'):?>
+
+                    <div class="list-group-item">
+                        <div id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
+                            <?php foreach ($filter_group['filter'] as $filter) { ?>
+                            <div class="checkbox">
+                                <label>
+                                    <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
+                                    <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>"
+                                           checked="checked"/>
+                                    <?php echo $filter['name']; ?>
+                                    <?php } else { ?>
+                                    <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>"/>
+                                    <?php echo $filter['name']; ?>
+                                    <?php } ?>
+                                </label>
+                            </div>
+                            <?php } ?>
+                        </div>
                     </div>
+
+                <?endif?>
+
+
+
+            <?php endif?>
+
+            <?php if (!empty($filter_group['dop_filter'])):?>
+
+            <div class="list-group-item">
+                <div id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
+
+                    <div id="slider"></div>
+                    <div class="row" style="margin-top: 10px">
+                        <div class="col-md-6">
+                            <input type="text" class="dop-filtr-price-min form-control" name="min_price"
+                                   value="<?php if (!empty($PriceFrom)) { echo $PriceFrom; } else { echo $filter_group['dop_filter']['min']; }?>">
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <input type="text" class="dop-filtr-price-max form-control" name="max_price"
+                                   value="<?php if (!empty($PriceTo)) { echo  $PriceTo; } else { echo $filter_group['dop_filter']['max']; }?>">
+                        </div>
+                    </div>
+
+
                 </div>
-
-
             </div>
-        </div>
 
-        <?php endif?>
+            <?php endif?>
 
         <?endforeach?>
     </div>

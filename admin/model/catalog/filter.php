@@ -8,7 +8,7 @@ class ModelCatalogFilter extends Model {
 		$filter_group_id = $this->db->getLastId();
 
 		foreach ($data['filter_group_description'] as $language_id => $value) {
-            $this->db->query("INSERT INTO " . DB_PREFIX . "filter_group_description SET filter_group_id = '" . (int)$filter_group_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', dop_filter = '". $data['dop_filtr']. "'");
+            $this->db->query("INSERT INTO " . DB_PREFIX . "filter_group_description SET filter_group_id = '" . (int)$filter_group_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', dop_filter = '". $data['dop_filtr']. "', type_control = '".$data['type_control']."'");
 		}
 
 		if (isset($data['filter'])) {
@@ -36,7 +36,7 @@ class ModelCatalogFilter extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "filter_group_description WHERE filter_group_id = '" . (int)$filter_group_id . "'");
 
 		foreach ($data['filter_group_description'] as $language_id => $value) {
-            $this->db->query("INSERT INTO " . DB_PREFIX . "filter_group_description SET filter_group_id = '" . (int)$filter_group_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', dop_filter = '". $data['dop_filtr']. "'");
+            $this->db->query("INSERT INTO " . DB_PREFIX . "filter_group_description SET filter_group_id = '" . (int)$filter_group_id . "', language_id = '" . (int)$language_id . "', name = '" . $this->db->escape($value['name']) . "', dop_filter = '". $data['dop_filtr']. "', type_control = '".$data['type_control']."'");
 		}
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "filter WHERE filter_group_id = '" . (int)$filter_group_id . "'");
@@ -125,7 +125,7 @@ class ModelCatalogFilter extends Model {
             if ($result['dop_filter'] != '') {
                 $dop = $result['dop_filter'];
             }
-            $filter_group_data[$result['language_id']] = array('name' => $result['name'], 'dop_filtr' => $dop);
+            $filter_group_data[$result['language_id']] = array('name' => $result['name'], 'dop_filtr' => $dop, 'type_control' => $result['type_control'] );
 		}
 
 		return $filter_group_data;

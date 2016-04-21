@@ -89,7 +89,7 @@ class ModelCatalogCategory extends Model {
 
 		if ($implode) {
             //добавлено AND fgd.dop_filter = ''
-            $filter_group_query = $this->db->query("SELECT DISTINCT f.filter_group_id, fgd.name, fg.sort_order FROM " . DB_PREFIX . "filter f LEFT JOIN " . DB_PREFIX . "filter_group fg ON (f.filter_group_id = fg.filter_group_id) LEFT JOIN " . DB_PREFIX . "filter_group_description fgd ON (fg.filter_group_id = fgd.filter_group_id) WHERE f.filter_id IN (" . implode(',', $implode) . ") AND fgd.dop_filter = '' AND fgd.language_id = '" . (int)$this->config->get('config_language_id') . "' GROUP BY f.filter_group_id ORDER BY fg.sort_order, LCASE(fgd.name)");
+            $filter_group_query = $this->db->query("SELECT DISTINCT f.filter_group_id, fgd.name, fgd.type_control, fg.sort_order FROM " . DB_PREFIX . "filter f LEFT JOIN " . DB_PREFIX . "filter_group fg ON (f.filter_group_id = fg.filter_group_id) LEFT JOIN " . DB_PREFIX . "filter_group_description fgd ON (fg.filter_group_id = fgd.filter_group_id) WHERE f.filter_id IN (" . implode(',', $implode) . ") AND fgd.dop_filter = '' AND fgd.language_id = '" . (int)$this->config->get('config_language_id') . "' GROUP BY f.filter_group_id ORDER BY fg.sort_order, LCASE(fgd.name)");
 
 			foreach ($filter_group_query->rows as $filter_group) {
 				$filter_data = array();
@@ -107,6 +107,7 @@ class ModelCatalogCategory extends Model {
 					$filter_group_data[] = array(
 						'filter_group_id' => $filter_group['filter_group_id'],
 						'name'            => $filter_group['name'],
+                        'type_control'    => $filter_group['type_control'],
 						'filter'          => $filter_data
 					);
 				}

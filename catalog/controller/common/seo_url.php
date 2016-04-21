@@ -3,7 +3,10 @@ class ControllerCommonSeoUrl extends Controller {
 
     private $url_list = array(
         'module/rapnet/getproduct' => 'diamond_page',
-        'module/complect/complete_diamond' => 'complete_diamond'
+        'module/complect/complete_diamond' => 'complete_diamond',
+        'information/faq' => 'faq',
+        'information/contact' => 'contact',
+        'information/education' => 'education'
     );
 
 	public function index() {

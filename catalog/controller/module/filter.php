@@ -76,6 +76,7 @@ class ControllerModuleFilter extends Controller {
                         $data['filter_groups'][] = array(
                             'filter_group_id' => $filter_group['filter_group_id'],
                             'name' => $filter_group['name'],
+                            'type_control' => $filter_group['type_control'],
                             'filter' => $childen_data
                         );
 
