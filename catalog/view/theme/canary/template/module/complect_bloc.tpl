@@ -87,20 +87,20 @@
                     <img src="catalog/view/theme/canary/img/img20.png" alt="img">
                 </span>
                 <span class="title">
-                    <span>2.CHOOSE YOUR</span>  SOLITAIRE
+                    <span><?=$index?>.CHOOSE YOUR</span>  SOLITAIRE
                 </span>
                 <span class="text">
                     from our vast range of certified diamonds, in various carat weights and shapes like Princess, Round, Heart, Pear etc. Just a tip: Round is the most popular shape for a solitaire ring
                 </span>
-
-            </a>
-            <p>
                 <?php if (!empty($CanaryDiamontCom)):?>
-                <img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="100" alt="...">
-                <a href="<?=$CanaryDiamontCom['href'] ?>" class="btn btn-primary" role="button">View</a>
-                <a href="#" class="btn btn-default w-remowe-diamond-complect" role="button">Remove</a>
+                    <span class="box-btn">
+                        <img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="100" alt="...">
+                        <button data-href="<?=$CanaryDiamontCom['href'] ?>" class="step-eyes"></button>
+                        <button class="step-close w-remowe-diamond-complect"></button>
+                    </span>
                 <?endif?>
-            </p>
+            </a>
+
         </div>
 
 
@@ -116,19 +116,20 @@
                     <img src="catalog/view/theme/canary/img/img19.png" alt="img">
                 </span>
                 <span class="title">
-                    <span>1.SELECT YOUR</span> SETTING
+                    <span><?=$index?>.SELECT YOUR</span> SETTING
                 </span>
                 <span class="text">
                     We offer both white gold or yellow gold either in 4 prong or 6 prongs.
                 </span>
-            </a>
-            <p>
                 <?php if (!empty($CanaryProductCom)):?>
-                <img src="<?=!empty($CanaryProductCom) ? $CanaryProductCom['img'] : '' ?>" width="100" alt="...">
-                <a href="<?=$CanaryProductCom['href'] ?>" class="btn btn-primary" role="button">View</a>
-                <a href="#" class="btn btn-default w-remowe-product-complect" role="button">Remove</a>
+                    <img src="<?=!empty($CanaryProductCom) ? $CanaryProductCom['img'] : '' ?>" width="100" alt="...">
+                     <span class="box-btn">
+                                    <button data-href="<?=$CanaryProductCom['href'] ?>" class="step-eyes"></button>
+                                    <button class="step-close w-remowe-product-complect"></button>
+                     </span>
                 <?endif?>
-            </p>
+            </a>
+
         </div>
 
     <?}?>

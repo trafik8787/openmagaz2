@@ -1,6 +1,6 @@
 
 <div class="filter-box clearfix">
-    <div class="filter-wrapper clearfix">
+    <div class="filter-wrapper filter-wrapper-pn clearfix">
         <div class="left-f">
             <div class="one-line height-inherit">
                 <div class="title">share
@@ -140,8 +140,7 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="functional-filter clearfix">
+
         <div class="filter-advanced-wrapper pull-left">
             <button class="filter-advanced">advanced options</button>
             <div class="dropdown-advanced">
@@ -256,6 +255,8 @@
                 </ul>
             </div>
         </div>
+    </div>
+    <div class="functional-filter clearfix">
         <button class="filter-default-result pull-right">clear filter</button>
         <button class="filter-change pull-right">close filter</button>
     </div>

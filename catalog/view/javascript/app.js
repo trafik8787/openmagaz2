@@ -14,21 +14,20 @@ $(document).ready(function() {
 
 
     //загрузка товаров из подкатегории
-    $(document).on('click', '.w-wsubcat' ,function(){
-
-        input_sort (this.href);
-        history.pushState('', '', this.href);
+    $(document).on('change', '.w-wsubcat' ,function(){
+        input_sort ($(this).data('href'));
+        history.pushState('', '', $(this).data('href'));
         return false;
     });
 
 
     //модуль подкатегорий добавление класса по клике
-    $(document).on('click', '.w-group-wsubcat a' ,function(){
-
-        $('.w-group-wsubcat a').removeClass('active');
-        $(this).addClass('active');
-
-    });
+    //$(document).on('click', '.w-group-wsubcat a' ,function(){
+    //
+    //    $('.w-group-wsubcat a').removeClass('active');
+    //    $(this).addClass('active');
+    //
+    //});
 
 
 
@@ -276,7 +275,7 @@ function input_sort (value) {
             $('.w-category-ajax').html(response);
             $('.container-loader').hide();
 
-            initialize_grid();
+            //initialize_grid();
 
         }
 

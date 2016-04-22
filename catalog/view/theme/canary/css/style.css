@@ -2986,9 +2986,13 @@ button:hover, button:focus {
 
 .step-product {
   margin-bottom: 20px; }
+  .step-product .box-btn {
+    display: none !important; }
+  .step-product .prev-step .box-btn {
+    display: block !important; }
   .step-product .one-block {
     height: 300px;
-    padding: 35px;
+    padding: 25px 35px;
     position: relative;
     z-index: 2;
     border: 1px solid grey;
@@ -3025,6 +3029,8 @@ button:hover, button:focus {
   .step-product > *:nth-child(3) .one-block.active {
     margin-left: -60px; }
 
+.filter-box.open .filter-wrapper {
+  overflow: hidden; }
 .filter-box.open .filter-change:before {
   width: 0;
   height: 0;
@@ -3036,8 +3042,9 @@ button:hover, button:focus {
   border-color: #ff5959 transparent transparent transparent; }
 .filter-box .filter-wrapper {
   height: inherit;
-  padding-bottom: 20px;
-  overflow: hidden; }
+  padding-bottom: 20px; }
+  .filter-box .filter-wrapper.filter-wrapper-pn {
+    padding-bottom: 0; }
 .filter-box .functional-filter {
   margin-bottom: 40px;
   position: relative;
@@ -3283,7 +3290,9 @@ button:hover, button:focus {
       display: none; }
 
 .filter-advanced-wrapper {
-  position: relative; }
+  position: relative;
+  margin-bottom: -40px;
+  z-index: 100; }
   .filter-advanced-wrapper .dropdown-advanced {
     position: absolute;
     top: 30px;
@@ -3382,14 +3391,14 @@ button:hover, button:focus {
       width: 250px; }
     .list-product .filter-product-line .dropdown {
       width: 120px;
-      height: 50px;
       margin-left: 15px;
       margin-right: 10px;
       position: relative;
-      background-color: white;
       border-radius: 0;
       font-size: 16px;
       border: 0; }
+      .list-product .filter-product-line .dropdown select {
+        border-radius: 0; }
       .list-product .filter-product-line .dropdown .dropdown-menu {
         min-width: 100%;
         font-size: 15px;
@@ -3411,7 +3420,7 @@ button:hover, button:focus {
       margin-right: 70px;
       float: right; }
     .list-product .filter-product-line .view-product {
-      padding-top: 15px;
+      padding-top: 6px;
       float: right; }
       .list-product .filter-product-line .view-product .btn-view {
         margin-left: 5px;
@@ -3422,6 +3431,14 @@ button:hover, button:focus {
         background-color: transparent; }
         .list-product .filter-product-line .view-product .btn-view.active {
           color: #A2D9F3; }
+
+.dropdown-advanced .filter-drop-drop input {
+  position: relative; }
+.dropdown-advanced .input-slider-p {
+  width: 50px;
+  height: 23px;
+  margin: 10px -8px -15px;
+  font-size: 12px; }
 
 .wrapper-product-table {
   position: relative; }
@@ -4587,6 +4604,32 @@ button:hover, button:focus {
 .dropdown .select-simulate-btn.active ~ .select-simulate-list {
   background-color: white;
   z-index: 20; }
+
+.box-btn {
+  width: initial !important;
+  position: absolute !important;
+  right: 7%;
+  bottom: 10px; }
+
+.step-eyes {
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+  padding: 0;
+  border: 0;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../img/step-eyes.png") no-repeat center/contain; }
+
+.step-close {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  padding: 0;
+  border: 0;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../img/step-close.png") no-repeat center/contain; }
 
 @media (max-width: 1700px) {
   .menu {

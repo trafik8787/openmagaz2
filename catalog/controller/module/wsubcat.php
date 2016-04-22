@@ -24,7 +24,7 @@ class ControllerModuleWsubcat extends Controller {
         $results = $this->model_catalog_category->getCategories($category_id);
 
         
-
+        $data['category_id'] = $category_id;
 
         foreach ($results as $result) {
 

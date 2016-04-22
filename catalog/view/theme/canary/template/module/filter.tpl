@@ -1,90 +1,87 @@
-<div class="panel panel-default">
-    <?//dd($filter_groups)?>
-    <div class="panel-heading"><?php echo $heading_title; ?></div>
-    <div class="list-group">
+
+        <?//dd($filter_groups)?>
         <?php foreach ($filter_groups as $filter_group):?>
-            <a class="list-group-item"><?php echo $filter_group['name']; ?></a>
 
             <?php if (!empty($filter_group['filter'])):?>
-
                 <?php if ($filter_group['type_control'] == 'checkbox'):?>
 
-                    <div class="list-group-item">
-                        <div id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
-                            <?php foreach ($filter_group['filter'] as $filter) { ?>
-                            <div class="checkbox">
-                                <label>
-                                    <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
-                                    <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>"
-                                           checked="checked"/>
-                                    <?php echo $filter['name']; ?>
-                                    <?php } else { ?>
-                                    <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>"/>
-                                    <?php echo $filter['name']; ?>
-                                    <?php } ?>
-                                </label>
-                            </div>
-                            <?php } ?>
+                    <div class="left-f3">
+                        <div class="title"><?php echo $filter_group['name']; ?></div>
+                        <div class="one-line precious-box height-inherit" data-toggle="buttons" id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
+
+                            <?php foreach ($filter_group['filter'] as $filter) :?>
+                                <?php if (in_array($filter['filter_id'], $filter_category)): ?>
+                                    <label class="btn btn-filter active">
+                                        <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" checked="checked"/><?php echo $filter['name']; ?>
+                                    </label>
+                                <?else:?>
+                                    <label class="btn btn-filter">
+                                        <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>"/>
+                                        <?php echo $filter['name']; ?>
+                                    </label>
+                                <?endif?>
+
+                            <?endforeach?>
+
                         </div>
                     </div>
 
-
                 <?elseif($filter_group['type_control'] == 'radio'):?>
 
-                    <div class="list-group-item">
-                        <div id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
-                            <?php foreach ($filter_group['filter'] as $filter) { ?>
-                            <div class="checkbox">
-                                <label>
-                                    <?php if (in_array($filter['filter_id'], $filter_category)) { ?>
-                                    <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>"
-                                           checked="checked"/>
-                                    <?php echo $filter['name']; ?>
-                                    <?php } else { ?>
-                                    <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>"/>
-                                    <?php echo $filter['name']; ?>
-                                    <?php } ?>
-                                </label>
-                            </div>
-                            <?php } ?>
+
+                    <div class="left-f3">
+                        <div class="title"><?php echo $filter_group['name']; ?></div>
+                        <div class="one-line precious-box height-inherit" data-toggle="buttons" id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
+
+                            <?php foreach ($filter_group['filter'] as $filter):?>
+
+                                <?php if (in_array($filter['filter_id'], $filter_category)):?>
+                                    <label class="btn btn-filter active">
+                                        <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>" checked="checked"/><?php echo $filter['name']; ?>
+                                    </label>
+                                <?else:?>
+                                    <label class="btn btn-filter">
+                                        <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>"/><?php echo $filter['name']; ?>
+                                    </label>
+                                <?endif?>
+
+                            <?endforeach?>
+
                         </div>
                     </div>
 
                 <?endif?>
 
-
-
-            <?php endif?>
+            <?endif?>
 
             <?php if (!empty($filter_group['dop_filter'])):?>
 
-            <div class="list-group-item">
-                <div id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
-
-                    <div id="slider"></div>
-                    <div class="row" style="margin-top: 10px">
-                        <div class="col-md-6">
-                            <input type="text" class="dop-filtr-price-min form-control" name="min_price"
-                                   value="<?php if (!empty($PriceFrom)) { echo $PriceFrom; } else { echo $filter_group['dop_filter']['min']; }?>">
-                        </div>
-                        <div class="col-md-6 text-right">
-                            <input type="text" class="dop-filtr-price-max form-control" name="max_price"
-                                   value="<?php if (!empty($PriceTo)) { echo  $PriceTo; } else { echo $filter_group['dop_filter']['max']; }?>">
+                <div class="right-f3">
+                    <div class="one-line">
+                        <div class="filter-block filter1">
+                            <div id="slider"></div>
+                            <div class="clearfix">
+                                <input type="text" value="<?php if (!empty($PriceFrom)) { echo $PriceFrom; } else { echo $filter_group['dop_filter']['min']; }?>" id="amountPrice1" class="dop-filtr-price-min input-slider-p pull-left" name="min_price">
+                                <input type="text" value="<?php if (!empty($PriceTo)) { echo  $PriceTo; } else { echo $filter_group['dop_filter']['max']; }?>" id="amountPrice2" class="dop-filtr-price-max input-slider-p pull-right" name="max_price">
+                            </div>
                         </div>
                     </div>
-
-
                 </div>
-            </div>
 
-            <?php endif?>
+            <?endif?>
 
         <?endforeach?>
+
     </div>
-    <div class="panel-footer text-right">
-        <button type="button" id="button-filter" class="btn btn-primary"><?php echo $button_filter; ?></button>
+    <div class="functional-filter clearfix">
+        <button class="filter-default-result pull-right">clear filter</button>
+        <button class="filter-change pull-right">close filter</button>
     </div>
 </div>
+
+
+
+
 <script type="text/javascript">
     //$('#button-filter').on('click', function () {
     //    filter = [];
@@ -136,7 +133,7 @@ $(document).ready(function () {
                 $('.w-category-ajax').html(response);
                 $('.container-loader').hide();
 
-                initialize_grid();
+                //initialize_grid();
 
             }
         });
@@ -151,15 +148,6 @@ $(document).ready(function () {
 
     var ValMin = $(".dop-filtr-price-min").val();
     var ValMax = $(".dop-filtr-price-max").val();
-
-
-//    var slider2 = $('#slider2').slider({
-//        min: 1,
-//        max: 8,
-//        range: true,
-//        animate: 'slow',
-//        values: [1, 8]
-//    });
 
 
     var slider = $("#slider").slider({
@@ -201,7 +189,7 @@ $(document).ready(function () {
                     $('.w-category-ajax').html(response);
                     $('.container-loader').hide();
 
-                    initialize_grid();
+                    //initialize_grid();
 
                 }
 

@@ -3154,9 +3154,17 @@
 
 .step-product{
   margin-bottom: 20px;
+  .box-btn{
+    display: none!important;
+  }
+  .prev-step{
+    .box-btn{
+      display: block!important;
+    }
+  }
   .one-block{
     height: 300px;
-    padding: 35px;
+    padding: 25px 35px;
     position: relative;
     z-index: 2;
     border: 1px solid grey;
@@ -3212,6 +3220,9 @@
 
 .filter-box{
   &.open{
+    .filter-wrapper{
+      overflow: hidden;
+    }
     .filter-change{
       &:before{
         width: 0;
@@ -3228,7 +3239,9 @@
   .filter-wrapper{
     height: inherit;
     padding-bottom: 20px;
-    overflow: hidden;
+    &.filter-wrapper-pn{
+      padding-bottom: 0;
+    }
   }
   .functional-filter{
     margin-bottom: 40px;
@@ -3535,6 +3548,8 @@
 
 .filter-advanced-wrapper{
   position: relative;
+  margin-bottom: -40px;
+  z-index: 100;
   .dropdown-advanced{
     position: absolute;
     top: 30px;
@@ -3666,14 +3681,17 @@
     }
     .dropdown{
       width: 120px;
-      height: 50px;
+      //height: 50px;
       margin-left: 15px;
       margin-right: 10px;
       position: relative;
-      background-color: white;
+      //background-color: white;
       border-radius: 0;
       font-size: 16px;
       border: 0;
+      select{
+        border-radius: 0;
+      }
       .dropdown-menu{
         min-width: 100%;
         font-size: 15px;
@@ -3701,7 +3719,7 @@
       float: right;
     }
     .view-product{
-      padding-top: 15px;
+      padding-top: 6px;
       float: right;
       .btn-view{
         margin-left: 5px;
@@ -3715,6 +3733,18 @@
         }
       }
     }
+  }
+}
+
+.dropdown-advanced{
+  .filter-drop-drop input{
+    position: relative;
+  }
+  .input-slider-p{
+    width: 50px;
+    height: 23px;
+    margin: 10px -8px -15px;
+    font-size: 12px;
   }
 }
 
@@ -5186,5 +5216,35 @@
     z-index: 20;
   }
 }
+
+.box-btn{
+  width: initial!important;
+  position: absolute !important;
+  right: 7%;
+  bottom: 10px;
+}
+
+.step-eyes{
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+  padding: 0;
+  border: 0;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../img/step-eyes.png") no-repeat center / contain;
+}
+
+.step-close{
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  padding: 0;
+  border: 0;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../img/step-close.png") no-repeat center / contain;
+}
+
 
 @import "mobile/largedesktop";

@@ -7,18 +7,20 @@
         <div class="center-bl clearfix">
             <div class="pull-left left-drop-f">
                 <span>Sort By:</span>
-                <select name="sortby" class="form-control" id="w-product-sortby">
-                    <option value="size_Asc">Carat: low to high</option>
-                    <option value="size_Desc">Carat: high to low</option>
-                    <option value="Color_Asc">Color: low to high</option>
-                    <option value="Color_Desc">Color: high to low</option>
-                    <option value="Clarity_Asc">Clarity: low to high</option>
-                    <option value="Clarity_Desc">Clarity: high to low</option>
-                    <option value="Cut_Asc">Cut: low to high</option>
-                    <option value="Cut_Desc">Cut: high to low</option>
-                    <option selected value="Price_Asc">Price: low to high</option>
-                    <option value="Price_Desc">Price: high to low</option>
-                </select>
+                <div class="dropdown">
+                    <select name="sortby" class="form-control" id="w-product-sortby">
+                        <option value="size_Asc">Carat: low to high</option>
+                        <option value="size_Desc">Carat: high to low</option>
+                        <option value="Color_Asc">Color: low to high</option>
+                        <option value="Color_Desc">Color: high to low</option>
+                        <option value="Clarity_Asc">Clarity: low to high</option>
+                        <option value="Clarity_Desc">Clarity: high to low</option>
+                        <option value="Cut_Asc">Cut: low to high</option>
+                        <option value="Cut_Desc">Cut: high to low</option>
+                        <option selected value="Price_Asc">Price: low to high</option>
+                        <option value="Price_Desc">Price: high to low</option>
+                    </select>
+                </div>
                 <!--<span>Product compare (0)</span>-->
             </div>
 
@@ -28,13 +30,14 @@
             </div>
             <div class="show-b">
                 <span>Show:</span>
-                <li class="dropdown">
+
+                <div class="dropdown">
                     <select name="show" class="form-control" id="w-product-show">
                         <option value="15">15</option>
                         <option value="25">25</option>
                         <option value="50">50</option>
                     </select>
-                </li>
+                </div>
             </div>
         </div>
     </div>
