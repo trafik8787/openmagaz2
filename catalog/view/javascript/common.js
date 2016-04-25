@@ -204,21 +204,23 @@ var cart = {
 			data: 'key=' + key,
 			dataType: 'json',
 			beforeSend: function() {
-				$('#cart > button').button('loading');
+				//$('#cart > button').button('loading');
 			},
 			complete: function() {
-				$('#cart > button').button('reset');
+				//$('#cart > button').button('reset');
 			},
 			success: function(json) {
 				// Need to set timeout otherwise it wont update the total
 				setTimeout(function () {
-					$('#cart > button').html('<span id="cart-total"><i class="fa fa-shopping-cart"></i> ' + json['total'] + '</span>');
+					$('#w-but-cart').html('<span>cart ('+json['count']+')</span>');
 				}, 100);
+
+                //console.log(json);
 
 				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
 					location = 'index.php?route=checkout/cart';
 				} else {
-					$('#cart > ul').load('index.php?route=common/cart/info ul li');
+					$('.cart-basket').load('index.php?route=common/cart/info .w-cart-basket');
 				}
 			},
 	        error: function(xhr, ajaxOptions, thrownError) {

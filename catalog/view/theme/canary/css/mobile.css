@@ -854,8 +854,7 @@
   .filter-box .filter-advanced-wrapper {
     float: none !important;
     margin: 0 auto 20px;
-    display: block;
-    z-index: 20; }
+    display: block; }
   .filter-box .one-line {
     height: 85px;
     margin-bottom: 20px; }
@@ -940,7 +939,10 @@
 
   .static-page .user-line .logo {
     width: 260px;
-    top: 17px; } }
+    top: 17px; }
+
+  .filter-wrapper .left-f, .filter-wrapper .right-f {
+    float: none; } }
 @media (max-width: 480px) {
   .top-main-r .wrapper-main-r {
     margin: 0 2% 0 30%;

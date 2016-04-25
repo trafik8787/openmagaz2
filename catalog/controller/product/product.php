@@ -270,6 +270,7 @@ class ControllerProductProduct extends Controller {
 			$data['manufacturer'] = $product_info['manufacturer'];
 			$data['manufacturers'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']);
 			$data['model'] = $product_info['model'];
+            $data['sku'] = $product_info['sku'];
 			$data['reward'] = $product_info['reward'];
 			$data['points'] = $product_info['points'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
@@ -474,20 +475,17 @@ class ControllerProductProduct extends Controller {
             $data['column_right'] = $this->load->controller('common/column_right');
             $data['content_top'] = $this->load->controller('common/content_top');
             $data['content_bottom'] = $this->load->controller('common/content_bottom');
-            $data['footer'] = $this->load->controller('common/footer');
-            $data['header'] = $this->load->controller('common/header');
-
-            if (in_ajax()) {
-                echo $this->load->view($this->config->get('config_template') . '/template/product/product_ajax.tpl', $data);
-            } else {
-
-
-                if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
-                    $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data));
-                } else {
-                    $this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
-                }
+            if (!in_ajax()) {
+                $data['footer'] = $this->load->controller('common/footer');
+                $data['header'] = $this->load->controller('common/header');
             }
+
+            if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/product.tpl')) {
+                $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/product.tpl', $data));
+            } else {
+                $this->response->setOutput($this->load->view('default/template/product/product.tpl', $data));
+            }
+
 
 		} else {
 			$url = '';

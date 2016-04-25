@@ -320,6 +320,33 @@ $( document ).ready(function( $ ) {
     //   }, 100);
     //});
 
+
+
+    $('.owl-product').owlCarousel({
+        loop:true,
+        margin:100,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:3,
+                nav:false
+            },
+            1000:{
+                items:4,
+                nav:true
+            }
+        }
+    })
+
+});
+
+//slider product
+function Productslider () {
+
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -327,6 +354,9 @@ $( document ).ready(function( $ ) {
         fade: true,
         asNavFor: '.slider-nav'
     });
+
+
+
     $('.slider-nav').slick({
         slidesToShow: 7,
         slidesToScroll: 1,
@@ -350,28 +380,9 @@ $( document ).ready(function( $ ) {
             }
         ]
     });
+}
 
-    $('.owl-product').owlCarousel({
-        loop:true,
-        margin:100,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
-                nav:true
-            },
-            600:{
-                items:3,
-                nav:false
-            },
-            1000:{
-                items:4,
-                nav:true
-            }
-        }
-    })
-
-});
+Productslider ();
 
 function changePrice(price){
     var lng=String(price).length;

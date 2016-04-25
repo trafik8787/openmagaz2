@@ -1147,7 +1147,6 @@
       float: none!important;
       margin: 0 auto 20px;
       display: block;
-      z-index: 20;
     }
     .one-line {
       height: 85px;
@@ -1256,6 +1255,14 @@
     width: 260px;
     top: 17px;
   }
+
+  .filter-wrapper{
+    .left-f, .right-f{
+      float: none;
+    }
+  }
+
+
 }
 
 @media (max-width: 480px) {

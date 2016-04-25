@@ -5246,5 +5246,12 @@
   background: url("../img/step-close.png") no-repeat center / contain;
 }
 
+.top-menu-b .box-btn {
+  width: 100%!important;
+  right: inherit;
+  position: relative!important;
+  bottom: inherit;
+}
+
 
 @import "mobile/largedesktop";

@@ -94,7 +94,7 @@
                 </span>
                 <?php if (!empty($CanaryDiamontCom)):?>
                     <span class="box-btn">
-                        <img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="100" alt="...">
+                        <img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="10" alt="...">
                         <button data-href="<?=$CanaryDiamontCom['href'] ?>" class="step-eyes"></button>
                         <button class="step-close w-remowe-diamond-complect"></button>
                     </span>
@@ -122,7 +122,7 @@
                     We offer both white gold or yellow gold either in 4 prong or 6 prongs.
                 </span>
                 <?php if (!empty($CanaryProductCom)):?>
-                    <img src="<?=!empty($CanaryProductCom) ? $CanaryProductCom['img'] : '' ?>" width="100" alt="...">
+                    <img src="<?=!empty($CanaryProductCom) ? $CanaryProductCom['img'] : '' ?>" width="10" alt="...">
                      <span class="box-btn">
                                     <button data-href="<?=$CanaryProductCom['href'] ?>" class="step-eyes"></button>
                                     <button class="step-close w-remowe-product-complect"></button>

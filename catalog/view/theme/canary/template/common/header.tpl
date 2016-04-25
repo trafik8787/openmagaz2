@@ -15,16 +15,20 @@
     <?php if ($keywords) { ?>
         <meta name="keywords" content="<?php echo $keywords; ?>"/>
     <?php } ?>
+    <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="catalog/view/theme/canary/css/normalize.css"/>
+    <link rel="stylesheet" href="catalog/view/javascript/jquery/magnific/magnific-popup.css"/>
+    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/slickslider/slick.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
     <link href="catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
+    <link rel="stylesheet" href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"/>
+
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/css/style.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/css/w_style.css"/>
 
-    <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
 
 </head>
@@ -266,31 +270,10 @@
                         <?php } ?>
 
                     </li>
-                    <li><a href="#"><i class="heart-ico"></i><span>wish list ( 1 )</span></a></li>
+                    <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="heart-ico"></i><span><?php echo $text_wishlist; ?></span></a></li>
+
                     <li class="cart-bl">
-                        <a href="#"><i class="cart-ico"></i><span>cart ( 1 )</span></a>
-                        <div class="cart-basket">
-                            <button class="close-cart-main"></button>
-                            <div class="product-box">
-                                <div class="one-product clearfix">
-                                    <div class="box-img">
-                                        <img src="catalog/view/theme/canary/img/img15.png" alt="img">
-                                    </div>
-                                    <div class="text-block">
-                                        <div class="title"><a href="#">Engagament rings</a></div>
-                                        X1: <span class="red-text">$450.000</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wrapper-text">
-                                <p>Sub-Total: $450.000</p>
-                                <p>Total: $450.000</p>
-                                <div class="box-btn clearfix">
-                                    <a href="#" class="red-btn pull-left"><i class="cart-white-ico"></i>view cart</a>
-                                    <a href="#" class="red-btn pull-right">checkout</a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php echo $cart; ?>
                     </li>
                     <!--<li class="triangle"><a href="#">currency usd</a></li>-->
                 </ul>

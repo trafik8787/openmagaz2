@@ -62,14 +62,10 @@
                 <thead>
                 <tr>
                     <th>Actual photo</th>
-                    <th>Share</th>
-                    <th>Carat</th>
-                    <th>Clatity</th>
-                    <th>Cut</th>
-                    <th>Depth</th>
-                    <th>Table</th>
-                    <th>Lab</th>
-                    <th>Origin</th>
+                    <th>Stock Number</th>
+                    <th>Metal</th>
+                    <th>Width</th>
+                    <th>Prong Metal</th>
                     <th>Price</th>
                     <th>Compare</th>
                     <th>Wishlist</th>
@@ -120,15 +116,11 @@
                             </div>
                         </div>
                     </td>
-                    <td data-th="Share">Oval</td>
-                    <td data-th="Carat">0, 70</td>
-                    <td data-th="Clatity">L5</td>
-                    <td data-th="Cut">VERY GOOD</td>
-                    <td data-th="Depth">45</td>
-                    <td data-th="Table">89</td>
-                    <td data-th="Lab">Gia</td>
-                    <td data-th="Origin">-</td>
-                    <td data-th="Price"><div class="price">350.00$</div></td>
+                    <td data-th="Stock Number">Oval</td>
+                    <td data-th="Metal">0, 70</td>
+                    <td data-th="Width">L5</td>
+                    <td data-th="Prong Metal">VERY GOOD</td>
+                    <td data-th="Price"><div class="price"><?php echo $product['price']; ?>$</div></td>
                     <td><i class="fa fa-exchange"></i></td>
                     <td><i class="fa fa-heart"></i></td>
                 </tr>

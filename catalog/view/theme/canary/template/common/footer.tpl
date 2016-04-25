@@ -114,6 +114,9 @@
 <script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery.sliderPro/jquery.sliderPro.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/canary/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/canary/js/script.js"></script>
 <script type="text/javascript" src="catalog/view/theme/canary/js/device.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/app.js" ></script>

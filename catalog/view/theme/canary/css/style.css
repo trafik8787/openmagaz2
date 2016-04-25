@@ -4631,6 +4631,12 @@ button:hover, button:focus {
   vertical-align: middle;
   background: url("../img/step-close.png") no-repeat center/contain; }
 
+.top-menu-b .box-btn {
+  width: 100% !important;
+  right: inherit;
+  position: relative !important;
+  bottom: inherit; }
+
 @media (max-width: 1700px) {
   .menu {
     padding: 55px 0 0 365px; }
