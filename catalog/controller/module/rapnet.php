@@ -366,6 +366,11 @@ class ControllerModuleRapnet extends Controller {
 
         $data = array();
 
+        $data['breadcrumbs'][] = array(
+            'text' => 'HOME',
+            'href' => '/'
+        );
+
 
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['column_right'] = $this->load->controller('common/column_right');

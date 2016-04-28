@@ -57,12 +57,19 @@ class ControllerCommonCart extends Controller {
 
 		$data['products'] = array();
 
+       // dd($this->cart->getProducts());
+
 		foreach ($this->cart->getProducts() as $product) {
+
 			if ($product['image']) {
 				$image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
 			} else {
 				$image = '';
 			}
+
+            if (!empty($product['diamond']) AND $product['diamond'] == 1) {
+                $image = $product['image'];
+            }
 
 			$option_data = array();
 
@@ -102,6 +109,7 @@ class ControllerCommonCart extends Controller {
 
 			$data['products'][] = array(
 				'cart_id'   => $product['cart_id'],
+                'diamond'   => !empty($product['diamond']) ? 1 : 0,
 				'thumb'     => $image,
 				'name'      => $product['name'],
 				'model'     => $product['model'],

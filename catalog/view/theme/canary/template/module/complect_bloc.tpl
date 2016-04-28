@@ -82,22 +82,22 @@
 
 
         <div class="col-md-4 col-sm-4 col-xs-4">
-            <a href="#" class="one-block <?= !empty($show) ? 'active' : '' ?>">
+            <a href="/diamonds" class="one-block  <?= !empty($show) ? 'active w-general-category' : '' ?>">
                 <span class="box-img">
                     <img src="catalog/view/theme/canary/img/img20.png" alt="img">
                 </span>
                 <span class="title">
-                    <span><?=$index?>.CHOOSE YOUR</span>  SOLITAIRE
+                    <span><?=$index?>.CHOOSE YOUR</span>  DIAMOND
                 </span>
                 <span class="text">
-                    from our vast range of certified diamonds, in various carat weights and shapes like Princess, Round, Heart, Pear etc. Just a tip: Round is the most popular shape for a solitaire ring
+                    from our vast range of certified diamonds, in various carat weights and shapes like Princess, Round, Heart.
                 </span>
                 <?php if (!empty($CanaryDiamontCom)):?>
-                    <span class="box-btn">
-                        <img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="10" alt="...">
-                        <button data-href="<?=$CanaryDiamontCom['href'] ?>" class="step-eyes"></button>
+                    <div>
+                        <img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="50" alt="...">
+                        <button data-href="<?=$CanaryDiamontCom['href'] ?>" class="step-eyes w-link-complect-bloc"></button>
                         <button class="step-close w-remowe-diamond-complect"></button>
-                    </span>
+                    </div>
                 <?endif?>
             </a>
 
@@ -111,7 +111,7 @@
 
 
         <div class="col-md-4 col-sm-4 col-xs-4">
-            <a href="#" class="one-block <?= !empty($show) ? 'active' : '' ?>">
+            <a href="<?= !empty($show) ? '/engagement-rings' : '#'?>" class="one-block <?= !empty($show) ? 'active w-general-category' : '' ?>">
                 <span class="box-img">
                     <img src="catalog/view/theme/canary/img/img19.png" alt="img">
                 </span>
@@ -122,11 +122,11 @@
                     We offer both white gold or yellow gold either in 4 prong or 6 prongs.
                 </span>
                 <?php if (!empty($CanaryProductCom)):?>
-                    <img src="<?=!empty($CanaryProductCom) ? $CanaryProductCom['img'] : '' ?>" width="10" alt="...">
-                     <span class="box-btn">
-                                    <button data-href="<?=$CanaryProductCom['href'] ?>" class="step-eyes"></button>
-                                    <button class="step-close w-remowe-product-complect"></button>
-                     </span>
+                    <div>
+                        <img src="<?=!empty($CanaryProductCom) ? $CanaryProductCom['img'] : '' ?>" width="50" alt="...">
+                        <button data-href="<?=$CanaryProductCom['href'] ?>" class="step-eyes w-link-complect-bloc"></button>
+                        <button class="step-close w-remowe-product-complect"></button>
+                     </div>
                 <?endif?>
             </a>
 
@@ -141,7 +141,7 @@
     <? function show_complite_complect_bloc ($show=null) {?>
 
         <div class="col-md-4 col-sm-4 col-xs-4 ">
-            <a href="#" class="one-block <?= !empty($show) ? 'active' : '' ?>">
+            <a <?=!empty($show) ? 'href="/complete_diamond" id="w-complide-view"' : 'href="#"'?> class="one-block <?= !empty($show) ? 'active w-general-category' : '' ?>">
                  <span class="box-img">
                     <img src="catalog/view/theme/canary/img/img21.png" alt="img">
                 </span>
@@ -152,11 +152,6 @@
                     by choosing your ring size. Your ring will be couriered to you.
                 </span>
             </a>
-            <p>
-                <?php if (!empty($show)):?>
-                <a href="/complete_diamond" id="w-complide-view" class="btn btn-primary" role="button">View</a>
-                <?endif?>
-            </p>
         </div>
 
     <?}?>

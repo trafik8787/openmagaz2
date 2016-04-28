@@ -68,7 +68,7 @@
                         <td>
                             <div class="product-item">
                                 <div class="box-img">
-                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>"><img src="<?=imageDiamont($row->shape)?>" width="150" alt="img"></a>
+                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="w-product-diamonts"><img src="<?=imageDiamont($row->shape)?>" width="150" alt="img"></a>
                                 </div>
                                 <div class="rating">
                                     <i class="star active"></i>
@@ -80,7 +80,7 @@
                                 <div class="btn-box">
                                     <a href="#" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="add to wishlist"></a>
                                     <a href="#" class="compare-btn-item" data-toggle="tooltip" data-placement="top" title="add to basket"></a>
-                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" class="search-btn-item" data-toggle="tooltip" data-placement="top" title="add to wishlist"></a>
+                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="search-btn-item w-product-diamonts" data-toggle="tooltip" data-placement="top" title="add to wishlist"></a>
                                     <a href="#" class="wishlist-btn-item" data-toggle="tooltip" data-placement="top" title="add to wishlist"></a>
                                 </div>
                                 <div class="box-tovar-th">

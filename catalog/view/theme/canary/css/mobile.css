@@ -155,13 +155,32 @@
         .wishlist-table tbody tr:last-child {
           margin-bottom: 0; }
       .wishlist-table tbody td {
-        display: block; }
+        display: block;
+        counter-reset: inrow-c; }
         .wishlist-table tbody td:before {
           content: attr(data-th);
           display: block;
           margin: -10px -10px 10px;
           background-color: #f1f1f1;
           line-height: 1.3; }
+      .wishlist-table tbody .cart-inrow {
+        position: relative;
+        padding-right: 10px; }
+        .wishlist-table tbody .cart-inrow:after {
+          counter-increment: inrow-c;
+          content: counter(inrow-c);
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: -8px;
+          background-color: #f1f1f1;
+          font-size: 12px;
+          height: 16px;
+          width: 16px;
+          line-height: 16px;
+          border-radius: 50%; }
+        .wishlist-table tbody .cart-inrow:only-child:after {
+          display: none; }
 
   .faq-modal .modal-body {
     padding: 50px 25px; }
@@ -194,11 +213,8 @@
     margin-top: 5px;
     margin-bottom: 30px; }
 
-  .compare-table {
-    display: none; }
-
-  .compare-mobile-table {
-    display: block; }
+  .table-sizer {
+    width: 350px; }
 
   .one-grading .one-line > * {
     display: block; }
@@ -805,6 +821,9 @@
   .mobile-login-tab-btn {
     padding: 7px 0; }
 
+  .compare-img {
+    margin: 6px 0 0 16px; }
+
   .about-us-article p {
     margin-bottom: 10px;
     font-size: 12px; }
@@ -854,7 +873,8 @@
   .filter-box .filter-advanced-wrapper {
     float: none !important;
     margin: 0 auto 20px;
-    display: block; }
+    display: block;
+    z-index: 20; }
   .filter-box .one-line {
     height: 85px;
     margin-bottom: 20px; }
@@ -941,8 +961,9 @@
     width: 260px;
     top: 17px; }
 
-  .filter-wrapper .left-f, .filter-wrapper .right-f {
-    float: none; } }
+  .account-col:nth-of-type(2) {
+    margin-left: 0;
+    margin-right: 0; } }
 @media (max-width: 480px) {
   .top-main-r .wrapper-main-r {
     margin: 0 2% 0 30%;
@@ -1083,6 +1104,12 @@
     display: none; }
 
   .cc-carts {
-    margin-top: 0; } }
+    margin-top: 0; }
+
+  .cart-info {
+    width: 100%; }
+
+  .cart-action-link {
+    font-size: 14px; } }
 
 /*# sourceMappingURL=mobile.css.map */

@@ -1,6 +1,5 @@
 
-
-
+<?//dd($products)?>
 <a href="#" onclick="return false" id="w-but-cart"><i class="cart-ico"></i><span>cart (<?php echo $count; ?>)</span></a>
 <div class="cart-basket">
     <div class="w-cart-basket">

@@ -294,34 +294,34 @@
                             <div class="title">search diamond gallery</div>
                             <ul class="brilliant-style">
                                 <li>
-                                    <a href="/diamonds?&shape=Round"><i class="brilliant-ico2 brilliant-s1"></i><br/>Round Cut</a>
+                                    <a href="/diamonds?&shape=Round" class="w-general-category"><i class="brilliant-ico2 brilliant-s1"></i><br/>Round Cut</a>
                                 </li>
                                 <li>
-                                    <a href="/diamonds?&shape=Princess"><i class="brilliant-ico2 brilliant-s2"></i><br/>Princess Cut</a>
+                                    <a href="/diamonds?&shape=Princess" class="w-general-category"><i class="brilliant-ico2 brilliant-s2"></i><br/>Princess Cut</a>
                                 </li>
                                 <li>
-                                    <a href="/diamonds?&shape=Emerald"><i class="brilliant-ico2 brilliant-s3"></i><br/>Emerald Cut</a>
+                                    <a href="/diamonds?&shape=Emerald" class="w-general-category"><i class="brilliant-ico2 brilliant-s3"></i><br/>Emerald Cut</a>
                                 </li>
                                 <li>
-                                    <a href="/diamonds?&shape=Asscher"><i class="brilliant-ico2 brilliant-s4"></i><br/>Asscher Cut</a>
+                                    <a href="/diamonds?&shape=Asscher" class="w-general-category"><i class="brilliant-ico2 brilliant-s4"></i><br/>Asscher Cut</a>
                                 </li>
                                 <li>
-                                    <a href="/diamonds?&shape=Oval"><i class="brilliant-ico2 brilliant-s5"></i><br/>Oval Cut</a>
+                                    <a href="/diamonds?&shape=Oval" class="w-general-category"><i class="brilliant-ico2 brilliant-s5"></i><br/>Oval Cut</a>
                                 </li>
                                 <li>
-                                    <a href="/diamonds?&shape=Radiant"><i class="brilliant-ico2 brilliant-s6"></i><br/>Radiant Cut</a>
+                                    <a href="/diamonds?&shape=Radiant" class="w-general-category"><i class="brilliant-ico2 brilliant-s6"></i><br/>Radiant Cut</a>
                                 </li>
                                 <li>
-                                    <a href="/diamonds?&shape=Pear"><i class="brilliant-ico2 brilliant-s7"></i><br/>Pear Shaped</a>
+                                    <a href="/diamonds?&shape=Pear" class="w-general-category"><i class="brilliant-ico2 brilliant-s7"></i><br/>Pear Shaped</a>
                                 </li>
                                 <li>
-                                    <a href="/diamonds?&shape=Heart"><i class="brilliant-ico2 brilliant-s8"></i><br/>Heart Shaped</a>
+                                    <a href="/diamonds?&shape=Heart" class="w-general-category"><i class="brilliant-ico2 brilliant-s8"></i><br/>Heart Shaped</a>
                                 </li>
                                 <li>
-                                    <a href="/diamonds?&shape=Marquise"><i class="brilliant-ico2 brilliant-s9"></i><br/>Marquise Cut</a>
+                                    <a href="/diamonds?&shape=Marquise" class="w-general-category"><i class="brilliant-ico2 brilliant-s9"></i><br/>Marquise Cut</a>
                                 </li>
                                 <li>
-                                    <a href="/diamonds?&shape=Cushion"><i class="brilliant-ico2 brilliant-s10"></i><br/>Cushion Cut</a>
+                                    <a href="/diamonds?&shape=Cushion" class="w-general-category"><i class="brilliant-ico2 brilliant-s10"></i><br/>Cushion Cut</a>
                                 </li>
                             </ul>
                             <div class="row clearfix">

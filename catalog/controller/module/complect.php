@@ -58,6 +58,7 @@ class ControllerModuleComplect extends Controller {
 
 
             $CanaryProductCom = array('id_product' => $product_info['product_id'],
+                'name' => $product_info['name'],
                 'img' => '/image/'.$product_info['image'],
                 'option' => $option,
                 'href' => $this->url->link('product/product', 'path=' . $this->request->post['w_path'] . '&product_id=' . $product_info['product_id']));
@@ -78,9 +79,6 @@ class ControllerModuleComplect extends Controller {
 
             $data['CanaryDiamontCom'] = $CanaryDiamontCom;
         }
-
-
-
 
         $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/complect_bloc.tpl', $data));
 
@@ -140,34 +138,46 @@ class ControllerModuleComplect extends Controller {
     public function complete_diamond(){
 
         $data = array();
+        $data_cookie = array();
 
-        $data = $this->getProductsCoolies();
-
-
-        if (empty($data)) {
+        $data_cookie = $this->getProductsCoolies();
+        //dd($data_cookie);
+        if (empty($data_cookie)) {
             $this->response->redirect('/');
         }
+
+        $rapnet_controller = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $data_cookie['CanaryDiamontCom']['id_product']));
+
+        $rapnet_controller = json_decode($rapnet_controller);
+        $data['CanaryDiamontCom'] = $rapnet_controller->response->body->diamond;
+
+        $this->load->model('catalog/product');
+
+        //$this->load->model('tool/image');
+        //$results_img = $this->model_catalog_product->getProductImages($data['CanaryProductCom']['id_product']);
+
+        $data['CanaryProductCom'] = $this->model_catalog_product->getProduct($data_cookie['CanaryProductCom']['id_product']);
+        $data['CanaryProductCom']['option'] = $data_cookie['CanaryProductCom']['option'];
+
+        //$data['CanaryProductCom']['image'] = $this->model_tool_image->resize($results_img[0]['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
 
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['column_right'] = $this->load->controller('common/column_right');
         $data['content_top'] = $this->load->controller('common/content_top');
         $data['content_bottom'] = $this->load->controller('common/content_bottom');
 
-
-
-        if (in_ajax()) {
-            $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/complect_complet.tpl', $data));
-        } else {
-
+        if (!in_ajax()) {
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');
-
-            if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/complect_complet.tpl')) {
-                $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/complect_complet.tpl', $data));
-            } else {
-                $this->response->setOutput(dd('NO PAGE'));
-            }
         }
+
+
+        if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/complect_complet.tpl')) {
+            $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/complect_complet.tpl', $data));
+        } else {
+            $this->response->setOutput(dd('NO PAGE'));
+        }
+
     }
 
 

@@ -226,7 +226,12 @@ $(document).on('click', '.w-remowe-product-complect', function(){
 
 
 
+$(document).on('click', '.w-link-complect-bloc', function() {
 
+    window.location.href = $(this).data('href');
+    return false;
+
+});
 
 $(document).on('click', '#w-complide-view', function() {
 

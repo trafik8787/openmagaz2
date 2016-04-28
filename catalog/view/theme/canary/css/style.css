@@ -4637,6 +4637,218 @@ button:hover, button:focus {
   position: relative !important;
   bottom: inherit; }
 
+.cart-header {
+  font-size: 24px;
+  font-family: 'SegoeUI', sans-serif; }
+
+.cart-page,
+.account-page {
+  padding: 20px 0 80px; }
+
+.cart-remove-column {
+  background: url("../img/remove-column.png") no-repeat center/contain;
+  width: 20px;
+  height: 20px;
+  margin: 0; }
+
+.quantity-input {
+  width: 40px;
+  height: 30px;
+  display: inline-block;
+  border: none;
+  background-color: #f1f1f1;
+  text-align: center;
+  vertical-align: middle; }
+
+.quantity-input-controls {
+  width: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px; }
+
+.qic-left,
+.qic-right {
+  height: 11px;
+  display: block;
+  background: url("../img/qic.png") no-repeat center/contain;
+  opacity: 0.8; }
+  .qic-left:hover,
+  .qic-right:hover {
+    opacity: 1; }
+
+.qic-right {
+  -moz-transform: scale(-1);
+  -o-transform: scale(-1);
+  -webkit-transform: scale(-1);
+  transform: scale(-1);
+  margin-top: 4px; }
+
+.cart-inrow {
+  padding: 10px 0; }
+
+.cart-info {
+  margin-top: 15px;
+  float: left;
+  width: 300px;
+  max-width: 100%; }
+  .cart-info .checkout-info-actionsblock {
+    margin-top: 0;
+    padding: 10px 0; }
+  .cart-info .ci-action-item {
+    width: 90px; }
+  .cart-info .ci-phone {
+    margin-top: 15px; }
+  .cart-info .ci-action-item {
+    font-size: 12px; }
+
+.cart-price-sum {
+  margin: 15px 0;
+  float: right;
+  width: 500px;
+  max-width: 100%; }
+  .cart-price-sum .summary-price {
+    margin: 0 0 15px; }
+  .cart-price-sum .sp-text,
+  .cart-price-sum .sp-price {
+    font-size: 18px; }
+
+.cart-actions:after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.cart-action-link {
+  display: block;
+  float: left;
+  width: 50%;
+  text-transform: uppercase;
+  font-size: 18px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center; }
+
+.cart-continue {
+  background-color: #f1f1f1;
+  color: #444444; }
+  .cart-continue:hover, .cart-continue:focus {
+    color: #ff5959; }
+
+.cart-add {
+  background-color: #ff5959;
+  color: white; }
+  .cart-add:hover, .cart-add:focus {
+    background-color: rgba(255, 89, 89, 0.8);
+    color: white; }
+
+.account-page-header {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 14px;
+  font-family: 'SegoeUI', sans-serif; }
+  .account-page-header p {
+    margin-bottom: 5px; }
+  .account-page-header a {
+    color: #ff5959; }
+    .account-page-header a:hover {
+      text-decoration: underline; }
+.account-page-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+.account-page-track-empty {
+  margin: 30px auto 0;
+  max-width: 100%;
+  width: 940px;
+  height: 240px;
+  line-height: 240px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid #f1f1f1;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #ff5959; }
+
+.account-col {
+  display: inline-block;
+  vertical-align: top;
+  width: 310px;
+  max-width: 100%;
+  margin-bottom: 30px; }
+  .account-col:nth-of-type(2) {
+    margin-left: 9%;
+    margin-right: 9%; }
+  .account-col-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'SegoeUI', sans-serif;
+    margin-bottom: 25px; }
+  .account-col-row {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    padding: 0 10px;
+    font-size: 12px;
+    font-family: 'SegoeUI', sans-serif;
+    margin-bottom: 15px; }
+    .account-col-row:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .account-col-prop, .account-col-value {
+    padding: 10px 0; }
+  .account-col-prop {
+    text-align: left;
+    width: 50%;
+    display: block;
+    float: left; }
+  .account-col-value {
+    width: 50%;
+    text-align: right;
+    display: block;
+    float: right; }
+  .account-col-table {
+    display: table;
+    width: 100%;
+    min-height: 40px; }
+  .account-col-item {
+    width: 33.3333333333%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px 0; }
+    .account-col-item:first-of-type {
+      text-align: left; }
+    .account-col-item:last-of-type {
+      text-align: right; }
+  .account-col-image {
+    max-width: 25px;
+    max-height: 25px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-left: 5px;
+    overflow: hidden; }
+    .account-col-image img {
+      width: 100%;
+      display: block; }
+  .account-col-view-link {
+    display: inline-block;
+    width: 65px;
+    height: 30px;
+    line-height: 29px;
+    text-align: center;
+    background-color: #ff5959;
+    color: white;
+    font-size: 10px; }
+    .account-col-view-link:hover, .account-col-view-link:focus {
+      background-color: rgba(255, 89, 89, 0.8);
+      color: white; }
+  .account-col .wishlist-action {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    vertical-align: middle; }
+    .account-col .wishlist-action.wa-cart {
+      background-size: 100%; }
+
 @media (max-width: 1700px) {
   .menu {
     padding: 55px 0 0 365px; }

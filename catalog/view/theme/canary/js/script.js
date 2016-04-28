@@ -100,11 +100,11 @@ $( document ).ready(function( $ ) {
         $(".fancy-box").addClass("open");
     });
 
-    $(".step-product .one-block").click(function(e) {
-        e.preventDefault();
-        $(".step-product .one-block").removeClass("active");
-        $(this).addClass("active");
-    });
+    //$(".step-product .one-block").click(function(e) {
+    //    e.preventDefault();
+    //    $(".step-product .one-block").removeClass("active");
+    //    $(this).addClass("active");
+    //});
 
     $(".menu-l-open").click(function() {
         $(".static-page").toggleClass("open");
