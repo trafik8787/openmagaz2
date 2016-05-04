@@ -67,6 +67,7 @@
                     <tr>
                         <td>
                             <div class="product-item">
+                                <input type="hidden" class="w-diamond-id-category" value="<?=$row->diamond_id?>">
                                 <div class="box-img">
                                     <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="w-product-diamonts"><img src="<?=imageDiamont($row->shape)?>" width="150" alt="img"></a>
                                 </div>
@@ -78,10 +79,10 @@
                                     <i class="star"></i>
                                 </div>
                                 <div class="btn-box">
-                                    <a href="#" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="add to wishlist"></a>
-                                    <a href="#" class="compare-btn-item" data-toggle="tooltip" data-placement="top" title="add to basket"></a>
-                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="search-btn-item w-product-diamonts" data-toggle="tooltip" data-placement="top" title="add to wishlist"></a>
-                                    <a href="#" class="wishlist-btn-item" data-toggle="tooltip" data-placement="top" title="add to wishlist"></a>
+                                    <a href="#" class="cart-btn-item w-diamont-button-cart-category" data-toggle="tooltip" data-placement="top" title="<?php echo $button_cart; ?>"></a>
+                                    <a href="#" class="compare-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_compare; ?>"></a>
+                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="search-btn-item w-product-diamonts" data-toggle="tooltip" data-placement="top" title="Views"></a>
+                                    <a href="#" class="wishlist-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_wishlist; ?>"></a>
                                 </div>
                                 <div class="box-tovar-th">
                                     <div class="name"><?=$row->shape?> <?=$row->size?> CARAT <?=$row->color?> <?=$row->clarity?></div>
@@ -114,3 +115,35 @@
 
     </div>
 <?endif?>
+
+<script>
+
+    //add complect diamond
+    $(document).on('click', '.w-diamont-button-cart-category', function(){
+
+
+        $.ajax({
+            url: 'index.php?route=checkout/cart/add_diamond',
+            type: 'POST',
+            data: 'diamond_id='+$(this).parents('.product-item').find('.w-diamond-id-category').val(),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#w-diamont-button-cart').button('loading');
+            },
+            complete: function() {
+                $('#w-diamont-button-cart').button('reset');
+            },
+            success: function(json) {
+                $('#w-but-cart').html('<span>cart ('+json['count']+')</span>');
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
+                $('.cart-basket').load('index.php?route=common/cart/info .w-cart-basket');
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert('ошибочка вышла');
+            }
+        });
+
+        return false;
+    });
+
+</script>

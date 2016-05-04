@@ -412,6 +412,8 @@
         });
     });
 
+
+    //add product to cart
     $('#button-cart').on('click', function() {
         $.ajax({
             url: 'index.php?route=checkout/cart/add',

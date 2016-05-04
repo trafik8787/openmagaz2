@@ -1,91 +1,354 @@
-<?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <?php if ($error_warning) { ?>
-  <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_option; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-checkout-option">
-            <div class="panel-body"></div>
-          </div>
+<?php echo isset($header) ? $header : ''; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main class="w-general-container">
+    <section class="static-page">
+        <div class="center-bl">
+            <ul class="breadcrumbs">
+                <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                <li>></li>
+                <?php } ?>
+            </ul>
         </div>
-        <?php if (!$logged && $account != 'guest') { ?>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_account; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-payment-address">
-            <div class="panel-body"></div>
-          </div>
+        <div class="scheckout-page">
+            <div class="center-bl">
+                <div class="scheckout-page-title">Secure Checkout</div>
+                <div class="row">
+                    <div class="col-md-3 col-xs-3 col-sm-3">
+                        <div class="checkout-info-wrap">
+                            <div class="checkout-info-title">ORDER SUMMARY</div>
+                            <div class="summary-item-list">
+                                <div class="summary-item">
+                                    <div class="summary-item-img">
+                                        <img src="catalog/view/theme/canary/img/img17.png" alt="">
+                                    </div>
+                                    <a href="#" class="summary-item-title">This is Photoshop's version</a>
+                                    <p class="summary-item-desc">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+                                    <div class="summary-item-price">$180</div>
+                                </div>
+                                <div class="summary-item">
+                                    <div class="summary-item-img">
+                                        <img src="catalog/view/theme/canary/img/img17.png" alt="">
+                                    </div>
+                                    <a href="#" class="summary-item-title">This is Photoshop's version</a>
+                                    <p class="summary-item-desc">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+                                    <div class="summary-item-price">$180</div>
+                                </div>
+                                <div class="summary-item">
+                                    <div class="summary-item-img">
+                                        <img src="catalog/view/theme/canary/img/img17.png" alt="">
+                                    </div>
+                                    <a href="#" class="summary-item-title">This is Photoshop's version</a>
+                                    <p class="summary-item-desc">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
+                                    <div class="summary-item-price">$180</div>
+                                </div>
+                            </div>
+                            <div class="ring-size-title">ring Size</div>
+                            <div class="ring-size-list">
+                                <div class="one-line size-radio height-inherit" data-toggle="buttons">
+                                    <label class="btn btn-filter">
+                                        <input type="radio" name="Size"> 25
+                                    </label>
+                                    <label class="btn btn-filter">
+                                        <input type="radio" name="Size"> 26
+                                    </label>
+                                    <label class="btn btn-filter">
+                                        <input type="radio" name="Size"> 27
+                                    </label>
+                                    <label class="btn btn-filter active">
+                                        <input type="radio" name="Size"> 28
+                                    </label>
+                                    <label class="btn btn-filter">
+                                        <input type="radio" name="Size"> 29
+                                    </label>
+                                    <label class="btn btn-filter">
+                                        <input type="radio" name="Size"> 30
+                                    </label>
+                                    <label class="btn btn-filter">
+                                        <input type="radio" name="Size"> 31
+                                    </label>
+                                    <label class="btn btn-filter">
+                                        <input type="radio" name="Size"> 32
+                                    </label>
+                                    <label class="btn btn-filter">
+                                        <input type="radio" name="Size"> 33
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="summary-price">
+                                <div class="sp-text">Sub-Total:</div>
+                                <div class="sp-price"><span class="text-red">$1000.00</span></div>
+                            </div>
+                            <div class="del-price-item"><i class="c-yellow-truck"></i><span class="spi-text">Shipping free</span> free</div>
+                            <div class="del-price-item"><i class="c-yellow-label"></i><span class="spi-text">Mounting free</span> free</div>
+                            <div class="del-price-item taxes-item">Taxes
+                                <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="" aria-describedby="popover658252">
+                                    <span class="question-filter"><i class="fa fa-question-circle"></i></span>
+                                </button>
+                            </div>
+                            <div class="summary-price">
+                                <div class="sp-text">Total:</div>
+                                <div class="sp-price"><span class="text-red">$1000.00</span><br><span class="sp-price-smaller">Ships by Tuesday, April 12</span></div>
+                            </div>
+                            <input type="text" class="summary-input" placeholder="Have a diamond ?">
+                            <input type="text" class="summary-input" placeholder="Enter Coupon Code">
+                            <div class="summary-cart-list">
+                                <div class="summary-cart-item"><img src="catalog/view/theme/canary/img/visa.png" alt=""></div>
+                                <div class="summary-cart-item"><img src="catalog/view/theme/canary/img/mastercard.png" alt=""></div>
+                                <div class="summary-cart-item"><img src="catalog/view/theme/canary/img/discover.png" alt=""></div>
+                                <div class="summary-cart-item"><img src="catalog/view/theme/canary/img/americanexpress.png" alt=""></div>
+                                <div class="summary-cart-item"><img src="catalog/view/theme/canary/img/paypal.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-6 col-sm-6">
+                        <div class="checkout-center">
+                            <div class="cc-block">
+                                <div class="cc-header">
+                                    <div class="cc-title">1. SIGN IN TO CHECKOUT</div>
+                                </div>
+                                <div class="cc-body">
+                                    <div class="login-form-wrapper">
+                                        <form action="login">
+                                            <a href="#" class="cc-login-text">CREATE NEW ACCOUNT</a>
+                                            <div class="contacts-form-row">
+                                                <input id="lit1" type="text" class="contacts-input login-input required" required>
+                                                <label for="lit1" class="login-label-placeholder"><i class="envelope-ico"></i><span class="hide-when-valid">e-mail</span><span class="reqstar">*</span></label>
+                                            </div>
+                                            <div class="contacts-form-row contacts-form-row-mend login-password-row">
+                                                <input id="lit2" type="text" class="contacts-input login-input required" required>
+                                                <label for="lit2" class="login-label-placeholder"><i class="lock-ico"></i><span class="hide-when-valid">password</span><span class="reqstar">*</span></label>
+                                                <a href="#" class="show-password-btn"></a>
+                                            </div>
+                                            <div class="text-right">
+                                                <a href="#" class="forgot-pass" data-toggle="modal" data-target="#forgotModal">Forgot password?</a><br>
+                                                <a href="#" class="forgot-pass" data-toggle="modal" data-target="#forgotModalWrong">ErrorModal</a>
+                                            </div>
+                                            <div class="text center">
+                                                <button class="login-form-btn login-continue">continue</button>
+                                            </div>
+                                            <div class="form-divider">
+                                                <span>or</span>
+                                            </div>
+                                            <a href="#" class="social-login-btn social-login-facebook">
+                                                <span class="social-login-image"><i class="fa fa-facebook"></i></span>
+                                                <span class="social-login-text">sign in with facebook</span>
+                                            </a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cc-block">
+                                <div class="cc-header">
+                                    <div class="cc-title">2. PAYMENT METHOD</div>
+                                </div>
+                            </div>
+                            <div class="cc-block">
+                                <div class="cc-header">
+                                    <div class="cc-title">3. SHIPPING & BILLING</div>
+                                </div>
+                            </div>
+                            <div class="cc-block">
+                                <div class="cc-header">
+                                    <div class="cc-title">4. PAYMENT DETAILS</div>
+                                </div>
+                            </div>
+                            <div class="cc-block">
+                                <div class="cc-header">
+                                    <div class="cc-title">5. REVIEW & CONFIRMATION</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-3 col-sm-3">
+                        <div class="checkout-info-wrap">
+                            <div class="checkout-info-title">PURCHASE WITH CONFIDENCE</div>
+                            <ul class="faq-list">
+                                <li>
+                                    <span class="faq-question">Do you have a retail store </span>
+                                    <div class="faq-answer-block">
+                                        <div class="answer-block-question">Do you clean or provide care for jewelry sold on your site?</div>
+                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
+                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
+                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="faq-question">Do you have a retail store</span>
+                                    <div class="faq-answer-block">
+                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
+                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
+                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
+                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="faq-question">Do you have gemologists on staff?</span>
+                                    <div class="faq-answer-block">
+                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
+                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
+                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
+                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="faq-question">Where are the corporate offices</span>
+                                    <div class="faq-answer-block">
+                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
+                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
+                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
+                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="faq-list">
+                                <li>
+                                    <span class="faq-question">Do you have a retail store </span>
+                                    <div class="faq-answer-block">
+                                        <div class="answer-block-question">Do you clean or provide care for jewelry sold on your site?</div>
+                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
+                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
+                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="faq-question">Do you have a retail store</span>
+                                    <div class="faq-answer-block">
+                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
+                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
+                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
+                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="faq-question">Do you have gemologists on staff?</span>
+                                    <div class="faq-answer-block">
+                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
+                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
+                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
+                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="faq-question">Where are the corporate offices</span>
+                                    <div class="faq-answer-block">
+                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
+                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
+                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
+                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="checkout-info-inner-wrap checkout-info-actionsblock">
+                                <div class="ci-title">24/7 Customer Service</div>
+                                <div class="ci-phone"><i class="c-yellow-phone"></i>543 - 557 - 3456</div>
+                                <div class="ci-actions-list">
+                                    <a href="#" class="ci-action-item">
+                                        <span class="ci-action-ico"><i class="c-yellow-chat"></i></span>
+                                        Chat now
+                                    </a>
+                                    <a href="#" class="ci-action-item">
+                                        <span class="ci-action-ico"><i class="c-yellow-envelope"></i></span>
+                                        Send massage
+                                    </a>
+                                    <a href="#" class="ci-action-item">
+                                        <span class="ci-action-ico"><i class="c-yellow-inphone"></i></span>
+                                        Call back
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="#" class="tofaq-link">Try FAQ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <?php } else { ?>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_payment_address; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-payment-address">
-            <div class="panel-body"></div>
-          </div>
+
+    </section>
+
+
+
+
+    <!-- Modal -->
+    <div id="forgotModal" class="forgot-modal modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <div class="remind-modal-title">Forgot Password?</div>
+                        <div class="remind-modal-text">To reset your password, please enter your email address</div>
+                    </div>
+                    <form action="forgot">
+                        <input type="text" class="forgot-input">
+                        <div class="text-center">
+                            <button class="modal-continue" type="button">continue</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
-        <?php } ?>
-        <?php if ($shipping_required) { ?>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_shipping_address; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-shipping-address">
-            <div class="panel-body"></div>
-          </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="forgotModalWrong" class="forgot-modal modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <div class="wrong-email-text">
+                            There is no account under this email address.
+                            Please try again or register
+                        </div>
+                        <button class="modal-continue" type="button" data-dismiss="modal">close</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_shipping_method; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-shipping-method">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <?php } ?>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_payment_method; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-payment-method">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title"><?php echo $text_checkout_confirm; ?></h4>
-          </div>
-          <div class="panel-collapse collapse" id="collapse-checkout-confirm">
-            <div class="panel-body"></div>
-          </div>
-        </div>
-      </div>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
-</div>
+    </div>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="text/javascript"><!--
 $(document).on('change', 'input[name=\'account\']', function() {
 	if ($('#collapse-payment-address').parent().find('.panel-heading .panel-title > *').is('a')) {
@@ -793,4 +1056,13 @@ $(document).delegate('#button-payment-method', 'click', function() {
     });
 });
 //--></script>
-<?php echo $footer; ?>
+
+
+
+
+
+
+
+
+
+<?php echo isset($footer) ? $footer : ''; ?>

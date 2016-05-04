@@ -675,12 +675,15 @@ class ControllerCheckoutCart extends Controller {
 
 
         $json['total'] = sprintf($this->language->get('text_items'), $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0), $this->currency->format($total));
+        $json['count'] = $this->cart->countProducts();
+        $json['total_price'] = $this->currency->format($total);
+        $json['vouchers'] = isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0;
 
         $this->response->addHeader('Content-Type: application/json');
         $this->response->setOutput(json_encode($json));
     }
 
-
+    //добавляем комплект в корзину
     public function add_complect () {
 
         $this->uid = uniqid(rand(),1);

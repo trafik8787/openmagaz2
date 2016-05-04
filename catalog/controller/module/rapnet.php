@@ -121,6 +121,10 @@ class ControllerModuleRapnet extends Controller {
              $json = $this->parse();
 
              $decod_json = json_decode($json);
+             $this->load->language('product/category');
+             $data['button_cart'] = $this->language->get('button_cart');
+             $data['button_wishlist'] = $this->language->get('button_wishlist');
+             $data['button_compare'] = $this->language->get('button_compare');
 
              if ($decod_json->response->header->error_code == 0) {
 

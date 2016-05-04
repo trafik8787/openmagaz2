@@ -2,14 +2,19 @@
 
 
 
-<?dd($CanaryProductCom)?>
-<?dd($CanaryDiamontCom)?>
+<?//dd($CanaryProductCom)?>
+<?//dd($CanaryDiamontCom)?>
 
 <main class="w-diamonds-product w-general-container">
     <section class="static-page">
         <div class="center-bl">
 
-
+            <ul class="breadcrumbs">
+                <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                <li>></li>
+                <?php } ?>
+            </ul>
 
             <?php echo $content_top; ?>
 
@@ -20,7 +25,7 @@
 
                 <input type="hidden" id="w-product-com-id" value="<?php echo $CanaryProductCom['product_id']?>">
                 <input type="hidden" id="w-diamond-com-id" value="<?php echo $CanaryDiamontCom->diamond_id?>">
-                <input type="hidden" id="w-product-option" value="<?=!empty($CanaryProductCom) ?  $CanaryProductCom['option'] : ''?>">
+                <input type="hidden" id="w-product-option" value="<?=!empty($CanaryProductCom['option']) ? $CanaryProductCom['option'] : ''?>">
 
                 <div class="one-product-slider">
                     <div class="slider-for">
@@ -164,7 +169,7 @@
 
 <script>
 
-
+    //complect to cart
     $(document).on('click', '#w-complect-button-cart', function(){
 
 

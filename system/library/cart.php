@@ -312,7 +312,7 @@ class Cart {
                             'cart_id' => $row['cart_id'],
                             'product_id' => $row['product_id'],
                             'diamond' => 1, //флаг означает что это брилиант
-                            'name' => 'Diamond',
+                            'name' => $data_arr_diamond->shape.' '.$data_arr_diamond->size .' CARAT ' .$data_arr_diamond->color.' '.$data_arr_diamond->clarity,
                             'model' => $data_arr_diamond->size . ' Catat ' . $data_arr_diamond->color . '-' . $data_arr_diamond->clarity . ' ' . $data_arr_diamond->cut . ' Cut ' . $data_arr_diamond->shape . ' Diamond',
                             'shipping' => 1,
                             'image' => imageDiamont($data_arr_diamond->shape),

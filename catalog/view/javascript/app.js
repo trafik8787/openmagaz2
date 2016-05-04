@@ -48,7 +48,7 @@ $(document).ready(function() {
                 $('.w-general-container').empty();
                 $('.w-general-container').html(response);
                 $('.container-loader').hide();
-
+                $('.question-filter-btn').popover();
 
             }
 
@@ -118,7 +118,7 @@ $(document).on('click', '#w-button-add-product-complect', function(){
         url: 'index.php?route=module/complect/add_product_complect',
         type: 'post',
         //data: 'complect_id_product='+$this.data('idproduct')+'&path='+$this.data('path')+$('#product select'),
-        data: $('#product select, #product input[name=\'product_id\'], #product input[name=\'w_path\']'),
+        data: $('#product select, #product input[name=\'product_id\'], #product input[name=\'w_path\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select'),
         dataType: 'html',
         beforeSend: function() {
             $this.button('loading');
@@ -129,7 +129,7 @@ $(document).on('click', '#w-button-add-product-complect', function(){
         success: function(json) {
             $('.w-blocs-complects').empty();
             $('.w-blocs-complects').html(json);
-            console.log(json);
+
         },
         error: function(xhr, ajaxOptions, thrownError) {
 
@@ -251,7 +251,7 @@ $(document).on('click', '#w-complide-view', function() {
             $('.w-general-container').empty();
             $('.w-general-container').html(response);
             $('.container-loader').hide();
-
+            Productslider();
         }
 
     });

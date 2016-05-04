@@ -224,7 +224,9 @@
                 $('#w-diamont-button-cart').button('reset');
             },
             success: function(json) {
-                $('#cart > button').html('<i class="fa fa-shopping-cart"></i> ' + json.total);
+                $('#w-but-cart').html('<span>cart ('+json['count']+')</span>');
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
+                $('.cart-basket').load('index.php?route=common/cart/info .w-cart-basket');
             },
             error: function(xhr, ajaxOptions, thrownError) {
                 alert('ошибочка вышла');

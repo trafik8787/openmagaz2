@@ -141,7 +141,7 @@
     <? function show_complite_complect_bloc ($show=null) {?>
 
         <div class="col-md-4 col-sm-4 col-xs-4 ">
-            <a <?=!empty($show) ? 'href="/complete_diamond" id="w-complide-view"' : 'href="#"'?> class="one-block <?= !empty($show) ? 'active w-general-category' : '' ?>">
+            <a <?=!empty($show) ? 'href="/complete_diamond" id="w-complide-view"' : 'href="#"'?> class="one-block <?= !empty($show) ? 'active' : '' ?>">
                  <span class="box-img">
                     <img src="catalog/view/theme/canary/img/img21.png" alt="img">
                 </span>

@@ -4,7 +4,7 @@
         <div class="left-f">
             <div class="one-line height-inherit">
                 <div class="title">share
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Choose the diamond shape based on the recipients personality, as well as the shape that will look the best in the ring setting you select.">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>
                 </div>
@@ -202,14 +202,11 @@
                         <div class="filter-block filter1 filter-drop-drop">
                             <div class="wrapper-filter-drop">
                                 <div id="w-slider-depth"></div>
-                                <!--<div class="wrapper-table">-->
-                                    <!--<ul class="slider-lables">-->
-                                        <!--<li title="colorless">Fair</li>-->
-                                        <!--<li title="colored">Good</li>-->
-                                        <!--<li title="colorless">Very good</li>-->
-                                        <!--<li title="colorless">Excellent</li>-->
-                                    <!--</ul>-->
-                                <!--</div>-->
+                                <div class="clearfix">
+                                    <input type="text" id="depth1" class="input-slider-p pull-left w-input-depth-from">
+                                    <input type="text" id="depth2" class="input-slider-p pull-right w-input-depth-to">
+                                </div>
+
                             </div>
                         </div>
                     </li>
@@ -218,14 +215,11 @@
                         <div class="filter-block filter1 filter-drop-drop">
                             <div class="wrapper-filter-drop">
                                 <div id="w-slider-table"></div>
-                                <!--<div class="wrapper-table">-->
-                                    <!--<ul class="slider-lables">-->
-                                        <!--<li title="colorless">Fair</li>-->
-                                        <!--<li title="colored">Good</li>-->
-                                        <!--<li title="colorless">Very good</li>-->
-                                        <!--<li title="colorless">Excellent</li>-->
-                                    <!--</ul>-->
-                                <!--</div>-->
+                                <div class="clearfix">
+                                    <input type="text" id="table1" class="input-slider-p pull-left w-input-table-from">
+                                    <input type="text" id="table2" class="input-slider-p pull-right w-input-table-to">
+                                </div>
+
                             </div>
                         </div>
                     </li>
@@ -581,7 +575,6 @@
             min: 0,
             max: 8,
             range: true,
-            step: 1,
             animate: 'slow',
             values: [$get_color_from, $get_color_to],
             slide: function( event, ui ) {
@@ -983,15 +976,6 @@
 
            return false;
         });
-
-
-
-
-        $(".filter-default-result").on('click', function() {
-            $('#w-slider-color').slider('values',0,8);
-
-        });
-
 
 
 

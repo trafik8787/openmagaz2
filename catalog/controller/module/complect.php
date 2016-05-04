@@ -32,7 +32,7 @@ class ControllerModuleComplect extends Controller {
 
 
 
-
+    //добавить товар в комплект
     public function add_product_complect () {
 
         $this->load->model('catalog/product');
@@ -160,6 +160,16 @@ class ControllerModuleComplect extends Controller {
         $data['CanaryProductCom']['option'] = $data_cookie['CanaryProductCom']['option'];
 
         //$data['CanaryProductCom']['image'] = $this->model_tool_image->resize($results_img[0]['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
+
+        $data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => '/'
+        );
+
+        $data['breadcrumbs'][] = array(
+            'text' => 'Complete Ring',
+            'href' => '/complete_diamond'
+        );
 
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['column_right'] = $this->load->controller('common/column_right');
