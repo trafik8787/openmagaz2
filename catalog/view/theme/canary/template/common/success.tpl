@@ -1,7 +1,7 @@
-<?php echo $header; ?>
+<?php echo isset($header) ? $header : ''; ?>
 
 
-    <main>
+    <main class="w-general-container">
         <section class="static-page">
             <div class="center-bl">
                 <ul class="breadcrumbs">
@@ -21,4 +21,4 @@
     </main>
 
 
-<?php echo $footer; ?>
+<?php echo isset($footer) ? $footer : ''; ?>

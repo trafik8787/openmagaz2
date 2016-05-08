@@ -1,9 +1,9 @@
 
-<div class="contacts-form-row">
-    <input id="it4" type="text" name="captcha"  class="contacts-input required" required>
-    <label for="it4" class="label-placeholder">captcha<span class="reqstar">*</span></label>
-    <img src="index.php?route=captcha/basic_captcha/captcha" alt="" />
+<div class="contacts-form-row" style="margin-bottom: 40px;">
+    <input id="w-id-capcha" type="text" name="captcha"  class="contacts-input required" required>
+    <label for="w-id-capcha" class="label-placeholder">Captcha<span class="reqstar">*</span></label>
+    <img src="index.php?route=captcha/basic_captcha/captcha" alt="" style="position: absolute;"/>
     <?php if ($error_captcha) { ?>
-    <div class="text-danger"><?php echo $error_captcha; ?></div>
+        <div class="text-danger"><?php echo $error_captcha; ?></div>
     <?php } ?>
 </div>

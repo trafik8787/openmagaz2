@@ -1,55 +1,141 @@
-<?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <?php if ($success) { ?>
-  <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?></div>
-  <?php } ?>
-  <?php if ($error_warning) { ?>
-  <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?></div>
-  <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="well">
-            <h2><?php echo $text_new_customer; ?></h2>
-            <p><strong><?php echo $text_register; ?></strong></p>
-            <p><?php echo $text_register_account; ?></p>
-            <a href="<?php echo $register; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+<?php echo isset($header) ? $header : ''; ?>
+
+
+
+
+
+
+<main class="w-general-container">
+    <section class="static-page">
+        <div class="center-bl">
+            <ul class="breadcrumbs">
+                <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                <li>></li>
+                <?php } ?>
+            </ul>
         </div>
-        <div class="col-sm-6">
-          <div class="well">
-            <h2><?php echo $text_returning_customer; ?></h2>
-            <p><strong><?php echo $text_i_am_returning_customer; ?></strong></p>
-            <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
-              <div class="form-group">
-                <label class="control-label" for="input-email"><?php echo $entry_email; ?></label>
-                <input type="text" name="email" value="<?php echo $email; ?>" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
-              </div>
-              <div class="form-group">
-                <label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
-                <input type="password" name="password" value="<?php echo $password; ?>" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
-                <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a></div>
-              <input type="submit" value="<?php echo $button_login; ?>" class="btn btn-primary" />
-              <?php if ($redirect) { ?>
-              <input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
-              <?php } ?>
-            </form>
-          </div>
+
+
+
+
+        <div class="login-page">
+            <div class="center-bl">
+
+                <?php if ($success) { ?>
+                    <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?></div>
+                <?php } ?>
+
+                <?php if ($error_warning) { ?>
+                    <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?></div>
+                <?php } ?>
+
+                <div class="contacts-top-block text-center">
+                    <p class="contacts-block-title">MY ACCOUNT Log in for your account info</p>
+                </div>
+                <div class="mobile-login-btns">
+                    <a href="#loginSide" class="mobile-login-tab-btn active">
+                        Log in
+                    </a>
+                    <a href="#signSide" class="mobile-login-tab-btn">
+                        Sign in
+                    </a>
+                </div>
+                <div class="forms-container clearfix">
+                    <div id="loginSide" class="form-side active">
+                        <div class="login-form-wrapper">
+                            <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+                                <div class="form-title">
+                                    Log in to your account<br>
+                                    I have an account.
+                                </div>
+                                <div class="contacts-form-row">
+                                    <input id="lit1" type="text" name="email" value="<?php echo $email; ?>" class="contacts-input login-input required">
+                                    <label for="lit1" class="login-label-placeholder"><i class="envelope-ico"></i><span class="hide-when-valid">e-mail</span><span class="reqstar">*</span></label>
+                                </div>
+                                <div class="contacts-form-row contacts-form-row-mend login-password-row">
+                                    <input id="lit2" type="password" name="password" value="<?php echo $password; ?>" class="contacts-input login-input required">
+                                    <label for="lit2" class="login-label-placeholder"><i class="lock-ico"></i><span class="hide-when-valid">password</span><span class="reqstar">*</span></label>
+                                    <a href="#" class="show-password-btn"></a>
+                                </div>
+                                <div class="text-right">
+                                    <a href="#" class="forgot-pass" data-toggle="modal" data-target="#forgotModal">Forgot password?</a><br>
+                                    <a href="#" class="forgot-pass" data-toggle="modal" data-target="#forgotModalWrong">ErrorModal</a>
+                                </div>
+                                <div class="text center">
+                                    <button type="submit" class="login-form-btn login-continue"><?php echo $button_login; ?></button>
+                                </div>
+                                <div class="form-divider">
+                                    <span>or</span>
+                                </div>
+                                <a href="#" class="social-login-btn social-login-facebook">
+                                    <span class="social-login-image"><i class="fa fa-facebook"></i></span>
+                                    <span class="social-login-text">sign in with facebook</span>
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="signSide" class="form-side">
+                        <div class="login-form-wrapper">
+                            <?=$form_register?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
+    </section>
+</main>
+
+
+
+<!-- Modal -->
+<div id="forgotModal" class="forgot-modal modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-body">
+                <div class="text-center">
+                    <div class="remind-modal-title">Forgot Password?</div>
+                    <div class="remind-modal-text">To reset your password, please enter your email address</div>
+                </div>
+                <form action="/index.php?route=account/forgotten" method="post" enctype="multipart/form-data">
+                    <input type="text" name="email" value="" placeholder="<?php echo $entry_email; ?>" class="forgot-input">
+                    <div class="text-center">
+                        <button class="modal-continue" type="submit">continue</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
 </div>
-<?php echo $footer; ?>
+
+<!-- Modal -->
+<div id="forgotModalWrong" class="forgot-modal modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <div class="modal-body">
+                <div class="text-center">
+                    <div class="wrong-email-text">
+                        There is no account under this email address.
+                        Please try again or register
+                    </div>
+                    <button class="modal-continue" type="button" data-dismiss="modal">close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<?php echo isset($footer) ? $footer : ''; ?>
