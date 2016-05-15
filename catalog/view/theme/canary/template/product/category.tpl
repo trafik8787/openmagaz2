@@ -101,10 +101,10 @@
                                             </div>
                                         <?endif?>
                                         <div class="btn-box">
-                                            <a href="#" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_cart; ?>"></a>
+                                            <a href="#" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_cart; ?>"></a>
                                             <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?php echo $product['product_id']; ?>');" data-placement="top" title="<?php echo $button_compare; ?>"></a>
                                             <a href="<?php echo $product['href']; ?>" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="Views"></a>
-                                            <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product['product_id']; ?>');" data-placement="top" title="<?php echo $button_wishlist; ?>"></a>
+                                            <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;" data-placement="top" title="<?php echo $button_wishlist; ?>"></a>
                                         </div>
                                         <div class="box-tovar-th">
                                             <div class="name"><?php echo $product['name']; ?></div>

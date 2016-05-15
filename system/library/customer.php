@@ -51,8 +51,8 @@ class Customer {
 		}
 
 		if ($customer_query->num_rows) {
-			$this->session->data['customer_id'] = $customer_query->row['customer_id'];
 
+			$this->session->data['customer_id'] = $customer_query->row['customer_id'];
 			$this->customer_id = $customer_query->row['customer_id'];
 			$this->firstname = $customer_query->row['firstname'];
 			$this->lastname = $customer_query->row['lastname'];
@@ -69,6 +69,7 @@ class Customer {
 		} else {
 			return false;
 		}
+
 	}
 
 	public function logout() {

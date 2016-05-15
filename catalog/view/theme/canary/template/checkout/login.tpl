@@ -1,41 +1,50 @@
-<div class="row">
-  <div class="col-sm-6">
-    <h2><?php echo $text_new_customer; ?></h2>
-    <p><?php echo $text_checkout; ?></p>
-    <div class="radio">
-      <label>
-        <?php if ($account == 'register') { ?>
-        <input type="radio" name="account" value="register" checked="checked" />
-        <?php } else { ?>
-        <input type="radio" name="account" value="register" />
-        <?php } ?>
-        <?php echo $text_register; ?></label>
+
+
+<div class="login-form-wrapper">
+    <div>
+        <a href="#" id="button-account" class="cc-login-text">CREATE NEW ACCOUNT</a>
+        <div class="contacts-form-row">
+            <input id="lit1" type="text" name="email" class="contacts-input login-input required" required>
+            <label for="lit1" class="login-label-placeholder"><i class="envelope-ico"></i><span class="hide-when-valid"><?php echo $entry_email; ?></span><span class="reqstar">*</span></label>
+        </div>
+        <div class="contacts-form-row contacts-form-row-mend login-password-row">
+            <input id="lit2" type="password" name="password" class="contacts-input login-input required" required>
+            <label for="lit2" class="login-label-placeholder"><i class="lock-ico"></i><span class="hide-when-valid"><?php echo $entry_password; ?></span><span class="reqstar">*</span></label>
+            <a href="#" class="show-password-btn"></a>
+        </div>
+        <div class="text-right">
+            <a href="<?php echo $forgotten; ?>" class="forgot-pass" data-toggle="modal" data-target="#forgotModal"><?php echo $text_forgotten; ?></a><br>
+            <a href="#" class="forgot-pass" data-toggle="modal" data-target="#forgotModalWrong">ErrorModal</a>
+        </div>
+        <div class="text center">
+            <button id="button-login" data-loading-text="<?php echo $text_loading; ?>" class="login-form-btn login-continue"><?php echo $button_login; ?></button>
+        </div>
+        <div class="form-divider">
+            <span>or</span>
+        </div>
+        <a href="#" class="social-login-btn social-login-facebook">
+            <span class="social-login-image"><i class="fa fa-facebook"></i></span>
+            <span class="social-login-text">sign in with facebook</span>
+        </a>
+    </div>
+    <div class="w-radio">
+        <label>
+            <?php if ($account == 'register') { ?>
+            <input type="radio" name="account" value="register" checked="checked" />
+            <?php } else { ?>
+            <input type="radio" name="account" value="register" />
+            <?php } ?>
+            <?php echo $text_register; ?></label>
     </div>
     <?php if ($checkout_guest) { ?>
-    <div class="radio">
-      <label>
-        <?php if ($account == 'guest') { ?>
-        <input type="radio" name="account" value="guest" checked="checked" />
-        <?php } else { ?>
-        <input type="radio" name="account" value="guest" />
-        <?php } ?>
-        <?php echo $text_guest; ?></label>
+    <div class="w-radio">
+        <label>
+            <?php if ($account == 'guest') { ?>
+            <input type="radio" name="account" value="guest" checked="checked" />
+            <?php } else { ?>
+            <input type="radio" name="account" value="guest" />
+            <?php } ?>
+            <?php echo $text_guest; ?></label>
     </div>
     <?php } ?>
-    <p><?php echo $text_register_account; ?></p>
-    <input type="button" value="<?php echo $button_continue; ?>" id="button-account" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
-  </div>
-  <div class="col-sm-6">
-    <h2><?php echo $text_returning_customer; ?></h2>
-    <p><?php echo $text_i_am_returning_customer; ?></p>
-    <div class="form-group">
-      <label class="control-label" for="input-email"><?php echo $entry_email; ?></label>
-      <input type="text" name="email" value="" placeholder="<?php echo $entry_email; ?>" id="input-email" class="form-control" />
-    </div>
-    <div class="form-group">
-      <label class="control-label" for="input-password"><?php echo $entry_password; ?></label>
-      <input type="password" name="password" value="" placeholder="<?php echo $entry_password; ?>" id="input-password" class="form-control" />
-      <a href="<?php echo $forgotten; ?>"><?php echo $text_forgotten; ?></a></div>
-    <input type="button" value="<?php echo $button_login; ?>" id="button-login" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
-  </div>
 </div>

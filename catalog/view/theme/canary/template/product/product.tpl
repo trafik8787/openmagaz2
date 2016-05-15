@@ -429,7 +429,7 @@
             success: function(json) {
                 $('.alert, .text-danger').remove();
                 $('.form-group').removeClass('has-error');
-
+                console.log(json);
                 if (json['error']) {
                     if (json['error']['option']) {
                         for (i in json['error']['option']) {

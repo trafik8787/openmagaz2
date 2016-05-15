@@ -143,13 +143,27 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	font-weight: 400;
-	color: #FFF;
+	color: #AE5858;
 	margin-bottom: 0;
 }
+
+
+.btn {
+    border-radius: 0;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+.img-thumbnail {
+    border-radius: 0;
+}
+
 #column-left {
 	width: 50px;
 	height: 100%;
-	background-color: #515151;
+	background-color: #C6EAFB;
 	position: absolute;
 	top: 0px;
 	padding-top: 50px;
@@ -206,23 +220,24 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	font-size: 16px;
 }
 #menu > li > a {
-	color: #C4C4C4;
+	color: #000000;
 	font-size: 14px;
 	padding-left: 13px;
 	border-bottom: 1px solid #585858;
 }
 #menu > li > a:hover {
 	background-color: #444444;
+    color: #fff;
 }
 #menu > li > a > span {
 	display: none;
 	margin-left: 8px;
 }
 #menu li li a {
-	color: #9d9d9d;
+	color: #000000;
 }
 #menu li li a:hover {
-	color: #FFFFFF;
+	color: #FFFFFF!important;
 	background-color: #373737;
 }
 #menu li li a:before {
@@ -241,10 +256,11 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	background: #373737;
 }
 #menu li.active li a {
-	color: #C4C4C4;
+	color: #646464;
 }
 #menu li li.active > a:last-child {
-	color: #FFFFFF;
+	color: #000000;
+    font-weight: bold;
 }
 #menu li li.active a:last-child:before {
 	margin-left: 20px;
@@ -256,7 +272,7 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 	left: 50px;
 	top: 0px;
 	width: 210px;
-	background-color: #444444;
+	background-color: #E4E4E4;
 	visibility: hidden;
 }
 #menu li ul {

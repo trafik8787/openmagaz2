@@ -6,7 +6,7 @@
       <?php echo $text_address_existing; ?></label>
   </div>
   <div id="payment-existing">
-    <select name="address_id" class="form-control">
+    <select name="address_id" class="shipping-input select-simulate-input">
       <?php foreach ($addresses as $address) { ?>
       <?php if ($address['address_id'] == $address_id) { ?>
       <option value="<?php echo $address['address_id']; ?>" selected="selected"><?php echo $address['firstname']; ?> <?php echo $address['lastname']; ?>, <?php echo $address['address_1']; ?>, <?php echo $address['city']; ?>, <?php echo $address['zone']; ?>, <?php echo $address['country']; ?></option>
@@ -199,11 +199,14 @@
     <?php } ?>
     <?php } ?>
   </div>
-  <div class="buttons clearfix">
-    <div class="pull-right">
-      <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-address" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" />
+
+
+    <div class="include-price-row no-bottom-margin">
+      <input type="button"  class="cc-continue-btn" value="<?php echo $button_continue; ?>" id="button-payment-address" data-loading-text="<?php echo $text_loading; ?>"/>
     </div>
-  </div>
+
+
+
 </form>
 <script type="text/javascript"><!--
 $('input[name=\'payment_address\']').on('change', function() {

@@ -107,7 +107,7 @@ $( document ).ready(function( $ ) {
         $(".static-page").toggleClass("open");
     });
 
-    $(".close-cart-main").click(function() {
+    $(document).on('click', '.close-cart-main', function() {
         $(".cart-bl").removeClass("open");
     });
 

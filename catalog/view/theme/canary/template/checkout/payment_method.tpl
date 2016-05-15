@@ -4,7 +4,7 @@
 <?php if ($payment_methods) { ?>
 <p><?php echo $text_payment_method; ?></p>
 <?php foreach ($payment_methods as $payment_method) { ?>
-<div class="radio">
+<div class="w-radio">
   <label>
     <?php if ($payment_method['code'] == $code || !$code) { ?>
     <?php $code = $payment_method['code']; ?>

@@ -1,11 +1,11 @@
 <?php
 class ControllerAccountWishList extends Controller {
 	public function index() {
-		if (!$this->customer->isLogged()) {
-			$this->session->data['redirect'] = $this->url->link('account/wishlist', '', 'SSL');
-
-			$this->response->redirect($this->url->link('account/login', '', 'SSL'));
-		}
+//		if (!$this->customer->isLogged()) {
+//			$this->session->data['redirect'] = $this->url->link('account/wishlist', '', 'SSL');
+//
+//			$this->response->redirect($this->url->link('account/login', '', 'SSL'));
+//		}
 
 		$this->load->language('account/wishlist');
 
@@ -42,6 +42,9 @@ class ControllerAccountWishList extends Controller {
 			'text' => $this->language->get('heading_title'),
 			'href' => $this->url->link('account/wishlist')
 		);
+
+
+        $data['logged'] = $this->customer->isLogged();
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
