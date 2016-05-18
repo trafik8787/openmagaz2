@@ -39,8 +39,8 @@
                 <p><?php echo $total['title']; ?>: <?php echo $total['text']; ?></p>
             <?endforeach?>
             <div class="box-btn clearfix">
-                <a href="<?php echo $cart; ?>" class="red-btn pull-left"><i class="cart-white-ico"></i><?php echo $text_cart; ?></a>
-                <a href="<?php echo $checkout; ?>" class="red-btn pull-right"><?php echo $text_checkout; ?></a>
+                <a href="<?php echo $cart; ?>" class="red-btn pull-left w-general-category"><i class="cart-white-ico"></i><?php echo $text_cart; ?></a>
+                <a href="<?php echo $checkout; ?>" class="red-btn pull-right w-general-category"><?php echo $text_checkout; ?></a>
             </div>
         </div>
 

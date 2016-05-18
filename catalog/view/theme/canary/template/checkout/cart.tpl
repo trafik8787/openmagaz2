@@ -216,7 +216,7 @@
 
                         <div class="cart-actions">
                             <a href="#" class="cart-action-link cart-continue">continue shopping</a>
-                            <a href="<?php echo $checkout; ?>" class="cart-action-link cart-add"><?php echo $button_checkout; ?></a>
+                            <a href="<?php echo $checkout; ?>" class="cart-action-link cart-add w-general-category"><?php echo $button_checkout; ?></a>
                         </div>
 
                     </div>

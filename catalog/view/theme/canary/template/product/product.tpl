@@ -173,122 +173,74 @@
         </div>
     </section>
     <section class="center-bl comment-brand clearfix">
-        <div class="comment-box">
-            <div class="btn-box-comment">
-                <div>
-                    <button class="comment-btn">Reviews(3)</button>
-                    <button class="comment-btn">Questions(2)</button>
+        <?php if ($review_status):?>
+            <div class="comment-box">
+                <div class="btn-box-comment">
+                    <div>
+                        <button class="comment-btn"><?php echo $reviews; ?></button>
+                        <button class="comment-btn">Questions(2)</button>
+                    </div>
+                    <div>
+                        <button class="comment-btn" id="write-review">write a review</button>
+                        <span class="comment-btn">ask a questions</span>
+                    </div>
                 </div>
-                <div>
-                    <span class="comment-btn">write a review</span>
-                    <span class="comment-btn">ask a questions</span>
+
+                <div id="write-review-form" class="panel-collapse collapse">
+                    <div class="panel-body">
+
+                        <form class="form-horizontal" id="form-review">
+                            <h2><?php echo $text_write; ?></h2>
+                            <?php if ($review_guest) { ?>
+                            <div class="form-group required">
+                                <div class="col-sm-12">
+                                    <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
+                                    <input type="text" name="name" value="" id="input-name" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="col-sm-12">
+                                    <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
+                                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+                                    <div class="help-block"><?php echo $text_note; ?></div>
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <div class="col-sm-12">
+                                    <label class="control-label"><?php echo $entry_rating; ?></label>
+                                    &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
+                                    <input type="radio" name="rating" value="1" />
+                                    &nbsp;
+                                    <input type="radio" name="rating" value="2" />
+                                    &nbsp;
+                                    <input type="radio" name="rating" value="3" />
+                                    &nbsp;
+                                    <input type="radio" name="rating" value="4" />
+                                    &nbsp;
+                                    <input type="radio" name="rating" value="5" />
+                                    &nbsp;<?php echo $entry_good; ?></div>
+                            </div>
+                            <?php echo $captcha; ?>
+                            <div class="buttons clearfix">
+                                <div class="pull-right">
+                                    <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
+                                </div>
+                            </div>
+                            <?php } else { ?>
+                            <?php echo $text_login; ?>
+                            <?php } ?>
+                        </form>
+
+                    </div>
                 </div>
+
+                <div id="review"></div>
+
             </div>
-            <div class="comment-line">
-                <div class="top clearfix">
-                    <div class="date">25/01/2016</div>
-                    <div class="box-img">
-                        <img src="catalog/view/theme/canary/img/comment-img.png" alt="img">
-                    </div>
-                    <div class="box-text">
-                        <div class="author">Demo name <span>Verified Reviewer</span></div>
-                        <div class="rating">
-                            <i class="star active"></i>
-                            <i class="star active"></i>
-                            <i class="star active"></i>
-                            <i class="star active"></i>
-                            <i class="star"></i>
-                        </div>
-                        consectetur
-                    </div>
-                </div>
-                <div class="message-comment">
-                    dolor sit amet, consectetur adipiscing elit. Mauris sit amet sem varius, fringilla erat a, blandit arcu. Cras sit amet justo eu erat imperdiet dictum ac eget nulla. Aliquam erat volutpat.em varius, fringilla erat a, blandit arcu. Cras
-                </div>
-                <div class="share-box clearfix">
-                    <a href="#" class="share-comment"><i class="share-ico"></i>share</a>
-                    <div class="like-dislike">
-                        <a href="#">Was This Review Helpful?</a>
-                        <a href="#" class="like"><i class="like-ico"></i></a> 1
-                        <a href="#" class="dislike"><i class="dislike-ico"></i></a> 0
-                    </div>
-                </div>
-            </div>
-            <div class="comment-line">
-                <div class="top clearfix">
-                    <div class="date">25/01/2016</div>
-                    <div class="box-img">
-                        <img src="catalog/view/theme/canary/img/comment-img.png" alt="img">
-                    </div>
-                    <div class="box-text">
-                        <div class="author">Demo name <span>Verified Reviewer</span></div>
-                        <div class="rating">
-                            <i class="star active"></i>
-                            <i class="star active"></i>
-                            <i class="star active"></i>
-                            <i class="star active"></i>
-                            <i class="star"></i>
-                        </div>
-                        consectetur
-                    </div>
-                </div>
-                <div class="message-comment">
-                    dolor sit amet, consectetur adipiscing elit. Mauris sit amet sem varius, fringilla erat a, blandit arcu. Cras sit amet justo eu erat imperdiet dictum ac eget nulla. Aliquam erat volutpat.em varius, fringilla erat a, blandit arcu. Cras
-                </div>
-                <div class="share-box clearfix">
-                    <a href="#" class="share-comment"><i class="share-ico"></i>share</a>
-                    <div class="like-dislike">
-                        <a href="#">Was This Review Helpful?</a>
-                        <a href="#" class="like"><i class="like-ico"></i></a> 1
-                        <a href="#" class="dislike"><i class="dislike-ico"></i></a> 0
-                    </div>
-                </div>
-            </div>
-            <div class="comment-line">
-                <div class="top clearfix">
-                    <div class="date">25/01/2016</div>
-                    <div class="box-img">
-                        <img src="catalog/view/theme/canary/img/comment-img.png" alt="img">
-                    </div>
-                    <div class="box-text">
-                        <div class="author">Demo name <span>Verified Reviewer</span></div>
-                        <div class="rating">
-                            <i class="star active"></i>
-                            <i class="star active"></i>
-                            <i class="star active"></i>
-                            <i class="star active"></i>
-                            <i class="star"></i>
-                        </div>
-                        consectetur
-                    </div>
-                </div>
-                <div class="message-comment">
-                    dolor sit amet, consectetur adipiscing elit. Mauris sit amet sem varius, fringilla erat a, blandit arcu. Cras sit amet justo eu erat imperdiet dictum ac eget nulla. Aliquam erat volutpat.em varius, fringilla erat a, blandit arcu. Cras
-                </div>
-                <div class="share-box clearfix">
-                    <a href="#" class="share-comment"><i class="share-ico"></i>share</a>
-                    <div class="like-dislike">
-                        <a href="#">Was This Review Helpful?</a>
-                        <a href="#" class="like"><i class="like-ico"></i></a> 1
-                        <a href="#" class="dislike"><i class="dislike-ico"></i></a> 0
-                    </div>
-                </div>
-            </div>
-            <ul class="pagination pull-left">
-                <li class="active">
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li class="arrow">
-                    <a href="#"> &gt; </a>
-                </li>
-                <li class="arrow">
-                    <a href="#"> &gt;|</a>
-                </li>
-            </ul>
-        </div>
+
+        <?endif?>
+
+
         <div class="brand-box">
             <div class="title">Brillaint-Canary rewies</div>
             <div id="owl-demo3" class="owl-carousel brand-footer">
@@ -392,6 +344,12 @@
 
 
 <script type="text/javascript">
+
+    $(document).on('click', '#write-review', function(){
+        $('#write-review-form').collapse('toggle');
+    });
+
+
 
     $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
         $.ajax({
@@ -560,11 +518,11 @@
                 $('.alert-success, .alert-danger').remove();
 
                 if (json['error']) {
-                    $('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+                    $('#write-review-form .panel-body').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
                 }
 
                 if (json['success']) {
-                    $('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
+                    $('#write-review-form .panel-body').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
 
                     $('input[name=\'name\']').val('');
                     $('textarea[name=\'text\']').val('');

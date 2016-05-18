@@ -4,10 +4,8 @@
   <p><?php echo $bank; ?></p>
   <p><?php echo $text_payment; ?></p>
 </div>
-<div class="buttons">
-  <div class="pull-right">
-    <input type="button" value="<?php echo $button_confirm; ?>" id="button-confirm" class="btn btn-primary" data-loading-text="<?php echo $text_loading; ?>" />
-  </div>
+<div class="include-price-row no-bottom-margin">
+    <input type="button" value="<?php echo $button_confirm; ?>" id="button-confirm" class="cc-continue-btn" data-loading-text="<?php echo $text_loading; ?>" />
 </div>
 <script type="text/javascript"><!--
 $('#button-confirm').on('click', function() {

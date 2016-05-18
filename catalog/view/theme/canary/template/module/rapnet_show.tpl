@@ -69,7 +69,7 @@
                             <div class="product-item">
                                 <input type="hidden" class="w-diamond-id-category" value="<?=$row->diamond_id?>">
                                 <div class="box-img">
-                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="w-product-diamonts"><img src="<?=imageDiamont($row->shape)?>" width="150" alt="img"></a>
+                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="w-product-diamonts"><img src="<?=imageDiamont($row->shape)?>" alt="img"></a>
                                 </div>
                                 <div class="rating">
                                     <i class="star active"></i>

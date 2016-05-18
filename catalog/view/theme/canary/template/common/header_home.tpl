@@ -67,7 +67,7 @@
                         </a>
                     <?php } ?>
                 </li>
-                <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="heart-ico"></i><span><?php echo $text_wishlist; ?></span></a></li>
+                <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" class="w-general-category" title="<?php echo $text_wishlist; ?>"><i class="heart-ico"></i><span><?php echo $text_wishlist; ?></span></a></li>
 
                 <li class="cart-bl">
                     <?php echo $cart; ?>

@@ -25,11 +25,8 @@
         <div class="center-bl">
             <div class="one-product clearfix">
                 <div class="one-product-slider">
-                    <div class="slider-for">
-
-                        <div><img src="<?=imageDiamont($product->response->body->diamond->shape)?>" width="550" title="" alt="fgh"></div>
-
-
+                    <div class="w-slider-for" style="margin-bottom: 20px;border: 1px solid #808080;border-radius: 2px; text-align: center">
+                        <img src="<?=imageDiamont($product->response->body->diamond->shape)?>" width="auto" title="" alt="fgh">
                     </div>
                     <div class="slider-nav">
 

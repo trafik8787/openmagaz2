@@ -270,7 +270,7 @@
                         <?php } ?>
 
                     </li>
-                    <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" title="<?php echo $text_wishlist; ?>"><i class="heart-ico"></i><span><?php echo $text_wishlist; ?></span></a></li>
+                    <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" class="w-general-category" title="<?php echo $text_wishlist; ?>"><i class="heart-ico"></i><span><?php echo $text_wishlist; ?></span></a></li>
 
                     <li class="cart-bl">
                         <?php echo $cart; ?>
@@ -423,66 +423,7 @@
                             </div>
                         </div>
                     </li>
-                    <!--<li class="dropdown-b" data-target="menu4">-->
-                        <!--<a href="#">GEMSTONES</a>-->
-                        <!--<div class="dropdown-inside">-->
-                            <!--<div class="row clearfix">-->
-                                <!--<div class="col-md-4 col-sm-4 col-xs-4">-->
-                                    <!--<div class="title">search gemstones gallery</div>-->
-                                    <!--<ul class="brilliant-style gemstones-box">-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><i class="gemstones gemstones1"></i><span>blue suphire</span></a>-->
-                                        <!--</li>-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><i class="gemstones gemstones2"></i><span>blue suphire</span></a>-->
-                                        <!--</li>-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><i class="gemstones gemstones3"></i><span>blue suphire</span></a>-->
-                                        <!--</li>-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><i class="gemstones gemstones4"></i><span>blue suphire</span></a>-->
-                                        <!--</li>-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><i class="gemstones gemstones5"></i><span>blue suphire</span></a>-->
-                                        <!--</li>-->
 
-                                    <!--</ul>-->
-                                <!--</div>-->
-                                <!--<div class="col-md-4 col-sm-4 col-xs-4">-->
-                                    <!--<div class="title">desighn your own</div>-->
-                                    <!--<ul class="style-br-long ul-first-drop">-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-13"></i></span> <span>Diamond engagement rings</span></a>-->
-                                        <!--</li>-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span>Diamond studs</span></a>-->
-                                        <!--</li>-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-14"></i></span> <span>Diamond pendant</span></a>-->
-                                        <!--</li>-->
-                                        <!--<li class="last-li-destones">-->
-                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span>Matching Gemstone Pairs</span></a>-->
-                                        <!--</li>-->
-                                    <!--</ul>-->
-                                <!--</div>-->
-                                <!--<div class="col-md-4 col-sm-4 col-xs-4">-->
-                                    <!--<div class="title">mille coeurs colections</div>-->
-                                    <!--<ul class="style-br-long ul-first-drop">-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-11"></i></span> <span>Diamond engagement rings</span></a>-->
-                                        <!--</li>-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span>Diamond studs</span></a>-->
-                                        <!--</li>-->
-                                        <!--<li>-->
-                                            <!--<a href="#"><span class="wrap-ico2"><i class="own-b own-b-12"></i></span> <span>Diamond pendant</span></a>-->
-                                        <!--</li>-->
-                                    <!--</ul>-->
-                                <!--</div>-->
-                                <!--<img src="catalog/view/theme/canary/img/img18.png" alt="img" class="img-under-style">-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</li>-->
                     <li class="dropdown-b">
                         <a href="<?php echo $categories[3]['href']?>" class="w-general-category"><?php echo $categories[3]['name']?></a>
                         <div class="dropdown-inside">
