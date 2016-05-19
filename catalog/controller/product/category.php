@@ -20,7 +20,6 @@ class ControllerProductCategory extends Controller {
 			$filter = '';
 		}
 
-       // rapnet3();
 
         //передача параметров для фильтра цены
         if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {

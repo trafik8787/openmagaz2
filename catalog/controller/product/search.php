@@ -213,6 +213,8 @@ class ControllerProductSearch extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
+
+            //dd($results);
 			foreach ($results as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
@@ -457,8 +459,10 @@ class ControllerProductSearch extends Controller {
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
-		$data['footer'] = $this->load->controller('common/footer');
-		$data['header'] = $this->load->controller('common/header');
+        if (!in_ajax()) {
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+        }
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/search.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/search.tpl', $data));
