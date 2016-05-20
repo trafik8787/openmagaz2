@@ -1,7 +1,7 @@
 <?php echo isset($header) ? $header : ''; ?>
 
 
-
+<?//dd($cart)?>
 
 <main class="w-general-container">
     <section class="static-page">
@@ -21,66 +21,32 @@
                         <div class="checkout-info-wrap">
                             <div class="checkout-info-title">ORDER SUMMARY</div>
                             <div class="summary-item-list">
-                                <div class="summary-item">
-                                    <div class="summary-item-img">
-                                        <img src="catalog/view/theme/canary/img/img17.png" alt="">
+
+                                <?foreach ($cart['products'] as $row_cart):?>
+
+                                    <div class="summary-item">
+                                        <div class="summary-item-img">
+                                            <img src="<?=$row_cart['thumb']?>" alt="">
+                                        </div>
+                                        <a href="<?=$row_cart['href']?>" class="summary-item-title"><?=$row_cart['name']?> :X <?=$row_cart['quantity']?></a>
+                                        <p class="summary-item-desc"><?=$row_cart['model']?></p>
+                                        <?if (!empty($row_cart['option'])):?>
+                                            <p class="summary-item-desc">
+                                                <?foreach ($row_cart['option'] as $rows):?>
+                                                   <span><?=$rows['name']?>: <?=$rows['value']?></span><br>
+
+                                                <?endforeach?>
+                                            </p>
+                                        <?endif?>
+                                        <div class="summary-item-price"><?=$row_cart['price']?></div>
                                     </div>
-                                    <a href="#" class="summary-item-title">This is Photoshop's version</a>
-                                    <p class="summary-item-desc">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-                                    <div class="summary-item-price">$180</div>
-                                </div>
-                                <div class="summary-item">
-                                    <div class="summary-item-img">
-                                        <img src="catalog/view/theme/canary/img/img17.png" alt="">
-                                    </div>
-                                    <a href="#" class="summary-item-title">This is Photoshop's version</a>
-                                    <p class="summary-item-desc">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-                                    <div class="summary-item-price">$180</div>
-                                </div>
-                                <div class="summary-item">
-                                    <div class="summary-item-img">
-                                        <img src="catalog/view/theme/canary/img/img17.png" alt="">
-                                    </div>
-                                    <a href="#" class="summary-item-title">This is Photoshop's version</a>
-                                    <p class="summary-item-desc">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin</p>
-                                    <div class="summary-item-price">$180</div>
-                                </div>
+                                <?endforeach?>
+
                             </div>
-                            <div class="ring-size-title">ring Size</div>
-                            <div class="ring-size-list">
-                                <div class="one-line size-radio height-inherit" data-toggle="buttons">
-                                    <label class="btn btn-filter">
-                                        <input type="radio" name="Size"> 25
-                                    </label>
-                                    <label class="btn btn-filter">
-                                        <input type="radio" name="Size"> 26
-                                    </label>
-                                    <label class="btn btn-filter">
-                                        <input type="radio" name="Size"> 27
-                                    </label>
-                                    <label class="btn btn-filter active">
-                                        <input type="radio" name="Size"> 28
-                                    </label>
-                                    <label class="btn btn-filter">
-                                        <input type="radio" name="Size"> 29
-                                    </label>
-                                    <label class="btn btn-filter">
-                                        <input type="radio" name="Size"> 30
-                                    </label>
-                                    <label class="btn btn-filter">
-                                        <input type="radio" name="Size"> 31
-                                    </label>
-                                    <label class="btn btn-filter">
-                                        <input type="radio" name="Size"> 32
-                                    </label>
-                                    <label class="btn btn-filter">
-                                        <input type="radio" name="Size"> 33
-                                    </label>
-                                </div>
-                            </div>
+
                             <div class="summary-price">
-                                <div class="sp-text">Sub-Total:</div>
-                                <div class="sp-price"><span class="text-red">$1000.00</span></div>
+                                <div class="sp-text"><?=$cart['totals'][0]['title']?>:</div>
+                                <div class="sp-price"><span class="text-red"><?=$cart['totals'][0]['text']?></span></div>
                             </div>
                             <div class="del-price-item"><i class="c-yellow-truck"></i><span class="spi-text">Shipping free</span> free</div>
                             <div class="del-price-item"><i class="c-yellow-label"></i><span class="spi-text">Mounting free</span> free</div>
@@ -90,8 +56,10 @@
                                 </button>
                             </div>
                             <div class="summary-price">
-                                <div class="sp-text">Total:</div>
-                                <div class="sp-price"><span class="text-red">$1000.00</span><br><span class="sp-price-smaller">Ships by Tuesday, April 12</span></div>
+                                <div class="sp-text"><?=$cart['totals'][1]['title']?>:</div>
+                                <div class="sp-price"><span class="text-red"><?=$cart['totals'][1]['text']?></span><br>
+                                    <!--<span class="sp-price-smaller">Ships by Tuesday, April 12</span>-->
+                                </div>
                             </div>
                             <input type="text" class="summary-input" placeholder="Have a diamond ?">
                             <input type="text" class="summary-input" placeholder="Enter Coupon Code">

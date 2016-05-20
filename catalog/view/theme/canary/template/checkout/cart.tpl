@@ -239,7 +239,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a href="#" class="tofaq-link">Try FAQ</a>
+                        <a href="/faq" class="tofaq-link">Try FAQ</a>
                     </div>
 
 

@@ -28,10 +28,10 @@
                 <input type="hidden" id="w-product-option" value="<?=!empty($CanaryProductCom['option']) ? $CanaryProductCom['option'] : ''?>">
 
                 <div class="one-product-slider">
-                    <div class="slider-for">
+                    <div class="slider-for text-center">
 
-                        <div><img src="<?=imageDiamont($CanaryDiamontCom->shape)?>" width="550" title="" alt="fgh"></div>
-                        <div><img src="/image/<?php echo $CanaryProductCom['image'] ?>" width="550" title="" alt="fgh"></div>
+                        <img src="<?=imageDiamont($CanaryDiamontCom->shape)?>" width="auto" title="" alt="">
+                        <img src="/image/<?php echo $CanaryProductCom['image'] ?>" width="auto" title="<?php echo $CanaryProductCom['name'] ?>" alt="<?php echo $CanaryProductCom['name'] ?>">
 
 
                     </div>
@@ -188,8 +188,9 @@
 
             },
             success: function(json) {
-                //console.log(json);
-                //$('#cart > button').html('<i class="fa fa-shopping-cart"></i> ' + json.total);
+                $('#w-but-cart').html('<span>cart ('+json['count']+')</span>');
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
+                $('.cart-basket').load('index.php?route=common/cart/info .w-cart-basket');
             },
             error: function(xhr, ajaxOptions, thrownError) {
                 alert('ошибочка вышла');

@@ -85,6 +85,10 @@ class ControllerCheckoutCheckout extends Controller {
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 
+        //load product for cart
+        $data['cart'] = $this->load->controller('common/cart', array('checkout' => 1));
+
+
         if (!in_ajax()) {
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');

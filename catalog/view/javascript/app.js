@@ -117,7 +117,6 @@ $(document).on('click', '#w-button-add-product-complect', function(){
     $.ajax({
         url: 'index.php?route=module/complect/add_product_complect',
         type: 'post',
-        //data: 'complect_id_product='+$this.data('idproduct')+'&path='+$this.data('path')+$('#product select'),
         data: $('#product select, #product input[name=\'product_id\'], #product input[name=\'w_path\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select'),
         dataType: 'html',
         beforeSend: function() {
@@ -129,6 +128,7 @@ $(document).on('click', '#w-button-add-product-complect', function(){
         success: function(json) {
             $('.w-blocs-complects').empty();
             $('.w-blocs-complects').html(json);
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
 
         },
         error: function(xhr, ajaxOptions, thrownError) {
@@ -158,7 +158,7 @@ $(document).on('click', '#w-button-add-diamond-complect', function(){
         success: function(json) {
             $('.w-blocs-complects').empty();
             $('.w-blocs-complects').html(json);
-           // console.log(json);
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
         },
         error: function(xhr, ajaxOptions, thrownError) {
 

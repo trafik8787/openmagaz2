@@ -118,25 +118,25 @@ function rapnet2() {
  function imageDiamont ($shapes) {
 
      if ($shapes == 'Round') {
-        return '/image/catalog/shapes/round.jpg';
+        return '/image/catalog/shapes/round.png';
      } elseif ($shapes == 'Pear') {
-         return '/image/catalog/shapes/pear.jpg';
+         return '/image/catalog/shapes/pear.png';
      } elseif ($shapes == 'Princess') {
-         return '/image/catalog/shapes/princess.jpg';
+         return '/image/catalog/shapes/princess.png';
      } elseif ($shapes == 'Marquise') {
-         return '/image/catalog/shapes/marquise.jpg';
+         return '/image/catalog/shapes/marquise.png';
      } elseif ($shapes == 'Oval') {
-         return '/image/catalog/shapes/oval.jpg';
+         return '/image/catalog/shapes/oval.png';
      } elseif ($shapes == 'Radiant') {
-         return '/image/catalog/shapes/radiant.jpg';
+         return '/image/catalog/shapes/radiant.png';
      } elseif ($shapes == 'Emerald') {
-         return '/image/catalog/shapes/emerald.jpg';
+         return '/image/catalog/shapes/emerald.png';
      } elseif ($shapes == 'Heart') {
-         return '/image/catalog/shapes/heart.jpg';
+         return '/image/catalog/shapes/heart.png';
      } elseif ($shapes == 'Cushion Modified') {
-         return '/image/catalog/shapes/cushion.jpg';
+         return '/image/catalog/shapes/cushion.png';
      } elseif ($shapes == 'Asscher') {
-         return '/image/catalog/shapes/asscher.jpg';
+         return '/image/catalog/shapes/asscher.png';
      }
 
 

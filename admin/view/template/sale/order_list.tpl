@@ -298,6 +298,7 @@ $(document).delegate('#button-ip-add', 'click', function() {
 });
 
 $('button[id^=\'button-delete\']').on('click', function(e) {
+
 	if (confirm('<?php echo $text_confirm; ?>')) {
 		var node = this;
 
@@ -312,6 +313,7 @@ $('button[id^=\'button-delete\']').on('click', function(e) {
 				$(node).button('reset');
 			},
 			success: function(json) {
+
 				$('.alert').remove();
 
 				if (json['error']) {
@@ -319,7 +321,9 @@ $('button[id^=\'button-delete\']').on('click', function(e) {
 				}
 
 				if (json['success']) {
+                    $(node).closest('tr').remove();
 					$('#content > .container-fluid').prepend('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+
 				}
 			},
 			error: function(xhr, ajaxOptions, thrownError) {
