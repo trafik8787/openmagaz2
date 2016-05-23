@@ -67,9 +67,6 @@
                     <tr>
                         <th>Actual photo</th>
                         <th>Stock Number</th>
-                        <th>Metal</th>
-                        <th>Width</th>
-                        <th>Prong Metal</th>
                         <th>Price</th>
                         <th>Compare</th>
                         <th>Wishlist</th>
@@ -120,10 +117,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td data-th="Stock Number">Oval</td>
-                                <td data-th="Metal">0, 70</td>
-                                <td data-th="Width">L5</td>
-                                <td data-th="Prong Metal">VERY GOOD</td>
+                                <td data-th="Stock Number"><?=$product['sku']?></td>
                                 <td data-th="Price"><div class="price"><?php echo $product['price']; ?>$</div></td>
                                 <td><i class="fa fa-exchange"></i></td>
                                 <td><i class="fa fa-heart"></i></td>

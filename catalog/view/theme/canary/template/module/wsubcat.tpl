@@ -69,8 +69,7 @@
                         <label class="btn btn-filter">
                             <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[2]['href']?>"><i class="own-b own-b-3"></i><br><?php echo $wsubcategory[2]['name']?>
                         </label>
-                    </div>
-                    <div class=" btn-group-filter box-color gemstones-box rings-box big-height" data-toggle="buttons">
+
                         <label class="btn btn-filter">
                             <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[3]['href']?>"> <i class="own-b own-b-4"></i><br><?php echo $wsubcategory[3]['name']?>
                         </label>
