@@ -6,7 +6,7 @@
       <?php echo $text_address_existing; ?></label>
   </div>
   <div id="payment-existing">
-    <select name="address_id" class="shipping-input select-simulate-input">
+    <select name="address_id" class="shipping-input styled-select" style="width: 100%">
       <?php foreach ($addresses as $address) { ?>
       <?php if ($address['address_id'] == $address_id) { ?>
       <option value="<?php echo $address['address_id']; ?>" selected="selected"><?php echo $address['firstname']; ?> <?php echo $address['lastname']; ?>, <?php echo $address['address_1']; ?>, <?php echo $address['city']; ?>, <?php echo $address['zone']; ?>, <?php echo $address['country']; ?></option>
@@ -69,7 +69,7 @@
     <div class="form-group required">
       <label class="col-sm-2 control-label" for="input-payment-country"><?php echo $entry_country; ?></label>
       <div class="col-sm-10">
-        <select name="country_id" id="input-payment-country" class="form-control">
+        <select name="country_id" id="input-payment-country" class="shipping-input styled-select"  style="width: 100%">
           <option value=""><?php echo $text_select; ?></option>
           <?php foreach ($countries as $country) { ?>
           <?php if ($country['country_id'] == $country_id) { ?>
@@ -84,7 +84,7 @@
     <div class="form-group required">
       <label class="col-sm-2 control-label" for="input-payment-zone"><?php echo $entry_zone; ?></label>
       <div class="col-sm-10">
-        <select name="zone_id" id="input-payment-zone" class="form-control">
+        <select name="zone_id" id="input-payment-zone" class="shipping-input styled-select" style="width: 100%">
         </select>
       </div>
     </div>
@@ -94,7 +94,7 @@
     <div class="form-group<?php echo ($custom_field['required'] ? ' required' : ''); ?> custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
       <label class="col-sm-2 control-label" for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
       <div class="col-sm-10">
-        <select name="custom_field[<?php echo $custom_field['custom_field_id']; ?>]" id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>" class="form-control">
+        <select name="custom_field[<?php echo $custom_field['custom_field_id']; ?>]" id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>" class="shipping-input styled-select" style="width: 100%">
           <option value=""><?php echo $text_select; ?></option>
           <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
           <option value="<?php echo $custom_field_value['custom_field_value_id']; ?>"><?php echo $custom_field_value['name']; ?></option>

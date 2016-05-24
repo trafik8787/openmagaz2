@@ -230,8 +230,8 @@
 
             </div>
             <div class="cc-shipping-row required">
-                <!--<label class="shipping-label" for="input-payment-country"><?php echo $entry_country; ?></label>-->
-                <select name="country_id" id="input-payment-country" class="shipping-input select-simulate-input">
+
+                <select name="country_id" id="input-payment-country" class="shipping-input styled-select"  style="width: 100%">
                     <option value=""><?php echo $text_select; ?></option>
                     <?php foreach ($countries as $country) { ?>
                     <?php if ($country['country_id'] == $country_id) { ?>
@@ -244,9 +244,9 @@
                 </select>
             </div>
             <div class="cc-shipping-row required">
-                <select name="zone_id" id="input-payment-zone" class="shipping-input select-simulate-input">
+                <select name="zone_id" id="input-payment-zone" class="shipping-input styled-select"  style="width: 100%">
                 </select>
-                <!--<label class="shipping-label" for="input-payment-zone"><?php echo $entry_zone; ?></label>-->
+
 
             </div>
             <?php foreach ($custom_fields as $custom_field) { ?>
@@ -258,7 +258,7 @@
                        for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
                 <select name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
                         id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-                        class="form-control">
+                        class="shipping-input styled-select"  style="width: 100%">
                     <option value=""><?php echo $text_select; ?></option>
                     <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
                     <option value="<?php echo $custom_field_value['custom_field_value_id']; ?>"><?php echo $custom_field_value['name']; ?></option>

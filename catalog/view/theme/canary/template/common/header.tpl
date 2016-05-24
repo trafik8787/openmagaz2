@@ -24,12 +24,13 @@
     <link href="catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
     <link rel="stylesheet" href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"/>
-
+    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/css/style.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/css/w_style.css"/>
 
     <script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
+
 
 </head>
 <body class="static-page">
@@ -94,33 +95,13 @@
             <div id="collapse-m2" class="panel-collapse collapse" role="tabpanel">
                 <div class="panel-body">
                     <ul class="brilliant-style">
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s1"></i></span><span>Solitare</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s2"></i></span><span>Pave</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s3"></i></span><span>Channel set</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s4"></i></span><span>Side - Stone</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s5"></i></span><span>Three - Stone</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s6"></i></span><span>Tension</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s7"></i></span><span>Halo</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s8"></i></span><span>Vintage</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span class="box-ico"><i class="brilliant-ico brilliant-s9"></i></span><span>Bridal set</span></a>
-                        </li>
+
+                        <?foreach ($categories[1]['children'] as $key => $row):?>
+                            <li>
+                                <a href="<?php echo $row['href']?>" class="w-general-category"><span class="box-ico"><i class="brilliant-ico brilliant-s<?=$key+1?>"></i></span><span><?php echo $row['name']?></span></a>
+                            </li>
+                        <?endforeach?>
+
                     </ul>
                 </div>
             </div>
@@ -172,15 +153,7 @@
                 </div>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab">
-                <h4 class="panel-title">
-                    <a class="collapsed" role="button"  data-parent="#accordion" href="#" aria-expanded="false">
-                        GEMSTONES
-                    </a>
-                </h4>
-            </div>
-        </div>
+
 
         <div class="panel panel-default">
             <div class="panel-heading collapse-add" role="tab">
@@ -208,9 +181,9 @@
         </div>
     </div>
     <ul class="mobile-link-menu">
-        <li><a href="#">EDUCATION</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">ABOUT</a></li>
+        <li><a href="/education">EDUCATION</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/about_us">ABOUT</a></li>
     </ul>
     <div class="newsletter-main clearfix">
         <div class="newsletter-form">
@@ -257,7 +230,7 @@
                     <li>
 
                         <?php if ($logged) { ?>
-                        <a href="<?php echo $account; ?>">
+                        <a href="<?php echo $account; ?>" class="w-general-category">
                             <i class="man-ico"></i>
                             <span><?php echo $text_account; ?></span>
                         </a>

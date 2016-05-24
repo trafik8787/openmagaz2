@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 
     //load controller general category
-    $('.w-general-category').on('click', function(){
+    $(document).on('click', '.w-general-category', function(){
 
         $('.container-loader').show();
 
@@ -63,7 +63,7 @@ $(document).ready(function() {
     //загрузка продуктов
     $(document).on('click', '.w-product-ajax' ,function(){
 
-        $('.container-loader').show();
+
         //console.log(this.href);
 
         history.pushState('', '', this.href);
@@ -73,12 +73,18 @@ $(document).ready(function() {
             dataType: "HTML", // указываем, что нам вернется JSON
             url: this.href,
             data: this.href, // передаем данные из формы
+            beforeSend: function() {
+                $('.container-loader').show();
+            },
+            complete: function() {
+                $('.container-loader').hide();
+            },
             success: function (response) { // когда получаем ответ
 
 
                 $('.w-general-container').empty();
                 $('.w-general-container').html(response);
-                $('.container-loader').hide();
+
 
                 Productslider();
             }

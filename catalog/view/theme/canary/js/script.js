@@ -18,6 +18,13 @@ $(window).load(function(){
 
 $( document ).ready(function( $ ) {
 
+
+    if ($('.styled-select').length) {
+        $('.styled-select').select2({
+            minimumResultsForSearch: Infinity
+        });
+    }
+
     $(".fine-link").click(function(e){
         e.preventDefault();
         $(".fine-tab").removeClass('active');
@@ -279,42 +286,3 @@ $('.mobile-login-tab-btn').on('click', function(e) {
     $(target).addClass('active');
 });
 
-(function(){
-    $('.select-simulate-btn, .select-simulate-input').on('click', function(e) {
-        e.preventDefault();
-        $(this).parent().find('.select-simulate-btn').toggleClass('active');
-        $(this).siblings('.select-simulate-list').find('.has-sub').removeClass('active');
-        $(this).siblings('.select-simulate-list').find('.active-list').removeClass('active-list');
-        $(this).siblings('.select-simulate-list').removeClass('sub-open');
-    });
-
-    $('.select-simulate-list a').on('click', function(e) {
-        var item = $(this),
-          itemValue = item.attr('data-value'),
-          itemLinkAllow = item.attr('data-link-allow') ? item.attr('data-link-allow') : false;
-
-        if (!item.hasClass('has-sub')) {
-            item.closest('.select-simulate-list').siblings('.select-simulate-input').val(itemValue);
-            item.closest('.select-simulate-list').siblings('.select-simulate-btn').removeClass('active');
-        } else {
-            if (!item.hasClass('active')) {
-                $('.select-simulate-list a').removeClass('active');
-                item.addClass('active');
-                item.siblings('ul').addClass('active-list');
-
-                if (!$('.select-simulate-list').hasClass('sub-open')) {
-                    $('.select-simulate-list').addClass('sub-open');
-                }
-            } else {
-                item.removeClass('active');
-                item.siblings('ul').removeClass('active-list');
-                item.closest('ul').siblings('.has-sub').addClass('active');
-                if (item.closest('ul').hasClass('select-simulate-list')) {
-                    $('.select-simulate-list').removeClass('sub-open');
-                }
-            }
-
-        }
-        if (!itemLinkAllow) e.preventDefault();
-    });
-})();

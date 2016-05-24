@@ -264,11 +264,7 @@
                 <div class="one-block">
                     <div class="article">name company</div>
                     <div class="rating">
-                        <i class="star dark-star"></i>
-                        <i class="star dark-star"></i>
-                        <i class="star dark-star"></i>
-                        <i class="star dark-star"></i>
-                        <i class="star dark-star"></i>
+                        <?=rating($rating)?>
                     </div>
                     <div class="clearfix">
                         <span class="comment-btn">5641 Reviews</span>

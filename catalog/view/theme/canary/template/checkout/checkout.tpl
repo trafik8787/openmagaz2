@@ -439,6 +439,11 @@ $(document).on('click', '#button-account', function() {
         }
     });
 
+
+        $('.styled-select').select2();
+
+
+
     return false;
 });
 

@@ -130,37 +130,6 @@
         <div class="panel panel-default">
             <div class="panel-heading collapse-add" role="tab">
                 <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-m4" aria-expanded="false">
-                        GEMSTONES
-                    </a>
-                </h4>
-            </div>
-            <div id="collapse-m4" class="panel-collapse collapse" role="tabpanel">
-                <div class="panel-body">
-                    <ul class="brilliant-style gemstones-box">
-                        <li>
-                            <a href="#"><i class="gemstones gemstones1"></i><span>blue suphire</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="gemstones gemstones2"></i><span>blue suphire</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="gemstones gemstones3"></i><span>blue suphire</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="gemstones gemstones4"></i><span>blue suphire</span></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="gemstones gemstones5"></i><span>blue suphire</span></a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading collapse-add" role="tab">
-                <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-m5" aria-expanded="false">
                         FINE JEWELRY
                     </a>
@@ -184,9 +153,9 @@
         </div>
     </div>
     <ul class="mobile-link-menu">
-        <li><a href="#">EDUCATION</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">ABOUT</a></li>
+        <li><a href="/education">EDUCATION</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/about_us">ABOUT</a></li>
     </ul>
     <section class="privilege center-bl clearfix">
         <div class="col-md-4 col-sm-4 col-xs-4">

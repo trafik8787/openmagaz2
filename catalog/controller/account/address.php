@@ -35,7 +35,7 @@ class ControllerAccountAddress extends Controller {
 
 		$this->load->model('account/address');
 
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+		if (($this->request->server['REQUEST_METHOD'] == 'POST') && !empty($this->request->post['accaut_edit_submit']) && $this->validateForm()) {
 			$this->model_account_address->addAddress($this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_add');
@@ -73,7 +73,7 @@ class ControllerAccountAddress extends Controller {
 
 		$this->load->model('account/address');
 
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+		if (($this->request->server['REQUEST_METHOD'] == 'POST') && !empty($this->request->post['accaut_edit_submit']) && $this->validateForm()) {
 			$this->model_account_address->editAddress($this->request->get['address_id'], $this->request->post);
 
 			// Default Shipping Address
@@ -243,6 +243,8 @@ class ControllerAccountAddress extends Controller {
 			);
 		}
 
+        $data['right_meny_accaunt'] = $this->load->view($this->config->get('config_template') . '/template/account/meny_bloc_right_account.tpl', array());
+
 		$data['add'] = $this->url->link('account/address/add', '', 'SSL');
 		$data['back'] = $this->url->link('account/account', '', 'SSL');
 
@@ -250,9 +252,11 @@ class ControllerAccountAddress extends Controller {
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
-		$data['footer'] = $this->load->controller('common/footer');
-		$data['header'] = $this->load->controller('common/header');
 
+        if (!in_ajax()) {
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+        }
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/address_list.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/account/address_list.tpl', $data));
 		} else {
@@ -469,15 +473,18 @@ class ControllerAccountAddress extends Controller {
 			$data['default'] = false;
 		}
 
+        $data['right_meny_accaunt'] = $this->load->view($this->config->get('config_template') . '/template/account/meny_bloc_right_account.tpl', array());
+
 		$data['back'] = $this->url->link('account/address', '', 'SSL');
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
-		$data['footer'] = $this->load->controller('common/footer');
-		$data['header'] = $this->load->controller('common/header');
-
+        if (!in_ajax()) {
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+        }
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/address_form.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/account/address_form.tpl', $data));
 		} else {

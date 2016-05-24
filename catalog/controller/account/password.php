@@ -13,7 +13,7 @@ class ControllerAccountPassword extends Controller {
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
+		if (($this->request->server['REQUEST_METHOD'] == 'POST') && !empty($this->request->post['password'] ) && $this->validate()) {
 			$this->load->model('account/customer');
 
 			$this->model_account_customer->editPassword($this->customer->getEmail(), $this->request->post['password']);
@@ -86,15 +86,18 @@ class ControllerAccountPassword extends Controller {
 			$data['confirm'] = '';
 		}
 
+        $data['right_meny_accaunt'] = $this->load->view($this->config->get('config_template') . '/template/account/meny_bloc_right_account.tpl', array());
+
 		$data['back'] = $this->url->link('account/account', '', 'SSL');
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
-		$data['footer'] = $this->load->controller('common/footer');
-		$data['header'] = $this->load->controller('common/header');
-
+        if (!in_ajax()) {
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+        }
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/password.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/account/password.tpl', $data));
 		} else {

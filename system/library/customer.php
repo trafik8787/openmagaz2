@@ -90,6 +90,10 @@ class Customer {
 		return $this->customer_id;
 	}
 
+    public function getAll(){
+        return $this;
+    }
+
 	public function getId() {
 		return $this->customer_id;
 	}
