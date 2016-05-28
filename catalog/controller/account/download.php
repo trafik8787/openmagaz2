@@ -97,15 +97,18 @@ class ControllerAccountDownload extends Controller {
 
 		$data['results'] = sprintf($this->language->get('text_pagination'), ($download_total) ? (($page - 1) * $this->config->get('config_product_limit')) + 1 : 0, ((($page - 1) * $this->config->get('config_product_limit')) > ($download_total - $this->config->get('config_product_limit'))) ? $download_total : ((($page - 1) * $this->config->get('config_product_limit')) + $this->config->get('config_product_limit')), $download_total, ceil($download_total / $this->config->get('config_product_limit')));
 
+        $data['right_meny_accaunt'] = $this->load->view($this->config->get('config_template') . '/template/account/meny_bloc_right_account.tpl', array());
+
 		$data['continue'] = $this->url->link('account/account', '', 'SSL');
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
-		$data['footer'] = $this->load->controller('common/footer');
-		$data['header'] = $this->load->controller('common/header');
-
+        if (!in_ajax()) {
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+        }
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/download.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/account/download.tpl', $data));
 		} else {

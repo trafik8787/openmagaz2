@@ -5,7 +5,6 @@
 
 
 
-
 <main class="w-general-container">
     <section class="static-page">
         <div class="center-bl">
@@ -48,34 +47,25 @@
                     </div>
                     <div class="account-col">
                         <div class="account-col-title">My orders</div>
-                        <div class="account-col-row">
-                            <div class="account-col-table">
-                                <span class="account-col-item">№354678 <span class="account-col-image"><img src="catalog/view/theme/canary/img/img8.png" alt=""></span></span>
-                                <span class="account-col-item">Completed</span>
-                                <span class="account-col-item"><a href="#" class="account-col-view-link">view order</a></span>
+
+                        <?foreach ($orders as $row):?>
+
+                            <div class="account-col-row">
+                                <div class="account-col-table">
+                                    <span class="account-col-item">№<?php echo $row['order_id']; ?></span>
+                                    <span class="account-col-item"><?php echo $row['total']; ?></span>
+                                    <span class="account-col-item"><?php echo $row['status']; ?></span>
+                                    <span class="account-col-item"><a href="<?php echo $row['href']; ?>" data-toggle="tooltip" title="Views" class="account-col-view-link w-general-category"><i class="fa fa-eye"></i></a></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="account-col-row">
-                            <div class="account-col-table">
-                                <span class="account-col-item">№354678 <span class="account-col-image"><img src="catalog/view/theme/canary/img/img8.png" alt=""></span></span>
-                                <span class="account-col-item">Completed</span>
-                                <span class="account-col-item"><a href="#" class="account-col-view-link">view order</a></span>
-                            </div>
-                        </div>
-                        <div class="account-col-row">
-                            <div class="account-col-table">
-                                <span class="account-col-item">№354678 <span class="account-col-image"><img src="catalog/view/theme/canary/img/img8.png" alt=""></span></span>
-                                <span class="account-col-item">Completed</span>
-                                <span class="account-col-item"><a href="#" class="account-col-view-link">view order</a></span>
-                            </div>
-                        </div>
+                        <?endforeach?>
                     </div>
                     <div class="account-col">
                         <!--<div class="account-col-title">My wish list</div>-->
                         <?=$right_meny_accaunt?>
                     </div>
                 </div>
-                <div class="account-page-track-empty">No orders to track</div>
+                <!--<div class="account-page-track-empty">No orders to track</div>-->
             </div>
         </div>
     </section>

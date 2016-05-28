@@ -109,7 +109,7 @@ class ControllerAccountEdit extends Controller {
 
 		$data['action'] = $this->url->link('account/edit', '', 'SSL');
 
-		if ($this->request->server['REQUEST_METHOD'] != 'POST') {
+		if (empty($this->request->post['accaut_edit_submit'])) {
 			$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
 		}
 
@@ -174,10 +174,12 @@ class ControllerAccountEdit extends Controller {
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+        
         if (!in_ajax()) {
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');
         }
+
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/account/edit.tpl')) {
 			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/account/edit.tpl', $data));
 		} else {

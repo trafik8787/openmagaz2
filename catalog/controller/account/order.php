@@ -64,22 +64,9 @@ class ControllerAccountOrder extends Controller {
 
 		$order_total = $this->model_account_order->getTotalOrders();
 
-		$results = $this->model_account_order->getOrders(($page - 1) * 10, 10);
 
-		foreach ($results as $result) {
-			$product_total = $this->model_account_order->getTotalOrderProductsByOrderId($result['order_id']);
-			$voucher_total = $this->model_account_order->getTotalOrderVouchersByOrderId($result['order_id']);
+        $data['orders'] = $this->GetOrdersPag($page);
 
-			$data['orders'][] = array(
-				'order_id'   => $result['order_id'],
-				'name'       => $result['firstname'] . ' ' . $result['lastname'],
-				'status'     => $result['status'],
-				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
-				'products'   => ($product_total + $voucher_total),
-				'total'      => $this->currency->format($result['total'], $result['currency_code'], $result['currency_value']),
-				'href'       => $this->url->link('account/order/info', 'order_id=' . $result['order_id'], 'SSL'),
-			);
-		}
 
 		$pagination = new Pagination();
 		$pagination->total = $order_total;
@@ -107,6 +94,38 @@ class ControllerAccountOrder extends Controller {
 			$this->response->setOutput($this->load->view('default/template/account/order_list.tpl', $data));
 		}
 	}
+
+
+    public function GetOrdersPag ($page = 1){
+
+        $this->load->model('account/order');
+
+        if (is_array($page)) {
+            $page = $page['page'];
+        }
+
+        $results = $this->model_account_order->getOrders(($page - 1) * 10, 10);
+
+        $data = array();
+        foreach ($results as $result) {
+
+            $product_total = $this->model_account_order->getTotalOrderProductsByOrderId($result['order_id']);
+            $voucher_total = $this->model_account_order->getTotalOrderVouchersByOrderId($result['order_id']);
+
+            $data[] = array(
+                'order_id'   => $result['order_id'],
+                'name'       => $result['firstname'] . ' ' . $result['lastname'],
+                'status'     => $result['status'],
+                'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
+                'products'   => ($product_total + $voucher_total),
+                'total'      => $this->currency->format($result['total'], $result['currency_code'], $result['currency_value']),
+                'href'       => $this->url->link('account/order/info', 'order_id=' . $result['order_id'], 'SSL'),
+            );
+        }
+
+        return $data;
+    }
+
 
 	public function info() {
 		$this->load->language('account/order');
@@ -372,6 +391,8 @@ class ControllerAccountOrder extends Controller {
 					'comment'    => $result['notify'] ? nl2br($result['comment']) : ''
 				);
 			}
+
+            $data['right_meny_accaunt'] = $this->load->view($this->config->get('config_template') . '/template/account/meny_bloc_right_account.tpl', array());
 
 			$data['continue'] = $this->url->link('account/order', '', 'SSL');
 

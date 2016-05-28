@@ -69,6 +69,8 @@ class ControllerAccountAccount extends Controller {
 			$data['reward'] = '';
 		}
 
+        $data['orders'] = $this->load->controller('account/order/GetOrdersPag', array('page' => 1));
+
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
