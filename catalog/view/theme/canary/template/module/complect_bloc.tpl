@@ -80,9 +80,9 @@
 
     <?function show_diamond_complect_bloc ($index, $CanaryDiamontCom = null, $show = null) {?>
 
-
+        <?//dd($show)?>
         <div class="col-md-4 col-sm-4 col-xs-4">
-            <a href="/diamonds" class="one-block  <?= !empty($show) ? 'active w-general-category' : '' ?>">
+            <a href="<?= !empty($show) ? '/diamonds' : $CanaryDiamontCom['href']?>" class="one-block  <?= !empty($show) ? 'active w-general-category' : '' ?>">
                 <span class="box-img">
                     <img src="catalog/view/theme/canary/img/img20.png" alt="img">
                 </span>
@@ -111,7 +111,7 @@
 
 
         <div class="col-md-4 col-sm-4 col-xs-4">
-            <a href="<?= !empty($show) ? '/engagement-rings' : '#'?>" class="one-block <?= !empty($show) ? 'active w-general-category' : '' ?>">
+            <a href="<?= !empty($show) ? '/engagement-rings' : $CanaryProductCom['href']?>" class="one-block <?= !empty($show) ? 'active w-general-category' : '' ?>">
                 <span class="box-img">
                     <img src="catalog/view/theme/canary/img/img19.png" alt="img">
                 </span>

@@ -227,7 +227,7 @@ class ControllerProductProduct extends Controller {
 			$data['heading_title'] = $product_info['name'];
 
             $data['id_product'] = $product_info['product_id'];
-            $data['path'] = $this->request->get['path'];
+           // $data['path'] = $this->request->get['path'];
 
 			$data['text_select'] = $this->language->get('text_select');
 			$data['text_manufacturer'] = $this->language->get('text_manufacturer');

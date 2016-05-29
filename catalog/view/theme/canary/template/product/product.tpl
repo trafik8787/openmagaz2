@@ -61,7 +61,6 @@
 
                     <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
                     <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-                    <input type="hidden" name="w_path" value="<?php echo $path?>">
 
                     <?php if ($options) :?>
 

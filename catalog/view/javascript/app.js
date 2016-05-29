@@ -34,7 +34,7 @@ $(document).ready(function() {
     //load controller general category
     $(document).on('click', '.w-general-category', function(){
 
-        $('.container-loader').show();
+
 
         history.pushState('', '', this.href);
 
@@ -43,11 +43,16 @@ $(document).ready(function() {
             dataType: "HTML", // указываем, что нам вернется JSON
             url: this.href,
             data: 'general_category=1',
+            beforeSend: function() {
+                $('.container-loader').show();
+            },
+            complete: function() {
+                $('.container-loader').hide();
+            },
             success: function (response) { // когда получаем ответ
 
                 $('.w-general-container').empty();
                 $('.w-general-container').html(response);
-                $('.container-loader').hide();
                 $('.question-filter-btn').popover();
 
             }
@@ -123,7 +128,7 @@ $(document).on('click', '#w-button-add-product-complect', function(){
     $.ajax({
         url: 'index.php?route=module/complect/add_product_complect',
         type: 'post',
-        data: $('#product select, #product input[name=\'product_id\'], #product input[name=\'w_path\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select'),
+        data: $('#product select, #product input[name=\'product_id\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select'),
         dataType: 'html',
         beforeSend: function() {
             $this.button('loading');

@@ -61,7 +61,7 @@ class ControllerModuleComplect extends Controller {
                 'name' => $product_info['name'],
                 'img' => '/image/'.$product_info['image'],
                 'option' => $option,
-                'href' => $this->url->link('product/product', 'path=' . $this->request->post['w_path'] . '&product_id=' . $product_info['product_id']));
+                'href' => $this->url->link('product/product',  'product_id=' . $product_info['product_id']));
 
 
             Cookie::set('CanaryProductCom', json_encode($CanaryProductCom));

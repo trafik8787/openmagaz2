@@ -6,7 +6,8 @@ class ControllerCommonSeoUrl extends Controller {
         'module/complect/complete_diamond' => 'complete_diamond',
         'information/faq' => 'faq',
         'information/contact' => 'contact',
-        'information/education' => 'education'
+        'information/education' => 'education',
+        'information/education/page_find' => 'education_find'
     );
 
 	public function index() {

@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="one-product-info" id="product">
-                    <div class="text-article clearfix"><?php echo $CanaryProductCom['name'] ?> <span class="line-price-product"><strong class="price-product"><?php echo (int) $CanaryProductCom['price']?>$</strong></span><div class="product-code">Product code: <strong>SKU: <?php echo $CanaryProductCom['sku'] ?></strong></div></div>
+                    <div class="text-article clearfix"><?php echo $CanaryProductCom['name'] ?> <span class="line-price-product"><strong class="price-product"><?php echo round($CanaryProductCom['price'], 2)?>$</strong></span><div class="product-code">Product code: <strong>SKU: <?php echo $CanaryProductCom['sku'] ?></strong></div></div>
                     <div class="text-article clearfix"><?=$CanaryDiamontCom->shape?> <?=$CanaryDiamontCom->size?> CARAT <?=$CanaryDiamontCom->color?> <?=$CanaryDiamontCom->clarity?> <span class="line-price-product"><strong class="price-product"><?=$CanaryDiamontCom->total_sales_price?>$</strong></span><div class="product-code">Product code: <strong>SKU: <?=$CanaryDiamontCom->diamond_id?></strong></div></div>
 
                     <div class="one-info">

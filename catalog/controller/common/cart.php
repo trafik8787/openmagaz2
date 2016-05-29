@@ -154,6 +154,12 @@ class ControllerCommonCart extends Controller {
                 $total = false;
             }
 
+            if (!empty($product['diamond'])) {
+                $href_product = '/diamond_page?diamond_id='.$product['product_id'];
+            } else {
+                $href_product =  $this->url->link('product/product', 'product_id=' . $product['product_id']);
+            }
+
             $this->data['products'][] = array(
                 'cart_id'   => $product['cart_id'],
                 'diamond'   => !empty($product['diamond']) ? 1 : 0,
@@ -165,7 +171,7 @@ class ControllerCommonCart extends Controller {
                 'quantity'  => $product['quantity'],
                 'price'     => $price,
                 'total'     => $total,
-                'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id'])
+                'href'      => $href_product
             );
         }
 

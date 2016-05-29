@@ -9,6 +9,8 @@
 
             <?php foreach ($products as $product) : ?>
 
+
+
                 <div class="one-product clearfix">
                     <div class="box-img">
                         <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>"></a>
