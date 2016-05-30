@@ -224,7 +224,7 @@
                 <a href="/" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
                 <div class="telephone">
                     <i class="ico-telephone"></i>
-                    <span>877-826-9866 | 24/7</span>
+                    <span><?php echo $telephone; ?> | 24/7</span>
                 </div>
                 <ul class="top-menu-b main-page">
                     <li>

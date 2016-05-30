@@ -45,6 +45,7 @@ $(document).ready(function() {
             data: 'general_category=1',
             beforeSend: function() {
                 $('.container-loader').show();
+                $(".menu > ul > li > .dropdown-inside").hide();
             },
             complete: function() {
                 $('.container-loader').hide();

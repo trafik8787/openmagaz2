@@ -1521,7 +1521,7 @@
                                         </p>
                                     </div>
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/img64.png" alt="img" height="320">
+                                        <img src="catalog/view/theme/canary/img/fine/img64.jpg" alt="img" height="auto">
                                     </div>
                                     <div class="block-p">
                                         <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
@@ -1942,9 +1942,9 @@
                                             <img src="catalog/view/theme/canary/img/fine/img65.png" alt="img">
                                         </div>
                                         <div class="block-p">
-                                            <div class="article-p">This is Photoshop's version</div>
-                                            <p>
-                                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                            <div class="article-p">Cut</div>
+                                            <p class="text-left">
+                                                A diamond’s cut is the most important characteristic in determining a diamond’s beauty. The cut of a diamond refers not to its visual shape, but its ability to properly reflect light. A diamond cut to the highest standards of proportion, provides the most beauty and sparkle. A diamond’s cut grade is determined by three types of reflected light, brilliance, fire and scintillation.
                                             </p>
                                         </div>
                                     </div>
@@ -1953,9 +1953,19 @@
                                             <img src="catalog/view/theme/canary/img/fine/img66.png" alt="img">
                                         </div>
                                         <div class="block-p">
-                                            <div class="article-p">This is Photoshop's version</div>
-                                            <p>
-                                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                            <div class="article-p"></div>
+                                            <p class="text-left">
+                                                <b>Brilliance:</b> Brilliance refers to a diamonds brightness, and is seen by the eye as white light reflected back from the diamond.
+                                                <br>
+                                                <b>Fire:</b> Fire refers to the flashes of rainbow colors reflected back to the eye from a polished diamond.
+                                                <br>
+                                                <b>Scintillation:</b> Scintillation refers to the flashes of contrasting light and dark areas in a diamond when it moves, resulting in sparkle.
+                                                <br>
+                                                If cut to ideal proportions, these three factors create an exceptionally beautiful diamond. The cut of a diamond is judged on the balance of symmetry, polish and proportions. The proportions of a diamonds table size, crown, girdle, pavilion and culet all contribute to how light will be reflected and seen by the eye. When cut to ideal proportions, light enters the top of the stone and is reflected back through the crown, providing the diamond with the maximum amount of brilliance. If cut too deep or too shallow, light will escape out the pavilion known as light leakage. This results in a less brilliant diamond that can appear darker in color.
+
+                                                <p class="text-left">Through the years, modern diamond cutters have learned the perfect proportions and angles that allow diamonds to reflect light and produce the most sparkle and brilliance. Cut grades have been established to help you recognize a well-cut diamond.</p>
+
+
                                             </p>
                                         </div>
                                     </div>
@@ -1964,9 +1974,17 @@
                                             <img src="catalog/view/theme/canary/img/fine/img67.png" alt="img">
                                         </div>
                                         <div class="block-p">
-                                            <div class="article-p">This is Photoshop's version</div>
-                                            <p>
-                                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                            <div class="article-p"></div>
+                                            <p class="text-left">
+                                                <b>Excellent Cut:</b> The most brilliant cut, cut to the most exact standards. This cut optimizes light reflection for superior brilliance and fire with the highest polish and symmetry grade. This is an extremely rare cut.
+                                                <br>
+                                                <b>Very Good:</b> This is a superior cut. Reflects nearly all light entered as brilliance and fire with high polish and symmetry grade. A rare cut, but a more affordable option than the excellent cut.
+                                                <br>
+                                                <b>Good:</b> This is a high quality cut. Reflects most light entered as brilliance and fire, offering a beautiful diamond at an attractive value.
+                                                <br>
+                                                <b>Fair:</b> This is an adequate cut. Reflects some light entered as brilliance and fire while maximizing diamond weight. A quality diamond, but not as brilliant as diamonds of higher cut grades.
+                                                <br>
+                                                <b>Poor:</b> This is an inadequate cut. Reflects little light entered into the diamond, resulting in little to no brilliance and fire. Brilliant Canary does not carry diamonds with cut grades of poor.
                                             </p>
                                         </div>
                                     </div>
@@ -2008,16 +2026,22 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <div class="block-p">
-                                                <div class="article-p">Diamond Color</div>
-                                                <p>
-                                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.
-                                                </p>
-                                            </div>
+                                            
                                             <div class="block-p">
                                                 <div class="article-p">Colorless Diamonds (D-F):</div>
                                                 <p>
-                                                    Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+
+
+                                                   <span class="text-left">
+                                                       <b>D:</b> Absolutely colorless diamond. The highest color grade a diamond can receive. A D-color diamond is extremely rare.
+                                                       <br>
+                                                    <b>E:</b> Colorless diamond. Only minute traces of color can be detected by a trained gemologist. A very rare diamond.
+                                                       <br>
+                                                    <b>F:</b> Colorless diamond. Very slight color can be detected by a trained gemologist. A rare diamond.
+                                                   </span>
+
+
+
                                                         <span class="box-color-diamonds">
                                                             <span class="one-block">
                                                                 <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/d.png" alt="img"></span>
@@ -2037,7 +2061,12 @@
                                             <div class="block-p">
                                                 <div class="article-p">Near Colorless Diamonds (G-J):</div>
                                                 <p>
-                                                    Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+                                                    <span class="text-left">
+                                                        <b>G-H:</b> Near colorless diamond. Diamond appears colorless to untrained eye; slight color may be noticeable when compared side by side to a diamond of a better color grade. An exceptional value.
+                                                        <br>
+                                                        <b>I-J:</b> Near colorless diamond. Diamond shows slight warmth in color when compared to diamonds of a better color grade. An excellent value.
+
+                                                    </span>
                                                         <span class="box-color-diamonds">
                                                             <span class="one-block">
                                                                 <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/g.png" alt="img"></span>
@@ -2048,7 +2077,7 @@
                                                                 <span class="color-t"><span class="big">H</span>color</span>
                                                             </span>
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/i.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/I.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">I</span>color</span>
                                                             </span>
                                                             <span class="one-block">
@@ -2059,9 +2088,14 @@
                                                 </p>
                                             </div>
                                             <div class="block-p">
-                                                <div class="article-p">Faint Color Diamonds (K):</div>
+                                                <div class="article-p">Faint Color Diamonds (K-Z):</div>
                                                 <p>
-                                                    Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                                                    <span class="text-left">
+                                                        <b>K-M:</b> Faint color. Diamond contains faint presence of color. A good value.
+                                                        <br>
+                                                        <b>N-Z:</b> Noticeable color. These diamonds are not carried by Brilliant Canary. 
+
+                                                    </span>
                                                         <span class="box-color-diamonds">
                                                             <span class="one-block">
                                                                 <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/k.png" alt="img"></span>
@@ -2070,12 +2104,7 @@
                                                         </span>
                                                 </p>
                                             </div>
-                                            <div class="block-p">
-                                                <div class="article-p">This is Photoshop</div>
-                                                <p>
-                                                    Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                                                </p>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -2084,7 +2113,7 @@
                                         <div class="block-p">
                                             <div class="article-p">Diamond Clarity</div>
                                             <p>
-                                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+
                                             </p>
                                         </div>
                                     </div>
@@ -2094,8 +2123,11 @@
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p">Flawless, Internally Flawless (FL & IF)</div>
-                                            <p>
-                                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                            <p class="text-left">
+                                                <b>FL:</b> Flawless with no internal or external imperfections visible under 10x magnification. An extremely rare and valuable diamond.
+                                                <br>
+                                                <b>IF:</b> Internally Flawless with no internal imperfections visible under 10x magnification. A very rare diamond.
+
                                             </p>
                                         </div>
                                     </div>
@@ -2105,8 +2137,8 @@
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p">Very Very Slightly Included (VVS1 & VVS2)</div>
-                                            <p>
-                                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                            <p class="text-left">
+                                                <b>VVS1/ VVS2:</b> Very very slightly included. Inclusions are very difficult to see under 10x magnification. A rare diamond.
                                             </p>
                                         </div>
                                     </div>
@@ -2116,8 +2148,8 @@
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p">Very Slightly Included (VS1 & VS2)</div>
-                                            <p>
-                                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                            <p class="text-left">
+                                                <b>VS1/VS2:</b> Very slightly included. Inclusions are difficult to see under 10x magnifications, cannot typically see inclusions with the unaided eye.
                                             </p>
                                         </div>
                                     </div>
@@ -2126,9 +2158,9 @@
                                             <img src="catalog/view/theme/canary/img/fine/img71.png" alt="img">
                                         </div>
                                         <div class="block-p">
-                                            <div class="article-p">Slightly Included (SI1, SI2, & SI3)</div>
-                                            <p>
-                                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                            <div class="article-p">Slightly Included (SI1, SI2)</div>
+                                            <p class="text-left">
+                                                <b>SI1/SI2:</b> Slightly included. Inclusions are noticeably under 10x magnification, may be slightly visible with unaided eye.
                                             </p>
                                         </div>
                                     </div>
@@ -2138,26 +2170,22 @@
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p">Included (I1, I2, I3)</div>
-                                            <p>
-                                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                            <p class="text-left">
+                                                <b>I1, I2, I3:</b> Included. Diamonds contain obvious inclusions under 10x magnifications, inclusions can usually be seen with unaided eye.
                                             </p>
                                         </div>
                                     </div>
 
-                                    <div class="text-left">
-                                        <div class="block-p">
-                                            <div class="article-p">This is Photoshop's version  of Lorem Ipsum</div>
-                                            <p>
-                                                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                            </p>
-                                        </div>
-                                    </div>
+
                                 </div>
                                 <div id="choosePerfectTab4" class="one-choose-perfect">
                                     <div class="block-p">
-                                        <div class="article-p">Diamond Weight</div>
+                                        <div class="article-p">Carat Weight</div>
                                         <p>
-                                            The size of a diamond is proportional to its carat weight. When rough diamonds are cut and polished into finished diamonds, up to 2/3 of the total carat weight may be lost. Since larger rough gems of high quality are found less frequently than smaller rough gems of high quality, a single two carat diamond will be more expensive than two one-carat diamonds of the same quality.
+                                            Carat is the most visible characteristic of a diamond and refers to the measure of a diamond’s weight. However, carat weight may not accurately reflect a diamond’s visual size depending on other factors. When determining a diamond’s size, many factors need to be considered.
+                                            <br>
+                                            Carat is only a measurement of weight, not of visual size. Depending on the shape and cut of the diamond, the weight can be shown differently. For example, a 1.00ct round diamond measuring 6.5mm x 6.5mm compared to a 1.00ct marquise cut diamond measuring 10.5mm x 5mm, the marquise cut diamond will give the visual appearance of being larger because of its long proportions.
+
                                         </p>
                                     </div>
                                     <div class="wrapper-img">
@@ -2166,18 +2194,18 @@
                                     <div class="block-p">
                                         <div class="article-p">Diamond Weight</div>
                                         <p>
-                                            Carat is a term that refers to the weight of a diamond. Prior to the twentieth century, diamonds were measured using carob seeds, which were small and uniform and served as a perfect counter weight to the diamond. The word "carob” is the origin of the word "carat" that we use today.
+                                            Diamonds with a higher carat weight are always more valuable, because they are found in nature much less often than smaller diamonds. Diamond prices increase substantially as the carat weight increases.
                                         </p>
                                     </div>
                                     <div class="block-p">
                                         <div class="article-p">Diamond Size and Diamond Carat Weight</div>
                                         <p>
-                                            The size of a diamond is proportional to its carat weight. When rough diamonds are cut and polished into finished diamonds, up to 2/3 of the total carat weight may be lost. Since larger rough gems of high quality are found less frequently than smaller rough gems of high quality, a single two carat diamond will be more expensive than two one-carat diamonds of the same quality.
+                                            “Magic Numbers” refer to carat weights that are highly desirable in the industry. This includes 0.50ct, 0.75ct, 1.00ct, 1.50ct, 2.00ct, 2.50ct, 3.00ct and so on. Prices increase when that “magic number” is hit. You can find a better value if you get a diamond right under a “magic number.” In doing this, you can save a substantial amount of money without sacrificing the look you want.
                                         </p>
                                     </div>
                                     <div class="block-p">
                                         <p>
-                                            In the United States, the majority of diamonds used in jewelry and sold as loose diamonds are one carat or less in weight. The average engagement ring diamond sold in the U.S. is less than 1/2 carat in weight.
+                                            Total carat weight (denoted as ctw), refers to the total carat weight in a jewelry piece such as an engagement ring with diamonds or gemstones in the setting.
                                         </p>
                                     </div>
                                     <div class="block-p">

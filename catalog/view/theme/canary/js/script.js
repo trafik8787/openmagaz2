@@ -141,9 +141,11 @@ $( document ).ready(function( $ ) {
 
     $(".dropdown-b > a").mouseenter(function() {
         $(this).parent().addClass("open");
+        $(this).parent().find(".dropdown-inside").show();
 
         $(this).parent().mouseleave(function(){
             $(this).removeClass("open");
+            $(this).find(".dropdown-inside").hide();
         });
     });
 
