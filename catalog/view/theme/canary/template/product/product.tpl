@@ -3,6 +3,7 @@
 
 <?//dd($products)?>
 <?//dd($attribute_groups)?>
+<?//dd($options)?>
 
 
 

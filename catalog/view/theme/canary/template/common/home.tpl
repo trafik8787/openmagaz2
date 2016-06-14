@@ -191,6 +191,8 @@
         </div>
     </section>
     <section class="box-img-main clearfix">
+
+
         <div class="ih-item colored effect5">
             <a href="#">
                     <span class="img">
@@ -251,6 +253,7 @@
                     </span>
             </a>
         </div>
+
     </section>
 
 
