@@ -328,6 +328,39 @@
               </div>
             </div>
             <div class="tab-pane" id="tab-links">
+
+                <div class="form-group required">
+                    <label class="col-sm-2 control-label" for="input-metal"><span data-toggle="tooltip" title="Metal">Metal</span></label>
+                    <div class="col-sm-10">
+                        <select name="metal" class="form-control"  id="input-metal">
+                            <option disabled="disabled" selected="selected" hidden>Please Choose</option>
+                            <?foreach ($select_metal as $key_val => $row_metal):?>
+                                <option value="<?=$key_val?>" <? if ($key_val == $metal):?> selected="selected" <?endif?>><?=$row_metal?></option>
+                            <?endforeach?>
+
+                        </select>
+                        <?php if (!empty($error_metal)) { ?>
+                            <div class="text-danger"><?php echo $error_metal; ?></div>
+                        <?php } ?>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-product-metal"><span data-toggle="tooltip" title="Product all metal">Product all metal</span></label>
+                    <div class="col-sm-10">
+                        <input type="text" name="product_metal" value="" placeholder="Metal product" id="input-product-metal" class="form-control" />
+                        <div id="product-metal" class="well well-sm" style="height: 150px; overflow: auto;">
+                            <?php foreach ($product_metals as $product_metal) { ?>
+                            <div id="product_metal<?php echo $product_metal['product_id']; ?>"><i class="fa fa-minus-circle"></i> <?php echo $product_metal['name']; ?>
+                                <input type="hidden" name="product_list_metal[]" value="<?php echo $product_metal['product_id']; ?>" />
+                            </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-manufacturer"><span data-toggle="tooltip" title="<?php echo $help_manufacturer; ?>"><?php echo $entry_manufacturer; ?></span></label>
                 <div class="col-sm-10">
@@ -405,6 +438,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-related"><span data-toggle="tooltip" title="<?php echo $help_related; ?>"><?php echo $entry_related; ?></span></label>
                 <div class="col-sm-10">
@@ -418,6 +452,7 @@
                   </div>
                 </div>
               </div>
+
             </div>
             <div class="tab-pane" id="tab-attribute">
               <div class="table-responsive">
@@ -1059,9 +1094,43 @@ $('input[name=\'related\']').autocomplete({
 	}
 });
 
+
+
+  // Product metal
+  $('input[name=\'product_metal\']').autocomplete({
+      'source': function(request, response) {
+          $.ajax({
+              url: 'index.php?route=catalog/product/autocomplete&w_param_flag=metal&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
+              dataType: 'json',
+              success: function(json) {
+                  response($.map(json, function(item) {
+                      return {
+                          label: item['name'],
+                          value: item['product_id']
+                      }
+                  }));
+              }
+          });
+      },
+      'select': function(item) {
+          $('input[name=\'product_metal\']').val('');
+
+          $('#product-metal' + item['value']).remove();
+
+          $('#product-metal').append('<div id="product-metal' + item['value'] + '"><i class="fa fa-minus-circle"></i> ' + item['label'] + '<input type="hidden" name="product_list_metal[]" value="' + item['value'] + '" /></div>');
+      }
+  });
+
+
+
 $('#product-related').delegate('.fa-minus-circle', 'click', function() {
 	$(this).parent().remove();
 });
+
+  $('#product-metal').delegate('.fa-minus-circle', 'click', function() {
+      $(this).parent().remove();
+  });
+
 //--></script>
   <script type="text/javascript"><!--
 var attribute_row = <?php echo $attribute_row; ?>;

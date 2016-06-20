@@ -271,6 +271,7 @@ class ControllerProductProduct extends Controller {
 			$data['manufacturers'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']);
 			$data['model'] = $product_info['model'];
             $data['sku'] = $product_info['sku'];
+            $data['metal'] = $product_info['metal'];
 			$data['reward'] = $product_info['reward'];
 			$data['points'] = $product_info['points'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
@@ -403,6 +404,15 @@ class ControllerProductProduct extends Controller {
 			}
 
 			$data['attribute_groups'] = $this->model_catalog_product->getProductAttributes($this->request->get['product_id']);
+
+            $data['products_metal'] = array();
+
+            $data_metal = $this->model_catalog_product->getProductMetal($this->request->get['product_id']);
+
+            if (!empty($data_metal)) {
+                $data['products_metal'] = $data_metal;
+            }
+
 
 			$data['products'] = array();
 

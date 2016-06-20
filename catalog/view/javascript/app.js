@@ -34,14 +34,13 @@ $(document).ready(function() {
     //load controller general category
     $(document).on('click', '.w-general-category', function(){
 
-
-
-        history.pushState('', '', this.href);
+        var $url = $(this).attr('href');
+        history.pushState('', '', $url);
 
         $.ajax({ // описываем наш запрос
             type: "POST", // будем передавать данные через POST
             dataType: "HTML", // указываем, что нам вернется JSON
-            url: this.href,
+            url: $url,
             data: 'general_category=1',
             beforeSend: function() {
                 $('.container-loader').show();

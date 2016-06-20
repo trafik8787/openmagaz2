@@ -651,11 +651,19 @@ class ControllerCatalogProduct extends Controller {
 			$data['error_meta_title'] = array();
 		}
 
+
 		if (isset($this->error['model'])) {
 			$data['error_model'] = $this->error['model'];
 		} else {
 			$data['error_model'] = '';
 		}
+
+
+        if (isset($this->error['metal'])) {
+            $data['error_metal'] = $this->error['metal'];
+        } else {
+            $data['error_metal'] = '';
+        }
 
 		if (isset($this->error['keyword'])) {
 			$data['error_keyword'] = $this->error['keyword'];
@@ -720,7 +728,6 @@ class ControllerCatalogProduct extends Controller {
 		if (isset($this->request->get['product_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 			$product_info = $this->model_catalog_product->getProduct($this->request->get['product_id']);
 		}
-
 		$data['token'] = $this->session->data['token'];
 
 		$this->load->model('localisation/language');
@@ -910,6 +917,18 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['subtract'] = 1;
 		}
+
+        //get array param metal
+        $data['select_metal'] = list_metal();
+
+        if (isset($this->request->post['metal'])) {
+            $data['metal'] = $this->request->post['metal'];
+        } elseif (!empty($product_info)) {
+            $data['metal'] = $product_info['metal'];
+        } else {
+            $data['metal'] = null;
+        }
+
 
 		if (isset($this->request->post['sort_order'])) {
 			$data['sort_order'] = $this->request->post['sort_order'];
@@ -1263,6 +1282,34 @@ class ControllerCatalogProduct extends Controller {
 			}
 		}
 
+
+        if (isset($this->request->post['product_list_metal'])) {
+            $products_metal = $this->request->post['product_list_metal'];
+        } elseif (isset($this->request->get['product_id'])) {
+            $products_metal = $this->model_catalog_product->getProductMetal($this->request->get['product_id']);
+        } else {
+            $products_metal = array();
+        }
+
+        $data['product_metals'] = array();
+
+
+
+        foreach ($products_metal as $product_id) {
+            $related_info_metal = $this->model_catalog_product->getProduct($product_id);
+
+            if ($related_info_metal) {
+                $data['product_metals'][] = array(
+                    'product_id' => $related_info_metal['product_id'],
+                    'name'       => $related_info_metal['name'].' - '. list_metal($related_info_metal['metal'])
+                );
+            }
+        }
+
+
+
+
+
 		if (isset($this->request->post['points'])) {
 			$data['points'] = $this->request->post['points'];
 		} elseif (!empty($product_info)) {
@@ -1316,6 +1363,10 @@ class ControllerCatalogProduct extends Controller {
 		if ((utf8_strlen($this->request->post['model']) < 1) || (utf8_strlen($this->request->post['model']) > 64)) {
 			$this->error['model'] = $this->language->get('error_model');
 		}
+
+        if (empty($this->request->post['metal'])) {
+            $this->error['metal'] = $this->language->get('error_metal');
+        }
 
 		if (utf8_strlen($this->request->post['keyword']) > 0) {
 			$this->load->model('catalog/url_alias');
@@ -1386,10 +1437,19 @@ class ControllerCatalogProduct extends Controller {
 				'limit'        => $limit
 			);
 
+            $custom_value = '';
+
+
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
 			foreach ($results as $result) {
 				$option_data = array();
+
+
+                //добавляет к названию продукта тип метала
+                if (isset($this->request->get['w_param_flag'])) {
+                    $custom_value = list_metal($result['metal']);
+                }
 
 				$product_options = $this->model_catalog_product->getProductOptions($result['product_id']);
 
@@ -1427,7 +1487,7 @@ class ControllerCatalogProduct extends Controller {
 
 				$json[] = array(
 					'product_id' => $result['product_id'],
-					'name'       => strip_tags(html_entity_decode($result['name'], ENT_QUOTES, 'UTF-8')),
+					'name'       => strip_tags(html_entity_decode($result['name'], ENT_QUOTES, 'UTF-8')).' - '.$custom_value,
 					'model'      => $result['model'],
 					'option'     => $option_data,
 					'price'      => $result['price']
@@ -1438,4 +1498,6 @@ class ControllerCatalogProduct extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+
 }

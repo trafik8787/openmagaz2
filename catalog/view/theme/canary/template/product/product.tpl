@@ -3,7 +3,7 @@
 
 <?//dd($products)?>
 <?//dd($attribute_groups)?>
-<?//dd($options)?>
+<?//dd($products_metal)?>
 
 
 
@@ -104,6 +104,23 @@
                                 <?endif?>
 
                             <?endforeach?>
+
+                            <?if (!empty($products_metal)):?>
+                                <div class="title">Precious metal</div>
+                                <div class="cc-shipping-row">
+                                    <input type="text" class="shipping-input select-simulate-input" id="si7" required>
+                                    <label for="si7" class="shipping-label"><?=list_metal($metal)?></label>
+                                    <a href="#" class="select-simulate-btn"></a>
+                                    <ul class="select-simulate-list">
+                                        <?php foreach ($products_metal as $key => $row_metal): ?>
+                                            <li><a class="w-general-category" href="<?php echo $row_metal['href']; ?>" data-value="<?php echo $row_metal['href']; ?>"><?php echo $row_metal['name']; ?></a></li>
+                                        <?endforeach?>
+
+                                    </ul>
+                                </div>
+
+
+                            <?endif?>
 
                         </div>
 

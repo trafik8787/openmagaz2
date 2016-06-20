@@ -155,3 +155,28 @@ function rating($id) {
     }
     return $rend;
 }
+
+
+function list_metal ($value = null) {
+
+
+
+    $arr = array(
+        'rose_gold' => 'Rose gold',
+        'platinum' => 'Platinum',
+        'white_gold_18' => 'White gold 18',
+        'yellow_gold_18' => 'Yellow gold 18',
+        'white_gold_14' => 'White gold 14',
+        'yellow_gold_14' => 'Yellow gold 14');
+
+    if ($value !== null) {
+        if (!empty($arr[$value])) {
+            return $arr[$value];
+        } else {
+            return '';
+        }
+
+    } else {
+        return $arr;
+    }
+}
