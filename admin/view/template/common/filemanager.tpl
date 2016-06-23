@@ -19,7 +19,7 @@
             </span></div>
         </div>
       </div>
-      <hr />
+      <hr /><?//dd($images)?>
       <?php foreach (array_chunk($images, 4) as $image) { ?>
       <div class="row">
         <?php foreach ($image as $image) { ?>
@@ -31,10 +31,20 @@
             <?php echo $image['name']; ?></label>
           <?php } ?>
           <?php if ($image['type'] == 'image') { ?>
-          <a href="<?php echo $image['href']; ?>" class="thumbnail"><img src="<?php echo $image['thumb']; ?>" alt="<?php echo $image['name']; ?>" title="<?php echo $image['name']; ?>" /></a>
-          <label>
-            <input type="checkbox" name="path[]" value="<?php echo $image['path']; ?>" />
-            <?php echo $image['name']; ?></label>
+            <?if (!empty($image['video'])):?>
+                <a href="<?php echo $image['href']; ?>" class="thumbnail">
+                    <video src="<?=$image['href']?>" onclick="this.play();" width="100px" height="100px"></video>
+                </a>
+                <label>
+                    <input type="checkbox" name="path[]" value="<?php echo $image['path']; ?>" />
+                    <?php echo $image['name']; ?></label>
+
+            <?else:?>
+                  <a href="<?php echo $image['href']; ?>" class="thumbnail"><img src="<?php echo $image['thumb']; ?>" alt="<?php echo $image['name']; ?>" title="<?php echo $image['name']; ?>" /></a>
+                  <label>
+                    <input type="checkbox" name="path[]" value="<?php echo $image['path']; ?>" />
+                    <?php echo $image['name']; ?></label>
+            <?endif?>
           <?php } ?>
         </div>
         <?php } ?>

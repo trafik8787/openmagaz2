@@ -36,4 +36,15 @@ class Url {
 
 		return $url;
 	}
+
+    public function urlLink($url = null){
+
+        if ($url !==null) {
+            return $this->domain . $url;
+        } else {
+            return $this->domain;
+        }
+
+    }
+
 }

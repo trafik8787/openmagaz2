@@ -1230,7 +1230,15 @@ class ControllerCatalogProduct extends Controller {
 				$thumb = 'no_image.png';
 			}
 
+            $video = null;
+            $ext = pathinfo(basename($product_image['image']));
+            //dd($ext);
+            if ($ext['extension'] == 'mp4') {
+                $video = '../../image/'.$product_image['image'];
+            }
+
 			$data['product_images'][] = array(
+                'video'     => $video,
 				'image'      => $image,
 				'thumb'      => $this->model_tool_image->resize($thumb, 100, 100),
 				'sort_order' => $product_image['sort_order']

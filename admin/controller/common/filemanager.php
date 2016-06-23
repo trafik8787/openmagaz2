@@ -34,7 +34,7 @@ class ControllerCommonFileManager extends Controller {
 		}
 
 		// Get files
-		$files = glob($directory . '/' . $filter_name . '*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF}', GLOB_BRACE);
+		$files = glob($directory . '/' . $filter_name . '*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF,mp4}', GLOB_BRACE);
 
 		if (!$files) {
 			$files = array();
@@ -78,7 +78,15 @@ class ControllerCommonFileManager extends Controller {
 					$server = HTTP_CATALOG;
 				}
 
+                $video = null;
+                $ext = pathinfo(basename($image));
+                //dd($ext);
+                if ($ext['extension'] == 'mp4') {
+                    $video = $image;
+                }
+
 				$data['images'][] = array(
+                    'video' => $video,
 					'thumb' => $this->model_tool_image->resize(utf8_substr($image, utf8_strlen(DIR_IMAGE)), 100, 100),
 					'name'  => implode(' ', $name),
 					'type'  => 'image',
@@ -235,7 +243,8 @@ class ControllerCommonFileManager extends Controller {
 					'jpg',
 					'jpeg',
 					'gif',
-					'png'
+					'png',
+                    'mp4'
 				);
 
 				if (!in_array(utf8_strtolower(utf8_substr(strrchr($filename, '.'), 1)), $allowed)) {
@@ -248,7 +257,8 @@ class ControllerCommonFileManager extends Controller {
 					'image/pjpeg',
 					'image/png',
 					'image/x-png',
-					'image/gif'
+					'image/gif',
+					'video/mp4'
 				);
 
 				if (!in_array($this->request->files['file']['type'], $allowed)) {

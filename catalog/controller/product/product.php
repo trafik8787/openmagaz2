@@ -303,7 +303,16 @@ class ControllerProductProduct extends Controller {
 			$results = $this->model_catalog_product->getProductImages($this->request->get['product_id']);
 
 			foreach ($results as $result) {
+
+                $video = null;
+                $ext = pathinfo(basename($result['image']));
+                //dd($ext);
+                if ($ext['extension'] == 'mp4') {
+                    $video = $this->url->urlLink('image/'.$result['image']);
+                }
+
 				$data['images'][] = array(
+                    'video' => $video,
 					'popup' => $this->model_tool_image->resize($result['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height')),
 					'thumb' => $this->model_tool_image->resize($result['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'))
 				);

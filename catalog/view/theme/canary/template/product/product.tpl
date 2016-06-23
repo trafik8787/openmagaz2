@@ -22,19 +22,39 @@
 
 
         </div>
+
+
+
+
         <div class="center-bl">
             <div class="one-product clearfix">
                 <div class="one-product-slider">
                     <div class="slider-for">
                         <?php foreach ($images as $image):?>
-                            <div><img src="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>"></div>
+
+                            <?if (!empty($image['video'])):?>
+                                <div>
+                                    <video autoplay loop class="myVideo" src="<?=$image['video']?>" onclick="this.play();"></video>
+                                </div>
+                            <?else:?>
+                                <div><img src="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>"></div>
+                            <?endif?>
                         <?endforeach?>
 
                     </div>
                     <div class="slider-nav">
 
                         <?php foreach ($images as $image):?>
-                            <div class="wrapper-img-slider"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>"></div>
+
+                            <?if (!empty($image['video'])):?>
+                                <div class="wrapper-img-slider" >
+                                    <video width="69px" height="65px" src="<?=$image['video']?>"></video>
+                                </div>
+                            <?else:?>
+                                <div class="wrapper-img-slider"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>"></div>
+                            <?endif?>
+
+
                         <?endforeach?>
 
                     </div>
@@ -357,6 +377,7 @@
 
 
 <script type="text/javascript">
+
 
     $(document).on('click', '#write-review', function(){
         $('#write-review-form').collapse('toggle');

@@ -229,8 +229,26 @@ $( document ).ready(function( $ ) {
 
 });
 
+//$('.slider-for').on('init', function(event, slick){
+//    console.log(slick);
+//    var video = document.getElementsByClassName('myVideo');
+//    video.play();
+//});
+
+
 //slider product
 function Productslider () {
+
+    //var video = document.getElementsByClassName('myVideo');
+
+    $('.slider-for').on('init', function(event, slick){
+        $('.myVideo').get(0).play();
+    });
+
+
+    $('.slider-for').on('afterChange', function(event, slick, currentSlide){
+        $('.myVideo').get(0).play();
+    });
 
     $('.slider-for').slick({
         slidesToShow: 1,
@@ -238,7 +256,9 @@ function Productslider () {
         arrows: false,
         fade: true,
         asNavFor: '.slider-nav'
+
     });
+
 
 
 
