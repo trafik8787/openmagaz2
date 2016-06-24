@@ -172,6 +172,7 @@
 
         </div>
     </section>
+
     <section class="top-main-r top-main-r3">
         <div class="wrapper-main-r text-center">
             <div class="title">This is Photoshop version</div>
@@ -180,35 +181,28 @@
             </div>
         </div>
     </section>
-    <section class="single-product">
-        <div class="title-for-product">RECENTLY PURCHASED SET WITH VARIOUS CENTER STONES</div>
-        <div class="owl-carousel owl-product">
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img7.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
+
+    <?php if ($products):?>
+
+        <section class="single-product">
+            <div class="title-for-product"><?php echo $text_related; ?></div>
+            <div class="owl-carousel owl-product">
+
+                <?foreach ($products as $row):?>
+
+
+                    <div class="item">
+                        <div class="box-img"><a href="<?=$row['href']?>"><img src="<?=$row['img']?>" alt="<?=$row['name']?>"></a></div>
+                        <div class="article"><a href="<?=$row['href']?>"><?=$row['name']?></a></div>
+                    </div>
+
+                <?endforeach?>
+
             </div>
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img8.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img9.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img10.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img7.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img8.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-        </div>
-    </section>
+        </section>
+    <?endif?>
+
+
     <section class="center-bl comment-brand clearfix">
         <?php if ($review_status):?>
             <div class="comment-box">
@@ -339,35 +333,7 @@
             </div>
         </div>
     </section>
-    <section class="single-product">
-        <div class="title-for-product">MATCHING BANDS</div>
-        <div class="owl-carousel owl-product">
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img7.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img8.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img9.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img10.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img7.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-            <div class="item">
-                <div class="box-img"><a href="#"><img src="catalog/view/theme/canary/img/img8.png" alt="img"></a></div>
-                <div class="article"><a href="#">Engagament rings</a></div>
-            </div>
-        </div>
-    </section>
+
 </main>
 
 

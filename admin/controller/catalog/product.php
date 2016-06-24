@@ -1233,7 +1233,7 @@ class ControllerCatalogProduct extends Controller {
             $video = null;
             $ext = pathinfo(basename($product_image['image']));
             //dd($ext);
-            if ($ext['extension'] == 'mp4') {
+            if (!empty($ext['extension']) and $ext['extension'] == 'mp4') {
                 $video = '../../image/'.$product_image['image'];
             }
 
