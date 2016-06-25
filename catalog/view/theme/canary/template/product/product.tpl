@@ -75,8 +75,8 @@
                     </div>
                     <div class="one-info one-info-last clearfix">
                         <div class="title-red">SETTING SPECIFICATIONS SKU: <?=$sku?></div>
-                        Metal: 14K White Gold<br/>
-                        Width: 2mm
+                        Metal: <?=list_metal($metal)?><br/>
+                        Weight: <?=$weight?> g.
                         <a href="#" class="more-diamant">more about diamonds>>></a>
                     </div>
 

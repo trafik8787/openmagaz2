@@ -271,6 +271,7 @@ class ControllerProductProduct extends Controller {
 			$data['manufacturers'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']);
 			$data['model'] = $product_info['model'];
             $data['sku'] = $product_info['sku'];
+            $data['weight'] = round($product_info['weight'], 1);
             $data['metal'] = $product_info['metal'];
 			$data['reward'] = $product_info['reward'];
 			$data['points'] = $product_info['points'];
