@@ -33,6 +33,10 @@
         <div class="well">
           <div class="row">
             <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="control-label" for="input-product-id">ID</label>
+                    <input type="text" name="filter_product_id" value="<?php echo $filter_product_id; ?>" placeholder="ID" id="input-product-id" class="form-control" />
+                </div>
               <div class="form-group">
                 <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
                 <input type="text" name="filter_name" value="<?php echo $filter_name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
@@ -51,6 +55,7 @@
                 <label class="control-label" for="input-quantity"><?php echo $entry_quantity; ?></label>
                 <input type="text" name="filter_quantity" value="<?php echo $filter_quantity; ?>" placeholder="<?php echo $entry_quantity; ?>" id="input-quantity" class="form-control" />
               </div>
+
             </div>
             <div class="col-sm-4">
               <div class="form-group">
@@ -168,6 +173,12 @@
   <script type="text/javascript"><!--
 $('#button-filter').on('click', function() {
 	var url = 'index.php?route=catalog/product&token=<?php echo $token; ?>';
+
+    var filter_product_id = $('input[name=\'filter_product_id\']').val();
+
+    if (filter_product_id) {
+        url += '&filter_product_id=' + encodeURIComponent(filter_product_id);
+    }
 
 	var filter_name = $('input[name=\'filter_name\']').val();
 

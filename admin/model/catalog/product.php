@@ -367,6 +367,11 @@ class ModelCatalogProduct extends Model {
 	public function getProducts($data = array()) {
 		$sql = "SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
 
+
+        if (isset($data['filter_product_id']) && !is_null($data['filter_product_id'])) {
+            $sql .= " AND p.product_id LIKE '" . $this->db->escape($data['filter_product_id']) . "%'";
+        }
+
 		if (!empty($data['filter_name'])) {
 			$sql .= " AND pd.name LIKE '" . $this->db->escape($data['filter_name']) . "%'";
 		}
@@ -647,6 +652,14 @@ class ModelCatalogProduct extends Model {
 		$sql = "SELECT COUNT(DISTINCT p.product_id) AS total FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)";
 
 		$sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+
+        if (isset($data['filter_product_id']) && !is_null($data['filter_product_id'])) {
+            $sql .= " AND p.product_id LIKE '" . $this->db->escape($data['filter_product_id']) . "%'";
+        }
+
+        if (!empty($data['filter_name'])) {
+            $sql .= " AND pd.name LIKE '" . $this->db->escape($data['filter_name']) . "%'";
+        }
 
 		if (!empty($data['filter_name'])) {
 			$sql .= " AND pd.name LIKE '" . $this->db->escape($data['filter_name']) . "%'";

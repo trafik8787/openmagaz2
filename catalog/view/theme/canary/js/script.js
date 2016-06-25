@@ -224,7 +224,9 @@ function Productslider () {
     //var video = document.getElementsByClassName('myVideo');
 
     $('.slider-for').on('init', function(event, slick){
-        $('.myVideo').get(0).play();
+        if ($(this).hasClass('.myVideo')) {
+            $('.myVideo').get(0).play();
+        }
     });
 
 
