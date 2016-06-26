@@ -44,7 +44,7 @@
             <div class="box-line-l">
                 <div class="one-line">
                     <div class="title">color
-                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Although these diamonds are slightly warm, they still offer a great value.">
                             <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                         </button>
                     </div>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="one-line">
                     <div class="title">clarity
-                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Some inclusions could be visible to the naked eye.">
                             <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                         </button>
                     </div>
@@ -95,7 +95,7 @@
         <div class="right-f">
             <div class="one-line">
                 <div class="title">cut
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Quality cut at a great value, without compromising beauty and sparkle.">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>
                 </div>
@@ -113,7 +113,7 @@
             </div>
             <div class="one-line">
                 <div class="title">carat
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Carat refers to the weight of a diamond, which is directly proportional to its size. Use the sliders or enter a value to find the range you are interested in browsing.">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>
                 </div>
@@ -127,7 +127,7 @@
             </div>
             <div class="one-line">
                 <div class="title">price
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="The price slider is for the DIAMOND only.">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>
                 </div>

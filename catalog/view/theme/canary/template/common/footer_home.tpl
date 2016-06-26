@@ -27,25 +27,7 @@
         </div>
         <div class="bg-right"></div>
     </section>
-    <section class="brand-slider">
-        <div id="owl-demo" class="owl-carousel brand-footer">
-            <div class="item">
-                <a href="#"><img src="catalog/view/theme/canary/img/brand1.png" alt="brand1"></a>
-            </div>
-            <div class="item">
-                <a href="#"><img src="catalog/view/theme/canary/img/brand2.png" alt="brand2"></a>
-            </div>
-            <div class="item">
-                <a href="#"><img src="catalog/view/theme/canary/img/brand3.png" alt="brand3"></a>
-            </div>
-            <div class="item">
-                <a href="#"><img src="catalog/view/theme/canary/img/brand4.png" alt="brand4"></a>
-            </div>
-            <div class="item">
-                <a href="#"><img src="catalog/view/theme/canary/img/brand5.png" alt="brand5"></a>
-            </div>
-        </div>
-    </section>
+
     <section class="footer-menu">
         <div class="wrapper-footer clearfix">
             <div class="one-block">
