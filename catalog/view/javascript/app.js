@@ -59,6 +59,7 @@ $(document).ready(function() {
 
         });
 
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
         return false;
     });
 
@@ -110,7 +111,7 @@ $(document).ready(function() {
             pickDate: false
         });
 
-
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
         return false;
     });
 

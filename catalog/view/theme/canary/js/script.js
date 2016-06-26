@@ -231,7 +231,9 @@ function Productslider () {
 
 
     $('.slider-for').on('afterChange', function(event, slick, currentSlide){
-        $('.myVideo').get(0).play();
+        if ($('video').hasClass('myVideo')) {
+            $('.myVideo').get(0).play();
+        }
     });
 
     $('.slider-for').slick({
