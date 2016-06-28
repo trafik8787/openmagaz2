@@ -305,7 +305,7 @@ function changePrice(price){
     return now_price;
 }
 //mobile login tabs
-$('.mobile-login-tab-btn').on('click', function(e) {
+$(document).on('click', '.mobile-login-tab-btn', function(e) {
     e.preventDefault();
     var item = $(this),
         target = item.attr('href');
@@ -318,7 +318,7 @@ $('.mobile-login-tab-btn').on('click', function(e) {
 
 
 (function(){
-    $('.select-simulate-btn, .select-simulate-input').on('click', function(e) {
+    $(document).on('click', '.select-simulate-btn, .select-simulate-input', function(e) {
         e.preventDefault();
         $(this).parent().find('.select-simulate-btn').toggleClass('active');
         $(this).siblings('.select-simulate-list').find('.has-sub').removeClass('active');
@@ -326,7 +326,7 @@ $('.mobile-login-tab-btn').on('click', function(e) {
         $(this).siblings('.select-simulate-list').removeClass('sub-open');
     });
 
-    $('.select-simulate-list a').on('click', function(e) {
+    $(document).on('click', '.select-simulate-list a', function(e) {
         var item = $(this),
             itemValue = item.attr('data-value'),
             itemLinkAllow = item.attr('data-link-allow') ? item.attr('data-link-allow') : false;

@@ -23,6 +23,7 @@
                                 <li>
                                     <span class="faq-question">Do you have a retail store located in my state?</span>
                                     <div class="faq-answer-block">
+                                        <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Do you have a retail store located in my state?</div>
                                         <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
                                         <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
@@ -384,5 +385,23 @@
     </section>
 </main>
 
+<script>
+    $(function(){
+        $(document).on('click', '.faq-question', function(){
+            $('.faq-answer-block').hide();
+            $(this).parent().find('.faq-answer-block').show();
+
+        });
+
+        $(document).on('click', '.faq-answer-block-close', function(){
+
+            $(this).parent().hide();
+
+        });
+
+
+
+    });
+</script>
 
 <?php echo !empty($footer) ? $footer : '' ?>

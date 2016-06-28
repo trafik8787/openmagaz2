@@ -133,7 +133,7 @@
                                     <a href="#" class="select-simulate-btn"></a>
                                     <ul class="select-simulate-list">
                                         <?php foreach ($products_metal as $key => $row_metal): ?>
-                                            <li><a class="w-general-category" href="<?php echo $row_metal['href']; ?>" data-value="<?php echo $row_metal['href']; ?>"><?php echo $row_metal['name']; ?></a></li>
+                                            <li><a class="w-product-ajax" href="<?php echo $row_metal['href']; ?>" data-value="<?php echo $row_metal['href']; ?>"><?php echo $row_metal['name']; ?></a></li>
                                         <?endforeach?>
 
                                     </ul>

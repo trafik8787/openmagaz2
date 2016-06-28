@@ -811,8 +811,8 @@
     height: 55px;
     line-height: 55px; }
 
-  .faq-question:hover + .faq-answer-block {
-    display: none; }
+  /*.faq-question:hover + .faq-answer-block {*/
+    /*display: none; }*/
 
   .faq-list li.active .faq-answer-block {
     display: block; }

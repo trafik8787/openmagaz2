@@ -40,18 +40,18 @@
                         <span><img src="catalog/view/theme/canary/img/fine/img2.png" alt="img"></span>
                     </span>
             </a>
-            <a href="#gamestones" class="fine-link" data-target="#gamestones">
-                    <span class="vertical-middle-wrapper">
-                        <span><img src="catalog/view/theme/canary/img/fine/img4.png" alt="img"></span>
-                    </span>
-            </a>
+            <!--<a href="#gamestones" class="fine-link" data-target="#gamestones">-->
+                    <!--<span class="vertical-middle-wrapper">-->
+                        <!--<span><img src="catalog/view/theme/canary/img/fine/img4.png" alt="img"></span>-->
+                    <!--</span>-->
+            <!--</a>-->
             <a href="#fine_jewerly" class="fine-link" data-target="#fine_jewerly">
                     <span class="vertical-middle-wrapper">
-                        <span><img src="catalog/view/theme/canary/img/fine/img5.png" alt="img"></span>
+                        <span><img src="catalog/view/theme/canary/img/fine/img6.png" width="137px" alt="img"></span>
                     </span>
             </a>
         </div>
-        <div id="diamonds" class="new-products fine-tab active">
+        <div id="fine_jewerly" class="new-products fine-tab active">
             <div class="panel product-tabs panel-default">
                 <div class="panel-heading">
                     <ul class="nav nav-tabs">
@@ -196,109 +196,105 @@
                                 <div class="one-line-s">
                                     <div class="box-ws">
                                         <img src="catalog/view/theme/canary/img/fine/img28.png" alt="img">
-                                        <div class="text-center">
-                                            <a href="#" class="btn-sapphires">Search Solitaire Rings gallery</a>
-                                        </div>
+
                                     </div>
                                     <div class="title-ws">Solitaire Engagement Rings</div>
                                     <p>
-                                        Depending on the setting you choose, you can soak your diamond engagement and/or wedding rings for up to 30 minutes in a solution of dishwashing liquid and water. This is best suited to prong and cathedral settings. In pave and basket settings, however, soaking the rings can increase the likelihood of the gems coming loose. Be mindful of this when you decide to soak any jewelry piece use mild dish soap in warm water and soak your jewelry for a few minutes. Using a soft cloth or cotton swab,
+                                        Classically beautiful, solitaire engagement rings let the diamond of your choice really be the spotlight. Our beautiful collection of solitaire engagement rings features many distinctive styles to showcase your perfect diamond.
                                     </p>
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img28.png" alt="img">
-                                        <div class="text-center">
-                                            <a href="#" class="btn-sapphires">Search Solitaire Rings gallery</a>
-                                        </div>
+                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/pave.jpg" alt="img">
+
                                     </div>
                                     <div class="title-ws">Pavé Engagement Rings</div>
                                     <p>
-                                        Depending on the setting you choose, you can soak your diamond engagement and/or wedding rings for up to 30 minutes in a solution of dishwashing liquid and water. This is best suited to prong and cathedral settings. In pave and basket settings, however, soaking the rings can increase the likelihood of the gems coming loose. Be mindful of this when you decide to soak any jewelry piece use mild dish soap in warm water and soak your jewelry for a few minutes. Using a soft cloth or cotton swab,
+                                        Delicate and intricate, pave diamond engagement rings feature small diamonds set closely together as to see minimal metal and more sparkle. The word “pave” comes from the French word “to pave,” and the end result of pave jewelry looks as if it has been paved with diamonds. Pave diamond engagement rings really sparkle and highlight your center stone beautifully. You are sure to find the perfect pave engagement ring to match your style in our extensive collection.
                                     </p>
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img28.png" alt="img">
-                                        <div class="text-center">
-                                            <a href="#" class="btn-sapphires">Search Solitaire Rings gallery</a>
-                                        </div>
+                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/channel_set.jpg" alt="img">
+
                                     </div>
                                     <div class="title-ws">Channel Set Engagement Rings</div>
                                     <p>
-                                        Depending on the setting you choose, you can soak your diamond engagement and/or wedding rings for up to 30 minutes in a solution of dishwashing liquid and water. This is best suited to prong and cathedral settings. In pave and basket settings, however, soaking the rings can increase the likelihood of the gems coming loose. Be mindful of this when you decide to soak any jewelry piece use mild dish soap in warm water and soak your jewelry for a few minutes. Using a soft cloth or cotton swab,
+                                        Elegant channel set engagement rings let your center stone shine. Small diamonds are set closely together to beautifully decorate the band of your engagement ring. Having side diamonds securely set in the grooves of a channel means you don’t need to worry about your setting getting snagged. Choose from our large collection of channel set engagement rings to perfectly compliment your diamond.
                                     </p>
                                 </div>
+
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img28.png" alt="img">
-                                        <div class="text-center">
-                                            <a href="#" class="btn-sapphires">Search Solitaire Rings gallery</a>
-                                        </div>
-                                    </div>
-                                    <div class="title-ws">Sidestone Engagement Rings</div>
-                                    <p>
-                                        Depending on the setting you choose, you can soak your diamond engagement and/or wedding rings for up to 30 minutes in a solution of dishwashing liquid and water. This is best suited to prong and cathedral settings. In pave and basket settings, however, soaking the rings can increase the likelihood of the gems coming loose. Be mindful of this when you decide to soak any jewelry piece use mild dish soap in warm water and soak your jewelry for a few minutes. Using a soft cloth or cotton swab,
-                                    </p>
-                                </div>
-                                <div class="one-line-s">
-                                    <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img28.png" alt="img">
-                                        <div class="text-center">
-                                            <a href="#" class="btn-sapphires">Search Solitaire Rings gallery</a>
-                                        </div>
+                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/three_stone.jpg" alt="img">
+
                                     </div>
                                     <div class="title-ws">Three-Stone Engagement Rings</div>
                                     <p>
-                                        Depending on the setting you choose, you can soak your diamond engagement and/or wedding rings for up to 30 minutes in a solution of dishwashing liquid and water. This is best suited to prong and cathedral settings. In pave and basket settings, however, soaking the rings can increase the likelihood of the gems coming loose. Be mindful of this when you decide to soak any jewelry piece use mild dish soap in warm water and soak your jewelry for a few minutes. Using a soft cloth or cotton swab,
+                                        Traditional in design, three stone engagement rings symbolize your past, present and future love. These traditional and elegant engagement rings are a perfect way to represent your everlasting love. Choose your perfect three stone ring engagement ring in our large collection to beautiful compliment the diamond of your choice.
                                     </p>
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img28.png" alt="img">
-                                        <div class="text-center">
-                                            <a href="#" class="btn-sapphires">Search Solitaire Rings gallery</a>
-                                        </div>
+                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/vintage.jpg" alt="img">
+
                                     </div>
                                     <div class="title-ws">Vintage Engagement Rings</div>
                                     <p>
-                                        Depending on the setting you choose, you can soak your diamond engagement and/or wedding rings for up to 30 minutes in a solution of dishwashing liquid and water. This is best suited to prong and cathedral settings. In pave and basket settings, however, soaking the rings can increase the likelihood of the gems coming loose. Be mindful of this when you decide to soak any jewelry piece use mild dish soap in warm water and soak your jewelry for a few minutes. Using a soft cloth or cotton swab,
+                                        Vintage style engagement rings are made to represent antique rings from eras such as Edwardian, Art Deco and Victorian. These beautiful engagement rings feature ornate filigree, milgrain and engraving and give your diamond that perfect antique look. Our vast collection of stunning vintage inspired engagement rings will compliment your center stone and give you the distinct look you are desiring.
                                     </p>
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img28.png" alt="img">
-                                        <div class="text-center">
-                                            <a href="#" class="btn-sapphires">Search Solitaire Rings gallery</a>
-                                        </div>
+                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/tension_set.jpg" alt="img">
+
                                     </div>
                                     <div class="title-ws">Tension Set Engagement Rings</div>
                                     <p>
-                                        Depending on the setting you choose, you can soak your diamond engagement and/or wedding rings for up to 30 minutes in a solution of dishwashing liquid and water. This is best suited to prong and cathedral settings. In pave and basket settings, however, soaking the rings can increase the likelihood of the gems coming loose. Be mindful of this when you decide to soak any jewelry piece use mild dish soap in warm water and soak your jewelry for a few minutes. Using a soft cloth or cotton swab,
+                                        Modern and contemporary, tension set engagement rings showcase your diamond in a unique and different way. Tension settings are designed to hold your diamond securely through the pressure of the metal, creating a contemporary look. Choose from our collection of modern tension set engagement rings to showcase your diamond in a unique way.
                                     </p>
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img28.png" alt="img">
-                                        <div class="text-center">
-                                            <a href="#" class="btn-sapphires">Search Solitaire Rings gallery</a>
-                                        </div>
+                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/halo.jpg" alt="img">
+
                                     </div>
                                     <div class="title-ws">Halo Engagement Rings</div>
                                     <p>
-                                        Depending on the setting you choose, you can soak your diamond engagement and/or wedding rings for up to 30 minutes in a solution of dishwashing liquid and water. This is best suited to prong and cathedral settings. In pave and basket settings, however, soaking the rings can increase the likelihood of the gems coming loose. Be mindful of this when you decide to soak any jewelry piece use mild dish soap in warm water and soak your jewelry for a few minutes. Using a soft cloth or cotton swab,
+                                        Stylish halo engagement rings are the perfect way to enhance the appearance of your center diamond. Halo engagement rings refer to a setting with a circle of small diamond around your center stone, which can make your center stone appear to be larger and add to the sparkle of your engagement ring as a whole. Choose your perfect halo engagement ring from our extensive collection which is sure to make your heart flutter.
                                     </p>
                                 </div>
+
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img28.png" alt="img">
-                                        <div class="text-center">
-                                            <a href="#" class="btn-sapphires">Search Solitaire Rings gallery</a>
-                                        </div>
+                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/bezel_set.jpg" alt="img">
+
+                                    </div>
+                                    <div class="title-ws">Bezel Set Engagement Rings</div>
+                                    <p>
+                                        Bezel set engagement rings provide you with a modern twist on the classic solitaire style setting. A bezel setting refers to having metal completely or partially surround your center stone. This style ring will give you a unique look that will let your center diamond truly shine. Choose from our large collection of bezel set engagement rings to showcase your diamond.
+                                    </p>
+                                </div>
+
+                                <div class="one-line-s">
+                                    <div class="box-ws">
+                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/bypass.jpg" alt="img">
+
+                                    </div>
+                                    <div class="title-ws">Bypass</div>
+                                    <p>
+                                        Stylish vintage style bypass settings feature a band that overlaps instead of forming one straight line. Original bypass designs were fashionable in the Victoria era, and have become a popular choice again to showcase your diamond in a beautiful and distinctive way. Choose the perfect bypass setting from our extensive collection to let your center diamond truly shine.
+                                    </p>
+                                </div>
+
+                                <div class="one-line-s">
+                                    <div class="box-ws">
+                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/wedding_sets.jpg" alt="img">
+
                                     </div>
                                     <div class="title-ws">Wedding Sets</div>
                                     <p>
-                                        Depending on the setting you choose, you can soak your diamond engagement and/or wedding rings for up to 30 minutes in a solution of dishwashing liquid and water. This is best suited to prong and cathedral settings. In pave and basket settings, however, soaking the rings can increase the likelihood of the gems coming loose. Be mindful of this when you decide to soak any jewelry piece use mild dish soap in warm water and soak your jewelry for a few minutes. Using a soft cloth or cotton swab,
+                                        Wedding sets include an engagement ring and matching wedding band that complement each other perfectly. Choosing to get a wedding set guarantees that you will get a wedding band that will accent your engagement ring in the most perfect way. Our collection of distinctive and beautiful wedding sets will send your heart souring and you will be sure to find the perfect set to accent your center diamond.
                                     </p>
                                 </div>
                             </div>
@@ -386,7 +382,7 @@
                                     </div>
                                     <div class="title2">Ring Sizing</div>
                                     <p>
-                                        Your engagement ring or wedding band should fit comfortably — not too tight, but not too loose either. The perfect ring fits loose enough to slide over your knuckle and tight enough so that it cannot fall off your finger. To find your ring size, you can use ’s online ring sizer or request a free plastic ring sizer. Keep reading for tips on how to measure your finger size and make sure that you purchase a ring that fits just right.
+                                        Your engagement ring and wedding band should fit comfortably, not be too tight or too loose. You should be able to comfortably put your ring on, but it should fit snuggly enough so that it does not slide off during normal daily activities.
                                     </p>
                                     <div class="article">Online Ring Sizing:</div>
                                     <p>
@@ -399,20 +395,19 @@
                                     <p>
                                         Your finger size changes depending on the weather and time of day. For best results, measure your finger size at the end of the day when your fingers are warm. (Early in the morning, your fingers are cold and therefore smaller.)
                                     </p>
-                                    <div class="article">Measure a few times.</div>
+                                    <div class="article">Measure Your Ring Multiple Times</div>
                                     <p>
-                                        Be sure to measure your finger size a few times to make sure your calculations are accurate.
+                                        If you are not used to wearing a ring, putting it on for the first time can feel strange. Try your ring on a few times to ensure it is the correct size, and try it on during different times of the day as fingers tend to fluctuate in size during the day. If your ring is not the correct size, we are happy to resize it for you.*
                                     </p>
-                                    <div class="article">Tips for Buying a Ring as a Surprise:</div>
+
+                                    <div class="article">Don’t Ruin The Surprise</div>
                                     <p>
-                                        If you don't know your girlfriend's (or boyfriend's) ring size, as her/his close friends or family members. Tell them to keep it hush-hush so that they don't accidentialy ruin the surprise!
+                                        The best way to determine your partner’s ring size is to measure her/his finger. If you cannot do that or want to surprise your partner, ask her/his friends or family if they know the ring size. Often times the mother, sister, or best friends can help you find out this information so you do not ruin the surprise. If you are still stumped, call our jewelry experts and we can help you find a solution to buy your engagement ring without ruining the surprise.
                                     </p>
-                                    <p>
-                                        Borrow his/her ring (from the correct finger!) and use 's online or plastic ring sizer to determine the ring's size.
-                                    </p>
-                                    <p>
-                                        Remember, you can have a  ring resized one time at no extra charge within 30 days of purchase. For more information regarding ring sizing, feel free to contact customer service, available 24/7.
-                                    </p>
+
+                                       <p>
+                                           If you have any questions regarding ring sizing, please call our jewelry experts at 800-214-6550.
+                                       </p>
                                 </div>
                             </div>
                         </div>
@@ -1045,7 +1040,7 @@
                 </div>
             </div>
         </div>
-        <div id="fine_jewerly" class="new-products fine-tab">
+        <div id="diamonds" class="new-products fine-tab">
             <div class="panel product-tabs panel-default">
                 <div class="panel-heading">
                     <ul class="nav nav-tabs">
@@ -1053,7 +1048,7 @@
                         <li><a href="#shapes" data-toggle="tab">SHAPES</a></li>
                         <li><a href="#anatomy" data-toggle="tab">ANATOMY</a></li>
                         <li><a href="#idealCut" data-toggle="tab">IDEAL CUT</a></li>
-                        <li><a href="#fancyColor" data-toggle="tab">FANCY COLOR</a></li>
+                        <!--<li><a href="#fancyColor" data-toggle="tab">FANCY COLOR</a></li>-->
                         <li><a href="#grading" data-toggle="tab">GRADING</a></li>
                         <li><a href="#choosePerfect" data-toggle="tab">CHOOSE THE PERFECT DIAMOND</a></li>
                         <li><a href="#diamondCare" data-toggle="tab">DIAMOND CARE</a></li>
@@ -1061,7 +1056,7 @@
                 </div>
                 <div class="panel-body product-panel-body cs-tab center-bl">
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="forCS">
+                        <div class="tab-pane fade in active" id="anatomy">
                             <div class="sapphires-tab-box clearfix">
                                 <div class="sapphires-link-box">
                                     <a href="#" class="sapphires-link active" data-target="#csTab1">
@@ -1082,9 +1077,25 @@
                                 </div>
                                 <div id="csTab1" class="one-sapphires active">
                                     <div class="block-p">
-                                        <div class="article-p">Diamond Anatomy</div>
+                                        <div class="article-p">How to Select Your Perfect Diamond</div>
                                         <p>
-                                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                            When selecting your perfect diamond, take the time to consider the 4Cs and determine what is the most important factors in a diamond for you. The 4Cs consist of: Cut, Color, Clarity and Carat Weight.
+
+                                        </p>
+                                        <p>
+                                            <b>Cut:</b>  A diamond’s cut is the most important characteristic in determining a diamond’s beauty. The cut of a diamond refers not to its visual shape, but its ability to properly reflect light. A diamond cut to the highest standards of proportion, provides the most beauty and sparkle.
+                                        </p>
+                                        <p>
+                                            <b>Color:</b>  A diamond’s color grade is based on a diamond’s lack of color. The color scale ranges from D to Z, with D being absolutely colorless and Z being light yellow in color. The higher the color grade, the higher the value of the diamond because of the rarity of the stone.
+                                        </p>
+                                        <p>
+                                            <b>Clarity:</b> The clarity of a diamond describes how clear a diamond looks. Clarity is judged by small, naturally occurring imperfections in a diamond known as clarity characteristics. These size and number of these characteristics can effect a diamonds clarity grade and overall beauty.
+                                        </p>
+                                        <p>
+                                            <b>Carat Weight:</b>  Carat is the most visible characteristic of a diamond and refers to the measure of a diamond’s weight. Diamonds with a higher carat weight are always more valuable, because they are found in nature much less often than smaller diamonds. Diamond prices increase substantially as the carat weight increases.
+                                        </p>
+                                        <p>
+                                            For more information on the 4Cs, please visit our 4C’s section or call to speak with one of our gemologists at <a href="tel:800-214-6550">800-214-6550</a> and we will be happy to answer any questions you may have.
                                         </p>
                                     </div>
                                     <div class="wrapper-img">
@@ -1093,26 +1104,21 @@
                                     <div class="block-p">
                                         <div class="article-p">Diamond Anatomy</div>
                                         <p>
-                                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                            You should also consider the shape of your diamond when selecting your perfect stone. Your perfect diamond would not be yours without your unique style and shape preference. Maybe you prefer a classic look with a round brilliant diamond solitaire, or perhaps a pear shape diamond with a halo setting is just what your heart desires. No matter what you prefer, we are sure to have the perfect diamond and setting to give you the engagement ring of your dreams!
+                                            To learn more about different diamond shapes, please see our Diamond Shape section or call to speak with one of our gemologists at <a href="tel:800-214-6550">800-214-6550</a>.
+
                                         </p>
                                         <p>
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+                                            The last aspect in selecting your perfect diamond is your budget. At Brilliant Canary, we have a vast range of diamonds for you to choose from in a wide range of prices. No matter what your budget, we can help you find the perfect diamond to make your heart soar!
+                                            If you have any questions about selecting the perfect diamond for you and your partner, please call us at <a href="tel:800-214-6550">800-214-6550</a> or email us at
+                                            <a href="mailto:info@brilliantcanary.com">info@brilliantcanary.com</a>.
+
+                                        </p>
+                                        <p>
+                                            *Please note, when referring to “perfect” diamond, we at Brilliant Canary are referring to the perfect diamond for you.  Every person has different preferences and finding the diamond that has the attributes you prefer is how we will help you find your perfect diamond.
                                         </p>
                                     </div>
-                                    <div class="block-p">
-                                        <div class="article-p">Diamond Anatomy</div>
-                                        <p>
-                                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                        </p>
-                                        <p>
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                        </p>
-                                    </div>
-                                    <div class="block-p">
-                                        <p>
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                        </p>
-                                    </div>
+
                                 </div>
                                 <div id="csTab2" class="one-sapphires">
                                     <div class="block-p">
@@ -1466,7 +1472,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="anatomy">
+                        <div class="tab-pane fade" id="forCS">
                             <div class="block-p">
                                 <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
                                 <p>
