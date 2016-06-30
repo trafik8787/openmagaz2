@@ -32,15 +32,18 @@
         <div class="wrapper-footer clearfix">
             <div class="one-block">
                 <div class="title">CONTACT US</div>
-                <div class="one-line"><i class="pin-ico"></i><span>123 New York Land, king street, USA</span></div>
-                <div class="one-line"><i class="mail-ico"></i><span>Info@your adress.com</span></div>
-                <div class="one-line"><i class="call-2-ico"></i><span>877-826-9866</span></div>
+                <!--<div class="one-line"><i class="pin-ico"></i><span>123 New York Land, king street, USA</span></div>-->
+                <div class="one-line"><i class="mail-ico"></i><span>info@brilliantcanary.com</span></div>
+                <div class="one-line"><i class="call-2-ico"></i><span>800-214-6550</span></div>
             </div>
             <div class="one-block">
                 <div class="title">INFORMATION</div>
                 <ul>
                     <?php foreach ($informations as $information) { ?>
-                        <li><a href="<?php echo $information['href']; ?>" class="w-general-category">- <?php echo $information['title']; ?></a></li>
+
+                        <?if ($information['bottom'] == 1):?>
+                            <li><a href="<?php echo $information['href']; ?>" class="w-general-category">- <?php echo $information['title']; ?></a></li>
+                        <?endif?>
 
                     <?php } ?>
                     <li><a href="<?php echo $contact; ?>" class="w-general-category">- <?php echo $text_contact; ?></a></li>
@@ -48,13 +51,16 @@
                 </ul>
             </div>
             <div class="one-block">
-                <div class="title">Style advision</div>
+                <div class="title">WHY PICK BRILLIANT CANARY?</div>
                 <ul>
-                    <li><a href="#">- About Us</a></li>
-                    <li><a href="#">- New Products</a></li>
-                    <li><a href="#">- Sale</a></li>
-                    <li><a href="#">- Our brang</a></li>
-                    <li><a href="#">- Letter</a></li>
+                    <?php foreach ($informations as $information):?>
+
+                        <?if ($information['top'] == 1):?>
+                            <li><a href="<?php echo $information['href']; ?>" class="w-general-category">- <?php echo $information['title']; ?></a></li>
+                        <?endif?>
+
+                    <?endforeach?>
+
                 </ul>
             </div>
             <div class="one-block">

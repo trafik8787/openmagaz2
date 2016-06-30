@@ -57,7 +57,7 @@
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#product1" data-toggle="tab">DIAMOND STUDS</a></li>
                         <li><a href="#product2" data-toggle="tab">DIAMOND PENDANTS</a></li>
-                        <li><a href="#product3" data-toggle="tab">PEARLS</a></li>
+                        <!--<li><a href="#product3" data-toggle="tab">PEARLS</a></li>-->
                     </ul>
                 </div>
                 <div class="panel-body product-panel-body center-bl">
@@ -173,12 +173,12 @@
                 <div class="panel-heading">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#ringTypes" data-toggle="tab">RING TYPES</a></li>
-                        <li><a href="#settingTypes" data-toggle="tab">SETTING TYPES</a></li>
+                        <!--<li><a href="#settingTypes" data-toggle="tab">SETTING TYPES</a></li>-->
                         <li><a href="#ringSizing" data-toggle="tab">RING SIZING</a></li>
                         <li><a href="#metals" data-toggle="tab">METALS</a></li>
-                        <li><a href="#budget" data-toggle="tab">BUDGET</a></li>
-                        <li><a href="#perfectRing" data-toggle="tab">CHOOSE THE PERFECT ENGAGEMENT RING</a></li>
-                        <li><a href="#manufacturing" data-toggle="tab">MANUFACTURING</a></li>
+                        <!--<li><a href="#budget" data-toggle="tab">BUDGET</a></li>-->
+                        <li><a href="#perfectRing" data-toggle="tab">SELECT THE PERFECT ENGAGEMENT RING</a></li>
+                        <!--<li><a href="#manufacturing" data-toggle="tab">MANUFACTURING</a></li>-->
                     </ul>
                 </div>
                 <div class="panel-body product-panel-body center-bl">
@@ -676,8 +676,8 @@
                 <div class="panel-heading">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#weddingRing" data-toggle="tab">WEDDING RING STYLES</a></li>
-                        <li><a href="#alternativeMetals" data-toggle="tab">ALTERNATIVE METALS</a></li>
-                        <li><a href="#perfectWeddingRing" data-toggle="tab">FINDING THE PERFECT WEDDING RING</a></li>
+                        <!--<li><a href="#alternativeMetals" data-toggle="tab">ALTERNATIVE METALS</a></li>-->
+                        <!--<li><a href="#perfectWeddingRing" data-toggle="tab">FINDING THE PERFECT WEDDING RING</a></li>-->
                     </ul>
                 </div>
                 <div class="panel-body product-panel-body center-bl">
@@ -1047,7 +1047,7 @@
                         <li class="active"><a href="#forCS" data-toggle="tab">4CS</a></li>
                         <li><a href="#shapes" data-toggle="tab">SHAPES</a></li>
                         <li><a href="#anatomy" data-toggle="tab">ANATOMY</a></li>
-                        <li><a href="#idealCut" data-toggle="tab">IDEAL CUT</a></li>
+                        <!--<li><a href="#idealCut" data-toggle="tab">IDEAL CUT</a></li>-->
                         <!--<li><a href="#fancyColor" data-toggle="tab">FANCY COLOR</a></li>-->
                         <li><a href="#grading" data-toggle="tab">GRADING</a></li>
                         <li><a href="#choosePerfect" data-toggle="tab">CHOOSE THE PERFECT DIAMOND</a></li>
@@ -1056,7 +1056,7 @@
                 </div>
                 <div class="panel-body product-panel-body cs-tab center-bl">
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="anatomy">
+                        <div class="tab-pane fade" id="anatomy">
                             <div class="sapphires-tab-box clearfix">
                                 <div class="sapphires-link-box">
                                     <a href="#" class="sapphires-link active" data-target="#csTab1">
@@ -1472,7 +1472,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="forCS">
+                        <div class="tab-pane fade" id="choosePerfect">
                             <div class="block-p">
                                 <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
                                 <p>
@@ -1773,15 +1773,15 @@
                                     <a href="#" class="sapphires-link grading active" data-target="#gradingTab1">
                                         DIAMOND CERTIFICATE
                                     </a>
-                                    <a href="#" class="sapphires-link grading" data-target="#gradingTab2">
-                                        A CERTIFICATE IS NOT ENOUGH
-                                    </a>
+                                    <!--<a href="#" class="sapphires-link grading" data-target="#gradingTab2">-->
+                                        <!--A CERTIFICATE IS NOT ENOUGH-->
+                                    <!--</a>-->
                                     <a href="#" class="sapphires-link grading" data-target="#gradingTab3">
                                         CONFLICT-FREE
                                     </a>
-                                    <a href="#" class="sapphires-link grading" data-target="#gradingTab4">
-                                        EYE CLEAN DIAMONDS
-                                    </a>
+                                    <!--<a href="#" class="sapphires-link grading" data-target="#gradingTab4">-->
+                                        <!--EYE CLEAN DIAMONDS-->
+                                    <!--</a>-->
                                 </div>
                                 <div id="gradingTab1" class="one-grading active">
                                     <div class="one-line text-left">
@@ -1926,7 +1926,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="choosePerfect">
+                        <div class="tab-pane fade in active" id="forCS">
                             <div class="sapphires-tab-box clearfix">
                                 <div class="sapphires-link-box">
                                     <a href="#" class="sapphires-link choose-perfect active" data-target="#choosePerfectTab1">
@@ -2214,17 +2214,7 @@
                                             Total carat weight (denoted as ctw), refers to the total carat weight in a jewelry piece such as an engagement ring with diamonds or gemstones in the setting.
                                         </p>
                                     </div>
-                                    <div class="block-p">
-                                        <p>
-                                            A diamond will increase in weight much faster than it increases in actual "face-up" diameter. For example, while an ideal cut one-carat diamond measures approximately 6.5mm in width, a diamond of twice its weight measures only 8.2mm wide—less than a 30% increase. The graphic to the left helps illustrate this point.
-                                        </p>
-                                    </div>
-                                    <div class="block-p">
-                                        <div class="article-p">Which Carat Weight Is Right For You?</div>
-                                        <p>
-                                            This question has no direct answer. It is a choice that depends on personal preference and budget. When looking at a diamond engagement ring, what is most visible is the size of the surface area on the top of the diamond. It is difficult to measure a diamond’s carat weight simply by looking at it. Although carat weight influences cost quite a bit, it is advisable to focus on diamond cut and diameter.
-                                        </p>
-                                    </div>
+
 
                                 </div>
                             </div>
@@ -2234,10 +2224,11 @@
                                 <img src="catalog/view/theme/canary/img/fine/img52.png" alt="img" height="320">
                             </div>
                             <div class="block-p">
-                                <div class="article-p">Diamond Care</div>
+                                <div class="article-p">SELECT THE PERFECT ENGAGEMENT RING</div>
                                 <p>
                                     Cleaning Your Diamond Jewelry
                                 </p>
+
                             </div>
                             <div class="block-p">
                                 <p>

@@ -451,12 +451,7 @@
                     <li>
                         <a href="/education" class="w-general-category">EDUCATION</a>
                     </li>
-                    <li>
-                        <a href="/faq" class="w-general-category">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="/about_us" class="w-general-category">ABOUT</a>
-                    </li>
+
                 </ul>
             </div>
         </div>

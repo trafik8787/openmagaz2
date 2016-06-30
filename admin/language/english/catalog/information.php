@@ -22,16 +22,16 @@ $_['entry_meta_title'] 	     = 'Meta Tag Title';
 $_['entry_meta_keyword'] 	 = 'Meta Tag Keywords';
 $_['entry_meta_description'] = 'Meta Tag Description';
 $_['entry_keyword']          = 'SEO Keyword';
-$_['entry_bottom']           = 'Bottom';
-$_['entry_top']              = 'Top';
+$_['entry_bottom']           = 'Column INFORMATION';
+$_['entry_top']              = 'Column WHY PICK BRILLIANT CANARY';
 $_['entry_status']           = 'Status';
 $_['entry_sort_order']       = 'Sort Order';
 $_['entry_layout']           = 'Layout Override';
 
 // Help
 $_['help_keyword']           = 'Do not use spaces, instead replace spaces with - and make sure the keyword is globally unique.';
-$_['help_bottom']            = 'Display in the bottom footer.';
-$_['help_top']            = 'Display in the top.';
+$_['help_bottom']            = 'Display in the bottom footer column INFORMATION.';
+$_['help_top']            = 'Display in the column WHY PICK BRILLIANT CANARY.';
 
 // Error
 $_['error_warning']          = 'Warning: Please check the form carefully for errors!';
