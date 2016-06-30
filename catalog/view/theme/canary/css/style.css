@@ -1029,7 +1029,7 @@ button:hover, button:focus {
 
 .top-main-r {
   max-width: 1980px;
-  height: 472px;
+  height: 720px;
   margin: 0 auto;
   align-items: center;
   color: #444444;
@@ -1039,7 +1039,7 @@ button:hover, button:focus {
   display: -ms-flexbox;
   display: flex; }
   .top-main-r.top-main-r1 {
-    background: url("../img/img1.png") no-repeat center/cover; }
+    background: url("../img/img-new1.jpg") no-repeat center/cover; }
   .top-main-r.top-main-r2 {
     margin-bottom: 43px;
     background: url("../img/img11.png") no-repeat center/cover; }
@@ -2794,7 +2794,7 @@ button:hover, button:focus {
     float: left;
     overflow: hidden;
     border-left: 3px solid #ffffff;
-    background: url("../img/img12.png") no-repeat center/cover; }
+    background: url("../img/img-new12.jpg") no-repeat center/cover; }
   .newsletter-main .newsletter-form {
     width: 50%;
     height: 630px;

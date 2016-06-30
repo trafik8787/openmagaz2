@@ -4,6 +4,13 @@ class ControllerAccountRegister extends Controller {
     private $data = array();
 
 
+    function __construct($registry)
+    {
+        parent::__construct($registry);
+        $this->load->language('account/register');
+    }
+
+
 	public function index() {
 		if ($this->customer->isLogged()) {
 			$this->response->redirect($this->url->link('account/account', '', 'SSL'));
@@ -330,8 +337,6 @@ class ControllerAccountRegister extends Controller {
 
 
     private function get_language () {
-
-        $this->load->language('account/register');
 
         $this->data['heading_title'] = $this->language->get('heading_title');
 

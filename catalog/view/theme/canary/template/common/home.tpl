@@ -194,61 +194,61 @@
 
 
         <div class="ih-item colored effect5">
-            <a href="#">
+            <a href="/wedding-rings">
                     <span class="img">
-                        <img src="catalog/view/theme/canary/img/img2.png" alt="img">
+                        <img src="catalog/view/theme/canary/img/img-new2.jpg" alt="img">
                     </span>
                     <span class="info">
                         <span class="info-back">
-                            <span>diamond<br/>collection</span>
+                            <span>Mens<br/>Wedding Rings</span>
                         </span>
                     </span>
             </a>
         </div>
         <div class="ih-item colored effect5">
-            <a href="#">
+            <a href="/diamonds">
                     <span class="img">
-                        <img src="catalog/view/theme/canary/img/img3.png" alt="img">
+                        <img src="catalog/view/theme/canary/img/img-new3.jpg" alt="img">
                     </span>
                     <span class="info">
                         <span class="info-back">
-                            <span>diamond<br/>collection</span>
+                            <span>Loose<br/>Diamonds</span>
                         </span>
                     </span>
             </a>
         </div>
         <div class="ih-item colored effect5">
-            <a href="#">
+            <a href="/wedding-rings">
                     <span class="img">
-                        <img src="catalog/view/theme/canary/img/img4.png" alt="img">
+                        <img src="catalog/view/theme/canary/img/img-new4.jpg" alt="img">
                     </span>
                     <span class="info">
                         <span class="info-back">
-                            <span>diamond<br/>collection</span>
+                            <span>Wedding<br/>Rings</span>
                         </span>
                     </span>
             </a>
         </div>
         <div class="ih-item colored effect5">
-            <a href="#">
+            <a href="/engagement-rings">
                     <span class="img">
-                        <img src="catalog/view/theme/canary/img/img5.png" alt="img">
+                        <img src="catalog/view/theme/canary/img/img-new5.jpg" alt="img">
                     </span>
                     <span class="info">
                         <span class="info-back">
-                            <span>diamond<br/>collection</span>
+                            <span>ENGAGEMENT<br/>RINGS</span>
                         </span>
                     </span>
             </a>
         </div>
         <div class="ih-item colored effect5">
-            <a href="#">
+            <a href="/fine_jeverly">
                     <span class="img">
-                        <img src="catalog/view/theme/canary/img/img6.png" alt="img">
+                        <img src="catalog/view/theme/canary/img/img-new6.jpg" alt="img">
                     </span>
                     <span class="info">
                         <span class="info-back">
-                            <span>diamond<br/>collection</span>
+                            <span>Fashion<br/>Jewelry</span>
                         </span>
                     </span>
             </a>
