@@ -1,7 +1,7 @@
 <?php echo isset($header) ? $header : ''; ?>
 
 
-<?dd($width)?>
+<?//dd($width)?>
 <?//dd($attribute_groups)?>
 <?//dd($attribute_groups)?>
 <?//dd($products_metal)?>
