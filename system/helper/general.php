@@ -159,15 +159,16 @@ function rating($id) {
 
 function list_metal ($value = null) {
 
-
-
     $arr = array(
-        'rose_gold' => 'Rose gold',
+        'white_gold_14' => '14K White Gold',
+        'yellow_gold_14' => '14K Yellow Gold',
+        'rose_gold_14' => '14K Rose Gold',
+        'white_gold_18' => '18K White Gold',
+        'yellow_gold_18' => '18K Yellow Gold',
+        'rose_gold_18' => '18K Rose Gold',
         'platinum' => 'Platinum',
-        'white_gold_18' => 'White gold 18',
-        'yellow_gold_18' => 'Yellow gold 18',
-        'white_gold_14' => 'White gold 14',
-        'yellow_gold_14' => 'Yellow gold 14');
+        'palladium' => 'Palladium'
+    );
 
     if ($value !== null) {
         if (!empty($arr[$value])) {
