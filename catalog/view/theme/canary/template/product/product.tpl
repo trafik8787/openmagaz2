@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="one-product-info" id="product">
-                    <div class="text-article clearfix">14K WHITE GOLD 2MM KNIFE EDGE <div class="product-code">Product code: <strong>SKU:<?=$sku?></strong></div></div>
+                    <div class="text-article clearfix"><?=$name?> <div class="product-code">Product code: <strong>SKU:<?=$sku?></strong></div></div>
                     <div class="rating">
                         <i class="star active"></i>
                         <i class="star active"></i>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="one-info">
                         <div class="title-red">SETTING SPECIFICATIONS <strong>SKU: <?=$sku?></strong></div>
-                        This knife-edge diamond solitaire ring is the perfect way to showcase the diamond you o showcase the diamond you choose just for her. *Center diamond purchase required.*
+                        <?=$description?>
                     </div>
                     <div class="one-info one-info-last clearfix">
                         <div class="title-red">SETTING SPECIFICATIONS SKU: <?=$sku?></div>

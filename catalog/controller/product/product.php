@@ -157,7 +157,7 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
-
+        //dd($product_info);
 		if ($product_info) {
 			$url = '';
 
@@ -225,7 +225,7 @@ class ControllerProductProduct extends Controller {
 			$this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css');
 
 			$data['heading_title'] = $product_info['name'];
-
+            $data['name'] = $product_info['name'];
             $data['id_product'] = $product_info['product_id'];
            // $data['path'] = $this->request->get['path'];
 
