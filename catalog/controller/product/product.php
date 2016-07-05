@@ -272,6 +272,7 @@ class ControllerProductProduct extends Controller {
 			$data['model'] = $product_info['model'];
             $data['sku'] = $product_info['sku'];
             $data['weight'] = round($product_info['weight'], 1);
+            $data['width'] = round($product_info['width'], 2);
             $data['metal'] = $product_info['metal'];
 			$data['reward'] = $product_info['reward'];
 			$data['points'] = $product_info['points'];

@@ -1,7 +1,8 @@
 <?php echo isset($header) ? $header : ''; ?>
 
 
-<?//dd($products)?>
+<?dd($width)?>
+<?//dd($attribute_groups)?>
 <?//dd($attribute_groups)?>
 <?//dd($products_metal)?>
 
@@ -76,7 +77,23 @@
                     <div class="one-info one-info-last clearfix">
                         <div class="title-red">SETTING SPECIFICATIONS SKU: <?=$sku?></div>
                         Metal: <?=list_metal($metal)?><br/>
-                        Weight: <?=$weight?> g.
+                        <?if ($weight != ''):?>
+                            Weight: <?=$weight?> g.
+                            <br/>
+                        <?endif?>
+                        <?if ($width != ''):?>
+                            Width: <?=$width?> mm.
+                            <br/>
+                        <?endif?>
+
+
+                        <?if (!empty($attribute_groups)):?>
+                            <?foreach ($attribute_groups[0]['attribute'] as $row):?>
+                                <?=$row['name']?>: <?=$row['text']?> <br/>
+                            <?endforeach?>
+                        <?endif?>
+
+
                         <a href="#" class="more-diamant">more about diamonds>>></a>
                     </div>
 
