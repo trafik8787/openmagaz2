@@ -1312,10 +1312,10 @@
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img53.png" alt="img">
-                                        <div class="text-center">
-                                            Round
-                                        </div>
+                                        <img src="/image/enducation_shapes/round.jpg" alt="img">
+                                        <!--<div class="text-center">-->
+                                            <!--Round-->
+                                        <!--</div>-->
                                     </div>
                                     <div>
                                         <div class="title-ws">
@@ -1328,10 +1328,10 @@
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img54.png" alt="img">
-                                        <div class="text-center">
-                                            Princess
-                                        </div>
+                                        <img src="/image/enducation_shapes/princess.jpg" alt="img">
+                                        <!--<div class="text-center">-->
+                                            <!--Princess-->
+                                        <!--</div>-->
                                     </div>
                                     <div>
                                         <div class="title-ws">
@@ -1344,10 +1344,10 @@
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img55.png" alt="img">
-                                        <div class="text-center">
-                                            Emerald
-                                        </div>
+                                        <img src="/image/enducation_shapes/emerald.jpg" alt="img">
+                                        <!--<div class="text-center">-->
+                                            <!--Emerald-->
+                                        <!--</div>-->
                                     </div>
                                     <div>
                                         <div class="title-ws">
@@ -1360,10 +1360,10 @@
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img56.png" alt="img">
-                                        <div class="text-center">
-                                            Pear
-                                        </div>
+                                        <img src="/image/enducation_shapes/pear.jpg" alt="img">
+                                        <!--<div class="text-center">-->
+                                            <!--Pear-->
+                                        <!--</div>-->
                                     </div>
                                     <div>
                                         <div class="title-ws">
@@ -1376,10 +1376,10 @@
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img57.png" alt="img">
-                                        <div class="text-center">
-                                            Radiant
-                                        </div>
+                                        <img src="/image/enducation_shapes/radiant.jpg" alt="img">
+                                        <!--<div class="text-center">-->
+                                            <!--Radiant-->
+                                        <!--</div>-->
                                     </div>
                                     <div>
                                         <div class="title-ws">
@@ -1392,10 +1392,10 @@
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img58.png" alt="img">
-                                        <div class="text-center">
-                                            Marquise
-                                        </div>
+                                        <img src="/image/enducation_shapes/marquise.jpg" alt="img">
+                                        <!--<div class="text-center">-->
+                                            <!--Marquise-->
+                                        <!--</div>-->
                                     </div>
                                     <div>
                                         <div class="title-ws">
@@ -1408,10 +1408,10 @@
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img59.png" alt="img">
-                                        <div class="text-center">
-                                            Cushion
-                                        </div>
+                                        <img src="/image/enducation_shapes/cushion.jpg" alt="img">
+                                        <!--<div class="text-center">-->
+                                            <!--Cushion-->
+                                        <!--</div>-->
                                     </div>
                                     <div>
                                         <div class="title-ws">
@@ -1424,10 +1424,10 @@
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img60.png" alt="img">
-                                        <div class="text-center">
-                                            Heart
-                                        </div>
+                                        <img src="/image/enducation_shapes/heart.jpg" alt="img">
+                                        <!--<div class="text-center">-->
+                                            <!--Heart-->
+                                        <!--</div>-->
                                     </div>
                                     <div>
                                         <div class="title-ws">
@@ -1440,10 +1440,10 @@
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img61.png" alt="img">
-                                        <div class="text-center">
-                                            Oval
-                                        </div>
+                                        <img src="/image/enducation_shapes/oval.jpg" alt="img">
+                                        <!--<div class="text-center">-->
+                                            <!--Oval-->
+                                        <!--</div>-->
                                     </div>
                                     <div>
                                         <div class="title-ws">
@@ -1456,10 +1456,10 @@
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img62.png" alt="img">
-                                        <div class="text-center">
-                                            Asscher
-                                        </div>
+                                        <img src="/image/enducation_shapes/asscher.jpg" alt="img">
+                                        <!--<div class="text-center">-->
+                                            <!--Asscher-->
+                                        <!--</div>-->
                                     </div>
                                     <div>
                                         <div class="title-ws">

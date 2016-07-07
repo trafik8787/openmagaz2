@@ -4486,7 +4486,7 @@ button:hover, button:focus {
     vertical-align: middle; }
   .one-line-symmetry2 .box-ws {
     width: 230px;
-    padding-right: 80px;
+    /*padding-right: 80px;*/
     font-family: 'SegoeUI', sans-serif;
     text-align: center; }
     .one-line-symmetry2 .box-ws img {
