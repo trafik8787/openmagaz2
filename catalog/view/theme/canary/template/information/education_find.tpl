@@ -1122,117 +1122,137 @@
                                 </div>
                                 <div id="csTab2" class="one-sapphires">
                                     <div class="block-p">
-                                        <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
-                                        <p>
-                                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                        </p>
-                                    </div>
-                                    <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/img13.png" alt="img" width="600">
-                                    </div>
-                                    <div class="block-p">
-                                        <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
-                                        <p>
-                                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                        </p>
-                                        <p>
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+                                        <div class="article-p">Proportion: Understanding Proportion Characteristics</div>
+                                        <p class="text-left">
+                                            A diamond cut to the highest standards of proportion, provides the most beauty and sparkle. Diamond’s cut grade is determined by three types of reflected light— brilliance, fire and scintillation.
                                         </p>
                                     </div>
                                     <div class="block-p">
-                                        <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
-                                        <p>
-                                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                        </p>
-                                        <p>
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                        </p>
+                                        <span class="text-left">
+                                            <p>
+                                                <b>Brilliance:</b> Brilliance refers to a diamonds brightness, and is seen by the eye as white light reflected back from the diamond.
+                                            </p>
+                                            <p>
+                                                <b>Fire:</b> Fire refers to the flashes of rainbow colors reflected back to the eye from a polished diamond.
+                                            </p>
+                                            <p>
+                                                <b>Scintillation:</b> Scintillation refers to the flashes of contrasting light and dark areas in a diamond when it moves, resulting in sparkle.
+                                            </p>
+                                            <p>
+                                                If cut to ideal proportions, these three factors create an exceptionally beautiful diamond. The cut of a diamond is judged on the balance of symmetry, polish and proportions. The proportions of a diamonds table size, crown, girdle, pavilion and culet all contribute to how light will be reflected and seen by the eye. When cut to ideal proportions, light enters the top of the stone and is reflected back through the crown, providing the diamond with the maximum amount of brilliance. If cut too deep or too shallow, light will escape out the pavilion known as light leakage. This results in a less brilliant diamond that can appear darker in color.
+                                            </p>
+                                            <p>
+                                                Having a well-proportioned diamond is key to having a stunning and truly special engagement ring.
+                                            </p>
+                                        </span>
                                     </div>
-                                    <div class="block-p">
-                                        <p>
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                        </p>
-                                    </div>
+
                                 </div>
                                 <div id="csTab3" class="one-sapphires">
-                                    <div class="block-p text-left">
+                                    <div class="block-p">
                                         <div class="article-p">Diamond Symmetry</div>
-                                        <p>
-                                            Symmetry refers to the exactness of the shape and arrangement of facets in a diamond. Although to the naked eye finish features only have a tiny effect on appearance, symmetry is significant. In diamonds that have low clarity grades, symmetry is less important, but in diamonds with very high clarity grades, symmetry is very important.
+                                        <p class="text-left">
+                                            A diamond’s symmetry refers to the exactness of a diamond’s shape and the alignment of its facets. Symmetry can play a vital part in the beauty of a diamond. To help you understand the different aspects of a diamond’s symmetry and how they can affect your diamond, here are some key characteristics.
                                         </p>
                                     </div>
                                     <div class=" box-types-tab clearfix">
                                         <div class="one-line-symmetry">
-                                            <div class="box-ws">
+                                            <!--<div class="box-ws">
                                                 <img src="catalog/view/theme/canary/img/fine/img50.png" alt="img">
                                                 <div class="text-center">
                                                     Off-center culet
                                                 </div>
-                                            </div>
-                                            <div class="title-ws">Diamond Symmetry</div>
+                                            </div>-->
+                                            <div class="title-ws"><b>Extra Facets</b></div>
                                             <p>
-                                                Symmetry refers to the exactness of the shape and arrangement of facets in a diamond. Although to the naked eye finish features only have a tiny effect on appearance, symmetry is significant. In diamonds that have low clarity grades, symmetry is less important, but in diamonds with very high clarity grades, symmetry is very important.
+                                                Extra facets are typically seen near the girdle or on the pavilion of a diamonds. Extra facets are often places to remove a clarity characteristic that would lower the grade of the diamonds. Extra facets rarely effect the beauty of a diamond if placed correctly.
                                             </p>
                                         </div>
                                         <div class="one-line-symmetry">
-                                            <div class="box-ws">
+                                            <!--<div class="box-ws">
                                                 <img src="catalog/view/theme/canary/img/fine/img51.png" alt="img">
                                                 <div class="text-center">
                                                     Off-center table
                                                 </div>
-                                            </div>
-                                            <div class="title-ws">Diamond Symmetry</div>
+                                            </div>-->
+                                            <div class="title-ws"><b>Naturals</b></div>
                                             <p>
-                                                Symmetry refers to the exactness of the shape and arrangement of facets in a diamond. Although to the naked eye finish features only have a tiny effect on appearance, symmetry is significant. In diamonds that have low clarity grades, symmetry is less important, but in diamonds with very high clarity grades, symmetry is very important.
+                                                Naturals refer to a part of the original “rough” diamond that was never polished or cut away. Naturals are seen on the girdle of a diamond and an experienced cutter can leave small naturals on a diamond without effecting its beauty.
                                             </p>
                                         </div>
                                         <div class="one-line-symmetry">
-                                            <div class="box-ws">
+                                            <!--<div class="box-ws">
                                                 <img src="catalog/view/theme/canary/img/fine/img48.png" alt="img">
                                                 <div class="text-center">
                                                     Misshapen facets
                                                 </div>
-                                            </div>
-                                            <div class="title-ws">Diamond Symmetry</div>
+                                            </div>-->
+                                            <div class="title-ws"><b>Table Off-Center</b></div>
                                             <p>
-                                                The Emerald-Cut Diamond is a very popular style known for its beauty and precision. While it lacks the brilliance of diamonds cut with triangular and kite-shaped facets, it more than makes up for it in its extreme clarity – it’s like looking into glacier-pure ice. The Emerald-Cut diamond is named so because this style of cut was originally used only on emeralds.
+                                                The table of a diamond should be an octagon shape and centered in the middle of the diamond. When the table is slightly off center or misshapen, it is off-center and effects the symmetry. An off-center table can have an effect on a diamonds light performance.
                                             </p>
                                         </div>
                                         <div class="one-line-symmetry">
-                                            <div class="box-ws">
+                                            <!--<div class="box-ws">
                                                 <img src="catalog/view/theme/canary/img/fine/img49.png" alt="img">
                                                 <div class="text-center">
                                                     Off girdle
                                                 </div>
-                                            </div>
-                                            <div class="title-ws">Diamond Symmetry</div>
+                                            </div>-->
+                                            <div class="title-ws"><b>Culet Off-Center</b></div>
                                             <p>
-                                                The Emerald-Cut Diamond is a very popular style known for its beauty and precision. While it lacks the brilliance of diamonds cut with triangular and kite-shaped facets, it more than makes up for it in its extreme clarity – it’s like looking into glacier-pure ice.
+                                                The culet of a diamond should be centered perfectly through the table. If one side of the pavilion is longer than the other, you can have an off-center culet. Similar to an off-center table, this symmetry characteristic can have an effect on a diamonds light performance.
                                             </p>
                                         </div>
-                                    </div>
-                                    <div class="two-box-in-tab clearfix">
-                                        <div class="one-block">
-                                            <img src="catalog/view/theme/canary/img/fine/img46.png" alt="img">
-                                            <div class="title-two">Crown & pavillion misalignment</div>
-                                            <div class="text-two">
-                                                The Emerald-Cut Diamond is a very popular style known for its beauty and precision. While it lacks the brilliance of diamonds cut with triangular and kite-shaped facets, it more than makes up for it in its extreme clarity.
-                                            </div>
+                                        <div class="one-line-symmetry">
+                                            <!--<div class="box-ws">
+                                                <img src="catalog/view/theme/canary/img/fine/img49.png" alt="img">
+                                                <div class="text-center">
+                                                    Off girdle
+                                                </div>
+                                            </div>-->
+                                            <div class="title-ws"><b>Wavy Girdle</b></div>
+                                            <p>
+                                                The girdle of a diamond should be a straight line, parallel to the table. If the diamond is cut improperly, you can see a girdle that has a slight wave to it. This symmetry characteristic can give your diamond a distorted look.
+                                            </p>
                                         </div>
-                                        <div class="one-block">
-                                            <img src="catalog/view/theme/canary/img/fine/img47.png" alt="img">
-                                            <div class="title-two">Wavy girdle</div>
-                                            <div class="text-two">
-                                                The Emerald-Cut Diamond is a very popular style known for its beauty and precision. While it lacks the brilliance of diamonds cut with triangular and kite-shaped facets, it more than makes up for it in its extreme clarity.
-                                            </div>
+                                        <div class="one-line-symmetry">
+                                            <!--<div class="box-ws">
+                                                <img src="catalog/view/theme/canary/img/fine/img49.png" alt="img">
+                                                <div class="text-center">
+                                                    Off girdle
+                                                </div>
+                                            </div>-->
+                                            <div class="title-ws"><b>Table and Girdle Not Parallel</b></div>
+                                            <p>
+                                                The table should be parallel to the diamonds girdle. When the table is not parallel, it gives the diamond a tilted appearance from the side.
+                                            </p>
+                                        </div>
+                                        <div class="one-line-symmetry">
+                                            <!--<div class="box-ws">
+                                                <img src="catalog/view/theme/canary/img/fine/img49.png" alt="img">
+                                                <div class="text-center">
+                                                    Off girdle
+                                                </div>
+                                            </div>-->
+                                            <div class="title-ws"><b>Out of Round</b></div>
+                                            <p>
+                                                This symmetry characteristic refers to the diamond not being perfectly round. This symmetry characteristic can greatly effect a diamonds cut grade as well as how it reflects light.
+                                            </p>
+                                        </div>
+                                        <div class="two-box-in-tab clearfix">
+
+                                               <p>*The symmetry characteristics are used when grading round brilliant cut diamonds. Fancy shape diamonds have different grading characteristics. For more information on diamond symmetry or if you need help picking the perfect diamond for you, please contact one of our experienced Gemologists at 800-214-6550 and we will be happy to help guide you.</p>
+
                                         </div>
                                     </div>
+
                                 </div>
                                 <div id="csTab4" class="one-sapphires">
                                     <div class="block-p">
                                         <div class="article-p">Diamond Polish</div>
                                         <p>
-                                            Symmetry refers to the exactness of the shape and arrangement of facets in a diamond. Although to the naked eye finish features only have a tiny effect on appearance, symmetry is significant. In diamonds that have low clarity grades, symmetry is less important, but in diamonds with very high clarity grades, symmetry is very important.
+                                            Polish is essential to how well a diamond will reflect light. Polish refers to how smooth each facet of a finished diamond had been polished, measured by a gemologist. Polish marks are rarely seen with the naked eye, but polish grades below Good can often impact a diamonds beauty. When selecting a diamond, choose one that has a higher polish grade to ensure maximum brilliance.
                                         </p>
                                     </div>
                                     <div class="box-ring-fine alternative-metal clearfix">
@@ -1247,55 +1267,24 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="block-p">
-                                        <div class="article-p">What Is Diamond Polish?</div>
-                                        <p>
-                                            Diamond polish influences how well light is able to pass through a diamond. It is a very important attribute in determining a diamond's overall brilliance. When choosing a diamond, it is best to pick one that is laboratory certified with good, very good or excellent polish. Diamonds with poor polish are significantly less brilliant because they have microscopic polish lines that blur the surface of the stone—this also reduces the amount of light that enters or exits the diamond. Be aware that many diamonds have a poor polish because some diamond cutters reduce their costs by not spending sufficient time to properly polish a diamond.
-                                        </p>
-                                    </div>
-                                    <div class="block-p">
-                                        <div class="article-p">How Is Polish Graded?</div>
-                                        <p>
-                                            Polish is graded the same that way symmetry is graded. On a GIA report, the grades are Excellent, Very Good, Good, Fair or Poor. The same applies for AGS and IGI reports, which also include ideal in their lisThere is very little difference between these ratings to the unaided eye. A diamond with a polish rating of Good can still be a remarkable stone. It is only under magnification that the differences in these ratings become clearer. Polish rated Fair (FR) and Poor (PR), however, indicates that the flaws in the polish are visible to the naked eye and affect the overall beauty of the diamond.
-                                        </p>
-                                        <p>
-                                            It is also important that your ring does not have a porosity problem or rough spots in the metal. Porosity is when there are little surface holes that get worse as you go deeper into the metal. Generally the result of mass producing rings with poor quality control, porosity makes a ring weak and is non-repairable. A ring with porosity will eventually break down.
-                                        </p>
-                                    </div>
+
                                 </div>
                                 <div id="csTab5" class="one-sapphires">
                                     <div class="block-p">
                                         <div class="article-p">FLUORESCENCE – Understanding Brilliance, Dispersion & Scintillation</div>
-                                        <p>
-                                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                        </p>
+
+                                        <p>Fluorescence refers to a diamond or gemstone’s ability to emit a glow when exposed to ultra violet light. This phenomenon is naturally occurring and can be seen in many different gemstones. In diamonds, fluorescence is typically seen as a blue in color, but occasionally diamonds can fluoresce colors of green, yellow, white, pink or even red. A diamond’s fluorescence is not visible under typical light conditions and not seen by the naked eye.</p>
+
+                                        <p>Not all diamonds fluoresce, but this characteristic is easily detected with gemological tools and always noted on a grading report.</p>
+
+                                        <p>In some cases, fluorescence can positively affect the appearance of a diamond and make it appear whiter. If a diamond exhibits a more yellow color, but features a medium or strong blue fluorescence, this diamond can appear to be whiter.</p>
+
+
                                     </div>
                                     <div class="wrapper-img">
                                         <img src="catalog/view/theme/canary/img/fine/img80.png" alt="img" width="600">
                                     </div>
-                                    <div class="block-p">
-                                        <div class="article-p">FLUORESCENCE – Understanding Brilliance, Dispersion & Scintillation</div>
-                                        <p>
-                                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                        </p>
-                                        <p>
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                        </p>
-                                    </div>
-                                    <div class="block-p">
-                                        <div class="article-p">FLUORESCENCE – Understanding Brilliance, Dispersion & Scintillation</div>
-                                        <p>
-                                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                        </p>
-                                        <p>
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                        </p>
-                                    </div>
-                                    <div class="block-p">
-                                        <p>
-                                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                        </p>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -1474,40 +1463,51 @@
                         </div>
                         <div class="tab-pane fade" id="choosePerfect">
                             <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
+                                <div class="article-p">How to Select Your Perfect Diamond</div>
                                 <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                    When selecting your perfect diamond, take the time to consider the 4Cs and determine what is the most important factors in a diamond for you. The 4Cs consist of: Cut, Color, Clarity and Carat Weight.
+                                </p>
+                                <p>
+                                    Cut:  A diamond’s cut is the most important characteristic in determining a diamond’s beauty. The cut of a diamond refers not to its visual shape, but its ability to properly reflect light. A diamond cut to the highest standards of proportion, provides the most beauty and sparkle.
+                                </p>
+                                <p>
+                                    Color:  A diamond’s color grade is based on a diamond’s lack of color. The color scale ranges from D to Z, with D being absolutely colorless and Z being light yellow in color. The higher the color grade, the higher the value of the diamond because of the rarity of the stone.
+                                </p>
+                                <p>
+                                    Clarity: The clarity of a diamond describes how clear a diamond looks. Clarity is judged by small, naturally occurring imperfections in a diamond known as clarity characteristics. These size and number of these characteristics can effect a diamonds clarity grade and overall beauty.
+                                </p>
+                                <p>
+                                    Carat Weight:  Carat is the most visible characteristic of a diamond and refers to the measure of a diamond’s weight. Diamonds with a higher carat weight are always more valuable, because they are found in nature much less often than smaller diamonds. Diamond prices increase substantially as the carat weight increases.
+                                </p>
+                                <p>
+                                    For more information on the 4Cs, please visit our 4C’s section or call to speak with one of our gemologists at 800-214-6550 and we will be happy to answer any questions you may have.
                                 </p>
                             </div>
-                            <div class="wrapper-img">
-                                <img src="catalog/view/theme/canary/img/fine/img13.png" alt="img" width="580">
+
+                            <div class="block-p">
+
+                                <p>
+                                    You should also consider the shape of your diamond when selecting your perfect stone. Your perfect diamond would not be yours without your unique style and shape preference. Maybe you prefer a classic look with a round brilliant diamond solitaire, or perhaps a pear shape diamond with a halo setting is just what your heart desires. No matter what you prefer, we are sure to have the perfect diamond and setting to give you the engagement ring of your dreams!
+                                </p>
+                                <p>
+                                    To learn more about different diamond shapes, please see our Diamond Shape section or call to speak with one of our gemologists at 800-214-6550.
+                                </p>
                             </div>
                             <div class="block-p">
                                 <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
                                 <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                                    The last aspect in selecting your perfect diamond is your budget. At Brilliant Canary, we have a vast range of diamonds for you to choose from in a wide range of prices. No matter what your budget, we can help you find the perfect diamond to make your heart soar!
                                 </p>
                                 <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                            </div>
-                            <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
-                                <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                </p>
-                                <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+                                    If you have any questions about selecting the perfect diamond for you and your partner, please call us at 800-214-6550 or email us at info@brilliantcanary.com.
                                 </p>
                             </div>
                             <div class="block-p">
                                 <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                                <p>
-                                    tiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+                                    *Please note, when referring to “perfect” diamond, we at Brilliant Canary are referring to the perfect diamond for you.  Every person has different preferences and finding the diamond that has the attributes you prefer is how we will help you find your perfect diamond.
                                 </p>
                             </div>
+
                         </div>
                         <div class="tab-pane fade" id="idealCut">
                             <div class="sapphires-tab-box clearfix">
