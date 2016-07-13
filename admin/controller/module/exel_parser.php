@@ -188,7 +188,8 @@ class ControllerModuleExelParser extends Controller {
 
         //$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$store_id ."'");
         //dd($query->rows);
-        $filePath = '/home/canary/www/website.csv';
+        //$filePath = '/home/canary/www/website.csv';
+        $filePath = '/home/brilliantcanary/htdocs/website.csv';
         $delimiter = ';';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
