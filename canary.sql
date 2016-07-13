@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Май 19 2016 г., 13:44
+-- Время создания: Июл 12 2016 г., 11:28
 -- Версия сервера: 5.6.24-2+deb.sury.org~precise+2
 -- Версия PHP: 5.6.16-2+deb.sury.org~precise+1
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `oc_address` (
   `country_id` int(11) NOT NULL DEFAULT '0',
   `zone_id` int(11) NOT NULL DEFAULT '0',
   `custom_field` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_address`
@@ -49,7 +49,12 @@ INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, 
 (1, 1, 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 223, 3616, ''),
 (2, 2, 'qwe', 'qwe', '', '', '', '', '', 0, 0, ''),
 (3, 3, 'asd', 'asd', '', '', '', '', '', 0, 0, ''),
-(4, 4, 'zxc', 'zxc', '', '', '', '', '', 0, 0, '');
+(4, 4, 'zxc', 'zxc', '', '', '', '', '', 0, 0, ''),
+(5, 5, 'Katerina', 'Palada', 'Company', 'addres1', '', 'New York', '', 220, 4224, ''),
+(6, 6, 'test', 'test', '', '', '', '', '', 0, 0, ''),
+(7, 7, 'Katerina', 'test', 'Company', 'erterter', '', 'eterter', 'etert', 74, 1127, ''),
+(8, 8, 'Nadya', 'Geneizer', '95 White Bridge Road ', 'Suite 506', '', 'Nashville', '', 223, 3668, ''),
+(9, 9, 'asdasd', 'asdasd', '', '', '', '', '', 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -168,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `oc_api_ip` (
   `api_ip_id` int(11) NOT NULL,
   `api_id` int(11) NOT NULL,
   `ip` varchar(40) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_api_ip`
@@ -179,7 +184,11 @@ INSERT INTO `oc_api_ip` (`api_ip_id`, `api_id`, `ip`) VALUES
 (2, 1, '178.94.172.193'),
 (3, 1, '178.92.8.229'),
 (4, 1, '178.92.8.224'),
-(5, 1, '178.93.148.0');
+(5, 1, '178.93.148.0'),
+(6, 1, '178.92.8.165'),
+(7, 1, '178.92.8.121'),
+(8, 1, '178.92.8.248'),
+(9, 1, '95.133.238.135');
 
 -- --------------------------------------------------------
 
@@ -196,30 +205,21 @@ CREATE TABLE IF NOT EXISTS `oc_api_session` (
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_api_session`
 --
 
 INSERT INTO `oc_api_session` (`api_session_id`, `api_id`, `token`, `session_id`, `session_name`, `ip`, `date_added`, `date_modified`) VALUES
-(49, 1, 'x8dK3PmBp7ax99iKbrf9LWSwGiNV3pEC', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_57325d73e94ed', '178.93.148.0', '2016-05-11 01:15:15', '2016-05-11 01:15:15'),
-(48, 1, '1suNreaqos68iW0J0dFQ0NcGK0av6orL', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_57325d7011e7f', '178.93.148.0', '2016-05-11 01:15:12', '2016-05-11 01:15:12'),
-(47, 1, 'zDKg5njf15VowVp5oMj4pBEQZkYkcOiX', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_5732386a1d99c', '178.93.148.0', '2016-05-10 22:37:14', '2016-05-10 22:37:14'),
-(46, 1, 'St22JNdXaBGeTC0uxUtDVb8Kn6pwfl3A', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_573238657cb5d', '178.93.148.0', '2016-05-10 22:37:09', '2016-05-10 22:37:09'),
-(45, 1, 'KzZlGXKl6ZsEBVdqv8aNJ4Z17rQXdPGG', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_5732378160f54', '178.93.148.0', '2016-05-10 22:33:21', '2016-05-10 22:33:21'),
-(44, 1, 'TmnJmvjFN9gr41hhdSAuRNjUCz0KwiN0', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_57323700ea52f', '178.93.148.0', '2016-05-10 22:31:12', '2016-05-10 22:31:12'),
-(43, 1, 'fBVwtnVfts5rLpbw4Y9T5IEU7bGnqz4e', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_573236d41b8e8', '178.93.148.0', '2016-05-10 22:30:28', '2016-05-10 22:30:28'),
-(42, 1, 'yWR1NzFEdPJ6LnixSZ6UU75uQHNPpr8u', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_57323690513ff', '178.93.148.0', '2016-05-10 22:29:20', '2016-05-10 22:29:20'),
-(41, 1, 'aHjJRDae0dzxzBIu2XlsBsWYuGdPQJz1', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_573236364b748', '178.93.148.0', '2016-05-10 22:27:50', '2016-05-10 22:27:50'),
-(40, 1, 'P6QV7KADhUPAFpKcaCy2UXaVi5tc1eOE', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_57323601db246', '178.93.148.0', '2016-05-10 22:26:57', '2016-05-10 22:26:57'),
-(39, 1, 'N5mDqdwCDe0Sdzk8XbgQ5lW2YfevOzRp', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_573235ff8c4e6', '178.93.148.0', '2016-05-10 22:26:55', '2016-05-10 22:26:55'),
-(38, 1, 'nPb0AWN41KEi2VOjqi427yi52JV2PZGq', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_573233f994eb7', '178.93.148.0', '2016-05-10 22:18:17', '2016-05-10 22:18:17'),
-(37, 1, '9AIYQrtWd7gRvDhaoiTIfllp1IRmFbuo', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_573233f2cca9d', '178.93.148.0', '2016-05-10 22:18:10', '2016-05-10 22:18:15'),
-(36, 1, 'gOK69HVcGKcremzlWeGU6WFFHoN1Ilmy', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_573233eb6bf7d', '178.93.148.0', '2016-05-10 22:18:03', '2016-05-10 22:18:09'),
-(33, 1, 'HsTofei4Tep7THTuxfRXqoin2ezF3hAL', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_5732316badbc2', '178.93.148.0', '2016-05-10 22:07:23', '2016-05-10 22:07:23'),
-(34, 1, 'yXFIRFv0Lrc2JyI2nshHzRXADmrd7dED', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_5732316e657d2', '178.93.148.0', '2016-05-10 22:07:26', '2016-05-10 22:07:26'),
-(35, 1, 'b3rBsEUZerTn4DgAClRyk5o7V1AhTxgd', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_57323170ee17f', '178.93.148.0', '2016-05-10 22:07:28', '2016-05-10 22:17:58');
+(69, 1, 'DUtTpRgYhFKVHY3fLiLaue50QygnvcoE', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_574859bea0c2b', '178.92.8.121', '2016-05-27 17:29:18', '2016-05-27 17:29:21'),
+(68, 1, 'gNXAph1X4yxzFX9WxjpAqtUoFgExjcfe', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_574859950847c', '178.92.8.121', '2016-05-27 17:28:37', '2016-05-27 17:28:37'),
+(67, 1, 'f4465ZxOmAhp8Xww0rgqfT3VIqgua74A', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_574859901417f', '178.92.8.121', '2016-05-27 17:28:32', '2016-05-27 17:28:32'),
+(66, 1, 'mYaZkWoNHLBUdslfNeulFgIB371H7Cf3', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_574858f105691', '178.92.8.121', '2016-05-27 17:25:53', '2016-05-27 17:25:53'),
+(73, 1, 'qce7pyOVZKfcbZLc8MP00sJx4rJUxFRL', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_575c3e1749438', '95.133.238.135', '2016-06-11 19:36:39', '2016-06-11 19:36:39'),
+(72, 1, '6i1UsKGAAs2vY5QkEj9JddvMRkEFg4pw', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_575c26ed1176c', '95.133.238.135', '2016-06-11 17:57:49', '2016-06-11 17:57:49'),
+(71, 1, '5qIOtn6WXf8Nbq3WpcOJdSiAx4YqWKO3', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_57485b4d38a45', '178.92.8.121', '2016-05-27 17:35:57', '2016-05-27 17:35:57'),
+(70, 1, 'ICizunC6rNkFXpVzZqAMJsPz3UmkMDr4', 'g0st9hq7ot1bfipnv56cukbif5', 'temp_session_57485b4a7e0f4', '178.92.8.121', '2016-05-27 17:35:54', '2016-05-27 17:35:54');
 
 -- --------------------------------------------------------
 
@@ -231,27 +231,17 @@ CREATE TABLE IF NOT EXISTS `oc_attribute` (
   `attribute_id` int(11) NOT NULL,
   `attribute_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_attribute`
 --
 
 INSERT INTO `oc_attribute` (`attribute_id`, `attribute_group_id`, `sort_order`) VALUES
-(1, 6, 1),
-(2, 6, 5),
-(3, 6, 3),
-(4, 3, 1),
-(5, 3, 2),
-(6, 3, 3),
-(7, 3, 4),
-(8, 3, 5),
-(9, 3, 6),
-(10, 3, 7),
-(11, 3, 8),
-(12, 7, 0),
-(13, 7, 0),
-(14, 7, 0);
+(18, 7, 4),
+(17, 7, 3),
+(16, 7, 2),
+(15, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -270,34 +260,10 @@ CREATE TABLE IF NOT EXISTS `oc_attribute_description` (
 --
 
 INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) VALUES
-(1, 1, 'Description'),
-(2, 1, 'No. of Cores'),
-(4, 1, 'test 1'),
-(5, 1, 'test 2'),
-(6, 1, 'test 3'),
-(7, 1, 'test 4'),
-(8, 1, 'test 5'),
-(9, 1, 'test 6'),
-(10, 1, 'test 7'),
-(11, 1, 'test 8'),
-(3, 1, 'Clockspeed'),
-(1, 2, 'Description'),
-(2, 2, 'No. of Cores'),
-(4, 2, 'test 1'),
-(5, 2, 'test 2'),
-(6, 2, 'test 3'),
-(7, 2, 'test 4'),
-(8, 2, 'test 5'),
-(9, 2, 'test 6'),
-(10, 2, 'test 7'),
-(11, 2, 'test 8'),
-(3, 2, 'Clockspeed'),
-(12, 1, 'CARAT'),
-(12, 2, 'CARAT'),
-(13, 1, 'COLOR'),
-(13, 2, 'COLOR'),
-(14, 2, 'Cut'),
-(14, 1, 'Cut');
+(18, 1, 'TOTAL CARAT (MIN)'),
+(17, 1, 'AVERAGE COLOR'),
+(16, 1, 'AVERAGE CLARITY'),
+(15, 1, '# OF DIAMONDS');
 
 -- --------------------------------------------------------
 
@@ -315,10 +281,6 @@ CREATE TABLE IF NOT EXISTS `oc_attribute_group` (
 --
 
 INSERT INTO `oc_attribute_group` (`attribute_group_id`, `sort_order`) VALUES
-(3, 2),
-(4, 1),
-(5, 3),
-(6, 4),
 (7, 0);
 
 -- --------------------------------------------------------
@@ -338,16 +300,7 @@ CREATE TABLE IF NOT EXISTS `oc_attribute_group_description` (
 --
 
 INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id`, `name`) VALUES
-(3, 1, 'Memory'),
-(4, 1, 'Technical'),
-(5, 1, 'Motherboard'),
-(6, 1, 'Processor'),
-(3, 2, 'Memory'),
-(4, 2, 'Technical'),
-(5, 2, 'Motherboard'),
-(6, 2, 'Processor'),
-(7, 1, 'DIAMONDS'),
-(7, 2, 'DIAMONDS');
+(7, 1, 'ATRIBUTE RINGS');
 
 -- --------------------------------------------------------
 
@@ -471,21 +424,7 @@ INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `ba
 (95, 1, 8, 'RedBull'),
 (96, 1, 8, 'Sony'),
 (97, 1, 8, 'Starbucks'),
-(98, 1, 8, 'Nintendo'),
-(79, 2, 7, 'iPhone 6'),
-(87, 2, 6, 'HP Banner'),
-(93, 2, 8, 'Canon'),
-(92, 2, 8, 'Burger King'),
-(91, 2, 8, 'Coca Cola'),
-(90, 2, 8, 'Disney'),
-(89, 2, 8, 'Dell'),
-(80, 2, 7, 'MacBookAir'),
-(88, 2, 8, 'Harley Davidson'),
-(94, 2, 8, 'NFL'),
-(95, 2, 8, 'RedBull'),
-(96, 2, 8, 'Sony'),
-(97, 2, 8, 'Starbucks'),
-(98, 2, 8, 'Nintendo');
+(98, 1, 8, 'Nintendo');
 
 -- --------------------------------------------------------
 
@@ -504,14 +443,17 @@ CREATE TABLE IF NOT EXISTS `oc_cart` (
   `date_added` datetime NOT NULL,
   `diamond` int(11) NOT NULL,
   `complect` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=275 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=316 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_cart`
 --
 
 INSERT INTO `oc_cart` (`cart_id`, `customer_id`, `session_id`, `product_id`, `recurring_id`, `option`, `quantity`, `date_added`, `diamond`, `complect`) VALUES
-(271, 1, 'g0st9hq7ot1bfipnv56cukbif5', 55, 0, '[]', 1, '2016-05-17 21:07:58', 0, '0');
+(296, 6, 'iufm61gfmp17t8akgai6jtm0u1', 61364331, 0, '[{"response":{"header":{"error_code":0,"error_message":""},"body":{"diamond":{"diamond_id":61364331,"shape":"Round","size":0.51,"color":"K","fancy_color_dominant_color":"","fancy_color_secondary_color":"","fancy_color_overtone":"","fancy_color_intensity":"","clarity":"VS2","cut":"Good","symmetry":"Good","polish":"Good","depth_percent":56.5,"table_percent":67,"meas_length":5.25,"meas_width":5.3,"meas_depth":2.98,"girdle_min":"Very Thin","girdle_max":"Slightly Thick","girdle_condition":"","culet_size":"Small","culet_condition":"","fluor_color":"","fluor_intensity":"None","has_cert_file":true,"country":"USA","city":"Dallas","lab":"GIA","total_purchase_price":599.25,"total_sales_price":647,"currency_code":"USD","currency_symbol":"$","total_sales_price_in_currency":647,"cert_num":"1176025969","stock_num":"D-4383","has_sarineloupe":false,"sarineloupe_url":""},"seller":{"account_id":28347,"company":"SHAI GUT INC","name":"Shai Gut","email":"ZACHISRAEL1@GMAIL.COM","phone":"1-972-980-0608","country":"USA","state":"TX","city":"Dallas"}}}}]', 2, '2016-05-23 12:59:20', 1, '0'),
+(313, 7, 'iufm61gfmp17t8akgai6jtm0u1', 70, 0, '[]', 1, '2016-05-24 22:34:55', 0, '0'),
+(314, 7, 'iufm61gfmp17t8akgai6jtm0u1', 42, 0, '[]', 2, '2016-05-24 22:34:56', 0, '0'),
+(315, 7, 'iufm61gfmp17t8akgai6jtm0u1', 66, 0, '[]', 1, '2016-05-24 23:00:54', 0, '0');
 
 -- --------------------------------------------------------
 
@@ -541,9 +483,9 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (88, '', 82, 1, 1, 6, 1, '2016-04-18 15:54:49', '2016-04-18 15:54:49'),
 (86, '', 82, 1, 1, 4, 1, '2016-04-18 15:48:18', '2016-04-18 15:48:18'),
 (85, '', 82, 1, 1, 3, 1, '2016-04-18 15:46:54', '2016-04-18 15:46:54'),
-(82, '', 0, 1, 1, 4, 1, '2016-04-12 17:04:01', '2016-04-12 17:04:01'),
+(82, '', 0, 1, 1, 4, 1, '2016-04-12 17:04:01', '2016-05-23 14:02:02'),
 (84, '', 82, 1, 1, 2, 1, '2016-04-18 15:26:57', '2016-04-18 15:26:57'),
-(83, '', 82, 1, 1, 1, 1, '2016-04-18 15:25:19', '2016-04-18 15:25:19'),
+(83, '', 82, 1, 1, 1, 1, '2016-04-18 15:25:19', '2016-05-23 16:14:27'),
 (72, '', 69, 1, 1, 6, 1, '2016-04-12 00:54:56', '2016-04-13 00:00:01'),
 (73, '', 69, 1, 1, 7, 1, '2016-04-12 16:51:09', '2016-04-13 00:00:20'),
 (74, '', 69, 1, 1, 8, 1, '2016-04-12 16:52:17', '2016-04-13 00:00:39'),
@@ -557,9 +499,9 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (59, 'catalog/nature-inspired.jpg', 20, 1, 1, 1, 1, '2016-02-25 17:23:11', '2016-04-22 00:12:35'),
 (60, '', 20, 1, 1, 2, 1, '2016-02-25 18:29:24', '2016-04-22 00:28:22'),
 (61, '', 20, 1, 1, 3, 1, '2016-02-25 18:30:19', '2016-04-22 00:38:55'),
-(62, '', 20, 1, 1, 4, 1, '2016-02-25 18:31:04', '2016-04-22 00:40:12'),
+(62, '', 20, 1, 1, 4, 1, '2016-02-25 18:31:04', '2016-07-06 01:09:25'),
 (63, '', 20, 1, 1, 5, 1, '2016-02-25 18:32:14', '2016-04-22 00:40:58'),
-(64, '', 20, 1, 1, 6, 1, '2016-02-25 18:33:32', '2016-04-22 00:41:32'),
+(64, '', 20, 1, 1, 6, 1, '2016-02-25 18:33:32', '2016-07-06 01:11:22'),
 (65, '', 20, 1, 1, 7, 1, '2016-02-25 18:34:07', '2016-04-22 00:42:31'),
 (66, '', 20, 1, 1, 8, 1, '2016-02-25 18:34:45', '2016-04-22 00:43:25'),
 (67, '', 20, 1, 1, 9, 1, '2016-02-25 19:10:22', '2016-04-22 00:44:42'),
@@ -586,61 +528,33 @@ CREATE TABLE IF NOT EXISTS `oc_category_description` (
 --
 
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(75, 2, 'ALTERNATIVE', '&lt;p&gt;MAN ALTERNATIVE&lt;br&gt;&lt;/p&gt;', 'MAN ALTERNATIVE', '', ''),
-(78, 2, 'CARVED', '&lt;p&gt;WOMAN CARVED&lt;br&gt;&lt;/p&gt;', 'WOMAN CARVED', '', ''),
-(20, 2, 'ENGAGEMENT RINGS', '&lt;p&gt;\r\n	Example of category description text&lt;/p&gt;\r\n', 'ENGAGEMENT RINGS', 'Example of category description', ''),
 (78, 1, 'CARVED', '&lt;p&gt;WOMAN CARVED&lt;br&gt;&lt;/p&gt;', 'WOMAN CARVED', '', ''),
 (79, 1, 'DIAMOND', '&lt;p&gt;WOMAN DIAMOND&lt;br&gt;&lt;/p&gt;', 'WOMAN DIAMOND', '', ''),
-(80, 2, 'ANIVERSARY', '&lt;p&gt;WOMAN ANIVERSARY&lt;br&gt;&lt;/p&gt;', 'WOMAN ANIVERSARY', '', ''),
 (80, 1, 'ANIVERSARY', '&lt;p&gt;WOMAN ANIVERSARY&lt;br&gt;&lt;/p&gt;', 'WOMAN ANIVERSARY', '', ''),
-(81, 2, 'ETERNITY', '&lt;p&gt;WOMAN ETERNITY&lt;br&gt;&lt;/p&gt;', 'WOMAN ETERNITY', '', ''),
 (81, 1, 'ETERNITY', '&lt;p&gt;WOMAN ETERNITY&lt;br&gt;&lt;/p&gt;', 'WOMAN ETERNITY', '', ''),
 (82, 1, 'FINE JEWERLY', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'FINE JEWERLY', '', ''),
-(82, 2, 'FINE JEWERLY', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'FINE JEWERLY', '', ''),
 (75, 1, 'ALTERNATIVE', '&lt;p&gt;MAN ALTERNATIVE&lt;br&gt;&lt;/p&gt;', 'MAN ALTERNATIVE', '', ''),
 (73, 1, 'CARVED', '&lt;p&gt;MAN CARVED&lt;br&gt;&lt;/p&gt;', 'MAN CARVED', '', ''),
 (74, 1, 'DIAMOND', '&lt;p&gt;MAN DIAMOND&lt;br&gt;&lt;/p&gt;', 'MAN DIAMOND', '', ''),
-(83, 2, 'Diamond studs', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Diamond studs', '', ''),
-(84, 1, 'Matching Gemstone Pairs', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Matching Gemstone Pairs', '', ''),
-(84, 2, 'Matching Gemstone Pairs', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Matching Gemstone Pairs', '', ''),
-(85, 1, 'Diamond Bracelets', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Diamond Bracelets', '', ''),
-(85, 2, 'Diamond Bracelets', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Diamond Bracelets', '', ''),
-(86, 1, 'Diamond Pendants', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Diamond Pendants', '', ''),
-(79, 2, 'DIAMOND', '&lt;p&gt;WOMAN DIAMOND&lt;br&gt;&lt;/p&gt;', 'WOMAN DIAMOND', '', ''),
-(77, 1, 'CLASSIK', '&lt;p&gt;WOMAN CLASSIK&lt;br&gt;&lt;/p&gt;', 'WOMAN CLASSIK', '', ''),
 (83, 1, 'Diamond studs', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Diamond studs', '', ''),
+(84, 1, 'Matching Gemstone Pairs', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Matching Gemstone Pairs', '', ''),
+(85, 1, 'Diamond Bracelets', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Diamond Bracelets', '', ''),
+(86, 1, 'Diamond Pendants', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Diamond Pendants', '', ''),
+(77, 1, 'CLASSIK', '&lt;p&gt;WOMAN CLASSIK&lt;br&gt;&lt;/p&gt;', 'WOMAN CLASSIK', '', ''),
 (72, 1, 'CLASSIK', '&lt;p&gt;MAN CLASSIK&lt;br&gt;&lt;/p&gt;', 'MAN CLASSIK', '', ''),
 (20, 1, 'ENGAGEMENT RINGS', '&lt;p&gt;\r\n	Example of category description text&lt;/p&gt;\r\n', 'ENGAGEMENT RINGS', 'Example of category description', ''),
-(77, 2, 'CLASSIK', '&lt;p&gt;WOMAN CLASSIK&lt;br&gt;&lt;/p&gt;', 'WOMAN CLASSIK', '', ''),
-(86, 2, 'Diamond Pendants', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Diamond Pendants', '', ''),
 (87, 1, 'Mille Coeurs Pendants', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Mille Coeurs Pendants', '', ''),
-(87, 2, 'Mille Coeurs Pendants', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Mille Coeurs Pendants', '', ''),
 (88, 1, 'Solitaire pendants', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Solitaire pendants', '', ''),
-(88, 2, 'Solitaire pendants', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'Solitaire pendants', '', ''),
 (59, 1, 'SOLITAIRE', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'SOLITAIRE', '', ''),
-(59, 2, 'SOLITAIRE', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'SOLITAIRE', '', ''),
 (60, 1, 'PAVÉ', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'PAVÉ', '', ''),
-(60, 2, 'PAVÉ', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'PAVÉ', '', ''),
 (61, 1, 'CHANNEL SET', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'CHANNEL SET', '', ''),
-(61, 2, 'CHANNEL SET', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'CHANNEL SET', '', ''),
-(62, 1, 'SIDE-STONE', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'SIDE-STONE', '', ''),
-(62, 2, 'SIDE-STONE', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'SIDE-STONE', '', ''),
+(62, 1, 'BYPASS', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'SIDE-STONE', '', ''),
 (63, 1, 'THREE-STONE', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'THREE-STONE', '', ''),
-(63, 2, 'THREE-STONE', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'THREE-STONE', '', ''),
-(64, 1, 'TENSION', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'TENSION', '', ''),
-(64, 2, 'TENSION', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'TENSION', '', ''),
+(64, 1, 'BEZEL SET', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'TENSION', '', ''),
 (65, 1, 'HALO', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'HALO', '', ''),
-(65, 2, 'HALO', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'HALO', '', ''),
 (66, 1, 'VINTAGE', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'VINTAGE', '', ''),
-(66, 2, 'VINTAGE', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'VINTAGE', '', ''),
-(67, 2, 'BRIDAL SET', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'BRIDAL SET', '', ''),
 (68, 1, 'DIAMONDS', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'diamonds', '', ''),
-(68, 2, 'DIAMONDS', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'diamonds', '', ''),
-(73, 2, 'CARVED', '&lt;p&gt;MAN CARVED&lt;br&gt;&lt;/p&gt;', 'MAN CARVED', '', ''),
-(72, 2, 'CLASSIK', '&lt;p&gt;MAN CLASSIK&lt;br&gt;&lt;/p&gt;', 'MAN CLASSIK', '', ''),
 (69, 1, 'WEDDING RINGS', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'WEDDING RINGS', '', ''),
-(69, 2, 'WEDDING RINGS', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'WEDDING RINGS', '', ''),
-(74, 2, 'DIAMOND', '&lt;p&gt;MAN DIAMOND&lt;br&gt;&lt;/p&gt;', 'MAN DIAMOND', '', ''),
 (67, 1, 'BRIDAL SET', '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 'BRIDAL SET', '', '');
 
 -- --------------------------------------------------------
@@ -738,7 +652,17 @@ INSERT INTO `oc_category_filter` (`category_id`, `filter_id`) VALUES
 (67, 11),
 (67, 12),
 (67, 13),
-(67, 14);
+(67, 14),
+(82, 4),
+(82, 5),
+(82, 6),
+(82, 7),
+(82, 14),
+(83, 4),
+(83, 5),
+(83, 6),
+(83, 7),
+(83, 14);
 
 -- --------------------------------------------------------
 
@@ -1269,9 +1193,9 @@ CREATE TABLE IF NOT EXISTS `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(1, 'Pound Sterling', 'GBP', '£', '', '2', 0.69169998, 1, '2016-05-17 18:01:27'),
-(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2016-05-17 18:12:02'),
-(3, 'Euro', 'EUR', '', '€', '2', 0.88360000, 1, '2016-05-17 18:01:27');
+(1, 'Pound Sterling', 'GBP', '£', '', '2', 0.77139997, 1, '2016-07-07 14:19:23'),
+(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2016-07-07 14:19:23'),
+(3, 'Euro', 'EUR', '', '€', '2', 0.90280002, 1, '2016-07-07 14:19:23');
 
 -- --------------------------------------------------------
 
@@ -1301,17 +1225,22 @@ CREATE TABLE IF NOT EXISTS `oc_customer` (
   `safe` tinyint(1) NOT NULL,
   `token` text NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_customer`
 --
 
 INSERT INTO `oc_customer` (`customer_id`, `customer_group_id`, `store_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `password`, `salt`, `cart`, `wishlist`, `newsletter`, `address_id`, `custom_field`, `ip`, `status`, `approved`, `safe`, `token`, `date_added`) VALUES
-(1, 1, 0, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '1e24af84c1e8af9cf71ff5c96d8fe7ba3f7b8155', 'kHWg0spU2', NULL, NULL, 1, 1, '[]', '178.94.172.191', 1, 1, 0, '', '2016-03-24 16:27:47'),
+(1, 1, 0, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '1e24af84c1e8af9cf71ff5c96d8fe7ba3f7b8155', 'kHWg0spU2', NULL, NULL, 1, 1, '', '95.133.238.135', 1, 1, 0, '', '2016-03-24 16:27:47'),
+(7, 1, 0, 'Katerina', 'Test', 'katerinapalada@mail.ru', '45645645', '54645646456', '718f9ea3cb55a3eb2d30379f5878772125d86fee', 'TaOHiHdWL', NULL, NULL, 1, 7, '', '194.187.106.246', 1, 1, 0, '', '2016-05-24 21:53:58'),
 (2, 1, 0, 'qwe', 'qwe', 'qwe@qwe.ru', '', '', '9ff5ebffa5d1d83e73750b639f23d48483d3e0bc', 'vQI0Qdi4L', NULL, NULL, 0, 2, '', '213.179.252.120', 1, 1, 0, '', '2016-05-08 01:25:13'),
 (3, 1, 0, 'asd', 'asd', 'asd@asd.ru', '', '', 'fbb1bccc3d1eb9c2c14b50f8117fef8a72dc8535', 'aNINQjyJR', NULL, NULL, 1, 3, '', '213.179.252.75', 1, 1, 0, '', '2016-05-08 12:44:56'),
-(4, 1, 0, 'zxc', 'zxc', 'zxc@zxc.ru', '', '', 'c208404918c7001463a25b8820a4f80c2941f888', '536kq6iUo', NULL, NULL, 1, 4, '', '213.179.252.75', 1, 1, 0, '', '2016-05-08 13:04:53');
+(4, 1, 0, 'zxc', 'zxc', 'zxc@zxc.ru', '', '', 'c208404918c7001463a25b8820a4f80c2941f888', '536kq6iUo', NULL, NULL, 1, 4, '', '213.179.252.75', 1, 1, 0, '', '2016-05-08 13:04:53'),
+(5, 1, 0, 'Katerina', 'Palada', 'manager@web4u.in.ua', '', '', 'c0827859f584d34fae8b382ff5e51f35c6e7c587', '75I65dg8V', NULL, NULL, 0, 5, '', '194.187.106.246', 1, 1, 0, '', '2016-05-20 17:04:38'),
+(6, 1, 0, 'test', 'test', 'katya@dreamext.com', '', '', 'f83cfc53e196e891009ab3d55f1d35fcb2d3a071', 'mcwcWFfTB', NULL, NULL, 1, 6, '', '5.248.82.27', 1, 1, 0, '', '2016-05-23 12:28:25'),
+(8, 1, 0, 'Nadya', 'Geneizer', 'nadya@brilliantcanary.com', '6152936318', '', '4742e138d87448f4f371bb503a52b92a9e35a91c', 'ekMXW9bQk', NULL, NULL, 1, 8, '', '68.52.127.235', 1, 1, 0, '', '2016-06-28 21:28:17'),
+(9, 1, 0, 'asdasd', 'asdasd', 'asdasd@asd.ru', '', '', '22b640e5aa976aac34948511ff55f7b60299987b', 'zCF9B9JBM', NULL, NULL, 0, 9, '', '178.93.148.2', 1, 1, 0, '', '2016-07-01 00:47:31');
 
 -- --------------------------------------------------------
 
@@ -1326,7 +1255,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_activity` (
   `data` text NOT NULL,
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=104 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=162 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_customer_activity`
@@ -1435,7 +1364,65 @@ INSERT INTO `oc_customer_activity` (`activity_id`, `customer_id`, `key`, `data`,
 (100, 1, 'order_account', '{"customer_id":"1","name":"Test name test last name","order_id":52}', '95.133.238.163', '2016-05-16 12:19:17'),
 (101, 1, 'login', '{"customer_id":"1","name":"Test name test last name"}', '95.133.238.163', '2016-05-16 16:46:22'),
 (102, 1, 'login', '{"customer_id":"1","name":"Test name test last name"}', '193.238.96.13', '2016-05-17 21:07:58'),
-(103, 1, 'login', '{"customer_id":"1","name":"Test name test last name"}', '178.94.172.191', '2016-05-18 13:47:37');
+(103, 1, 'login', '{"customer_id":"1","name":"Test name test last name"}', '178.94.172.191', '2016-05-18 13:47:37'),
+(104, 5, 'register', '{"customer_id":5,"name":"Katerina Palada"}', '5.248.82.27', '2016-05-20 17:04:38'),
+(105, 5, 'login', '{"customer_id":"5","name":"Katerina Palada"}', '5.248.82.27', '2016-05-20 17:05:24'),
+(106, 5, 'forgotten', '{"customer_id":"5","name":"Katerina Palada"}', '5.248.82.27', '2016-05-20 17:10:29'),
+(107, 5, 'login', '{"customer_id":"5","name":"Katerina Palada"}', '5.248.82.27', '2016-05-20 17:11:50'),
+(108, 5, 'password', '{"customer_id":"5","name":"Katerina Palada"}', '5.248.82.27', '2016-05-20 17:12:10'),
+(109, 5, 'password', '{"customer_id":"5","name":"Katerina Palada"}', '5.248.82.27', '2016-05-20 17:12:28'),
+(110, 5, 'address_edit', '{"customer_id":"5","name":"Katerina Palada"}', '5.248.82.27', '2016-05-20 17:15:48'),
+(111, 1, 'login', '{"customer_id":"1","name":"Test name test last name"}', '178.92.8.165', '2016-05-20 17:17:17'),
+(112, 1, 'order_account', '{"customer_id":"1","name":"Test name test last name","order_id":56}', '178.92.8.165', '2016-05-20 17:25:09'),
+(113, 6, 'register', '{"customer_id":6,"name":"test test"}', '5.248.82.27', '2016-05-23 12:28:25'),
+(114, 6, 'login', '{"customer_id":"6","name":"test test"}', '5.248.82.27', '2016-05-23 12:43:38'),
+(115, 1, 'login', '{"customer_id":"1","name":"Test name test last name"}', '178.93.148.180', '2016-05-23 16:55:45'),
+(116, 1, 'edit', '{"customer_id":"1","name":"Test name test last name"}', '178.93.148.180', '2016-05-23 17:33:49'),
+(117, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic"}', '178.93.148.180', '2016-05-23 20:07:58'),
+(118, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic"}', '178.94.172.248', '2016-05-24 00:15:34'),
+(119, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic"}', '178.94.172.248', '2016-05-24 00:27:26'),
+(120, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic"}', '178.94.172.248', '2016-05-24 00:32:18'),
+(121, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic"}', '178.94.172.248', '2016-05-24 00:32:42'),
+(122, 1, 'edit', '{"customer_id":"1","name":"Vitalik Shtirlic"}', '178.94.172.248', '2016-05-24 01:06:59'),
+(123, 1, 'edit', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.94.172.248', '2016-05-24 01:09:38'),
+(124, 1, 'edit', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.94.172.248', '2016-05-24 01:11:57'),
+(125, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.94.172.248', '2016-05-24 17:11:09'),
+(126, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.94.172.248', '2016-05-24 17:36:03'),
+(127, 5, 'login', '{"customer_id":"5","name":"Katerina Palada"}', '194.187.106.246', '2016-05-24 21:50:57'),
+(128, 7, 'register', '{"customer_id":7,"name":"Test test"}', '194.187.106.246', '2016-05-24 21:53:58'),
+(129, 7, 'edit', '{"customer_id":"7","name":"Test test"}', '194.187.106.246', '2016-05-24 21:59:03'),
+(130, 7, 'address_edit', '{"customer_id":"7","name":"Katerina Test"}', '194.187.106.246', '2016-05-24 22:00:06'),
+(131, 7, 'forgotten', '{"customer_id":"7","name":"Katerina Test"}', '194.187.106.246', '2016-05-24 22:02:47'),
+(132, 7, 'login', '{"customer_id":"7","name":"Katerina Test"}', '194.187.106.246', '2016-05-24 22:04:44'),
+(133, 7, 'password', '{"customer_id":"7","name":"Katerina Test"}', '194.187.106.246', '2016-05-24 22:05:01'),
+(134, 7, 'order_account', '{"customer_id":"7","name":"Katerina Test","order_id":57}', '194.187.106.246', '2016-05-24 22:33:51'),
+(135, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '95.133.238.15', '2016-05-24 22:57:48'),
+(136, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '95.133.238.15', '2016-05-25 00:14:28'),
+(137, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '95.133.238.15', '2016-05-25 00:41:26'),
+(138, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.94.172.100', '2016-05-27 00:40:01'),
+(139, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.92.8.121', '2016-05-27 15:50:55'),
+(140, 1, 'order_account', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447","order_id":59}', '178.92.8.121', '2016-05-27 16:57:35'),
+(141, 1, 'order_account', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447","order_id":60}', '178.92.8.121', '2016-05-27 17:30:29'),
+(142, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.92.8.121', '2016-05-27 19:59:51'),
+(143, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.92.8.121', '2016-05-27 20:14:10'),
+(144, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.92.8.121', '2016-05-27 20:42:30'),
+(145, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.92.8.121', '2016-05-27 23:45:37'),
+(146, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.92.8.121', '2016-05-28 00:54:38'),
+(147, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.92.8.121', '2016-05-28 01:46:24'),
+(148, 1, 'order_account', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447","order_id":77}', '178.92.8.121', '2016-05-28 01:47:43'),
+(149, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '95.133.238.90', '2016-05-28 23:54:02'),
+(150, 1, 'edit', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '95.133.238.90', '2016-05-29 00:05:02'),
+(151, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.94.172.164', '2016-05-29 12:53:44'),
+(152, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '178.92.8.248', '2016-06-09 19:29:03'),
+(153, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '95.133.238.135', '2016-06-11 17:54:02'),
+(154, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '95.133.238.135', '2016-06-11 19:28:45'),
+(155, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '95.133.238.135', '2016-06-11 21:59:40'),
+(156, 1, 'login', '{"customer_id":"1","name":"Vitalik Shtirlic\\u0447"}', '65.111.169.4', '2016-06-11 23:20:16'),
+(157, 8, 'register', '{"customer_id":8,"name":"Nadya Geneizer"}', '68.52.127.235', '2016-06-28 21:28:17'),
+(158, 9, 'register', '{"customer_id":9,"name":"asdasd asdasd"}', '178.93.148.2', '2016-07-01 00:47:31'),
+(159, 8, 'login', '{"customer_id":"8","name":"Nadya Geneizer"}', '68.52.127.235', '2016-07-01 00:57:05'),
+(160, 8, 'login', '{"customer_id":"8","name":"Nadya Geneizer"}', '68.52.127.235', '2016-07-01 22:21:23'),
+(161, 8, 'order_account', '{"customer_id":"8","name":"Nadya Geneizer","order_id":90}', '68.52.127.235', '2016-07-01 22:24:25');
 
 -- --------------------------------------------------------
 
@@ -1474,8 +1461,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_group_description` (
 --
 
 INSERT INTO `oc_customer_group_description` (`customer_group_id`, `language_id`, `name`, `description`) VALUES
-(1, 1, 'Default', 'test'),
-(1, 2, 'Default', 'test');
+(1, 1, 'Default', 'test');
 
 -- --------------------------------------------------------
 
@@ -1501,7 +1487,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_ip` (
   `customer_id` int(11) NOT NULL,
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_customer_ip`
@@ -1527,7 +1513,24 @@ INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added
 (17, 1, '95.133.238.193', '2016-05-15 01:12:23'),
 (18, 1, '95.133.238.163', '2016-05-15 22:59:44'),
 (19, 1, '193.238.96.13', '2016-05-17 21:07:58'),
-(20, 1, '178.94.172.191', '2016-05-18 13:47:37');
+(20, 1, '178.94.172.191', '2016-05-18 13:47:37'),
+(21, 5, '5.248.82.27', '2016-05-20 17:04:39'),
+(22, 1, '178.92.8.165', '2016-05-20 17:17:17'),
+(23, 6, '5.248.82.27', '2016-05-23 12:28:25'),
+(24, 1, '178.93.148.180', '2016-05-23 16:55:45'),
+(25, 1, '178.94.172.248', '2016-05-24 00:15:34'),
+(26, 5, '194.187.106.246', '2016-05-24 21:50:57'),
+(27, 7, '194.187.106.246', '2016-05-24 21:53:58'),
+(28, 1, '95.133.238.15', '2016-05-24 22:57:48'),
+(29, 1, '178.94.172.100', '2016-05-27 00:40:01'),
+(30, 1, '178.92.8.121', '2016-05-27 15:50:55'),
+(31, 1, '95.133.238.90', '2016-05-28 23:54:03'),
+(32, 1, '178.94.172.164', '2016-05-29 12:53:44'),
+(33, 1, '178.92.8.248', '2016-06-09 19:29:03'),
+(34, 1, '95.133.238.135', '2016-06-11 17:54:03'),
+(35, 1, '65.111.169.4', '2016-06-11 23:20:17'),
+(36, 8, '68.52.127.235', '2016-06-28 21:28:18'),
+(37, 9, '178.93.148.2', '2016-07-01 00:47:31');
 
 -- --------------------------------------------------------
 
@@ -1542,7 +1545,7 @@ CREATE TABLE IF NOT EXISTS `oc_customer_login` (
   `total` int(4) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_customer_login`
@@ -1554,7 +1557,12 @@ INSERT INTO `oc_customer_login` (`customer_login_id`, `email`, `ip`, `total`, `d
 (3, 'trafik8787@gmail.com', '178.93.150.23', 1, '2016-03-19 22:40:28', '2016-03-19 22:40:28'),
 (5, 'trafik8787@gmail.com', '213.179.252.22', 1, '2016-04-08 20:56:01', '2016-04-08 20:56:01'),
 (9, '', '193.238.96.13', 1, '2016-05-17 18:06:16', '2016-05-17 18:06:16'),
-(10, 'admin', '178.94.172.191', 1, '2016-05-18 10:47:33', '2016-05-18 10:47:33');
+(10, 'admin', '178.94.172.191', 1, '2016-05-18 10:47:33', '2016-05-18 10:47:33'),
+(11, '5353534', '5.248.82.27', 1, '2016-05-20 14:05:41', '2016-05-20 14:05:41'),
+(13, 'test', '5.248.82.27', 1, '2016-05-23 09:26:38', '2016-05-23 09:26:38'),
+(15, '', '178.94.172.248', 3, '2016-05-23 21:23:21', '2016-05-23 21:24:15'),
+(16, 'admin', '178.94.172.248', 1, '2016-05-24 14:11:03', '2016-05-24 14:11:03'),
+(17, 'katia', '194.187.106.246', 1, '2016-05-24 18:50:47', '2016-05-24 18:50:47');
 
 -- --------------------------------------------------------
 
@@ -1618,7 +1626,10 @@ CREATE TABLE IF NOT EXISTS `oc_customer_wishlist` (
 
 INSERT INTO `oc_customer_wishlist` (`customer_id`, `product_id`, `date_added`) VALUES
 (1, 40, '2016-05-16 16:47:42'),
-(1, 28, '2016-05-16 16:46:22');
+(1, 28, '2016-05-16 16:46:22'),
+(1, 67, '2016-05-23 16:55:45'),
+(7, 70, '2016-05-24 22:11:35'),
+(7, 42, '2016-05-24 22:24:46');
 
 -- --------------------------------------------------------
 
@@ -1739,7 +1750,7 @@ CREATE TABLE IF NOT EXISTS `oc_extension` (
   `extension_id` int(11) NOT NULL,
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=83 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_extension`
@@ -1767,14 +1778,16 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (19, 'module', 'slideshow'),
 (20, 'module', 'filter'),
 (21, 'module', 'html'),
+(80, 'module', 'bestseller'),
 (63, 'module', 'complect'),
 (68, 'payment', 'pp_express'),
 (47, 'module', 'wsubcat'),
 (51, 'module', 'rapnet'),
 (52, 'module', 'ebay_listing'),
-(77, 'payment', 'authorizenet_sim'),
 (70, 'payment', 'cod'),
-(79, 'payment', 'bank_transfer');
+(79, 'payment', 'bank_transfer'),
+(81, 'module', 'latest'),
+(82, 'module', 'exel_parser');
 
 -- --------------------------------------------------------
 
@@ -1821,20 +1834,12 @@ CREATE TABLE IF NOT EXISTS `oc_filter_description` (
 
 INSERT INTO `oc_filter_description` (`filter_id`, `language_id`, `filter_group_id`, `name`) VALUES
 (7, 1, 3, 'All metals'),
-(7, 2, 3, 'All metals'),
 (14, 1, 3, 'Rose gold'),
 (4, 1, 2, 'Price'),
-(4, 2, 2, 'Цена'),
-(14, 2, 3, 'Rose gold'),
-(6, 2, 3, 'White gold 14'),
 (6, 1, 3, 'White gold 14'),
-(5, 2, 3, 'White gold 18'),
 (5, 1, 3, 'White gold 18'),
-(11, 2, 3, 'Yellow gold 14'),
 (11, 1, 3, 'Yellow gold 14'),
-(12, 2, 3, 'Yellow gold 18'),
 (12, 1, 3, 'Yellow gold 18'),
-(13, 2, 3, 'Platinum'),
 (13, 1, 3, 'Platinum');
 
 -- --------------------------------------------------------
@@ -1876,9 +1881,7 @@ CREATE TABLE IF NOT EXISTS `oc_filter_group_description` (
 
 INSERT INTO `oc_filter_group_description` (`filter_group_id`, `language_id`, `name`, `dop_filter`, `type_control`) VALUES
 (2, 1, 'Price', 'price_filtr', 'checkbox'),
-(2, 2, 'Цена', 'price_filtr', 'checkbox'),
-(3, 1, 'PRECIOUS METAL', '', 'radio'),
-(3, 2, 'PRECIOUS METAL', '', 'radio');
+(3, 1, 'PRECIOUS METAL', '', 'radio');
 
 -- --------------------------------------------------------
 
@@ -1892,7 +1895,7 @@ CREATE TABLE IF NOT EXISTS `oc_geo_zone` (
   `description` varchar(255) NOT NULL,
   `date_modified` datetime NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_geo_zone`
@@ -1901,7 +1904,8 @@ CREATE TABLE IF NOT EXISTS `oc_geo_zone` (
 INSERT INTO `oc_geo_zone` (`geo_zone_id`, `name`, `description`, `date_modified`, `date_added`) VALUES
 (3, 'UK VAT Zone', 'UK VAT', '2016-03-24 18:11:21', '2009-01-06 23:26:25'),
 (4, 'UK Shipping', 'UK Shipping Zones', '2016-03-24 18:19:41', '2009-06-23 01:14:53'),
-(5, 'Region USA', 'Region USA', '0000-00-00 00:00:00', '2016-05-10 16:27:32');
+(5, 'Region USA', 'Region USA', '0000-00-00 00:00:00', '2016-05-10 16:27:32'),
+(6, 'Region Tenesy', 'Region Tenesy 9.25', '0000-00-00 00:00:00', '2016-07-05 22:18:25');
 
 -- --------------------------------------------------------
 
@@ -1923,7 +1927,7 @@ CREATE TABLE IF NOT EXISTS `oc_information` (
 
 INSERT INTO `oc_information` (`information_id`, `bottom`, `top`, `sort_order`, `status`) VALUES
 (3, 1, 0, 3, 1),
-(4, 1, 1, 1, 1),
+(4, 1, 0, 1, 1),
 (5, 1, 0, 4, 1),
 (6, 1, 0, 2, 1);
 
@@ -1948,14 +1952,10 @@ CREATE TABLE IF NOT EXISTS `oc_information_description` (
 --
 
 INSERT INTO `oc_information_description` (`information_id`, `language_id`, `title`, `description`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(5, 1, 'Terms &amp; Conditions', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&lt;/p&gt;\r\n', '', '', ''),
-(3, 1, 'Privacy Policy', '&lt;p&gt;\r\n	Privacy Policy&lt;/p&gt;\r\n', '', '', ''),
+(5, 1, 'Terms &amp; Conditions', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions dfg hjdgfj ghj dghj ghfj gfhj hj gfh j jghj&amp;nbsp;&lt;/p&gt;\r\n', 'ghjgh', '', ''),
+(3, 1, 'Privacy Policy', '&lt;p&gt;\r\n	Privacy Policy sfbokfsp hpg po hi df''pog hk''pog psoh kpoai sfg is vbgsfvbsfga &amp;nbsp;hs g&lt;/p&gt;\r\n', 'dfgdf', '', ''),
 (6, 1, 'Delivery Information', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;\r\n', '', '', ''),
-(5, 2, 'Terms &amp; Conditions', '&lt;p&gt;\r\n	Terms &amp;amp; Conditions&lt;/p&gt;\r\n', '', '', ''),
-(3, 2, 'Privacy Policy', '&lt;p&gt;\r\n	Privacy Policy&lt;/p&gt;\r\n', '', '', ''),
-(6, 2, 'Delivery Information', '&lt;p&gt;\r\n	Delivery Information&lt;/p&gt;\r\n', '', '', ''),
-(4, 1, 'About Us', '&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(68, 68, 68); font-family: SegoeUI, sans-serif; font-size: 18px; line-height: 1.1; background-color: transparent;&quot;&gt;Seeing is Believing&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Each of our diamonds is displayed using our exclusive Diamond Display Technology, which allows you to interact with diamonds in 360°, all from the comfort of your home.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Our diamond imagery is so vivid, we’re convinced it’s the only way to view a diamond.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Don’t take our word for it – see for yourself!&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;Only the Finest Diamonds&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;All our diamonds are GIA, AGS or IGI certified, and of the finest quality. Each and every diamond is hand selected and examined by our experts prior to shipment. With , you can be sure that your jewelry has undergone true quality control – unlike our competitors, we NEVER drop ship.&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;The Rarest Fancy Color Diamonds&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;is excited to introduce our new collection of fancy color diamonds. With one of the largest selections on the market, is a leading retailer for fancy color diamonds. Fancy color diamonds are rare and precious stones— a beautiful way to personalize jewelry for yourself or a loved one.&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;A Passion for Unique and Classic Designs&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;From classic solitaire rings, to intricate pavé settings, to sleek modern designs, offers an extensive collection of jewelry with countless options to fit your personal style. Match your favorite setting with the perfect diamond to create the engagement ring of your dreams.&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;24/7 Diamond Experts&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Certified diamonds experts are on site, around the clock, to assist you with any inquiries you may have. Whether you want help understanding the 4 C’s or deciding which diamond to purchase, a diamond expert is ready and happy to help.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;30-Day Returns – No Questions Asked&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;We stand behind every item we sell. If you are not 100% satisfied with your purchase, you can return it within 30 days for a full refund or exchange - no restocking fee, no questions asked. We also offer free shipping, a lifetime warranty, and a lifetime upgrade option. With ’s risk-free retail policy, you can shop with complete confidence.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;SIGN UP FOR OUR NEWSLETTER&lt;/p&gt;\r\n', 'About Us', '', ''),
-(4, 2, 'About Us', '&lt;p style=&quot;line-height: 17.1428px; text-align: center;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;Seeing is Believing&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Each of our diamonds is displayed using our exclusive Diamond Display Technology, which allows you to interact with diamonds in 360°, all from the comfort of your home.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Our diamond imagery is so vivid, we’re convinced it’s the only way to view a diamond.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Don’t take our word for it – see for yourself!&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;Only the Finest Diamonds&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;All our diamonds are GIA, AGS or IGI certified, and of the finest quality. Each and every diamond is hand selected and examined by our experts prior to shipment. With , you can be sure that your jewelry has undergone true quality control – unlike our competitors, we NEVER drop ship.&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;The Rarest Fancy Color Diamonds&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;is excited to introduce our new collection of fancy color diamonds. With one of the largest selections on the market, is a leading retailer for fancy color diamonds. Fancy color diamonds are rare and precious stones— a beautiful way to personalize jewelry for yourself or a loved one.&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;A Passion for Unique and Classic Designs&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;From classic solitaire rings, to intricate pavé settings, to sleek modern designs, offers an extensive collection of jewelry with countless options to fit your personal style. Match your favorite setting with the perfect diamond to create the engagement ring of your dreams.&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;24/7 Diamond Experts&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Certified diamonds experts are on site, around the clock, to assist you with any inquiries you may have. Whether you want help understanding the 4 C’s or deciding which diamond to purchase, a diamond expert is ready and happy to help.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;30-Day Returns – No Questions Asked&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;We stand behind every item we sell. If you are not 100% satisfied with your purchase, you can return it within 30 days for a full refund or exchange - no restocking fee, no questions asked. We also offer free shipping, a lifetime warranty, and a lifetime upgrade option. With ’s risk-free retail policy, you can shop with complete confidence.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;SIGN UP FOR OUR NEWSLETTER&lt;/p&gt;\r\n', 'About Us', '', '');
+(4, 1, 'About Us', '&lt;p style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;color: rgb(68, 68, 68); font-family: SegoeUI, sans-serif; font-size: 18px; line-height: 1.1; background-color: transparent;&quot;&gt;Seeing is Believing&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Each of our diamonds is displayed using our exclusive Diamond Display Technology, which allows you to interact with diamonds in 360°, all from the comfort of your home.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Our diamond imagery is so vivid, we’re convinced it’s the only way to view a diamond.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Don’t take our word for it – see for yourself!&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;Only the Finest Diamonds&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;All our diamonds are GIA, AGS or IGI certified, and of the finest quality. Each and every diamond is hand selected and examined by our experts prior to shipment. With , you can be sure that your jewelry has undergone true quality control – unlike our competitors, we NEVER drop ship.&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;The Rarest Fancy Color Diamonds&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;is excited to introduce our new collection of fancy color diamonds. With one of the largest selections on the market, is a leading retailer for fancy color diamonds. Fancy color diamonds are rare and precious stones— a beautiful way to personalize jewelry for yourself or a loved one.&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;A Passion for Unique and Classic Designs&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;From classic solitaire rings, to intricate pavé settings, to sleek modern designs, offers an extensive collection of jewelry with countless options to fit your personal style. Match your favorite setting with the perfect diamond to create the engagement ring of your dreams.&lt;/p&gt;&lt;h3 style=&quot;font-family: SegoeUI, sans-serif; color: rgb(68, 68, 68); margin-right: 0px; margin-bottom: 15px; margin-left: 0px; font-size: 18px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent;&quot;&gt;24/7 Diamond Experts&lt;/h3&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;Certified diamonds experts are on site, around the clock, to assist you with any inquiries you may have. Whether you want help understanding the 4 C’s or deciding which diamond to purchase, a diamond expert is ready and happy to help.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;30-Day Returns – No Questions Asked&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;We stand behind every item we sell. If you are not 100% satisfied with your purchase, you can return it within 30 days for a full refund or exchange - no restocking fee, no questions asked. We also offer free shipping, a lifetime warranty, and a lifetime upgrade option. With ’s risk-free retail policy, you can shop with complete confidence.&lt;/p&gt;&lt;p style=&quot;margin-bottom: 15px; padding: 0px; border: 0px; outline: 0px; font-size: 15px; vertical-align: baseline; color: rgb(128, 128, 128); font-family: SegoeUILight, ''Arial sans-serif''; line-height: 19.5px; background: transparent;&quot;&gt;SIGN UP FOR OUR NEWSLETTER&lt;/p&gt;\r\n', 'About Us', '', '');
 
 -- --------------------------------------------------------
 
@@ -1974,7 +1974,9 @@ CREATE TABLE IF NOT EXISTS `oc_information_to_layout` (
 --
 
 INSERT INTO `oc_information_to_layout` (`information_id`, `store_id`, `layout_id`) VALUES
-(4, 0, 0);
+(4, 0, 0),
+(3, 0, 0),
+(5, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2019,8 +2021,7 @@ CREATE TABLE IF NOT EXISTS `oc_language` (
 --
 
 INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `sort_order`, `status`) VALUES
-(1, 'English', 'en', 'en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', 1, 1),
-(2, 'Russian', 'ru', 'ru_RU.UTF-8,ru_RU,ru-gb,russian', 'ru.png', 'russian', 1, 1);
+(1, 'English', 'en', 'en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2067,7 +2068,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout_module` (
   `code` varchar(64) NOT NULL,
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=129 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=144 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_layout_module`
@@ -2079,9 +2080,8 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (20, 5, '0', 'column_left', 2),
 (69, 10, 'affiliate', 'column_right', 1),
 (68, 6, 'account', 'column_right', 1),
-(67, 1, 'carousel.29', 'content_top', 3),
-(66, 1, 'slideshow.27', 'content_top', 1),
-(65, 1, 'featured.28', 'content_top', 2),
+(142, 1, 'html.34', 'content_bottom', 2),
+(141, 1, 'bestseller.33', 'content_bottom', 3),
 (120, 14, 'rapnet', 'content_top', 2),
 (127, 3, 'wsubcat', 'content_top', 2),
 (126, 3, 'filter', 'content_top', 3),
@@ -2089,7 +2089,11 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (121, 14, 'complect', 'content_top', 1),
 (122, 2, 'complect', 'content_top', 0),
 (124, 15, 'complect', 'content_top', 0),
-(128, 16, 'complect', 'content_top', 0);
+(128, 16, 'complect', 'content_top', 0),
+(140, 1, 'featured.28', 'content_top', 2),
+(139, 1, 'slideshow.27', 'content_top', 1),
+(138, 1, 'carousel.29', 'content_top', 3),
+(143, 1, 'latest.35', 'content_bottom', 1);
 
 -- --------------------------------------------------------
 
@@ -2102,7 +2106,7 @@ CREATE TABLE IF NOT EXISTS `oc_layout_route` (
   `layout_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=77 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=80 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_layout_route`
@@ -2112,7 +2116,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (38, 6, 0, 'account/%'),
 (17, 10, 0, 'affiliate/%'),
 (75, 3, 0, 'product/category'),
-(42, 1, 0, 'common/home'),
+(79, 1, 0, 'common/home'),
 (72, 2, 0, 'product/product'),
 (24, 11, 0, 'information/information'),
 (23, 7, 0, 'checkout/%'),
@@ -2166,10 +2170,7 @@ CREATE TABLE IF NOT EXISTS `oc_length_class_description` (
 INSERT INTO `oc_length_class_description` (`length_class_id`, `language_id`, `title`, `unit`) VALUES
 (1, 1, 'Centimeter', 'cm'),
 (2, 1, 'Millimeter', 'mm'),
-(3, 1, 'Inch', 'in'),
-(1, 2, 'Centimeter', 'cm'),
-(2, 2, 'Millimeter', 'mm'),
-(3, 2, 'Inch', 'in');
+(3, 1, 'Inch', 'in');
 
 -- --------------------------------------------------------
 
@@ -2281,7 +2282,7 @@ CREATE TABLE IF NOT EXISTS `oc_module` (
   `name` varchar(64) NOT NULL,
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_module`
@@ -2292,7 +2293,10 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (29, 'Home Page', 'carousel', '{"name":"Home Page","banner_id":"8","width":"130","height":"100","status":"1"}'),
 (28, 'Home Page', 'featured', '{"name":"Home Page","product":["43","40","42","30"],"limit":"4","width":"200","height":"200","status":"1"}'),
 (27, 'Home Page', 'slideshow', '{"name":"Home Page","banner_id":"7","width":"1140","height":"380","status":"1"}'),
-(31, 'Banner 1', 'banner', '{"name":"Banner 1","banner_id":"6","width":"182","height":"182","status":"1"}');
+(31, 'Banner 1', 'banner', '{"name":"Banner 1","banner_id":"6","width":"182","height":"182","status":"1"}'),
+(33, 'Ноme Bestsellers', 'bestseller', '{"name":"\\u041d\\u043eme Bestsellers","limit":"4","width":"200","height":"200","status":"1"}'),
+(34, 'BanerHome', 'html', '{"name":"BanerHome","module_description":{"1":{"title":"","description":"&lt;section class=&quot;top-main-r top-main-r2&quot;&gt;    &lt;div class=&quot;wrapper-main-r&quot;&gt;        &lt;div class=&quot;title&quot;&gt;This is Photoshop version&lt;\\/div&gt;        &lt;div class=&quot;text&quot;&gt;            This is Photoshop''s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.        &lt;\\/div&gt;        &lt;a href=&quot;#&quot; class=&quot;brand-btn&quot;&gt;shop now&lt;\\/a&gt;    &lt;\\/div&gt;&lt;\\/section&gt;"}},"status":"1"}'),
+(35, 'Home Latest', 'latest', '{"name":"Home Latest","limit":"4","width":"200","height":"200","status":"1"}');
 
 -- --------------------------------------------------------
 
@@ -2333,8 +2337,7 @@ INSERT INTO `oc_option` (`option_id`, `type`, `sort_order`) VALUES
 (10, 'datetime', 9),
 (11, 'radio', 10),
 (12, 'date', 11),
-(13, 'radio', 0),
-(14, 'radio', 12);
+(13, 'radio', 0);
 
 -- --------------------------------------------------------
 
@@ -2364,21 +2367,7 @@ INSERT INTO `oc_option_description` (`option_id`, `language_id`, `name`) VALUES
 (10, 1, 'Date &amp; Time'),
 (12, 1, 'Delivery Date'),
 (11, 1, 'SIZE'),
-(1, 2, 'Radio'),
-(2, 2, 'Checkbox'),
-(4, 2, 'Text'),
-(6, 2, 'Textarea'),
-(8, 2, 'Date'),
-(7, 2, 'File'),
-(5, 2, 'Select'),
-(9, 2, 'Time'),
-(10, 2, 'Date &amp; Time'),
-(12, 2, 'Delivery Date'),
-(11, 2, 'SIZE'),
-(13, 2, 'Proba'),
-(13, 1, 'Proba'),
-(14, 2, 'PRECIOUS METAL'),
-(14, 1, 'PRECIOUS METAL');
+(13, 1, 'Proba');
 
 -- --------------------------------------------------------
 
@@ -2423,14 +2412,7 @@ INSERT INTO `oc_option_value` (`option_value_id`, `option_id`, `image`, `sort_or
 (55, 11, '', 4),
 (48, 11, '', 3),
 (47, 11, '', 2),
-(46, 11, '', 1),
-(67, 14, '', 0),
-(66, 14, '', 0),
-(65, 14, '', 0),
-(64, 14, '', 0),
-(63, 14, '', 0),
-(62, 14, '', 0),
-(61, 14, '', 0);
+(46, 11, '', 1);
 
 -- --------------------------------------------------------
 
@@ -2461,61 +2443,21 @@ INSERT INTO `oc_option_value_description` (`option_value_id`, `language_id`, `op
 (40, 1, 5, 'Blue'),
 (23, 1, 2, 'Checkbox 1'),
 (24, 1, 2, 'Checkbox 2'),
-(60, 2, 11, '33'),
 (60, 1, 11, '33'),
-(59, 2, 11, '32'),
-(43, 2, 1, 'Large'),
-(32, 2, 1, 'Small'),
-(45, 2, 2, 'Checkbox 4'),
-(44, 2, 2, 'Checkbox 3'),
-(31, 2, 1, 'Medium'),
-(42, 2, 5, 'Yellow'),
-(41, 2, 5, 'Green'),
-(39, 2, 5, 'Red'),
-(40, 2, 5, 'Blue'),
-(23, 2, 2, 'Checkbox 1'),
-(24, 2, 2, 'Checkbox 2'),
 (59, 1, 11, '32'),
-(58, 2, 11, '31'),
 (58, 1, 11, '31'),
 (54, 1, 13, 'Platinum'),
-(53, 2, 13, '18K Yellow Gold'),
 (53, 1, 13, '18K Yellow Gold'),
-(52, 2, 13, '18K White Gold'),
 (52, 1, 13, '18K White Gold'),
-(51, 2, 13, '14K Yellow Gold'),
 (51, 1, 13, '14K Yellow Gold'),
-(50, 2, 13, '14K Rose Gold'),
 (50, 1, 13, '14K Rose Gold'),
-(49, 2, 13, '14K White Gold'),
 (49, 1, 13, '14K White Gold'),
-(54, 2, 13, 'Platinum'),
-(57, 2, 11, '30'),
 (57, 1, 11, '30'),
-(56, 2, 11, '29'),
 (56, 1, 11, '29'),
-(55, 2, 11, '28'),
 (55, 1, 11, '28'),
-(48, 2, 11, '27'),
 (48, 1, 11, '27'),
-(47, 2, 11, '26'),
 (47, 1, 11, '26'),
-(46, 2, 11, '25'),
-(46, 1, 11, '25'),
-(67, 1, 14, 'Rose gold'),
-(66, 2, 14, 'Platinum'),
-(66, 1, 14, 'Platinum'),
-(65, 2, 14, 'Yellow gold 18'),
-(65, 1, 14, 'Yellow gold 18'),
-(64, 2, 14, 'Yellow gold 14'),
-(64, 1, 14, 'Yellow gold 14'),
-(63, 2, 14, 'White gold 18'),
-(63, 1, 14, 'White gold 18'),
-(62, 2, 14, 'White gold 14'),
-(62, 1, 14, 'White gold 14'),
-(61, 2, 14, 'All metals'),
-(61, 1, 14, 'All metals'),
-(67, 2, 14, 'Rose gold');
+(46, 1, 11, '25');
 
 -- --------------------------------------------------------
 
@@ -2585,7 +2527,7 @@ CREATE TABLE IF NOT EXISTS `oc_order` (
   `accept_language` varchar(255) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=91 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_order`
@@ -2594,28 +2536,27 @@ CREATE TABLE IF NOT EXISTS `oc_order` (
 INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `custom_field`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_custom_field`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_custom_field`, `shipping_method`, `shipping_code`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `marketing_id`, `tracking`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
 (1, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 0, 1, 'Shtirlic', 'Otto', 'trafik8787@gmail.com', '1212121212', '', '[]', 'Shtirlic', 'Otto', '', 'Kopenikshtrasse', '', 'Berlin', '234234234', 'United States', 223, 'Florida', 3630, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (2Checkout)', 'twocheckout', 'Shtirlic', 'Otto', '', 'Kopenikshtrasse', '', 'Berlin', '234234234', 'United States', 223, 'Florida', 3630, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '105.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.139', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-02-21 15:26:52', '2016-02-21 15:26:52'),
 (2, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'Ukraine', 220, 'Kyiv', 3490, '', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'Ukraine', 220, 'Kyiv', 3490, '', '[]', 'Flat Shipping Rate', 'flat.flat', '', '85.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.178', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-03-24 17:04:41', '2016-03-24 17:04:41'),
+(63, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:01:14', '2016-05-27 20:01:14'),
 (19, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 00:58:30', '2016-05-11 00:58:30'),
-(18, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 00:55:38', '2016-05-11 00:57:06'),
+(57, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 7, 1, 'Katerina', 'Test', 'katerinapalada@mail.ru', '45645645', '54645646456', '', 'Katerina', 'test', 'Company', 'erterter', '', 'eterter', 'etert', 'France, Metropolitan', 74, 'Calvados', 1127, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{postcode} {city}\r\n{country}', '[]', 'Bank Transfer', 'bank_transfer', 'Katerina', 'test', 'Company', 'erterter', '', 'eterter', 'etert', 'France, Metropolitan', 74, 'Calvados', 1127, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{postcode} {city}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', 'тест', '3683.0000', 5, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '194.187.106.246', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-24 22:33:45', '2016-05-24 22:33:50'),
 (5, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Free Shipping', 'free.free', 'ыва', '486.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.224', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-10 00:20:57', '2016-05-10 00:20:57'),
-(17, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '491.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 00:46:54', '2016-05-11 00:48:13'),
-(16, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '534.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 00:41:40', '2016-05-11 00:41:58'),
+(58, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '5.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 16:54:25', '2016-05-27 16:54:25'),
+(61, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 18:00:14', '2016-05-27 18:00:14'),
 (9, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '109.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-10 17:41:47', '2016-05-10 17:41:47'),
 (10, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '491.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-10 17:45:29', '2016-05-10 17:45:29'),
-(14, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '837.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-10 22:25:00', '2016-05-10 22:26:27'),
-(15, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 00:31:35', '2016-05-11 00:32:46'),
-(13, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', '', 'sdfdsf', '', 'sdfsdf', '43000', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '491.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-10 22:05:54', '2016-05-10 22:06:56'),
+(64, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:04:36', '2016-05-27 20:04:36'),
+(65, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:10:59', '2016-05-27 20:10:59'),
 (20, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_sim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 00:59:58', '2016-05-11 00:59:58'),
 (21, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_sim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 01:00:26', '2016-05-11 01:00:26'),
 (22, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_sim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 01:06:28', '2016-05-11 01:06:28'),
 (23, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 01:06:41', '2016-05-11 01:06:41'),
 (24, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 01:07:46', '2016-05-11 01:07:46'),
 (25, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 01:10:47', '2016-05-11 01:10:47'),
-(26, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 01:12:59', '2016-05-11 01:13:16'),
-(27, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '106.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 01:13:48', '2016-05-11 01:14:04'),
+(62, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:00:10', '2016-05-27 20:00:10'),
 (28, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '534.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 01:18:53', '2016-05-11 01:18:53'),
 (29, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_sim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '534.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.93.148.0', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-11 01:19:52', '2016-05-11 01:19:52'),
 (30, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '970.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.193', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-15 12:17:11', '2016-05-15 12:17:11'),
-(31, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '680.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.193', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-15 12:18:08', '2016-05-15 12:21:33'),
+(60, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 5, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 17:29:58', '2016-05-27 17:30:29'),
 (32, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '484.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.193', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-15 20:29:18', '2016-05-15 20:29:18'),
 (33, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '484.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.193', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-15 20:30:09', '2016-05-15 20:30:09'),
 (34, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '484.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.193', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-15 20:36:34', '2016-05-15 20:36:34'),
@@ -2633,11 +2574,38 @@ INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, 
 (46, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1034.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.163', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-16 00:26:46', '2016-05-16 00:26:46'),
 (47, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1034.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.163', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-16 00:27:33', '2016-05-16 00:27:33'),
 (48, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1034.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.163', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-16 00:28:31', '2016-05-16 00:28:31'),
-(49, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1034.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.163', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-16 00:29:07', '2016-05-16 00:30:15'),
+(55, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_sim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1321.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.165', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2016-05-20 17:21:55', '2016-05-20 17:21:55'),
+(56, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1321.0000', 7, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.165', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2016-05-20 17:22:14', '2016-05-20 17:25:09'),
 (50, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '615.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.163', '', 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-16 00:48:14', '2016-05-16 00:48:14'),
 (51, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Bank Transfer', 'bank_transfer', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1101.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.163', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-16 12:15:48', '2016-05-16 12:15:48'),
-(52, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Bank Transfer', 'bank_transfer', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1101.0000', 5, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.163', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-16 12:19:13', '2016-05-16 12:19:15'),
-(53, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1061.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '193.238.96.13', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'uk-UA,uk;q=0.8,ru;q=0.6,en-US;q=0.4,en;q=0.2,pl;q=0.2', '2016-05-17 21:09:45', '2016-05-17 21:09:45');
+(54, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_sim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1321.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.165', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2016-05-20 17:17:33', '2016-05-20 17:17:33'),
+(53, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Test name', 'test last name', 'beliar87@mail.ru', '1231123123', '', '[]', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '1061.0000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '193.238.96.13', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36', 'uk-UA,uk;q=0.8,ru;q=0.6,en-US;q=0.4,en;q=0.2,pl;q=0.2', '2016-05-17 21:09:45', '2016-05-17 21:09:45'),
+(66, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:14:22', '2016-05-27 20:14:22'),
+(67, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:42:39', '2016-05-27 20:42:39');
+INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `custom_field`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_custom_field`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_custom_field`, `shipping_method`, `shipping_code`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `marketing_id`, `tracking`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
+(68, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '80.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:43:27', '2016-05-27 20:43:27'),
+(69, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '80.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:43:27', '2016-05-27 20:43:27'),
+(70, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '80.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:44:35', '2016-05-27 20:44:35'),
+(71, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:46:31', '2016-05-27 20:46:31'),
+(72, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:46:31', '2016-05-27 20:46:31'),
+(73, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:50:19', '2016-05-27 20:50:19'),
+(74, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:53:12', '2016-05-27 20:53:12'),
+(75, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:54:20', '2016-05-27 20:54:20'),
+(76, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-27 20:57:00', '2016-05-27 20:57:00'),
+(77, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 5, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.121', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-05-28 01:46:38', '2016-05-28 01:47:43'),
+(78, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'PayPal Express Checkout', 'pp_express', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '532.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '178.92.8.248', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-09 19:31:00', '2016-06-09 19:31:00'),
+(79, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '532.4000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.135', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 17:54:13', '2016-06-11 17:54:13'),
+(80, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.4000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.135', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 17:54:55', '2016-06-11 17:54:55'),
+(81, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.135', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 18:07:05', '2016-06-11 18:07:05'),
+(82, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.135', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 19:29:04', '2016-06-11 19:29:04'),
+(83, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.135', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 19:37:11', '2016-06-11 19:37:11'),
+(84, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.135', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 19:38:34', '2016-06-11 19:38:34'),
+(85, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.135', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 22:00:03', '2016-06-11 22:00:03'),
+(86, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.135', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 22:10:46', '2016-06-11 22:10:46'),
+(87, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '95.133.238.135', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 22:12:27', '2016-06-11 22:12:27'),
+(88, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.4000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '65.111.169.4', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 23:20:28', '2016-06-11 23:20:28'),
+(89, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 1, 1, 'Vitalik', 'Shtirlicч', 'beliar87@mail.ru', '1231123123', '3457345', '', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Test name', 'test last name', 'werwer', 'sdfdsf', 'Кьопеникштрасе', 'sdfsdf', '59874698', 'United States', 223, 'Arizona', 3616, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 0, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '65.111.169.4', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2', '2016-06-11 23:20:47', '2016-06-11 23:20:47'),
+(90, 0, 'INV-2013-00', 0, 'Your Store', 'http://canary.webremote.net/', 8, 1, 'Nadya', 'Geneizer', 'nadya@brilliantcanary.com', '6152936318', '', '', 'Nadya', 'Geneizer', '95 White Bridge Road ', 'Suite 506', '', 'Nashville', '', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Credit Card / Debit Card (Authorize.Net)', 'authorizenet_aim', 'Nadya', 'Geneizer', '95 White Bridge Road ', 'Suite 506', '', 'Nashville', '', 'United States', 223, 'Tennessee', 3668, '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', '[]', 'Flat Shipping Rate', 'flat.flat', '', '0.2000', 5, 0, '0.0000', 0, '', 1, 2, 'USD', '1.00000000', '68.52.127.235', '', 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36', 'en-US,en;q=0.8', '2016-07-01 22:22:24', '2016-07-01 22:24:24');
 
 -- --------------------------------------------------------
 
@@ -2669,24 +2637,18 @@ CREATE TABLE IF NOT EXISTS `oc_order_history` (
   `notify` tinyint(1) NOT NULL DEFAULT '0',
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_order_history`
 --
 
 INSERT INTO `oc_order_history` (`order_history_id`, `order_id`, `order_status_id`, `notify`, `comment`, `date_added`) VALUES
-(17, 15, 7, 0, 'Authorization Code: 000000\nAVS Response: P\nTransaction ID: 0\nCard Code Response: \nCardholder Authentication Verification Response: \n', '2016-05-11 00:32:46'),
-(9, 13, 7, 0, '', '2016-05-10 22:06:56'),
-(16, 14, 7, 0, '', '2016-05-10 22:26:27'),
-(18, 16, 7, 0, 'Authorization Code: 000000\nAVS Response: P\nTransaction ID: 0\nCard Code Response: \nCardholder Authentication Verification Response: \n', '2016-05-11 00:41:58'),
-(19, 17, 7, 0, 'Authorization Code: 000000\nAVS Response: P\nTransaction ID: 0\nCard Code Response: \nCardholder Authentication Verification Response: \n', '2016-05-11 00:48:13'),
-(20, 18, 7, 0, 'Authorization Code: 000000\nAVS Response: P\nTransaction ID: 0\nCard Code Response: \nCardholder Authentication Verification Response: \n', '2016-05-11 00:57:06'),
-(21, 26, 7, 0, 'Authorization Code: 000000\nAVS Response: P\nTransaction ID: 0\nCard Code Response: \nCardholder Authentication Verification Response: \n', '2016-05-11 01:13:16'),
-(22, 27, 7, 0, 'Authorization Code: 000000\nAVS Response: P\nTransaction ID: 0\nCard Code Response: \nCardholder Authentication Verification Response: \n', '2016-05-11 01:14:04'),
-(23, 31, 7, 0, '', '2016-05-15 12:21:33'),
-(24, 49, 7, 0, 'Authorization Code: 000000\nAVS Response: P\nTransaction ID: 0\nCard Code Response: \nCardholder Authentication Verification Response: \n', '2016-05-16 00:30:15'),
-(25, 52, 5, 1, 'Bank Transfer Instructions\n\nИнструкция по переводу средств\n\nYour order will not ship until we receive payment.', '2016-05-16 12:19:15');
+(41, 60, 5, 0, 'Authorization Code: 000000\nAVS Response: P\nTransaction ID: 0\nCard Code Response: \nCardholder Authentication Verification Response: \n', '2016-05-27 17:30:29'),
+(42, 77, 5, 0, '', '2016-05-28 01:47:43'),
+(43, 90, 5, 0, 'Authorization Code: 02760Z\nAVS Response: A\nTransaction ID: 20020814081\nCard Code Response: M\nCardholder Authentication Verification Response: \n', '2016-07-01 22:24:24'),
+(38, 57, 5, 1, 'Bank Transfer Instructions\n\nИнструкция по переводу средств\n\nYour order will not ship until we receive payment.', '2016-05-24 22:33:50'),
+(37, 56, 7, 0, 'Authorization Code: 000000\nAVS Response: P\nTransaction ID: 0\nCard Code Response: \nCardholder Authentication Verification Response: \n', '2016-05-20 17:25:09');
 
 -- --------------------------------------------------------
 
@@ -2703,7 +2665,7 @@ CREATE TABLE IF NOT EXISTS `oc_order_option` (
   `name` varchar(255) NOT NULL,
   `value` text NOT NULL,
   `type` varchar(32) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_order_option`
@@ -2711,7 +2673,19 @@ CREATE TABLE IF NOT EXISTS `oc_order_option` (
 
 INSERT INTO `oc_order_option` (`order_option_id`, `order_id`, `order_product_id`, `product_option_id`, `product_option_value_id`, `name`, `value`, `type`) VALUES
 (1, 1, 1, 225, 0, 'Delivery Date', '2011-04-22', 'date'),
-(2, 2, 2, 226, 15, 'Select', 'Red', 'select');
+(2, 2, 2, 226, 15, 'Select', 'Red', 'select'),
+(6, 54, 75, 228, 32, 'PRECIOUS METAL', 'Rose gold', 'radio'),
+(5, 54, 75, 227, 21, 'SIZE', '29', 'radio'),
+(7, 55, 79, 227, 21, 'SIZE', '29', 'radio'),
+(8, 55, 79, 228, 32, 'PRECIOUS METAL', 'Rose gold', 'radio'),
+(9, 56, 83, 227, 21, 'SIZE', '29', 'radio'),
+(10, 56, 83, 228, 32, 'PRECIOUS METAL', 'Rose gold', 'radio'),
+(11, 68, 98, 227, 19, 'SIZE', '27', 'radio'),
+(12, 68, 98, 228, 30, 'PRECIOUS METAL', 'Yellow gold 18', 'radio'),
+(13, 69, 100, 227, 19, 'SIZE', '27', 'radio'),
+(14, 69, 100, 228, 30, 'PRECIOUS METAL', 'Yellow gold 18', 'radio'),
+(15, 70, 102, 227, 19, 'SIZE', '27', 'radio'),
+(16, 70, 102, 228, 30, 'PRECIOUS METAL', 'Yellow gold 18', 'radio');
 
 -- --------------------------------------------------------
 
@@ -2730,7 +2704,7 @@ CREATE TABLE IF NOT EXISTS `oc_order_product` (
   `total` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_order_product`
@@ -2739,16 +2713,17 @@ CREATE TABLE IF NOT EXISTS `oc_order_product` (
 INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `product_id`, `name`, `model`, `quantity`, `price`, `total`, `tax`, `reward`) VALUES
 (1, 1, 47, 'HP LP3065', 'Product 21', 1, '100.0000', '100.0000', '0.0000', 300),
 (2, 2, 30, 'Canon EOS 5D', 'Product 3', 1, '80.0000', '80.0000', '0.0000', 200),
-(18, 17, 67755427, 'Marquise 0.5 CARAT J VVS2', '0.5 Catat J-VVS2  Cut Marquise Diamond ID-67755427', 1, '486.0000', '486.0000', '0.0000', 0),
+(80, 55, 28, 'HTC Touch HD', 'Product 1', 1, '100.0000', '100.0000', '22.0000', 400),
+(81, 55, 71238224, 'Marquise 0.5 CARAT H VS2', '0.5 Catat H-VS2  Cut Marquise Diamond ID-71238224', 1, '486.0000', '486.0000', '0.0000', 0),
 (5, 5, 71238224, 'Marquise 0.5 CARAT H VS2', '0.5 Catat H-VS2  Cut Marquise Diamond', 1, '486.0000', '486.0000', '0.0000', 0),
-(17, 16, 69909505, 'Marquise 0.51 CARAT G SI2', '0.51 Catat G-SI2  Cut Marquise Diamond ID-69909505', 1, '529.0000', '529.0000', '0.0000', 0),
-(16, 15, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
+(84, 56, 28, 'HTC Touch HD', 'Product 1', 1, '100.0000', '100.0000', '22.0000', 400),
+(85, 56, 71238224, 'Marquise 0.5 CARAT H VS2', '0.5 Catat H-VS2  Cut Marquise Diamond ID-71238224', 1, '486.0000', '486.0000', '0.0000', 0),
 (9, 9, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
 (10, 10, 67755427, 'Marquise 0.5 CARAT J VVS2', '0.5 Catat J-VVS2  Cut Marquise Diamond ID-67755427', 1, '486.0000', '486.0000', '0.0000', 0),
-(14, 14, 58, 'Ring3', 'Ring3', 1, '400.0000', '400.0000', '82.0000', 0),
-(15, 14, 70507103, 'Marquise 0.5 CARAT J SI1', '0.5 Catat J-SI1  Cut Marquise Diamond ID-70507103', 1, '432.0000', '432.0000', '0.0000', 0),
-(13, 13, 67755427, 'Marquise 0.5 CARAT J VVS2', '0.5 Catat J-VVS2  Cut Marquise Diamond ID-67755427', 1, '486.0000', '486.0000', '0.0000', 0),
-(19, 18, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
+(88, 58, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(86, 57, 70, 'Matching Gemstone Pairs 1', 'Matching Gemstone Pairs model 1', 1, '678.0000', '678.0000', '0.0000', 0),
+(87, 57, 71, 'Classic product 1', 'classic product 1', 1, '3000.0000', '3000.0000', '0.0000', 0),
+(83, 56, 30, 'Canon EOS 5D', 'Product 3', 1, '80.0000', '80.0000', '18.0000', 200),
 (20, 19, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
 (21, 20, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
 (22, 21, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
@@ -2756,13 +2731,11 @@ INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `product_id`, `n
 (24, 23, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
 (25, 24, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
 (26, 25, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
-(27, 26, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
-(28, 27, 40, 'iPhone', 'product 11', 1, '101.0000', '101.0000', '0.0000', 0),
+(82, 56, 55, 'Ring2-pave', 'Ring2', 1, '650.0000', '650.0000', '0.0000', 0),
 (29, 28, 69909505, 'Marquise 0.51 CARAT G SI2', '0.51 Catat G-SI2  Cut Marquise Diamond ID-69909505', 1, '529.0000', '529.0000', '0.0000', 0),
 (30, 29, 69909505, 'Marquise 0.51 CARAT G SI2', '0.51 Catat G-SI2  Cut Marquise Diamond ID-69909505', 1, '529.0000', '529.0000', '0.0000', 0),
 (31, 30, 62947427, 'Princess 0.51 CARAT K VS1', '0.51 Catat K-VS1  Cut Princess Diamond ID-62947427', 1, '479.0000', '479.0000', '0.0000', 0),
 (32, 30, 67755427, 'Marquise 0.5 CARAT J VVS2', '0.5 Catat J-VVS2  Cut Marquise Diamond ID-67755427', 1, '486.0000', '486.0000', '0.0000', 0),
-(33, 31, 67755422, 'Round 0.5 CARAT H SI2', '0.5 Catat H-SI2 Fair Cut Round Diamond ID-67755422', 1, '675.0000', '675.0000', '0.0000', 0),
 (34, 32, 62947427, 'Princess 0.51 CARAT K VS1', '0.51 Catat K-VS1  Cut Princess Diamond ID-62947427', 1, '479.0000', '479.0000', '0.0000', 0),
 (35, 33, 62947427, 'Princess 0.51 CARAT K VS1', '0.51 Catat K-VS1  Cut Princess Diamond ID-62947427', 1, '479.0000', '479.0000', '0.0000', 0),
 (36, 34, 62947427, 'Princess 0.51 CARAT K VS1', '0.51 Catat K-VS1  Cut Princess Diamond ID-62947427', 1, '479.0000', '479.0000', '0.0000', 0),
@@ -2794,15 +2767,55 @@ INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `product_id`, `n
 (62, 47, 69480538, 'Princess 0.51 CARAT K VVS1', '0.51 Catat K-VVS1  Cut Princess Diamond ID-69480538', 2, '550.0000', '550.0000', '0.0000', 0),
 (63, 48, 62947427, 'Princess 0.51 CARAT K VS1', '0.51 Catat K-VS1  Cut Princess Diamond ID-62947427', 1, '479.0000', '479.0000', '0.0000', 0),
 (64, 48, 69480538, 'Princess 0.51 CARAT K VVS1', '0.51 Catat K-VVS1  Cut Princess Diamond ID-69480538', 2, '550.0000', '550.0000', '0.0000', 0),
-(65, 49, 62947427, 'Princess 0.51 CARAT K VS1', '0.51 Catat K-VS1  Cut Princess Diamond ID-62947427', 1, '479.0000', '479.0000', '0.0000', 0),
-(66, 49, 69480538, 'Princess 0.51 CARAT K VVS1', '0.51 Catat K-VVS1  Cut Princess Diamond ID-69480538', 2, '550.0000', '550.0000', '0.0000', 0),
+(78, 55, 55, 'Ring2-pave', 'Ring2', 1, '650.0000', '650.0000', '0.0000', 0),
+(79, 55, 30, 'Canon EOS 5D', 'Product 3', 1, '80.0000', '80.0000', '18.0000', 200),
+(77, 54, 71238224, 'Marquise 0.5 CARAT H VS2', '0.5 Catat H-VS2  Cut Marquise Diamond ID-71238224', 1, '486.0000', '486.0000', '0.0000', 0),
 (67, 50, 70178072, 'Round 0.57 CARAT K SI2', '0.57 Catat K-SI2 Good Cut Round Diamond ID-70178072', 1, '610.0000', '610.0000', '0.0000', 0),
 (68, 51, 67755427, 'Marquise 0.5 CARAT J VVS2', '0.5 Catat J-VVS2  Cut Marquise Diamond ID-67755427', 1, '486.0000', '486.0000', '0.0000', 0),
 (69, 51, 70178072, 'Round 0.57 CARAT K SI2', '0.57 Catat K-SI2 Good Cut Round Diamond ID-70178072', 1, '610.0000', '610.0000', '0.0000', 0),
-(70, 52, 67755427, 'Marquise 0.5 CARAT J VVS2', '0.5 Catat J-VVS2  Cut Marquise Diamond ID-67755427', 1, '486.0000', '486.0000', '0.0000', 0),
-(71, 52, 70178072, 'Round 0.57 CARAT K SI2', '0.57 Catat K-SI2 Good Cut Round Diamond ID-70178072', 1, '610.0000', '610.0000', '0.0000', 0),
+(76, 54, 28, 'HTC Touch HD', 'Product 1', 1, '100.0000', '100.0000', '22.0000', 400),
+(74, 54, 55, 'Ring2-pave', 'Ring2', 1, '650.0000', '650.0000', '0.0000', 0),
+(75, 54, 30, 'Canon EOS 5D', 'Product 3', 1, '80.0000', '80.0000', '18.0000', 200),
 (72, 53, 55, 'Ring2-pave', 'Ring2', 1, '650.0000', '650.0000', '0.0000', 0),
-(73, 53, 69722246, 'Marquise 0.5 CARAT K VVS2', '0.5 Catat K-VVS2  Cut Marquise Diamond ID-69722246', 1, '406.0000', '406.0000', '0.0000', 0);
+(73, 53, 69722246, 'Marquise 0.5 CARAT K VVS2', '0.5 Catat K-VVS2  Cut Marquise Diamond ID-69722246', 1, '406.0000', '406.0000', '0.0000', 0),
+(90, 60, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(91, 61, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(92, 62, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(93, 63, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(94, 64, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(95, 65, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(96, 66, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(97, 67, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(98, 68, 30, 'Canon EOS 5D', 'Product 3', 1, '80.0000', '80.0000', '18.0000', 200),
+(99, 68, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(100, 69, 30, 'Canon EOS 5D', 'Product 3', 1, '80.0000', '80.0000', '18.0000', 200),
+(101, 69, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(102, 70, 30, 'Canon EOS 5D', 'Product 3', 1, '80.0000', '80.0000', '18.0000', 200),
+(103, 70, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(104, 71, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(105, 72, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(106, 73, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(107, 74, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(108, 75, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(109, 76, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(110, 77, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(111, 78, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(112, 78, 47, 'HP LP3065', 'Product 21', 1, '100.0000', '100.0000', '22.0000', 300),
+(113, 78, 70507103, 'Marquise 0.5 CARAT J SI1', '0.5 Catat J-SI1  Cut Marquise Diamond ID-70507103', 1, '432.0000', '432.0000', '0.0000', 0),
+(114, 79, 55, 'Ring2-pave', 'Ring2', 2, '0.2000', '0.4000', '0.0000', 0),
+(115, 79, 47, 'HP LP3065', 'Product 21', 1, '100.0000', '100.0000', '22.0000', 300),
+(116, 79, 70507103, 'Marquise 0.5 CARAT J SI1', '0.5 Catat J-SI1  Cut Marquise Diamond ID-70507103', 1, '432.0000', '432.0000', '0.0000', 0),
+(117, 80, 55, 'Ring2-pave', 'Ring2', 2, '0.2000', '0.4000', '0.0000', 0),
+(118, 81, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(119, 82, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(120, 83, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(121, 84, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(122, 85, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(123, 86, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(124, 87, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(125, 88, 55, 'Ring2-pave', 'Ring2', 2, '0.2000', '0.4000', '0.0000', 0),
+(126, 89, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0),
+(127, 90, 55, 'Ring2-pave', 'Ring2', 1, '0.2000', '0.2000', '0.0000', 0);
 
 -- --------------------------------------------------------
 
@@ -2889,21 +2902,7 @@ INSERT INTO `oc_order_status` (`order_status_id`, `language_id`, `name`) VALUES
 (1, 1, 'Pending'),
 (16, 1, 'Voided'),
 (15, 1, 'Processed'),
-(14, 1, 'Expired'),
-(2, 2, 'Processing'),
-(3, 2, 'Shipped'),
-(7, 2, 'Canceled'),
-(5, 2, 'Complete'),
-(8, 2, 'Denied'),
-(9, 2, 'Canceled Reversal'),
-(10, 2, 'Failed'),
-(11, 2, 'Refunded'),
-(12, 2, 'Reversed'),
-(13, 2, 'Chargeback'),
-(1, 2, 'Pending'),
-(16, 2, 'Voided'),
-(15, 2, 'Processed'),
-(14, 2, 'Expired');
+(14, 1, 'Expired');
 
 -- --------------------------------------------------------
 
@@ -2918,7 +2917,7 @@ CREATE TABLE IF NOT EXISTS `oc_order_total` (
   `title` varchar(255) NOT NULL,
   `value` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=163 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=274 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_order_total`
@@ -2931,19 +2930,19 @@ INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `va
 (4, 2, 'sub_total', 'Sub-Total', '80.0000', 1),
 (5, 2, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (6, 2, 'total', 'Total', '85.0000', 9),
-(53, 17, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(54, 17, 'total', 'Total', '491.0000', 9),
-(55, 18, 'sub_total', 'Sub-Total', '101.0000', 1),
+(172, 57, 'sub_total', 'Sub-Total', '3678.0000', 1),
+(170, 56, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
+(171, 56, 'total', 'Total', '1321.0000', 9),
 (12, 5, 'sub_total', 'Sub-Total', '486.0000', 1),
 (13, 5, 'shipping', 'Free Shipping', '0.0000', 3),
 (14, 5, 'total', 'Total', '486.0000', 9),
-(52, 17, 'sub_total', 'Sub-Total', '486.0000', 1),
-(51, 16, 'total', 'Total', '534.0000', 9),
-(50, 16, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(49, 16, 'sub_total', 'Sub-Total', '529.0000', 1),
-(48, 15, 'total', 'Total', '106.0000', 9),
-(47, 15, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(46, 15, 'sub_total', 'Sub-Total', '101.0000', 1),
+(169, 56, 'sub_total', 'Sub-Total', '1316.0000', 1),
+(187, 62, 'sub_total', 'Sub-Total', '0.2000', 1),
+(188, 62, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(183, 60, 'total', 'Total', '0.2000', 9),
+(184, 61, 'sub_total', 'Sub-Total', '0.2000', 1),
+(185, 61, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(186, 61, 'total', 'Total', '0.2000', 9),
 (26, 9, 'sub_total', 'Sub-Total', '101.0000', 1),
 (27, 9, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (28, 9, 'tax', 'Eco Tax (-2.00)', '2.0000', 5),
@@ -2952,14 +2951,11 @@ INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `va
 (31, 10, 'sub_total', 'Sub-Total', '486.0000', 1),
 (32, 10, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (33, 10, 'total', 'Total', '491.0000', 9),
-(45, 14, 'total', 'Total', '837.0000', 9),
-(44, 14, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(43, 14, 'sub_total', 'Sub-Total', '832.0000', 1),
-(56, 18, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(40, 13, 'sub_total', 'Sub-Total', '486.0000', 1),
-(41, 13, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(42, 13, 'total', 'Total', '491.0000', 9),
-(57, 18, 'total', 'Total', '106.0000', 9),
+(190, 63, 'sub_total', 'Sub-Total', '0.2000', 1),
+(189, 62, 'total', 'Total', '0.2000', 9),
+(177, 58, 'total', 'Total', '5.2000', 9),
+(182, 60, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(181, 60, 'sub_total', 'Sub-Total', '0.2000', 1),
 (58, 19, 'sub_total', 'Sub-Total', '101.0000', 1),
 (59, 19, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (60, 19, 'total', 'Total', '106.0000', 9),
@@ -2981,12 +2977,10 @@ INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `va
 (76, 25, 'sub_total', 'Sub-Total', '101.0000', 1),
 (77, 25, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (78, 25, 'total', 'Total', '106.0000', 9),
-(79, 26, 'sub_total', 'Sub-Total', '101.0000', 1),
-(80, 26, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(81, 26, 'total', 'Total', '106.0000', 9),
-(82, 27, 'sub_total', 'Sub-Total', '101.0000', 1),
-(83, 27, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(84, 27, 'total', 'Total', '106.0000', 9),
+(176, 58, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
+(175, 58, 'sub_total', 'Sub-Total', '0.2000', 1),
+(168, 55, 'total', 'Total', '1321.0000', 9),
+(167, 55, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (85, 28, 'sub_total', 'Sub-Total', '529.0000', 1),
 (86, 28, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (87, 28, 'total', 'Total', '534.0000', 9),
@@ -2996,9 +2990,8 @@ INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `va
 (91, 30, 'sub_total', 'Sub-Total', '965.0000', 1),
 (92, 30, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (93, 30, 'total', 'Total', '970.0000', 9),
-(94, 31, 'sub_total', 'Sub-Total', '675.0000', 1),
-(95, 31, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(96, 31, 'total', 'Total', '680.0000', 9),
+(174, 57, 'total', 'Total', '3683.0000', 9),
+(173, 57, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (97, 32, 'sub_total', 'Sub-Total', '479.0000', 1),
 (98, 32, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (99, 32, 'total', 'Total', '484.0000', 9),
@@ -3050,21 +3043,102 @@ INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `va
 (145, 48, 'sub_total', 'Sub-Total', '1029.0000', 1),
 (146, 48, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (147, 48, 'total', 'Total', '1034.0000', 9),
-(148, 49, 'sub_total', 'Sub-Total', '1029.0000', 1),
-(149, 49, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(150, 49, 'total', 'Total', '1034.0000', 9),
+(166, 55, 'sub_total', 'Sub-Total', '1316.0000', 1),
+(165, 54, 'total', 'Total', '1321.0000', 9),
 (151, 50, 'sub_total', 'Sub-Total', '610.0000', 1),
 (152, 50, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (153, 50, 'total', 'Total', '615.0000', 9),
 (154, 51, 'sub_total', 'Sub-Total', '1096.0000', 1),
 (155, 51, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
 (156, 51, 'total', 'Total', '1101.0000', 9),
-(157, 52, 'sub_total', 'Sub-Total', '1096.0000', 1),
-(158, 52, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(159, 52, 'total', 'Total', '1101.0000', 9),
+(164, 54, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
+(163, 54, 'sub_total', 'Sub-Total', '1316.0000', 1),
 (160, 53, 'sub_total', 'Sub-Total', '1056.0000', 1),
 (161, 53, 'shipping', 'Flat Shipping Rate', '5.0000', 3),
-(162, 53, 'total', 'Total', '1061.0000', 9);
+(162, 53, 'total', 'Total', '1061.0000', 9),
+(191, 63, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(192, 63, 'total', 'Total', '0.2000', 9),
+(193, 64, 'sub_total', 'Sub-Total', '0.2000', 1),
+(194, 64, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(195, 64, 'total', 'Total', '0.2000', 9),
+(196, 65, 'sub_total', 'Sub-Total', '0.2000', 1),
+(197, 65, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(198, 65, 'total', 'Total', '0.2000', 9),
+(199, 66, 'sub_total', 'Sub-Total', '0.2000', 1),
+(200, 66, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(201, 66, 'total', 'Total', '0.2000', 9),
+(202, 67, 'sub_total', 'Sub-Total', '0.2000', 1),
+(203, 67, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(204, 67, 'total', 'Total', '0.2000', 9),
+(205, 68, 'sub_total', 'Sub-Total', '80.2000', 1),
+(206, 68, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(207, 68, 'total', 'Total', '80.2000', 9),
+(208, 69, 'sub_total', 'Sub-Total', '80.2000', 1),
+(209, 69, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(210, 69, 'total', 'Total', '80.2000', 9),
+(211, 70, 'sub_total', 'Sub-Total', '80.2000', 1),
+(212, 70, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(213, 70, 'total', 'Total', '80.2000', 9),
+(214, 71, 'sub_total', 'Sub-Total', '0.2000', 1),
+(215, 71, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(216, 71, 'total', 'Total', '0.2000', 9),
+(217, 72, 'sub_total', 'Sub-Total', '0.2000', 1),
+(218, 72, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(219, 72, 'total', 'Total', '0.2000', 9),
+(220, 73, 'sub_total', 'Sub-Total', '0.2000', 1),
+(221, 73, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(222, 73, 'total', 'Total', '0.2000', 9),
+(223, 74, 'sub_total', 'Sub-Total', '0.2000', 1),
+(224, 74, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(225, 74, 'total', 'Total', '0.2000', 9),
+(226, 75, 'sub_total', 'Sub-Total', '0.2000', 1),
+(227, 75, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(228, 75, 'total', 'Total', '0.2000', 9),
+(229, 76, 'sub_total', 'Sub-Total', '0.2000', 1),
+(230, 76, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(231, 76, 'total', 'Total', '0.2000', 9),
+(232, 77, 'sub_total', 'Sub-Total', '0.2000', 1),
+(233, 77, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(234, 77, 'total', 'Total', '0.2000', 9),
+(235, 78, 'sub_total', 'Sub-Total', '532.2000', 1),
+(236, 78, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(237, 78, 'total', 'Total', '532.2000', 9),
+(238, 79, 'sub_total', 'Sub-Total', '532.4000', 1),
+(239, 79, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(240, 79, 'total', 'Total', '532.4000', 9),
+(241, 80, 'sub_total', 'Sub-Total', '0.4000', 1),
+(242, 80, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(243, 80, 'total', 'Total', '0.4000', 9),
+(244, 81, 'sub_total', 'Sub-Total', '0.2000', 1),
+(245, 81, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(246, 81, 'total', 'Total', '0.2000', 9),
+(247, 82, 'sub_total', 'Sub-Total', '0.2000', 1),
+(248, 82, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(249, 82, 'total', 'Total', '0.2000', 9),
+(250, 83, 'sub_total', 'Sub-Total', '0.2000', 1),
+(251, 83, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(252, 83, 'total', 'Total', '0.2000', 9),
+(253, 84, 'sub_total', 'Sub-Total', '0.2000', 1),
+(254, 84, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(255, 84, 'total', 'Total', '0.2000', 9),
+(256, 85, 'sub_total', 'Sub-Total', '0.2000', 1),
+(257, 85, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(258, 85, 'total', 'Total', '0.2000', 9),
+(259, 86, 'sub_total', 'Sub-Total', '0.2000', 1),
+(260, 86, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(261, 86, 'total', 'Total', '0.2000', 9),
+(262, 87, 'sub_total', 'Sub-Total', '0.2000', 1),
+(263, 87, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(264, 87, 'total', 'Total', '0.2000', 9),
+(265, 88, 'sub_total', 'Sub-Total', '0.4000', 1),
+(266, 88, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(267, 88, 'total', 'Total', '0.4000', 9),
+(268, 89, 'sub_total', 'Sub-Total', '0.2000', 1),
+(269, 89, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(270, 89, 'total', 'Total', '0.2000', 9),
+(271, 90, 'sub_total', 'Sub-Total', '0.2000', 1),
+(272, 90, 'shipping', 'Flat Shipping Rate', '0.0000', 3),
+(273, 90, 'total', 'Total', '0.2000', 9);
 
 -- --------------------------------------------------------
 
@@ -3102,7 +3176,7 @@ CREATE TABLE IF NOT EXISTS `oc_paypal_order` (
   `currency_code` char(3) NOT NULL,
   `authorization_id` varchar(30) NOT NULL,
   `total` decimal(10,2) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_paypal_order`
@@ -3113,7 +3187,8 @@ INSERT INTO `oc_paypal_order` (`paypal_order_id`, `order_id`, `date_added`, `dat
 (2, 12, '2016-05-10 18:20:38', '2016-05-10 18:20:38', 'Complete', 'USD', '7AK02563ES2639348', '106.00'),
 (3, 13, '2016-05-10 22:06:56', '2016-05-10 22:06:56', 'Complete', 'USD', '2JU08616DX378882R', '491.00'),
 (4, 14, '2016-05-10 22:26:27', '2016-05-10 22:26:27', 'Complete', 'USD', '9TR43026CE851591V', '837.00'),
-(5, 31, '2016-05-15 12:21:33', '2016-05-15 12:21:33', 'Complete', 'USD', '3SU95859109720234', '680.00');
+(5, 31, '2016-05-15 12:21:33', '2016-05-15 12:21:33', 'Complete', 'USD', '3SU95859109720234', '680.00'),
+(6, 77, '2016-05-28 01:47:43', '2016-05-28 01:47:43', 'Complete', 'USD', '9V993515SN724020E', '0.20');
 
 -- --------------------------------------------------------
 
@@ -3137,7 +3212,7 @@ CREATE TABLE IF NOT EXISTS `oc_paypal_order_transaction` (
   `amount` decimal(10,2) NOT NULL,
   `debug_data` text NOT NULL,
   `call_data` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_paypal_order_transaction`
@@ -3148,7 +3223,8 @@ INSERT INTO `oc_paypal_order_transaction` (`paypal_order_transaction_id`, `paypa
 (2, 2, '7AK02563ES2639348', '', '2016-05-10 18:20:38', '', '', '', 'instant', 'Completed', 'None', 'payment', '106.00', '{"TOKEN":"EC-80C53653V9291423N","SUCCESSPAGEREDIRECTREQUESTED":"false","TIMESTAMP":"2016-05-10T15:20:38Z","CORRELATIONID":"4e122f955c54b","ACK":"Success","VERSION":"109.0","BUILD":"000000","INSURANCEOPTIONSELECTED":"false","SHIPPINGOPTIONISDEFAULT":"false","PAYMENTINFO_0_TRANSACTIONID":"7AK02563ES2639348","PAYMENTINFO_0_TRANSACTIONTYPE":"cart","PAYMENTINFO_0_PAYMENTTYPE":"instant","PAYMENTINFO_0_ORDERTIME":"2016-05-10T15:20:38Z","PAYMENTINFO_0_AMT":"106.00","PAYMENTINFO_0_FEEAMT":"3.37","PAYMENTINFO_0_TAXAMT":"0.00","PAYMENTINFO_0_CURRENCYCODE":"USD","PAYMENTINFO_0_PAYMENTSTATUS":"Completed","PAYMENTINFO_0_PENDINGREASON":"None","PAYMENTINFO_0_REASONCODE":"None","PAYMENTINFO_0_PROTECTIONELIGIBILITY":"Eligible","PAYMENTINFO_0_PROTECTIONELIGIBILITYTYPE":"ItemNotReceivedEligible,UnauthorizedPaymentEligible","PAYMENTINFO_0_SECUREMERCHANTACCOUNTID":"AQWVSCSJK9RBW","PAYMENTINFO_0_ERRORCODE":"0","PAYMENTINFO_0_ACK":"Success"}', ''),
 (3, 3, '2JU08616DX378882R', '', '2016-05-10 22:06:56', '', '', '', 'instant', 'Completed', 'None', 'payment', '491.00', '{"TOKEN":"EC-8KX7751107108973S","SUCCESSPAGEREDIRECTREQUESTED":"false","TIMESTAMP":"2016-05-10T19:06:56Z","CORRELATIONID":"32a6a58f3a249","ACK":"Success","VERSION":"109.0","BUILD":"000000","INSURANCEOPTIONSELECTED":"false","SHIPPINGOPTIONISDEFAULT":"false","PAYMENTINFO_0_TRANSACTIONID":"2JU08616DX378882R","PAYMENTINFO_0_TRANSACTIONTYPE":"cart","PAYMENTINFO_0_PAYMENTTYPE":"instant","PAYMENTINFO_0_ORDERTIME":"2016-05-10T19:06:55Z","PAYMENTINFO_0_AMT":"491.00","PAYMENTINFO_0_FEEAMT":"14.54","PAYMENTINFO_0_TAXAMT":"0.00","PAYMENTINFO_0_CURRENCYCODE":"USD","PAYMENTINFO_0_PAYMENTSTATUS":"Completed","PAYMENTINFO_0_PENDINGREASON":"None","PAYMENTINFO_0_REASONCODE":"None","PAYMENTINFO_0_PROTECTIONELIGIBILITY":"Eligible","PAYMENTINFO_0_PROTECTIONELIGIBILITYTYPE":"ItemNotReceivedEligible,UnauthorizedPaymentEligible","PAYMENTINFO_0_SECUREMERCHANTACCOUNTID":"AQWVSCSJK9RBW","PAYMENTINFO_0_ERRORCODE":"0","PAYMENTINFO_0_ACK":"Success"}', ''),
 (4, 4, '9TR43026CE851591V', '', '2016-05-10 22:26:27', '', '', '', 'instant', 'Completed', 'None', 'payment', '837.00', '{"TOKEN":"EC-1H8825222E8992820","SUCCESSPAGEREDIRECTREQUESTED":"false","TIMESTAMP":"2016-05-10T19:26:27Z","CORRELATIONID":"b7549be379a9","ACK":"Success","VERSION":"109.0","BUILD":"000000","INSURANCEOPTIONSELECTED":"false","SHIPPINGOPTIONISDEFAULT":"false","PAYMENTINFO_0_TRANSACTIONID":"9TR43026CE851591V","PAYMENTINFO_0_TRANSACTIONTYPE":"cart","PAYMENTINFO_0_PAYMENTTYPE":"instant","PAYMENTINFO_0_ORDERTIME":"2016-05-10T19:26:26Z","PAYMENTINFO_0_AMT":"837.00","PAYMENTINFO_0_FEEAMT":"24.57","PAYMENTINFO_0_TAXAMT":"0.00","PAYMENTINFO_0_CURRENCYCODE":"USD","PAYMENTINFO_0_PAYMENTSTATUS":"Completed","PAYMENTINFO_0_PENDINGREASON":"None","PAYMENTINFO_0_REASONCODE":"None","PAYMENTINFO_0_PROTECTIONELIGIBILITY":"Eligible","PAYMENTINFO_0_PROTECTIONELIGIBILITYTYPE":"ItemNotReceivedEligible,UnauthorizedPaymentEligible","PAYMENTINFO_0_SECUREMERCHANTACCOUNTID":"AQWVSCSJK9RBW","PAYMENTINFO_0_ERRORCODE":"0","PAYMENTINFO_0_ACK":"Success"}', ''),
-(5, 5, '3SU95859109720234', '', '2016-05-15 12:21:33', '', '', '', 'instant', 'Completed', 'None', 'payment', '680.00', '{"TOKEN":"EC-6HG964581E8973041","SUCCESSPAGEREDIRECTREQUESTED":"false","TIMESTAMP":"2016-05-15T09:21:32Z","CORRELATIONID":"be7e7c5c79df3","ACK":"Success","VERSION":"109.0","BUILD":"22120179","INSURANCEOPTIONSELECTED":"false","SHIPPINGOPTIONISDEFAULT":"false","PAYMENTINFO_0_TRANSACTIONID":"3SU95859109720234","PAYMENTINFO_0_TRANSACTIONTYPE":"cart","PAYMENTINFO_0_PAYMENTTYPE":"instant","PAYMENTINFO_0_ORDERTIME":"2016-05-15T09:21:32Z","PAYMENTINFO_0_AMT":"680.00","PAYMENTINFO_0_FEEAMT":"20.02","PAYMENTINFO_0_TAXAMT":"0.00","PAYMENTINFO_0_CURRENCYCODE":"USD","PAYMENTINFO_0_PAYMENTSTATUS":"Completed","PAYMENTINFO_0_PENDINGREASON":"None","PAYMENTINFO_0_REASONCODE":"None","PAYMENTINFO_0_PROTECTIONELIGIBILITY":"Eligible","PAYMENTINFO_0_PROTECTIONELIGIBILITYTYPE":"ItemNotReceivedEligible,UnauthorizedPaymentEligible","PAYMENTINFO_0_SECUREMERCHANTACCOUNTID":"AQWVSCSJK9RBW","PAYMENTINFO_0_ERRORCODE":"0","PAYMENTINFO_0_ACK":"Success"}', '');
+(5, 5, '3SU95859109720234', '', '2016-05-15 12:21:33', '', '', '', 'instant', 'Completed', 'None', 'payment', '680.00', '{"TOKEN":"EC-6HG964581E8973041","SUCCESSPAGEREDIRECTREQUESTED":"false","TIMESTAMP":"2016-05-15T09:21:32Z","CORRELATIONID":"be7e7c5c79df3","ACK":"Success","VERSION":"109.0","BUILD":"22120179","INSURANCEOPTIONSELECTED":"false","SHIPPINGOPTIONISDEFAULT":"false","PAYMENTINFO_0_TRANSACTIONID":"3SU95859109720234","PAYMENTINFO_0_TRANSACTIONTYPE":"cart","PAYMENTINFO_0_PAYMENTTYPE":"instant","PAYMENTINFO_0_ORDERTIME":"2016-05-15T09:21:32Z","PAYMENTINFO_0_AMT":"680.00","PAYMENTINFO_0_FEEAMT":"20.02","PAYMENTINFO_0_TAXAMT":"0.00","PAYMENTINFO_0_CURRENCYCODE":"USD","PAYMENTINFO_0_PAYMENTSTATUS":"Completed","PAYMENTINFO_0_PENDINGREASON":"None","PAYMENTINFO_0_REASONCODE":"None","PAYMENTINFO_0_PROTECTIONELIGIBILITY":"Eligible","PAYMENTINFO_0_PROTECTIONELIGIBILITYTYPE":"ItemNotReceivedEligible,UnauthorizedPaymentEligible","PAYMENTINFO_0_SECUREMERCHANTACCOUNTID":"AQWVSCSJK9RBW","PAYMENTINFO_0_ERRORCODE":"0","PAYMENTINFO_0_ACK":"Success"}', ''),
+(6, 6, '9V993515SN724020E', '', '2016-05-28 01:47:43', '', '', '', 'instant', 'Completed', 'None', 'payment', '0.20', '{"TOKEN":"EC-5VC69931YW755403A","SUCCESSPAGEREDIRECTREQUESTED":"false","TIMESTAMP":"2016-05-27T22:47:43Z","CORRELATIONID":"4d6188242e660","ACK":"Success","VERSION":"109.0","BUILD":"000000","INSURANCEOPTIONSELECTED":"false","SHIPPINGOPTIONISDEFAULT":"false","PAYMENTINFO_0_TRANSACTIONID":"9V993515SN724020E","PAYMENTINFO_0_TRANSACTIONTYPE":"cart","PAYMENTINFO_0_PAYMENTTYPE":"instant","PAYMENTINFO_0_ORDERTIME":"2016-05-27T22:47:41Z","PAYMENTINFO_0_AMT":"0.20","PAYMENTINFO_0_FEEAMT":"0.20","PAYMENTINFO_0_TAXAMT":"0.00","PAYMENTINFO_0_CURRENCYCODE":"USD","PAYMENTINFO_0_PAYMENTSTATUS":"Completed","PAYMENTINFO_0_PENDINGREASON":"None","PAYMENTINFO_0_REASONCODE":"None","PAYMENTINFO_0_PROTECTIONELIGIBILITY":"Eligible","PAYMENTINFO_0_PROTECTIONELIGIBILITYTYPE":"ItemNotReceivedEligible,UnauthorizedPaymentEligible","PAYMENTINFO_0_SECUREMERCHANTACCOUNTID":"A8YL552YYF7XU","PAYMENTINFO_0_ERRORCODE":"0","PAYMENTINFO_0_ACK":"Success"}', '');
 
 -- --------------------------------------------------------
 
@@ -3193,48 +3269,57 @@ CREATE TABLE IF NOT EXISTS `oc_product` (
   `сolor` int(11) NOT NULL COMMENT 'цвет',
   `сlarity` int(20) NOT NULL COMMENT 'Ясность',
   `depth` int(11) NOT NULL COMMENT 'глубина',
-  `table` int(11) NOT NULL COMMENT 'таблица брилианта'
-) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
+  `table` int(11) NOT NULL COMMENT 'таблица брилианта',
+  `metal` varchar(255) NOT NULL COMMENT 'metal (gold, platina)'
+) ENGINE=MyISAM AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_product`
 --
 
-INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`, `carat`, `cut`, `сolor`, `сlarity`, `depth`, `table`) VALUES
-(28, 'Product 1', '', '', '', '', '', '', '', 939, 7, 'catalog/demo/htc_touch_hd_1.jpg', 5, 1, '100.0000', 200, 9, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 27, '2009-02-03 16:06:50', '2011-09-30 01:05:39', 0, 0, 0, 0, 0, 0),
-(29, 'Product 2', '', '', '', '', '', '', '', 999, 6, 'catalog/demo/palm_treo_pro_1.jpg', 6, 1, '279.9900', 0, 9, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 18, '2009-02-03 16:42:17', '2011-09-30 01:06:08', 0, 0, 0, 0, 0, 0),
-(30, 'Product 3', '5676479695789', '', '', '', '', '', '', 7, 6, 'catalog/demo/canon_eos_5d_1.jpg', 9, 1, '100.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 427, '2009-02-03 16:59:00', '2016-04-25 23:45:13', 0, 0, 0, 0, 0, 0),
-(31, 'Product 4', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/nikon_d300_1.jpg', 0, 1, '80.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 6, '2009-02-03 17:00:10', '2011-09-30 01:06:00', 0, 0, 0, 0, 0, 0),
-(32, 'Product 5', '', '', '', '', '', '', '', 999, 6, 'catalog/demo/ipod_touch_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 10, '2009-02-03 17:07:26', '2011-09-30 01:07:22', 0, 0, 0, 0, 0, 0),
-(33, 'Product 6', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/samsung_syncmaster_941bw.jpg', 0, 1, '200.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 16, '2009-02-03 17:08:31', '2011-09-30 01:06:29', 0, 0, 0, 0, 0, 0),
-(34, 'Product 7', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/ipod_shuffle_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 11, '2009-02-03 18:07:54', '2011-09-30 01:07:17', 0, 0, 0, 0, 0, 0),
-(35, 'Product 8', '', '', '', '', '', '', '', 1000, 5, '', 0, 0, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 12, '2009-02-03 18:08:31', '2011-09-30 01:06:17', 0, 0, 0, 0, 0, 0),
-(36, 'Product 9', '', '', '', '', '', '', '', 994, 6, 'catalog/demo/ipod_nano_1.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 10, '2009-02-03 18:09:19', '2011-09-30 01:07:12', 0, 0, 0, 0, 0, 0),
-(40, 'product 11', '', '', '', '', '', '', '', 970, 5, 'catalog/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 0, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 29, '2009-02-03 21:07:12', '2016-05-11 00:18:45', 0, 0, 0, 0, 0, 0),
-(41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'catalog/demo/imac_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 14, '2009-02-03 21:07:26', '2016-02-24 00:59:54', 0, 0, 0, 0, 0, 0),
-(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 116, '2009-02-03 21:07:37', '2016-02-24 00:38:32', 0, 0, 0, 0, 0, 0),
-(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 29, '2009-02-03 21:07:49', '2011-09-30 01:05:46', 0, 0, 0, 0, 0, 0),
-(44, 'Product 17', '', '11', '22', '33', '44', '55', '', 1000, 5, 'catalog/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 20, '2009-02-03 21:08:00', '2016-03-01 01:51:57', 0, 0, 0, 0, 0, 0),
-(45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 100, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 11, '2009-02-03 21:08:17', '2011-09-15 22:22:01', 0, 0, 0, 0, 0, 0),
-(46, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 17, '2009-02-03 21:08:29', '2011-09-30 01:06:39', 0, 0, 0, 0, 0, 0),
-(47, 'Product 21', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/hp_1.jpg', 7, 1, '100.0000', 400, 9, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 39, '2009-02-03 21:08:40', '2016-02-24 00:38:55', 0, 0, 0, 0, 0, 0),
-(48, 'product 20', '56536845664783567367', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/ipod_classic_1.jpg', 8, 0, '100.0000', 0, 0, '2009-02-08', '1.00000000', 7, '0.00000000', '0.00000000', '0.00000000', 2, 0, 1, 0, 1, 73, '2009-02-08 17:21:51', '2016-03-24 18:35:26', 0, 0, 0, 0, 0, 0),
-(49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'catalog/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 6, '2011-04-26 08:57:34', '2011-09-30 01:06:23', 0, 0, 0, 0, 0, 0),
-(50, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 15, '2016-02-24 14:14:36', '2016-03-01 20:30:37', 0, 0, 0, 0, 0, 0),
-(51, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 52, '2016-02-24 14:15:30', '2016-03-04 14:02:17', 0, 0, 0, 0, 0, 0),
-(52, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 18, '2016-02-24 14:15:49', '2016-03-02 18:22:13', 0, 0, 0, 0, 0, 0),
-(53, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 72, '2016-02-24 14:17:29', '2016-04-22 00:26:29', 0, 0, 0, 0, 0, 0),
-(54, 'Product 19', '', '11', '22', '33', '44', '55', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 55, '2016-02-28 20:53:50', '2016-03-01 01:52:13', 0, 0, 0, 0, 0, 0),
-(55, 'Ring2', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '650.0000', 0, 0, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 69, '2016-03-01 01:00:39', '2016-04-22 11:19:01', 0, 0, 0, 0, 0, 0),
-(57, 'Ring1', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '500.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 0, 0, '2016-04-15 20:05:50', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, 0),
-(58, 'Ring3', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '400.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 3, '2016-04-15 20:11:07', '2016-04-15 20:53:20', 0, 0, 0, 0, 0, 0),
-(59, 'Ring4', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '404.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 6, '2016-04-15 20:35:36', '2016-04-15 20:53:12', 0, 0, 0, 0, 0, 0),
-(60, 'Ring5', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '405.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 3, '2016-04-15 20:51:29', '2016-04-15 20:52:48', 0, 0, 0, 0, 0, 0),
-(61, 'Ring6', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '406.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 5, '2016-04-15 20:56:43', '2016-04-15 20:57:35', 0, 0, 0, 0, 0, 0),
-(62, 'Ring7', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '407.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 2, '2016-04-15 20:57:40', '2016-04-15 20:58:17', 0, 0, 0, 0, 0, 0),
-(63, 'Ring8', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '408.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 2, '2016-04-15 20:58:27', '2016-04-15 20:59:24', 0, 0, 0, 0, 0, 0),
-(64, 'Ring9', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '409.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 2, '2016-04-15 20:59:45', '2016-04-15 21:00:42', 0, 0, 0, 0, 0, 0),
-(65, 'Ring2', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '700.0000', 0, 0, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 10, '2016-04-22 00:51:41', '2016-04-22 11:19:42', 0, 0, 0, 0, 0, 0);
+INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`, `carat`, `cut`, `сolor`, `сlarity`, `depth`, `table`, `metal`) VALUES
+(28, 'Product 1', '', '', '', '', '', '', '', 939, 7, 'catalog/demo/htc_touch_hd_1.jpg', 5, 1, '100.0000', 200, 9, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 42, '2009-02-03 16:06:50', '2011-09-30 01:05:39', 0, 0, 0, 0, 0, 0, ''),
+(29, 'Product 2', '', '', '', '', '', '', '', 999, 6, 'catalog/demo/palm_treo_pro_1.jpg', 6, 1, '279.9900', 0, 9, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 26, '2009-02-03 16:42:17', '2011-09-30 01:06:08', 0, 0, 0, 0, 0, 0, ''),
+(30, 'Product 3', '5676479695789', '', '', '', '', '', '', 7, 6, 'catalog/rings_demo/setting_template_main.jpg', 9, 1, '100.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 571, '2009-02-03 16:59:00', '2016-06-27 15:19:05', 0, 0, 0, 0, 0, 0, 'platinum'),
+(31, 'Product 4', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/nikon_d300_1.jpg', 0, 1, '80.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 6, '2009-02-03 17:00:10', '2011-09-30 01:06:00', 0, 0, 0, 0, 0, 0, ''),
+(32, 'Product 5', '', '', '', '', '', '', '', 999, 6, 'catalog/demo/ipod_touch_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 10, '2009-02-03 17:07:26', '2011-09-30 01:07:22', 0, 0, 0, 0, 0, 0, ''),
+(33, 'Product 6', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/samsung_syncmaster_941bw.jpg', 0, 1, '200.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 21, '2009-02-03 17:08:31', '2011-09-30 01:06:29', 0, 0, 0, 0, 0, 0, ''),
+(34, 'Product 7', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/ipod_shuffle_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 11, '2009-02-03 18:07:54', '2011-09-30 01:07:17', 0, 0, 0, 0, 0, 0, ''),
+(35, 'Product 8', '', '', '', '', '', '', '', 1000, 5, '', 0, 0, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 20, '2009-02-03 18:08:31', '2011-09-30 01:06:17', 0, 0, 0, 0, 0, 0, ''),
+(36, 'Product 9', '', '', '', '', '', '', '', 994, 6, 'catalog/demo/ipod_nano_1.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 10, '2009-02-03 18:09:19', '2011-09-30 01:07:12', 0, 0, 0, 0, 0, 0, ''),
+(40, 'product 11', '', '', '', '', '', '', '', 970, 5, 'catalog/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 0, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 41, '2009-02-03 21:07:12', '2016-05-11 00:18:45', 0, 0, 0, 0, 0, 0, ''),
+(41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'catalog/demo/imac_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 14, '2009-02-03 21:07:26', '2016-02-24 00:59:54', 0, 0, 0, 0, 0, 0, ''),
+(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 8, 1, '100.0000', 400, 0, '2009-02-04', '0.00000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 350, '2009-02-03 21:07:37', '2016-07-05 22:37:33', 0, 0, 0, 0, 0, 0, 'white_gold_14'),
+(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 36, '2009-02-03 21:07:49', '2011-09-30 01:05:46', 0, 0, 0, 0, 0, 0, ''),
+(44, 'Product 17', '', '11', '22', '33', '44', '55', '', 1000, 5, 'catalog/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 30, '2009-02-03 21:08:00', '2016-03-01 01:51:57', 0, 0, 0, 0, 0, 0, ''),
+(45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 100, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 11, '2009-02-03 21:08:17', '2011-09-15 22:22:01', 0, 0, 0, 0, 0, 0, ''),
+(46, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 24, '2009-02-03 21:08:29', '2011-09-30 01:06:39', 0, 0, 0, 0, 0, 0, ''),
+(47, 'Product 21', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main.jpg', 7, 1, '100.0000', 400, 9, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 86, '2009-02-03 21:08:40', '2016-05-23 16:43:14', 0, 0, 0, 0, 0, 0, ''),
+(48, 'product 20', '56536845664783567367', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/ipod_classic_1.jpg', 8, 0, '100.0000', 0, 0, '2009-02-08', '1.00000000', 7, '0.00000000', '0.00000000', '0.00000000', 2, 0, 1, 0, 1, 81, '2009-02-08 17:21:51', '2016-03-24 18:35:26', 0, 0, 0, 0, 0, 0, ''),
+(49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'catalog/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 6, '2011-04-26 08:57:34', '2011-09-30 01:06:23', 0, 0, 0, 0, 0, 0, ''),
+(50, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 26, '2016-02-24 14:14:36', '2016-03-01 20:30:37', 0, 0, 0, 0, 0, 0, ''),
+(51, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 66, '2016-02-24 14:15:30', '2016-06-26 00:08:26', 0, 0, 0, 0, 0, 0, 'yellow_gold_14'),
+(52, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 26, '2016-02-24 14:15:49', '2016-03-02 18:22:13', 0, 0, 0, 0, 0, 0, ''),
+(53, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 0, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 89, '2016-02-24 14:17:29', '2016-04-22 00:26:29', 0, 0, 0, 0, 0, 0, ''),
+(54, 'Product 19', '', '11', '22', '33', '44', '55', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 71, '2016-02-28 20:53:50', '2016-03-01 01:52:13', 0, 0, 0, 0, 0, 0, ''),
+(55, 'Ring2', '', '', '', '', '', '', '', 997, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '0.2000', 0, 0, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 130, '2016-03-01 01:00:39', '2016-05-29 13:07:20', 0, 0, 0, 0, 0, 0, ''),
+(57, 'Ring1', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '500.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 0, 0, '2016-04-15 20:05:50', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, 0, ''),
+(58, 'Ring3', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '400.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 31, '2016-04-15 20:11:07', '2016-04-15 20:53:20', 0, 0, 0, 0, 0, 0, ''),
+(59, 'Ring4', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '404.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 53, '2016-04-15 20:35:36', '2016-04-15 20:53:12', 0, 0, 0, 0, 0, 0, ''),
+(60, 'Ring5', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '405.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 23, '2016-04-15 20:51:29', '2016-04-15 20:52:48', 0, 0, 0, 0, 0, 0, ''),
+(61, 'Ring6', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '406.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 27, '2016-04-15 20:56:43', '2016-04-15 20:57:35', 0, 0, 0, 0, 0, 0, ''),
+(62, 'Ring7', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '407.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 44, '2016-04-15 20:57:40', '2016-04-15 20:58:17', 0, 0, 0, 0, 0, 0, ''),
+(63, 'Ring8', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '408.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 32, '2016-04-15 20:58:27', '2016-04-15 20:59:24', 0, 0, 0, 0, 0, 0, ''),
+(64, 'Ring9', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '409.0000', 0, 9, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 18, '2016-04-15 20:59:45', '2016-04-15 21:00:42', 0, 0, 0, 0, 0, 0, ''),
+(65, 'Ring2', '', '', '', '', '', '', '', 1000, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 10, 1, '700.0000', 0, 0, '2016-04-15', '2.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 40, '2016-04-22 00:51:41', '2016-04-22 11:19:42', 0, 0, 0, 0, 0, 0, ''),
+(66, 'Diamond studs model2', 'DF567564', '', '', '', '', '', '', 67, 6, 'catalog/rings_demo/Diamond studs/1.jpg', 0, 1, '346.0000', 0, 0, '2016-05-23', '0.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 1, 1, 42, '2016-05-23 13:21:09', '2016-06-14 22:08:58', 0, 0, 0, 0, 0, 0, 'platinum'),
+(67, 'Diamond studs model1', '', '', '', '', '', '', '', 67, 6, 'catalog/rings_demo/Diamond studs/1.jpg', 0, 1, '345.0000', 0, 0, '2016-05-23', '0.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 1, 1, 44, '2016-05-23 13:29:04', '2016-06-14 22:08:49', 0, 0, 0, 0, 0, 0, 'rose_gold'),
+(68, 'Diamond studs model3', 'DF2345345', '', '', '', '', '', '', 67, 6, 'catalog/rings_demo/Diamond studs/1.jpg', 0, 1, '347.0000', 0, 0, '2016-05-23', '0.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 1, 1, 36, '2016-05-23 13:32:08', '2016-06-14 22:09:06', 0, 0, 0, 0, 0, 0, 'white_gold_14'),
+(69, 'Diamond studs model4', 'DG44567', '', '', '', '', '', '', 67, 6, 'catalog/rings_demo/Diamond studs/1.jpg', 0, 1, '500.0000', 0, 0, '2016-05-23', '0.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 1, 1, 39, '2016-05-23 13:57:30', '2016-05-23 14:00:42', 0, 0, 0, 0, 0, 0, ''),
+(70, 'Matching Gemstone Pairs model 1', 'DRT23455467', '', '', '', '', '', '', 66, 6, 'catalog/rings_demo/Diamond studs/1.jpg', 0, 1, '678.0000', 0, 0, '2016-05-23', '0.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 1, 1, 64, '2016-05-23 16:18:38', '2016-05-23 16:23:08', 0, 0, 0, 0, 0, 0, ''),
+(71, 'classic product 1', '', '', '', '', '', '', '', 49, 6, 'catalog/wedrings.png', 0, 1, '3000.0000', 0, 0, '2016-05-23', '0.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 1, 1, 29, '2016-05-23 18:17:01', '2016-06-14 22:08:32', 0, 0, 0, 0, 0, 0, 'yellow_gold_14'),
+(72, 'Carved product 1', '', '', '', '', '', '', '', 500, 6, 'catalog/rings_demo/Wedding rings/50066.jpg', 0, 1, '4000.0000', 0, 0, '2016-05-23', '0.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 1, 1, 44, '2016-05-23 18:26:56', '2016-06-14 22:00:37', 0, 0, 0, 0, 0, 0, 'yellow_gold_18'),
+(73, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/rings_demo/setting_template_main (2).jpg', 8, 1, '100.0000', 400, 0, '2009-02-04', '0.00000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 0, 0, '2016-07-05 22:13:48', '0000-00-00 00:00:00', 0, 0, 0, 0, 0, 0, 'white_gold_14');
 
 -- --------------------------------------------------------
 
@@ -3254,32 +3339,14 @@ CREATE TABLE IF NOT EXISTS `oc_product_attribute` (
 --
 
 INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`, `text`) VALUES
-(43, 2, 1, '1'),
-(43, 4, 1, '8gb'),
-(42, 3, 1, '100mhz'),
-(47, 2, 2, '4'),
-(43, 2, 2, '1'),
-(47, 4, 2, '16GB'),
-(43, 4, 2, '8gb'),
-(42, 3, 2, '100mhz'),
-(47, 4, 1, '16GB'),
-(47, 2, 1, '4'),
-(54, 13, 1, '4'),
-(53, 13, 2, '1'),
-(53, 13, 1, '1'),
-(52, 12, 1, '0.4'),
-(54, 12, 2, '2'),
-(54, 12, 1, '2'),
-(51, 12, 2, '0.2'),
-(54, 13, 2, '4'),
-(51, 12, 1, '0.2'),
-(50, 12, 1, '0.4'),
-(50, 12, 2, '0.4'),
-(51, 14, 2, '2000'),
-(51, 14, 1, '2000'),
-(52, 12, 2, '0.4'),
-(52, 14, 1, '2100'),
-(52, 14, 2, '2100');
+(42, 18, 1, '0.19 ctw'),
+(42, 17, 1, 'G-H'),
+(42, 16, 1, 'VS2-SI1'),
+(42, 15, 1, '20'),
+(73, 15, 1, '20'),
+(73, 16, 1, 'VS2-SI1'),
+(73, 17, 1, 'G-H'),
+(73, 18, 1, '0.19 ctw');
 
 -- --------------------------------------------------------
 
@@ -3304,15 +3371,12 @@ CREATE TABLE IF NOT EXISTS `oc_product_description` (
 
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
 (35, 1, 'Product 8', '&lt;p&gt;\r\n	Product 8&lt;/p&gt;\r\n', '', '', '', ''),
-(48, 2, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'sdfgdg', '', ''),
-(40, 2, 'iPhone', '&lt;p class=&quot;intro&quot;&gt;\r\n	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', '', 'asd', '', ''),
 (28, 1, 'HTC Touch HD', '&lt;p&gt;\r\n	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&amp;quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Processor Qualcomm&amp;reg; MSM 7201A&amp;trade; 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile&amp;reg; 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Device Control via HTC TouchFLO&amp;trade; 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;\r\n		GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth&amp;reg; 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wi-Fi&amp;reg;: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HTC ExtUSB&amp;trade; (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;\r\n		40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Expansion Slot: microSD&amp;trade; memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', ''),
 (44, 1, 'MacBook Air', '&lt;div&gt;\r\n	MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don’t lose inches and pounds overnight. It’s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\r\n', '', 'вап', '', ''),
 (45, 1, 'MacBook Pro', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
 (29, 1, 'Palm Treo Pro', '&lt;p&gt;\r\n	Redefine your workday with the Palm Treo Pro smartphone. Perfectly balanced, you can respond to business and personal email, stay on top of appointments and contacts, and use Wi-Fi or GPS when you&amp;rsquo;re out and about. Then watch a video on YouTube, catch up with news and sports on the web, or listen to a few songs. Balance your work and play the way you like it, with the Palm Treo Pro.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile&amp;reg; 6.1 Professional Edition&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Qualcomm&amp;reg; MSM7201 400MHz Processor&lt;/li&gt;\r\n	&lt;li&gt;\r\n		320x320 transflective colour TFT touchscreen&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/UMTS/EDGE/GPRS/GSM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Tri-band UMTS &amp;mdash; 850MHz, 1900MHz, 2100MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM &amp;mdash; 850/900/1800/1900&lt;/li&gt;\r\n	&lt;li&gt;\r\n		802.11b/g with WPA, WPA2, and 801.1x authentication&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in GPS&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth Version: 2.0 + Enhanced Data Rate&lt;/li&gt;\r\n	&lt;li&gt;\r\n		256MB storage (100MB user available), 128MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2.0 megapixel camera, up to 8x digital zoom and video capture&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Removable, rechargeable 1500mAh lithium-ion battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Up to 5.0 hours talk time and up to 250 hours standby&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MicroSDHC card expansion (up to 32GB supported)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MicroUSB 2.0 for synchronization and charging&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.5mm stereo headset jack&lt;/li&gt;\r\n	&lt;li&gt;\r\n		60mm (W) x 114mm (L) x 13.5mm (D) / 133g&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', ''),
 (36, 1, 'iPod Nano', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', ''),
 (46, 1, 'Sony VAIO', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel&amp;#39;s latest, most powerful innovation yet: Intel&amp;reg; Centrino&amp;reg; 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', '', '', ''),
-(47, 1, 'HP LP3065', '&lt;p&gt;\r\n	Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you''re at the office&lt;/p&gt;\r\n', '', 'sdfsdfdfg', '', ''),
 (32, 1, 'iPod Touch', '&lt;p&gt;\r\n	&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br /&gt;\r\n	iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br /&gt;\r\n	Watch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br /&gt;\r\n	Shop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br /&gt;\r\n	Browse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br /&gt;\r\n	&amp;nbsp;&lt;/p&gt;\r\n', '', '', '', ''),
 (41, 1, 'iMac', '&lt;div&gt;\r\n	Just when you thought iMac had everything, now there´s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife ´08, and it´s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\r\n', '', 'ыва', '', ''),
 (33, 1, 'Samsung SyncMaster 941BW', '&lt;div&gt;\r\n	Imagine the advantages of going big without slowing down. The big 19&amp;quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver the ideal image in every situation, while sleek, narrow bezels and adjustable stands deliver style just the way you want it. With the Samsung 941BW widescreen analog/digital LCD monitor, it&amp;#39;s not hard to imagine.&lt;/div&gt;\r\n', '', '', '', ''),
@@ -3320,58 +3384,34 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (43, 1, 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', ''),
 (31, 1, 'Nikon D300', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&amp;#39;s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		Similar to the D3, the D300 features Nikon&amp;#39;s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera&amp;#39;s new features. The D300 features a new 51-point autofocus system with Nikon&amp;#39;s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera&amp;#39;s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon&amp;#39;s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
 (49, 1, 'Samsung Galaxy Tab 10.1', '&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1, is the world&amp;rsquo;s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 &amp;ndash; includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick &amp;ndash; a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader&amp;rsquo;s Hub, Music Hub and Samsung Mini Apps Tray &amp;ndash; which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;&amp;auml;&amp;ouml;&lt;/p&gt;\r\n', '', '', '', ''),
-(42, 1, 'Apple Cinema 30&quot;', '&lt;p&gt;\r\n	&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there''s no limit to what you can achieve. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it''s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple''s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br&gt;\r\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\r\n&lt;h3&gt;\r\n	Features:&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Unrivaled display performance&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Simple setup and operation&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Single cable with elegant breakout for connection to DVI, USB and FireWire ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Sleek, elegant design&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Unique hinge design for effortless adjustment&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;\r\n	Technical specifications&lt;/h3&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2048 x 1280&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1920 x 1200&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1280 x 800&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1024 x 640&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16.7 million&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		170° horizontal; 170° vertical&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		700:1&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16 ms&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Antiglare hardcoat&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Display Power,&lt;/li&gt;\r\n	&lt;li&gt;\r\n		System sleep, wake&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Brightness&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Monitor tilt&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br&gt;\r\n	Cable&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		DVI (Digital Visual Interface)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		FireWire 400&lt;/li&gt;\r\n	&lt;li&gt;\r\n		USB 2.0&lt;/li&gt;\r\n	&lt;li&gt;\r\n		DC power (24 V)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Connectors&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Kensington security port&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br&gt;\r\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum power when operating: 150W&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Energy saver mode: 3W or less&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Operating temperature: 50° to 95° F (10° to 35° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Storage temperature: -40° to 116° F (-40° to 47° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		FCC Part 15 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55022 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55024&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VCCI Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AS/NZS 3548 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CNS 13438 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ICES-003 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ISO 13406 part 2&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MPR II&lt;/li&gt;\r\n	&lt;li&gt;\r\n		IEC 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		UL 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CSA 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ENERGY STAR&lt;/li&gt;\r\n	&lt;li&gt;\r\n		TCO ''03&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br&gt;\r\n	30-inch Apple Cinema HD Display&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Mac Pro, all graphic options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MacBook Pro&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'sdfsdf', '', ''),
 (30, 1, 'Canon EOS 5D', '&lt;p&gt;\r\n	Canon''s press material for the EOS 5D states that it ''defines (a) new D-SLR category'', while we''re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably ''chunkier''). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR''s, an important difference when compared to the latter is that the EOS 5D doesn''t have any environmental seals. While Canon don''t specifically refer to the EOS 5D as a ''professional'' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they''ve not bought too many EF-S lenses...) äë&lt;/p&gt;\r\n', '', 'sdfsdfdfg', '', ''),
-(30, 2, 'Canon EOS 5D', '&lt;p&gt;\r\n	Canon''s press material for the EOS 5D states that it ''defines (a) new D-SLR category'', while we''re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably ''chunkier''). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR''s, an important difference when compared to the latter is that the EOS 5D doesn''t have any environmental seals. While Canon don''t specifically refer to the EOS 5D as a ''professional'' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they''ve not bought too many EF-S lenses...) äë&lt;/p&gt;\r\n', '', 'sdfsdfcvb', '', ''),
-(35, 2, 'Product 8', '&lt;p&gt;\r\n	Product 8&lt;/p&gt;\r\n', '', '', '', ''),
 (48, 1, 'iPod Classic', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;More room to move.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;strong&gt;Sleeker design.&lt;/strong&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Beautiful, durable, and sleeker than ever, iPod classic now features an anodized aluminum and polished stainless steel enclosure with rounded edges.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', 'ertrtyg', '', ''),
 (40, 1, 'iPhone', '&lt;p class=&quot;intro&quot;&gt;\r\n	iPhone is a revolutionary new mobile phone that allows you to make a call by simply tapping a name or number in your address book, a favorites list, or a call log. It also automatically syncs all your contacts from a PC, Mac, or Internet service. And it lets you select and listen to voicemail messages in whatever order you want just like email.&lt;/p&gt;\r\n', '', 'sdfs', '', ''),
-(28, 2, 'HTC Touch HD', '&lt;p&gt;\r\n	HTC Touch - in High Definition. Watch music videos and streaming content in awe-inspiring high definition clarity for a mobile experience you never thought possible. Seductively sleek, the HTC Touch HD provides the next generation of mobile functionality, all at a simple touch. Fully integrated with Windows Mobile Professional 6.1, ultrafast 3.5G, GPS, 5MP camera, plus lots more - all delivered on a breathtakingly crisp 3.8&amp;quot; WVGA touchscreen - you can take control of your mobile world with the HTC Touch HD.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Processor Qualcomm&amp;reg; MSM 7201A&amp;trade; 528 MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile&amp;reg; 6.1 Professional Operating System&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Memory: 512 MB ROM, 288 MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Dimensions: 115 mm x 62.8 mm x 12 mm / 146.4 grams&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.8-inch TFT-LCD flat touch-sensitive screen with 480 x 800 WVGA resolution&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/WCDMA: Europe/Asia: 900/2100 MHz; Up to 2 Mbps up-link and 7.2 Mbps down-link speeds&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM/GPRS/EDGE: Europe/Asia: 850/900/1800/1900 MHz (Band frequency, HSUPA availability, and data speed are operator dependent.)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Device Control via HTC TouchFLO&amp;trade; 3D &amp;amp; Touch-sensitive front panel buttons&lt;/li&gt;\r\n	&lt;li&gt;\r\n		GPS and A-GPS ready&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth&amp;reg; 2.0 with Enhanced Data Rate and A2DP for wireless stereo headsets&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wi-Fi&amp;reg;: IEEE 802.11 b/g&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HTC ExtUSB&amp;trade; (11-pin mini-USB 2.0)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		5 megapixel color camera with auto focus&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VGA CMOS color camera&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in 3.5 mm audio jack, microphone, speaker, and FM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Ring tone formats: AAC, AAC+, eAAC+, AMR-NB, AMR-WB, QCP, MP3, WMA, WAV&lt;/li&gt;\r\n	&lt;li&gt;\r\n		40 polyphonic and standard MIDI format 0 and 1 (SMF)/SP MIDI&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Rechargeable Lithium-ion or Lithium-ion polymer 1350 mAh battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Expansion Slot: microSD&amp;trade; memory card (SD 2.0 compatible)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AC Adapter Voltage range/frequency: 100 ~ 240V AC, 50/60 Hz DC output: 5V and 1A&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Special Features: FM Radio, G-Sensor&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', ''),
-(44, 2, 'MacBook Air', '&lt;div&gt;\r\n	MacBook Air is ultrathin, ultraportable, and ultra unlike anything else. But you don’t lose inches and pounds overnight. It’s the result of rethinking conventions. Of multiple wireless innovations. And of breakthrough design. With MacBook Air, mobile computing suddenly has a new standard.&lt;/div&gt;\r\n', '', 'вап', '', ''),
-(45, 2, 'MacBook Pro', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Latest Intel mobile architecture&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Powered by the most advanced mobile processors from Intel, the new Core 2 Duo MacBook Pro is over 50% faster than the original Core Duo MacBook Pro and now supports up to 4GB of RAM.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Leading-edge graphics&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			The NVIDIA GeForce 8600M GT delivers exceptional graphics processing power. For the ultimate creative canvas, you can even configure the 17-inch model with a 1920-by-1200 resolution display.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Designed for life on the road&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Innovations such as a magnetic power connection and an illuminated keyboard with ambient light sensor put the MacBook Pro in a class by itself.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Connect. Create. Communicate.&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Quickly set up a video conference with the built-in iSight camera. Control presentations and media from up to 30 feet away with the included Apple Remote. Connect to high-bandwidth peripherals with FireWire 800 and DVI.&lt;/p&gt;\r\n		&lt;p&gt;\r\n			&lt;b&gt;Next-generation wireless&lt;/b&gt;&lt;/p&gt;\r\n		&lt;p&gt;\r\n			Featuring 802.11n wireless technology, the MacBook Pro delivers up to five times the performance and up to twice the range of previous-generation technologies.&lt;/p&gt;\r\n	&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
-(29, 2, 'Palm Treo Pro', '&lt;p&gt;\r\n	Redefine your workday with the Palm Treo Pro smartphone. Perfectly balanced, you can respond to business and personal email, stay on top of appointments and contacts, and use Wi-Fi or GPS when you&amp;rsquo;re out and about. Then watch a video on YouTube, catch up with news and sports on the web, or listen to a few songs. Balance your work and play the way you like it, with the Palm Treo Pro.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Windows Mobile&amp;reg; 6.1 Professional Edition&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Qualcomm&amp;reg; MSM7201 400MHz Processor&lt;/li&gt;\r\n	&lt;li&gt;\r\n		320x320 transflective colour TFT touchscreen&lt;/li&gt;\r\n	&lt;li&gt;\r\n		HSDPA/UMTS/EDGE/GPRS/GSM radio&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Tri-band UMTS &amp;mdash; 850MHz, 1900MHz, 2100MHz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Quad-band GSM &amp;mdash; 850/900/1800/1900&lt;/li&gt;\r\n	&lt;li&gt;\r\n		802.11b/g with WPA, WPA2, and 801.1x authentication&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in GPS&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Bluetooth Version: 2.0 + Enhanced Data Rate&lt;/li&gt;\r\n	&lt;li&gt;\r\n		256MB storage (100MB user available), 128MB RAM&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2.0 megapixel camera, up to 8x digital zoom and video capture&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Removable, rechargeable 1500mAh lithium-ion battery&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Up to 5.0 hours talk time and up to 250 hours standby&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MicroSDHC card expansion (up to 32GB supported)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MicroUSB 2.0 for synchronization and charging&lt;/li&gt;\r\n	&lt;li&gt;\r\n		3.5mm stereo headset jack&lt;/li&gt;\r\n	&lt;li&gt;\r\n		60mm (W) x 114mm (L) x 13.5mm (D) / 133g&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', ''),
-(36, 2, 'iPod Nano', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Video in your pocket.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Its the small iPod with one very big idea: video. The worlds most popular music player now lets you enjoy movies, TV shows, and more on a two-inch display thats 65% brighter than before.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Cover Flow.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Browse through your music collection by flipping through album art. Select an album to turn it over and see the track list.&lt;strong&gt;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Enhanced interface.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Experience a whole new way to browse and view your music and video.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Sleek and colorful.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With an anodized aluminum and polished stainless steel enclosure and a choice of five colors, iPod nano is dressed to impress.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;iTunes.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Available as a free download, iTunes makes it easy to browse and buy millions of songs, movies, TV shows, audiobooks, and games and download free podcasts all at the iTunes Store. And you can import your own music, manage your whole media library, and sync your iPod or iPhone with ease.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', ''),
-(46, 2, 'Sony VAIO', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel&amp;#39;s latest, most powerful innovation yet: Intel&amp;reg; Centrino&amp;reg; 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', '', '', ''),
-(47, 2, 'HP LP3065', '&lt;p&gt;\r\n	Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you''re at the office&lt;/p&gt;\r\n', '', 'qqqqqq', '', ''),
-(32, 2, 'iPod Touch', '&lt;p&gt;\r\n	&lt;strong&gt;Revolutionary multi-touch interface.&lt;/strong&gt;&lt;br /&gt;\r\n	iPod touch features the same multi-touch screen technology as iPhone. Pinch to zoom in on a photo. Scroll through your songs and videos with a flick. Flip through your library by album artwork with Cover Flow.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Gorgeous 3.5-inch widescreen display.&lt;/strong&gt;&lt;br /&gt;\r\n	Watch your movies, TV shows, and photos come alive with bright, vivid color on the 320-by-480-pixel display.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Music downloads straight from iTunes.&lt;/strong&gt;&lt;br /&gt;\r\n	Shop the iTunes Wi-Fi Music Store from anywhere with Wi-Fi.1 Browse or search to find the music youre looking for, preview it, and buy it with just a tap.&lt;/p&gt;\r\n&lt;p&gt;\r\n	&lt;strong&gt;Surf the web with Wi-Fi.&lt;/strong&gt;&lt;br /&gt;\r\n	Browse the web using Safari and watch YouTube videos on the first iPod with Wi-Fi built in&lt;br /&gt;\r\n	&amp;nbsp;&lt;/p&gt;\r\n', '', '', '', ''),
-(41, 2, 'iMac', '&lt;div&gt;\r\n	Just when you thought iMac had everything, now there´s even more. More powerful Intel Core 2 Duo processors. And more memory standard. Combine this with Mac OS X Leopard and iLife ´08, and it´s more all-in-one than ever. iMac packs amazing performance into a stunningly slim space.&lt;/div&gt;\r\n', '', 'ываы', '', ''),
-(33, 2, 'Samsung SyncMaster 941BW', '&lt;div&gt;\r\n	Imagine the advantages of going big without slowing down. The big 19&amp;quot; 941BW monitor combines wide aspect ratio with fast pixel response time, for bigger images, more room to work and crisp motion. In addition, the exclusive MagicBright 2, MagicColor and MagicTune technologies help deliver the ideal image in every situation, while sleek, narrow bezels and adjustable stands deliver style just the way you want it. With the Samsung 941BW widescreen analog/digital LCD monitor, it&amp;#39;s not hard to imagine.&lt;/div&gt;\r\n', '', '', '', ''),
-(34, 2, 'iPod Shuffle', '&lt;div&gt;\r\n	&lt;strong&gt;Born to be worn.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Clip on the worlds most wearable music player and take up to 240 songs with you anywhere. Choose from five colors including four new hues to make your musical fashion statement.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;strong&gt;Random meets rhythm.&lt;/strong&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		With iTunes autofill, iPod shuffle can deliver a new musical experience every time you sync. For more randomness, you can shuffle songs during playback with the slide of a switch.&lt;/p&gt;\r\n	&lt;strong&gt;Everything is easy.&lt;/strong&gt;\r\n	&lt;p&gt;\r\n		Charge and sync with the included USB dock. Operate the iPod shuffle controls with one hand. Enjoy up to 12 hours straight of skip-free music playback.&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', ''),
-(43, 2, 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', ''),
-(31, 2, 'Nikon D300', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&amp;#39;s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		Similar to the D3, the D300 features Nikon&amp;#39;s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera&amp;#39;s new features. The D300 features a new 51-point autofocus system with Nikon&amp;#39;s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera&amp;#39;s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon&amp;#39;s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
-(49, 2, 'Samsung Galaxy Tab 10.1', '&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1, is the world&amp;rsquo;s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 &amp;ndash; includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick &amp;ndash; a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader&amp;rsquo;s Hub, Music Hub and Samsung Mini Apps Tray &amp;ndash; which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;&amp;auml;&amp;ouml;&lt;/p&gt;\r\n', '', '', '', '');
-INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `tag`, `meta_title`, `meta_description`, `meta_keyword`) VALUES
-(42, 2, 'Apple Cinema 30&quot;', '&lt;p&gt;\r\n	&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there''s no limit to what you can achieve. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it''s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple''s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br&gt;\r\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\r\n&lt;h3&gt;\r\n	Features:&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Unrivaled display performance&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Simple setup and operation&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Single cable with elegant breakout for connection to DVI, USB and FireWire ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Sleek, elegant design&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Unique hinge design for effortless adjustment&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;\r\n	Technical specifications&lt;/h3&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2048 x 1280&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1920 x 1200&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1280 x 800&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1024 x 640&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16.7 million&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		170° horizontal; 170° vertical&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		700:1&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16 ms&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Antiglare hardcoat&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Display Power,&lt;/li&gt;\r\n	&lt;li&gt;\r\n		System sleep, wake&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Brightness&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Monitor tilt&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br&gt;\r\n	Cable&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		DVI (Digital Visual Interface)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		FireWire 400&lt;/li&gt;\r\n	&lt;li&gt;\r\n		USB 2.0&lt;/li&gt;\r\n	&lt;li&gt;\r\n		DC power (24 V)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Connectors&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Kensington security port&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br&gt;\r\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum power when operating: 150W&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Energy saver mode: 3W or less&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Operating temperature: 50° to 95° F (10° to 35° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Storage temperature: -40° to 116° F (-40° to 47° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		FCC Part 15 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55022 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55024&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VCCI Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AS/NZS 3548 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CNS 13438 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ICES-003 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ISO 13406 part 2&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MPR II&lt;/li&gt;\r\n	&lt;li&gt;\r\n		IEC 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		UL 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CSA 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ENERGY STAR&lt;/li&gt;\r\n	&lt;li&gt;\r\n		TCO ''03&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br&gt;\r\n	30-inch Apple Cinema HD Display&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Mac Pro, all graphic options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MacBook Pro&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'dfgdfg', '', ''),
+(47, 1, 'HP LP3065', '&lt;p&gt;\r\n	Stop your co-workers in their tracks with the stunning new 30-inch diagonal HP LP3065 Flat Panel Monitor. This flagship monitor features best-in-class performance and presentation features on a huge wide-aspect screen while letting you work as comfortably as possible - you might even forget you''re at the office&lt;/p&gt;\r\n', '', 'sdfsdfdfg', '', ''),
+(42, 1, 'Apple Cinema 30&quot;', '&lt;p&gt;&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there''s no limit to what you can achieve.&amp;nbsp;&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;&lt;ul&gt;\r\n&lt;/ul&gt;\r\n', '', 'sdfsdf', '', ''),
+(73, 1, 'Apple Cinema 30&quot;', '&lt;p&gt;\r\n	&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there''s no limit to what you can achieve. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it''s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple''s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br&gt;\r\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\r\n&lt;h3&gt;\r\n	Features:&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Unrivaled display performance&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Simple setup and operation&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Single cable with elegant breakout for connection to DVI, USB and FireWire ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Sleek, elegant design&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Unique hinge design for effortless adjustment&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;\r\n	Technical specifications&lt;/h3&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2048 x 1280&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1920 x 1200&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1280 x 800&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1024 x 640&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16.7 million&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		170° horizontal; 170° vertical&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		700:1&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16 ms&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Antiglare hardcoat&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Display Power,&lt;/li&gt;\r\n	&lt;li&gt;\r\n		System sleep, wake&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Brightness&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Monitor tilt&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br&gt;\r\n	Cable&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		DVI (Digital Visual Interface)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		FireWire 400&lt;/li&gt;\r\n	&lt;li&gt;\r\n		USB 2.0&lt;/li&gt;\r\n	&lt;li&gt;\r\n		DC power (24 V)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Connectors&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Kensington security port&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br&gt;\r\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum power when operating: 150W&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Energy saver mode: 3W or less&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Operating temperature: 50° to 95° F (10° to 35° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Storage temperature: -40° to 116° F (-40° to 47° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		FCC Part 15 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55022 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55024&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VCCI Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AS/NZS 3548 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CNS 13438 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ICES-003 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ISO 13406 part 2&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MPR II&lt;/li&gt;\r\n	&lt;li&gt;\r\n		IEC 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		UL 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CSA 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ENERGY STAR&lt;/li&gt;\r\n	&lt;li&gt;\r\n		TCO ''03&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br&gt;\r\n	30-inch Apple Cinema HD Display&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Mac Pro, all graphic options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MacBook Pro&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'sdfsdf', '', ''),
 (50, 1, 'Sony VAIO2', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(50, 2, 'Sony VAIO2', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (51, 1, 'Sony VAIO3', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(51, 2, 'Sony VAIO3', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (52, 1, 'Sony VAIO4', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(52, 2, 'Sony VAIO4', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(53, 2, 'Sony VAIO5', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (53, 1, 'Sony VAIO5', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(54, 2, 'Sony VAIO6', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (54, 1, 'Sony VAIO6', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(55, 2, 'Ring2-pave', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (55, 1, 'Ring2-pave', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (57, 1, 'Ring1', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(57, 2, 'Ring1', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(58, 2, 'Ring3', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (59, 1, 'Ring4', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(59, 2, 'Ring4', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (58, 1, 'Ring3', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(60, 2, 'Ring5', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (60, 1, 'Ring5', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(61, 2, 'Ring6', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (61, 1, 'Ring6', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(62, 2, 'Ring7', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (62, 1, 'Ring7', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (63, 1, 'Ring8', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(63, 2, 'Ring8', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(64, 2, 'Ring9', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (64, 1, 'Ring9', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
 (65, 1, 'Ring2-pave', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', ''),
-(65, 2, 'Ring2-pave', '&lt;div&gt;\r\n	Unprecedented power. The next generation of processing technology has arrived. Built into the newest VAIO notebooks lies Intel''s latest, most powerful innovation yet: Intel® Centrino® 2 processor technology. Boasting incredible speed, expanded wireless connectivity, enhanced multimedia support and greater energy efficiency, all the high-performance essentials are seamlessly combined into a single chip.&lt;/div&gt;\r\n', '', 'чсм', '', '');
+(66, 1, 'Diamond studs 2', '&lt;p&gt;xcg&lt;/p&gt;', '', 'dsgfc', '', ''),
+(67, 1, 'Diamond studs 1', '&lt;p&gt;xcg&lt;/p&gt;', '', 'dsgfc', '', ''),
+(68, 1, 'Diamond studs 3', '&lt;p&gt;xcg&lt;/p&gt;', '', 'dsgfc', '', ''),
+(69, 1, 'Diamond studs 4', '&lt;p&gt;xcg&lt;/p&gt;', '', 'dsgfc', '', ''),
+(70, 1, 'Matching Gemstone Pairs 1', '&lt;p&gt;xcg&lt;/p&gt;', '', 'dsgfc', '', ''),
+(71, 1, 'Classic product 1', '&lt;p&gt;Description&lt;br&gt;&lt;/p&gt;', '', 'classic', '', ''),
+(72, 1, 'Carved ', '&lt;p&gt;description&lt;/p&gt;', '', 'Carved', '', '');
 
 -- --------------------------------------------------------
 
@@ -3388,16 +3428,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_discount` (
   `price` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `date_start` date NOT NULL DEFAULT '0000-00-00',
   `date_end` date NOT NULL DEFAULT '0000-00-00'
-) ENGINE=MyISAM AUTO_INCREMENT=447 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_product_discount`
---
-
-INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `customer_group_id`, `quantity`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(446, 42, 1, 30, 1, '66.0000', '0000-00-00', '0000-00-00'),
-(445, 42, 1, 20, 1, '77.0000', '0000-00-00', '0000-00-00'),
-(444, 42, 1, 10, 1, '88.0000', '0000-00-00', '0000-00-00');
+) ENGINE=MyISAM AUTO_INCREMENT=513 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3417,17 +3448,39 @@ CREATE TABLE IF NOT EXISTS `oc_product_filter` (
 INSERT INTO `oc_product_filter` (`product_id`, `filter_id`) VALUES
 (30, 7),
 (41, 7),
-(42, 3),
+(42, 4),
 (42, 5),
+(42, 7),
 (44, 7),
-(47, 2),
+(47, 4),
 (47, 6),
+(47, 7),
 (53, 4),
 (53, 6),
 (54, 1),
 (54, 4),
 (54, 5),
-(65, 14);
+(65, 14),
+(66, 4),
+(66, 5),
+(66, 7),
+(67, 4),
+(67, 6),
+(67, 7),
+(68, 4),
+(68, 7),
+(68, 14),
+(69, 4),
+(69, 5),
+(69, 7),
+(70, 4),
+(70, 5),
+(70, 7),
+(71, 4),
+(72, 4),
+(73, 4),
+(73, 5),
+(73, 7);
 
 -- --------------------------------------------------------
 
@@ -3440,15 +3493,14 @@ CREATE TABLE IF NOT EXISTS `oc_product_image` (
   `product_id` int(11) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=2761 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2860 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_product_image`
 --
 
 INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(2725, 30, 'catalog/demo/canon_eos_5d_2.jpg', 0),
-(2369, 47, 'catalog/demo/hp_3.jpg', 0),
+(2851, 30, 'catalog/rings_demo/setting_template_main (1).jpg', 0),
 (2035, 28, 'catalog/demo/htc_touch_hd_2.jpg', 0),
 (2373, 41, 'catalog/demo/imac_3.jpg', 0),
 (2760, 40, 'catalog/demo/iphone_4.jpg', 0),
@@ -3474,8 +3526,7 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2617, 48, 'catalog/demo/ipod_classic_3.jpg', 0),
 (2759, 40, 'catalog/demo/iphone_3.jpg', 0),
 (2758, 40, 'catalog/demo/iphone_5.jpg', 0),
-(2724, 30, 'catalog/demo/canon_eos_5d_3.jpg', 0),
-(2368, 47, 'catalog/demo/hp_2.jpg', 0),
+(2785, 47, 'catalog/rings_demo/setting_template_main.jpg', 0),
 (2034, 28, 'catalog/demo/htc_touch_hd_3.jpg', 0),
 (2372, 41, 'catalog/demo/imac_2.jpg', 0),
 (2757, 40, 'catalog/demo/iphone_2.jpg', 0),
@@ -3503,19 +3554,18 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2324, 49, 'catalog/demo/samsung_tab_4.jpg', 0),
 (2323, 49, 'catalog/demo/samsung_tab_3.jpg', 0),
 (2322, 49, 'catalog/demo/samsung_tab_2.jpg', 0),
-(2365, 42, 'catalog/demo/canon_eos_5d_2.jpg', 0),
-(2364, 42, 'catalog/demo/canon_logo.jpg', 0),
-(2363, 42, 'catalog/demo/hp_1.jpg', 0),
-(2362, 42, 'catalog/demo/compaq_presario.jpg', 0),
-(2361, 42, 'catalog/demo/canon_eos_5d_1.jpg', 0),
+(2857, 73, 'catalog/rings_demo/setting_template_main (2).jpg', 2),
+(2856, 73, 'catalog/50843-E.video.white.mp4', 1),
+(2859, 42, 'catalog/rings_demo/setting_template_main (2).jpg', 2),
+(2858, 42, 'catalog/50843-E.video.white.mp4', 1),
 (2555, 50, 'catalog/demo/sony_vaio_5.jpg', 0),
 (2554, 50, 'catalog/demo/sony_vaio_4.jpg', 0),
 (2553, 50, 'catalog/demo/sony_vaio_2.jpg', 0),
 (2552, 50, 'catalog/demo/sony_vaio_3.jpg', 0),
-(2603, 51, 'catalog/demo/sony_vaio_3.jpg', 0),
-(2602, 51, 'catalog/demo/sony_vaio_2.jpg', 0),
-(2601, 51, 'catalog/demo/sony_vaio_4.jpg', 0),
-(2600, 51, 'catalog/demo/sony_vaio_5.jpg', 0),
+(2839, 51, 'catalog/demo/sony_vaio_5.jpg', 0),
+(2838, 51, 'catalog/demo/sony_vaio_4.jpg', 0),
+(2837, 51, 'catalog/demo/sony_vaio_2.jpg', 0),
+(2836, 51, 'catalog/demo/sony_vaio_3.jpg', 0),
 (2599, 52, 'catalog/demo/sony_vaio_3.jpg', 0),
 (2598, 52, 'catalog/demo/sony_vaio_2.jpg', 0),
 (2597, 52, 'catalog/demo/sony_vaio_4.jpg', 0),
@@ -3528,9 +3578,9 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2486, 54, 'catalog/demo/sony_vaio_2.jpg', 0),
 (2485, 54, 'catalog/demo/sony_vaio_4.jpg', 0),
 (2484, 54, 'catalog/demo/sony_vaio_5.jpg', 0),
-(2706, 55, 'catalog/rings_demo/setting_template_main.jpg', 0),
-(2705, 55, 'catalog/rings_demo/setting_template_main (2).jpg', 0),
-(2704, 55, 'catalog/rings_demo/setting_template_main (1).jpg', 0),
+(2791, 55, 'catalog/rings_demo/setting_template_main.jpg', 0),
+(2790, 55, 'catalog/rings_demo/setting_template_main (2).jpg', 0),
+(2789, 55, 'catalog/rings_demo/setting_template_main (1).jpg', 0),
 (2625, 57, 'catalog/rings_demo/setting_template_main (1).jpg', 0),
 (2626, 57, 'catalog/rings_demo/setting_template_main (2).jpg', 0),
 (2627, 57, 'catalog/rings_demo/setting_template_main.jpg', 0),
@@ -3557,7 +3607,39 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2682, 64, 'catalog/rings_demo/setting_template_main.jpg', 0),
 (2709, 65, 'catalog/rings_demo/setting_template_main.jpg', 0),
 (2708, 65, 'catalog/rings_demo/setting_template_main (1).jpg', 0),
-(2707, 65, 'catalog/rings_demo/setting_template_main (2).jpg', 0);
+(2707, 65, 'catalog/rings_demo/setting_template_main (2).jpg', 0),
+(2850, 30, 'catalog/rings_demo/setting_template_main.jpg', 0),
+(2808, 66, 'catalog/rings_demo/Diamond studs/1.jpg', 0),
+(2807, 67, 'catalog/rings_demo/Diamond studs/1.jpg', 0),
+(2809, 68, 'catalog/rings_demo/Diamond studs/1.jpg', 0),
+(2778, 69, 'catalog/rings_demo/Diamond studs/1.jpg', 0),
+(2783, 70, 'catalog/rings_demo/Diamond studs/1.jpg', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `oc_product_metal`
+--
+
+CREATE TABLE IF NOT EXISTS `oc_product_metal` (
+  `product_id` int(11) NOT NULL,
+  `metal_product_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `oc_product_metal`
+--
+
+INSERT INTO `oc_product_metal` (`product_id`, `metal_product_id`) VALUES
+(30, 42),
+(30, 67),
+(30, 71),
+(30, 72),
+(42, 30),
+(42, 66),
+(42, 67),
+(42, 71),
+(42, 72);
 
 -- --------------------------------------------------------
 
@@ -3579,18 +3661,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_option` (
 
 INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`, `value`, `required`) VALUES
 (224, 35, 11, '', 1),
-(225, 47, 12, '2011-04-22', 1),
-(221, 42, 9, '22:25', 1),
-(223, 42, 2, '', 1),
-(217, 42, 5, '', 1),
-(209, 42, 6, '', 1),
-(218, 42, 1, '', 1),
-(208, 42, 4, 'test', 1),
-(227, 30, 11, '', 1),
-(219, 42, 8, '2011-02-20', 1),
-(222, 42, 7, '', 1),
-(220, 42, 10, '2011-02-20 22:25', 1),
-(228, 30, 14, '', 1);
+(227, 30, 11, '', 1);
 
 -- --------------------------------------------------------
 
@@ -3619,21 +3690,10 @@ CREATE TABLE IF NOT EXISTS `oc_product_option_value` (
 --
 
 INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(1, 217, 42, 5, 41, 100, 0, '1.0000', '+', 0, '+', '1.00000000', '+'),
-(4, 217, 42, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
-(2, 217, 42, 5, 42, 200, 1, '2.0000', '+', 0, '+', '2.00000000', '+'),
-(3, 217, 42, 5, 40, 300, 0, '3.0000', '+', 0, '+', '3.00000000', '+'),
-(6, 218, 42, 1, 31, 146, 1, '20.0000', '+', 2, '-', '20.00000000', '+'),
-(7, 218, 42, 1, 43, 300, 1, '30.0000', '+', 3, '+', '30.00000000', '+'),
-(5, 218, 42, 1, 32, 96, 1, '10.0000', '+', 1, '+', '10.00000000', '+'),
 (12, 224, 35, 11, 46, 0, 1, '5.0000', '+', 0, '+', '0.00000000', '+'),
 (13, 224, 35, 11, 47, 10, 1, '10.0000', '+', 0, '+', '0.00000000', '+'),
 (14, 224, 35, 11, 48, 15, 1, '15.0000', '+', 0, '+', '0.00000000', '+'),
 (17, 227, 30, 11, 47, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(11, 223, 42, 2, 45, 3998, 1, '40.0000', '+', 0, '+', '40.00000000', '+'),
-(9, 223, 42, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
-(10, 223, 42, 2, 44, 2696, 1, '30.0000', '+', 0, '+', '30.00000000', '+'),
-(8, 223, 42, 2, 23, 48, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
 (18, 227, 30, 11, 46, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (19, 227, 30, 11, 48, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (20, 227, 30, 11, 55, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
@@ -3641,13 +3701,7 @@ INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_optio
 (22, 227, 30, 11, 57, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (23, 227, 30, 11, 58, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
 (24, 227, 30, 11, 59, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(25, 227, 30, 11, 60, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(27, 228, 30, 14, 62, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(28, 228, 30, 14, 63, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(29, 228, 30, 14, 64, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(30, 228, 30, 14, 65, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(31, 228, 30, 14, 66, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(32, 228, 30, 14, 67, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+');
+(25, 227, 30, 11, 60, 0, 0, '0.0000', '+', 0, '+', '0.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -3677,10 +3731,26 @@ CREATE TABLE IF NOT EXISTS `oc_product_related` (
 --
 
 INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
+(30, 42),
+(30, 73),
 (40, 42),
-(41, 42),
+(40, 73),
+(42, 30),
 (42, 40),
-(42, 41);
+(42, 67),
+(42, 71),
+(42, 72),
+(67, 42),
+(67, 73),
+(71, 42),
+(71, 73),
+(72, 42),
+(72, 73),
+(73, 30),
+(73, 40),
+(73, 67),
+(73, 71),
+(73, 72);
 
 -- --------------------------------------------------------
 
@@ -3693,19 +3763,20 @@ CREATE TABLE IF NOT EXISTS `oc_product_reward` (
   `product_id` int(11) NOT NULL DEFAULT '0',
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=562 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=603 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_product_reward`
 --
 
 INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
-(549, 42, 1, 100),
-(551, 47, 1, 300),
+(602, 42, 1, 100),
+(565, 47, 1, 300),
 (379, 28, 1, 400),
 (329, 43, 1, 600),
 (339, 29, 1, 0),
-(561, 30, 1, 200),
+(601, 73, 1, 100),
+(598, 30, 1, 200),
 (553, 44, 1, 700),
 (333, 45, 1, 800),
 (337, 31, 1, 0),
@@ -3731,16 +3802,7 @@ CREATE TABLE IF NOT EXISTS `oc_product_special` (
   `price` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `date_start` date NOT NULL DEFAULT '0000-00-00',
   `date_end` date NOT NULL DEFAULT '0000-00-00'
-) ENGINE=MyISAM AUTO_INCREMENT=462 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_product_special`
---
-
-INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(443, 42, 1, 1, '90.0000', '0000-00-00', '0000-00-00'),
-(461, 30, 1, 2, '90.0000', '0000-00-00', '0000-00-00'),
-(460, 30, 1, 1, '80.0000', '0000-00-00', '0000-00-00');
+) ENGINE=MyISAM AUTO_INCREMENT=502 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -3765,10 +3827,12 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (35, 20),
 (40, 20),
 (42, 20),
+(42, 61),
 (43, 20),
 (44, 20),
 (46, 20),
 (47, 20),
+(47, 65),
 (48, 20),
 (50, 20),
 (51, 20),
@@ -3797,7 +3861,23 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (64, 20),
 (64, 67),
 (65, 20),
-(65, 60);
+(65, 60),
+(66, 82),
+(66, 83),
+(67, 82),
+(67, 83),
+(68, 82),
+(68, 83),
+(69, 82),
+(69, 83),
+(70, 82),
+(70, 84),
+(71, 69),
+(71, 72),
+(72, 69),
+(72, 73),
+(73, 20),
+(73, 61);
 
 -- --------------------------------------------------------
 
@@ -3848,7 +3928,15 @@ INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUE
 (63, 0, 0),
 (64, 0, 0),
 (65, 0, 0),
-(40, 0, 0);
+(40, 0, 0),
+(66, 0, 0),
+(67, 0, 0),
+(68, 0, 0),
+(69, 0, 0),
+(70, 0, 0),
+(71, 0, 0),
+(72, 0, 0),
+(73, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -3899,7 +3987,15 @@ INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 (62, 0),
 (63, 0),
 (64, 0),
-(65, 0);
+(65, 0),
+(66, 0),
+(67, 0),
+(68, 0),
+(69, 0),
+(70, 0),
+(71, 0),
+(72, 0),
+(73, 0);
 
 -- --------------------------------------------------------
 
@@ -3981,10 +4077,7 @@ CREATE TABLE IF NOT EXISTS `oc_return_action` (
 INSERT INTO `oc_return_action` (`return_action_id`, `language_id`, `name`) VALUES
 (1, 1, 'Refunded'),
 (2, 1, 'Credit Issued'),
-(3, 1, 'Replacement Sent'),
-(1, 2, 'Refunded'),
-(2, 2, 'Credit Issued'),
-(3, 2, 'Replacement Sent');
+(3, 1, 'Replacement Sent');
 
 -- --------------------------------------------------------
 
@@ -4022,12 +4115,7 @@ INSERT INTO `oc_return_reason` (`return_reason_id`, `language_id`, `name`) VALUE
 (2, 1, 'Received Wrong Item'),
 (3, 1, 'Order Error'),
 (4, 1, 'Faulty, please supply details'),
-(5, 1, 'Other, please supply details'),
-(1, 2, 'Dead On Arrival'),
-(2, 2, 'Received Wrong Item'),
-(3, 2, 'Order Error'),
-(4, 2, 'Faulty, please supply details'),
-(5, 2, 'Other, please supply details');
+(5, 1, 'Other, please supply details');
 
 -- --------------------------------------------------------
 
@@ -4048,10 +4136,7 @@ CREATE TABLE IF NOT EXISTS `oc_return_status` (
 INSERT INTO `oc_return_status` (`return_status_id`, `language_id`, `name`) VALUES
 (1, 1, 'Pending'),
 (3, 1, 'Complete'),
-(2, 1, 'Awaiting Products'),
-(1, 2, 'Pending'),
-(3, 2, 'Complete'),
-(2, 2, 'Awaiting Products');
+(2, 1, 'Awaiting Products');
 
 -- --------------------------------------------------------
 
@@ -4069,7 +4154,7 @@ CREATE TABLE IF NOT EXISTS `oc_review` (
   `status` tinyint(1) NOT NULL DEFAULT '0',
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_review`
@@ -4077,7 +4162,8 @@ CREATE TABLE IF NOT EXISTS `oc_review` (
 
 INSERT INTO `oc_review` (`review_id`, `product_id`, `customer_id`, `author`, `text`, `rating`, `status`, `date_added`, `date_modified`) VALUES
 (1, 55, 0, 'dfgdfgdfg', 'dfsgsdgdfg', 3, 1, '2016-05-17 15:07:58', '0000-00-00 00:00:00'),
-(2, 55, 0, 'hjkhfjk', 'hjkhjkgfh fgh fdgh fgh fs hdgfhdfghdfgh fgh dfgh', 3, 1, '2016-05-17 17:10:29', '2016-05-17 17:11:26');
+(2, 55, 0, 'hjkhfjk', 'hjkhjkgfh fgh fdgh fgh fs hdgfhdfghdfgh fgh dfgh', 3, 1, '2016-05-17 17:10:29', '2016-05-17 17:11:26'),
+(3, 62, 7, 'test review', 'test review test review  test review  test review  test review  test review  test review  test review  test review  test review  test review  ', 5, 0, '2016-05-24 22:44:44', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -4092,7 +4178,7 @@ CREATE TABLE IF NOT EXISTS `oc_setting` (
   `key` varchar(64) NOT NULL,
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=5927 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7110 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_setting`
@@ -4102,21 +4188,21 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (1, 0, 'shipping', 'shipping_sort_order', '3', 0),
 (2, 0, 'sub_total', 'sub_total_sort_order', '1', 0),
 (3, 0, 'sub_total', 'sub_total_status', '1', 0),
-(5900, 0, 'authorizenet_aim', 'authorizenet_aim_login', '97mRLrpJ7jLs', 0),
+(6079, 0, 'authorizenet_aim', 'authorizenet_aim_login', '38u78JayQX8E', 0),
 (5, 0, 'total', 'total_sort_order', '9', 0),
 (6, 0, 'total', 'total_status', '1', 0),
-(5910, 0, 'authorizenet_aim', 'authorizenet_aim_sort_order', '3', 0),
-(5909, 0, 'authorizenet_aim', 'authorizenet_aim_status', '1', 0),
-(5908, 0, 'authorizenet_aim', 'authorizenet_aim_geo_zone_id', '0', 0),
+(6089, 0, 'authorizenet_aim', 'authorizenet_aim_sort_order', '3', 0),
+(6088, 0, 'authorizenet_aim', 'authorizenet_aim_status', '1', 0),
+(6087, 0, 'authorizenet_aim', 'authorizenet_aim_geo_zone_id', '0', 0),
 (14, 0, 'shipping', 'shipping_status', '1', 0),
 (15, 0, 'shipping', 'shipping_estimator', '1', 0),
 (27, 0, 'coupon', 'coupon_sort_order', '4', 0),
 (28, 0, 'coupon', 'coupon_status', '1', 0),
-(34, 0, 'flat', 'flat_sort_order', '1', 0),
-(35, 0, 'flat', 'flat_status', '1', 0),
-(36, 0, 'flat', 'flat_geo_zone_id', '0', 0),
-(37, 0, 'flat', 'flat_tax_class_id', '9', 0),
-(41, 0, 'flat', 'flat_cost', '5.00', 0),
+(6056, 0, 'flat', 'flat_sort_order', '1', 0),
+(6055, 0, 'flat', 'flat_status', '1', 0),
+(6054, 0, 'flat', 'flat_geo_zone_id', '0', 0),
+(6053, 0, 'flat', 'flat_tax_class_id', '9', 0),
+(6052, 0, 'flat', 'flat_cost', '0', 0),
 (42, 0, 'credit', 'credit_sort_order', '7', 0),
 (43, 0, 'credit', 'credit_status', '1', 0),
 (53, 0, 'reward', 'reward_sort_order', '2', 0),
@@ -4125,178 +4211,169 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (158, 0, 'account', 'account_status', '1', 0),
 (159, 0, 'affiliate', 'affiliate_status', '1', 0),
 (5920, 0, 'bank_transfer', 'bank_transfer_bank1', 'Инструкция по переводу средств', 0),
-(5917, 0, 'authorizenet_sim', 'authorizenet_sim_geo_zone_id', '0', 0),
-(5919, 0, 'authorizenet_sim', 'authorizenet_sim_sort_order', '5', 0),
-(5633, 0, 'config', 'config_error_filename', 'error.log', 0),
-(5632, 0, 'config', 'config_error_log', '1', 0),
-(5630, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
-(5631, 0, 'config', 'config_error_display', '1', 0),
+(7109, 0, 'config', 'config_error_filename', 'error.log', 0),
+(7107, 0, 'config', 'config_error_display', '1', 0),
+(7108, 0, 'config', 'config_error_log', '1', 0),
+(7104, 0, 'config', 'config_file_max_size', '300000', 0),
+(7105, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
+(7102, 0, 'config', 'config_shared', '0', 0),
+(7103, 0, 'config', 'config_encryption', 'zBJS618c75aV5Q4dr6YkzcNdM2IYjNtQ5g4ORMmj57t3koJZpVSRGNG8HxShVS3dQ3glOi5dNuuyKOLjGxyX2LrCQj2B3Aw99KL8yppLjIMoAregK7qrHl6DkAthiW05S8dJ3CN8FfdiDhZbZyvgnbXDi1E4yWJf2V3S3YtNXBo8PyIyS8mDpyQZRZc9mBzHpnjsNcZkGrztAPnjVLGjeLzcsJCgMiVsxXLLoPmS4lHOv0Ts7Kq6e5FklPmCXylm9btDe7LkWxX16tfVJOtFR6bxly5zE5AZZmsimBagklqPi6TCyoDD9kR4NfYPn0ziFshmJBDQTupvwIB6ONiytL9y0LLbJiKtEDJyExqxdADaJSXRjOmzG7gNKIGoU66p4ry7eMbEeARKM1UAREo4iM6PhtM1z8ieW8qysMidqPFXxnchQDzEfxsdE0ccjlBcw0F0r94LODtZLGg5uqZmaaHopCRqCJPem7nuDTpZp3L78lSl8akbF6MD9Olg6SYgMH4SOGPJen4iHx5Ftlp6x4s8xrPDiU2isZEL3SL8orE9QjxWklJ9Jo3Esb2vAJRLXUxB1ZaoDskZ0pMwdStCsoNptNBILMmAiyXZsZeNSqblu2AmGvlS6sdFQ7n0ZumRdVko84lq9ZGrDQsC1fZtejbKdru8wpzY5QIUY3BEztosQjqSBixY50vCeajWaa0yW6vmCnq9RQKNbCbIP9kpUpA3P4J8Xbwmbs0dXDouPyrFQ7syKnpOrS7JFPBdj5qyB8eNxOgsHDGeAVXKCNlMPvfc1f4gLHZqaRhoUhpq6TVjmyOes0A2yFCC25hDvWwaqwJxgMLV2Wi7uiMHu6TuSVf6TLcGjKnkWjeB2vz2zqBxUrQV3NAketn58ysT86YxPL3ilReDw59EdcVCQqCmTSbzDHyQkZUaBnNTysAs8EC2VEqidJVeCYnEUly3p93bACag39reTdWPdWZqtVHzi3V1oRSLOqCp7NSpO5LBlq6IzQqYwnnkpJVx1e0WptRj', 0),
+(7101, 0, 'config', 'config_password', '1', 0),
+(7100, 0, 'config', 'config_secure', '1', 0),
 (636, 0, 'filter', 'filter_status', '1', 0),
-(5623, 0, 'config', 'config_compression', '0', 0),
-(5624, 0, 'config', 'config_secure', '0', 0),
-(5625, 0, 'config', 'config_password', '1', 0),
-(5626, 0, 'config', 'config_shared', '0', 0),
-(5627, 0, 'config', 'config_encryption', 'zBJS618c75aV5Q4dr6YkzcNdM2IYjNtQ5g4ORMmj57t3koJZpVSRGNG8HxShVS3dQ3glOi5dNuuyKOLjGxyX2LrCQj2B3Aw99KL8yppLjIMoAregK7qrHl6DkAthiW05S8dJ3CN8FfdiDhZbZyvgnbXDi1E4yWJf2V3S3YtNXBo8PyIyS8mDpyQZRZc9mBzHpnjsNcZkGrztAPnjVLGjeLzcsJCgMiVsxXLLoPmS4lHOv0Ts7Kq6e5FklPmCXylm9btDe7LkWxX16tfVJOtFR6bxly5zE5AZZmsimBagklqPi6TCyoDD9kR4NfYPn0ziFshmJBDQTupvwIB6ONiytL9y0LLbJiKtEDJyExqxdADaJSXRjOmzG7gNKIGoU66p4ry7eMbEeARKM1UAREo4iM6PhtM1z8ieW8qysMidqPFXxnchQDzEfxsdE0ccjlBcw0F0r94LODtZLGg5uqZmaaHopCRqCJPem7nuDTpZp3L78lSl8akbF6MD9Olg6SYgMH4SOGPJen4iHx5Ftlp6x4s8xrPDiU2isZEL3SL8orE9QjxWklJ9Jo3Esb2vAJRLXUxB1ZaoDskZ0pMwdStCsoNptNBILMmAiyXZsZeNSqblu2AmGvlS6sdFQ7n0ZumRdVko84lq9ZGrDQsC1fZtejbKdru8wpzY5QIUY3BEztosQjqSBixY50vCeajWaa0yW6vmCnq9RQKNbCbIP9kpUpA3P4J8Xbwmbs0dXDouPyrFQ7syKnpOrS7JFPBdj5qyB8eNxOgsHDGeAVXKCNlMPvfc1f4gLHZqaRhoUhpq6TVjmyOes0A2yFCC25hDvWwaqwJxgMLV2Wi7uiMHu6TuSVf6TLcGjKnkWjeB2vz2zqBxUrQV3NAketn58ysT86YxPL3ilReDw59EdcVCQqCmTSbzDHyQkZUaBnNTysAs8EC2VEqidJVeCYnEUly3p93bACag39reTdWPdWZqtVHzi3V1oRSLOqCp7NSpO5LBlq6IzQqYwnnkpJVx1e0WptRj', 0),
+(7106, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', 0),
 (94, 0, 'voucher', 'voucher_sort_order', '8', 0),
 (95, 0, 'voucher', 'voucher_status', '1', 0),
 (4910, 0, 'rapnet', 'rapnet_tax_class_id', '0', 0),
-(5918, 0, 'authorizenet_sim', 'authorizenet_sim_status', '1', 0),
-(5628, 0, 'config', 'config_file_max_size', '300000', 0),
-(5629, 0, 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', 0),
-(5622, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(5621, 0, 'config', 'config_seo_url', '1', 0),
-(5620, 0, 'config', 'config_maintenance', '0', 0),
-(5619, 0, 'config', 'config_mail_alert', '', 0),
-(5618, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
-(5617, 0, 'config', 'config_mail_smtp_port', '25', 0),
-(5616, 0, 'config', 'config_mail_smtp_password', '', 0),
-(5615, 0, 'config', 'config_mail_smtp_username', '', 0),
-(5614, 0, 'config', 'config_mail_smtp_hostname', '', 0),
-(5613, 0, 'config', 'config_mail_parameter', '', 0),
-(5612, 0, 'config', 'config_mail_protocol', 'mail', 0),
-(5611, 0, 'config', 'config_ftp_status', '0', 0),
-(5610, 0, 'config', 'config_ftp_root', '', 0),
-(5609, 0, 'config', 'config_ftp_password', '', 0),
-(5608, 0, 'config', 'config_ftp_username', '', 0),
-(5607, 0, 'config', 'config_ftp_port', '21', 0),
-(5606, 0, 'config', 'config_ftp_hostname', 'canary.webremote.net', 0),
-(5605, 0, 'config', 'config_image_location_height', '50', 0),
-(5604, 0, 'config', 'config_image_location_width', '268', 0),
-(5603, 0, 'config', 'config_image_cart_height', '47', 0),
-(5602, 0, 'config', 'config_image_cart_width', '47', 0),
-(5601, 0, 'config', 'config_image_wishlist_height', '47', 0),
-(5600, 0, 'config', 'config_image_wishlist_width', '47', 0),
-(5599, 0, 'config', 'config_image_compare_height', '90', 0),
-(5598, 0, 'config', 'config_image_compare_width', '90', 0),
-(5597, 0, 'config', 'config_image_related_height', '80', 0),
-(5596, 0, 'config', 'config_image_related_width', '80', 0),
-(5595, 0, 'config', 'config_image_additional_height', '74', 0),
-(5594, 0, 'config', 'config_image_additional_width', '74', 0),
-(5593, 0, 'config', 'config_image_product_height', '228', 0),
-(5592, 0, 'config', 'config_image_product_width', '228', 0),
-(5591, 0, 'config', 'config_image_popup_height', '500', 0),
-(5590, 0, 'config', 'config_image_popup_width', '500', 0),
-(5588, 0, 'config', 'config_image_thumb_width', '228', 0),
-(5589, 0, 'config', 'config_image_thumb_height', '228', 0),
-(5587, 0, 'config', 'config_image_category_height', '80', 0),
-(5586, 0, 'config', 'config_image_category_width', '80', 0),
-(5585, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
-(5584, 0, 'config', 'config_logo', 'catalog/logo.png', 0),
-(5583, 0, 'config', 'config_captcha_page', '["register","review","return","contact"]', 1),
-(5582, 0, 'config', 'config_captcha', '', 0),
-(5581, 0, 'config', 'config_return_status_id', '2', 0),
-(5580, 0, 'config', 'config_return_id', '0', 0),
-(5579, 0, 'config', 'config_affiliate_mail', '0', 0),
-(5578, 0, 'config', 'config_affiliate_id', '4', 0),
-(5577, 0, 'config', 'config_affiliate_commission', '5', 0),
-(5576, 0, 'config', 'config_affiliate_auto', '0', 0),
-(5575, 0, 'config', 'config_affiliate_approval', '0', 0),
-(5574, 0, 'config', 'config_stock_checkout', '0', 0),
-(5573, 0, 'config', 'config_stock_warning', '0', 0),
-(5572, 0, 'config', 'config_stock_display', '0', 0),
-(5571, 0, 'config', 'config_api_id', '1', 0),
-(5569, 0, 'config', 'config_fraud_status_id', '7', 0),
-(5570, 0, 'config', 'config_order_mail', '0', 0),
-(5568, 0, 'config', 'config_complete_status', '["8","3"]', 1),
-(5567, 0, 'config', 'config_processing_status', '["5","1","2","12","3"]', 1),
-(5566, 0, 'config', 'config_order_status_id', '1', 0),
-(5565, 0, 'config', 'config_checkout_id', '5', 0),
-(5564, 0, 'config', 'config_checkout_guest', '1', 0),
-(5563, 0, 'config', 'config_cart_weight', '1', 0),
-(5562, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
-(5561, 0, 'config', 'config_account_mail', '0', 0),
-(5560, 0, 'config', 'config_account_id', '3', 0),
-(5559, 0, 'config', 'config_login_attempts', '5', 0),
-(5558, 0, 'config', 'config_customer_price', '0', 0),
-(5557, 0, 'config', 'config_customer_group_display', '["1"]', 1),
-(5556, 0, 'config', 'config_customer_group_id', '1', 0),
-(5555, 0, 'config', 'config_customer_online', '0', 0),
-(5554, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(5553, 0, 'config', 'config_tax_default', 'shipping', 0),
-(5552, 0, 'config', 'config_tax', '1', 0),
-(5551, 0, 'config', 'config_voucher_max', '1000', 0),
-(5550, 0, 'config', 'config_voucher_min', '1', 0),
-(5549, 0, 'config', 'config_review_mail', '0', 0),
-(5548, 0, 'config', 'config_review_guest', '1', 0),
-(5546, 0, 'config', 'config_limit_admin', '20', 0),
-(5547, 0, 'config', 'config_review_status', '1', 0),
-(5545, 0, 'config', 'config_product_description_length', '100', 0),
-(5544, 0, 'config', 'config_product_limit', '15', 0),
-(5543, 0, 'config', 'config_product_count', '1', 0),
-(5542, 0, 'config', 'config_weight_class_id', '2', 0),
-(5541, 0, 'config', 'config_length_class_id', '2', 0),
-(5540, 0, 'config', 'config_currency_auto', '1', 0),
-(5539, 0, 'config', 'config_currency', 'USD', 0),
-(5538, 0, 'config', 'config_admin_language', 'ru', 0),
-(5537, 0, 'config', 'config_language', 'en', 0),
-(5536, 0, 'config', 'config_zone_id', '3563', 0),
-(5534, 0, 'config', 'config_comment', 'Доп инфа', 0),
-(5535, 0, 'config', 'config_country_id', '222', 0),
-(5528, 0, 'config', 'config_geocode', '', 0),
-(5529, 0, 'config', 'config_email', 'trafik8787@gmail.com', 0),
-(5530, 0, 'config', 'config_telephone', '123456789', 0),
-(5531, 0, 'config', 'config_fax', '', 0),
-(5532, 0, 'config', 'config_image', '', 0),
-(5916, 0, 'authorizenet_sim', 'authorizenet_sim_order_status_id', '7', 0),
-(5915, 0, 'authorizenet_sim', 'authorizenet_sim_total', '', 0),
-(5914, 0, 'authorizenet_sim', 'authorizenet_sim_test', '1', 0),
-(5913, 0, 'authorizenet_sim', 'authorizenet_sim_md5', '', 0),
-(5912, 0, 'authorizenet_sim', 'authorizenet_sim_key', '7mycT75j7U227yJg', 0),
-(5911, 0, 'authorizenet_sim', 'authorizenet_sim_merchant', '97mRLrpJ7jLs', 0),
-(5907, 0, 'authorizenet_aim', 'authorizenet_aim_order_status_id', '7', 0),
-(5906, 0, 'authorizenet_aim', 'authorizenet_aim_total', '', 0),
+(7099, 0, 'config', 'config_compression', '0', 0),
+(7096, 0, 'config', 'config_maintenance', '0', 0),
+(7097, 0, 'config', 'config_seo_url', '1', 0),
+(7098, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+(7095, 0, 'config', 'config_mail_alert', '', 0),
+(7094, 0, 'config', 'config_mail_smtp_timeout', '5', 0),
+(7093, 0, 'config', 'config_mail_smtp_port', '25', 0),
+(7092, 0, 'config', 'config_mail_smtp_password', '', 0),
+(7091, 0, 'config', 'config_mail_smtp_username', '', 0),
+(7090, 0, 'config', 'config_mail_smtp_hostname', '', 0),
+(7089, 0, 'config', 'config_mail_parameter', '', 0),
+(7088, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(7086, 0, 'config', 'config_ftp_root', '', 0),
+(7087, 0, 'config', 'config_ftp_status', '0', 0),
+(7085, 0, 'config', 'config_ftp_password', '', 0),
+(7084, 0, 'config', 'config_ftp_username', '', 0),
+(7083, 0, 'config', 'config_ftp_port', '21', 0),
+(7082, 0, 'config', 'config_ftp_hostname', 'canary.webremote.net', 0),
+(7081, 0, 'config', 'config_image_location_height', '50', 0),
+(7080, 0, 'config', 'config_image_location_width', '268', 0),
+(7079, 0, 'config', 'config_image_cart_height', '147', 0),
+(7078, 0, 'config', 'config_image_cart_width', '147', 0),
+(7077, 0, 'config', 'config_image_wishlist_height', '47', 0),
+(7076, 0, 'config', 'config_image_wishlist_width', '47', 0),
+(7075, 0, 'config', 'config_image_compare_height', '90', 0),
+(7069, 0, 'config', 'config_image_product_height', '228', 0),
+(7070, 0, 'config', 'config_image_additional_width', '74', 0),
+(7071, 0, 'config', 'config_image_additional_height', '74', 0),
+(7072, 0, 'config', 'config_image_related_width', '80', 0),
+(7073, 0, 'config', 'config_image_related_height', '80', 0),
+(7074, 0, 'config', 'config_image_compare_width', '90', 0),
+(7068, 0, 'config', 'config_image_product_width', '228', 0),
+(7067, 0, 'config', 'config_image_popup_height', '500', 0),
+(7066, 0, 'config', 'config_image_popup_width', '500', 0),
+(7065, 0, 'config', 'config_image_thumb_height', '228', 0),
+(7064, 0, 'config', 'config_image_thumb_width', '228', 0),
+(7063, 0, 'config', 'config_image_category_height', '80', 0),
+(7062, 0, 'config', 'config_image_category_width', '80', 0),
+(7061, 0, 'config', 'config_icon', 'catalog/cart.png', 0),
+(7060, 0, 'config', 'config_logo', 'catalog/logo.png', 0),
+(7059, 0, 'config', 'config_captcha_page', '["register","review","return","contact"]', 1),
+(7057, 0, 'config', 'config_return_status_id', '2', 0),
+(7058, 0, 'config', 'config_captcha', '', 0),
+(7056, 0, 'config', 'config_return_id', '0', 0),
+(7055, 0, 'config', 'config_affiliate_mail', '0', 0),
+(7054, 0, 'config', 'config_affiliate_id', '4', 0),
+(7053, 0, 'config', 'config_affiliate_commission', '5', 0),
+(7051, 0, 'config', 'config_affiliate_approval', '0', 0),
+(7052, 0, 'config', 'config_affiliate_auto', '0', 0),
+(7050, 0, 'config', 'config_stock_checkout', '0', 0),
+(7049, 0, 'config', 'config_stock_warning', '0', 0),
+(7048, 0, 'config', 'config_stock_display', '0', 0),
+(7047, 0, 'config', 'config_api_id', '1', 0),
+(7046, 0, 'config', 'config_order_mail', '0', 0),
+(7045, 0, 'config', 'config_fraud_status_id', '7', 0),
+(7044, 0, 'config', 'config_complete_status', '["8","3"]', 1),
+(7043, 0, 'config', 'config_processing_status', '["5","1","2","12","3"]', 1),
+(7042, 0, 'config', 'config_order_status_id', '1', 0),
+(7041, 0, 'config', 'config_checkout_id', '5', 0),
+(7040, 0, 'config', 'config_checkout_guest', '1', 0),
+(7039, 0, 'config', 'config_cart_weight', '1', 0),
+(7038, 0, 'config', 'config_invoice_prefix', 'INV-2013-00', 0),
+(7037, 0, 'config', 'config_account_mail', '0', 0),
+(7036, 0, 'config', 'config_account_id', '3', 0),
+(7035, 0, 'config', 'config_login_attempts', '5', 0),
+(7034, 0, 'config', 'config_customer_price', '0', 0),
+(7033, 0, 'config', 'config_customer_group_display', '["1"]', 1),
+(7032, 0, 'config', 'config_customer_group_id', '1', 0),
+(7031, 0, 'config', 'config_customer_online', '0', 0),
+(7030, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(7029, 0, 'config', 'config_tax_default', 'shipping', 0),
+(7028, 0, 'config', 'config_tax', '1', 0),
+(7027, 0, 'config', 'config_voucher_max', '1000', 0),
+(7026, 0, 'config', 'config_voucher_min', '1', 0),
+(7025, 0, 'config', 'config_review_mail', '0', 0),
+(7024, 0, 'config', 'config_review_guest', '1', 0),
+(7023, 0, 'config', 'config_review_status', '1', 0),
+(7022, 0, 'config', 'config_limit_admin', '20', 0),
+(7021, 0, 'config', 'config_product_description_length', '100', 0),
+(7019, 0, 'config', 'config_product_count', '1', 0),
+(7020, 0, 'config', 'config_product_limit', '15', 0),
+(7018, 0, 'config', 'config_weight_class_id', '2', 0),
+(7017, 0, 'config', 'config_length_class_id', '2', 0),
+(7016, 0, 'config', 'config_currency_auto', '1', 0),
+(7015, 0, 'config', 'config_currency', 'USD', 0),
+(7013, 0, 'config', 'config_language', 'en', 0),
+(7014, 0, 'config', 'config_admin_language', 'en', 0),
+(7012, 0, 'config', 'config_zone_id', '3563', 0),
+(7011, 0, 'config', 'config_country_id', '222', 0),
+(7010, 0, 'config', 'config_comment', 'Доп инфа', 0),
+(7009, 0, 'config', 'config_open', 'Режим работы', 0),
+(7008, 0, 'config', 'config_image', '', 0),
+(7007, 0, 'config', 'config_fax', '', 0),
+(7006, 0, 'config', 'config_telephone', '123456789', 0),
+(7005, 0, 'config', 'config_email', 'trafik8787@gmail.com', 0),
+(7003, 0, 'config', 'config_address', 'Address 1', 0),
+(6086, 0, 'authorizenet_aim', 'authorizenet_aim_order_status_id', '5', 0),
+(6085, 0, 'authorizenet_aim', 'authorizenet_aim_total', '', 0),
 (5755, 0, 'cod', 'cod_sort_order', '2', 0),
 (5754, 0, 'cod', 'cod_status', '1', 0),
 (5753, 0, 'cod', 'cod_geo_zone_id', '5', 0),
 (5752, 0, 'cod', 'cod_order_status_id', '7', 0),
 (5751, 0, 'cod', 'cod_total', '', 0),
-(5533, 0, 'config', 'config_open', 'Режим работы', 0),
-(5527, 0, 'config', 'config_address', 'Address 1', 0),
-(5525, 0, 'config', 'config_name', 'Your Store', 0),
-(5526, 0, 'config', 'config_owner', 'Your Name', 0),
+(7004, 0, 'config', 'config_geocode', '', 0),
+(7001, 0, 'config', 'config_name', 'Your Store', 0),
+(7002, 0, 'config', 'config_owner', 'Your Name', 0),
 (1117, 0, 'wsubcat', 'wsubcat_status', '1', 0),
-(5524, 0, 'config', 'config_layout_id', '4', 0),
-(5523, 0, 'config', 'config_template', 'canary', 0),
+(7000, 0, 'config', 'config_layout_id', '4', 0),
+(6999, 0, 'config', 'config_template', 'canary', 0),
 (4911, 0, 'rapnet', 'rapnet_status', '1', 0),
 (4909, 0, 'rapnet', 'rapnet_pass', 'OTnJOdA0', 0),
 (4908, 0, 'rapnet', 'rapnet_name', 'j9b27z4rgb7rlkrcrd9lv8lhvcfdwe', 0),
-(5905, 0, 'authorizenet_aim', 'authorizenet_aim_method', 'capture', 0),
-(5904, 0, 'authorizenet_aim', 'authorizenet_aim_mode', 'test', 0),
-(5903, 0, 'authorizenet_aim', 'authorizenet_aim_server', 'test', 0),
-(5902, 0, 'authorizenet_aim', 'authorizenet_aim_hash', '', 0),
-(5901, 0, 'authorizenet_aim', 'authorizenet_aim_key', '7mycT75j7U227yJg', 0),
-(5750, 0, 'pp_express', 'pp_express_logo', '', 0),
-(5749, 0, 'pp_express', 'pp_express_page_colour', '', 0),
-(5748, 0, 'pp_express', 'pp_express_allow_note', '0', 0),
-(5747, 0, 'pp_express', 'pp_express_voided_status_id', '7', 0),
-(5744, 0, 'pp_express', 'pp_express_processed_status_id', '7', 0),
-(5745, 0, 'pp_express', 'pp_express_refunded_status_id', '7', 0),
-(5746, 0, 'pp_express', 'pp_express_reversed_status_id', '7', 0),
-(5521, 0, 'config', 'config_meta_description', 'My Store', 0),
-(5522, 0, 'config', 'config_meta_keyword', '', 0),
+(6084, 0, 'authorizenet_aim', 'authorizenet_aim_method', 'capture', 0),
+(6083, 0, 'authorizenet_aim', 'authorizenet_aim_mode', 'live', 0),
+(6082, 0, 'authorizenet_aim', 'authorizenet_aim_server', 'live', 0),
+(6081, 0, 'authorizenet_aim', 'authorizenet_aim_hash', '', 0),
+(6080, 0, 'authorizenet_aim', 'authorizenet_aim_key', '2Fb3AH3kf82zAd9s', 0),
+(6425, 0, 'pp_express', 'pp_express_logo', '', 0),
+(6424, 0, 'pp_express', 'pp_express_page_colour', 'C6EAFB', 0),
+(6423, 0, 'pp_express', 'pp_express_allow_note', '0', 0),
+(6422, 0, 'pp_express', 'pp_express_voided_status_id', '16', 0),
+(6421, 0, 'pp_express', 'pp_express_reversed_status_id', '12', 0),
+(6420, 0, 'pp_express', 'pp_express_refunded_status_id', '11', 0),
+(6998, 0, 'config', 'config_meta_keyword', '', 0),
+(6997, 0, 'config', 'config_meta_description', 'My Store', 0),
 (4314, 0, 'complect', 'complect_status', '1', 0),
-(5520, 0, 'config', 'config_meta_title', 'Your Store', 0),
-(5743, 0, 'pp_express', 'pp_express_pending_status_id', '7', 0),
-(5741, 0, 'pp_express', 'pp_express_expired_status_id', '7', 0),
-(5742, 0, 'pp_express', 'pp_express_failed_status_id', '7', 0),
-(5739, 0, 'pp_express', 'pp_express_completed_status_id', '7', 0),
-(5740, 0, 'pp_express', 'pp_express_denied_status_id', '7', 0),
-(5738, 0, 'pp_express', 'pp_express_canceled_reversal_status_id', '7', 0),
-(5737, 0, 'pp_express', 'pp_express_status', '1', 0),
-(5736, 0, 'pp_express', 'pp_express_geo_zone_id', '5', 0),
-(5735, 0, 'pp_express', 'pp_express_sort_order', '1', 0),
-(5734, 0, 'pp_express', 'pp_express_total', '', 0),
-(5733, 0, 'pp_express', 'pp_express_method', 'Sale', 0),
-(5732, 0, 'pp_express', 'pp_express_recurring_cancel_status', '0', 0),
-(5731, 0, 'pp_express', 'pp_express_currency', 'USD', 0),
-(5730, 0, 'pp_express', 'pp_express_debug', '0', 0),
-(5728, 0, 'pp_express', 'pp_express_sandbox_signature', 'AThKIy8pxbbT87Z7j0mbV4ABo4xmAT6i5ahzh85r7WdMuUvu-tDqiLnC', 0),
-(5729, 0, 'pp_express', 'pp_express_test', '1', 0),
-(5727, 0, 'pp_express', 'pp_express_sandbox_password', '9X9AEBGZH783MGF9', 0),
-(5726, 0, 'pp_express', 'pp_express_sandbox_username', 'trafik8787-facilitator_api1.gmail.com', 0),
-(5725, 0, 'pp_express', 'pp_express_signature', 'AThKIy8pxbbT87Z7j0mbV4ABo4xmAT6i5ahzh85r7WdMuUvu-tDqiLnC', 0),
-(5723, 0, 'pp_express', 'pp_express_username', 'trafik8787-facilitator_api1.gmail.com', 0),
-(5724, 0, 'pp_express', 'pp_express_password', '9X9AEBGZH783MGF9', 0),
+(6996, 0, 'config', 'config_meta_title', 'Your Store', 0),
+(6419, 0, 'pp_express', 'pp_express_processed_status_id', '2', 0),
+(6418, 0, 'pp_express', 'pp_express_pending_status_id', '1', 0),
+(6417, 0, 'pp_express', 'pp_express_failed_status_id', '10', 0),
+(6416, 0, 'pp_express', 'pp_express_expired_status_id', '14', 0),
+(6415, 0, 'pp_express', 'pp_express_denied_status_id', '8', 0),
+(6414, 0, 'pp_express', 'pp_express_completed_status_id', '5', 0),
+(6413, 0, 'pp_express', 'pp_express_canceled_reversal_status_id', '7', 0),
+(6412, 0, 'pp_express', 'pp_express_status', '1', 0),
+(6411, 0, 'pp_express', 'pp_express_geo_zone_id', '5', 0),
+(6410, 0, 'pp_express', 'pp_express_sort_order', '1', 0),
+(6409, 0, 'pp_express', 'pp_express_total', '0.10', 0),
+(6408, 0, 'pp_express', 'pp_express_method', 'Sale', 0),
+(6407, 0, 'pp_express', 'pp_express_recurring_cancel_status', '0', 0),
+(6406, 0, 'pp_express', 'pp_express_currency', 'USD', 0),
+(6405, 0, 'pp_express', 'pp_express_debug', '1', 0),
+(6404, 0, 'pp_express', 'pp_express_test', '0', 0),
+(6403, 0, 'pp_express', 'pp_express_sandbox_signature', '', 0),
+(6402, 0, 'pp_express', 'pp_express_sandbox_password', '', 0),
+(6401, 0, 'pp_express', 'pp_express_sandbox_username', '', 0),
+(6399, 0, 'pp_express', 'pp_express_password', '3FANKB9FQBGSDT3Z', 0),
+(6400, 0, 'pp_express', 'pp_express_signature', 'AFcWxV21C7fd0v3bYYYRCpSSRl31AkwjeRzIzhJlGTFR6FC7wDbmthwy', 0),
+(6398, 0, 'pp_express', 'pp_express_username', 'nadya_api1.brilliantcanary.com', 0),
 (5921, 0, 'bank_transfer', 'bank_transfer_bank2', 'Инструкция по переводу средств', 0),
 (5922, 0, 'bank_transfer', 'bank_transfer_total', '', 0),
 (5923, 0, 'bank_transfer', 'bank_transfer_order_status_id', '5', 0),
@@ -4324,11 +4401,7 @@ INSERT INTO `oc_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
 (7, 1, 'In Stock'),
 (8, 1, 'Pre-Order'),
 (5, 1, 'Out Of Stock'),
-(6, 1, '2-3 Days'),
-(7, 2, 'In Stock'),
-(8, 2, 'Pre-Order'),
-(5, 2, 'Out Of Stock'),
-(6, 2, '2-3 Days');
+(6, 1, '2-3 Days');
 
 -- --------------------------------------------------------
 
@@ -4456,7 +4529,7 @@ CREATE TABLE IF NOT EXISTS `oc_url_alias` (
   `url_alias_id` int(11) NOT NULL,
   `query` varchar(255) NOT NULL,
   `keyword` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=1017 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1090 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_url_alias`
@@ -4467,13 +4540,13 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (914, 'category_id=68', 'diamonds'),
 (917, 'category_id=69', 'wedding-rings'),
 (730, 'manufacturer_id=8', 'apple'),
-(985, 'information_id=4', 'about_us'),
-(849, 'product_id=42', 'test'),
+(1083, 'information_id=4', 'about_us'),
+(1087, 'product_id=42', 'test'),
 (979, 'category_id=86', 'diamond_pendants'),
 (977, 'category_id=84', 'matching_gemstone_pairs'),
 (978, 'category_id=85', 'diamond_bracelets'),
 (957, 'product_id=57', ''),
-(1001, 'product_id=55', 'rings2'),
+(1043, 'product_id=55', 'rings2werwer'),
 (950, 'category_id=72', 'classik_man'),
 (951, 'category_id=73', 'carved_man'),
 (952, 'category_id=74', 'diamond_man'),
@@ -4483,7 +4556,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (947, 'category_id=79', 'diamond_woman'),
 (944, 'category_id=80', 'anoversary_woman'),
 (948, 'category_id=81', 'eternity_woman'),
-(938, 'category_id=82', 'fine_jeverly'),
+(1034, 'category_id=82', 'fine_jeverly'),
 (965, 'product_id=59', 'right4'),
 (966, 'product_id=58', 'right3'),
 (964, 'product_id=60', 'ring5'),
@@ -4491,9 +4564,9 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (970, 'product_id=62', 'ring7'),
 (973, 'product_id=63', 'ring8'),
 (975, 'product_id=64', 'ring9'),
-(976, 'category_id=83', 'diamond_studs'),
-(1009, 'product_id=30', 'canon-eos-5d'),
-(851, 'product_id=47', 'hp-lp3065'),
+(1035, 'category_id=83', 'diamond_studs'),
+(1080, 'product_id=30', 'rings_new'),
+(1039, 'product_id=47', 'hp-lp3065'),
 (811, 'product_id=28', 'htc-touch-hd'),
 (812, 'product_id=43', 'macbook'),
 (877, 'product_id=44', 'macbook-air'),
@@ -4515,20 +4588,25 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (831, 'manufacturer_id=6', 'palm'),
 (832, 'manufacturer_id=10', 'sony'),
 (841, 'information_id=6', 'delivery'),
-(842, 'information_id=3', 'privacy'),
-(843, 'information_id=5', 'terms'),
+(1045, 'information_id=3', 'privacy'),
+(1046, 'information_id=5', 'terms'),
 (987, 'category_id=59', 'solitaire'),
 (989, 'category_id=60', 'pave'),
 (991, 'category_id=61', 'channel-set'),
-(992, 'category_id=62', 'side-stones'),
+(1088, 'category_id=62', 'side-stones'),
 (993, 'category_id=63', 'three-stone'),
-(994, 'category_id=64', 'tension'),
+(1089, 'category_id=64', 'tension'),
 (995, 'category_id=65', 'halo'),
 (996, 'category_id=66', 'vintage'),
 (997, 'category_id=67', 'wedding-sets'),
 (988, 'category_id=20', 'engagement-rings'),
 (980, 'category_id=87', 'mille_coeurs _pendants'),
-(981, 'category_id=88', 'solitaire_pendants');
+(981, 'category_id=88', 'solitaire_pendants'),
+(1057, 'product_id=66', 'diamond_studs2'),
+(1058, 'product_id=68', 'diamond_studs3'),
+(1031, 'product_id=69', 'diamond_studs4'),
+(1037, 'product_id=70', 'matching_gemstone _pairs1'),
+(1086, 'product_id=73', '');
 
 -- --------------------------------------------------------
 
@@ -4557,8 +4635,8 @@ CREATE TABLE IF NOT EXISTS `oc_user` (
 --
 
 INSERT INTO `oc_user` (`user_id`, `user_group_id`, `username`, `password`, `salt`, `firstname`, `lastname`, `email`, `image`, `code`, `ip`, `status`, `date_added`) VALUES
-(1, 1, 'admin', '6601e5028e5f5f8699be5711913eb74ce709ef9a', '31bFITyjU', 'John', 'Doe', 'trafik8787@gmail.com', '', '', '178.92.8.226', 1, '2016-02-19 17:17:57'),
-(2, 1, 'katia', '45a946cbaa01cdc60c3866571ce3c000dec9a886', 'ydE1UHYYM', 'Катя', 'Катя', '', '', '', '5.248.82.27', 1, '2016-05-16 17:18:25');
+(1, 1, 'admin', '6601e5028e5f5f8699be5711913eb74ce709ef9a', '31bFITyjU', 'John', 'Doe', 'trafik8787@gmail.com', '', '', '213.179.252.108', 1, '2016-02-19 17:17:57'),
+(2, 11, 'katia', '45a946cbaa01cdc60c3866571ce3c000dec9a886', 'ydE1UHYYM', 'Катя', 'Катя', '', '', '', '194.187.106.246', 1, '2016-05-16 17:18:25');
 
 -- --------------------------------------------------------
 
@@ -4570,15 +4648,16 @@ CREATE TABLE IF NOT EXISTS `oc_user_group` (
   `user_group_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL,
   `permission` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_user_group`
 --
 
 INSERT INTO `oc_user_group` (`user_group_id`, `name`, `permission`) VALUES
-(1, 'Administrator', '{"access":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/slideshow","module\\/special","module\\/store","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/amazon_login_pay","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/bank_transfer","payment\\/bluepay_hosted","payment\\/bluepay_redirect","payment\\/cheque","payment\\/cod","payment\\/firstdata","payment\\/firstdata_remote","payment\\/free_checkout","payment\\/g2apay","payment\\/globalpay","payment\\/globalpay_remote","payment\\/klarna_account","payment\\/klarna_invoice","payment\\/liqpay","payment\\/nochex","payment\\/paymate","payment\\/paypoint","payment\\/payza","payment\\/perpetual_payments","payment\\/pp_express","payment\\/pp_payflow","payment\\/pp_payflow_iframe","payment\\/pp_pro","payment\\/pp_pro_iframe","payment\\/pp_standard","payment\\/realex","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","payment\\/securetrading_ws","payment\\/skrill","payment\\/twocheckout","payment\\/web_payment_software","payment\\/worldpay","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission","module\\/filter","module\\/html","module\\/hello","module\\/hello","payment\\/firstdata_remote","payment\\/pp_payflow","payment\\/twocheckout","module\\/subcategory","module\\/google_hangouts","module\\/subcategory","module\\/category","module\\/subcategory","module\\/subcategory","module\\/subcategory","module\\/subcategory","module\\/subcategory","module\\/category","module\\/subcategory","module\\/subcategory","module\\/subcategory","module\\/hello","module\\/subcategory","module\\/test","module\\/wsubcategory","module\\/wsubcategory","module\\/wsubcat","module\\/wsubcat","module\\/wsubcat","payment\\/authorizenet_aim","module\\/rapnet","module\\/rapnet","module\\/rapnet","module\\/ebay_listing","payment\\/cheque","payment\\/authorizenet_sim","payment\\/web_payment_software","payment\\/bank_transfer","payment\\/cod","payment\\/pp_express","module\\/bestseller","shipping\\/free","payment\\/free_checkout","payment\\/cod","module\\/complect","module\\/category","captcha\\/google_captcha","captcha\\/basic_captcha","captcha\\/basic_captcha","payment\\/pp_express","payment\\/pp_standard","payment\\/cod","total\\/tax","payment\\/bank_transfer","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/authorizenet_sim","shipping\\/fedex","payment\\/bank_transfer"],"modify":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/slideshow","module\\/special","module\\/store","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/amazon_login_pay","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/bank_transfer","payment\\/bluepay_hosted","payment\\/bluepay_redirect","payment\\/cheque","payment\\/cod","payment\\/firstdata","payment\\/firstdata_remote","payment\\/free_checkout","payment\\/g2apay","payment\\/globalpay","payment\\/globalpay_remote","payment\\/klarna_account","payment\\/klarna_invoice","payment\\/liqpay","payment\\/nochex","payment\\/paymate","payment\\/paypoint","payment\\/payza","payment\\/perpetual_payments","payment\\/pp_express","payment\\/pp_payflow","payment\\/pp_payflow_iframe","payment\\/pp_pro","payment\\/pp_pro_iframe","payment\\/pp_standard","payment\\/realex","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","payment\\/securetrading_ws","payment\\/skrill","payment\\/twocheckout","payment\\/web_payment_software","payment\\/worldpay","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission","module\\/filter","module\\/html","module\\/hello","module\\/hello","payment\\/firstdata_remote","payment\\/pp_payflow","payment\\/twocheckout","module\\/google_hangouts","module\\/category","module\\/category","module\\/hello","module\\/test","module\\/wsubcategory","module\\/wsubcategory","module\\/wsubcat","module\\/wsubcat","module\\/wsubcat","payment\\/authorizenet_aim","module\\/rapnet","module\\/rapnet","module\\/rapnet","module\\/ebay_listing","payment\\/cheque","payment\\/authorizenet_sim","payment\\/web_payment_software","payment\\/bank_transfer","payment\\/cod","payment\\/pp_express","module\\/bestseller","shipping\\/free","payment\\/free_checkout","payment\\/cod","module\\/complect","module\\/category","captcha\\/google_captcha","captcha\\/basic_captcha","captcha\\/basic_captcha","payment\\/pp_express","payment\\/pp_standard","payment\\/cod","total\\/tax","payment\\/bank_transfer","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/authorizenet_sim","shipping\\/fedex","payment\\/bank_transfer"]}'),
-(10, 'Demonstration', '');
+(1, 'Administrator', '{"access":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/slideshow","module\\/special","module\\/store","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/amazon_login_pay","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/bank_transfer","payment\\/bluepay_hosted","payment\\/bluepay_redirect","payment\\/cheque","payment\\/cod","payment\\/firstdata","payment\\/firstdata_remote","payment\\/free_checkout","payment\\/g2apay","payment\\/globalpay","payment\\/globalpay_remote","payment\\/klarna_account","payment\\/klarna_invoice","payment\\/liqpay","payment\\/nochex","payment\\/paymate","payment\\/paypoint","payment\\/payza","payment\\/perpetual_payments","payment\\/pp_express","payment\\/pp_payflow","payment\\/pp_payflow_iframe","payment\\/pp_pro","payment\\/pp_pro_iframe","payment\\/pp_standard","payment\\/realex","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","payment\\/securetrading_ws","payment\\/skrill","payment\\/twocheckout","payment\\/web_payment_software","payment\\/worldpay","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission","module\\/filter","module\\/html","module\\/hello","module\\/hello","payment\\/firstdata_remote","payment\\/pp_payflow","payment\\/twocheckout","module\\/subcategory","module\\/google_hangouts","module\\/subcategory","module\\/category","module\\/subcategory","module\\/subcategory","module\\/subcategory","module\\/subcategory","module\\/subcategory","module\\/category","module\\/subcategory","module\\/subcategory","module\\/subcategory","module\\/hello","module\\/subcategory","module\\/test","module\\/wsubcategory","module\\/wsubcategory","module\\/wsubcat","module\\/wsubcat","module\\/wsubcat","payment\\/authorizenet_aim","module\\/rapnet","module\\/rapnet","module\\/rapnet","module\\/ebay_listing","payment\\/cheque","payment\\/authorizenet_sim","payment\\/web_payment_software","payment\\/bank_transfer","payment\\/cod","payment\\/pp_express","module\\/bestseller","shipping\\/free","payment\\/free_checkout","payment\\/cod","module\\/complect","module\\/category","captcha\\/google_captcha","captcha\\/basic_captcha","captcha\\/basic_captcha","payment\\/pp_express","payment\\/pp_standard","payment\\/cod","total\\/tax","payment\\/bank_transfer","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/authorizenet_sim","shipping\\/fedex","payment\\/bank_transfer","module\\/bestseller","module\\/latest","module\\/exel_parser"],"modify":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/slideshow","module\\/special","module\\/store","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/amazon_login_pay","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/bank_transfer","payment\\/bluepay_hosted","payment\\/bluepay_redirect","payment\\/cheque","payment\\/cod","payment\\/firstdata","payment\\/firstdata_remote","payment\\/free_checkout","payment\\/g2apay","payment\\/globalpay","payment\\/globalpay_remote","payment\\/klarna_account","payment\\/klarna_invoice","payment\\/liqpay","payment\\/nochex","payment\\/paymate","payment\\/paypoint","payment\\/payza","payment\\/perpetual_payments","payment\\/pp_express","payment\\/pp_payflow","payment\\/pp_payflow_iframe","payment\\/pp_pro","payment\\/pp_pro_iframe","payment\\/pp_standard","payment\\/realex","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","payment\\/securetrading_ws","payment\\/skrill","payment\\/twocheckout","payment\\/web_payment_software","payment\\/worldpay","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission","module\\/filter","module\\/html","module\\/hello","module\\/hello","payment\\/firstdata_remote","payment\\/pp_payflow","payment\\/twocheckout","module\\/google_hangouts","module\\/category","module\\/category","module\\/hello","module\\/test","module\\/wsubcategory","module\\/wsubcategory","module\\/wsubcat","module\\/wsubcat","module\\/wsubcat","payment\\/authorizenet_aim","module\\/rapnet","module\\/rapnet","module\\/rapnet","module\\/ebay_listing","payment\\/cheque","payment\\/authorizenet_sim","payment\\/web_payment_software","payment\\/bank_transfer","payment\\/cod","payment\\/pp_express","module\\/bestseller","shipping\\/free","payment\\/free_checkout","payment\\/cod","module\\/complect","module\\/category","captcha\\/google_captcha","captcha\\/basic_captcha","captcha\\/basic_captcha","payment\\/pp_express","payment\\/pp_standard","payment\\/cod","total\\/tax","payment\\/bank_transfer","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/authorizenet_sim","shipping\\/fedex","payment\\/bank_transfer","module\\/bestseller","module\\/latest","module\\/exel_parser"]}'),
+(10, 'Demonstration', ''),
+(11, 'Manager', '{"access":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/sass","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/complect","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/hello","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/rapnet","module\\/slideshow","module\\/special","module\\/store","module\\/wsubcat","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission"],"modify":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/sass","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/complect","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/hello","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/rapnet","module\\/slideshow","module\\/special","module\\/store","module\\/wsubcat","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission"]}');
 
 -- --------------------------------------------------------
 
@@ -4654,10 +4733,7 @@ CREATE TABLE IF NOT EXISTS `oc_voucher_theme_description` (
 INSERT INTO `oc_voucher_theme_description` (`voucher_theme_id`, `language_id`, `name`) VALUES
 (6, 1, 'Christmas'),
 (7, 1, 'Birthday'),
-(8, 1, 'General'),
-(6, 2, 'Christmas'),
-(7, 2, 'Birthday'),
-(8, 2, 'General');
+(8, 1, 'General');
 
 -- --------------------------------------------------------
 
@@ -4703,12 +4779,7 @@ INSERT INTO `oc_weight_class_description` (`weight_class_id`, `language_id`, `ti
 (2, 1, 'Gram', 'g'),
 (5, 1, 'Pound ', 'lb'),
 (6, 1, 'Ounce', 'oz'),
-(1, 2, 'Kilogram', 'kg'),
-(2, 2, 'Gram', 'g'),
-(5, 2, 'Pound ', 'lb'),
-(6, 2, 'Ounce', 'oz'),
-(7, 1, 'Carat', 'car'),
-(7, 2, 'Carat', 'car');
+(7, 1, 'Carat', 'car');
 
 -- --------------------------------------------------------
 
@@ -8851,7 +8922,7 @@ CREATE TABLE IF NOT EXISTS `oc_zone_to_geo_zone` (
   `geo_zone_id` int(11) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=221 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=222 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `oc_zone_to_geo_zone`
@@ -8967,7 +9038,21 @@ INSERT INTO `oc_zone_to_geo_zone` (`zone_to_geo_zone_id`, `country_id`, `zone_id
 (113, 222, 3515, 3, '2016-03-24 18:11:21', '0000-00-00 00:00:00'),
 (112, 222, 3514, 3, '2016-03-24 18:11:21', '0000-00-00 00:00:00'),
 (111, 223, 0, 3, '2016-03-24 18:11:21', '0000-00-00 00:00:00'),
-(220, 223, 0, 5, '2016-05-10 16:27:32', '0000-00-00 00:00:00');
+(220, 223, 0, 5, '2016-05-10 16:27:32', '0000-00-00 00:00:00'),
+(221, 223, 3668, 6, '2016-07-05 22:18:25', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `subscribe`
+--
+
+CREATE TABLE IF NOT EXISTS `subscribe` (
+  `id` int(11) NOT NULL,
+  `email` int(11) NOT NULL,
+  `sex` int(11) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Индексы сохранённых таблиц
@@ -9532,6 +9617,12 @@ ALTER TABLE `oc_product_image`
   ADD PRIMARY KEY (`product_image_id`), ADD KEY `product_id` (`product_id`);
 
 --
+-- Индексы таблицы `oc_product_metal`
+--
+ALTER TABLE `oc_product_metal`
+  ADD PRIMARY KEY (`product_id`,`metal_product_id`);
+
+--
 -- Индексы таблицы `oc_product_option`
 --
 ALTER TABLE `oc_product_option`
@@ -9754,6 +9845,12 @@ ALTER TABLE `oc_zone_to_geo_zone`
   ADD PRIMARY KEY (`zone_to_geo_zone_id`);
 
 --
+-- Индексы таблицы `subscribe`
+--
+ALTER TABLE `subscribe`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -9761,7 +9858,7 @@ ALTER TABLE `oc_zone_to_geo_zone`
 -- AUTO_INCREMENT для таблицы `oc_address`
 --
 ALTER TABLE `oc_address`
-  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT для таблицы `oc_affiliate`
 --
@@ -9791,17 +9888,17 @@ ALTER TABLE `oc_api`
 -- AUTO_INCREMENT для таблицы `oc_api_ip`
 --
 ALTER TABLE `oc_api_ip`
-  MODIFY `api_ip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `api_ip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT для таблицы `oc_api_session`
 --
 ALTER TABLE `oc_api_session`
-  MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=50;
+  MODIFY `api_session_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
 --
 -- AUTO_INCREMENT для таблицы `oc_attribute`
 --
 ALTER TABLE `oc_attribute`
-  MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `attribute_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT для таблицы `oc_attribute_group`
 --
@@ -9826,7 +9923,7 @@ ALTER TABLE `oc_banner_image`
 -- AUTO_INCREMENT для таблицы `oc_cart`
 --
 ALTER TABLE `oc_cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=275;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=316;
 --
 -- AUTO_INCREMENT для таблицы `oc_category`
 --
@@ -9861,12 +9958,12 @@ ALTER TABLE `oc_currency`
 -- AUTO_INCREMENT для таблицы `oc_customer`
 --
 ALTER TABLE `oc_customer`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT для таблицы `oc_customer_activity`
 --
 ALTER TABLE `oc_customer_activity`
-  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=104;
+  MODIFY `activity_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=162;
 --
 -- AUTO_INCREMENT для таблицы `oc_customer_group`
 --
@@ -9881,12 +9978,12 @@ ALTER TABLE `oc_customer_history`
 -- AUTO_INCREMENT для таблицы `oc_customer_ip`
 --
 ALTER TABLE `oc_customer_ip`
-  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+  MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=38;
 --
 -- AUTO_INCREMENT для таблицы `oc_customer_login`
 --
 ALTER TABLE `oc_customer_login`
-  MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `customer_login_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT для таблицы `oc_customer_reward`
 --
@@ -9921,7 +10018,7 @@ ALTER TABLE `oc_event`
 -- AUTO_INCREMENT для таблицы `oc_extension`
 --
 ALTER TABLE `oc_extension`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=80;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=83;
 --
 -- AUTO_INCREMENT для таблицы `oc_filter`
 --
@@ -9936,7 +10033,7 @@ ALTER TABLE `oc_filter_group`
 -- AUTO_INCREMENT для таблицы `oc_geo_zone`
 --
 ALTER TABLE `oc_geo_zone`
-  MODIFY `geo_zone_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `geo_zone_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT для таблицы `oc_information`
 --
@@ -9956,12 +10053,12 @@ ALTER TABLE `oc_layout`
 -- AUTO_INCREMENT для таблицы `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
-  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=129;
+  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=144;
 --
 -- AUTO_INCREMENT для таблицы `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
-  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=77;
+  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=80;
 --
 -- AUTO_INCREMENT для таблицы `oc_length_class`
 --
@@ -9996,7 +10093,7 @@ ALTER TABLE `oc_modification`
 -- AUTO_INCREMENT для таблицы `oc_module`
 --
 ALTER TABLE `oc_module`
-  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;
+  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT для таблицы `oc_openbay_faq`
 --
@@ -10016,7 +10113,7 @@ ALTER TABLE `oc_option_value`
 -- AUTO_INCREMENT для таблицы `oc_order`
 --
 ALTER TABLE `oc_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=54;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=91;
 --
 -- AUTO_INCREMENT для таблицы `oc_order_custom_field`
 --
@@ -10026,17 +10123,17 @@ ALTER TABLE `oc_order_custom_field`
 -- AUTO_INCREMENT для таблицы `oc_order_history`
 --
 ALTER TABLE `oc_order_history`
-  MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
+  MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT для таблицы `oc_order_option`
 --
 ALTER TABLE `oc_order_option`
-  MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT для таблицы `oc_order_product`
 --
 ALTER TABLE `oc_order_product`
-  MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
+  MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=128;
 --
 -- AUTO_INCREMENT для таблицы `oc_order_recurring`
 --
@@ -10056,7 +10153,7 @@ ALTER TABLE `oc_order_status`
 -- AUTO_INCREMENT для таблицы `oc_order_total`
 --
 ALTER TABLE `oc_order_total`
-  MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=163;
+  MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=274;
 --
 -- AUTO_INCREMENT для таблицы `oc_order_voucher`
 --
@@ -10066,27 +10163,27 @@ ALTER TABLE `oc_order_voucher`
 -- AUTO_INCREMENT для таблицы `oc_paypal_order`
 --
 ALTER TABLE `oc_paypal_order`
-  MODIFY `paypal_order_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `paypal_order_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT для таблицы `oc_paypal_order_transaction`
 --
 ALTER TABLE `oc_paypal_order_transaction`
-  MODIFY `paypal_order_transaction_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `paypal_order_transaction_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT для таблицы `oc_product`
 --
 ALTER TABLE `oc_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=66;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=74;
 --
 -- AUTO_INCREMENT для таблицы `oc_product_discount`
 --
 ALTER TABLE `oc_product_discount`
-  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=447;
+  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=513;
 --
 -- AUTO_INCREMENT для таблицы `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2761;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2860;
 --
 -- AUTO_INCREMENT для таблицы `oc_product_option`
 --
@@ -10101,12 +10198,12 @@ ALTER TABLE `oc_product_option_value`
 -- AUTO_INCREMENT для таблицы `oc_product_reward`
 --
 ALTER TABLE `oc_product_reward`
-  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=562;
+  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=603;
 --
 -- AUTO_INCREMENT для таблицы `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
-  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=462;
+  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=502;
 --
 -- AUTO_INCREMENT для таблицы `oc_recurring`
 --
@@ -10141,12 +10238,12 @@ ALTER TABLE `oc_return_status`
 -- AUTO_INCREMENT для таблицы `oc_review`
 --
 ALTER TABLE `oc_review`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `oc_setting`
 --
 ALTER TABLE `oc_setting`
-  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5927;
+  MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7110;
 --
 -- AUTO_INCREMENT для таблицы `oc_stock_status`
 --
@@ -10181,7 +10278,7 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT для таблицы `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1017;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1090;
 --
 -- AUTO_INCREMENT для таблицы `oc_user`
 --
@@ -10191,7 +10288,7 @@ ALTER TABLE `oc_user`
 -- AUTO_INCREMENT для таблицы `oc_user_group`
 --
 ALTER TABLE `oc_user_group`
-  MODIFY `user_group_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `user_group_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT для таблицы `oc_voucher`
 --
@@ -10226,7 +10323,12 @@ ALTER TABLE `oc_zone`
 -- AUTO_INCREMENT для таблицы `oc_zone_to_geo_zone`
 --
 ALTER TABLE `oc_zone_to_geo_zone`
-  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=221;
+  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=222;
+--
+-- AUTO_INCREMENT для таблицы `subscribe`
+--
+ALTER TABLE `subscribe`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
