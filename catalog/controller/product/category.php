@@ -199,7 +199,7 @@ class ControllerProductCategory extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
-            //dd($results);
+            //dd($filter_data);
 
 			foreach ($results as $result) {
 				if ($result['image']) {

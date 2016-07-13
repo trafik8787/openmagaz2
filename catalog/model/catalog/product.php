@@ -101,6 +101,9 @@ class ModelCatalogProduct extends Model {
 
 				$sql .= " AND pf.filter_id IN (" . implode(',', $implode) . ")";
 			}
+            else { //добавлено условие для вывода только колец из белого золота если фильтр не используется
+                $sql .= " AND p.metal = 'white_gold_14' ";
+            }
 		}
 
 
@@ -465,6 +468,9 @@ class ModelCatalogProduct extends Model {
 
 				$sql .= " AND pf.filter_id IN (" . implode(',', $implode) . ")";
 			}
+            else { //добавлено условие для вывода только колец из белого золота если фильтр не используется
+                $sql .= " AND p.metal = 'white_gold_14' ";
+            }
 
 		}
 
