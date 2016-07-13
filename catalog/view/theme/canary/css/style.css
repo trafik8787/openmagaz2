@@ -665,8 +665,8 @@ button:hover, button:focus {
   background: url("../img/cart.png") no-repeat center/contain; }
 
 .menu {
-  height: 160px;
-  padding: 57px 0 0 340px;
+  height: 140px;
+  padding: 47px 0 0 340px;
   position: relative; }
   .menu .bord-l {
     width: 1px;
@@ -1004,7 +1004,7 @@ button:hover, button:focus {
 .logo {
   position: absolute;
   left: 0;
-  top: 62px;
+  top: 54px;
   color: #fac652;
   font-size: 37px;
   text-transform: uppercase; }
@@ -1029,7 +1029,7 @@ button:hover, button:focus {
 
 .top-main-r {
   max-width: 1980px;
-  height: 720px;
+  height: 600px;
   margin: 0 auto;
   align-items: center;
   color: #444444;
