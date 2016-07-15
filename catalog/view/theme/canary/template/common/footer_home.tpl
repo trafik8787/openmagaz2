@@ -7,7 +7,7 @@
                     NEWSLETTER
                 </div>
                 <div class="text">
-                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.<br/>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat i
+                    Sign up to receive the latest news and exclusive offers
                 </div>
                 <form action="" class="form-nl">
                     <div class="gender clearfix">
