@@ -3,7 +3,7 @@
 <?//dd($categories)?>
 <main class="w-general-container">
     <section class="top-main-r top-main-r1">
-        <div class="wrapper-main-r">
+        <div class="wrapper-main-r hidden-xs">
             <div class="title">Design Your Dream Ring</div>
             <!--<div class="text">
                 This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
