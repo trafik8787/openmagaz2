@@ -164,7 +164,7 @@
                     <i class="shipping-ico"></i>
                 </div>
                 <div class="title">FREE SHIPPING</div>
-                <p>Donec at mattis purus, ut accumsan nisl. Lorem ipsum dolor sit amet.</p>
+
             </div>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-4">
@@ -173,9 +173,7 @@
                     <i class="money-ico"></i>
                 </div>
                 <div class="title">100% MONEY BACK</div>
-                <p>
-                    Donec at mattis purus, ut accumsan nisl. Lorem ipsum dolor sit amet, consectetur
-                </p>
+
             </div>
         </div>
         <div class="col-md-4 col-sm-4 col-xs-4">
@@ -183,10 +181,8 @@
                 <div class="wrapper-ico">
                     <i class="support-ico"></i>
                 </div>
-                <div class="title">ONLINE SUPPORT 24/7</div>
-                <p>
-                    Donec at mattis purus, ut accumsan nisl. Lorem ipsum dolor sit amet
-                </p>
+                <div class="title">LIFETIME WARRANTY</div>
+
             </div>
         </div>
     </section>

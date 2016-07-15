@@ -205,7 +205,7 @@
                     </div>
                     <div class="clearfix">
                         <input type="text" placeholder="Enter your email adress...">
-                        <button class="form-brand">subskribe</button>
+                        <button class="form-brand">subscribe</button>
                     </div>
                 </form>
             </div>
@@ -363,16 +363,7 @@
                         <div class="dropdown-inside">
                             <div class="row clearfix">
                                 <div class="col-md-8 col-sm-8 col-xs-8">
-                                    <div class="title">WOMAN</div><!--woman-->
-                                    <ul class="brilliant-style brilliant-style-long ul-first-drop">
 
-                                        <?php for ($x=0; $x<5; $x++) {?>
-                                        <li>
-                                            <a href="<?php echo $categories[2]['children'][$x]['href']?>" class="w-general-category"><i class="wedding<?=$x+1?>"></i><br/><?php echo $categories[2]['children'][$x]['name']?></a>
-                                        </li>
-                                        <?}?>
-
-                                    </ul>
                                     <div class="title">MAN</div><!--man-->
                                     <ul class="brilliant-style brilliant-style-long ul-first-drop">
 
@@ -389,6 +380,18 @@
                                             <a href="<?php echo $categories[2]['children'][8]['href']?>" class="w-general-category"><i class="wedding7"></i><br/><?php echo $categories[2]['children'][8]['name']?></a>
                                         </li>
                                     </ul>
+
+                                    <div class="title">WOMAN</div><!--woman-->
+                                    <ul class="brilliant-style brilliant-style-long ul-first-drop">
+
+                                        <?php for ($x=0; $x<5; $x++) {?>
+                                        <li>
+                                            <a href="<?php echo $categories[2]['children'][$x]['href']?>" class="w-general-category"><i class="wedding<?=$x+1?>"></i><br/><?php echo $categories[2]['children'][$x]['name']?></a>
+                                        </li>
+                                        <?}?>
+
+                                    </ul>
+
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 text-right">
                                     <img src="catalog/view/theme/canary/img/img17.png" alt="img" class="img-under-style">

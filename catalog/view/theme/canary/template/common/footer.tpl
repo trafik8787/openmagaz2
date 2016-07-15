@@ -20,7 +20,7 @@
                     </div>
                     <div class="clearfix">
                         <input type="text" placeholder="Enter your email adress...">
-                        <button class="form-brand">subskribe</button>
+                        <button class="form-brand">subscribe</button>
                     </div>
                 </form>
             </div>

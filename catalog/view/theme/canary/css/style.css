@@ -633,6 +633,73 @@ button:hover, button:focus {
       -o-transition: 0.3s;
       transition: 0.3s; }
 
+
+
+
+
+
+
+
+
+
+.w-arrow {
+    position: relative;
+    margin-bottom: 6px;
+    height: 80px;
+    width: 200px;
+    border-right: 0;
+    background: #fff;
+}
+.w-arrow:before, .w-arrow:after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    height: 50%;
+    width: 100%;
+    margin-left: -100%;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    background: #fff;
+}
+.w-arrow:before {
+    top: 0;
+    -webkit-transform: skew(20deg, 0deg);
+    -moz-transform: skew(20deg, 0deg);
+    -ms-transform: skew(20deg, 0deg);
+    -o-transform: skew(20deg, 0deg);
+    transform: skew(20deg, 0deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-box-shadow: 1px -2px 0 -1px grey;
+    -moz-box-shadow: 1px -3px 0 -1px #f00;
+    box-shadow: 1px -2px 0 -1px grey;
+}
+.w-arrow:after {
+    bottom: 0;
+    -webkit-transform: skew(-20deg, 0deg);
+    -moz-transform: skew(-20deg, 0deg);
+    -ms-transform: skew(-20deg, 0deg);
+    -o-transform: skew(-20deg, 0deg);
+    transform: skew(-20deg, 0deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-box-shadow: 1px 3px 0 -1px grey;
+    -moz-box-shadow: 1px 3px 0 -1px #f00;
+    box-shadow: 1px 2px 0 -1px grey;
+}
+
+
+
+
+
+
+
 .search-top {
   width: 17px;
   height: 17px;
@@ -1061,7 +1128,7 @@ button:hover, button:focus {
     font-size: 19px; }
 
 .privilege {
-  padding: 55px 10px 110px;
+  padding: 55px 10px 55px;
   text-align: center;
   font-size: 20px; }
   .privilege .wrapper-ico {
@@ -2763,7 +2830,7 @@ button:hover, button:focus {
     padding: 16px 0 46px 0; }
   .new-products .product-panel-body .box-img {
     height: 260px;
-    margin-bottom: 40px;
+    margin-bottom: 6px;
     overflow: hidden;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2790,14 +2857,14 @@ button:hover, button:focus {
   margin: 0 auto; }
   .newsletter-main .bg-right {
     width: 50%;
-    height: 630px;
+    height: 518px;
     float: left;
     overflow: hidden;
     border-left: 3px solid #ffffff;
     background: url("../img/img-new12.jpg") no-repeat center/cover; }
   .newsletter-main .newsletter-form {
     width: 50%;
-    height: 630px;
+    height: 518px;
     padding: 10px;
     float: left;
     overflow: hidden;
@@ -3060,31 +3127,99 @@ button:hover, button:focus {
     display: none !important; }
   .step-product .prev-step .box-btn {
     display: block !important; }
+
   .step-product .one-block {
-    height: 325px;
-    padding: 25px 35px;
+    height: 213px;
+      padding: 17px 0 0 61px;
     position: relative;
     z-index: 2;
-    border: 1px solid grey;
+    /*border: 1px solid grey;*/
     background-color: #ffffff;
     font-size: 16px;
     line-height: 18px;
+      margin-left: 10px;
     display: block;
     text-align: center;
-    color: #444444; }
+    color: #444444;
+  }
+
+.step-product .one-block.active:first-child {
+    margin-left: 0;
+}
+
+.step-product .one-block.active:after {
+    box-shadow: 3px 7px 14px -5px grey;
+}
+
+.step-product .one-block.active:before {
+    box-shadow: 2px -4px 14px -5px grey;
+}
+
+.step-product .one-block:before, .step-product .one-block:after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    height: 50%;
+    width: 100%;
+    margin-left: -100%;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    background: #fff;
+    z-index: -1;
+}
+
+
+
+.step-product .one-block:before {
+    top: 0;
+    -webkit-transform: skew(20deg, 0deg);
+    -moz-transform: skew(20deg, 0deg);
+    -ms-transform: skew(20deg, 0deg);
+    -o-transform: skew(20deg, 0deg);
+    transform: skew(20deg, 0deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-box-shadow: 1px -2px 0 -1px grey;
+    -moz-box-shadow: 1px -3px 0 -1px #f00;
+    box-shadow: 1px -2px 0 -1px grey;
+}
+.step-product .one-block:after {
+    bottom: 0;
+    -webkit-transform: skew(-20deg, 0deg);
+    -moz-transform: skew(-20deg, 0deg);
+    -ms-transform: skew(-20deg, 0deg);
+    -o-transform: skew(-20deg, 0deg);
+    transform: skew(-20deg, 0deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-box-shadow: 1px 3px 0 -1px grey;
+    -moz-box-shadow: 1px 3px 0 -1px #f00;
+    box-shadow: 1px 2px 0 -1px grey;
+}
+
+
+
+
     .step-product .one-block > * {
       position: relative; }
     .step-product .one-block.active {
-      width: 115%;
-      height: 330px;
-      margin-top: -15px;
-      z-index: 3; }
+        width: 110%;
+        height: 245px;
+        margin-top: -15px;
+        left: 10px;
+        z-index: 3; }
     .step-product .one-block > * {
       display: block;
       width: 100%; }
     .step-product .one-block .box-img {
-      height: 120px;
-      margin-bottom: 20px; }
+      height: 45px;
+      margin-bottom: 13px; }
       .step-product .one-block .box-img img {
         max-width: 100%;
         max-height: 100%; }
@@ -3574,7 +3709,7 @@ button:hover, button:focus {
       top: 145px;
       left: 0;
       display: block;
-      font-size: 22px; }
+      font-size: 18px; }
       .wrapper-product-table.th-view .box-tovar-th span {
         display: inline-block;
         padding: 0 4px;
@@ -4688,7 +4823,7 @@ button:hover, button:focus {
   padding: 0;
   border: 0;
   display: inline-block;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   background: url("../img/step-eyes.png") no-repeat center/contain; }
 
 .step-close {
@@ -4698,7 +4833,7 @@ button:hover, button:focus {
   padding: 0;
   border: 0;
   display: inline-block;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   background: url("../img/step-close.png") no-repeat center/contain; }
 
 .top-menu-b .box-btn {

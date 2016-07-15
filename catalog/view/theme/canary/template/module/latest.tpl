@@ -22,7 +22,7 @@
                                     <div class="box-img">
                                         <a href="<?=$product['href']?>" class="w-product-ajax"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" /></a>
                                     </div>
-                                    <div class="title"><a href="<?=$product['href']?>" class="w-product-ajax"><?=$product['name']?></a></div>
+                                    <div class="title"><a href="<?=$product['href']?>" class="w-product-ajax"><?//=$product['name']?></a></div>
                                 </div>
                             </div>
                         <?endforeach?>
