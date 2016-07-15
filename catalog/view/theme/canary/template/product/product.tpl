@@ -165,21 +165,18 @@
                     <div class="one-line-information">
                         <i class="truck-ico"></i>Free FedEx Priority Overnight Shipping:
                     </div>
-                    <div class="one-line-information">
-                        <div class="red">This is Photoshop's version  of Lorem Ipsum.</div>
-                        <span>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</span>
-                    </div>
+
                     <div class="one-line-information">
                         <i class="risk-free-ico"></i>Risk-free Retail
                     </div>
                     <div class="line-price-product clearfix">
                         <div class="price-product"><?php echo $price; ?></div>
-                        <div class="setting-price">(Setting Price)</div>
+                        <div class="setting-price">(Setting price only)</div>
                         <div>
                             <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="red-btn"><?php echo $button_cart; ?></button>
 
                             <button type="button" id="w-button-add-product-complect" data-loading-text="<?php echo $text_loading; ?>"
-                                    class="red-btn">Shooce this setting</button>
+                                    class="red-btn">Choose this setting</button>
 
                         </div>
                     </div>
@@ -190,12 +187,12 @@
     </section>
 
     <section class="top-main-r top-main-r3">
-        <div class="wrapper-main-r text-center">
+        <!--<div class="wrapper-main-r text-center">
             <div class="title">This is Photoshop version</div>
             <div class="text">
                 This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
             </div>
-        </div>
+        </div>-->
     </section>
 
     <?php if ($products):?>

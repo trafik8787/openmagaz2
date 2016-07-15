@@ -76,7 +76,7 @@ h2 {
   text-transform: uppercase; }
   h2:after {
     width: 312px;
-    height: 20px;
+    height: 24px;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -234,6 +234,7 @@ button:hover, button:focus {
   display: inline-block;
   padding: 11px 23px 15px;
   color: #444444;
+    width: 290px;
   font-size: 24px;
   background-color: #f9d35a;
   border-radius: 3px;
@@ -1115,12 +1116,15 @@ button:hover, button:focus {
     background: url("../img/img26.png") no-repeat center/cover;
     color: #ffffff; }
   .top-main-r .wrapper-main-r {
-    margin: auto 11% auto 43%; }
+      margin: auto 0% auto 71%;
+      text-align: center;}
   .top-main-r .title {
-    margin-bottom: 25px;
-    font-size: 28px;
-    text-transform: uppercase;
-    line-height: 30px; }
+      margin-bottom: 50px;
+      font-size: 37px;
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: 30px;
+      color: #e0417e; }
   .top-main-r .text {
     margin-bottom: 35px;
     line-height: 27px;

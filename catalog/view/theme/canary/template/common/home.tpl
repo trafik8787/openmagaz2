@@ -4,11 +4,13 @@
 <main class="w-general-container">
     <section class="top-main-r top-main-r1">
         <div class="wrapper-main-r">
-            <div class="title">This is Photoshop version</div>
-            <div class="text">
+            <div class="title">Design Your Dream Ring</div>
+            <!--<div class="text">
                 This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-            </div>
-            <a href="#" class="brand-btn">shop now</a>
+            </div>-->
+            <a href="/diamonds" class="brand-btn">Start With a Diamond</a><br>
+            <h2></h2>
+            <a href="/engagement-rings" class="brand-btn">Start With a Setting</a>
         </div>
     </section>
     <div class="panel-group brilliant-panel-main" id="accordion" role="tablist" aria-multiselectable="true">
@@ -192,11 +194,11 @@
         <div class="ih-item colored effect5">
             <a href="/wedding-rings">
                     <span class="img">
-                        <img src="catalog/view/theme/canary/img/img-new2.jpg" alt="img">
+                        <img src="catalog/view/theme/canary/img/img-new5.jpg" alt="img">
                     </span>
                     <span class="info">
                         <span class="info-back">
-                            <span>Mens<br/>Wedding Rings</span>
+                            <span>ENGAGEMENT<br/>RINGS</span>
                         </span>
                     </span>
             </a>
@@ -228,11 +230,11 @@
         <div class="ih-item colored effect5">
             <a href="/engagement-rings">
                     <span class="img">
-                        <img src="catalog/view/theme/canary/img/img-new5.jpg" alt="img">
+                        <img src="catalog/view/theme/canary/img/img-new2.jpg" alt="img">
                     </span>
                     <span class="info">
-                        <span class="info-back">
-                            <span>ENGAGEMENT<br/>RINGS</span>
+                         <span class="info-back">
+                            <span>Mens<br/>Wedding Rings</span>
                         </span>
                     </span>
             </a>
