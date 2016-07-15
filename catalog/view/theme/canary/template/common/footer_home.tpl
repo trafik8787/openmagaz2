@@ -65,7 +65,7 @@
             </div>
             <div class="one-block">
                 <div class="text-footer">
-                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean. Proin gravida nibh vel velit auctor aliquet. Aenean.
+                    Follow us
                 </div>
                 <div class="social-footer">
                     <a href="#" class="facebook-ico"></a>
