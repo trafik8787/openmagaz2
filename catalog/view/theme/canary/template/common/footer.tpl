@@ -88,11 +88,14 @@
 
 </footer>
 
-<div class="container-loader container1" style="display: none">
+<!--<div class="container-loader container1" style="display: none">
     <div class="circle circle1"></div>
     <div class="circle circle2"></div>
     <div class="circle circle3"></div>
-</div>
+</div>-->
+
+<img src="catalog/view/theme/canary/img/preloader.png" class="container-loader" alt="" style="display: none">
+
 <script type="text/javascript" src="catalog/view/theme/canary/vendor/select2/dist/js/select2.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 <script type="text/javascript" src="catalog/view/theme/canary/vendor/slickslider/slick.min.js"></script>
@@ -106,9 +109,6 @@
 <script type="text/javascript" src="catalog/view/theme/canary/js/device.min.js"></script>
 <script type="text/javascript" src="catalog/view/javascript/app.js" ></script>
 <script type="text/javascript" src="catalog/view/javascript/common.js" ></script>
-
-
-
 
 </body>
 </html>
