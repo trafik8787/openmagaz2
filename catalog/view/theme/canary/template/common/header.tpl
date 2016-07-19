@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/css/style.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/css/w_style.css"/>
+    <link rel="stylesheet" href="catalog/view/theme/canary/css/easydropdown.css"/>
 
     <script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
 

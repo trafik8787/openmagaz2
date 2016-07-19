@@ -91,11 +91,12 @@ $(document).ready(function() {
                 $('.w-general-container').empty();
                 $('.w-general-container').html(response);
 
-
+                $('.dropdown').easyDropDown();
                 Productslider();
             }
 
         });
+
 
 
         $('.date').datetimepicker({

@@ -31,6 +31,8 @@ $_['text_semi_month']          = 'half-month';
 $_['text_month']               = 'month';
 $_['text_year']                = 'year';
 
+$_['text_select']           = ' --- Select Size --- ';
+
 // Entry
 $_['entry_qty']                = 'Qty';
 $_['entry_name']               = 'Your Name';
