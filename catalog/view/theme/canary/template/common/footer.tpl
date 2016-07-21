@@ -46,6 +46,7 @@
                     <?php } ?>
                     <li><a href="<?php echo $contact; ?>" class="w-general-category">- <?php echo $text_contact; ?></a></li>
                     <li><a href="<?php echo $sitemap; ?>" class="w-general-category">- <?php echo $text_sitemap; ?></a></li>
+                    <li><a href="/faq" class="w-general-category">- FAQ</a></li>
                 </ul>
             </div>
             <div class="one-block">
