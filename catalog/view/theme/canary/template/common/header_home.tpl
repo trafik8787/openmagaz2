@@ -1,4 +1,3 @@
-<?header("Access-Control-Allow-Origin: *");?>
 <!doctype html>
 <html lang="en-US">
 
@@ -10,7 +9,7 @@
 
     <title><?php echo $title; ?></title>
 
-    <base href="<?php echo $base; ?>"/>
+
 
     <?php if ($description) { ?>
     <meta name="description" content="<?php echo $description; ?>"/>

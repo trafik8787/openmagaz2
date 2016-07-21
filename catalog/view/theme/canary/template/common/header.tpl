@@ -1,4 +1,3 @@
-<?header("Access-Control-Allow-Origin: *");?>
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><?php echo $title; ?></title>
 
-    <base href="<?php echo $base; ?>"/>
+
 
     <?php if ($description) { ?>
         <meta name="description" content="<?php echo $description; ?>"/>
