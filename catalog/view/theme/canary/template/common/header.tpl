@@ -16,7 +16,7 @@
         <meta name="keywords" content="<?php echo $keywords; ?>"/>
     <?php } ?>
     <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="catalog/view/theme/canary/css/font-awesome.min.css">
     <link rel="stylesheet" href="catalog/view/theme/canary/css/normalize.css"/>
     <link rel="stylesheet" href="catalog/view/javascript/jquery/magnific/magnific-popup.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/slickslider/slick.css"/>

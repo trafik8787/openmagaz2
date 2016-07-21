@@ -21,7 +21,7 @@
 
 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="catalog/view/theme/canary/css/font-awesome.min.css">
     <link href="catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="catalog/view/theme/canary/css/normalize.css"/>
     <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
