@@ -185,33 +185,45 @@
                     <div class="dropdown-inside">
                         <div class="row clearfix">
                             <div class="col-md-8 col-sm-8 col-xs-8">
-                                <div class="title">MAN</div><!--man-->
-                                <ul class="brilliant-style brilliant-style-long ul-first-drop">
-
-                                    <li>
-                                        <a href="<?php echo $categories[2]['children'][5]['href']?>" class="w-general-category"><i class="wedding1"></i><br/><?php echo $categories[2]['children'][5]['name']?></a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo $categories[2]['children'][6]['href']?>" class="w-general-category"><i class="wedding6"></i><br/><?php echo $categories[2]['children'][6]['name']?></a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo $categories[2]['children'][7]['href']?>" class="w-general-category"><i class="wedding3"></i><br/><?php echo $categories[2]['children'][7]['name']?></a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo $categories[2]['children'][8]['href']?>" class="w-general-category"><i class="wedding7"></i><br/><?php echo $categories[2]['children'][8]['name']?></a>
-                                    </li>
-                                </ul>
 
                                 <div class="title">WOMAN</div><!--woman-->
                                 <ul class="brilliant-style brilliant-style-long ul-first-drop">
 
                                     <?php for ($x=0; $x<5; $x++) {?>
-                                        <li>
-                                            <a href="<?php echo $categories[2]['children'][$x]['href']?>" class="w-general-category"><i class="wedding<?=$x+1?>"></i><br/><?php echo $categories[2]['children'][$x]['name']?></a>
-                                        </li>
+                                    <li>
+                                    <a href="<?php echo $categories[2]['children'][$x]['href']?>" class="w-general-category"><i class="wedding<?=$x+1?>"></i><br/><?php echo $categories[2]['children'][$x]['name']?></a>
+                                    </li>
                                     <?}?>
 
                                 </ul>
+
+
+                                <div class="title">MAN</div><!--man-->
+                                <ul class="brilliant-style brilliant-style-long ul-first-drop">
+
+                                    <?if (!empty($categories[2]['children'][6])):?>
+                                        <li>
+                                            <a href="<?php echo $categories[2]['children'][5]['href']?>" class="w-general-category"><i class="wedding1"></i><br/><?php echo $categories[2]['children'][5]['name']?></a>
+                                        </li>
+                                    <?endif?>
+                                    <?if (!empty($categories[2]['children'][6])):?>
+                                        <li>
+                                            <a href="<?php echo $categories[2]['children'][6]['href']?>" class="w-general-category"><i class="wedding6"></i><br/><?php echo $categories[2]['children'][6]['name']?></a>
+                                        </li>
+                                    <?endif?>
+                                    <?if (!empty($categories[2]['children'][7])):?>
+                                        <li>
+                                            <a href="<?php echo $categories[2]['children'][7]['href']?>" class="w-general-category"><i class="wedding3"></i><br/><?php echo $categories[2]['children'][7]['name']?></a>
+                                        </li>
+                                    <?endif?>
+                                    <?if (!empty($categories[2]['children'][8])):?>
+                                        <li>
+                                            <a href="<?php echo $categories[2]['children'][8]['href']?>" class="w-general-category"><i class="wedding7"></i><br/><?php echo $categories[2]['children'][8]['name']?></a>
+                                        </li>
+                                    <?endif?>
+
+                                </ul>
+
 
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-4 text-right">
