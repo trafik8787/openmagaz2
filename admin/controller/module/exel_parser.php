@@ -107,7 +107,6 @@ class ControllerModuleExelParser extends Controller {
         //подключаем файл модели
         $this->load->model('setting/setting');
 
-
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate() && !$this->request->post['parsing_success']) {
 
             // dd($this->request->post, true);
@@ -231,7 +230,7 @@ class ControllerModuleExelParser extends Controller {
                 //METAL
                 if ($metal == '14K White Gold' OR $metal == '14k White Gold') {
                     $this->metal = $this->list_metal['14K White Gold'];
-                    $this->sku = $curent[1] . '-W14';
+                    $this->sku = $curent[1] . 'W14';
                     $this->filter[] = $this->list_filtr['14K White Gold'];
 
                     $name_file_general_img = $sku.'.jpg';
@@ -239,49 +238,49 @@ class ControllerModuleExelParser extends Controller {
 
                 } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
                     $this->metal = $this->list_metal['14K Yellow Gold'];
-                    $this->sku = $curent[1] . '-Y14';
+                    $this->sku = $curent[1] . 'Y14';
                     $this->filter[] = $this->list_filtr['14K Yellow Gold'];
 
                     $name_file_general_img = $sku.'.alt.jpg';
 
                 } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
                     $this->metal = $this->list_metal['14K Rose Gold'];
-                    $this->sku = $curent[1] . '-R14';
+                    $this->sku = $curent[1] . 'R14';
                     $this->filter[] = $this->list_filtr['14K Rose Gold'];
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
                 } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
                     $this->metal = $this->list_metal['18K White Gold'];
-                    $this->sku = $curent[1] . '-W18';
+                    $this->sku = $curent[1] . 'W18';
                     $this->filter[] = $this->list_filtr['18K White Gold'];
 
                     $name_file_general_img = $sku.'.jpg';
 
                 } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
                     $this->metal = $this->list_metal['18K Yellow Gold'];
-                    $this->sku = $curent[1] . '-Y18';
+                    $this->sku = $curent[1] . 'Y18';
                     $this->filter[] = $this->list_filtr['18K Yellow Gold'];
 
                     $name_file_general_img = $sku.'.alt.jpg';
 
                 } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
                     $this->metal = $this->list_metal['18K Rose Gold'];
-                    $this->sku = $curent[1] . '-R18';
+                    $this->sku = $curent[1] . 'R18';
                     $this->filter[] = $this->list_filtr['18K Rose Gold'];
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
                 } elseif ($metal == 'Platinum') {
                     $this->metal = $this->list_metal['Platinum'];
-                    $this->sku = $curent[1] . '-PL';
+                    $this->sku = $curent[1] . 'PL';
                     $this->filter[] = $this->list_filtr['Platinum'];
 
                     $name_file_general_img = $sku.'.jpg';
 
                 } elseif ($metal == 'Palladium') {
                     $this->metal = $this->list_metal['Palladium'];
-                    $this->sku = $curent[1] . '-PA';
+                    $this->sku = $curent[1] . 'PA';
                     $this->filter[] = $this->list_filtr['Palladium'];
 
                     $name_file_general_img = $sku.'.jpg';
@@ -333,7 +332,7 @@ class ControllerModuleExelParser extends Controller {
 
 
 
-                $this->price = (int)substr($curent[18], 1);
+                $this->price = (int)substr(str_replace(" ","",$curent[18]), 1);
                 //$this->price = $curent[18];
 
                 $this->product_id_insert = $this->addProduct();
@@ -517,7 +516,6 @@ class ControllerModuleExelParser extends Controller {
                 }
 
             }
-
             $sql =  substr($sql, 0, -1);
             $this->db->query("INSERT INTO " . DB_PREFIX . "product_metal (product_id, metal_product_id) VALUES ". $sql );
             
