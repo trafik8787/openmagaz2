@@ -15,6 +15,8 @@ class ControllerModuleExelParser extends Controller {
     private $list_atribute;
 
     private $product_id_insert;
+    private $product_id_insert_arr;
+
 
     private $model;
     private $sku;
@@ -229,7 +231,7 @@ class ControllerModuleExelParser extends Controller {
                 //METAL
                 if ($metal == '14K White Gold' OR $metal == '14k White Gold') {
                     $this->metal = $this->list_metal['14K White Gold'];
-                    $this->sku = $curent[1] . 'W14';
+                    $this->sku = $curent[1] . '-W14';
                     $this->filter[] = $this->list_filtr['14K White Gold'];
 
                     $name_file_general_img = $sku.'.jpg';
@@ -237,49 +239,49 @@ class ControllerModuleExelParser extends Controller {
 
                 } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
                     $this->metal = $this->list_metal['14K Yellow Gold'];
-                    $this->sku = $curent[1] . 'Y14';
+                    $this->sku = $curent[1] . '-Y14';
                     $this->filter[] = $this->list_filtr['14K Yellow Gold'];
 
                     $name_file_general_img = $sku.'.alt.jpg';
 
                 } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
                     $this->metal = $this->list_metal['14K Rose Gold'];
-                    $this->sku = $curent[1] . 'R14';
+                    $this->sku = $curent[1] . '-R14';
                     $this->filter[] = $this->list_filtr['14K Rose Gold'];
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
                 } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
                     $this->metal = $this->list_metal['18K White Gold'];
-                    $this->sku = $curent[1] . 'W18';
+                    $this->sku = $curent[1] . '-W18';
                     $this->filter[] = $this->list_filtr['18K White Gold'];
 
                     $name_file_general_img = $sku.'.jpg';
 
                 } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
                     $this->metal = $this->list_metal['18K Yellow Gold'];
-                    $this->sku = $curent[1] . 'Y18';
+                    $this->sku = $curent[1] . '-Y18';
                     $this->filter[] = $this->list_filtr['18K Yellow Gold'];
 
                     $name_file_general_img = $sku.'.alt.jpg';
 
                 } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
                     $this->metal = $this->list_metal['18K Rose Gold'];
-                    $this->sku = $curent[1] . 'R18';
+                    $this->sku = $curent[1] . '-R18';
                     $this->filter[] = $this->list_filtr['18K Rose Gold'];
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
                 } elseif ($metal == 'Platinum') {
                     $this->metal = $this->list_metal['Platinum'];
-                    $this->sku = $curent[1] . 'PL';
+                    $this->sku = $curent[1] . '-PL';
                     $this->filter[] = $this->list_filtr['Platinum'];
 
                     $name_file_general_img = $sku.'.jpg';
 
                 } elseif ($metal == 'Palladium') {
                     $this->metal = $this->list_metal['Palladium'];
-                    $this->sku = $curent[1] . 'PA';
+                    $this->sku = $curent[1] . '-PA';
                     $this->filter[] = $this->list_filtr['Palladium'];
 
                     $name_file_general_img = $sku.'.jpg';
@@ -287,7 +289,7 @@ class ControllerModuleExelParser extends Controller {
                 }
 
                 //galery image
-                $this->GaleryUrlImg($metal, $sku);
+                //$this->GaleryUrlImg($metal, $sku);
 
 
                 //ENGAGEMENT RINGS
@@ -332,7 +334,7 @@ class ControllerModuleExelParser extends Controller {
 
 
                 $this->price = (int)substr($curent[18], 1);
-                $this->price = $curent[18];
+                //$this->price = $curent[18];
 
                 $this->product_id_insert = $this->addProduct();
                 $this->addDescription();
@@ -345,14 +347,14 @@ class ControllerModuleExelParser extends Controller {
                 $this->addOption();
                 $this->addAtribute();
 
-                //dd($this->addProduct());
+                $this->product_id_insert_arr[] = $this->product_id_insert;
                 dd($this->product_id_insert);
             }
 
             $file->next();
         }
 
-        //$this->addProductMetal();
+        $this->addProductMetal();
 
     }
 
@@ -498,7 +500,11 @@ class ControllerModuleExelParser extends Controller {
 
     private function addProductMetal () {
 
-        $product = $this->db->query("SELECT * FROM " . DB_PREFIX . "product");
+        $in = implode(',',$this->product_id_insert_arr);
+
+        $product = $this->db->query("SELECT * FROM " . DB_PREFIX . "product WHERE product_id IN (".$in.")");
+
+        //dd($product, true);
 
         foreach ($product->rows as $product_rows) {
             $sql = null;
