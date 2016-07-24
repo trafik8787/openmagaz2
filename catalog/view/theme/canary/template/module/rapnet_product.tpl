@@ -135,19 +135,19 @@
             <div class="title">Brillaint-Canary rewies</div>
             <div id="owl-demo3" class="owl-carousel brand-footer">
                 <div class="item">
-                    <a href="#"><img src="catalog/view/theme/canary/img/brand1.png" alt="brand1"></a>
+                    <a href="#"><img src="/catalog/view/theme/canary/img/brand1.png" alt="brand1"></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="catalog/view/theme/canary/img/brand2.png" alt="brand2"></a>
+                    <a href="#"><img src="/catalog/view/theme/canary/img/brand2.png" alt="brand2"></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="catalog/view/theme/canary/img/brand3.png" alt="brand3"></a>
+                    <a href="#"><img src="/catalog/view/theme/canary/img/brand3.png" alt="brand3"></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="catalog/view/theme/canary/img/brand4.png" alt="brand4"></a>
+                    <a href="#"><img src="/catalog/view/theme/canary/img/brand4.png" alt="brand4"></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="catalog/view/theme/canary/img/brand5.png" alt="brand5"></a>
+                    <a href="#"><img src="/catalog/view/theme/canary/img/brand5.png" alt="brand5"></a>
                 </div>
             </div>
             <div class="company-box">

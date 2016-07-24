@@ -87,7 +87,7 @@ class ControllerModuleComplect extends Controller {
 
 
 
-        $this->response->setOutput($this->load->view('module/complect_bloc.tpl', $data));
+        $this->response->setOutput($this->load->view('module/complect.tpl', $data));
 
     }
 

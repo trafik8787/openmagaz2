@@ -64,11 +64,11 @@
                             <input type="text" class="summary-input" placeholder="Have a diamond ?">
                             <input type="text" class="summary-input" placeholder="Enter Coupon Code">
                             <div class="summary-cart-list">
-                                <div class="summary-cart-item"><img src="catalog/view/theme/canary/img/visa.png" alt=""></div>
-                                <div class="summary-cart-item"><img src="catalog/view/theme/canary/img/mastercard.png" alt=""></div>
-                                <div class="summary-cart-item"><img src="catalog/view/theme/canary/img/discover.png" alt=""></div>
-                                <div class="summary-cart-item"><img src="catalog/view/theme/canary/img/americanexpress.png" alt=""></div>
-                                <div class="summary-cart-item"><img src="catalog/view/theme/canary/img/paypal.png" alt=""></div>
+                                <div class="summary-cart-item"><img src="/catalog/view/theme/canary/img/visa.png" alt=""></div>
+                                <div class="summary-cart-item"><img src="/catalog/view/theme/canary/img/mastercard.png" alt=""></div>
+                                <div class="summary-cart-item"><img src="/catalog/view/theme/canary/img/discover.png" alt=""></div>
+                                <div class="summary-cart-item"><img src="/catalog/view/theme/canary/img/americanexpress.png" alt=""></div>
+                                <div class="summary-cart-item"><img src="/catalog/view/theme/canary/img/paypal.png" alt=""></div>
                             </div>
                         </div>
                     </div>

@@ -73,11 +73,11 @@
                 </div>
                 <div class="payments-box">
                     <div class="wrapper-card">
-                        <a href="#" class="payments-card visa"><img src="catalog/view/theme/canary/img/visa.png" alt="visa"></a>
-                        <a href="#" class="payments-card mastercard"><img src="catalog/view/theme/canary/img/mastercard.png" alt="mastercard"></a>
-                        <a href="#" class="payments-card discover"><img src="catalog/view/theme/canary/img/discover.png" alt="discover"></a>
-                        <a href="#" class="payments-card americanexpress"><img src="catalog/view/theme/canary/img/americanexpress.png" alt="americanexpress"></a>
-                        <a href="#" class="payments-card paypal"><img src="catalog/view/theme/canary/img/paypal.png" alt="paypal"></a>
+                        <a href="#" class="payments-card visa"><img src="/catalog/view/theme/canary/img/visa.png" alt="visa"></a>
+                        <a href="#" class="payments-card mastercard"><img src="/catalog/view/theme/canary/img/mastercard.png" alt="mastercard"></a>
+                        <a href="#" class="payments-card discover"><img src="/catalog/view/theme/canary/img/discover.png" alt="discover"></a>
+                        <a href="#" class="payments-card americanexpress"><img src="/catalog/view/theme/canary/img/americanexpress.png" alt="americanexpress"></a>
+                        <a href="#" class="payments-card paypal"><img src="/catalog/view/theme/canary/img/paypal.png" alt="paypal"></a>
                     </div>
                 </div>
             </div>
@@ -95,22 +95,22 @@
     <div class="circle circle3"></div>
 </div>-->
 
-<img src="catalog/view/theme/canary/img/preloader.png" class="container-loader" alt="" style="display: none">
+<img src="/catalog/view/theme/canary/img/preloader.png" class="container-loader" alt="" style="display: none">
 
-<script type="text/javascript" src="catalog/view/theme/canary/vendor/select2/dist/js/select2.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/select2/dist/js/select2.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/vendor/slickslider/slick.min.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery.sliderPro/jquery.sliderPro.min.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/vendor/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/js/script.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/js/device.min.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/app.js" ></script>
-<script type="text/javascript" src="catalog/view/javascript/common.js" ></script>
-<script type="text/javascript" src="catalog/view/theme/canary/js/jquery.easydropdown.min.js" ></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/slickslider/slick.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery.sliderPro/jquery.sliderPro.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/script.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/device.min.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/app.js" ></script>
+<script type="text/javascript" src="/catalog/view/javascript/common.js" ></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.easydropdown.min.js" ></script>
 
 </body>
 </html>

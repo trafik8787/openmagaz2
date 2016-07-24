@@ -27,17 +27,17 @@
         <div class="img-product clearfix">
             <a href="#diamonds" class="fine-link" data-target="#diamonds">
                     <span class="vertical-middle-wrapper">
-                        <span><img src="catalog/view/theme/canary/img/fine/img1.png" alt="img"></span>
+                        <span><img src="/catalog/view/theme/canary/img/fine/img1.png" alt="img"></span>
                     </span>
             </a>
             <a href="#engagement_rings" class="fine-link" data-target="#engagement_rings">
                     <span class="vertical-middle-wrapper">
-                        <span><img src="catalog/view/theme/canary/img/fine/img3.png" alt="img"></span>
+                        <span><img src="/catalog/view/theme/canary/img/fine/img3.png" alt="img"></span>
                     </span>
             </a>
             <a href="#wedding_rings" class="fine-link" data-target="#wedding_rings">
                     <span class="vertical-middle-wrapper">
-                        <span><img src="catalog/view/theme/canary/img/fine/img2.png" alt="img"></span>
+                        <span><img src="/catalog/view/theme/canary/img/fine/img2.png" alt="img"></span>
                     </span>
             </a>
             <!--<a href="#gamestones" class="fine-link" data-target="#gamestones">-->
@@ -47,7 +47,7 @@
             <!--</a>-->
             <a href="#fine_jewerly" class="fine-link" data-target="#fine_jewerly">
                     <span class="vertical-middle-wrapper">
-                        <span><img src="catalog/view/theme/canary/img/fine/img6.png" width="137px" alt="img"></span>
+                        <span><img src="/catalog/view/theme/canary/img/fine/img6.png" width="137px" alt="img"></span>
                     </span>
             </a>
         </div>
@@ -67,7 +67,7 @@
                                 <div class="article-p">Diamond studs</div>
                             </div>
                             <div class="wrapper-img">
-                                <img src="catalog/view/theme/canary/img/fine/img7.png" alt="img" height="320">
+                                <img src="/catalog/view/theme/canary/img/fine/img7.png" alt="img" height="320">
                             </div>
                             <div class="block-p">
                                 <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
@@ -101,7 +101,7 @@
                                 <div class="article-p">Diamond Pendants</div>
                             </div>
                             <div class="wrapper-img">
-                                <img src="catalog/view/theme/canary/img/fine/img6.png" alt="img" height="350">
+                                <img src="/catalog/view/theme/canary/img/fine/img6.png" alt="img" height="350">
                             </div>
                             <div class="block-p">
                                 <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
@@ -135,7 +135,7 @@
                                 <div class="article-p">Pearls</div>
                             </div>
                             <div class="wrapper-img">
-                                <img src="catalog/view/theme/canary/img/fine/img8.png" alt="img" height="350">
+                                <img src="/catalog/view/theme/canary/img/fine/img8.png" alt="img" height="350">
                             </div>
                             <div class="block-p">
                                 <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
@@ -205,7 +205,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/pave.jpg" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/pave.jpg" alt="img">
 
                                     </div>
                                     <div class="title-ws">Pavé Engagement Rings</div>
@@ -215,7 +215,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/channel_set.jpg" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/channel_set.jpg" alt="img">
 
                                     </div>
                                     <div class="title-ws">Channel Set Engagement Rings</div>
@@ -226,7 +226,7 @@
 
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/three_stone.jpg" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/three_stone.jpg" alt="img">
 
                                     </div>
                                     <div class="title-ws">Three-Stone Engagement Rings</div>
@@ -236,7 +236,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/vintage.jpg" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/vintage.jpg" alt="img">
 
                                     </div>
                                     <div class="title-ws">Vintage Engagement Rings</div>
@@ -246,7 +246,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/tension_set.jpg" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/tension_set.jpg" alt="img">
 
                                     </div>
                                     <div class="title-ws">Tension Set Engagement Rings</div>
@@ -256,7 +256,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/halo.jpg" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/halo.jpg" alt="img">
 
                                     </div>
                                     <div class="title-ws">Halo Engagement Rings</div>
@@ -267,7 +267,7 @@
 
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/bezel_set.jpg" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/bezel_set.jpg" alt="img">
 
                                     </div>
                                     <div class="title-ws">Bezel Set Engagement Rings</div>
@@ -278,7 +278,7 @@
 
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/bypass.jpg" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/bypass.jpg" alt="img">
 
                                     </div>
                                     <div class="title-ws">Bypass</div>
@@ -289,7 +289,7 @@
 
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/ring_types_enducation/wedding_sets.jpg" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/wedding_sets.jpg" alt="img">
 
                                     </div>
                                     <div class="title-ws">Wedding Sets</div>
@@ -303,7 +303,7 @@
                             <div class="box-setting-tab">
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img21.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img21.png" alt="img">
                                     </div>
                                     <div class="title-ws">Setting Types</div>
                                     <p>An engagement ring should be a reflection of the person wearing it.</p>
@@ -312,7 +312,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img22.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img22.png" alt="img">
                                     </div>
                                     <div class="title-ws">Prongs</div>
                                     <p>
@@ -321,7 +321,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img23.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img23.png" alt="img">
                                     </div>
                                     <div class="title-ws">Bezel</div>
                                     <p>
@@ -330,7 +330,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img24.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img24.png" alt="img">
                                     </div>
                                     <div class="title-ws">
                                         Tension
@@ -341,7 +341,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img25.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img25.png" alt="img">
                                     </div>
                                     <div class="title-ws">
                                         Channel
@@ -352,7 +352,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img26.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img26.png" alt="img">
                                     </div>
                                     <div class="title-ws">
                                         Twist
@@ -363,7 +363,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img27.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img27.png" alt="img">
                                     </div>
                                     <div class="title-ws">
                                         Bar
@@ -378,7 +378,7 @@
                             <div class="sapphires-tab-box clearfix">
                                 <div class="one-sapphires ring-sizing">
                                     <div class="box-img2">
-                                        <img src="catalog/view/theme/canary/img/fine/img33.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img33.png" alt="img">
                                     </div>
                                     <div class="title2">Ring Sizing</div>
                                     <p>
@@ -415,13 +415,13 @@
                             <div class="box-ring-fine clearfix">
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img17.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img17.png" alt="img">
                                     </div>
                                     white gold
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img18.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img18.png" alt="img">
                                     </div>
                                     rose gold
                                 </div>
@@ -433,7 +433,7 @@
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img20.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img20.png" alt="img">
                                     </div>
                                     yellow gold
                                 </div>
@@ -515,7 +515,7 @@
                             <div class="sapphires-tab-box clearfix">
                                 <div class="one-sapphires">
                                     <div class="box-img2">
-                                        <img src="catalog/view/theme/canary/img/fine/img16.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img16.png" alt="img">
                                     </div>
                                     <div class="title2">Buy an Engagement Ring on a Budget</div>
                                     <p>
@@ -575,7 +575,7 @@
                             <div class="sapphires-tab-box clearfix">
                                 <div class="one-sapphires">
                                     <div class="box-img2">
-                                        <img src="catalog/view/theme/canary/img/fine/img15.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img15.png" alt="img">
                                     </div>
                                     <div class="title2">How to Choose the Perfect Engagement Ring</div>
                                     <p>
@@ -626,22 +626,22 @@
                             <div class="box-ring-fine manufacturing clearfix">
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img29.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img29.png" alt="img">
                                     </div>
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img30.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img30.png" alt="img">
                                     </div>
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img31.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img31.png" alt="img">
                                     </div>
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img32.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img32.png" alt="img">
                                     </div>
                                 </div>
                             </div>
@@ -689,31 +689,31 @@
                             <div class="box-ring-fine box-ring-styles clearfix">
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img34.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img34.png" alt="img">
                                     </div>
                                     classic
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img35.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img35.png" alt="img">
                                     </div>
                                     anniversary
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img36.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img36.png" alt="img">
                                     </div>
                                     eternity
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img37.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img37.png" alt="img">
                                     </div>
                                     carved
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img38.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img38.png" alt="img">
                                     </div>
                                     diamond
                                 </div>
@@ -777,19 +777,19 @@
                             <div class="box-ring-fine alternative-metal clearfix">
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img40.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img40.png" alt="img">
                                     </div>
                                     titanium
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img41.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img41.png" alt="img">
                                     </div>
                                     Cobalt Chrome
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="catalog/view/theme/canary/img/fine/img42.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img42.png" alt="img">
                                     </div>
                                     ceramic
                                 </div>
@@ -827,7 +827,7 @@
                                 <div class="article-p">Finding The Perfect Wedding Ring</div>
                             </div>
                             <div class="wrapper-img">
-                                <img src="catalog/view/theme/canary/img/fine/img39.png" alt="img">
+                                <img src="/catalog/view/theme/canary/img/fine/img39.png" alt="img">
                             </div>
                             <div class="block-p">
                                 <div class="article-p">Finding The Perfect Wedding Rings</div>
@@ -886,7 +886,7 @@
                                 </div>
                                 <div id="sapphiresTab1" class="one-sapphires active">
                                     <div class="box-img2">
-                                        <img src="catalog/view/theme/canary/img/fine/img9.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img9.png" alt="img">
                                         <div class="search-sapphires">
                                             <a href="#" class="btn-sapphires">Search blue saphires</a>
                                         </div>
@@ -907,7 +907,7 @@
                                 </div>
                                 <div id="sapphiresTab2" class="one-sapphires">
                                     <div class="box-img2">
-                                        <img src="catalog/view/theme/canary/img/fine/img10.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img10.png" alt="img">
                                         <div class="search-sapphires">
                                             <a href="#" class="btn-sapphires">Search yellow sapphires</a>
                                         </div>
@@ -928,7 +928,7 @@
                                 </div>
                                 <div id="sapphiresTab3" class="one-sapphires">
                                     <div class="box-img2">
-                                        <img src="catalog/view/theme/canary/img/fine/img11.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img11.png" alt="img">
                                         <div class="search-sapphires">
                                             <a href="#" class="btn-sapphires">Search pink saphires</a>
                                         </div>
@@ -953,7 +953,7 @@
                             <div class="sapphires-tab-box clearfix">
                                 <div class="one-sapphires">
                                     <div class="box-img2">
-                                        <img src="catalog/view/theme/canary/img/fine/img14.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img14.png" alt="img">
                                         <div class="search-sapphires">
                                             <a href="#" class="btn-sapphires">Search green emerald</a>
                                         </div>
@@ -978,7 +978,7 @@
                             <div class="sapphires-tab-box clearfix">
                                 <div class="one-sapphires">
                                     <div class="box-img2">
-                                        <img src="catalog/view/theme/canary/img/fine/img12.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img12.png" alt="img">
                                         <div class="search-sapphires">
                                             <a href="#" class="btn-sapphires">Search red rubies</a>
                                         </div>
@@ -1007,7 +1007,7 @@
                                 </p>
                             </div>
                             <div class="wrapper-img">
-                                <img src="catalog/view/theme/canary/img/fine/img13.png" alt="img" width="580">
+                                <img src="/catalog/view/theme/canary/img/fine/img13.png" alt="img" width="580">
                             </div>
                             <div class="block-p">
                                 <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
@@ -1099,7 +1099,7 @@
                                         </p>
                                     </div>
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/img43.png" alt="img" width="450">
+                                        <img src="/catalog/view/theme/canary/img/fine/img43.png" alt="img" width="450">
                                     </div>
                                     <div class="block-p">
                                         <div class="article-p">Diamond Anatomy</div>
@@ -1258,12 +1258,12 @@
                                     <div class="box-ring-fine alternative-metal clearfix">
                                         <div class="one-block-r">
                                             <div class="box-ring">
-                                                <img src="catalog/view/theme/canary/img/fine/img44.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/fine/img44.png" alt="img">
                                             </div>
                                         </div>
                                         <div class="one-block-r">
                                             <div class="box-ring">
-                                                <img src="catalog/view/theme/canary/img/fine/img45.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/fine/img45.png" alt="img">
                                             </div>
                                         </div>
                                     </div>
@@ -1282,7 +1282,7 @@
 
                                     </div>
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/img80.png" alt="img" width="600">
+                                        <img src="/catalog/view/theme/canary/img/fine/img80.png" alt="img" width="600">
                                     </div>
 
                                 </div>
@@ -1297,7 +1297,7 @@
                                     This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
                                 </div>
                                 <div class="stat-img">
-                                    <img src="catalog/view/theme/canary/img/fine/img63.png" alt="img">
+                                    <img src="/catalog/view/theme/canary/img/fine/img63.png" alt="img">
                                 </div>
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
@@ -1527,7 +1527,7 @@
                                         </p>
                                     </div>
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/img64.jpg" alt="img" height="auto">
+                                        <img src="/catalog/view/theme/canary/img/fine/img64.jpg" alt="img" height="auto">
                                     </div>
                                     <div class="block-p">
                                         <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
@@ -1561,7 +1561,7 @@
                                         </p>
                                     </div>
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/img77.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img77.png" alt="img">
                                     </div>
                                     <div class="block-p">
                                         <div class="article-p">Hearts and Arrows True Hearts</div>
@@ -1625,7 +1625,7 @@
                                         <div class="article-p">Fancy yellow diamond</div>
                                     </div>
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/yellow.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/yellow.png" alt="img">
                                     </div>
                                     <div class="block-p">
                                         <div class="article-p">Fancy yellow diamond</div>
@@ -1641,7 +1641,7 @@
                                 </div>
                                 <div id="fancyColorTab2" class="one-fancy-color">
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/yellow2.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/yellow2.png" alt="img">
                                     </div>
                                     <form action="" class="form-fancy">
                                         <input type="text" placeholder="search fancy yellow diamonds">
@@ -1662,7 +1662,7 @@
                                 </div>
                                 <div id="fancyColorTab3" class="one-fancy-color">
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/pink.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/pink.png" alt="img">
                                     </div>
                                     <form action="" class="form-fancy">
                                         <input type="text" placeholder="search fancy pink diamonds">
@@ -1683,7 +1683,7 @@
                                 </div>
                                 <div id="fancyColorTab4" class="one-fancy-color">
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/green.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/green.png" alt="img">
                                     </div>
                                     <form action="" class="form-fancy">
                                         <input type="text" placeholder="search fancy green diamonds">
@@ -1704,7 +1704,7 @@
                                 </div>
                                 <div id="fancyColorTab5" class="one-fancy-color">
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/blue.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/blue.png" alt="img">
                                     </div>
                                     <form action="" class="form-fancy">
                                         <input type="text" placeholder="search fancy blue diamonds">
@@ -1725,7 +1725,7 @@
                                 </div>
                                 <div id="fancyColorTab6" class="one-fancy-color">
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/orange.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/orange.png" alt="img">
                                     </div>
                                     <form action="" class="form-fancy">
                                         <input type="text" placeholder="search fancy orange diamonds">
@@ -1746,7 +1746,7 @@
                                 </div>
                                 <div id="fancyColorTab7" class="one-fancy-color">
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/brown.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/brown.png" alt="img">
                                     </div>
                                     <form action="" class="form-fancy">
                                         <input type="text" placeholder="search fancy brown diamonds">
@@ -1786,7 +1786,7 @@
                                 <div id="gradingTab1" class="one-grading active">
                                     <div class="one-line text-left">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img74.png" alt="img" width="420">
+                                            <img src="/catalog/view/theme/canary/img/fine/img74.png" alt="img" width="420">
                                         </div>
                                         <div>
                                             <div class="block-p">
@@ -1816,7 +1816,7 @@
                                 <div id="gradingTab2" class="one-grading">
                                     <div class="one-line text-left">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img75.png" alt="img" width="420">
+                                            <img src="/catalog/view/theme/canary/img/fine/img75.png" alt="img" width="420">
                                         </div>
                                         <div>
                                             <div class="block-p">
@@ -1845,7 +1845,7 @@
                                 <div id="gradingTab3" class="one-grading">
                                     <div class="one-line text-left">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img76.png" alt="img" width="420">
+                                            <img src="/catalog/view/theme/canary/img/fine/img76.png" alt="img" width="420">
                                         </div>
                                         <div>
                                             <div class="block-p">
@@ -1882,7 +1882,7 @@
                                 <div id="gradingTab4" class="one-grading">
                                     <div class="one-line text-left">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img78.png" alt="img" width="420">
+                                            <img src="/catalog/view/theme/canary/img/fine/img78.png" alt="img" width="420">
                                         </div>
                                         <div>
                                             <div class="block-p">
@@ -1945,7 +1945,7 @@
                                 <div id="choosePerfectTab1" class="one-choose-perfect active">
                                     <div class="one-line">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img65.png" alt="img">
+                                            <img src="/catalog/view/theme/canary/img/fine/img65.png" alt="img">
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p">Cut</div>
@@ -1956,7 +1956,7 @@
                                     </div>
                                     <div class="one-line">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img66.png" alt="img">
+                                            <img src="/catalog/view/theme/canary/img/fine/img66.png" alt="img">
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p"></div>
@@ -1977,7 +1977,7 @@
                                     </div>
                                     <div class="one-line">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img67.png" alt="img">
+                                            <img src="/catalog/view/theme/canary/img/fine/img67.png" alt="img">
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p"></div>
@@ -1998,7 +1998,7 @@
                                 <div id="choosePerfectTab2" class="one-choose-perfect">
                                     <div class="one-line">
                                         <div class="box-img3 text-center">
-                                            <img src="catalog/view/theme/canary/img/fine/img79.png" alt="img">
+                                            <img src="/catalog/view/theme/canary/img/fine/img79.png" alt="img">
                                             <div class="choose-color">Choose a Color Grade:</div>
                                             <div class="btn-group btn-group-justified btn-group-filter" data-toggle="buttons">
                                                 <label class="btn btn-filter active">
@@ -2050,15 +2050,15 @@
 
                                                         <span class="box-color-diamonds">
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/d.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/d.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">D</span>color</span>
                                                             </span>
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/e.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/e.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">E</span>color</span>
                                                             </span>
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/f.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/f.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">F</span>color</span>
                                                             </span>
                                                         </span>
@@ -2075,19 +2075,19 @@
                                                     </span>
                                                         <span class="box-color-diamonds">
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/g.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/g.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">G</span>color</span>
                                                             </span>
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/e.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/e.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">H</span>color</span>
                                                             </span>
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/I.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/I.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">I</span>color</span>
                                                             </span>
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/j.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/j.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">J</span>color</span>
                                                             </span>
                                                         </span>
@@ -2104,7 +2104,7 @@
                                                     </span>
                                                         <span class="box-color-diamonds">
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="catalog/view/theme/canary/img/fine/k.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/k.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">K</span>color</span>
                                                             </span>
                                                         </span>
@@ -2125,7 +2125,7 @@
                                     </div>
                                     <div class="one-line text-left">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img68.png" alt="img">
+                                            <img src="/catalog/view/theme/canary/img/fine/img68.png" alt="img">
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p">Flawless, Internally Flawless (FL & IF)</div>
@@ -2139,7 +2139,7 @@
                                     </div>
                                     <div class="one-line text-left">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img69.png" alt="img">
+                                            <img src="/catalog/view/theme/canary/img/fine/img69.png" alt="img">
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p">Very Very Slightly Included (VVS1 & VVS2)</div>
@@ -2150,7 +2150,7 @@
                                     </div>
                                     <div class="one-line text-left">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img70.png" alt="img">
+                                            <img src="/catalog/view/theme/canary/img/fine/img70.png" alt="img">
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p">Very Slightly Included (VS1 & VS2)</div>
@@ -2161,7 +2161,7 @@
                                     </div>
                                     <div class="one-line text-left">
                                         <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img71.png" alt="img">
+                                            <img src="/catalog/view/theme/canary/img/fine/img71.png" alt="img">
                                         </div>
                                         <div class="block-p">
                                             <div class="article-p">Slightly Included (SI1, SI2)</div>
@@ -2195,7 +2195,7 @@
                                         </p>
                                     </div>
                                     <div class="wrapper-img">
-                                        <img src="catalog/view/theme/canary/img/fine/img73.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/fine/img73.png" alt="img">
                                     </div>
                                     <div class="block-p">
                                         <div class="article-p">Diamond Weight</div>
@@ -2221,7 +2221,7 @@
                         </div>
                         <div class="tab-pane fade" id="diamondCare">
                             <div class="wrapper-img">
-                                <img src="catalog/view/theme/canary/img/fine/img52.png" alt="img" height="320">
+                                <img src="/catalog/view/theme/canary/img/fine/img52.png" alt="img" height="320">
                             </div>
                             <div class="block-p">
                                 <div class="article-p">SELECT THE PERFECT ENGAGEMENT RING</div>

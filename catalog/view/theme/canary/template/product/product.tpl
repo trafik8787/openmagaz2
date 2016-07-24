@@ -292,19 +292,19 @@
             <div class="title">Brillaint-Canary rewies</div>
             <div id="owl-demo3" class="owl-carousel brand-footer">
                 <div class="item">
-                    <a href="#"><img src="catalog/view/theme/canary/img/brand1.png" alt="brand1"></a>
+                    <a href="#"><img src="/catalog/view/theme/canary/img/brand1.png" alt="brand1"></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="catalog/view/theme/canary/img/brand2.png" alt="brand2"></a>
+                    <a href="#"><img src="/catalog/view/theme/canary/img/brand2.png" alt="brand2"></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="catalog/view/theme/canary/img/brand3.png" alt="brand3"></a>
+                    <a href="#"><img src="/catalog/view/theme/canary/img/brand3.png" alt="brand3"></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="catalog/view/theme/canary/img/brand4.png" alt="brand4"></a>
+                    <a href="#"><img src="/catalog/view/theme/canary/img/brand4.png" alt="brand4"></a>
                 </div>
                 <div class="item">
-                    <a href="#"><img src="catalog/view/theme/canary/img/brand5.png" alt="brand5"></a>
+                    <a href="#"><img src="/catalog/view/theme/canary/img/brand5.png" alt="brand5"></a>
                 </div>
             </div>
             <div class="company-box">
@@ -369,7 +369,7 @@
 
     $('select[name=\'recurring_id\'], input[name="quantity"]').change(function(){
         $.ajax({
-            url: 'index.php?route=product/product/getRecurringDescription',
+            url: '/index.php?route=product/product/getRecurringDescription',
             type: 'post',
             data: $('input[name=\'product_id\'], input[name=\'quantity\'], select[name=\'recurring_id\']'),
             dataType: 'json',
@@ -390,7 +390,7 @@
     //add product to cart
     $('#button-cart').on('click', function() {
         $.ajax({
-            url: 'index.php?route=checkout/cart/add',
+            url: '/index.php?route=checkout/cart/add',
             type: 'post',
             data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
             dataType: 'json',
@@ -403,7 +403,7 @@
             success: function(json) {
                 $('.alert, .text-danger').remove();
                 $('.form-group').removeClass('has-error');
-                console.log(json);
+                //console.log(json);
                 if (json['error']) {
                     if (json['error']['option']) {
                         for (i in json['error']['option']) {
@@ -432,7 +432,7 @@
 
                     $('html, body').animate({ scrollTop: 0 }, 'slow');
 
-                    $('.cart-basket').load('index.php?route=common/cart/info .w-cart-basket');
+                    $('.cart-basket').load('/index.php?route=common/cart/info .w-cart-basket');
                 }
             },
             error: function(xhr, ajaxOptions, thrownError) {
@@ -516,11 +516,11 @@
         $('#review').fadeIn('slow');
     });
 
-    $('#review').load('index.php?route=product/product/review&product_id=<?php echo $product_id; ?>');
+    $('#review').load('/index.php?route=product/product/review&product_id=<?php echo $product_id; ?>');
 
     $('#button-review').on('click', function() {
         $.ajax({
-            url: 'index.php?route=product/product/write&product_id=<?php echo $product_id; ?>',
+            url: '/index.php?route=product/product/write&product_id=<?php echo $product_id; ?>',
             type: 'post',
             dataType: 'json',
             data: $("#form-review").serialize(),

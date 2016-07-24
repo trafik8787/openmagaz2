@@ -21,17 +21,17 @@
 
 
 
-    <link rel="stylesheet" href="catalog/view/theme/canary/css/font-awesome.min.css">
-    <link href="catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="catalog/view/theme/canary/css/normalize.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/css/style.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/css/w_style.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/font-awesome.min.css">
+    <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/normalize.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style.css"/>
 
-    <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
 
     <?php foreach ($analytics as $analytic) { ?>
     <?php echo $analytic; ?>
@@ -46,7 +46,7 @@
 <header>
     <div class="user-line index-page">
         <div class="center-bl clearfix">
-            <a href="/" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+            <a href="/" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
             <div class="telephone">
                 <i class="ico-telephone"></i>
                 <span><?php echo $telephone; ?> | 24/7</span>
@@ -81,7 +81,7 @@
     </div>
     <div class="center-bl">
         <div class="menu">
-            <a href="/" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+            <a href="/" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
             <ul>
                 <li class="dropdown-b"><!--DIAMONDS-->
                     <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a>
@@ -135,7 +135,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-7 col-sm-7 col-xs-7 text-right">
-                                <img src="catalog/view/theme/canary/img/img14.png" alt="img" class="img-under-style">
+                                <img src="/catalog/view/theme/canary/img/img14.png" alt="img" class="img-under-style">
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-7 col-sm-7 col-xs-7 text-right">
-                                <img src="catalog/view/theme/canary/img/img13.png" alt="img" class="img-under-style">
+                                <img src="/catalog/view/theme/canary/img/img13.png" alt="img" class="img-under-style">
                             </div>
                         </div>
                         <div class="clearfix link-drop-menu">
@@ -236,7 +236,7 @@
 
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-                                <img src="catalog/view/theme/canary/img/img17.png" alt="img" class="img-under-style">
+                                <img src="/catalog/view/theme/canary/img/img17.png" alt="img" class="img-under-style">
                             </div>
                         </div>
                     </div>
@@ -287,7 +287,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-                                <img src="catalog/view/theme/canary/img/img16.png" alt="img" class="img-under-style">
+                                <img src="/catalog/view/theme/canary/img/img16.png" alt="img" class="img-under-style">
                             </div>
                         </div>
 

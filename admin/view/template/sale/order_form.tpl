@@ -987,7 +987,7 @@ $.ajax({
 
 $(document).delegate('#button-ip-add', 'click', function() {
 	$.ajax({
-		url: 'index.php?route=user/api/addip&token=<?php echo $token; ?>&api_id=<?php echo $api_id; ?>',
+		url: '/index.php?route=user/api/addip&token=<?php echo $token; ?>&api_id=<?php echo $api_id; ?>',
 		type: 'post',
 		data: 'ip=<?php echo $api_ip; ?>',
 		dataType: 'json',

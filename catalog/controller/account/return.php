@@ -540,6 +540,8 @@ class ControllerAccountReturn extends Controller {
 			$data['agree'] = false;
 		}
 
+        $data['right_meny_accaunt'] = $this->load->view($this->config->get('config_template') . '/template/account/meny_bloc_right_account.tpl', array());
+
 		$data['back'] = $this->url->link('account/account', '', 'SSL');
 
 		$data['column_left'] = $this->load->controller('common/column_left');

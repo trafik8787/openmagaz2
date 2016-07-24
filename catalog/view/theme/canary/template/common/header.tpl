@@ -15,22 +15,22 @@
     <?php if ($keywords) { ?>
         <meta name="keywords" content="<?php echo $keywords; ?>"/>
     <?php } ?>
-    <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
-    <link rel="stylesheet" href="catalog/view/theme/canary/css/font-awesome.min.css">
-    <link rel="stylesheet" href="catalog/view/theme/canary/css/normalize.css"/>
-    <link rel="stylesheet" href="catalog/view/javascript/jquery/magnific/magnific-popup.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/slickslider/slick.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
-    <link href="catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
-    <link rel="stylesheet" href="catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css">
-    <link rel="stylesheet" href="catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/css/style.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/css/w_style.css"/>
-    <link rel="stylesheet" href="catalog/view/theme/canary/css/easydropdown.css"/>
+    <script src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/normalize.css"/>
+    <link rel="stylesheet" href="/catalog/view/javascript/jquery/magnific/magnific-popup.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/slickslider/slick.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
+    <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
+    <link rel="stylesheet" href="/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/easydropdown.css"/>
 
-    <script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
 
 
 </head>
@@ -222,7 +222,7 @@
         <div class="user-line">
             <div class="center-bl clearfix">
                 <button class="menu-l-open"><i class="fa fa-bars"></i></button>
-                <a href="/" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+                <a href="/" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
                 <div class="telephone">
                     <i class="ico-telephone"></i>
                     <span><?php echo $telephone; ?> | 24/7</span>
@@ -260,7 +260,7 @@
 
             <div class="menu">
                 <button class="menu-l-open"><i class="fa fa-bars"></i></button>
-                <a href="#" class="logo"><img src="catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+                <a href="#" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
                 <ul>
                     <li class="dropdown-b" data-target="menu1">
                         <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a><!--DIAMONDS-->
@@ -316,7 +316,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-7 col-sm-7 col-xs-7 text-right">
-                                    <img src="catalog/view/theme/canary/img/img14.png" alt="img" class="img-under-style">
+                                    <img src="/catalog/view/theme/canary/img/img14.png" alt="img" class="img-under-style">
                                 </div>
                             </div>
                         </div>
@@ -345,7 +345,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-7 col-sm-7 col-xs-7 text-right">
-                                    <img src="catalog/view/theme/canary/img/img13.png" alt="img" class="img-under-style">
+                                    <img src="/catalog/view/theme/canary/img/img13.png" alt="img" class="img-under-style">
                                 </div>
                             </div>
                             <div class="clearfix link-drop-menu">
@@ -411,7 +411,7 @@
 
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-                                    <img src="catalog/view/theme/canary/img/img17.png" alt="img" class="img-under-style">
+                                    <img src="/catalog/view/theme/canary/img/img17.png" alt="img" class="img-under-style">
                                 </div>
                             </div>
                         </div>
@@ -459,7 +459,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-                                    <img src="catalog/view/theme/canary/img/img16.png" alt="img" class="img-under-style">
+                                    <img src="/catalog/view/theme/canary/img/img16.png" alt="img" class="img-under-style">
                                 </div>
                             </div>
 

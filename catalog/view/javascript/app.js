@@ -128,7 +128,7 @@ $(document).on('click', '#w-button-add-product-complect', function(){
     var $select = $('#product select');
 
     $.ajax({
-        url: 'index.php?route=module/complect/add_product_complect',
+        url: '/index.php?route=module/complect/add_product_complect',
         type: 'post',
         data: $('#product select, #product input[name=\'product_id\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select'),
         dataType: 'html',
@@ -158,7 +158,7 @@ $(document).on('click', '#w-button-add-diamond-complect', function(){
 
 
     $.ajax({
-        url: 'index.php?route=module/complect/add_product_complect',
+        url: '/index.php?route=module/complect/add_product_complect',
         type: 'post',
         data: 'complect_id_diamond='+$this.data('idproduct')+'&shape='+$this.data('shape'),
         dataType: 'html',

@@ -12,7 +12,7 @@ $(window).load(function(){
             }
         });
     } else{
-        $("head").append('<meta name="viewport" content="width=980"><link rel="stylesheet" href="catalog/view/theme/canary/css/desktop.css"/>');
+        $("head").append('<meta name="viewport" content="width=980"><link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop.css"/>');
     }
 });
 

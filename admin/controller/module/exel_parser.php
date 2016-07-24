@@ -33,6 +33,7 @@ class ControllerModuleExelParser extends Controller {
     private $category;
     private $filter;
 
+    private $width;
 
     private $image_general;
     private $image_galery;
@@ -56,15 +57,24 @@ class ControllerModuleExelParser extends Controller {
             'Palladium' => 'palladium'
         );
 
+        //ENGAGEMENT RINGS
+//        $this->category_arr = array(
+//            'Three-stone' => 63,
+//            'Vintage' => 66,
+//            'Bezel set' => 64,
+//            'Halo' => 65,
+//            'Bypass' => 62,
+//            'Pave' => 60,
+//            'Solitaire' => 59,
+//            'Modern'    => 89
+//        );
+
+        //WOMAN WEDDING RINGS
         $this->category_arr = array(
-            'Three-stone' => 63,
-            'Vintage' => 66,
-            'Bezel set' => 64,
-            'Halo' => 65,
-            'Bypass' => 62,
-            'Pave' => 60,
-            'Solitaire' => 59,
-            'Modern'    => 89
+            'Classic' => 77,
+            'Stackable' => 78,
+            'Eternity' => 81,
+            'Diamond' => 79
         );
 
 
@@ -189,7 +199,8 @@ class ControllerModuleExelParser extends Controller {
         //$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$store_id ."'");
         //dd($query->rows);
         //$filePath = '/home/canary/www/website.csv';
-        $filePath = '/home/brilliantcanary/htdocs/website.csv';
+        $filePath = '/home/canary/www/website_weding_woman.csv';
+        //$filePath = '/home/brilliantcanary/htdocs/website.csv';
         $delimiter = ';';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
@@ -199,12 +210,13 @@ class ControllerModuleExelParser extends Controller {
 
         while (!$file->eof()) {
 
+
+
             $metal = null;
             $this->filter = array();
             $name_file_general_img = null;
             $this->category = array();
             $curent = $file->current();
-
 
             if (!empty($curent[0])) {
                 //metal
@@ -279,7 +291,10 @@ class ControllerModuleExelParser extends Controller {
 
 
                 //ENGAGEMENT RINGS
-                $this->category[] = 20;
+                //$this->category[] = 20;
+
+                //WOMAN WEDDING RINGS
+                $this->category[] = 69;
 
                 if (!empty($curent[11])) {
                     $this->category[] = $this->category_arr[trim($curent[11])];
@@ -293,7 +308,8 @@ class ControllerModuleExelParser extends Controller {
 
 
                 //image general
-                $this->image_general = 'catalog/galery_rings/'.$name_file_general_img;
+                //$this->image_general = 'catalog/galery_rings/'.$name_file_general_img;
+                $this->image_general = '';
 
 
                 $this->model = $this->sku;
@@ -305,6 +321,7 @@ class ControllerModuleExelParser extends Controller {
                 $this->keywords_seo = $curent[6];
                 $this->manufactured = $curent[10];
 
+                $this->width = substr($curent[8],0,-2);
 
                 //atribute
                 $this->list_atribute[16] = $curent[14];
@@ -314,6 +331,7 @@ class ControllerModuleExelParser extends Controller {
 
 
 
+                $this->price = (int)substr($curent[18], 1);
                 $this->price = $curent[18];
 
                 $this->product_id_insert = $this->addProduct();
@@ -321,7 +339,7 @@ class ControllerModuleExelParser extends Controller {
                 $this->addCategory();
                 $this->addFilters();
                 $this->addUrl();
-                $this->addGalery();
+                //$this->addGalery();
                 $this->addStore();
 
                 $this->addOption();
@@ -334,7 +352,7 @@ class ControllerModuleExelParser extends Controller {
             $file->next();
         }
 
-        $this->addProductMetal();
+        //$this->addProductMetal();
 
     }
 
@@ -357,14 +375,14 @@ class ControllerModuleExelParser extends Controller {
             stock_status_id = '" . 5 . "', 
             image = '" . $this->image_general . "',
             date_available = '" . date('Y-m-d') . "', 
-            manufacturer_id = '" . 11 . "', 
+            manufacturer_id = '" . 12 . "', 
             shipping = '" . 1 . "', 
             price = '" . $this->price . "', 
             points = '" . 0 . "', 
             weight = '" . 0.00000000 . "', 
             weight_class_id = '" . 2 . "', 
             length = '" . 0.00000000 . "', 
-            width = '" . 0.00000000 . "', 
+            width = '" . $this->width . "', 
             height = '" . 0.00000000 . "', 
             length_class_id = '" . 2 . "', 
             status = '" . 1 . "', 

@@ -84,7 +84,7 @@
         <div class="col-md-4 col-sm-4 col-xs-4">
             <a href="<?= !empty($show) ? '/diamonds' : $CanaryDiamontCom['href']?>" class="one-block  <?= !empty($show) ? 'active w-general-category' : '' ?>">
                 <span class="box-img">
-                    <img src="catalog/view/theme/canary/img/diamond-shape.jpg" alt="img">
+                    <img src="/catalog/view/theme/canary/img/diamond-shape.jpg" alt="img">
                 </span>
                 <span class="title">
                     <span><?=$index?>.CHOOSE YOUR</span>  DIAMOND
@@ -113,7 +113,7 @@
         <div class="col-md-4 col-sm-4 col-xs-4">
             <a href="<?= !empty($show) ? '/engagement-rings' : $CanaryProductCom['href']?>" class="one-block <?= !empty($show) ? 'active w-general-category' : '' ?>">
                 <span class="box-img">
-                    <img src="catalog/view/theme/canary/img/blank-engagement-ring.jpg" alt="img">
+                    <img src="/catalog/view/theme/canary/img/blank-engagement-ring.jpg" alt="img">
                 </span>
                 <span class="title">
                     <span><?=$index?>.SELECT YOUR</span> SETTING
@@ -143,7 +143,7 @@
         <div class="col-md-4 col-sm-4 col-xs-4 ">
             <a <?=!empty($show) ? 'href="/complete_diamond" id="w-complide-view"' : 'href="#"'?> class="one-block <?= !empty($show) ? 'active' : '' ?>">
                  <span class="box-img">
-                    <img src="catalog/view/theme/canary/img/engagment-ring-shape.jpg" alt="img">
+                    <img src="/catalog/view/theme/canary/img/engagment-ring-shape.jpg" alt="img">
                 </span>
                 <span class="title">
                     <span>3.COMPLETE YOUR</span> RING
