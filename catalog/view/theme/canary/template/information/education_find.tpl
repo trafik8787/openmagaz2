@@ -40,11 +40,11 @@
                         <span><img src="/catalog/view/theme/canary/img/fine/img2.png" alt="img"></span>
                     </span>
             </a>
-            <!--<a href="#gamestones" class="fine-link" data-target="#gamestones">-->
-                    <!--<span class="vertical-middle-wrapper">-->
-                        <!--<span><img src="catalog/view/theme/canary/img/fine/img4.png" alt="img"></span>-->
-                    <!--</span>-->
-            <!--</a>-->
+            <a href="#gamestones" class="fine-link" data-target="#gamestones">
+                    <span class="vertical-middle-wrapper">
+                        <span><img src="catalog/view/theme/canary/img/fine/img4.png" alt="img"></span>
+                    </span>
+            </a>
             <a href="#fine_jewerly" class="fine-link" data-target="#fine_jewerly">
                     <span class="vertical-middle-wrapper">
                         <span><img src="/catalog/view/theme/canary/img/fine/img6.png" width="137px" alt="img"></span>
@@ -69,24 +69,7 @@
                             <div class="wrapper-img">
                                 <img src="/catalog/view/theme/canary/img/fine/img7.png" alt="img" height="320">
                             </div>
-                            <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
-                                <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                </p>
-                                <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                            </div>
-                            <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
-                                <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                </p>
-                                <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                            </div>
+
                             <div class="block-p">
                                 <p>
                                     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
@@ -103,24 +86,7 @@
                             <div class="wrapper-img">
                                 <img src="/catalog/view/theme/canary/img/fine/img6.png" alt="img" height="350">
                             </div>
-                            <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
-                                <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                </p>
-                                <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                            </div>
-                            <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
-                                <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                </p>
-                                <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                            </div>
+
                             <div class="block-p">
                                 <p>
                                     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
@@ -137,24 +103,7 @@
                             <div class="wrapper-img">
                                 <img src="/catalog/view/theme/canary/img/fine/img8.png" alt="img" height="350">
                             </div>
-                            <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
-                                <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                </p>
-                                <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                            </div>
-                            <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion & Scintillation</div>
-                                <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                </p>
-                                <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                            </div>
+
                             <div class="block-p">
                                 <p>
                                     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
@@ -195,7 +144,7 @@
                                 </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="catalog/view/theme/canary/img/fine/img28.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/solitaire.jpg" alt="img">
 
                                     </div>
                                     <div class="title-ws">Solitaire Engagement Rings</div>
@@ -244,16 +193,7 @@
                                         Vintage style engagement rings are made to represent antique rings from eras such as Edwardian, Art Deco and Victorian. These beautiful engagement rings feature ornate filigree, milgrain and engraving and give your diamond that perfect antique look. Our vast collection of stunning vintage inspired engagement rings will compliment your center stone and give you the distinct look you are desiring.
                                     </p>
                                 </div>
-                                <div class="one-line-s">
-                                    <div class="box-ws">
-                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/tension_set.jpg" alt="img">
 
-                                    </div>
-                                    <div class="title-ws">Tension Set Engagement Rings</div>
-                                    <p>
-                                        Modern and contemporary, tension set engagement rings showcase your diamond in a unique and different way. Tension settings are designed to hold your diamond securely through the pressure of the metal, creating a contemporary look. Choose from our collection of modern tension set engagement rings to showcase your diamond in a unique way.
-                                    </p>
-                                </div>
                                 <div class="one-line-s">
                                     <div class="box-ws">
                                         <img src="/catalog/view/theme/canary/img/ring_types_enducation/halo.jpg" alt="img">
@@ -289,12 +229,12 @@
 
                                 <div class="one-line-s">
                                     <div class="box-ws">
-                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/wedding_sets.jpg" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/modern.jpg" alt="img">
 
                                     </div>
-                                    <div class="title-ws">Wedding Sets</div>
+                                    <div class="title-ws">Modern</div>
                                     <p>
-                                        Wedding sets include an engagement ring and matching wedding band that complement each other perfectly. Choosing to get a wedding set guarantees that you will get a wedding band that will accent your engagement ring in the most perfect way. Our collection of distinctive and beautiful wedding sets will send your heart souring and you will be sure to find the perfect set to accent your center diamond.
+                                        Modern
                                     </p>
                                 </div>
                             </div>
@@ -863,113 +803,23 @@
             <div class="panel product-tabs panel-default">
                 <div class="panel-heading">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#sapphires" data-toggle="tab">SAPPHIRES</a></li>
-                        <li><a href="#greenEmeralds" data-toggle="tab">GREEN EMERALDS</a></li>
-                        <li><a href="#redRubies" data-toggle="tab">RED RUBIES</a></li>
-                        <li><a href="#gemstoneAnatomy" data-toggle="tab">GEMSTONE ANATOMY</a></li>
+                        <li class="active"><a href="#colorGemst" data-toggle="tab">COLOR</a></li>
+                        <li><a href="#redRubies" data-toggle="tab">CLARITY</a></li>
+                        <li><a href="#gemstoneAnatomy" data-toggle="tab">CUT</a></li>
+                        <li><a href="#gemstoneSize" data-toggle="tab">SIZE</a></li>
+                        <li><a href="#gemstoneTreatments" data-toggle="tab">TREATMENTS</a></li>
+                        <li><a href="#gemstoneBirthstones" data-toggle="tab">BIRTHSTONES</a></li>
                     </ul>
                 </div>
                 <div class="panel-body product-panel-body center-bl">
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="sapphires">
-                            <div class="sapphires-tab-box clearfix">
-                                <div class="sapphires-link-box">
-                                    <a href="#" class="sapphires-link active" data-target="#sapphiresTab1">
-                                        BLUE SAPPHIRES
-                                    </a>
-                                    <a href="#" class="sapphires-link" data-target="#sapphiresTab2">
-                                        YELLOW SAPPHIRES
-                                    </a>
-                                    <a href="#" class="sapphires-link" data-target="#sapphiresTab3">
-                                        PINK SAPPHIRES
-                                    </a>
-                                </div>
-                                <div id="sapphiresTab1" class="one-sapphires active">
-                                    <div class="box-img2">
-                                        <img src="/catalog/view/theme/canary/img/fine/img9.png" alt="img">
-                                        <div class="search-sapphires">
-                                            <a href="#" class="btn-sapphires">Search blue saphires</a>
-                                        </div>
-                                    </div>
-                                    <div class="title2">Blue Sapphires</div>
-                                    <p>
-                                        Blue sapphire is considered a primary color gemstone; the purer the primary hue, the more valuable the gemstone. Blue sapphires are colored by trace amounts of titanium and iron. (By increasing the level of titanium and iron the color saturation is also increased.) The most common secondary hues found in blue sapphires are purple, violet, and green. Violet and purple can contribute to the overall beauty of the color, while green is considered to be the bane of a blue sapphire. The problem is that all blue sapphires will have a greenish component when viewed at the right angle. It is the cutter that makes sure that the green is not part of the face up position in a sapphire. When gray is included in the overall color of the gemstone, often referred to as a gray mask, the sapphire will have a cool or steely quality as opposed to the normal warm velvety hue of a sapphire. Gray is the normal saturation modifier or mask found in blue sapphires and will often mix with green.
-                                    </p>
-                                    <p>
-                                        Blue sapphires that are eye-clean or entirely free of inclusions are uncommon, especially in larger sizes. However, blue sapphires with some internal inclusions are still highly valued, as long as the inclusions do not reduce brilliance, obscure color, or otherwise detract from the gemstone’s beauty. Blue sapphires of one-carat weight or more are not usually cut to calibrated sizes or standard shapes. Each gemstone is shaped to maximize the color and weight of the gemstone.
-                                    </p>
-                                    <p>
-                                        In blue sapphires, cutting can influence color in surprising ways. Sapphires are dichroic gemstone, meaning their color varies depending on the angle from which it is viewed. Viewed in one direction, most blue sapphires appear blue to violet-blue. From another direction, they will appear slightly greenish blue. A skilled cutter will orient their gemstone so that the blue to violet-blue color shows through the finished gem’s crown.
-                                    </p>
-                                    <p>
-                                        Silk inclusions are also acceptable in blue sapphires, as long as they are not so dense as to compromise color or brilliance. In fact, silk inclusions can increase the value of a sapphire. The heat treatments used to alter color and clarity in blue sapphires break down rutile silk, so the presence of intact silk indicates that a sapphire is unheated. Certain other solid and liquid inclusions burst or deform under extreme heat and are also useful indicators of heat treatment.
-                                    </p>
-                                </div>
-                                <div id="sapphiresTab2" class="one-sapphires">
-                                    <div class="box-img2">
-                                        <img src="/catalog/view/theme/canary/img/fine/img10.png" alt="img">
-                                        <div class="search-sapphires">
-                                            <a href="#" class="btn-sapphires">Search yellow sapphires</a>
-                                        </div>
-                                    </div>
-                                    <div class="title2">Yellow Sapphires</div>
-                                    <p>
-                                        Yellow sapphire is considered a primary color gemstone; the purer the primary hue, the more valuable the gemstone. Blue sapphires are colored by trace amounts of titanium and iron. (By increasing the level of titanium and iron the color saturation is also increased.) The most common secondary hues found in blue sapphires are purple, violet, and green. Violet and purple can contribute to the overall beauty of the color, while green is considered to be the bane of a blue sapphire. The problem is that all blue sapphires will have a greenish component when viewed at the right angle. It is the cutter that makes sure that the green is not part of the face up position in a sapphire. When gray is included in the overall color of the gemstone, often referred to as a gray mask, the sapphire will have a cool or steely quality as opposed to the normal warm velvety hue of a sapphire. Gray is the normal saturation modifier or mask found in blue sapphires and will often mix with green.
-                                    </p>
-                                    <p>
-                                        Yellow sapphires that are eye-clean or entirely free of inclusions are uncommon, especially in larger sizes. However, blue sapphires with some internal inclusions are still highly valued, as long as the inclusions do not reduce brilliance, obscure color, or otherwise detract from the gemstone’s beauty. Blue sapphires of one-carat weight or more are not usually cut to calibrated sizes or standard shapes. Each gemstone is shaped to maximize the color and weight of the gemstone.
-                                    </p>
-                                    <p>
-                                        In yellow sapphires, cutting can influence color in surprising ways. Sapphires are dichroic gemstone, meaning their color varies depending on the angle from which it is viewed. Viewed in one direction, most blue sapphires appear blue to violet-blue. From another direction, they will appear slightly greenish blue. A skilled cutter will orient their gemstone so that the blue to violet-blue color shows through the finished gem’s crown.
-                                    </p>
-                                    <p>
-                                        Silk inclusions are also acceptable in blue sapphires, as long as they are not so dense as to compromise color or brilliance. In fact, silk inclusions can increase the value of a sapphire. The heat treatments used to alter color and clarity in blue sapphires break down rutile silk, so the presence of intact silk indicates that a sapphire is unheated. Certain other solid and liquid inclusions burst or deform under extreme heat and are also useful indicators of heat treatment.
-                                    </p>
-                                </div>
-                                <div id="sapphiresTab3" class="one-sapphires">
-                                    <div class="box-img2">
-                                        <img src="/catalog/view/theme/canary/img/fine/img11.png" alt="img">
-                                        <div class="search-sapphires">
-                                            <a href="#" class="btn-sapphires">Search pink saphires</a>
-                                        </div>
-                                    </div>
-                                    <div class="title2">Pink Sapphires</div>
-                                    <p>
-                                        Pink sapphire is considered a primary color gemstone; the purer the primary hue, the more valuable the gemstone. Blue sapphires are colored by trace amounts of titanium and iron. (By increasing the level of titanium and iron the color saturation is also increased.) The most common secondary hues found in blue sapphires are purple, violet, and green. Violet and purple can contribute to the overall beauty of the color, while green is considered to be the bane of a blue sapphire. The problem is that all blue sapphires will have a greenish component when viewed at the right angle. It is the cutter that makes sure that the green is not part of the face up position in a sapphire. When gray is included in the overall color of the gemstone, often referred to as a gray mask, the sapphire will have a cool or steely quality as opposed to the normal warm velvety hue of a sapphire. Gray is the normal saturation modifier or mask found in blue sapphires and will often mix with green.
-                                    </p>
-                                    <p>
-                                        Pink sapphires that are eye-clean or entirely free of inclusions are uncommon, especially in larger sizes. However, blue sapphires with some internal inclusions are still highly valued, as long as the inclusions do not reduce brilliance, obscure color, or otherwise detract from the gemstone’s beauty. Blue sapphires of one-carat weight or more are not usually cut to calibrated sizes or standard shapes. Each gemstone is shaped to maximize the color and weight of the gemstone.
-                                    </p>
-                                    <p>
-                                        In pink sapphires, cutting can influence color in surprising ways. Sapphires are dichroic gemstone, meaning their color varies depending on the angle from which it is viewed. Viewed in one direction, most blue sapphires appear blue to violet-blue. From another direction, they will appear slightly greenish blue. A skilled cutter will orient their gemstone so that the blue to violet-blue color shows through the finished gem’s crown.
-                                    </p>
-                                    <p>
-                                        Silk inclusions are also acceptable in blue sapphires, as long as they are not so dense as to compromise color or brilliance. In fact, silk inclusions can increase the value of a sapphire. The heat treatments used to alter color and clarity in blue sapphires break down rutile silk, so the presence of intact silk indicates that a sapphire is unheated. Certain other solid and liquid inclusions burst or deform under extreme heat and are also useful indicators of heat treatment.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="greenEmeralds">
+
+                        <div class="tab-pane fade in active" id="colorGemst">
                             <div class="sapphires-tab-box clearfix">
                                 <div class="one-sapphires">
-                                    <div class="box-img2">
-                                        <img src="/catalog/view/theme/canary/img/fine/img14.png" alt="img">
-                                        <div class="search-sapphires">
-                                            <a href="#" class="btn-sapphires">Search green emerald</a>
-                                        </div>
-                                    </div>
-                                    <div class="title2">Green emerald</div>
+
                                     <p>
-                                        Green emerald is considered a primary color gemstone; the purer the primary hue, the more valuable the gemstone. Blue sapphires are colored by trace amounts of titanium and iron. (By increasing the level of titanium and iron the color saturation is also increased.) The most common secondary hues found in blue sapphires are purple, violet, and green. Violet and purple can contribute to the overall beauty of the color, while green is considered to be the bane of a blue sapphire. The problem is that all blue sapphires will have a greenish component when viewed at the right angle. It is the cutter that makes sure that the green is not part of the face up position in a sapphire. When gray is included in the overall color of the gemstone, often referred to as a gray mask, the sapphire will have a cool or steely quality as opposed to the normal warm velvety hue of a sapphire. Gray is the normal saturation modifier or mask found in blue sapphires and will often mix with green.
-                                    </p>
-                                    <p>
-                                        Green emerald that are eye-clean or entirely free of inclusions are uncommon, especially in larger sizes. However, blue sapphires with some internal inclusions are still highly valued, as long as the inclusions do not reduce brilliance, obscure color, or otherwise detract from the gemstone’s beauty. Blue sapphires of one-carat weight or more are not usually cut to calibrated sizes or standard shapes. Each gemstone is shaped to maximize the color and weight of the gemstone.
-                                    </p>
-                                    <p>
-                                        In green emerald, cutting can influence color in surprising ways. Sapphires are dichroic gemstone, meaning their color varies depending on the angle from which it is viewed. Viewed in one direction, most blue sapphires appear blue to violet-blue. From another direction, they will appear slightly greenish blue. A skilled cutter will orient their gemstone so that the blue to violet-blue color shows through the finished gem’s crown.
-                                    </p>
-                                    <p>
-                                        Silk inclusions are also acceptable in blue sapphires, as long as they are not so dense as to compromise color or brilliance. In fact, silk inclusions can increase the value of a sapphire. The heat treatments used to alter color and clarity in blue sapphires break down rutile silk, so the presence of intact silk indicates that a sapphire is unheated. Certain other solid and liquid inclusions burst or deform under extreme heat and are also useful indicators of heat treatment.
+                                        Gemstone’s color is based on the purity of its hue, depth of its tone and color saturation. These three characteristics are important to determining the value and quality of the gemstone. Most gemstones have been treated in some way to enhance their color, with the most common treatment being heat treatment.
                                     </p>
                                 </div>
                             </div>
@@ -977,65 +827,34 @@
                         <div class="tab-pane fade" id="redRubies">
                             <div class="sapphires-tab-box clearfix">
                                 <div class="one-sapphires">
-                                    <div class="box-img2">
-                                        <img src="/catalog/view/theme/canary/img/fine/img12.png" alt="img">
-                                        <div class="search-sapphires">
-                                            <a href="#" class="btn-sapphires">Search red rubies</a>
-                                        </div>
-                                    </div>
-                                    <div class="title2">Red rubies</div>
-                                    <p>
-                                        Red rubies is considered a primary color gemstone; the purer the primary hue, the more valuable the gemstone. Blue sapphires are colored by trace amounts of titanium and iron. (By increasing the level of titanium and iron the color saturation is also increased.) The most common secondary hues found in blue sapphires are purple, violet, and green. Violet and purple can contribute to the overall beauty of the color, while green is considered to be the bane of a blue sapphire. The problem is that all blue sapphires will have a greenish component when viewed at the right angle. It is the cutter that makes sure that the green is not part of the face up position in a sapphire. When gray is included in the overall color of the gemstone, often referred to as a gray mask, the sapphire will have a cool or steely quality as opposed to the normal warm velvety hue of a sapphire. Gray is the normal saturation modifier or mask found in blue sapphires and will often mix with green.
-                                    </p>
-                                    <p>
-                                        Red rubies that are eye-clean or entirely free of inclusions are uncommon, especially in larger sizes. However, blue sapphires with some internal inclusions are still highly valued, as long as the inclusions do not reduce brilliance, obscure color, or otherwise detract from the gemstone’s beauty. Blue sapphires of one-carat weight or more are not usually cut to calibrated sizes or standard shapes. Each gemstone is shaped to maximize the color and weight of the gemstone.
-                                    </p>
-                                    <p>
-                                        In red rubies, cutting can influence color in surprising ways. Sapphires are dichroic gemstone, meaning their color varies depending on the angle from which it is viewed. Viewed in one direction, most blue sapphires appear blue to violet-blue. From another direction, they will appear slightly greenish blue. A skilled cutter will orient their gemstone so that the blue to violet-blue color shows through the finished gem’s crown.
-                                    </p>
-                                    <p>
-                                        Silk inclusions are also acceptable in blue sapphires, as long as they are not so dense as to compromise color or brilliance. In fact, silk inclusions can increase the value of a sapphire. The heat treatments used to alter color and clarity in blue sapphires break down rutile silk, so the presence of intact silk indicates that a sapphire is unheated. Certain other solid and liquid inclusions burst or deform under extreme heat and are also useful indicators of heat treatment.
-                                    </p>
+                                    <p>Almost every gemstone contains inclusions. Some gemstones are even more prized with their inclusions. Gemstones that contain a small amount to moderate amount of inclusions are typically the best value. Certain gemstones are often treated to reduce the visibility of inclusions, such as emeralds.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="gemstoneAnatomy">
-                            <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
-                                <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                </p>
-                            </div>
-                            <div class="wrapper-img">
-                                <img src="/catalog/view/theme/canary/img/fine/img13.png" alt="img" width="580">
-                            </div>
-                            <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
-                                <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                </p>
-                                <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                            </div>
-                            <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
-                                <p>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
-                                </p>
-                                <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                            </div>
-                            <div class="block-p">
-                                <p>
-                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                                <p>
-                                    tiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </p>
-                            </div>
+                            <p>
+                                Colored gemstones are different from diamonds when is comes to cut. There is not a specific “ideal” cut that produces the most brilliance. Colored gemstones are cut to show the most even, beautiful color possible while maximizing the size.
+                            </p>
                         </div>
+
+                        <div class="tab-pane fade" id="gemstoneSize">
+                            <p>
+                                Each gemstone has a different physical weight, so the actual carat weight of each is not a good representation of the visual size. Refer to the diameter of each gemstone to determine how large the gemstone will be.
+                            </p>
+                        </div>
+
+                        <div class="tab-pane fade" id="gemstoneTreatments">
+                            <p>
+                                Almost all gemstones today are treated in some way, including the gemstones sold by Brilliant Canary. Gemstones are treated to enhance their appearance. The most common treatment is heat treatment to enhance color. Another common treatment is wax, resin or oil infusion to improve clarity.
+                            </p>
+                        </div>
+
+                        <div class="tab-pane fade" id="gemstoneBirthstones">
+                            <p>
+                                Every month has a certain gemstone, or two, which accompanies a persons month of birth. Birthstones are a fun way to wear and celebrate your own birth month or the birth month of your loved ones.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1050,7 +869,7 @@
                         <!--<li><a href="#idealCut" data-toggle="tab">IDEAL CUT</a></li>-->
                         <!--<li><a href="#fancyColor" data-toggle="tab">FANCY COLOR</a></li>-->
                         <li><a href="#grading" data-toggle="tab">GRADING</a></li>
-                        <li><a href="#choosePerfect" data-toggle="tab">CHOOSE THE PERFECT DIAMOND</a></li>
+                        <li><a href="#choosePerfect" data-toggle="tab">SELECTING YOUR PERFECT DIAMOND</a></li>
                         <li><a href="#diamondCare" data-toggle="tab">DIAMOND CARE</a></li>
                     </ul>
                 </div>
@@ -1077,46 +896,24 @@
                                 </div>
                                 <div id="csTab1" class="one-sapphires active">
                                     <div class="block-p">
-                                        <div class="article-p">How to Select Your Perfect Diamond</div>
-                                        <p>
-                                            When selecting your perfect diamond, take the time to consider the 4Cs and determine what is the most important factors in a diamond for you. The 4Cs consist of: Cut, Color, Clarity and Carat Weight.
+                                        <div class="article-p">Anatomy of a Diamond </div>
 
-                                        </p>
-                                        <p>
-                                            <b>Cut:</b>  A diamond’s cut is the most important characteristic in determining a diamond’s beauty. The cut of a diamond refers not to its visual shape, but its ability to properly reflect light. A diamond cut to the highest standards of proportion, provides the most beauty and sparkle.
-                                        </p>
-                                        <p>
-                                            <b>Color:</b>  A diamond’s color grade is based on a diamond’s lack of color. The color scale ranges from D to Z, with D being absolutely colorless and Z being light yellow in color. The higher the color grade, the higher the value of the diamond because of the rarity of the stone.
-                                        </p>
-                                        <p>
-                                            <b>Clarity:</b> The clarity of a diamond describes how clear a diamond looks. Clarity is judged by small, naturally occurring imperfections in a diamond known as clarity characteristics. These size and number of these characteristics can effect a diamonds clarity grade and overall beauty.
-                                        </p>
-                                        <p>
-                                            <b>Carat Weight:</b>  Carat is the most visible characteristic of a diamond and refers to the measure of a diamond’s weight. Diamonds with a higher carat weight are always more valuable, because they are found in nature much less often than smaller diamonds. Diamond prices increase substantially as the carat weight increases.
-                                        </p>
-                                        <p>
-                                            For more information on the 4Cs, please visit our 4C’s section or call to speak with one of our gemologists at <a href="tel:800-214-6550">800-214-6550</a> and we will be happy to answer any questions you may have.
-                                        </p>
                                     </div>
                                     <div class="wrapper-img">
                                         <img src="/catalog/view/theme/canary/img/fine/img43.png" alt="img" width="450">
                                     </div>
                                     <div class="block-p">
-                                        <div class="article-p">Diamond Anatomy</div>
-                                        <p>
-                                            You should also consider the shape of your diamond when selecting your perfect stone. Your perfect diamond would not be yours without your unique style and shape preference. Maybe you prefer a classic look with a round brilliant diamond solitaire, or perhaps a pear shape diamond with a halo setting is just what your heart desires. No matter what you prefer, we are sure to have the perfect diamond and setting to give you the engagement ring of your dreams!
-                                            To learn more about different diamond shapes, please see our Diamond Shape section or call to speak with one of our gemologists at <a href="tel:800-214-6550">800-214-6550</a>.
 
-                                        </p>
-                                        <p>
-                                            The last aspect in selecting your perfect diamond is your budget. At Brilliant Canary, we have a vast range of diamonds for you to choose from in a wide range of prices. No matter what your budget, we can help you find the perfect diamond to make your heart soar!
-                                            If you have any questions about selecting the perfect diamond for you and your partner, please call us at <a href="tel:800-214-6550">800-214-6550</a> or email us at
-                                            <a href="mailto:info@brilliantcanary.com">info@brilliantcanary.com</a>.
 
-                                        </p>
-                                        <p>
-                                            *Please note, when referring to “perfect” diamond, we at Brilliant Canary are referring to the perfect diamond for you.  Every person has different preferences and finding the diamond that has the attributes you prefer is how we will help you find your perfect diamond.
-                                        </p>
+                                        <span class="text-left"><p>1.Diameter: The width of a diamond measured from edge to edge through the girdle.</p>
+                                        <p>2. Table: The largest facet on the top of a diamond.</p>
+                                        <p>3. Crown: The top part of a diamond, from the girdle to the table</p>
+                                        <p>4. Girdle: The narrow edge of the diamond where the crown and pavilion come together.</p>
+                                        <p>5. Pavilion: The bottom part of the diamond, from the girdle to the culet.</p>
+                                        <p>6. Culet: The point or facet on the very bottom of a diamond.</p>
+                                        <p>7. Depth: The entire height of a diamond, measured from the culet to the table</p></span>
+
+
                                     </div>
 
                                 </div>
@@ -1271,7 +1068,7 @@
                                 </div>
                                 <div id="csTab5" class="one-sapphires">
                                     <div class="block-p">
-                                        <div class="article-p">FLUORESCENCE – Understanding Brilliance, Dispersion & Scintillation</div>
+                                        <div class="article-p">FLUORESCENCE</div>
 
                                         <p>Fluorescence refers to a diamond or gemstone’s ability to emit a glow when exposed to ultra violet light. This phenomenon is naturally occurring and can be seen in many different gemstones. In diamonds, fluorescence is typically seen as a blue in color, but occasionally diamonds can fluoresce colors of green, yellow, white, pink or even red. A diamond’s fluorescence is not visible under typical light conditions and not seen by the naked eye.</p>
 
@@ -1281,24 +1078,16 @@
 
 
                                     </div>
-                                    <div class="wrapper-img">
+                                    <!--<div class="wrapper-img">
                                         <img src="/catalog/view/theme/canary/img/fine/img80.png" alt="img" width="600">
-                                    </div>
+                                    </div>-->
 
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="shapes">
                             <div class="box-types-tab clearfix">
-                                <div class="stat-text">
-                                    <div class="stat-title">
-                                        Diamond Shapes
-                                    </div>
-                                    This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                                </div>
-                                <div class="stat-img">
-                                    <img src="/catalog/view/theme/canary/img/fine/img63.png" alt="img">
-                                </div>
+
                                 <div class="one-line-symmetry2 clearfix">
                                     <div class="box-ws">
                                         <img src="/image/enducation_shapes/round.jpg" alt="img">
@@ -1494,7 +1283,6 @@
                                 </p>
                             </div>
                             <div class="block-p">
-                                <div class="article-p">Proportion – Understanding Brilliance, Dispersion &amp; Scintillation</div>
                                 <p>
                                     The last aspect in selecting your perfect diamond is your budget. At Brilliant Canary, we have a vast range of diamonds for you to choose from in a wide range of prices. No matter what your budget, we can help you find the perfect diamond to make your heart soar!
                                 </p>
@@ -1786,30 +1574,26 @@
                                 <div id="gradingTab1" class="one-grading active">
                                     <div class="one-line text-left">
                                         <div class="box-img3">
-                                            <img src="/catalog/view/theme/canary/img/fine/img74.png" alt="img" width="420">
+                                            <img src="/catalog/view/theme/canary/img/fine/SAMPLE GIA.jpg" alt="img" width="420">
                                         </div>
                                         <div>
                                             <div class="block-p">
-                                                <div class="article-p">What is a Diamond Certificate?</div>
+                                                <div class="article-p">GIA Certified Diamonds</div>
                                                 <p>
-                                                    A diamond certificate verifies each diamond’s specifications, including its color grade, carat weight, clarity grade and cut grade. You should never buy a diamond without a diamond certificate. The most well-known grading laboratories are the Gemological Institute of America (GIA) and the American Gem Society (AGS) and the International Gemological Institute (IGI).
+                                                    Brilliant Canary only sells loose diamonds that have been graded by The Gemological Institute of America, GIA. Each loose diamond we sell comes with a diamond certificate which includes your diamonds unique specifications including, its color grade, clarity grade, carat weight and cut grade.
                                                 </p>
                                             </div>
                                             <div class="block-p">
                                                 <p>
-                                                    A diamond's cost depends upon objective characteristics popularly known as the 4C's: Color, Clarity, Cut and Carat. The relationship between these four characteristics determines the value of a diamond. Although it is commonly assumed that carat is the most important member of the 4C's, color, cut and clarity have a much greater impact on the appearance of a diamond.
+                                                    We choose to sell only GIA certified diamonds, because the GIA is the most respected and well-known independent grading laboratory. The GIA is a non-profit organization and known as “the world’s foremost authority gemology.”
                                                 </p>
                                             </div>
                                             <div class="block-p">
                                                 <p>
-                                                    A diamond certificate verifies each diamond’s specifications, including its color grade, carat weight, clarity grade and cut grade. You should never buy a diamond without a diamond certificate. The most well-known grading laboratories are the Gemological Institute of America (GIA) and the American Gem Society (AGS) and the International Gemological Institute (IGI).
+                                                    To read more about the 4C’s and how they contribute to your diamonds beauty and value, please view our 4C’s section or call to speak with one of our gemologists at 800-214-6550.
                                                 </p>
                                             </div>
-                                            <div class="block-p">
-                                                <p>
-                                                    A diamond's cost depends upon objective characteristics popularly known as the 4C's: Color, Clarity, Cut and Carat. The relationship between these four characteristics determines the value of a diamond. Although it is commonly assumed that carat is the most important member of the 4C's, color, cut and clarity have a much greater impact on the appearance of a diamond.
-                                                </p>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1845,37 +1629,13 @@
                                 <div id="gradingTab3" class="one-grading">
                                     <div class="one-line text-left">
                                         <div class="box-img3">
-                                            <img src="/catalog/view/theme/canary/img/fine/img76.png" alt="img" width="420">
+                                            <!--<img src="/catalog/view/theme/canary/img/fine/img76.png" alt="img" width="420">-->
                                         </div>
                                         <div>
                                             <div class="block-p">
                                                 <div class="article-p">Conflict-Free Diamonds - Our Guarantee</div>
                                             </div>
-                                            <div class="block-p">
-                                                <p>
-                                                    At , we understand that our customers care where their diamonds come from and we share that concern with you. Every diamond we sell is certified conflict-free, assuring you that our inventory was procured through legal sources. In compliance with the Patriot Act, the Kimberly Process, and various United Nations resolutions, the diamonds we sell have been obtained using legitimate means. Further, our internal guidelines exceed government requirements: we have binding contracts with our suppliers which guarantee that the diamonds they offer to us for sale are conflict-free. We do not purchase polished diamonds from sources which are not members of the professional diamond trade.
-                                                </p>
-                                            </div>
-                                            <div class="block-p">
-                                                <p>
-                                                    Blood Diamonds - Financing Death and Environmental Destruction
-                                                </p>
-                                            </div>
-                                            <div class="block-p">
-                                                <p>
-                                                    Conflict-free diamonds are those gems which were not obtained in association with human rights abuses, child labor, violence, or environmental degradation. Although the United Nation’s Kimberley Process only covers diamonds under the control of legitimate and recognized governments, conflict-free goes one step further by rejecting diamonds from governments that trade in diamonds to bankroll their conflicts. Throughout the 1990s, most of the world's diamonds came from Africa, particularly regions undergoing civil unrest. Rebel armies in parts of Africa were exploiting alluvial diamond fields to fund their wars against established governments, putting people and the environment in the middle of their conflicts. Alluvial diamonds are found just inches to a few feet below the surface, making them easier to mine, but having an adverse impact on the environment. The people working these fields were often very young and subject to exploitation, with some losing their lives or becoming permanently maimed as wars raged around them. Hence, the term blood diamonds came into being to describe these types of gems.
-                                                </p>
-                                            </div>
-                                            <div class="block-p">
-                                                <p>
-                                                    Kimberley Compliant and America's Patriot Act
-                                                </p>
-                                            </div>
-                                            <div class="block-p">
-                                                <p>
-                                                    The Kimberley Process Certification Scheme (KPCS) was established to certify the origin of rough diamonds from sources known to be conflict-free. A 2000 meeting of southern African diamond producing countries established guidelines for the KPCS, which were later adopted by the United Nations. To ensure compliance, independent auditing systems are tasked with tracking diamonds from their place of origin to delivery. Polished diamonds sold in the U.S. must adhere to the Patriot Act which requires that every U.S. dealer maintain Kimberley compliance or be subject to penalties from Homeland Security, the U.S. Justice Department, and the U.S. Treasury.
-                                                </p>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -2224,32 +1984,11 @@
                                 <img src="/catalog/view/theme/canary/img/fine/img52.png" alt="img" height="320">
                             </div>
                             <div class="block-p">
-                                <div class="article-p">SELECT THE PERFECT ENGAGEMENT RING</div>
-                                <p>
-                                    Cleaning Your Diamond Jewelry
-                                </p>
+                                <div class="article-p">Caring for Your Diamond</div>
+
 
                             </div>
-                            <div class="block-p">
-                                <p>
-                                    Depending on the setting you choose, you can soak your diamond engagement and/or wedding rings for up to 30 minutes in a solution of dishwashing liquid and water. This is best suited to prong and cathedral settings. In pave and basket settings, however, soaking the rings can increase the likelihood of the gems coming loose. Be mindful of this when you decide to soak any jewelry piece use mild dish soap in warm water and soak your jewelry for a few minutes. Using a soft cloth or cotton swab, gently scrub the metal (gold, platinum, silver) and then rinse. Repeat the process if necessary, but always proceed with caution when it comes to soaking jewelry.
-                                </p>
-                            </div>
-                            <div class="block-p">
-                                <p>
-                                    For extra shine, you can soak diamonds in window cleaner afterwards. Because glass cleaner contains some harsh chemicals, do not soak for more than a minute at a time, and do not use this process at all with rhodium. To ensure that all of the glass cleaner is rinsed off, use the same mild dish soap solution. Dip your ring into the solution, rinse it with warm water, and then dry it completely.
-                                </p>
-                            </div>
-                            <div class="block-p">
-                                <p>
-                                    You can use toothpicks to remove dirt that is lodged in between the prongs and the diamonds, but be extra careful not to scratch the metal or move the positioning of a prong. If fibers from cloth get stuck in the setting, gently use tweezers to remove them. Again, be careful of the metal. Even though diamonds can only be scratched by other diamonds, the precious metals into which they are set can be scratched more easily.
-                                </p>
-                            </div>
-                            <div class="block-p">
-                                <p>
-                                    Ionic cleaners can be used on most diamond jewelry. If your engagement ring is set with stones other than diamonds, consider other cleaning methods, as some gemstones are adversely affected by the electrical current in the ionic cleaning process.
-                                </p>
-                            </div>
+
                         </div>
                     </div>
                 </div>

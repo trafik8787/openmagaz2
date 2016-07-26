@@ -19,7 +19,7 @@
                     </div>
                     <div class="education-block">
                         <div class="title-e"><a href="/education_find#diamonds">LOOSE DIAMONDS</a></div>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                        Purchasing a diamond is a big decision! We advise you to education yourself on the many aspects of diamonds to make the best decision for you. In our education center you will learn about more than just the 4C’s (cut, color, clarity, carat weight), but every aspect that contributes to a diamond’s beauty and value.
                     </div>
                 </div>
                 <div class="one-block">
@@ -28,7 +28,7 @@
                     </div>
                     <div class="education-block">
                         <div class="title-e"><a href="/education_find#engagement_rings">ENGAGEMENT RINGS</a></div>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                        When selecting the perfect engagement ring setting, there are many things to consider. Our education center will educate you on metal options and the advantages of each, as well as the variety of engagement ring styles available to choose from. The engagement ring you pick will ultimately be determined by your budget and a reflection of your personal style.
                     </div>
                 </div>
                 <div class="one-block">
@@ -37,7 +37,7 @@
                     </div>
                     <div class="education-block">
                         <div class="title-e"><a href="/education_find#gamestones">GEMSTONES</a></div>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+
                     </div>
                 </div>
                 <div class="one-block">
@@ -46,7 +46,7 @@
                     </div>
                     <div class="education-block">
                         <div class="title-e"><a href="/education_find#wedding_rings">WEDDING RINGS</a></div>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                        Wedding rings represent your everlasting love and deciding what style to choose can seem very daunting. Wedding rings should represent the two of you as a couple as well as express your individual style. In our education center, you can learn about all the different styles of weddings rings and the benefits of each. Whether you choose to have bands that look very similar or completely different, the decision is unique to each couple’s style.
                     </div>
                 </div>
                 <div class="one-block">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="education-block">
                         <div class="title-e"><a href="/education_find#fine_jewerly">FINE JEWELRY</a></div>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                        Fine jewelry is a wonderful way to extend any woman’s jewelry collection. Our education center will educate you on the various types of fine jewelry and gemstones and all the advantages of each so you can purchase with confidence.
                     </div>
                 </div>
             </div>
