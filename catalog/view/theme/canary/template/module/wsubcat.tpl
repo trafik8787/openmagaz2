@@ -87,33 +87,38 @@
                 <div class="one-line brilliant-style height-inherit product-p-5 clearfix">
                     <div class=" btn-group-filter box-color gemstones-box rings-box" data-toggle="buttons">
                         <label class="btn btn-filter">
-                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[0]['href']?>"><i class="own-b own-b-1-1"></i><br><?php echo $wsubcategory[0]['name']?>
+                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[0]['href']?>"><i class="own-b own-b-15"></i><br><?php echo $wsubcategory[0]['name']?>
                         </label>
                         <label class="btn btn-filter">
-                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[1]['href']?>"><i class="own-b own-b-2"></i><br><?php echo $wsubcategory[1]['name']?>
+                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[1]['href']?>"><i class="own-b own-b-9"></i><br><?php echo $wsubcategory[1]['name']?>
                         </label>
                         <label class="btn btn-filter">
-                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[2]['href']?>"><i class="own-b own-b-3"></i><br><?php echo $wsubcategory[2]['name']?>
+                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[2]['href']?>"><i class="own-b own-b-gemstone-earring"></i><br><?php echo $wsubcategory[2]['name']?>
                         </label>
 
                         <label class="btn btn-filter">
-                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[3]['href']?>"> <i class="own-b own-b-4"></i><br><?php echo $wsubcategory[3]['name']?>
+                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[3]['href']?>"> <i class="own-b own-b-13"></i><br><?php echo $wsubcategory[3]['name']?>
                         </label>
                         <label class="btn btn-filter">
-                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[4]['href']?>"> <i class="own-b own-b-5"></i><br><?php echo $wsubcategory[4]['name']?>
+                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[4]['href']?>"> <i class="own-b own-b-gemstone-ring"></i><br><?php echo $wsubcategory[4]['name']?>
                         </label>
                         <label class="btn btn-filter">
-                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[5]['href']?>"> <i class="own-b own-b-6"></i><br><?php echo $wsubcategory[5]['name']?>
+                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[5]['href']?>"> <i class="own-b own-b-14"></i><br><?php echo $wsubcategory[5]['name']?>
+                        </label>
+                        <label class="btn btn-filter">
+                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[6]['href']?>"> <i class="own-b own-b-12"></i><br><?php echo $wsubcategory[6]['name']?>
+                        </label>
+                        <label class="btn btn-filter">
+                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[7]['href']?>"> <i class="own-b own-b-gemstone-fashion-necklace"></i><br><?php echo $wsubcategory[7]['name']?>
+                        </label>
+                        <label class="btn btn-filter">
+                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[8]['href']?>"> <i class="own-b own-b-diamond-bracelet"></i><br><?php echo $wsubcategory[8]['name']?>
+                        </label>
+                        <label class="btn btn-filter">
+                            <input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[9]['href']?>"> <i class="own-b own-b-gemstone-bracelet"></i><br><?php echo $wsubcategory[9]['name']?>
                         </label>
                     </div>
-                    <div class=" btn-group-filter box-color gemstones-box rings-box" data-toggle="buttons">
-                        <label class="btn btn-filter">
-                            <input type="radio"> <i class="own-b own-b-7"></i><br>Royal halo
-                        </label>
-                        <label class="btn btn-filter">
-                            <input type="radio"> <i class="own-b own-b-8"></i><br>Mille coeurs
-                        </label>
-                    </div>
+
                 </div>
 
             <?endif?>

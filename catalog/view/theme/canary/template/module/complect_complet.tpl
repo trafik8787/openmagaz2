@@ -63,10 +63,7 @@
                     <div class="one-line-information">
                         <i class="truck-ico"></i>Free FedEx Priority Overnight Shipping:
                     </div>
-                    <div class="one-line-information">
-                        <div class="red">This is Photoshop's version  of Lorem Ipsum.</div>
-                        <span>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</span>
-                    </div>
+
                     <div class="one-line-information">
                         <i class="risk-free-ico"></i>Risk-free Retail
                     </div>

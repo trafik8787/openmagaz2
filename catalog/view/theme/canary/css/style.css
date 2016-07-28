@@ -846,6 +846,11 @@ button:hover, button:focus {
         .menu > ul > li > .dropdown-inside .style-br-long li {
           margin-bottom: 7px;
           display: block; }
+
+        .menu > ul > li > .dropdown-inside .style-br-long.w-margin-li>li {
+            margin-bottom: 29px;
+            display: block;
+        }
           .menu > ul > li > .dropdown-inside .style-br-long li a {
             font-size: 12px;
             color: #444444; }
@@ -1048,6 +1053,47 @@ button:hover, button:focus {
     height: 23px;
     background: url("../img/own-b-15.png") no-repeat 2px 0; }
 
+
+    .own-b.own-b-gemstone-ring {
+        width: 55px;
+        height: 33px;
+        background: url("../img/gemstone ring.png") no-repeat 0 0;
+        background-size: 50px;
+    }
+
+    .own-b.own-b-gemstone-earring {
+        width: 55px;
+        height: 39px;
+        top: -10px;
+        position: relative;
+        background: url("../img/gemstone earring.png") no-repeat 0 0;
+        background-size: 49px;
+    }
+
+    .own-b.own-b-gemstone-fashion-necklace {
+        width: 27px;
+        height: 42px;
+        top: -8px;
+        position: relative;
+        background: url("../img/gemstone fashion necklace.png") no-repeat 0 0;
+        background-size: 24px;
+    }
+
+    .own-b.own-b-diamond-bracelet {
+        width: 27px;
+        height: 27px;
+        background: url("../img/diamond bracelet.png") no-repeat 0 0;
+        background-size: 24px;
+    }
+
+    .own-b.own-b-gemstone-bracelet {
+        width: 27px;
+        height: 26px;
+        background: url("../img/gemstone bracelet.png") no-repeat 0 0;
+        background-size: 24px;
+    }
+
+
 .ul-first-drop {
   margin-bottom: 30px; }
 
@@ -1059,7 +1105,7 @@ button:hover, button:focus {
 
 .menu > ul > li > .dropdown-inside .style-br-long .wrap-ico3 {
   width: 25px;
-  margin-right: 10px;
+  margin-right: 25px;
   text-align: center; }
 
 .ring-size-list .size-radio .btn {
@@ -3133,7 +3179,7 @@ button:hover, button:focus {
     display: block !important; }
 
   .step-product .one-block {
-    height: 213px;
+    height: 175px;
       padding: 17px 0 0 61px;
     position: relative;
     z-index: 2;
@@ -3214,7 +3260,7 @@ button:hover, button:focus {
       position: relative; }
     .step-product .one-block.active {
         width: 110%;
-        height: 245px;
+        height: 207px;
         margin-top: -15px;
         left: 10px;
         z-index: 3; }
@@ -3923,7 +3969,7 @@ button:hover, button:focus {
   color: #ff5959; }
 .filter-box .filter-wrapper .box-color label {
   height: 73px;
-  padding: 10px 10px;
+  padding: 10px 8px;
   display: inline-block;
   position: relative; }
   .filter-box .filter-wrapper .box-color label.active:before {
