@@ -170,7 +170,7 @@
                             </li>
                         </ul>
                         <div class="row clearfix">
-                            <div class="col-md-5 col-sm-5 col-xs-5">
+                            <!--<div class="col-md-5 col-sm-5 col-xs-5">
                                 <div class="title">designer  preset colections</div>
                                 <ul class="style-br-long">
                                     <li>
@@ -180,12 +180,12 @@
                                         <a href="#"><i class="brilliant-ico brilliant-s7"></i> <span>Designer  preset colections</span></a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div>-->
                             <div class="col-md-7 col-sm-7 col-xs-7 text-right">
                                 <img src="/catalog/view/theme/canary/img/img13.png" alt="img" class="img-under-style">
                             </div>
                         </div>
-                        <div class="clearfix link-drop-menu">
+                        <!--<div class="clearfix link-drop-menu">
                             <div class="pull-left">
                                 <a href="#">START WITH A SETTING </a>
                                 <a href="#">START WITH A DIAMOND</a>
@@ -194,7 +194,7 @@
                                 <a href="#">inspiration gallery</a>
                             </div>
 
-                        </div>
+                        </div>-->
                     </div>
                 </li>
 
