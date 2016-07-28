@@ -87,10 +87,10 @@
                     <img src="/catalog/view/theme/canary/img/diamond-shape.jpg" alt="img">
                 </span>
                 <span class="title">
-                    <span><?=$index?>.CHOOSE YOUR</span>  DIAMOND
+                    <span><?=$index?>.SELECT YOUR</span>  DIAMOND
                 </span>
                 <span class="text">
-                    from our vast range of certified diamonds, in various carat weights and shapes like Princess, Round, Heart.
+                    Select from thousands of GIA certified diamonds.
                 </span>
                 <?php if (!empty($CanaryDiamontCom)):?>
                     <div>
@@ -119,7 +119,7 @@
                     <span><?=$index?>.SELECT YOUR</span> SETTING
                 </span>
                 <span class="text">
-                    We offer both white gold or yellow gold either in 4 prong or 6 prongs.
+                    Pick the perfect setting from our large collection
                 </span>
                 <?php if (!empty($CanaryProductCom)):?>
                     <div>
@@ -149,7 +149,7 @@
                     <span>3.COMPLETE YOUR</span> RING
                 </span>
                 <span class="text">
-                    by choosing your ring size. Your ring will be couriered to you.
+                    Free shipping via FedEx® on every order.
                 </span>
             </a>
         </div>
