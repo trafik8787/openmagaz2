@@ -72,11 +72,27 @@
                 <div class="panel-body">
                     <ul class="brilliant-style">
 
-                        <?foreach ($categories[1]['children'] as $key =>$row):?>
-                            <li>
-                                <a href="<?=$row['href']?>"><span class="box-ico"><i class="brilliant-ico brilliant-s<?=$key+1?>"></i></span><span><?=$row['name']?></span></a>
-                            </li>
-                        <?endforeach?>
+                        <li>
+                            <a href="<?php echo $categories[1]['children'][0]['href']?>" class="w-general-category"><span class="box-ico"><i class="brilliant-ico brilliant-s1"></i></span><span><?php echo $categories[1]['children'][0]['name']?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $categories[1]['children'][1]['href']?>" class="w-general-category"><span class="box-ico"><i class="brilliant-ico brilliant-s2"></i></span><span><?php echo $categories[1]['children'][1]['name']?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $categories[1]['children'][2]['href']?>" class="w-general-category"><span class="box-ico"><i class="brilliant-ico brilliant-s7"></i></span><span><?php echo $categories[1]['children'][2]['name']?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $categories[1]['children'][3]['href']?>" class="w-general-category"><span class="box-ico"><i class="brilliant-ico brilliant-s5"></i></span><span><?php echo $categories[1]['children'][3]['name']?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $categories[1]['children'][4]['href']?>" class="w-general-category"><span class="box-ico"><i class="brilliant-ico brilliant-s8"></i></span><span><?php echo $categories[1]['children'][4]['name']?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $categories[1]['children'][5]['href']?>" class="w-general-category"><span class="box-ico"><i class="brilliant-ico brilliant-s3"></i></span><span><?php echo $categories[1]['children'][5]['name']?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $categories[1]['children'][6]['href']?>" class="w-general-category"><span class="box-ico"><i class="brilliant-ico brilliant-s6"></i></span><span><?php echo $categories[1]['children'][6]['name']?></span></a>
+                        </li>
 
                     </ul>
                 </div>

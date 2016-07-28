@@ -8,8 +8,35 @@
                 <div class="one-line brilliant-style height-inherit w-group-wsubcat">
                     <div class=" btn-group-filter box-color gemstones-box rings-box" data-toggle="buttons">
                         <?php foreach ($wsubcategory as $key => $row):?>
+                                <?php
+
+                                    switch ($key) {
+                                        case 0:
+                                            $brilliant_s = 1;
+                                            break;
+                                        case 1:
+                                            $brilliant_s = 2;
+                                            break;
+                                        case 2:
+                                            $brilliant_s = 7;
+                                            break;
+                                        case 3:
+                                            $brilliant_s = 5;
+                                            break;
+                                        case 4:
+                                            $brilliant_s = 8;
+                                            break;
+                                        case 5:
+                                            $brilliant_s = 3;
+                                            break;
+                                         case 6:
+                                            $brilliant_s = 6;
+                                            break;
+                                    }
+                                ?>
+
                                 <label class="btn btn-filter <?php if ($child_id == $row['cat_id']):?> active <?endif?>">
-                                    <input type="radio" class="w-wsubcat" data-href="<?php echo $row['href']?>"> <i class="brilliant-ico brilliant-s<?=$key+1?>"></i>
+                                    <input type="radio" class="w-wsubcat" data-href="<?php echo $row['href']?>"> <i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i>
                                     <br><?php echo $row['name']?>
                                 </label>
 

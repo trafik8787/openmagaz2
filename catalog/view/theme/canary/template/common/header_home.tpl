@@ -40,7 +40,7 @@
 
 
 
-<?//dd($categories[2])?>
+<?//dd($categories[1])?>
 
 <body>
 <header>
@@ -145,12 +145,29 @@
                     <div class="dropdown-inside">
                         <div class="title">engagement setting rings</div>
                         <ul class="brilliant-style">
-                            <?foreach ($categories[1]['children'] as $key => $row):?>
-                                <li>
-                                    <a href="<?php echo $row['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s<?=$key+1?>"></i><br/><?php echo $row['name']?></a>
-                                </li>
-                            <?endforeach?>
 
+
+                            <li>
+                                <a href="<?php echo $categories[1]['children'][0]['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s1"></i><br/><?php echo $categories[1]['children'][0]['name']?></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $categories[1]['children'][1]['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s2"></i><br/><?php echo $categories[1]['children'][1]['name']?></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $categories[1]['children'][2]['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s7"></i><br/><?php echo $categories[1]['children'][2]['name']?></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $categories[1]['children'][3]['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s5"></i><br/><?php echo $categories[1]['children'][3]['name']?></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $categories[1]['children'][4]['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s8"></i><br/><?php echo $categories[1]['children'][4]['name']?></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $categories[1]['children'][5]['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s3"></i><br/><?php echo $categories[1]['children'][5]['name']?></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $categories[1]['children'][6]['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s6"></i><br/><?php echo $categories[1]['children'][6]['name']?></a>
+                            </li>
                         </ul>
                         <div class="row clearfix">
                             <div class="col-md-5 col-sm-5 col-xs-5">
