@@ -722,22 +722,40 @@
                 <div class="panel-body product-panel-body center-bl">
                     <div class="tab-content">
 
-                        <div class="tab-pane fade in active" id="colorGemst">
-                            <div class="sapphires-tab-box clearfix">
-                                <div class="one-sapphires">
+                        <div class="tab-pane fade in active text-left" id="colorGemst">
 
-                                    <p>
-                                        Gemstone’s color is based on the purity of its hue, depth of its tone and color saturation. These three characteristics are important to determining the value and quality of the gemstone. Most gemstones have been treated in some way to enhance their color, with the most common treatment being heat treatment.
-                                    </p>
-                                </div>
-                            </div>
+                            <p>
+                                Gemstone’s color is based on the purity of its hue, depth of its tone and color saturation. These three characteristics are important to determining the value and quality of the gemstone. Most gemstones have been treated in some way to enhance their color, with the most common treatment being heat treatment.
+                            </p>
+                            <br>
+                            <p>
+                                <b>Hue:</b>
+                                Hue refers to a gemstone’s actual color seen by the eye. The most valuable gemstones show a pure color and very slight hues of other colors. An example of hue, is when a sapphire is described as “slightly purplish-blue” or “slightly greenish-blue.” Blue would be the primary color and with the former color being the secondary. A gemstone’s value can be greatly affected by its hue.
+                            </p>
+                            <br>
+
+                            <p>
+                                <b>Tone:</b>
+                                Tone refers to a gemstone’s lightness or darkness. Tone is described as “very light,” “light,” “medium-light,” “medium,” “medium-dark,” “dark,” and “very dark.” The most valuable and desired gemstones feature tones between the medium-light to medium-dark range.
+                            </p>
+                            <br>
+
+                            <p>
+                                <b>Saturation:</b>
+                                Saturation refers to a gemstone’s strength of color or color purity. Saturation is judged by how much or how little gray or brown is seen in a gemstone. The most valuable and desired gemstones feature “strong” or “vivid” color saturation.
+                            </p>
+                            <br>
+
+                            <p>
+                                If you have any questions regarding hue, tone and saturation or how to select the perfect gemstone for you, please call one of our jewelry experts at 800-21 4-6550
+                            </p>
+
+
                         </div>
                         <div class="tab-pane fade" id="redRubies">
-                            <div class="sapphires-tab-box clearfix">
-                                <div class="one-sapphires">
-                                    <p>Almost every gemstone contains inclusions. Some gemstones are even more prized with their inclusions. Gemstones that contain a small amount to moderate amount of inclusions are typically the best value. Certain gemstones are often treated to reduce the visibility of inclusions, such as emeralds.</p>
-                                </div>
-                            </div>
+
+                            <p>Almost every gemstone contains inclusions. Some gemstones are even more prized with their inclusions. Gemstones that contain a small amount to moderate amount of inclusions are typically the best value. Certain gemstones are often treated to reduce the visibility of inclusions, such as emeralds.</p>
+
                         </div>
                         <div class="tab-pane fade" id="gemstoneAnatomy">
                             <p>
@@ -747,20 +765,36 @@
 
                         <div class="tab-pane fade" id="gemstoneSize">
                             <p>
-                                Each gemstone has a different physical weight, so the actual carat weight of each is not a good representation of the visual size. Refer to the diameter of each gemstone to determine how large the gemstone will be.
+                                Every gemstone has properties unique to itself, including the gemstone’s physical weight. For this reason, a one carat round cut topaz, a one carat round cut sapphire and a one carat round cut diamond will not appear to be the same visual size. Each of these three will vary slightly in diameter. To better understand the visual size of each gemstone and how they will appear when you purchase them, refer to the measurements of each stone.
                             </p>
                         </div>
 
                         <div class="tab-pane fade" id="gemstoneTreatments">
-                            <p>
-                                Almost all gemstones today are treated in some way, including the gemstones sold by Brilliant Canary. Gemstones are treated to enhance their appearance. The most common treatment is heat treatment to enhance color. Another common treatment is wax, resin or oil infusion to improve clarity.
-                            </p>
+
+                            <p>Almost all gemstones today are subject to some kind of treatment. Gemstones receive treatment to improve their appearance and beauty.</p>
+                            <br>
+                            <p>The most common form of treatment is heat. Heat treatment is often used in sapphires and rubies to enhance the color of the stone. When heat is applied to the stone it makes the color richer and more vibrant. Heat treatment is also applied to amethyst to change the color. When heat is applied to an amethyst stone, it turns yellow, creating the gemstone citrine. While these are only three examples of gemstones where heat treatment is used, this is a very common practice and used on many gemstones to improve the appearance.</p>
+                            <br>
+                            <p>Another common form of treatment is fracture filling with oil, wax or resin. This is most often used on emeralds which have many inclusions, often surface reaching. The oil, wax or resin is filled into the inclusions through the openings to help the emerald appear to have less fractures. This practice is very common. When caring for a fracture filled emerald, be very careful. Do not apply any heat or put in an ultra sonic cleaning machine, only clean gently with mild soap and water.</p>
+                            <br>
+                            <p>*Please note: All gemstones sold through Brilliant Canary are completely natural. Gemstone treatments are extremely common in the industry and purchasing a gemstone with no treatments is very rare and more expensive. If you have any questions regarding the treatments on the gemstones we sell, or how to select the perfect gemstone or gemstone jewelry for you please call one of our jewelry experts at 800-214-6550.</p>
+
+
                         </div>
 
                         <div class="tab-pane fade" id="gemstoneBirthstones">
-                            <p>
-                                Every month has a certain gemstone, or two, which accompanies a persons month of birth. Birthstones are a fun way to wear and celebrate your own birth month or the birth month of your loved ones.
-                            </p>
+                            <p>JANUARY: Garnet</p>
+                            <p>FEBRUARY: Amethyst</p>
+                            <p>MARCH: Aquamarine</p>
+                            <p>APRIL: Diamond</p>
+                            <p>MAY: Emerald</p>
+                            <p>JUNE: Pearl</p>
+                            <p>JULY: Ruby</p>
+                            <p>AUGUST: Peridot</p>
+                            <p>SEPTEMBER: Sapphire</p>
+                            <p>OCTOBER: Opal and Tourmaline</p>
+                            <p>NOVEMBER: Topaz and Citrine</p>
+                            <p>DECEMBER: Turquoise and Tanzanite</p>
                         </div>
 
                     </div>

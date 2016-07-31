@@ -809,7 +809,10 @@ button:hover, button:focus {
             margin-top: 40px; }
       .menu > ul > li > .dropdown-inside {
         width: 915px;
-        padding: 50px;
+        padding-bottom: 15px;
+        padding-top: 19px;
+        padding-right: 28px;
+        padding-left: 28px;
         position: absolute;
         z-index: 70;
         left: 0;
@@ -820,7 +823,7 @@ button:hover, button:focus {
         .menu > ul > li > .dropdown-inside .last-li-destones {
           margin-top: 40px; }
         .menu > ul > li > .dropdown-inside .title {
-          margin-bottom: 25px;
+          margin-bottom: 10px;
           font-size: 14px;
           text-align: left;
           text-transform: uppercase; }
@@ -858,7 +861,7 @@ button:hover, button:focus {
               display: inline-block;
               vertical-align: middle; }
       .menu > ul > li .img-under-style {
-        margin-top: -20px;
+        margin-top: 0;
         max-width: 100%; }
 
 .gemstones-box li a > * {
@@ -1022,12 +1025,13 @@ button:hover, button:focus {
     background: url("../img/own-b-7.png") no-repeat -5px -9px; }
   .own-b.own-b-8 {
     width: 64px;
-    height: 34px;
+    height: 24px;
     background: url("../img/own-b-8.png") no-repeat center/contain; }
   .own-b.own-b-9 {
-    width: 41px;
-    height: 18px;
-    background: url("../img/own-b-9.png") no-repeat -1px -3px; }
+      width: 41px;
+      height: 42px;
+      background: url("../img/own-b-9.png") no-repeat -1px 18px;
+  }
   .own-b.own-b-10 {
     width: 41px;
     height: 20px;
@@ -1041,55 +1045,58 @@ button:hover, button:focus {
     height: 42px;
     background: url("../img/own-b-12.png") no-repeat -1px 0; }
   .own-b.own-b-13 {
-    width: 44px;
-    height: 25px;
-    background: url("../img/own-b-13.png") no-repeat 0 0; }
+      width: 44px;
+      height: 42px;
+      background: url("../img/own-b-13.png") no-repeat 0 16px;
+  }
   .own-b.own-b-14 {
-    width: 23px;
-    height: 38px;
-    background: url("../img/own-b-14.png") no-repeat 2px 0; }
+      width: 23px;
+      height: 42px;
+      top: 4px;
+      position: relative;
+      background: url("../img/own-b-14.png") no-repeat 2px 0;
+  }
   .own-b.own-b-15 {
-    width: 41px;
-    height: 23px;
-    background: url("../img/own-b-15.png") no-repeat 2px 0; }
+      width: 55px;
+      height: 42px;
+      background: url("../img/gemstone ring.png") no-repeat 0 12px;
+      background-size: 50px;
+  }
 
 
     .own-b.own-b-gemstone-ring {
         width: 55px;
-        height: 33px;
-        background: url("../img/gemstone ring.png") no-repeat 0 0;
-        background-size: 50px;
+        height: 42px;
+        position: relative;
+        background: url("../img/gemstone earring.png") no-repeat 0 5px;
+        background-size: 49px;
     }
 
     .own-b.own-b-gemstone-earring {
         width: 55px;
-        height: 39px;
-        top: -10px;
-        position: relative;
-        background: url("../img/gemstone earring.png") no-repeat 0 0;
+        height: 42px;
+        background: url("../img/gemstone earring.png") no-repeat 0 4px;
         background-size: 49px;
     }
 
     .own-b.own-b-gemstone-fashion-necklace {
         width: 27px;
         height: 42px;
-        top: -8px;
-        position: relative;
         background: url("../img/gemstone fashion necklace.png") no-repeat 0 0;
         background-size: 24px;
     }
 
     .own-b.own-b-diamond-bracelet {
         width: 27px;
-        height: 27px;
-        background: url("../img/diamond bracelet.png") no-repeat 0 0;
+        height: 42px;
+        background: url("../img/diamond bracelet.png") no-repeat 0 13px;
         background-size: 24px;
     }
 
     .own-b.own-b-gemstone-bracelet {
         width: 27px;
-        height: 26px;
-        background: url("../img/gemstone bracelet.png") no-repeat 0 0;
+        height: 42px;
+        background: url("../img/gemstone bracelet.png") no-repeat 0 14px;
         background-size: 24px;
     }
 
@@ -3337,14 +3344,15 @@ button:hover, button:focus {
   padding: 10px 5px !important; }
 .filter-box .one-line {
   height: 100px;
-  margin-bottom: 25px; }
+  margin-bottom: 15px; }
   .filter-box .one-line .filter-r {
     float: right; }
   .filter-box .one-line .gender-title .title {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     font-size: 21px;
     text-transform: uppercase;
-    text-align: center; }
+    text-align: center;
+  }
     .filter-box .one-line .gender-title .title:nth-child(1) {
       margin-left: 210px;
       float: left; }
@@ -3389,7 +3397,7 @@ button:hover, button:focus {
       position: relative;
       vertical-align: bottom; }
 .filter-box .brilliant-style {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   text-align: justify;
   position: relative; }
   .filter-box .brilliant-style li {
@@ -3968,10 +3976,12 @@ button:hover, button:focus {
 .filter-box .filter-wrapper .box-color.rings-box .active {
   color: #ff5959; }
 .filter-box .filter-wrapper .box-color label {
-  height: 73px;
-  padding: 10px 8px;
-  display: inline-block;
-  position: relative; }
+    height: 88px;
+    padding: 18px 8px;
+    display: inline-block;
+    position: relative;
+}
+
   .filter-box .filter-wrapper .box-color label.active:before {
     width: 20px;
     top: 0;
