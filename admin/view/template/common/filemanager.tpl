@@ -60,8 +60,21 @@
 $('a.thumbnail').on('click', function(e) {
 	e.preventDefault();
 
+
+
 	<?php if ($thumb) { ?>
-	$('#<?php echo $thumb; ?>').find('img').attr('src', $(this).find('img').attr('src'));
+
+        if ($(this).children().is('video')) {
+            $('#<?php echo $thumb; ?>').children('img').detach();
+            $('#<?php echo $thumb; ?>').append('<video src="'+$(this).children('video').attr('src')+'" onclick="this.play();" width="100px" height="100px"></video>');
+        } else {
+            $('#<?php echo $thumb; ?>').children('video').detach();
+            if ($('#<?php echo $thumb; ?>').children().is('img')) {
+                $('#<?php echo $thumb; ?>').find('img').attr('src', $(this).find('img').attr('src'));
+            } else {
+                $('#<?php echo $thumb; ?>').append('<img src="'+$(this).find('img').attr('src')+'"  data-placeholder="'+$(this).find('img').attr('src')+'" />');
+            }
+        }
 	<?php } ?>
 
 	$('#<?php echo $target; ?>').attr('value', $(this).parent().find('input').attr('value'));

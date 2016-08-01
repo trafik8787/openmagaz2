@@ -29,6 +29,8 @@ class ControllerCheckoutLogin extends Controller {
 			$data['account'] = 'register';
 		}
 
+        $data['login_facebook'] = $this->load->controller('module/login_facebook/renderButton');
+
 		$data['forgotten'] = $this->url->link('account/forgotten', '', 'SSL');
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/login.tpl')) {

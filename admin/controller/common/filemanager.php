@@ -83,11 +83,16 @@ class ControllerCommonFileManager extends Controller {
                 //dd($ext);
                 if ($ext['extension'] == 'mp4') {
                     $video = $image;
+                    $thumb = $image;
+                } else {
+                    $thumb = $this->model_tool_image->resize(utf8_substr($image, utf8_strlen(DIR_IMAGE)), 100, 100);
                 }
 
+
+                
 				$data['images'][] = array(
                     'video' => $video,
-					'thumb' => $this->model_tool_image->resize(utf8_substr($image, utf8_strlen(DIR_IMAGE)), 100, 100),
+					'thumb' => $thumb,
 					'name'  => implode(' ', $name),
 					'type'  => 'image',
 					'path'  => utf8_substr($image, utf8_strlen(DIR_IMAGE)),

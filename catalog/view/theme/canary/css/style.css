@@ -2325,7 +2325,7 @@ button:hover, button:focus {
 
 .cc-header {
   background-color: #f1f1f1;
-  padding: 20px 25px; }
+  padding: 12px 25px; }
   .cc-header:after {
     content: "";
     display: block;
@@ -2426,7 +2426,7 @@ button:hover, button:focus {
   background-color: #f9f9f9;
   border: 1px solid #e5e5e5;
   border-radius: 2px;
-  height: 50px;
+  height: 36px;
   padding: 0 20px;
   font-family: 'SegoeUI', sans-serif; }
   .shipping-input:invalid + .shipping-label {
@@ -2445,7 +2445,7 @@ button:hover, button:focus {
   line-height: 48px; }
 
 .select2-container .select2-selection--single {
-  height: 50px; }
+  height: 45px; }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
   padding: 0 20px; }

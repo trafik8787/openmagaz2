@@ -125,6 +125,7 @@ require_once(modification(DIR_SYSTEM . 'engine/registry.php'));
 require_once(DIR_SYSTEM . 'helper/general.php');
 require_once(DIR_SYSTEM . 'helper/json.php');
 require_once(DIR_SYSTEM . 'helper/utf8.php');
+require_once(DIR_SYSTEM . 'helper/Facebook/autoload.php');
 
 
 Cookie::$salt = 'dsfa78asdf78as56df75asd7f';

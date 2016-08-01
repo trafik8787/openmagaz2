@@ -173,6 +173,10 @@ class ControllerAccountLogin extends Controller {
 			$data['password'] = '';
 		}
 
+        //dd($this->request->server);
+
+        $data['login_facebook'] = $this->load->controller('module/login_facebook/renderButton');
+
 
 
         $data['form_register'] = $this->load->controller('account/register/form_register');

@@ -57,9 +57,14 @@ function in_ajax () {
 
 function HostSite ($link = null)
 {
-    $str_link = 'http://' . $_SERVER['HTTP_HOST'];
+    $http = 'http';
+    if (!empty($_SERVER['HTTPS'])) {
+        $http = 'https';
+    }
+
+    $str_link = $http.'://' . $_SERVER['HTTP_HOST'];
     if ($link != null) {
-        $str_link = 'http://' . $_SERVER['HTTP_HOST'] . $link;
+        $str_link = $http.'://' . $_SERVER['HTTP_HOST'] . $link;
     }
 
     return $str_link;

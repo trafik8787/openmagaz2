@@ -2,9 +2,6 @@
 
 
 
-
-
-
 <main class="w-general-container">
     <section class="static-page">
         <div class="center-bl">
@@ -68,10 +65,7 @@
                                 <div class="form-divider">
                                     <span>or</span>
                                 </div>
-                                <a href="#" class="social-login-btn social-login-facebook">
-                                    <span class="social-login-image"><i class="fa fa-facebook"></i></span>
-                                    <span class="social-login-text">sign in with facebook</span>
-                                </a>
+                                <?=$login_facebook?>
                             </form>
                         </div>
                     </div>

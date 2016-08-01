@@ -7,7 +7,12 @@ class ControllerCommonSeoUrl extends Controller {
         'information/faq' => 'faq',
         'information/contact' => 'contact',
         'information/education' => 'education',
-        'information/education/page_find' => 'education_find'
+        'information/education/page_find' => 'education_find',
+        'module/login_facebook' => 'loginfacebook',
+        'account/login' => 'login',
+        'account/account' => 'account',
+        'account/wishlist' => 'wishlist',
+        'account/logout' => 'logout'
     );
 
 	public function index() {
