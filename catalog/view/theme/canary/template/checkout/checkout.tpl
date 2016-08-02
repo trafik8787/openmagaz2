@@ -75,7 +75,7 @@
                     <div class="col-md-6 col-xs-6 col-sm-6">
 
 
-                        <div class="checkout-center" id="accordion">
+                        <div class="checkout-center panel-group" id="accordion">
                             <div class="panel cc-block">
                                 <!--1. SIGN IN TO CHECKOUT-->
                                 <div class="cc-header">
@@ -617,6 +617,9 @@ $(document).on('click', '#button-register', function() {
 
 // Payment Address
 $(document).on( 'click', '#button-payment-address', function() {
+
+    $(this).parents('.collapse').collapse('hide');
+
     $.ajax({
         url: 'index.php?route=checkout/payment_address/save',
         type: 'post',
@@ -709,6 +712,9 @@ $(document).on( 'click', '#button-payment-address', function() {
 
 // Shipping Address
 $(document).delegate('#button-shipping-address', 'click', function() {
+
+    $(this).parents('.collapse').collapse('hide');
+
     $.ajax({
         url: 'index.php?route=checkout/shipping_address/save',
         type: 'post',
@@ -981,6 +987,9 @@ $(document).delegate('#button-guest-shipping', 'click', function() {
 });
 
 $(document).delegate('#button-shipping-method', 'click', function() {
+
+    $(this).parents('.collapse').collapse('hide');
+
     $.ajax({
         url: 'index.php?route=checkout/shipping_method/save',
         type: 'post',
@@ -1029,6 +1038,9 @@ $(document).delegate('#button-shipping-method', 'click', function() {
 });
 
 $(document).delegate('#button-payment-method', 'click', function() {
+
+    $(this).parents('.collapse').collapse('hide');
+
     $.ajax({
         url: 'index.php?route=checkout/payment_method/save',
         type: 'post',

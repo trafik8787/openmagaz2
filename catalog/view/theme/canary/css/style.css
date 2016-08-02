@@ -2338,7 +2338,8 @@ button:hover, button:focus {
   float: left; }
 
 .cc-body {
-  padding: 0 30px; }
+    padding: 6px 2px 0 2px;
+}
 
 .cc-login-text {
   color: #ff5c5c;
