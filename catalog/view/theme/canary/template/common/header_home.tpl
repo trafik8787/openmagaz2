@@ -46,7 +46,7 @@
 <header>
     <div class="user-line index-page">
         <div class="center-bl clearfix">
-            <a href="/" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+            <a href="/" class="logo w-general-category"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
             <div class="telephone">
                 <i class="ico-telephone"></i>
                 <span><?php echo $telephone; ?> | 24/7</span>

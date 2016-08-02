@@ -238,7 +238,7 @@
         <div class="user-line">
             <div class="center-bl clearfix">
                 <button class="menu-l-open"><i class="fa fa-bars"></i></button>
-                <a href="/" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+                <a href="/" class="logo w-general-category"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
                 <div class="telephone">
                     <i class="ico-telephone"></i>
                     <span><?php echo $telephone; ?> | 24/7</span>
@@ -253,7 +253,7 @@
                         </a>
                         <?php } else { ?>
 
-                        <a href="<?php echo $login; ?>">
+                        <a href="<?php echo $login; ?>" class="w-general-category">
                             <i class="man-ico"></i>
                             <span><?php echo $text_login; ?></span>
                         </a>
@@ -276,7 +276,7 @@
 
             <div class="menu">
                 <button class="menu-l-open"><i class="fa fa-bars"></i></button>
-                <a href="#" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+                <a href="/" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
                 <ul>
                     <li class="dropdown-b" data-target="menu1">
                         <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a><!--DIAMONDS-->
