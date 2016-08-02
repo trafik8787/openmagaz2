@@ -24,24 +24,5 @@
         </div>
         <?=$login_facebook?>
     </div>
-    <div class="w-radio">
-        <label>
-            <?php if ($account == 'register') { ?>
-            <input type="radio" name="account" value="register" checked="checked" />
-            <?php } else { ?>
-            <input type="radio" name="account" value="register" />
-            <?php } ?>
-            <?php echo $text_register; ?></label>
-    </div>
-    <?php if ($checkout_guest) { ?>
-    <div class="w-radio">
-        <label>
-            <?php if ($account == 'guest') { ?>
-            <input type="radio" name="account" value="guest" checked="checked" />
-            <?php } else { ?>
-            <input type="radio" name="account" value="guest" />
-            <?php } ?>
-            <?php echo $text_guest; ?></label>
-    </div>
-    <?php } ?>
+    <input type="radio" name="account" value="register" checked="checked" style="display: none;"/>
 </div>

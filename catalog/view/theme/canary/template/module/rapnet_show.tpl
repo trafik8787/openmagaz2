@@ -71,13 +71,13 @@
                                 <div class="box-img">
                                     <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="w-product-diamonts"><img src="<?=imageDiamont($row->shape)?>" alt="img"></a>
                                 </div>
-                                <div class="rating">
-                                    <i class="star active"></i>
-                                    <i class="star active"></i>
-                                    <i class="star active"></i>
-                                    <i class="star active"></i>
-                                    <i class="star"></i>
-                                </div>
+                                <!--*<div class="rating">*-->
+                                    <!--*<i class="star active"></i>*-->
+                                    <!--*<i class="star active"></i>*-->
+                                    <!--*<i class="star active"></i>*-->
+                                    <!--*<i class="star active"></i>*-->
+                                    <!--*<i class="star"></i>*-->
+                                <!--*</div>*-->
                                 <div class="btn-box">
                                     <a href="#" class="cart-btn-item w-diamont-button-cart-category" data-toggle="tooltip" data-placement="top" title="<?php echo $button_cart; ?>"></a>
                                     <a href="#" class="compare-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_compare; ?>"></a>

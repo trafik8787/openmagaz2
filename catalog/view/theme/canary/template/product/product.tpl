@@ -75,13 +75,13 @@
                     </div>
                     <div class="one-info one-info-last clearfix">
                         <div class="title-red">SETTING SPECIFICATIONS SKU: <?=$sku?></div>
-                        Metal: <?=list_metal($metal)?><br/>
+                        METAL: <?=list_metal($metal)?><br/>
                         <?if ($weight != ''):?>
-                            Weight: <?=$weight?> g.
+                            WEIGHT: <?=$weight?> g.
                             <br/>
                         <?endif?>
                         <?if ($width != ''):?>
-                            Width: <?=$width?> mm.
+                            WIDTH: <?=$width?> mm.
                             <br/>
                         <?endif?>
 
@@ -178,8 +178,7 @@
                         <div>
                             <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="red-btn"><?php echo $button_cart; ?></button>
 
-                            <button type="button" id="w-button-add-product-complect" data-loading-text="<?php echo $text_loading; ?>"
-                                    class="red-btn">Choose this setting</button>
+                            <button type="button" id="w-button-add-product-complect" class="red-btn">Choose this setting</button>
 
                         </div>
                     </div>

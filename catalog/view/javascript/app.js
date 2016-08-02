@@ -126,29 +126,36 @@ $(document).on('click', '#w-button-add-product-complect', function(){
     var $this = $(this);
 
     var $select = $('#product select');
+    var data = $('#product select, #product input[name=\'product_id\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select');
+    $('.text-danger').detach();
+    if ($("select option:selected").val()) {
 
-    $.ajax({
-        url: '/index.php?route=module/complect/add_product_complect',
-        type: 'post',
-        data: $('#product select, #product input[name=\'product_id\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select'),
-        dataType: 'html',
-        beforeSend: function() {
-            $this.button('loading');
-        },
-        complete: function() {
-            $this.button('reset');
-        },
-        success: function(json) {
-            $('.w-blocs-complects').empty();
-            $('.w-blocs-complects').html(json);
-            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        $.ajax({
+            url: '/index.php?route=module/complect/add_product_complect',
+            type: 'post',
+            data: data,
+            dataType: 'html',
+            beforeSend: function () {
+                $this.button('loading');
+            },
+            complete: function () {
+                $this.button('reset');
+            },
+            success: function (json) {
+                $('.w-blocs-complects').empty();
+                $('.w-blocs-complects').html(json);
+                $('html, body').animate({scrollTop: 0}, 'slow');
 
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
 
-        }
-    });
+            }
+        });
 
+    } else {
+
+        $('.dropdown').after('<div class="text-danger">SIZE required!</div>');
+    }
 });
 
 

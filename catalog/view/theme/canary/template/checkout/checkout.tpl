@@ -267,7 +267,7 @@
                             </ul>
                             <div class="checkout-info-inner-wrap checkout-info-actionsblock">
                                 <div class="ci-title">24/7 Customer Service</div>
-                                <div class="ci-phone"><i class="c-yellow-phone"></i>543 - 557 - 3456</div>
+                                <div class="ci-phone"><i class="c-yellow-phone"></i>800-214-6550</div>
                                 <div class="ci-actions-list">
                                     <a href="#" class="ci-action-item">
                                         <span class="ci-action-ico"><i class="c-yellow-chat"></i></span>
@@ -283,7 +283,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <a href="#" class="tofaq-link">Try FAQ</a>
+                            <a href="/faq" class="tofaq-link w-general-category">Try FAQ</a>
                         </div>
                     </div>
                 </div>
