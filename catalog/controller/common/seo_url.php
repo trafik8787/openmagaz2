@@ -12,7 +12,8 @@ class ControllerCommonSeoUrl extends Controller {
         'account/login' => 'login',
         'account/account' => 'account',
         'account/wishlist' => 'wishlist',
-        'account/logout' => 'logout'
+        'account/logout' => 'logout',
+        'module/complect/del_complect' => 'del_complect'
     );
 
 	public function index() {

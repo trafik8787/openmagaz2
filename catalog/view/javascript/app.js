@@ -193,7 +193,7 @@ $(document).on('click', '#w-button-add-diamond-complect', function(){
 $(document).on('click', '.w-remowe-diamond-complect', function(){
 
     $.ajax({
-        url: 'index.php?route=module/complect/del_complect',
+        url: '/del_complect',
         type: 'post',
         data: 'complect_id_diamond=1',
         dataType: 'html',
@@ -220,7 +220,7 @@ $(document).on('click', '.w-remowe-diamond-complect', function(){
 $(document).on('click', '.w-remowe-product-complect', function(){
 
     $.ajax({
-        url: 'index.php?route=module/complect/del_complect',
+        url: '/del_complect',
         type: 'post',
         data: 'complect_id_product=1',
         dataType: 'html',
