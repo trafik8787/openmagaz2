@@ -82,8 +82,8 @@
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            ©2016.
+        <div class="copyright text-center">
+            ©2016 All Rights Reserved <a href="/privacy" class="w-general-category">Privacy Policy</a>
         </div>
     </section>
 
