@@ -315,54 +315,88 @@ class ControllerModuleRapnet extends Controller {
             $page = 1;
         }
 
+        if (empty($this->GetCache($page))) {
 
-        $data = array('request' => array('header' => array('username' => $this->config->get('rapnet_name'), 'password' => $this->config->get('rapnet_pass')),
-            'body' => array(
+            $data = array('request' => array('header' => array('username' => $this->config->get('rapnet_name'), 'password' => $this->config->get('rapnet_pass')),
+                'body' => array(
 //             'search_type' => 'White',
-             'shapes' => $shape,
-            'size_from' => $carat_from,
-            'size_to' => $carat_to,
-            'color_from' => $color_from,
-            'color_to' => $color_to,
+                    'shapes' => $shape,
+                    'size_from' => $carat_from,
+                    'size_to' => $carat_to,
+                    'color_from' => $color_from,
+                    'color_to' => $color_to,
 //             'fancy_colors' => array('Yellow', 'Pink', 'Orange', 'Green', 'Gray', 'Brown', 'Blue'),
 //            'fancy_color_intensity_from' => 'Fancy Dark',
 //            'fancy_color_intensity_to' => 'Light',
-            'fluorescence_intensities' => $fluorescence_intensities_arr,
-            'clarity_from' => $clarity_from,
-            'clarity_to' => $clarity_to,
-            'cut_from' => $cut_from,
-            'cut_to' => $cut_to,
-            'polish_from' => $polish_from,
-            'polish_to' => $polish_to,
-            'symmetry_from' => $symmetry_from,
-            'symmetry_to' => $symmetry_to,
-            'price_total_from' => $price_from,
-            'price_total_to' => $price_to,
-            'labs' => $labs_arr,
-            'depth_percent_from' => $depth_from,
-            'depth_percent_to' => $depth_to,
-            'table_percent_from' => $table_from,
-            'table_percent_to' => $table_to,
-            'page_number' =>  $page,
-            'page_size' => $show,
-            'sort_by' => $sort_by,
-            'sort_direction' => $sort_direction)
-        ));
+                    'fluorescence_intensities' => $fluorescence_intensities_arr,
+                    'clarity_from' => $clarity_from,
+                    'clarity_to' => $clarity_to,
+                    'cut_from' => $cut_from,
+                    'cut_to' => $cut_to,
+                    'polish_from' => $polish_from,
+                    'polish_to' => $polish_to,
+                    'symmetry_from' => $symmetry_from,
+                    'symmetry_to' => $symmetry_to,
+                    'price_total_from' => $price_from,
+                    'price_total_to' => $price_to,
+                    'labs' => $labs_arr,
+                    'depth_percent_from' => $depth_from,
+                    'depth_percent_to' => $depth_to,
+                    'table_percent_from' => $table_from,
+                    'table_percent_to' => $table_to,
+                    'page_number' => $page,
+                    'page_size' => $show,
+                    'sort_by' => $sort_by,
+                    'sort_direction' => $sort_direction)
+            ));
 
-        //d($data);
+            //d($data);
 
-        $auth_url = "https://technet.rapaport.com/HTTP/JSON/RetailFeed/GetDiamonds.aspx";
-        $request = curl_init($auth_url);
-        curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
-        curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); // Returns response data instead of TRUE(1)
-        curl_setopt($request, CURLOPT_POSTFIELDS, json_encode($data)); // use HTTP POST to send form data
-        curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE); // uncomment this line if you get no gateway res
+            $auth_url = "https://technet.rapaport.com/HTTP/JSON/RetailFeed/GetDiamonds.aspx";
+            $request = curl_init($auth_url);
+            curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
+            curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); // Returns response data instead of TRUE(1)
+            curl_setopt($request, CURLOPT_POSTFIELDS, json_encode($data)); // use HTTP POST to send form data
+            curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE); // uncomment this line if you get no gateway res
 
-        $response = curl_exec($request);
+            $response = curl_exec($request);
+            $this->SetCache($page,$response);
+        } else {
+            $response = $this->GetCache($page);
+        }
+
 
 
         return $response;
 
+    }
+
+
+    public function SetCache($page, $value){
+        $key = 'diamond_page_'.$page.'_';
+        $get = $this->request->get;
+        unset($get['_route_']);
+        unset($get['path']);
+        unset($get['route']);
+
+        if (!empty($get)) {
+            $key .= implode(',', $get);
+        }
+        $this->cache->set($key, $value);
+    }
+
+    public function GetCache($page){
+        $key = 'diamond_page_'.$page.'_';
+        $get = $this->request->get;
+        unset($get['_route_']);
+        unset($get['path']);
+        unset($get['route']);
+
+        if (!empty($get)) {
+            $key .= implode(',', $get);
+        }
+
+        return $this->cache->get($key);
     }
 
 
@@ -410,18 +444,27 @@ class ControllerModuleRapnet extends Controller {
             $diamond_id = $id['diamond_id'];
         }
 
-        $data = array('request' => array('header' => array('username' => $this->config->get('rapnet_name'), 'password' => $this->config->get('rapnet_pass')),
-            'body' => array('diamond_id' => $diamond_id)
-        ));
+        if (empty($this->cache->get($diamond_id))) {
 
-        $auth_url = "https://technet.rapaport.com/HTTP/JSON/RetailFeed/GetSingleDiamond.aspx";
-        $request = curl_init($auth_url);
-        curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
-        curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); // Returns response data instead of TRUE(1)
-        curl_setopt($request, CURLOPT_POSTFIELDS, json_encode($data)); // use HTTP POST to send form data
-        curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE); // uncomment this line if you get no gateway res
+            $data = array('request' => array('header' => array('username' => $this->config->get('rapnet_name'), 'password' => $this->config->get('rapnet_pass')),
+                'body' => array('diamond_id' => $diamond_id)
+            ));
 
-        $response = curl_exec($request);
+            $auth_url = "https://technet.rapaport.com/HTTP/JSON/RetailFeed/GetSingleDiamond.aspx";
+            $request = curl_init($auth_url);
+            curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
+            curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); // Returns response data instead of TRUE(1)
+            curl_setopt($request, CURLOPT_POSTFIELDS, json_encode($data)); // use HTTP POST to send form data
+            curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE); // uncomment this line if you get no gateway res
+
+            $response = curl_exec($request);
+
+            $this->cache->set($diamond_id, $response);
+
+        } else {
+
+            $response = $this->cache->get($diamond_id);
+        }
 
         return $response;
     }

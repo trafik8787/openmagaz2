@@ -281,6 +281,16 @@ $(document).on('click', '#w-complide-view', function() {
 });
 
 
+// $(window).on('popstate', function(event) {
+//     console.log( window.location.href);
+//     // history.replaceState({ path: window.location.href }, '');
+//     window.location.replace(window.location.href);
+// });
+
+window.onpopstate =  function(event) {
+    // console.log( window.location.href);
+    window.location.replace(window.location.href);
+};
 
 
 
