@@ -93,7 +93,7 @@
                         <?endif?>
 
 
-                        <a href="#" class="more-diamant">more about diamonds>>></a>
+                        <!--*<a href="#" class="more-diamant">more about diamonds>>></a>*-->
                     </div>
 
                     <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />

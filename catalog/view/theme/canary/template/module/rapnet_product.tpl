@@ -43,10 +43,42 @@
                         <div class="title-red">SETTING SPECIFICATIONS <strong>SKU: <?=$product->response->body->diamond->diamond_id?></strong></div>
                         This knife-edge diamond solitaire ring is the perfect way to showcase the diamond you o showcase the diamond you choose just for her. *Center diamond purchase required.*
                     </div>
+                    <hr>
                     <div class="one-info one-info-last clearfix">
                         <div class="title-red">SETTING SPECIFICATIONS SKU: <?=$product->response->body->diamond->diamond_id?></div>
 
-                        <a href="#" class="more-diamant">more about diamonds>>></a>
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><span> SHAPE:</span><span><?=$product->response->body->diamond->shape?></span></li>
+                                        <li><span>CARAT WEIGHT:</span><span><?=$product->response->body->diamond->size?></span></li>
+                                        <li><span>COLOR:</span><span><?=$product->response->body->diamond->color?></span></li>
+                                        <li><span>CLARITY:</span><span><?=$product->response->body->diamond->clarity?></span></li>
+                                        <li><span>CUT:</span><span><?=$product->response->body->diamond->cut?></span></li>
+                                        <li><span>POLISH:</span><span><?=$product->response->body->diamond->polish?></span></li>
+                                        <li><span>SYMMETRY:</span><span><?=$product->response->body->diamond->symmetry?></span></li>
+                                        <li><span>FLUORESCENCE:</span><span><?=$product->response->body->diamond->fluor_intensity?></span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><span>L/W/D (MM)</span><span><?=$product->response->body->diamond->meas_length?>
+                                        *<?=$product->response->body->diamond->meas_width?>
+                                        *<?=$product->response->body->diamond->meas_depth?></span></li>
+                                        <li><span>L/W RATIO:</span><span>1.01</span></li>
+                                        <li><span>DEPTH %:</span><span><?=$product->response->body->diamond->depth_percent?></span></li>
+                                        <li><span>GIRDLE:</span><span><?=$product->response->body->diamond->girdle_max?></span></li>
+                                        <li><span>TABLE %:</span><span><?=$product->response->body->diamond->table_percent?></span></li>
+                                        <li><span>CULET:</span><span><?=$product->response->body->diamond->culet_size?></span></li>
+                                        <li><span>CERTIFICATE:</span><span><?=$product->response->body->diamond->lab?></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        <a href="/education_find#diamonds" class="more-diamant">more about diamonds>>></a>
                     </div>
 
                     <input type="hidden" id="w-diamond_id" value="<?php echo $product->response->body->diamond->diamond_id?>">
@@ -61,72 +93,20 @@
                         <i class="risk-free-ico"></i>Risk-free Retail
                     </div>
                     <div class="line-price-product clearfix">
-                        <div class="price-product"><?=$product->response->body->diamond->total_sales_price?>$</div>
-                        <div class="setting-price">(Setting Price)</div>
+                        <div class="price-product">$<?=$product->response->body->diamond->total_sales_price?></div>
+
                         <div>
-                            <button type="button"  id="w-diamont-button-cart" data-loading-text="Loading..." class="red-btn">Add cart</button>
 
-
-                            <button type="button" id="w-button-add-diamond-complect" data-loading-text="Loading..."
-                                    data-idproduct="<?php echo $product->response->body->diamond->diamond_id ?>"
-                                    data-shape="<?php echo $product->response->body->diamond->shape?>"
-                                    class="red-btn">Choose this setting</button>
+                            <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="red-btn">Select This Diamond</button>
 
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="diamond-spetifications-box clearfix">
-                <div class="left-ds">
-                    <div class="title">SKU: <?=$product->response->body->diamond->diamond_id?></div>
-                    This 0.71 Carat Round diamond H Color I1 Clarity has Excellent proportions and a diamond grading report from IGI
-                </div>
-                <div class="center-ds">
-                    <div class="title">Diamond spetifications</div>
-                    <div class="clearfix">
-                        <ul class="clearfix">
-                            <li><span> SHAPE:</span><span><?=$product->response->body->diamond->shape?></span></li>
-                            <li><span>CARAT WEIGHT:</span><span><?=$product->response->body->diamond->size?></span></li>
-                            <li><span>COLOR:</span><span><?=$product->response->body->diamond->color?></span></li>
-                            <li><span>CLARITY:</span><span><?=$product->response->body->diamond->clarity?></span></li>
-                            <li><span>CUT:</span><span><?=$product->response->body->diamond->cut?></span></li>
-                            <li><span>POLISH:</span><span><?=$product->response->body->diamond->polish?></span></li>
-                            <li><span>SYMMETRY:</span><span><?=$product->response->body->diamond->symmetry?></span></li>
-                            <li><span>FLUORESCENCE:</span><span><?=$product->response->body->diamond->fluor_intensity?></span></li>
-                            <li><span>L/W/D (MM)</span><span><?=$product->response->body->diamond->meas_length?>
-                                *<?=$product->response->body->diamond->meas_width?>
-                                *<?=$product->response->body->diamond->meas_depth?></span></li>
-                        </ul>
-                        <ul>
-                            <li><span>L/W RATIO:</span><span>1.01</span></li>
-                            <li><span>DEPTH %:</span><span><?=$product->response->body->diamond->depth_percent?></span></li>
-                            <li><span>GIRDLE:</span><span><?=$product->response->body->diamond->girdle_max?></span></li>
-                            <li><span>TABLE %:</span><span><?=$product->response->body->diamond->table_percent?></span></li>
-                            <li><span>CULET:</span><span><?=$product->response->body->diamond->culet_size?></span></li>
-                            <li><span>CERTIFICATE:</span><span><?=$product->response->body->diamond->lab?></span></li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="right-ds">
-                    <div class="pavilion-box"><span>PAVILION %: 43.00</span><span>DIAMOND HELP ASSISTANT</span></div>
-                    <div class="bord-box">
-                        <div class="title">PAVILION ANGLE</div>
-                        The pavilion angle is the angle of the pavilion facets relative to the girdle plane. Pavilion angle is a very important component of a diamond’s proportions, because it greatly affects the amount of brilliance a diamond will display.
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
     <section class="top-main-r top-main-r3">
-        <!--<div class="wrapper-main-r text-center">
-            <div class="title">This is Photoshop version</div>
-            <div class="text">
-                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-            </div>
-        </div>-->
+
     </section>
 
     <section class="center-bl comment-brand clearfix">
@@ -196,6 +176,36 @@
             </div>
         </div>
     </section>
+
+
+    <div class="modal fade" id="w-modal-cart" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-body text-center">
+                    <p class="w-modal-button">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <span class="text-centr">What would you like to do?</span>
+                    </p>
+                    <div class="line-price-product clearfix">
+                        <p>
+                            <button type="button" data-dismiss="modal" aria-hidden="true"  id="w-diamont-button-cart" data-loading-text="Loading..." class="red-btn w-modal-button">Add to cart</button>
+                        </p>
+
+
+                        <p><button type="button" id="w-button-add-diamond-complect" data-loading-text="Loading..."
+                                data-dismiss="modal" aria-hidden="true"
+                                data-idproduct="<?php echo $product->response->body->diamond->diamond_id ?>"
+                                data-shape="<?php echo $product->response->body->diamond->shape?>"
+                                class="red-btn w-modal-button">Diamond to a ring</button></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
 </main>
 

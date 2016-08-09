@@ -54,7 +54,6 @@
                     <div class="one-info one-info-last clearfix">
                         <div class="title-red">DIAMOND SPECIFICATIONS SKU: <?=$CanaryDiamontCom->diamond_id?></div>
 
-                        <a href="#" class="more-diamant">more about diamonds>>></a>
                     </div>
 
 
@@ -71,9 +70,7 @@
                         <div class="price-product"><?php echo $CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price?>$</div>
                         <div class="setting-price">(Setting Price)</div>
                         <div>
-                            <button type="button"  id="w-complect-button-cart" data-loading-text="Loading..." class="red-btn">Add cart</button>
-
-
+                            <button type="button"  id="w-complect-button-cart" data-loading-text="Loading..." class="red-btn">Add to cart</button>
                         </div>
                     </div>
                 </div>

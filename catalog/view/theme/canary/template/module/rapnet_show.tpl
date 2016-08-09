@@ -1,6 +1,7 @@
 
 <?if (!empty($data_error)):?>
-    <?=$data_error?>
+    <hr>
+    <p class="text-center"><b><?=$data_error?></b></p>
 <?else:?>
 <?//dd($data)?>
     <div class="filter-product-line">

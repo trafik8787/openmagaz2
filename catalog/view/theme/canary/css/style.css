@@ -1062,7 +1062,33 @@ button:hover, button:focus {
       background: url("../img/gemstone ring.png") no-repeat 0 12px;
       background-size: 50px;
   }
+    .own-b.own-b-16 {
+        width: 41px;
+        height: 23px;
+        background: url("../img/own-b-15.png") no-repeat 2px 0;
+    }
 
+
+    #w-modal-cart {
+        text-align: center;
+        padding: 0!important;
+    }
+
+    @media (min-width: 767px) {
+        #w-modal-cart:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -4px;
+        }
+    }
+
+    #w-modal-cart .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
 
     .own-b.own-b-gemstone-ring {
         width: 55px;
@@ -4216,7 +4242,13 @@ button:hover, button:focus {
   .line-price-product .red-btn {
     margin-right: -2px;
     padding: 9px 26px;
-    font-size: 14px; }
+    font-size: 15px; }
+
+    .line-price-product .w-modal-button {
+        width: 190px;
+        margin-bottom: 5px;
+    }
+
   .line-price-product .price-product {
     font-size: 29px;
     color: #000000;
@@ -4859,7 +4891,7 @@ button:hover, button:focus {
         max-width: 100%;
         max-height: 100%; }
     .education-center .one-block .education-block {
-      height: 190px;
+      height: 300px;
       font-size: 16px;
       overflow: hidden; }
       .education-center .one-block .education-block .title-e {

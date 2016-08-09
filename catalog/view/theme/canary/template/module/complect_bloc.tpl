@@ -92,13 +92,13 @@
                 <span class="text">
                     Select from thousands of GIA certified diamonds.
                 </span>
-                <?php if (!empty($CanaryDiamontCom)):?>
-                    <div>
-                        <img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="50" alt="...">
-                        <button data-href="<?=$CanaryDiamontCom['href'] ?>" class="step-eyes w-link-complect-bloc"></button>
-                        <button class="step-close w-remowe-diamond-complect"></button>
-                    </div>
-                <?endif?>
+                <!--*<?php if (!empty($CanaryDiamontCom)):?>*-->
+                    <!--*<div>*-->
+                        <!--*<img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="50" alt="...">*-->
+                        <!--*<button data-href="<?=$CanaryDiamontCom['href'] ?>" class="step-eyes w-link-complect-bloc"></button>*-->
+                        <!--*<button class="step-close w-remowe-diamond-complect"></button>*-->
+                    <!--*</div>*-->
+                <!--*<?endif?>*-->
             </a>
 
         </div>
@@ -121,13 +121,13 @@
                 <span class="text">
                     Pick the perfect setting from our large collection
                 </span>
-                <?php if (!empty($CanaryProductCom)):?>
-                    <div>
-                        <img src="<?=!empty($CanaryProductCom) ? $CanaryProductCom['img'] : '' ?>" width="50" alt="...">
-                        <button data-href="<?=$CanaryProductCom['href'] ?>" class="step-eyes w-link-complect-bloc"></button>
-                        <button class="step-close w-remowe-product-complect"></button>
-                     </div>
-                <?endif?>
+                <!--*<?php if (!empty($CanaryProductCom)):?>*-->
+                    <!--*<div>*-->
+                        <!--*<img src="<?=!empty($CanaryProductCom) ? $CanaryProductCom['img'] : '' ?>" width="50" alt="...">*-->
+                        <!--*<button data-href="<?=$CanaryProductCom['href'] ?>" class="step-eyes w-link-complect-bloc"></button>*-->
+                        <!--*<button class="step-close w-remowe-product-complect"></button>*-->
+                     <!--*</div>*-->
+                <!--*<?endif?>*-->
             </a>
 
         </div>

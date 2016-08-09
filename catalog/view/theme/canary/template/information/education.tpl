@@ -37,7 +37,7 @@
                     </div>
                     <div class="education-block">
                         <div class="title-e"><a href="/education_find#gamestones">GEMSTONES</a></div>
-
+                        Gemstone jewelry is the perfect way to express your style in a beautiful and unique way. From the rich blue in sapphires to the romanic red in rubies to the elegant purple in amethyst, gemstone jewelry lets you add stunning color to your jewelry collection that is personal to you. Our education center will help you understand gemstones and how they each vary with their color and clarity characteristics. Each gemstone is unique and educating yourself on their special characteristics will help you decide which gemstone is perfect for your collection.
                     </div>
                 </div>
                 <div class="one-block">

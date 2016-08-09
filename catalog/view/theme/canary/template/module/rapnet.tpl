@@ -261,30 +261,7 @@
 
 
 
-    <!--<select name="show" id="w-product-show">-->
-        <!--<option selected value="15">15</option>-->
-        <!--<option value="25">25</option>-->
-        <!--<option value="50">50</option>-->
-    <!--</select>-->
 
-    <!--<select name="sortby" id="w-product-sortby">-->
-        <!--<option value="size_Asc">Carat: low to high</option>-->
-        <!--<option value="size_Desc">Carat: high to low</option>-->
-        <!--<option value="Color_Asc">Color: low to high</option>-->
-        <!--<option value="Color_Desc">Color: high to low</option>-->
-        <!--<option value="Clarity_Asc">Clarity: low to high</option>-->
-        <!--<option value="Clarity_Desc">Clarity: high to low</option>-->
-        <!--<option value="Cut_Asc">Cut: low to high</option>-->
-        <!--<option value="Cut_Desc">Cut: high to low</option>-->
-        <!--<option selected value="Price_Asc">Price: low to high</option>-->
-        <!--<option value="Price_Desc">Price: high to low</option>-->
-    <!--</select>-->
-
-
-
-<!--<div id="w-show-product">-->
-    <!--<?php //echo $data;?>-->
-<!--</div>-->
 
 
 <script type="text/javascript">
