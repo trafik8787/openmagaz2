@@ -65,12 +65,19 @@
 /*}*/
 
 
+@media (max-width: 767px) {
+    .container-loader {
+        left: 41%!important;
+    }
+}
+
+
 .container-loader {
     display: block;
     width: 70px;
-    position:fixed;
-    top:50%;
-    left:50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
     z-index: 100;
     -webkit-animation: container-loader 1.5s infinite linear;
     -moz-animation: container-loader 1.5s infinite linear;

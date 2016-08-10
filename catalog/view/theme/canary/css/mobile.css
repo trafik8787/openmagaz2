@@ -11,6 +11,19 @@
   .filter-box .left-f, .filter-box .right-f {
     float: none; }
 
+
+    .own-b.own-b-15 {
+        background-position: 0 -4px;
+    }
+
+    .own-b.own-b-9 {
+        background-position: 0 1px;
+    }
+
+    .own-b.own-b-gemstone-earring {
+        background-position: 0 -13px;
+    }
+
   .one-product-slider {
     width: 100%;
     margin-bottom: 30px; }
@@ -609,7 +622,7 @@
       vertical-align: middle; }
 
   .fine-jewerly-ul li {
-    margin-bottom: 25px; }
+    margin-bottom: 19px; }
 
   .newsletter-main .newsletter-form {
     width: 100%;
