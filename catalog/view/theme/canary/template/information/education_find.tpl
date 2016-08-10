@@ -847,13 +847,13 @@
                                     <div class="block-p">
 
 
-                                        <span class="text-left"><p>1.Diameter: The width of a diamond measured from edge to edge through the girdle.</p>
-                                        <p>2. Table: The largest facet on the top of a diamond.</p>
-                                        <p>3. Crown: The top part of a diamond, from the girdle to the table</p>
-                                        <p>4. Girdle: The narrow edge of the diamond where the crown and pavilion come together.</p>
-                                        <p>5. Pavilion: The bottom part of the diamond, from the girdle to the culet.</p>
-                                        <p>6. Culet: The point or facet on the very bottom of a diamond.</p>
-                                        <p>7. Depth: The entire height of a diamond, measured from the culet to the table</p></span>
+                                        <span class="text-left"><p>Diameter: The width of a diamond measured from edge to edge through the girdle.</p>
+                                        <p>Table: The largest facet on the top of a diamond.</p>
+                                        <p>Crown: The top part of a diamond, from the girdle to the table</p>
+                                        <p>Girdle: The narrow edge of the diamond where the crown and pavilion come together.</p>
+                                        <p>Pavilion: The bottom part of the diamond, from the girdle to the culet.</p>
+                                        <p>Culet: The point or facet on the very bottom of a diamond.</p>
+                                        <p>Depth: The entire height of a diamond, measured from the culet to the table</p></span>
 
 
                                     </div>
@@ -1777,11 +1777,11 @@
                                                     </span>
                                                         <span class="box-color-diamonds">
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/g.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/e.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">G</span>color</span>
                                                             </span>
                                                             <span class="one-block">
-                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/e.png" alt="img"></span>
+                                                                <span class="wrap-img"><img src="/catalog/view/theme/canary/img/fine/g.png" alt="img"></span>
                                                                 <span class="color-t"><span class="big">H</span>color</span>
                                                             </span>
                                                             <span class="one-block">

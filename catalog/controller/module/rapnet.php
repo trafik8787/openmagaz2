@@ -126,6 +126,13 @@ class ControllerModuleRapnet extends Controller {
              $data['button_wishlist'] = $this->language->get('button_wishlist');
              $data['button_compare'] = $this->language->get('button_compare');
 
+             if (!empty($this->request->get['sortby'])) {
+                 $data['sortby'] = $this->request->get['sortby'];
+             } else {
+                 $data['sortby'] = null;
+             }
+
+
              if ($decod_json->response->header->error_code == 0) {
 
                  $data_diamonds = $decod_json->response->body->diamonds;

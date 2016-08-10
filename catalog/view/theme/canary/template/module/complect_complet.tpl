@@ -68,7 +68,6 @@
                     </div>
                     <div class="line-price-product clearfix">
                         <div class="price-product"><?php echo $CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price?>$</div>
-                        <div class="setting-price">(Setting Price)</div>
                         <div>
                             <button type="button"  id="w-complect-button-cart" data-loading-text="Loading..." class="red-btn">Add to cart</button>
                         </div>

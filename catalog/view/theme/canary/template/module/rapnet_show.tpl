@@ -3,26 +3,26 @@
     <hr>
     <p class="text-center"><b><?=$data_error?></b></p>
 <?else:?>
-<?//dd($data)?>
+<?//dd($sortby)?>
     <div class="filter-product-line">
         <div class="center-bl clearfix">
             <div class="pull-left left-drop-f">
                 <span>Sort By:</span>
                 <div class="dropdown">
                     <select name="sortby" class="form-control" id="w-product-sortby">
-                        <option value="size_Asc">Carat: low to high</option>
-                        <option value="size_Desc">Carat: high to low</option>
-                        <option value="Color_Asc">Color: low to high</option>
-                        <option value="Color_Desc">Color: high to low</option>
-                        <option value="Clarity_Asc">Clarity: low to high</option>
-                        <option value="Clarity_Desc">Clarity: high to low</option>
-                        <option value="Cut_Asc">Cut: low to high</option>
-                        <option value="Cut_Desc">Cut: high to low</option>
-                        <option selected value="Price_Asc">Price: low to high</option>
-                        <option value="Price_Desc">Price: high to low</option>
+                        <option value="size_Asc" <?if ($sortby == 'size_Asc' and !empty($sortby)):?> selected <?endif?>>Carat: low to high</option>
+                        <option value="size_Desc" <?if ($sortby == 'size_Desc' and !empty($sortby)):?> selected <?endif?>>Carat: high to low</option>
+                        <option value="Color_Asc" <?if ($sortby == 'Color_Asc' and !empty($sortby)):?> selected <?endif?>>Color: low to high</option>
+                        <option value="Color_Desc" <?if ($sortby == 'Color_Desc' and !empty($sortby)):?> selected <?endif?>>Color: high to low</option>
+                        <option value="Clarity_Asc" <?if ($sortby == 'Clarity_Asc' and !empty($sortby)):?> selected <?endif?>>Clarity: low to high</option>
+                        <option value="Clarity_Desc" <?if ($sortby == 'Clarity_Desc' and !empty($sortby)):?> selected <?endif?>>Clarity: high to low</option>
+                        <option value="Cut_Asc" <?if ($sortby == 'Cut_Asc' and !empty($sortby)):?> selected <?endif?>>Cut: low to high</option>
+                        <option value="Cut_Desc" <?if ($sortby == 'Cut_Desc' and !empty($sortby)):?> selected <?endif?>>Cut: high to low</option>
+                        <option value="Price_Asc" <?if ($sortby == 'Price_Asc' and !empty($sortby)):?> selected <?endif?>>Price: low to high</option>
+                        <option value="Price_Desc" <?if ($sortby == 'Price_Desc' and !empty($sortby)):?> selected <?endif?>>Price: high to low</option>
                     </select>
                 </div>
-                <!--<span>Product compare (0)</span>-->
+
             </div>
 
             <div class="view-product">
