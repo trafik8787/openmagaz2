@@ -124,13 +124,13 @@
                                 <div class="title">desighn your own</div>
                                 <ul class="style-br-long">
                                     <li>
-                                        <a href="#"><span class="wrap-ico"><i class="own-b own-b-7"></i></span> <span>Diamond engagement rings</span></a>
+                                        <a href="/engagement-rings" class="w-general-category"><span class="wrap-ico"><i class="own-b own-b-7"></i></span> <span>Diamond engagement rings</span></a>
                                     </li>
                                     <li>
-                                        <a href="#"><span class="wrap-ico"><i class="own-b own-b-1"></i></span> <span>Diamond studs</span></a>
+                                        <a href="/fine_jeverly/diamond_studs" class="w-general-category"><span class="wrap-ico"><i class="own-b own-b-1"></i></span> <span>Diamond studs</span></a>
                                     </li>
                                     <li>
-                                        <a href="#"><span class="wrap-ico"><i class="own-b own-b-4"></i></span> <span>Diamond pendant</span></a>
+                                        <a href="/fine_jeverly/diamond_pendants" class="w-general-category"><span class="wrap-ico"><i class="own-b own-b-4"></i></span> <span>Diamond pendant</span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -287,10 +287,10 @@
                                         <a href="<?php echo $categories[3]['children'][5]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-14" style="background-position-y: -5px;"></i></span> <span><?php echo $categories[3]['children'][5]['name']?></span></a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo $categories[3]['children'][6]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-12" style="background-position-y: -8px;"></i></span> <span><?php echo $categories[3]['children'][6]['name']?></span></a>
+                                        <a href="<?php echo $categories[3]['children'][6]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-fashion-necklace" style="background-position-y: -8px;"></i></span> <span><?php echo $categories[3]['children'][6]['name']?></span></a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo $categories[3]['children'][7]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-fashion-necklace" style="background-position-y: -7px;"></i></span> <span><?php echo $categories[3]['children'][7]['name']?></span></a>
+                                        <a href="<?php echo $categories[3]['children'][7]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-12" style="background-position-y: -7px;"></i></span> <span><?php echo $categories[3]['children'][7]['name']?></span></a>
                                     </li>
                                 </ul>
 

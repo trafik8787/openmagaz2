@@ -98,17 +98,17 @@
     <div class="circle circle3"></div>
 </div>-->
 
-<img src="catalog/view/theme/canary/img/preloader.png" class="container-loader" alt="" style="display: none">
+<img src="/catalog/view/theme/canary/img/preloader.png" class="container-loader" alt="" style="display: none">
 
-<script type="text/javascript" src="catalog/view/theme/canary/vendor/slickslider/slick.min.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/vendor/jquery.sliderPro/jquery.sliderPro.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/slickslider/slick.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery.sliderPro/jquery.sliderPro.min.js"></script>
 
-<script type="text/javascript" src="catalog/view/theme/canary/vendor/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/js/script.js"></script>
-<script type="text/javascript" src="catalog/view/theme/canary/js/device.min.js"></script>
-<script type="text/javascript" src="catalog/view/javascript/app.js" ></script>
-<script type="text/javascript" src="catalog/view/javascript/common.js" ></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/script.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/device.min.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/app.js" ></script>
+<script type="text/javascript" src="/catalog/view/javascript/common.js" ></script>
 
 
 </body>

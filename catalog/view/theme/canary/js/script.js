@@ -1,7 +1,7 @@
 
 $(window).load(function(){
     if (device.mobile()===true){
-        $("head").append('<link rel="stylesheet" href="catalog/view/theme/canary/css/mobile.css"/>');
+        $("head").append('<link rel="stylesheet" href="/catalog/view/theme/canary/css/mobile.css"/>');
         $(".faq-list li").click(function(e){
             e.preventDefault();
             if ($(this).hasClass('active')){
