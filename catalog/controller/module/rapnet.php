@@ -20,7 +20,7 @@ class ControllerModuleRapnet extends Controller {
         );
 
         $this->color_arr = array(
-            'K','J','I','H','G','F','E','D'
+            'M','L','K','J','I','H','G','F','E','D'
         );
 
         $this->clarity_arr = array(
@@ -184,7 +184,7 @@ class ControllerModuleRapnet extends Controller {
             $color_to = $this->color_arr[$color_ex[1]-1];
         } else {
             $color_from = $this->color_arr[0];
-            $color_to = $this->color_arr[7];
+            $color_to = $this->color_arr[9];
         }
 
 

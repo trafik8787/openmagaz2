@@ -52,7 +52,10 @@
                         <div id="w-slider-color"></div>
                         <div class="wrapper-table">
                             <ul class="slider-lables">
-                                <li title="slightly colored">K</li>
+                                <li title="slightly colored">M</li>
+                                <li title="near colorless">L</li>
+
+                                <li title="near colorless">K</li>
                                 <li title="near colorless">J</li>
                                 <li title="near colorless">I</li>
                                 <li title="near colorless">H</li>
@@ -360,7 +363,7 @@
             $url_color = '&color='+queryStr['color'].split(',')[0]+','+queryStr['color'].split(',')[1];
         } else {
             $get_color_from = 0;
-            $get_color_to = 8;
+            $get_color_to = 10;
         }
 
 
@@ -550,7 +553,7 @@
 
         var $w_slider_color = $('#w-slider-color').slider({
             min: 0,
-            max: 8,
+            max: 10,
             range: true,
             animate: 'slow',
             values: [$get_color_from, $get_color_to],
