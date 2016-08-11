@@ -8,8 +8,8 @@
             <!--*<div class="text">
                 This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
             </div>*-->
-            <a href="/diamonds" class="brand-btn">Start With a Diamond</a><br>
-            <h2></h2>
+            <a href="/diamonds" class="brand-btn" style="margin-bottom: 10px;">Start With a Diamond</a><br>
+            <p></p>
             <a href="/engagement-rings" class="brand-btn">Start With a Setting</a>
         </div>
     </section>

@@ -3,7 +3,7 @@
     <div class="filter-wrapper filter-wrapper-pn clearfix">
         <div class="left-f">
             <div class="one-line height-inherit">
-                <div class="title">share
+                <div class="title">shape
                     <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Choose the diamond shape based on the recipients personality, as well as the shape that will look the best in the ring setting you select.">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>

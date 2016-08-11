@@ -44,8 +44,30 @@
                 </div>
 
                 <div class="one-product-info" id="product">
-                    <div class="text-article clearfix"><?php echo $CanaryProductCom['name'] ?> <span class="line-price-product"><strong class="price-product"><?php echo round($CanaryProductCom['price'], 2)?>$</strong></span><div class="product-code">Product code: <strong>SKU: <?php echo $CanaryProductCom['sku'] ?></strong></div></div>
-                    <div class="text-article clearfix"><?=$CanaryDiamontCom->shape?> <?=$CanaryDiamontCom->size?> CARAT <?=$CanaryDiamontCom->color?> <?=$CanaryDiamontCom->clarity?> <span class="line-price-product"><strong class="price-product"><?=$CanaryDiamontCom->total_sales_price?>$</strong></span><div class="product-code">Product code: <strong>SKU: <?=$CanaryDiamontCom->diamond_id?></strong></div></div>
+
+                    <div class="text-article clearfix">
+                        <?php echo $CanaryProductCom['name'] ?>
+                        <br>
+                        <span class="line-price-product">
+                            <strong class="price-product">$<?php echo round($CanaryProductCom['price'], 2)?></strong>
+                        </span>
+                        <br>
+                        <div class="product-code">
+                            Product code: <strong>SKU: <?php echo $CanaryProductCom['sku'] ?></strong>
+                        </div>
+                    </div>
+
+                    <div class="text-article clearfix">
+                        <?=$CanaryDiamontCom->shape?> <?=$CanaryDiamontCom->size?> CARAT <?=$CanaryDiamontCom->color?> <?=$CanaryDiamontCom->clarity?>
+                        <br>
+                        <span class="line-price-product">
+                            <strong class="price-product">$<?=$CanaryDiamontCom->total_sales_price?></strong>
+                        </span>
+                        <br>
+                        <div class="product-code">
+                            Product code: <strong>SKU: <?=$CanaryDiamontCom->diamond_id?></strong>
+                        </div>
+                    </div>
 
                     <div class="one-info">
                         <div class="title-red">SETTING SPECIFICATIONS <strong>SKU: <?php echo $CanaryProductCom['sku'] ?></strong></div>
@@ -67,7 +89,8 @@
                         <i class="risk-free-ico"></i>Risk-free Retail
                     </div>
                     <div class="line-price-product clearfix">
-                        <div class="price-product"><?php echo $CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price?>$</div>
+                        <div class="price-product">$<?php echo $CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price?></div>
+                        <br>
                         <div>
                             <button type="button"  id="w-complect-button-cart" data-loading-text="Loading..." class="red-btn">Add to cart</button>
                         </div>
@@ -81,10 +104,7 @@
     </section>
     <section class="top-main-r top-main-r3">
         <div class="wrapper-main-r text-center">
-            <div class="title">This is Photoshop version</div>
-            <div class="text">
-                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-            </div>
+
         </div>
     </section>
 

@@ -12,10 +12,10 @@
                     <select name="sortby" class="form-control" id="w-product-sortby">
                         <option value="size_Asc" <?if ($sortby == 'size_Asc' and !empty($sortby)):?> selected <?endif?>>Carat: low to high</option>
                         <option value="size_Desc" <?if ($sortby == 'size_Desc' and !empty($sortby)):?> selected <?endif?>>Carat: high to low</option>
-                        <option value="Color_Asc" <?if ($sortby == 'Color_Asc' and !empty($sortby)):?> selected <?endif?>>Color: low to high</option>
-                        <option value="Color_Desc" <?if ($sortby == 'Color_Desc' and !empty($sortby)):?> selected <?endif?>>Color: high to low</option>
-                        <option value="Clarity_Asc" <?if ($sortby == 'Clarity_Asc' and !empty($sortby)):?> selected <?endif?>>Clarity: low to high</option>
-                        <option value="Clarity_Desc" <?if ($sortby == 'Clarity_Desc' and !empty($sortby)):?> selected <?endif?>>Clarity: high to low</option>
+                        <option value="Color_Asc" <?if ($sortby == 'Color_Asc' and !empty($sortby)):?> selected <?endif?>>Color: high to low</option>
+                        <option value="Color_Desc" <?if ($sortby == 'Color_Desc' and !empty($sortby)):?> selected <?endif?>>Color: low to high</option>
+                        <option value="Clarity_Asc" <?if ($sortby == 'Clarity_Asc' and !empty($sortby)):?> selected <?endif?>>Clarity: high to low</option>
+                        <option value="Clarity_Desc" <?if ($sortby == 'Clarity_Desc' and !empty($sortby)):?> selected <?endif?>>Clarity: low to high</option>
                         <option value="Cut_Asc" <?if ($sortby == 'Cut_Asc' and !empty($sortby)):?> selected <?endif?>>Cut: low to high</option>
                         <option value="Cut_Desc" <?if ($sortby == 'Cut_Desc' and !empty($sortby)):?> selected <?endif?>>Cut: high to low</option>
                         <option value="Price_Asc" <?if ($sortby == 'Price_Asc' and !empty($sortby)):?> selected <?endif?>>Price: low to high</option>
@@ -48,14 +48,14 @@
             <thead>
             <tr>
                 <th>Actual photo</th>
-                <th>Share</th>
+                <th>Shape</th>
                 <th>Carat</th>
-                <th>Clatity</th>
+                <th>Color</th>
+                <th>Clarity</th>
                 <th>Cut</th>
                 <th>Depth</th>
                 <th>Table</th>
                 <th>Lab</th>
-                <th>Origin</th>
                 <th>Price</th>
                 <th>Compare</th>
                 <th>Wishlist</th>
@@ -87,19 +87,19 @@
                                 </div>
                                 <div class="box-tovar-th">
                                     <div class="name"><?=$row->shape?> <?=$row->size?> CARAT <?=$row->color?> <?=$row->clarity?></div>
-                                    <span class="price"><?=$row->total_sales_price?>.00$</span>
-                                    <!--<span class="discount"><?=$row->total_sales_price?>.00$</span>-->
+                                    <span class="price">$<?=$row->total_sales_price?>.00</span>
+                                    <!--*<span class="discount"><?=$row->total_sales_price?>.00$</span>*-->
                                 </div>
                             </div>
                         </td>
-                        <td data-th="Share"><?=$row->shape?></td>
+                        <td data-th="Shape"><?=$row->shape?></td>
                         <td data-th="Carat"><?=$row->size?></td>
+                        <td data-th="Carat"><?=$row->color?></td>
                         <td data-th="Clatity"><?=$row->clarity?></td>
                         <td data-th="Cut"><?=$row->cut?></td>
                         <td data-th="Depth"><?=$row->depth_percent?></td>
                         <td data-th="Table"><?=$row->table_percent?></td>
                         <td data-th="Lab"><?=$row->lab?></td>
-                        <td data-th="Origin">-</td>
                         <td data-th="Price"><div class="price"><?=$row->total_sales_price?>.00$</div></td>
                         <td><i class="fa fa-exchange"></i></td>
                         <td><i class="fa fa-heart"></i></td>

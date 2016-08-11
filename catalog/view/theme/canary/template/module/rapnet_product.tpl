@@ -197,7 +197,7 @@
                                 data-dismiss="modal" aria-hidden="true"
                                 data-idproduct="<?php echo $product->response->body->diamond->diamond_id ?>"
                                 data-shape="<?php echo $product->response->body->diamond->shape?>"
-                                class="red-btn w-modal-button">Diamond to a ring</button></p>
+                                class="red-btn w-modal-button">Add diamond to a ring</button></p>
                     </div>
 
                 </div>

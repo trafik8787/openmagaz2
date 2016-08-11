@@ -146,6 +146,12 @@ $(document).on('click', '#w-button-add-product-complect', function(){
                 $('.w-blocs-complects').html(json);
                 $('html, body').animate({scrollTop: 0}, 'slow');
 
+                if ($.cookie('CanaryDiamontCom') != null) {
+                    window.location.href = '/complete_diamond';
+                } else {
+                    window.location.href = '/diamonds';
+                }
+
             },
             error: function (xhr, ajaxOptions, thrownError) {
 
@@ -179,6 +185,14 @@ $(document).on('click', '#w-button-add-diamond-complect', function(){
             $('.w-blocs-complects').empty();
             $('.w-blocs-complects').html(json);
             $('html, body').animate({ scrollTop: 0 }, 'slow');
+
+            if ($.cookie('CanaryProductCom') != null) {
+                window.location.href = '/complete_diamond';
+            } else {
+                window.location.href = '/engagement-rings';
+            }
+
+
         },
         error: function(xhr, ajaxOptions, thrownError) {
 
