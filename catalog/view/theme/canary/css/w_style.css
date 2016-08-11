@@ -109,3 +109,30 @@
 @keyframes container-loader {
     to { transform:  rotateY(360deg); }
 }
+
+
+
+.tooltip.top .tooltip-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-top-color: grey;
+    border-width: 5px 5px 0;
+}
+
+
+.tooltip.left .tooltip-arrow {
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+    border-left-color: grey;
+    border-width: 5px 0 5px 5px;
+}
+
+.tooltip-inner {
+    color: #000;
+    background: #fff;
+    position: relative;
+    top:20%;
+    border: 1px solid grey;
+}

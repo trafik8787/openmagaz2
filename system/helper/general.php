@@ -140,6 +140,8 @@ function rapnet2() {
          return '/image/catalog/shapes/heart.png';
      } elseif ($shapes == 'Cushion Modified') {
          return '/image/catalog/shapes/cushion.png';
+     } elseif ($shapes == 'Cushion') {
+         return '/image/catalog/shapes/cushion.png';
      } elseif ($shapes == 'Asscher') {
          return '/image/catalog/shapes/asscher.png';
      }

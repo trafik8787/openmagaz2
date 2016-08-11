@@ -31,7 +31,7 @@
                     <div class="slider-nav">
 
 
-                        <!--<div class="wrapper-img-slider"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>"></div>-->
+                        <!--*<div class="wrapper-img-slider"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>"></div>*-->
 
 
                     </div>
@@ -39,10 +39,7 @@
                 <div class="one-product-info" id="product">
                     <div class="text-article clearfix"><?=$product->response->body->diamond->shape?> <?=$product->response->body->diamond->size?> CARAT <?=$product->response->body->diamond->color?> <?=$product->response->body->diamond->clarity?> <div class="product-code">Product code: <strong>SKU:<?=$product->response->body->diamond->diamond_id?></strong></div></div>
 
-                    <div class="one-info">
-                        <div class="title-red">SETTING SPECIFICATIONS <strong>SKU: <?=$product->response->body->diamond->diamond_id?></strong></div>
-                        This knife-edge diamond solitaire ring is the perfect way to showcase the diamond you o showcase the diamond you choose just for her. *Center diamond purchase required.*
-                    </div>
+
                     <hr>
                     <div class="one-info one-info-last clearfix">
                         <div class="title-red">SETTING SPECIFICATIONS SKU: <?=$product->response->body->diamond->diamond_id?></div>
@@ -52,27 +49,27 @@
 
                                 <div class="col-md-6">
                                     <ul>
-                                        <li><span> SHAPE:</span><span><?=$product->response->body->diamond->shape?></span></li>
-                                        <li><span>CARAT WEIGHT:</span><span><?=$product->response->body->diamond->size?></span></li>
-                                        <li><span>COLOR:</span><span><?=$product->response->body->diamond->color?></span></li>
-                                        <li><span>CLARITY:</span><span><?=$product->response->body->diamond->clarity?></span></li>
-                                        <li><span>CUT:</span><span><?=$product->response->body->diamond->cut?></span></li>
-                                        <li><span>POLISH:</span><span><?=$product->response->body->diamond->polish?></span></li>
-                                        <li><span>SYMMETRY:</span><span><?=$product->response->body->diamond->symmetry?></span></li>
-                                        <li><span>FLUORESCENCE:</span><span><?=$product->response->body->diamond->fluor_intensity?></span></li>
+                                        <li><span> SHAPE: </span><span><?=$product->response->body->diamond->shape?></span></li>
+                                        <li><span>CARAT WEIGHT: </span><span><?=$product->response->body->diamond->size?></span></li>
+                                        <li><span>COLOR: </span><span><?=$product->response->body->diamond->color?></span></li>
+                                        <li><span>CLARITY: </span><span><?=$product->response->body->diamond->clarity?></span></li>
+                                        <li><span>CUT: </span><span><?=$product->response->body->diamond->cut?></span></li>
+                                        <li><span>POLISH: </span><span><?=$product->response->body->diamond->polish?></span></li>
+                                        <li><span>SYMMETRY: </span><span><?=$product->response->body->diamond->symmetry?></span></li>
+                                        <li><span>FLUORESCENCE: </span><span><?=$product->response->body->diamond->fluor_intensity?></span></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
                                     <ul>
-                                        <li><span>L/W/D (MM)</span><span><?=$product->response->body->diamond->meas_length?>
+                                        <li><span>L/W/D (MM) </span><span><?=$product->response->body->diamond->meas_length?>
                                         *<?=$product->response->body->diamond->meas_width?>
                                         *<?=$product->response->body->diamond->meas_depth?></span></li>
-                                        <li><span>L/W RATIO:</span><span>1.01</span></li>
-                                        <li><span>DEPTH %:</span><span><?=$product->response->body->diamond->depth_percent?></span></li>
-                                        <li><span>GIRDLE:</span><span><?=$product->response->body->diamond->girdle_max?></span></li>
-                                        <li><span>TABLE %:</span><span><?=$product->response->body->diamond->table_percent?></span></li>
-                                        <li><span>CULET:</span><span><?=$product->response->body->diamond->culet_size?></span></li>
-                                        <li><span>CERTIFICATE:</span><span><?=$product->response->body->diamond->lab?></span></li>
+                                        <li><span>L/W RATIO: </span><span>1.01</span></li>
+                                        <li><span>DEPTH %: </span><span><?=$product->response->body->diamond->depth_percent?></span></li>
+                                        <li><span>GIRDLE: </span><span><?=$product->response->body->diamond->girdle_max?></span></li>
+                                        <li><span>TABLE %: </span><span><?=$product->response->body->diamond->table_percent?></span></li>
+                                        <li><span>CULET: </span><span><?=$product->response->body->diamond->culet_size?></span></li>
+                                        <li><span>CERTIFICATE: </span><span><?=$product->response->body->diamond->lab?></span></li>
                                     </ul>
                                 </div>
                             </div>

@@ -70,7 +70,7 @@
                             <div class="product-item">
                                 <input type="hidden" class="w-diamond-id-category" value="<?=$row->diamond_id?>">
                                 <div class="box-img">
-                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="w-product-diamonts"><img src="<?=imageDiamont($row->shape)?>" alt="img"></a>
+                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="w-product-diamonts"><img src="<?=imageDiamont($row->shape)?>" alt="<?=$row->shape?>"></a>
                                 </div>
                                 <!--*<div class="rating">*-->
                                     <!--*<i class="star active"></i>*-->
@@ -100,7 +100,7 @@
                         <td data-th="Depth"><?=$row->depth_percent?></td>
                         <td data-th="Table"><?=$row->table_percent?></td>
                         <td data-th="Lab"><?=$row->lab?></td>
-                        <td data-th="Price"><div class="price"><?=$row->total_sales_price?>.00$</div></td>
+                        <td data-th="Price"><div class="price">$<?=$row->total_sales_price?>.00</div></td>
                         <td><i class="fa fa-exchange"></i></td>
                         <td><i class="fa fa-heart"></i></td>
                     </tr>

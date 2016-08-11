@@ -10,34 +10,34 @@
                 </div>
                 <div class="btn-group btn-group-justified btn-group-filter w-group-shape" data-toggle="buttons">
                     <label class="btn btn-filter">
-                        <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked> <i class="brilliant-ico2 brilliant-s1"></i>
+                        <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked> <i class="brilliant-ico2 brilliant-s1" data-toggle="tooltip" data-placement="top" title="Round Cut"></i>
                     </label>
                     <label class="btn btn-filter">
-                        <input type="radio" value="Princess" name="shape" id="option2" autocomplete="off"> <i class="brilliant-ico2 brilliant-s2"></i>
+                        <input type="radio" value="Princess" name="shape" id="option2" autocomplete="off"> <i class="brilliant-ico2 brilliant-s2" data-toggle="tooltip" data-placement="top" title="Princess Cut"></i>
                     </label>
                     <label class="btn btn-filter">
-                        <input type="radio" value="Asscher"  name="shape" id="option3" autocomplete="off"> <i class="brilliant-ico2 brilliant-s3"></i>
+                        <input type="radio" value="Asscher"  name="shape" id="option3" autocomplete="off"> <i class="brilliant-ico2 brilliant-s3" data-toggle="tooltip" data-placement="top" title="Asscher Cut"></i>
                     </label>
                     <label class="btn btn-filter">
-                        <input type="radio" value="Cushion"  name="shape" id="option4" autocomplete="off"> <i class="brilliant-ico2 brilliant-s4"></i>
+                        <input type="radio" value="Cushion"  name="shape" id="option4" autocomplete="off"> <i class="brilliant-ico2 brilliant-s4" data-toggle="tooltip" data-placement="top" title="Cushion Cut"></i>
                     </label>
                     <label class="btn btn-filter">
-                        <input type="radio" value="Marquise" name="shape" id="option5" autocomplete="off"> <i class="brilliant-ico2 brilliant-s5"></i>
+                        <input type="radio" value="Marquise" name="shape" id="option5" autocomplete="off"> <i class="brilliant-ico2 brilliant-s5" data-toggle="tooltip" data-placement="top" title="Marquise Cut"></i>
                     </label>
                     <label class="btn btn-filter">
-                        <input type="radio" value="Oval"  name="shape" id="option6" autocomplete="off"> <i class="brilliant-ico2 brilliant-s6"></i>
+                        <input type="radio" value="Oval"  name="shape" id="option6" autocomplete="off"> <i class="brilliant-ico2 brilliant-s6" data-toggle="tooltip" data-placement="top" title="Oval Cut"></i>
                     </label>
                     <label class="btn btn-filter">
-                        <input type="radio" value="Radiant" name="shape" id="option7" autocomplete="off"> <i class="brilliant-ico2 brilliant-s7"></i>
+                        <input type="radio" value="Radiant" name="shape" id="option7" autocomplete="off"> <i class="brilliant-ico2 brilliant-s7" data-toggle="tooltip" data-placement="top" title="Radiant Cut"></i>
                     </label>
                     <label class="btn btn-filter">
-                        <input type="radio" value="Pear"  name="shape" id="option8" autocomplete="off"> <i class="brilliant-ico2 brilliant-s8"></i>
+                        <input type="radio" value="Pear"  name="shape" id="option8" autocomplete="off"> <i class="brilliant-ico2 brilliant-s8" data-toggle="tooltip" data-placement="top" title="Pear Shaped"></i>
                     </label>
                     <label class="btn btn-filter">
-                        <input type="radio" value="Heart"  name="shape" id="option9" autocomplete="off"> <i class="brilliant-ico2 brilliant-s9"></i>
+                        <input type="radio" value="Heart"  name="shape" id="option9" autocomplete="off"> <i class="brilliant-ico2 brilliant-s9" data-toggle="tooltip" data-placement="top" title="Heart Shaped"></i>
                     </label>
                     <label class="btn btn-filter">
-                        <input type="radio" value="Emerald"  name="shape" id="option10" autocomplete="off"> <i class="brilliant-ico2 brilliant-s10"></i>
+                        <input type="radio" value="Emerald"  name="shape" id="option10" autocomplete="off"> <i class="brilliant-ico2 brilliant-s10" data-toggle="tooltip" data-placement="top" title="Emerald Cut"></i>
                     </label>
                 </div>
             </div>
@@ -148,7 +148,7 @@
             <button class="filter-advanced">advanced options</button>
             <div class="dropdown-advanced">
                 <ul>
-                    <li data-target="polish-slider">
+                    <li data-target="polish-slider" data-toggle="tooltip" data-placement="left" title="Polish refers to the degree of smoothness of each facet of a diamond as measured by a gemologist.">
                         polish
                         <div class="filter-block filter1 filter-drop-drop">
                             <div class="wrapper-filter-drop">
@@ -164,7 +164,7 @@
                             </div>
                         </div>
                     </li>
-                    <li data-target="symmetry-slider">
+                    <li data-target="symmetry-slider" data-toggle="tooltip" data-placement="left" title="Symmetry refers to how precisely the various facets of a diamond align and intersect.">
                         symmetry
                         <div class="filter-block filter1 filter-drop-drop">
                             <div class="wrapper-filter-drop">
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li data-toggle="tooltip" data-placement="left" title="Laboratory diamond">
                         lab
                         <div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-labs"  data-toggle="buttons">
                             <div class="btn btn-filter">
@@ -200,7 +200,7 @@
                             </div>
                         </div>
                     </li>
-                    <li data-target="depth-slider">
+                    <li data-target="depth-slider" data-toggle="tooltip" data-placement="left" title="Depth refers to the distance between the culet and the table when the diamond is viewed from the side.">
                         depth
                         <div class="filter-block filter1 filter-drop-drop">
                             <div class="wrapper-filter-drop">
@@ -213,7 +213,7 @@
                             </div>
                         </div>
                     </li>
-                    <li data-target="table-slider">
+                    <li data-target="table-slider" data-toggle="tooltip" data-placement="left" title="The table is the uppermost, flat surface of a diamond which runs parallel to the plane of the girdle.">
                         table
                         <div class="filter-block filter1 filter-drop-drop">
                             <div class="wrapper-filter-drop">
@@ -226,7 +226,7 @@
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li data-toggle="tooltip" data-placement="left" title="Fluorescence refers to a diamond's tendency to emit a soft colored glow when subjected to ultraviolet light (such as a `black light`).">
                         Fluorescence
                         <div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-fluorescence-intensities" data-toggle="buttons">
                             <div class="btn btn-filter">
