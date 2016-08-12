@@ -13,6 +13,7 @@ class ControllerModuleExelParser extends Controller {
     private $list_filtr;
     private $list_options;
     private $list_atribute;
+    private $list_manufactured;
 
     private $product_id_insert;
     private $product_id_insert_arr;
@@ -45,7 +46,7 @@ class ControllerModuleExelParser extends Controller {
     private $price;
 
 
-    function __construct($registry){
+    public function __construct($registry){
         parent::__construct($registry);
 
         $this->list_metal = array(
@@ -72,11 +73,25 @@ class ControllerModuleExelParser extends Controller {
 //        );
 
         //WOMAN WEDDING RINGS
+//        $this->category_arr = array(
+//            'Classic' => 77,
+//            'Stackable' => 78,
+//            'Eternity' => 81,
+//            'Diamond' => 79
+//        );
+
+        //FINE JEWERLY
         $this->category_arr = array(
-            'Classic' => 77,
-            'Stackable' => 78,
-            'Eternity' => 81,
-            'Diamond' => 79
+            'Diamond Bracelets' => 85,
+            'Diamond Earrings' => 84,
+            'Diamond Pendant' => 86,
+            'Diamond Rings' => 88,
+            'Diamond Studs' => 83,
+            'Diamond Fashion Necklace' => 92,
+            'Gemstone Bracelets' => 93,
+            'Gemstone Earrings' => 87,
+            'Gemstone Pendants' => 91,
+            'Gemstone Rings' => 90
         );
 
 
@@ -91,6 +106,12 @@ class ControllerModuleExelParser extends Controller {
             '14K Rose Gold' => 14,
             '18K Rose Gold' => 15,
             'Palladium' => 16
+        );
+
+
+        $this->list_manufactured = array(
+            'Overnight' => 11,
+            'Stuller' => 12
         );
 
         $this->list_options = array(46,47,48,55,56,57,58,59,60,68,69);
@@ -201,7 +222,9 @@ class ControllerModuleExelParser extends Controller {
         //dd($query->rows);
         //$filePath = '/home/canary/www/website.csv';
         //$filePath = '/home/canary/www/website_weding_woman.csv';
-        $filePath = '/home/brilliantcanary/htdocs/website_weding_woman.csv';
+        //$filePath = '/home/canary/www/fashion_jewelry.csv';
+        $filePath = '/home/brilliantcanary/htdocs/fashion_jewelry.csv';
+        //$filePath = '/home/brilliantcanary/htdocs/website_weding_woman.csv';
         //$filePath = '/home/brilliantcanary/htdocs/website.csv';
         $delimiter = ';';
         $file = new SplFileObject($filePath, 'r');
@@ -231,7 +254,7 @@ class ControllerModuleExelParser extends Controller {
                 //METAL
                 if ($metal == '14K White Gold' OR $metal == '14k White Gold') {
                     $this->metal = $this->list_metal['14K White Gold'];
-                    $this->sku = $curent[1] . 'W14';
+                    $this->sku = $curent[1] . '-W14';
                     $this->filter[] = $this->list_filtr['14K White Gold'];
 
                     $name_file_general_img = $sku.'.jpg';
@@ -239,49 +262,49 @@ class ControllerModuleExelParser extends Controller {
 
                 } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
                     $this->metal = $this->list_metal['14K Yellow Gold'];
-                    $this->sku = $curent[1] . 'Y14';
+                    $this->sku = $curent[1] . '-Y14';
                     $this->filter[] = $this->list_filtr['14K Yellow Gold'];
 
                     $name_file_general_img = $sku.'.alt.jpg';
 
                 } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
                     $this->metal = $this->list_metal['14K Rose Gold'];
-                    $this->sku = $curent[1] . 'R14';
+                    $this->sku = $curent[1] . '-R14';
                     $this->filter[] = $this->list_filtr['14K Rose Gold'];
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
                 } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
                     $this->metal = $this->list_metal['18K White Gold'];
-                    $this->sku = $curent[1] . 'W18';
+                    $this->sku = $curent[1] . '-W18';
                     $this->filter[] = $this->list_filtr['18K White Gold'];
 
                     $name_file_general_img = $sku.'.jpg';
 
                 } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
                     $this->metal = $this->list_metal['18K Yellow Gold'];
-                    $this->sku = $curent[1] . 'Y18';
+                    $this->sku = $curent[1] . '-Y18';
                     $this->filter[] = $this->list_filtr['18K Yellow Gold'];
 
                     $name_file_general_img = $sku.'.alt.jpg';
 
                 } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
                     $this->metal = $this->list_metal['18K Rose Gold'];
-                    $this->sku = $curent[1] . 'R18';
+                    $this->sku = $curent[1] . '-R18';
                     $this->filter[] = $this->list_filtr['18K Rose Gold'];
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
                 } elseif ($metal == 'Platinum') {
                     $this->metal = $this->list_metal['Platinum'];
-                    $this->sku = $curent[1] . 'PL';
+                    $this->sku = $curent[1] . '-PL';
                     $this->filter[] = $this->list_filtr['Platinum'];
 
                     $name_file_general_img = $sku.'.jpg';
 
                 } elseif ($metal == 'Palladium') {
                     $this->metal = $this->list_metal['Palladium'];
-                    $this->sku = $curent[1] . 'PA';
+                    $this->sku = $curent[1] . '-PA';
                     $this->filter[] = $this->list_filtr['Palladium'];
 
                     $name_file_general_img = $sku.'.jpg';
@@ -296,7 +319,10 @@ class ControllerModuleExelParser extends Controller {
                 //$this->category[] = 20;
 
                 //WOMAN WEDDING RINGS
-                $this->category[] = 69;
+                //$this->category[] = 69;
+
+                //FINE JEWERLY
+                $this->category[] = 82;
 
                 if (!empty($curent[11])) {
                     $this->category[] = $this->category_arr[trim($curent[11])];
@@ -321,7 +347,7 @@ class ControllerModuleExelParser extends Controller {
                 $this->title_seo = $curent[4];
                 $this->description_seo = $curent[5];
                 $this->keywords_seo = $curent[6];
-                $this->manufactured = $curent[10];
+                $this->manufactured = $this->list_manufactured[trim($curent[10])];
 
                 $this->width = substr($curent[8],0,-2);
 
@@ -377,7 +403,7 @@ class ControllerModuleExelParser extends Controller {
             stock_status_id = '" . 5 . "', 
             image = '" . $this->image_general . "',
             date_available = '" . date('Y-m-d') . "', 
-            manufacturer_id = '" . 12 . "', 
+            manufacturer_id = '" . $this->manufactured . "', 
             shipping = '" . 1 . "', 
             price = '" . $this->price . "', 
             points = '" . 0 . "', 

@@ -1,8 +1,6 @@
 
 
 
-
-
 <div class="filter-product-line">
     <input type="hidden" class="w-action_page" value="<?php echo $action_page?>">
     <div class="center-bl clearfix">
@@ -99,7 +97,7 @@
                 </div>
             </td>
             <td data-th="Stock Number">Oval</td>
-            <td data-th="Price"><div class="price"><?php echo $product['price']; ?>$</div></td>
+            <td data-th="Price"><div class="price"><?php echo $product['price']; ?></div></td>
             <td><i class="fa fa-exchange"></i></td>
             <td><i class="fa fa-heart"></i></td>
         </tr>
