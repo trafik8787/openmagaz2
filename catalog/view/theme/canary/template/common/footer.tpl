@@ -1,7 +1,7 @@
 
 <footer>
     <section class="newsletter-main clearfix">
-        <div class="newsletter-form">
+        <div class="newsletter-form background-4">
             <div class="wrapper-form">
                 <div class="title">
                     NEWSLETTER

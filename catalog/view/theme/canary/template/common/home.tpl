@@ -243,68 +243,71 @@
     </section>
     <section class="box-img-main clearfix">
 
+        <div style="width: 80%;margin: 0 auto;">
+            <div class="ih-item colored effect5">
 
-        <div class="ih-item colored effect5">
-            <a href="/wedding-rings">
-                    <span class="img">
-                        <img src="catalog/view/theme/canary/img/img-new5.jpg" alt="img">
-                    </span>
-                    <span class="info">
-                        <span class="info-back">
-                            <span>ENGAGEMENT<br/>RINGS</span>
-                        </span>
-                    </span>
-            </a>
-        </div>
-        <div class="ih-item colored effect5">
-            <a href="/diamonds">
-                    <span class="img">
-                        <img src="catalog/view/theme/canary/img/img-new3.jpg" alt="img">
-                    </span>
-                    <span class="info">
-                        <span class="info-back">
-                            <span>Loose<br/>Diamonds</span>
-                        </span>
-                    </span>
-            </a>
-        </div>
-        <div class="ih-item colored effect5">
-            <a href="/wedding-rings">
-                    <span class="img">
-                        <img src="catalog/view/theme/canary/img/img-new4.jpg" alt="img">
-                    </span>
-                    <span class="info">
-                        <span class="info-back">
-                            <span>Wedding<br/>Rings</span>
-                        </span>
-                    </span>
-            </a>
-        </div>
-        <div class="ih-item colored effect5">
-            <a href="/engagement-rings">
-                    <span class="img">
-                        <img src="catalog/view/theme/canary/img/img-new2.jpg" alt="img">
-                    </span>
-                    <span class="info">
-                         <span class="info-back">
-                            <span>Mens<br/>Wedding Rings</span>
-                        </span>
-                    </span>
-            </a>
-        </div>
-        <div class="ih-item colored effect5">
-            <a href="/fine_jeverly">
-                    <span class="img">
-                        <img src="catalog/view/theme/canary/img/img-new6.jpg" alt="img">
-                    </span>
-                    <span class="info">
-                        <span class="info-back">
-                            <span>Fashion<br/>Jewelry</span>
-                        </span>
-                    </span>
-            </a>
-        </div>
+                <div class="w-hover ehover2">
+                    <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new5.jpg" alt="img">
+                    <div class="overlay">
+                        <h3>ENGAGEMENT RINGS</h3>
+                        <a href="/engagement-rings"><button class="info" >Show Rings
+                        </button></a>
+                    </div>
+                </div>
 
+            </div>
+            <div class="ih-item colored effect5">
+
+                <div class="w-hover ehover2">
+                    <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new3.jpg" alt="img">
+                    <div class="overlay">
+                        <h3>Loose Diamonds</h3>
+                        <a href="/diamonds">
+                            <button class="info">Show Diamonds</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="ih-item colored effect5">
+
+                <div class="w-hover ehover2">
+                    <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new4.jpg" alt="img">
+                    <div class="overlay">
+                        <h3>Wedding Rings</h3>
+                        <a href="/wedding-rings">
+                            <button class="info">Show Rings</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="ih-item colored effect5">
+
+                <div class="w-hover ehover2">
+                    <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new2.jpg" alt="img">
+                    <div class="overlay">
+                        <h3>Mens Wedding Rings</h3>
+                        <a href="/engagement-rings">
+                            <button class="info">Show Rings</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="ih-item colored effect5">
+
+                <div class="w-hover ehover2">
+                    <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new6.jpg" alt="img">
+                    <div class="overlay">
+                        <h3>Fashion Jewelry</h3>
+                        <a href="/fine_jeverly">
+                            <button class="info">Show Jewelry</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 

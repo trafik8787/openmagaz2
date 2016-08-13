@@ -1,7 +1,7 @@
 
 <footer>
     <section class="newsletter-main clearfix">
-        <div class="newsletter-form">
+        <div class="newsletter-form background-4">
             <div class="wrapper-form">
                 <div class="title">
                     NEWSLETTER
@@ -92,11 +92,6 @@
 
 </footer>
 
-<!--<div class="container-loader container1" style="display: none">
-    <div class="circle circle1"></div>
-    <div class="circle circle2"></div>
-    <div class="circle circle3"></div>
-</div>-->
 
 <img src="/catalog/view/theme/canary/img/preloader.png" class="container-loader" alt="" style="display: none">
 
