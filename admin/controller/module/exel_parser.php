@@ -223,7 +223,9 @@ class ControllerModuleExelParser extends Controller {
         //$filePath = '/home/canary/www/website.csv';
         //$filePath = '/home/canary/www/website_weding_woman.csv';
         //$filePath = '/home/canary/www/fashion_jewelry.csv';
-        $filePath = '/home/brilliantcanary/htdocs/fashion_jewelry.csv';
+        //$filePath = '/home/canary/www/diamonds_rings_jewelry.csv';
+        $filePath = '/home/brilliantcanary/htdocs/diamonds_rings_jewelry.csv';
+        //$filePath = '/home/brilliantcanary/htdocs/fashion_jewelry.csv';
         //$filePath = '/home/brilliantcanary/htdocs/website_weding_woman.csv';
         //$filePath = '/home/brilliantcanary/htdocs/website.csv';
         $delimiter = ';';
@@ -530,28 +532,31 @@ class ControllerModuleExelParser extends Controller {
 
         $product = $this->db->query("SELECT * FROM " . DB_PREFIX . "product WHERE product_id IN (".$in.")");
 
-        //dd($product, true);
+        //dd($product);
+        if (!empty($product->rows)) {
+            foreach ($product->rows as $product_rows) {
+                $sql = null;
+                $curent_product = $this->parseSku($product_rows['sku']);
 
-        foreach ($product->rows as $product_rows) {
-            $sql = null;
-            $curent_product = $this->parseSku($product_rows['sku']);
+                foreach ($product->rows as $rows) {
 
-            foreach ($product->rows as $rows) {
+                    if (($product_rows['sku'] != $rows['sku']) and ($curent_product == $this->parseSku($rows['sku']))) {
+                        $sql .= '(' . $product_rows['product_id'] . ' , ' . $rows['product_id'] . '),';
+                    }
 
-                if (($product_rows['sku'] != $rows['sku']) and ($curent_product == $this->parseSku($rows['sku']))) {
-                    $sql .= '('.$product_rows['product_id'].' , '.$rows['product_id'].'),';
+                }
+                $sql = substr($sql, 0, -1);
+                if (!empty($sql)) {
+                    $this->db->query("INSERT INTO " . DB_PREFIX . "product_metal (product_id, metal_product_id) VALUES " . $sql);
                 }
 
             }
-            $sql =  substr($sql, 0, -1);
-            $this->db->query("INSERT INTO " . DB_PREFIX . "product_metal (product_id, metal_product_id) VALUES ". $sql );
-            
         }
     }
 
 
     private function parseSku ($sku) {
-        $pieces = explode("-", $sku);
+        $pieces = explode("-", trim($sku));
         return $pieces[0];
     }
 
