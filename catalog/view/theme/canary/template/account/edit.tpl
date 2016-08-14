@@ -2,6 +2,7 @@
 
 
 <main class="w-general-container">
+    <hr class="fade-2">
     <section class="static-page">
         <div class="center-bl">
             <ul class="breadcrumbs">

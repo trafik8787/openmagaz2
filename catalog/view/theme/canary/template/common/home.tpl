@@ -2,7 +2,6 @@
 <?php echo $header; ?>
 <?//dd($categories)?>
 <main class="w-general-container">
-
     <section class="top-main-r top-main-r1">
         <div class="wrapper-main-r hidden-xs">
             <!--*<div class="title">Design Your Dream Ring</div>*-->

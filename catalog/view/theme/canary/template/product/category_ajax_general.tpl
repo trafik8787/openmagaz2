@@ -1,3 +1,4 @@
+<hr class="fade-2">
 <section class="static-page">
 
 

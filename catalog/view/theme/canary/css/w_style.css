@@ -307,3 +307,12 @@ home hover efect
     opacity: 1;
     transform: translateX(0);
 }
+
+
+.fade-2 {
+    border-width: 0 0 1px;
+    color: #3b494e;
+    border-image: linear-gradient(90deg, rgba(135, 206, 235, 0), #b7ebfc 50%, rgba(135, 206, 235, 0) 100%) 0 0 100%;
+    border-style: solid;
+    margin-top: 0;
+}

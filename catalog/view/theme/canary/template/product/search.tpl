@@ -3,6 +3,7 @@
 
 
 <main class="w-general-container">
+    <hr class="fade-2">
     <input type="hidden" class="w-action_page" value="<?php echo $action_page?>">
     <section class="static-page">
 
