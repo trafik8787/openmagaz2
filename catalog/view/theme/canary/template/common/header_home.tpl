@@ -83,7 +83,7 @@
         <div class="menu">
             <a href="/" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
             <ul>
-                <li class="dropdown-b"><!--DIAMONDS-->
+                <li class="dropdown-b"><!--*DIAMONDS*-->
                     <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a>
                     <div class="dropdown-inside">
                         <div class="title">search diamond gallery</div>

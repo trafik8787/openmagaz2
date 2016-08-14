@@ -157,7 +157,7 @@ home hover efect
 }
 
 .ehover2 .overlay {
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.38);
     opacity: 0;
     -webkit-transform: translate(460px, -100px) rotate(180deg);
     -ms-transform: translate(460px, -100px) rotate(180deg);
@@ -203,6 +203,7 @@ home hover efect
     transition-delay: .3s;
 }
 
+/*gradient futer*/
 
 .background-4 {
     background: rgb(105,155,200);
@@ -212,4 +213,97 @@ home hover efect
     background: -o-radial-gradient(top left, ellipse cover, rgba(105,155,200,1) 0%,rgba(183, 235, 252) 57%);
     background: -ms-radial-gradient(top left, ellipse cover, rgba(105,155,200,1) 0%,rgba(183, 235, 252) 57%);
     background: radial-gradient(ellipse at top left, rgba(105,155,200,1) 0%,rgb(183, 235, 252) 57%);
+}
+
+
+
+/*ffffffffffffff*/
+.cta__button{
+    position: relative;
+    width: 115px;
+    height: 115px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.cta__button:after{
+    content: "";
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    border-radius: 50%;
+    border-top: 1px solid transparent;
+    border-right: 1px solid #b7ebfc;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid #b7ebfc;
+    width: 85%;
+    height: 85%;
+    transition: border 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86), transform 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transform: rotate(45deg);
+    backface-visibility: hidden;
+}
+
+.cta__button:hover:after{
+    border: 1px solid #1c90f3;
+    transform: rotate(135deg);
+}
+
+
+
+/*bacgraund main home*/
+
+
+.bacgraund-gradiend-home1 {
+    /*background: linear-gradient(130deg,#b7ebfc, #ffdfcb 25%,rgba(255, 243, 203, 0.82) 50%,#fff7e7 75%,#b7ebfc 100%) no-repeat center center fixed;*/
+    /*background-size: cover;*/
+    background: linear-gradient(130deg,rgba(183, 235, 252, 0.6), rgba(255, 223, 203, 0.6) 25%,rgba(255,243,203,0.6) 50%,rgba(255, 247, 231, 0.6) 75%,rgba(183,235,252,0.6) 100%) no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+
+
+.brackets:not(.active)::before, .brackets:not(.active)::after{
+                opacity:0;
+                transition: opacity 0.2s ease, transform 0.3s ease;
+                position:absolute;
+                /*display:inline-block;*/
+            }
+
+.brackets:not(.active)::before{
+    width: 20px;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    content: "";
+    border: 1px solid #808080;
+    border-right: 0;
+
+    transform: translateX(20px);
+
+ }
+
+.brackets:not(.active)::after{
+
+    transform: translateX(-20px);
+
+    width: 20px;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    content: "";
+    border: 1px solid #808080;
+    border-left: 0;
+
+ }
+
+
+
+.brackets:not(.active):hover::before, .brackets:not(.active):hover::after {
+    opacity: 1;
+    transform: translateX(0);
 }

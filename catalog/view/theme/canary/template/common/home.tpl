@@ -2,6 +2,7 @@
 <?php echo $header; ?>
 <?//dd($categories)?>
 <main class="w-general-container">
+
     <section class="top-main-r top-main-r1">
         <div class="wrapper-main-r hidden-xs">
             <!--*<div class="title">Design Your Dream Ring</div>*-->
@@ -212,104 +213,117 @@
         <li><a href="/faq">FAQ</a></li>
         <li><a href="/about_us">ABOUT</a></li>
     </ul>
-    <section class="privilege center-bl clearfix">
-        <div class="col-md-4 col-sm-4 col-xs-4">
-            <div class="wrapper-box">
-                <div class="wrapper-ico">
-                    <i class="shipping-ico"></i>
-                </div>
-                <div class="title">FREE SHIPPING</div>
-
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-            <div class="wrapper-box">
-                <div class="wrapper-ico">
-                    <i class="money-ico"></i>
-                </div>
-                <div class="title">100% MONEY BACK</div>
-
-            </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-4">
-            <div class="wrapper-box">
-                <div class="wrapper-ico">
-                    <i class="support-ico"></i>
-                </div>
-                <div class="title">LIFETIME WARRANTY</div>
-
-            </div>
-        </div>
-    </section>
-    <section class="box-img-main clearfix">
-
-        <div style="width: 80%;margin: 0 auto;">
-            <div class="ih-item colored effect5">
-
-                <div class="w-hover ehover2">
-                    <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new5.jpg" alt="img">
-                    <div class="overlay">
-                        <h3>ENGAGEMENT RINGS</h3>
-                        <a href="/engagement-rings"><button class="info" >Show Rings
-                        </button></a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="ih-item colored effect5">
-
-                <div class="w-hover ehover2">
-                    <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new3.jpg" alt="img">
-                    <div class="overlay">
-                        <h3>Loose Diamonds</h3>
-                        <a href="/diamonds">
-                            <button class="info">Show Diamonds</button>
+    <div class="bacgraund-gradiend-home1">
+        <section class="privilege center-bl clearfix">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="wrapper-box">
+                    <div class="wrapper-ico">
+                        <a href="#">
+                            <div class="cta__button">
+                                <i class="shipping-ico"></i>
+                            </div>
                         </a>
                     </div>
+                    <div class="title">FREE SHIPPING</div>
+
                 </div>
-
             </div>
-            <div class="ih-item colored effect5">
-
-                <div class="w-hover ehover2">
-                    <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new4.jpg" alt="img">
-                    <div class="overlay">
-                        <h3>Wedding Rings</h3>
-                        <a href="/wedding-rings">
-                            <button class="info">Show Rings</button>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="wrapper-box">
+                    <div class="wrapper-ico">
+                        <a href="#">
+                            <div class="cta__button">
+                                <i class="money-ico"></i>
+                            </div>
                         </a>
                     </div>
+                    <div class="title">100% MONEY BACK</div>
+
                 </div>
-
             </div>
-            <div class="ih-item colored effect5">
-
-                <div class="w-hover ehover2">
-                    <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new2.jpg" alt="img">
-                    <div class="overlay">
-                        <h3>Mens Wedding Rings</h3>
-                        <a href="/engagement-rings">
-                            <button class="info">Show Rings</button>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="wrapper-box">
+                    <div class="wrapper-ico">
+                        <a href="#">
+                            <div class="cta__button">
+                                <i class="support-ico"></i>
+                            </div>
                         </a>
                     </div>
+                    <div class="title">LIFETIME WARRANTY</div>
+
                 </div>
-
             </div>
-            <div class="ih-item colored effect5">
+        </section>
+        <section class="box-img-main clearfix">
 
-                <div class="w-hover ehover2">
-                    <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new6.jpg" alt="img">
-                    <div class="overlay">
-                        <h3>Fashion Jewelry</h3>
-                        <a href="/fine_jeverly">
-                            <button class="info">Show Jewelry</button>
-                        </a>
+            <div style="width: 80%;margin: 0 auto;">
+                <div class="ih-item colored effect5">
+
+                    <div class="w-hover ehover2">
+                        <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new5.jpg" alt="img">
+                        <div class="overlay">
+                            <h3>ENGAGEMENT RINGS</h3>
+                            <a href="/engagement-rings"><button class="info" >Show Rings
+                            </button></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ih-item colored effect5">
+
+                    <div class="w-hover ehover2">
+                        <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new3.jpg" alt="img">
+                        <div class="overlay">
+                            <h3>Loose Diamonds</h3>
+                            <a href="/diamonds">
+                                <button class="info">Show Diamonds</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ih-item colored effect5">
+
+                    <div class="w-hover ehover2">
+                        <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new4.jpg" alt="img">
+                        <div class="overlay">
+                            <h3>Wedding Rings</h3>
+                            <a href="/wedding-rings">
+                                <button class="info">Show Rings</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ih-item colored effect5">
+
+                    <div class="w-hover ehover2">
+                        <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new2.jpg" alt="img">
+                        <div class="overlay">
+                            <h3>Mens Wedding Rings</h3>
+                            <a href="/engagement-rings">
+                                <button class="info">Show Rings</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ih-item colored effect5">
+
+                    <div class="w-hover ehover2">
+                        <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new6.jpg" alt="img">
+                        <div class="overlay">
+                            <h3>Fashion Jewelry</h3>
+                            <a href="/fine_jeverly">
+                                <button class="info">Show Jewelry</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
 
 
     <?php echo $content_bottom; ?>

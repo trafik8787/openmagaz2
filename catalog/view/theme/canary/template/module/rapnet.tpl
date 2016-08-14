@@ -9,34 +9,34 @@
                     </button>
                 </div>
                 <div class="btn-group btn-group-justified btn-group-filter w-group-shape" data-toggle="buttons">
-                    <label class="btn btn-filter">
+                    <label class="btn btn-filter brackets">
                         <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked> <i class="brilliant-ico2 brilliant-s1" data-toggle="tooltip" data-placement="top" title="Round Cut"></i>
                     </label>
-                    <label class="btn btn-filter">
+                    <label class="btn btn-filter brackets">
                         <input type="radio" value="Princess" name="shape" id="option2" autocomplete="off"> <i class="brilliant-ico2 brilliant-s2" data-toggle="tooltip" data-placement="top" title="Princess Cut"></i>
                     </label>
-                    <label class="btn btn-filter">
+                    <label class="btn btn-filter brackets">
                         <input type="radio" value="Asscher"  name="shape" id="option3" autocomplete="off"> <i class="brilliant-ico2 brilliant-s3" data-toggle="tooltip" data-placement="top" title="Asscher Cut"></i>
                     </label>
-                    <label class="btn btn-filter">
+                    <label class="btn btn-filter brackets">
                         <input type="radio" value="Cushion"  name="shape" id="option4" autocomplete="off"> <i class="brilliant-ico2 brilliant-s4" data-toggle="tooltip" data-placement="top" title="Cushion Cut"></i>
                     </label>
-                    <label class="btn btn-filter">
+                    <label class="btn btn-filter brackets">
                         <input type="radio" value="Marquise" name="shape" id="option5" autocomplete="off"> <i class="brilliant-ico2 brilliant-s5" data-toggle="tooltip" data-placement="top" title="Marquise Cut"></i>
                     </label>
-                    <label class="btn btn-filter">
+                    <label class="btn btn-filter brackets">
                         <input type="radio" value="Oval"  name="shape" id="option6" autocomplete="off"> <i class="brilliant-ico2 brilliant-s6" data-toggle="tooltip" data-placement="top" title="Oval Cut"></i>
                     </label>
-                    <label class="btn btn-filter">
+                    <label class="btn btn-filter brackets">
                         <input type="radio" value="Radiant" name="shape" id="option7" autocomplete="off"> <i class="brilliant-ico2 brilliant-s7" data-toggle="tooltip" data-placement="top" title="Radiant Cut"></i>
                     </label>
-                    <label class="btn btn-filter">
+                    <label class="btn btn-filter brackets">
                         <input type="radio" value="Pear"  name="shape" id="option8" autocomplete="off"> <i class="brilliant-ico2 brilliant-s8" data-toggle="tooltip" data-placement="top" title="Pear Shaped"></i>
                     </label>
-                    <label class="btn btn-filter">
+                    <label class="btn btn-filter brackets">
                         <input type="radio" value="Heart"  name="shape" id="option9" autocomplete="off"> <i class="brilliant-ico2 brilliant-s9" data-toggle="tooltip" data-placement="top" title="Heart Shaped"></i>
                     </label>
-                    <label class="btn btn-filter">
+                    <label class="btn btn-filter brackets">
                         <input type="radio" value="Emerald"  name="shape" id="option10" autocomplete="off"> <i class="brilliant-ico2 brilliant-s10" data-toggle="tooltip" data-placement="top" title="Emerald Cut"></i>
                     </label>
                 </div>
