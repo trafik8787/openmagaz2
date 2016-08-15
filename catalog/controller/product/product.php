@@ -307,16 +307,25 @@ class ControllerProductProduct extends Controller {
 			foreach ($results as $result) {
 
                 $video = null;
+                $popup = null;
+                $thumb = null;
+
                 $ext = pathinfo(basename($result['image']));
                 //dd($ext);
                 if ($ext['extension'] == 'mp4') {
                     $video = $this->url->urlLink('image/'.$result['image']);
+                } elseif ($ext['extension'] == 'jpe') {
+                    $popup = HostSite('/image/catalog/'.basename($result['image']));
+                    $thumb = $popup;
+                } else {
+                    $popup = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
+                    $thumb = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'));
                 }
 
 				$data['images'][] = array(
                     'video' => $video,
-					'popup' => $this->model_tool_image->resize($result['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height')),
-					'thumb' => $this->model_tool_image->resize($result['image'], $this->config->get('config_image_additional_width'), $this->config->get('config_image_additional_height'))
+					'popup' => $popup,
+					'thumb' => $thumb
 				);
 			}
 

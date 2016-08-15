@@ -35,10 +35,10 @@
 
                             <?if (!empty($image['video'])):?>
                                 <div>
-                                    <video autoplay loop class="myVideo" src="<?=$image['video']?>" onclick="this.play();" style="margin-left: auto; margin-right: auto"></video>
+                                    <video autoplay loop class="myVideo" src="<?=$image['video']?>" onclick="this.play();" style="margin-left: auto; margin-right: auto; width: 100%;"></video>
                                 </div>
                             <?else:?>
-                                <div><img src="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" style="margin-left: auto; margin-right: auto"></div>
+                                <div><img src="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" style="margin-left: auto; margin-right: auto;"></div>
                             <?endif?>
                         <?endforeach?>
 

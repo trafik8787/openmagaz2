@@ -34,7 +34,7 @@ class ControllerCommonFileManager extends Controller {
 		}
 
 		// Get files
-		$files = glob($directory . '/' . $filter_name . '*.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF,mp4}', GLOB_BRACE);
+		$files = glob($directory . '/' . $filter_name . '*.{jpg,jpe,jpeg,png,gif,JPG,JPEG,PNG,GIF,mp4}', GLOB_BRACE);
 
 		if (!$files) {
 			$files = array();
@@ -84,6 +84,8 @@ class ControllerCommonFileManager extends Controller {
                 if ($ext['extension'] == 'mp4') {
                     $video = $image;
                     $thumb = $image;
+                } elseif ($ext['extension'] == 'jpe') {
+                    $thumb = HostSite('/image/catalog/'.basename($image));
                 } else {
                     $thumb = $this->model_tool_image->resize(utf8_substr($image, utf8_strlen(DIR_IMAGE)), 100, 100);
                 }
@@ -247,6 +249,7 @@ class ControllerCommonFileManager extends Controller {
 				$allowed = array(
 					'jpg',
 					'jpeg',
+					'jpe',
 					'gif',
 					'png',
                     'mp4'
@@ -259,6 +262,7 @@ class ControllerCommonFileManager extends Controller {
 				// Allowed file mime types
 				$allowed = array(
 					'image/jpeg',
+					'image/jpe',
 					'image/pjpeg',
 					'image/png',
 					'image/x-png',

@@ -378,7 +378,12 @@ class ControllerCatalogProduct extends Controller {
 
 		foreach ($results as $result) {
 			if (is_file(DIR_IMAGE . $result['image'])) {
-				$image = $this->model_tool_image->resize($result['image'], 40, 40);
+			    $ext = pathinfo(basename($result['image']));
+			    if ($ext['extension'] == 'jpe') {
+                    $image = HostSite('/image/catalog/'.basename($result['image']));
+                } else {
+                    $image = $this->model_tool_image->resize($result['image'], 40, 40);
+                }
 			} else {
 				$image = $this->model_tool_image->resize('no_image.png', 40, 40);
 			}

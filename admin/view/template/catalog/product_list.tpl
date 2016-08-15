@@ -131,7 +131,7 @@
                     <?php } ?></td>
                    <td class="text-center"><?php echo $product['product_id']; ?></td>
                   <td class="text-center"><?php if ($product['image']) { ?>
-                    <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" class="img-thumbnail" />
+                    <img src="<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" class="img-thumbnail" width="50" height="50"/>
                     <?php } else { ?>
                     <span class="img-thumbnail list"><i class="fa fa-camera fa-2x"></i></span>
                     <?php } ?></td>
