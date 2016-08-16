@@ -3536,17 +3536,27 @@ button:hover, button:focus {
     width: 22px;
     height: 22px;
     border: 0;
-    border-radius: 10px;
-    box-shadow: 1px 1px 1px grey;
-    /* background: url("../img/slider-range.png") no-repeat center/contain; */
     font-weight: bold;
+
+    border-radius: 50%;
+    background: #F9FBFA;
+    background-size: 100%;
+    background-image: -webkit-linear-gradient(top, #C7CED6, #F9FBFA);
+    -webkit-box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.6), 0 -1px 0 1px rgba(0, 0, 0, 0.15) inset, 0 1px 0 1px rgba(255, 255, 255, 0.9) inset;
+    -moz-box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.6), 0 -1px 0 1px rgba(0, 0, 0, 0.15) inset, 0 1px 0 1px rgba(255, 255, 255, 0.9) inset;
+    box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.6), 0 -1px 0 1px rgba(0, 0, 0, 0.15) inset, 0 1px 0 1px rgba(255, 255, 255, 0.9) inset;
 }
 
 .ui-widget-header {
-  background: grey; }
+     background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #f1f1f1), color-stop(100%, #c3c3c3));
+    background-image: -webkit-linear-gradient(top, #f1f1f1, #c3c3c3);
+    background-image: -moz-linear-gradient(top, #f1f1f1, #c3c3c3);
+    background-image: -o-linear-gradient(top, #f1f1f1, #c3c3c3);
+    background-image: linear-gradient(top, #f1f1f1, #c3c3c3);
+}
 
 .ui-widget-content {
-  border: 2px solid #e3e3e3;
+  /*border: 2px solid #e3e3e3;*/
   background: #eee;
   color: #333333; }
 
@@ -3564,7 +3574,25 @@ button:hover, button:focus {
   top: -8px;
   margin-left: -10px;
   z-index: 10;
-  cursor: pointer; }
+  cursor: pointer;
+}
+
+
+.ui-slider .ui-slider-handle:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -4px;
+    left: 50%;
+    margin-left: -4px;
+    background: #30A2D2;
+    -webkit-box-shadow: 0 1px 1px 1px rgba(22, 73, 163, 0.7) inset, 0 1px 0 0 #FFF;
+    -moz-box-shadow: 0 1px 1px 1px rgba(22, 73, 163, 0.7) inset, 0 1px 0 0 white;
+    box-shadow: 0 1px 1px 1px rgba(22, 73, 163, 0.7) inset, 0 1px 0 0 #FFF;
+}
 
 .filter-block {
   margin-bottom: 50px;
