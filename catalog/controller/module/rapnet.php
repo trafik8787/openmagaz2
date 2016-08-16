@@ -55,6 +55,7 @@ class ControllerModuleRapnet extends Controller {
         $data = array();
 
        // dd($this->request->get);
+        $result = array();
 
         if (!empty($this->request->get['_route_'])) {
             $data['seo'] = '?';
