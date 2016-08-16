@@ -30,6 +30,12 @@ $(document).ready(function() {
     //});
 
 
+    //logarifm
+    Math.easeIn = function (val, min, max, strength) {
+        val /= max;
+        return (max-1)*Math.pow(val, strength) + min;
+    };
+
 
     //load controller general category
     $(document).on('click', '.w-general-category', function(){

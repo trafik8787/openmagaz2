@@ -158,8 +158,8 @@ $(document).ready(function () {
         max: max,
         values: [ValMin, ValMax],
         slide: function( event, ui ) {
-          $('.dop-filtr-price-max').val(ui.values[1]);
-          $('.dop-filtr-price-min').val(ui.values[0]);
+          $('.dop-filtr-price-max').val(Math.round(Math.easeIn(ui.values[1], min, max, 4.3)));
+          $('.dop-filtr-price-min').val(Math.round(Math.easeIn(ui.values[0], min, max, 4.3)));
         },
         change: function( event, ui ) {
 
@@ -170,8 +170,8 @@ $(document).ready(function () {
                 filter.push(this.value);
             });
 
-            min_price = '&PriceFrom='+ui.values[0];
-            max_price = '&PriceTo='+ui.values[1];
+            min_price = '&PriceFrom='+$('.dop-filtr-price-min').val();
+            max_price = '&PriceTo='+$('.dop-filtr-price-max').val();
 
             var action = $('.w-action_page').val();
             redirect = action + '&filter=' + filter.join(',') + min_price + max_price;

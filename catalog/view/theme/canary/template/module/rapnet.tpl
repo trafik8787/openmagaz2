@@ -391,7 +391,7 @@
             $get_carat_to = queryStr['carat'].split(',')[1];
             $url_carat = '&carat='+queryStr['carat'].split(',')[0]+','+queryStr['carat'].split(',')[1];
         } else {
-            $get_carat_from = 0.5;
+            $get_carat_from = 0.25;
             $get_carat_to = 15;
         }
 
@@ -629,30 +629,34 @@
         });
 
 
-
         $('.w-input-carat-from').val($get_carat_from);
         $('.w-input-carat-to').val($get_carat_to);
 
+
         var $w_slider_carat = $('#w-slider-carat').slider({
-            min: 0.5,
+            min: 0.25,
             max: 15,
             range: true,
             step: 0.01,
             animate: 'slow',
             values: [$get_carat_from, $get_carat_to],
             slide: function( event, ui ) {
-                $('.w-input-carat-from').val(ui.values[0]);
-                $('.w-input-carat-to').val(ui.values[1]);
+
+                $('.w-input-carat-from').val(Math.easeIn(ui.values[0], 0.25, 15, 3.6).toFixed(2));
+                $('.w-input-carat-to').val(Math.easeIn(ui.values[1], 0.25, 15, 3.6).toFixed(2));
+
             },
             change: function( event, ui ) {
 
-                $url_carat = '&carat='+ui.values[0]+','+ui.values[1];
+                $url_carat = '&carat='+$('.w-input-carat-from').val()+','+$('.w-input-carat-to').val();
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
 
                 ajaxdata(redirect);
             }
         });
+
+
 
 
         $('.w-input-carat-from').on('change', function(){
@@ -664,7 +668,6 @@
         });
 
 
-
         $('.w-input-price-from').val($get_price_from);
         $('.w-input-price-to').val($get_price_to);
 
@@ -672,17 +675,17 @@
             min: 200,
             max: 999000,
             range: true,
-            step: 100,
+            step: 10,
             animate: 'slow',
             values: [$get_price_from, $get_price_to],
             slide: function( event, ui ) {
 
-                $('.w-input-price-from').val(ui.values[0]);
-                $('.w-input-price-to').val(ui.values[1]);
+                $('.w-input-price-from').val(Math.round(Math.easeIn(ui.values[0], 200, 999000, 6.9)));
+                $('.w-input-price-to').val(Math.round(Math.easeIn(ui.values[1],  200, 999000, 6.9)));
             },
             change: function( event, ui ) {
 
-                $url_price = '&price='+ui.values[0]+','+ui.values[1];
+                $url_price = '&price='+$('.w-input-price-from').val()+','+$('.w-input-price-to').val();
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
 
