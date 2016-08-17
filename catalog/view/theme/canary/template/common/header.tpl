@@ -182,16 +182,56 @@
             </div>
             <div id="collapse-m4" class="panel-collapse collapse" role="tabpanel">
                 <div class="panel-body">
+                    <div class="title">EARRINGS</div>
                     <ul class="style-br-long ul-first-drop fine-jewerly-ul">
+
                         <li>
-                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span>Diamond studs</span></a>
+                            <a href="<?php echo $categories[3]['children'][0]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span><?php echo $categories[3]['children'][0]['name']?></span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span>Matching Gemstone Pairs</span></a>
+                            <a href="<?php echo $categories[3]['children'][1]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span><?php echo $categories[3]['children'][1]['name']?></span></a>
                         </li>
                         <li>
-                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span>Diamond studs</span></a>
+                            <a href="<?php echo $categories[3]['children'][2]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-earring"></i></span> <span><?php echo $categories[3]['children'][2]['name']?></span></a>
                         </li>
+
+                    </ul>
+                    <div class="title">Necklaces</div>
+                    <ul class="style-br-long ul-first-drop fine-jewerly-ul">
+
+                        <li>
+                            <a href="<?php echo $categories[3]['children'][5]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-14" ></i></span> <span><?php echo $categories[3]['children'][5]['name']?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $categories[3]['children'][6]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-12" ></i></span> <span><?php echo $categories[3]['children'][6]['name']?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $categories[3]['children'][7]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-fashion-necklace" ></i></span> <span><?php echo $categories[3]['children'][7]['name']?></span></a>
+                        </li>
+
+                    </ul>
+
+                    <div class="title">Rings</div>
+                    <ul class="style-br-long ul-first-drop fine-jewerly-ul">
+
+                        <li>
+                            <a href="<?php echo $categories[3]['children'][3]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-13"></i></span> <span><?php echo $categories[3]['children'][3]['name']?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $categories[3]['children'][4]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-gemstone-ring"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a>
+                        </li>
+
+                    </ul>
+                    <div class="title">Bracelets</div>
+                    <ul class="style-br-long ul-first-drop fine-jewerly-ul">
+
+                        <li>
+                            <a href="<?php echo $categories[3]['children'][8]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-diamond-bracelet"></i></span> <span><?php echo $categories[3]['children'][8]['name']?></span></a>
+                        </li>
+                        <li>
+                            <a href="<?php echo $categories[3]['children'][9]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-gemstone-bracelet"></i></span> <span><?php echo $categories[3]['children'][9]['name']?></span></a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -261,11 +301,11 @@
 
                     </li>
                     <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" class="w-general-category" title="<?php echo $text_wishlist; ?>"><i class="heart-ico"></i><span><?php echo $text_wishlist; ?></span></a></li>
-
+                    <li><a href="/compare" data-placement="bottom" class="w-compare-popower" data-timeout="2000"  data-content="Product added to comparison"><i class="fa fa-exchange" style="color: #f9d35a;"></i><span>Compare</span></a></li>
                     <li class="cart-bl">
                         <?php echo $cart; ?>
                     </li>
-                    <!--<li class="triangle"><a href="#">currency usd</a></li>-->
+                    <!--*<li class="triangle"><a href="#">currency usd</a></li>*-->
                 </ul>
 
                 <?php echo $search; ?>
@@ -380,7 +420,7 @@
                                     <img src="/catalog/view/theme/canary/img/img13.png" alt="img" class="img-under-style">
                                 </div>
                             </div>
-                            <!--<div class="clearfix link-drop-menu">
+                            <!--*<div class="clearfix link-drop-menu">
                                 <div class="pull-left">
                                     <a href="#">START WITH A SETTING </a>
                                     <a href="#">START WITH A DIAMOND</a>
@@ -389,11 +429,11 @@
                                     <a href="#">inspiration gallery</a>
                                 </div>
 
-                            </div>-->
+                            </div>*-->
                         </div>
                     </li>
 
-                    <li class="dropdown-b"><!--WEDDING RINGS-->
+                    <li class="dropdown-b"><!--*WEDDING RINGS*-->
                         <a href="<?php echo $categories[2]['href']?>" class="w-general-category"><?php echo $categories[2]['name']?></a>
                         <div class="dropdown-inside">
                             <div class="row clearfix">

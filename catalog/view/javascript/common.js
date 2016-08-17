@@ -315,6 +315,11 @@ var compare = {
 					$('#compare-total').html(json['total']);
 
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
+
+                    $('.w-compare-popower').popover('show');
+                    setTimeout(function () {
+                        $('.w-compare-popower').popover('hide');
+                    }, 2000);
 				}
 			},
 	        error: function(xhr, ajaxOptions, thrownError) {

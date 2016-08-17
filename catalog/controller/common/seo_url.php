@@ -13,7 +13,8 @@ class ControllerCommonSeoUrl extends Controller {
         'account/account' => 'account',
         'account/wishlist' => 'wishlist',
         'account/logout' => 'logout',
-        'module/complect/del_complect' => 'del_complect'
+        'module/complect/del_complect' => 'del_complect',
+        'product/compare' => 'compare'
     );
 
 	public function index() {

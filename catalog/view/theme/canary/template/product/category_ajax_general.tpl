@@ -116,8 +116,8 @@
                     </td>
                     <td data-th="Stock Number">Oval</td>
                     <td data-th="Price"><div class="price"><?php echo $product['price']; ?></div></td>
-                    <td><i class="fa fa-exchange"></i></td>
-                    <td><i class="fa fa-heart"></i></td>
+                    <td><a href="#" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-exchange"></i></a></td>
+                    <td><a href="#" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-heart"></i></a></td>
                 </tr>
                 <?endforeach?>
 
