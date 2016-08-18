@@ -40,7 +40,8 @@
                     <?php echo $image['name']; ?></label>
 
             <?else:?>
-                  <a href="<?php echo $image['href']; ?>" class="thumbnail"><img src="<?php echo $image['thumb']; ?>" alt="<?php echo $image['name']; ?>" title="<?php echo $image['name']; ?>" width="54%"/></a>
+                  <a href="<?php echo $image['href']; ?>" class="thumbnail">
+                      <img src="<?php echo $image['thumb']; ?>" alt="<?php echo $image['name']; ?>" title="<?php echo $image['name']; ?>" width="54%"/></a>
                   <label>
                     <input type="checkbox" name="path[]" value="<?php echo $image['path']; ?>" />
                     <?php echo $image['name']; ?></label>
