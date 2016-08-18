@@ -311,11 +311,10 @@ class ControllerProductProduct extends Controller {
                 $thumb = null;
 
                 $ext = pathinfo(basename($result['image']));
-                //dd($ext);
                 if ($ext['extension'] == 'mp4') {
                     $video = $this->url->urlLink('image/'.$result['image']);
                 } elseif ($ext['extension'] == 'jpe') {
-                    $popup = HostSite('/image/catalog/'.basename($result['image']));
+                    $popup = HostSite('/image/'.$result['image']);
                     $thumb = $popup;
                 } else {
                     $popup = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));

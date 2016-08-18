@@ -377,10 +377,11 @@ class ControllerCatalogProduct extends Controller {
 		$results = $this->model_catalog_product->getProducts($filter_data);
 
 		foreach ($results as $result) {
+//		    /dd($result['image']);
 			if (is_file(DIR_IMAGE . $result['image'])) {
 			    $ext = pathinfo(basename($result['image']));
 			    if ($ext['extension'] == 'jpe') {
-                    $image = HostSite('/image/catalog/'.basename($result['image']));
+                    $image = HostSite('/image/'.$result['image']);
                 } else {
                     $image = $this->model_tool_image->resize($result['image'], 40, 40);
                 }

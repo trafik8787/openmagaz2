@@ -206,7 +206,7 @@ class ControllerProductCategory extends Controller {
 
                     $ext = pathinfo(basename($result['image']));
                     if ($ext['extension'] == 'jpe') {
-                        $image = HostSite('/image/catalog/'.basename($result['image']));
+                        $image = HostSite('/image/'.$result['image']);
                     } else {
                         $image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
                     }
