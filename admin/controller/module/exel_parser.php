@@ -323,10 +323,10 @@ class ControllerModuleExelParser extends Controller {
 
 
                 //ENGAGEMENT RINGS
-                $this->category[] = 20;
+                //$this->category[] = 20;
 
                 //WOMAN WEDDING RINGS
-                //$this->category[] = 69;
+                $this->category[] = 69;
 
                 //FINE JEWERLY
                 //$this->category[] = 82;
