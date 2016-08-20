@@ -301,7 +301,7 @@
                         <img class="img-responsive" src="/catalog/view/theme/canary/img/img-new2.jpg" alt="img">
                         <div class="overlay">
                             <h3>Mens Wedding Rings</h3>
-                            <a href="/engagement-rings">
+                            <a href="/wedding-rings/classic_man">
                                 <button class="info">Show Rings</button>
                             </a>
                         </div>

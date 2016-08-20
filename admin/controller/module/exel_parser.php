@@ -61,25 +61,25 @@ class ControllerModuleExelParser extends Controller {
         );
 
         //ENGAGEMENT RINGS
-        $this->category_arr = array(
-            'Three-stone' => 63,
-            'Vintage' => 66,
-            'Bezel set' => 64,
-            'Halo' => 65,
-            'Bypass' => 62,
-            'Pave' => 60,
-            'Solitaire' => 59,
-            'Modern'    => 89,
-            'Channel'   => 61
-        );
+//        $this->category_arr = array(
+//            'Three-stone' => 63,
+//            'Vintage' => 66,
+//            'Bezel set' => 64,
+//            'Halo' => 65,
+//            'Bypass' => 62,
+//            'Pave' => 60,
+//            'Solitaire' => 59,
+//            'Modern'    => 89,
+//            'Channel'   => 61
+//        );
 
         //WOMAN WEDDING RINGS
-//        $this->category_arr = array(
-//            'Classic' => 77,
-//            'Stackable' => 78,
-//            'Eternity' => 81,
-//            'Diamond' => 79
-//        );
+        $this->category_arr = array(
+            'Classic' => 77,
+            'Stackable' => 78,
+            'Eternity' => 81,
+            'Diamond' => 79
+        );
 
         //FINE JEWERLY
 //        $this->category_arr = array(
@@ -226,7 +226,9 @@ class ControllerModuleExelParser extends Controller {
         //$filePath = '/home/canary/www/fashion_jewelry.csv';
         //$filePath = '/home/canary/www/diamonds_rings_jewelry.csv';
         //$filePath = '/home/canary/www/new_engagement_rings.csv';
-        $filePath = '/home/brilliantcanary/htdocs/new_engagement_rings.csv';
+        //$filePath = '/home/canary/www/matching bands.csv';
+        $filePath = '/home/brilliantcanary/htdocs/matching bands.csv';
+        //$filePath = '/home/brilliantcanary/htdocs/new_engagement_rings.csv';
         //$filePath = '/home/brilliantcanary/htdocs/diamonds_rings_jewelry.csv';
         //$filePath = '/home/brilliantcanary/htdocs/fashion_jewelry.csv';
         //$filePath = '/home/brilliantcanary/htdocs/website_weding_woman.csv';
@@ -317,7 +319,7 @@ class ControllerModuleExelParser extends Controller {
                 }
 
                 //galery image
-                $this->GaleryUrlImg($metal, $sku);
+                //$this->GaleryUrlImg($metal, $sku);
 
 
                 //ENGAGEMENT RINGS
@@ -341,8 +343,8 @@ class ControllerModuleExelParser extends Controller {
 
 
                 //image general
-                $this->image_general = 'catalog/galery_rings/'.$name_file_general_img;
-                //$this->image_general = '';
+                //$this->image_general = 'catalog/galery_rings/'.$name_file_general_img;
+                $this->image_general = '';
 
 
                 $this->model = $this->sku;
@@ -372,7 +374,7 @@ class ControllerModuleExelParser extends Controller {
                 $this->addCategory();
                 $this->addFilters();
                 $this->addUrl();
-                $this->addGalery();
+                //$this->addGalery();
                 $this->addStore();
 
                 $this->addOption();
