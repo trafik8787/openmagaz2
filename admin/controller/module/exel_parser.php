@@ -63,6 +63,7 @@ class ControllerModuleExelParser extends Controller {
         //ENGAGEMENT RINGS
         $this->category_arr = array(
             'Three-stone' => 63,
+            'Three Stone' => 63,
             'Vintage' => 66,
             'Bezel set' => 64,
             'Halo' => 65,
@@ -228,7 +229,8 @@ class ControllerModuleExelParser extends Controller {
         //$filePath = '/home/canary/www/new_engagement_rings.csv';
         //$filePath = '/home/canary/www/matching bands.csv';
         //$filePath = '/home/canary/www/solitaire engagement rings.csv';
-        $filePath = '/home/brilliantcanary/htdocs/solitaire engagement rings.csv';
+        $filePath = '/home/canary/www/Pave Engagement Rings-NO HALO.csv';
+        //$filePath = '/home/brilliantcanary/htdocs/solitaire engagement rings.csv';
         //$filePath = '/home/brilliantcanary/htdocs/matching bands.csv';
         //$filePath = '/home/brilliantcanary/htdocs/new_engagement_rings.csv';
         //$filePath = '/home/brilliantcanary/htdocs/diamonds_rings_jewelry.csv';
@@ -263,7 +265,7 @@ class ControllerModuleExelParser extends Controller {
                 //METAL
                 if ($metal == '14K White Gold' OR $metal == '14k White Gold') {
                     $this->metal = $this->list_metal['14K White Gold'];
-                    $this->sku = $curent[1] . '-W14';
+                    $this->sku = $curent[1] . 'W14';
                     $this->filter[] = $this->list_filtr['14K White Gold'];
 
                     $name_file_general_img = $sku.'.jpg';
@@ -271,49 +273,49 @@ class ControllerModuleExelParser extends Controller {
 
                 } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
                     $this->metal = $this->list_metal['14K Yellow Gold'];
-                    $this->sku = $curent[1] . '-Y14';
+                    $this->sku = $curent[1] . 'Y14';
                     $this->filter[] = $this->list_filtr['14K Yellow Gold'];
 
                     $name_file_general_img = $sku.'.alt.jpg';
 
                 } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
                     $this->metal = $this->list_metal['14K Rose Gold'];
-                    $this->sku = $curent[1] . '-R14';
+                    $this->sku = $curent[1] . 'R14';
                     $this->filter[] = $this->list_filtr['14K Rose Gold'];
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
                 } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
                     $this->metal = $this->list_metal['18K White Gold'];
-                    $this->sku = $curent[1] . '-W18';
+                    $this->sku = $curent[1] . 'W18';
                     $this->filter[] = $this->list_filtr['18K White Gold'];
 
                     $name_file_general_img = $sku.'.jpg';
 
                 } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
                     $this->metal = $this->list_metal['18K Yellow Gold'];
-                    $this->sku = $curent[1] . '-Y18';
+                    $this->sku = $curent[1] . 'Y18';
                     $this->filter[] = $this->list_filtr['18K Yellow Gold'];
 
                     $name_file_general_img = $sku.'.alt.jpg';
 
                 } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
                     $this->metal = $this->list_metal['18K Rose Gold'];
-                    $this->sku = $curent[1] . '-R18';
+                    $this->sku = $curent[1] . 'R18';
                     $this->filter[] = $this->list_filtr['18K Rose Gold'];
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
                 } elseif ($metal == 'Platinum') {
                     $this->metal = $this->list_metal['Platinum'];
-                    $this->sku = $curent[1] . '-PL';
+                    $this->sku = $curent[1] . 'PL';
                     $this->filter[] = $this->list_filtr['Platinum'];
 
                     $name_file_general_img = $sku.'.jpg';
 
                 } elseif ($metal == 'Palladium') {
                     $this->metal = $this->list_metal['Palladium'];
-                    $this->sku = $curent[1] . '-PA';
+                    $this->sku = $curent[1] . 'PA';
                     $this->filter[] = $this->list_filtr['Palladium'];
 
                     $name_file_general_img = $sku.'.jpg';
@@ -321,7 +323,7 @@ class ControllerModuleExelParser extends Controller {
                 }
 
                 //galery image
-                //$this->GaleryUrlImg($metal, $sku);
+                $this->GaleryUrlImg($metal, $sku);
 
 
                 //ENGAGEMENT RINGS
@@ -345,8 +347,8 @@ class ControllerModuleExelParser extends Controller {
 
 
                 //image general
-                //$this->image_general = 'catalog/galery_rings/'.$name_file_general_img;
-                $this->image_general = '';
+                $this->image_general = 'catalog/galery_rings/'.$name_file_general_img;
+                //$this->image_general = '';
 
 
                 $this->model = $this->sku;
@@ -376,7 +378,7 @@ class ControllerModuleExelParser extends Controller {
                 $this->addCategory();
                 $this->addFilters();
                 $this->addUrl();
-                //$this->addGalery();
+                $this->addGalery();
                 $this->addStore();
 
                 $this->addOption();
