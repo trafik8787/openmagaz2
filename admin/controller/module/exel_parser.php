@@ -229,7 +229,8 @@ class ControllerModuleExelParser extends Controller {
         //$filePath = '/home/canary/www/new_engagement_rings.csv';
         //$filePath = '/home/canary/www/matching bands.csv';
         //$filePath = '/home/canary/www/solitaire engagement rings.csv';
-        $filePath = '/home/canary/www/Pave Engagement Rings-NO HALO.csv';
+        //$filePath = '/home/canary/www/Pave Engagement Rings-NO HALO.csv';
+        $filePath = '/home/brilliantcanary/htdocs/Pave Engagement Rings-NO HALO.csv';
         //$filePath = '/home/brilliantcanary/htdocs/solitaire engagement rings.csv';
         //$filePath = '/home/brilliantcanary/htdocs/matching bands.csv';
         //$filePath = '/home/brilliantcanary/htdocs/new_engagement_rings.csv';
