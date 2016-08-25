@@ -61,7 +61,7 @@
                                     </ul>
                                     <?if ($product->response->body->diamond->has_cert_file === true):?>
                                         <br>
-                                        <p><a href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$product->response->body->diamond->diamond_id?>"><img src="/image/icon_lab/<?=strtolower($product->response->body->diamond->lab)?>.jpg" alt="" style="border: 1px solid #cccccc; width: 70px"></a></p>
+                                        <p><a href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$product->response->body->diamond->diamond_id?>"><img src="/catalog/view/theme/canary/img/icon_lab/<?=strtolower($product->response->body->diamond->lab)?>.jpg" alt="" style="border: 1px solid #cccccc; width: 70px"></a></p>
                                     <?endif?>
                                 </div>
                                 <div class="col-md-6">
