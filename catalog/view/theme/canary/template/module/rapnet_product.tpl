@@ -59,6 +59,10 @@
                                         <li><span>SYMMETRY: </span><span><?=$product->response->body->diamond->symmetry?></span></li>
                                         <li><span>FLUORESCENCE: </span><span><?=$product->response->body->diamond->fluor_intensity?></span></li>
                                     </ul>
+                                    <?if ($product->response->body->diamond->has_cert_file === true):?>
+                                        <br>
+                                        <p><a href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$product->response->body->diamond->diamond_id?>"><img src="/image/icon_lab/<?=strtolower($product->response->body->diamond->lab)?>.jpg" alt="" style="border: 1px solid #cccccc; width: 70px"></a></p>
+                                    <?endif?>
                                 </div>
                                 <div class="col-md-6">
                                     <ul>
@@ -72,6 +76,7 @@
                                         <li><span>CULET: </span><span><?=$product->response->body->diamond->culet_size?></span></li>
                                         <li><span>CERTIFICATE: </span><span><?=$product->response->body->diamond->lab?></span></li>
                                     </ul>
+
                                 </div>
                             </div>
 

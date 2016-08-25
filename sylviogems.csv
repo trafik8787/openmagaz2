@@ -1,0 +1,1516 @@
+Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,Color System,Stone Image,Certificate Image,Additional Image,Dimensions,Availability,Origin,Description,Treatment Notes,Lab,Certificate ID
+,SA,STB,5.38,BLU,235.00,SBL4020,,,,,,,,STB Sapphire Gem,H,,sbl4020
+,SA,STB,5.15,BLU,155.00,SBL3020,,,,,,,,STB Sapphire Gem,H,,sbl3020
+,SA,STB,14.92,BLU,155.00,SBL3520,,,,,,,,STB Sapphire Gem,H,,sbl3520
+,SA,STB,33.59,BLU,75.00,SBL2030,,,,,,,,STB Sapphire Gem,H,,sbl2030
+,SA,STB,7.76,BLU,185.00,SBL4623,,,,,,,,STB Sapphire Gem,H,,sbl4623
+,RU,STB,4.67,RED,175.00,RBL4200,,,,,,,,STB Ruby Gem,H,,rbl4200
+,RU,RD,60.01,RED,200.00,RRL4000,,,,,,,,RD Ruby Gem,H,,rrl4000
+,RU,TR,48.39,RED,550.00,RTL3754,,,,,,,,TR Ruby Gem,H,,rtl3754
+,EM,MIX,14.45,GRN,285.00,EXL5070,,,,,,,,MIX Emerald Gem,O,,exl5070
+,SA,OV,62.02,BLU,85.00,SVL5400,,,,,,,,OV Sapphire Gem,H,,svl5400
+,SA,STB,0.65,BLU,275.00,SBL5055,,,,,,,,STB Sapphire Gem,H,,sbl5055
+,RU,RD,36.10,RED,350.00,RRL5059,,,,,,,,RD Ruby Gem,H,,rrl5059
+,SA,RD,66.28,BLU,375.00,SRL5056,,,,,,,,RD Sapphire Gem,H,,srl5056
+,SA,CU,61.78,BLU,150.00,SMC1500,,,,,,,,CSHN Sapphire Gem,H,,smc1500
+,RU,RD,0.88,RED,650.00,RR08800,,rr08800.jpg,,,5.30|5.30|3.60,,,RD Ruby Gem 5.3MM,H,,rrl5059
+,RU,RD,0.89,RED,625.00,RR08900,,rr08900.jpg,,,5.50|5.50|3.40,,,RD Ruby Gem 5.5MM,H,,rrl5059
+,SA,OV,0.95,BLU,350.00,SV0940,,SV0940.jpg,,,6.40|4.70|3.40,,,OV Sapphire Gem. 6.4-4.7,H,,sv0940
+,SA,OV,0.97,BLU,480.00,SV0961,,sv0961.jpg,,,6.30|5.00|3.40,,,OV Sapphire Gem. 6.3-5.0,H,,sv0961
+,YS,PS,0.98,Yellow,185.00,YP09800,,yp09800.jpg,,,7.00|5.00|3.60,,,PS Y. Sapphire Gem 7.0X5.0X3.6,E,,smc1000
+,SA,MIX,20.92,,185.00,SMC2500,,,,,,,, Sapphire Gem,H,,smc2500
+,RU,OV,1.02,RED,1675.00,RV1020,,RV1020.jpg,,,7.00|5.10|3.00,,,OV Ruby Gem. 7.0-5.1,H,,rv1020
+,PS,PS,1.03,PNK,350.00,PP1030,,PP1030.jpg,,,,,,PS P. Sapphire Gem. 7.4-5.2,E,,pp1030
+,EM,OV,13.73,GRN,385.00,EXL0400,,,,,,,,MIX Emerald Gem,O,,exl0400
+,SA,OV,1.09,BLU,350.00,SV1081,,sv1081.jpg,,,6.30|5.00|3.80,,,OV Sapphire Gem. 6.3-5.0,H,,sv1081
+,SA,OV,1.10,BLU,350.00,SV1100,,sv1100.jpg,,,6.30|5.20|3.80,,,OV Sapphire Gem. 6.3-5.2,H,,sv1100
+,SA,OV,1.11,BLU,480.00,SV1111,,sv1111.jpg,,,6.30|5.10|3.60,,,OV Sapphire Gem. 6.3-5.1,H,,sv1111
+,SA,OV,1.39,BLU,285.00,SV1390,,sv1390.jpg,,,7.70|5.30|3.50,,,OV Sapphire Gem. 7.7-5.3,H,,sv1390
+,PS,EC,1.43,PNK,375.00,PE14300,,pe14300.jpg,,,6.10|5.30|4.00,,,EC P.Sapphire  6.1X5.3,E,,smc1500
+,SA,OV,1.46,BLU,450.00,SV1462,,sv1462.jpg,,,7.00|5.00|4.50,,,OV Sapphire Gem. 7.0-5.0,H,,sv1480
+,SA,OV,1.79,BLU,385.00,SV1790,,SV1790.jpg,,,7.50|6.30|4.50,,,OV Sapphire Gem. 7.5-6.3,H,,sv1790
+,SA,OV,0.65,BLU,185.00,SV0650,,sv0650.jpg,,,6.10|4.20|3.00,,,OV Sapphire Gem 6.10x4.20,H,,ov0650
+,RU,OV,0.92,RED,675.00,RV0920,,RV0920.jpg,,,6.50|4.90|3.20,,,OV Ruby Gem 6.50x4.90,H,,rv0920
+,RU,OV,0.76,RED,600.00,RV0760,,RV0760.jpg,,,7.00|5.10|2.40,,,OV Ruby Gem 7.00x5.10,H,,rv0760
+,,,1.00,,0.00,CREDIT RETURN,,,,,,,,CREDIT RETURN,,,
+,EM,RD,0.35,GRN,475.00,XER3903,,XER3903.jpg,,,3.90|3.90,,,RD Emerald Pair Gem. 3.9,O,,xer3903
+,EM,RD,0.44,GRN,450.00,XER4003,,XER4003.jpg,,,4.00|4.00,,,RD Emerald Pair Gem. 350.0,O,,xer4003
+,EM,RD,0.44,GRN,475.00,XER4004,,XER4004.jpg,,,4.00|4.00,,,RD Emerald Pair Gem. 4.0,O,,xer4004
+,EM,RD,0.43,GRN,450.00,XER4005,,XER4005.jpg,,,4.00|4.00,,,RD Emerald Pair Gem. 4.0,O,,xer4005
+,EM,RD,0.45,GRN,650.00,XER3901,,XER3901.jpg,,,3.90|3.90,,,RD Emerald Pair Gem. 3.9,O,,xer3901
+,EM,RD,0.48,GRN,750.00,XER4007,,XER4007.jpg,,,4.00|4.00,,,RD Emerald Pair Gem. 4.0,O,,xer4007
+,EM,PR,0.47,GRN,750.00,XEPR4000,,,,,4.00|4.00|2.50,,,Emerald. PR. Green 4.0MM,O,,
+,EM,RD,0.50,GRN,450.00,XER4104,,XER4104.jpg,,,4.10|4.10,,,RD Emerald Pair Gem. 4.1,O,,xer4104
+,EM,RD,0.49,GRN,385.00,XER4106,,XER4106.jpg,,,4.10|4.10,,,RD Emerald Pair Gem. 4.1,O,,xer4106
+,EM,RD,0.49,GRN,575.00,XER4108,,XER4108.jpg,,,4.10|4.10,,,RD Emerald Pair Gem. 4.1,O,,xer4108
+,EM,RD,0.52,GRN,385.00,XER4008,,XER4008.jpg,,,4.00|4.00,,,RD Emerald Pair Gem. 4.0,O,,xer4008
+,EM,PS,0.52,GRN,750.00,XEP5400,,xep5400.jpg,,,5.00|4.00|2.60,,,Emerald. PS. Green 5X4,O,,
+,EM,RD,0.54,GRN,450.00,XER4206,,XER4206.jpg,,,4.20|4.20,,,RD Emerald Pair Gem. 4.2,O,,xer4206
+,EM,RD,0.55,GRN,575.00,XER4203,,XER4203.jpg,,,4.20|4.20,,,RD Emerald Pair Gem. 4.2,O,,xer4203
+,EM,RD,0.56,GRN,450.00,XER4207,,XER4207.jpg,,,4.20|4.20,,,RD Emerald Pair Gem. 4.2,O,,xer4207
+,EM,PR,0.55,GRN,750.00,XEPR4001,,xepr4001.jpg,,,4.00|4.00|2.60,,,Emerald. PR. Green 4.0MM,O,,
+,EM,PR,0.56,GRN,850.00,XEPR4003,,xepr4003.jpg,,,4.00|4.00|2.90,,,Emerald. PR. Green 4.0X4.0,O,,
+,EM,RD,0.57,GRN,475.00,XER4506,,xer4506.jpg,,,4.50|4.50|2.80,,,Emerald. Round. Green 4.5MM,O,,
+,EM,PR,0.57,GRN,850.00,XEPR4004,,xepr4004.jpg,,,4.00|4.00|2.90,,,Emerald. PR. Green 4.0X4.0,O,,
+,RU,RD,0.59,RED,350.00,XRR0590,,xrr0590.jpg,,,4.00|4.00|2.40,,,Ruby. Round. Red 4.0MM,H,,
+,EM,RD,0.61,GRN,525.00,XER4107,,XER4107.jpg,,,4.10|4.10,,,RD Emerald Pair Gem. 4.1,O,,xer4107
+,RU,RD,0.62,RED,235.00,XRR0620,,xrr0620.jpg,,,3.80|3.80|2.80,,,Ruby. Round. Red 3.8MM,H,,
+,SA,FY,0.33,BLU,450.00,SF0330,,,,,7.10|3.50|2.30,,,Fancy Sapphire Pair,H,,sf0330
+,EM,RD,0.65,GRN,750.00,XER4806,,,,,4.80|4.80|2.80,,,Emerald. Round. Green 4.8MM,O,,
+,EM,RD,0.67,GRN,526.00,XER4308,,XER4308.jpg,,,4.30|4.30,,,RD Emerald Pair Gem. 4.3,O,,xer4308
+,RU,RD,0.70,RED,675.00,XRR4300,,XRR4300.jpg,,,4.30|4.30,,,RD Ruby Pair Gem. 4.3,H,,xrr4300
+,SA,FY,0.70,BLU,450.00,XSF5828,,,,,5.80|2.80,,,Fancy Sapphire Pair,H,,xsf5828
+,EM,RD,0.70,GRN,685.00,XER4804,,,,,4.80|4.80,,,RD Emerald Pair Gem 4.80x4.80,O,,
+,RU,RD,0.70,RED,375.00,XRR0700,,xrr0700.jpg,,,4.00|4.00|2.50,,,Ruby. Round. Red 4.0MM,H,,
+,SA,FY,0.71,BLU,450.00,XSF5829,,,,,5.80|2.80,,,Fancy Sapphire Pair,H,,xsf5829
+,EM,RD,0.74,GRN,525.00,XER4306,,XER4306.jpg,,,4.30|4.30,,,RD Emerald Pair Gem. 4.3,O,,xer4306
+,EM,RD,0.75,GRN,450.00,XER4501,,XER4501.jpg,,,4.50|4.50,,,RD Emerald Pair Gem. 4.5,O,,xer4501
+,PS,RD,0.75,PNK,250.00,XPR4100,,xrp4100.jpg,,,4.10|4.10|2.70,,,P. Sapphire. Round 4.1MM pair,,,
+,EM,RD,0.39,GRN,850.00,ER03900,,er03900.jpg,,,4.90|4.90|3.00,,,Emerald. Round. 4.9MM,O,,
+,PS,RD,0.78,PNK,250.00,XPR4545,,xrp4545.jpg,,,4.50|4.50|2.40,,,P. Sapphire. Round. Pink 4.5MM,,,
+,EM,RD,0.79,GRN,975.00,XER4802,,XER4802.jpg,,,4.80|4.80,,,RD Emerald Gem 4.80,O,,xer4802
+,EM,RD,0.81,GRN,975.00,XER4704,,XER4704.jpg,,,4.70|4.70,,,Round Emerald pair,O,,xer4704
+,EM,RD,0.42,GRN,1350.00,ER04200,,er04200.jpg,,,4.70|4.70|3.40,,,Emerald. Round. Green 4.7MM,O,,
+,RU,RD,0.85,RED,375.00,XRR4501,,xrr4501.jpg,,,4.50|4.50|2.60,,,Ruby. Round. Red 4.5MM,H,,
+,RU,PC,0.87,RED,550.00,XRPC087,,,,,4.00|4.00|2.60,,,Ruby. PC. Red 4.0MM,H,,
+,EM,RD,0.90,GRN,600.00,XER5107,,,,,5.10|5.10|3.00,,,Emerald. Round. Green 5.1MM,O,,
+,EM,RD,0.92,GRN,975.00,XER4703,,XER4703.jpg,,,4.70|4.70,,,Round Emerald pair,O,,xer4703
+,RU,RD,0.92,RED,375.00,XRR4500,,XRR4500.jpg,,,4.50|4.50|2.70,,,Ruby. Round. Red 4.5MM,H,,
+,RU,RD,0.94,RED,450.00,XRR4600,,XRR4600.jpg,,,4.60|4.60,,,RD Ruby Pair Gem. 4.6,H,,xrr4600
+,EM,RD,0.95,GRN,750.00,XER5204,,,,,5.20|5.20,,,RD Emerald Pair Gem 5.20x5.20,O,,
+,EM,RD,0.48,GRN,850.00,ER04801,,er04801.jpg,,,4.90|4.90|3.20,,,Emerald. Round. Green 4.9MM,O,,
+,EM,RD,0.48,GRN,850.00,ER04800,,er04800.jpg,,,5.20|5.20|3.50,,,Emerald. Round. Green 5.2MM,O,,
+,SA,RD,0.96,BLU,350.00,XSR4404,,xsr4404.jpg,,,4.40|4.40|3.00,,,Sapphire. Round. Blue 4.4MM,H,,
+,RU,RD,0.97,RED,525.00,XRR4801,,XRR4801.jpg,,,4.80|4.80,,,RD Ruby Pair Gem. 4.8,H,,xrr4801
+,RU,RD,0.98,RED,400.00,XRR4707,,XRR4707.jpg,,,4.70|4.70|2.80,,,Ruby. Round. Red 4.7MM,H,,
+,RU,PS,0.98,RED,425.00,XRP5742,,XRP5742.jpg,,,5.70|4.20|2.80,,,Ruby. PS. Red 5.7X4.2,H,,
+,RU,RD,1.00,RED,475.00,XRR5004,,XRR5004.jpg,,,5.00|5.00|2.90,,,Ruby. Round. Red 4.9MM,H,,
+,PS,HS,0.51,PNK,385.00,PH05100,,,,,4.80|5.50|2.70,,,P. Sapphire. Heart Shape. 4.8X5.5,H,,
+,RU,OV,1.03,RED,450.00,XRV6044,,XRV6044.jpg,,,6.00|4.00,,,OV Ruby Pair Gem. 6.0-4.0,H,,xrv6044
+,EM,RD,0.52,GRN,575.00,ER0520,,ER0520.jpg,,,5.30|5.30|3.30,,,RD Emerald Gem. 5.3,O,,er0520
+,EM,OV,1.04,GRN,750.00,XEO6242,,XEO6242.jpg,,,6.20|4.20,,,OV Emerald Pair Gem 6.20x4.20,O,,xeo6242
+,EM,EC,0.52,GRN,750.00,EE0520,,EE0520.jpg,,,6.10|4.00|2.90,,,EC Emerald Gem 6.1X4.0,O,,exl0400
+,EM,OV,0.53,GRN,875.00,EV0530,,EV0530.jpg,,,6.80|4.90|2.80,,,OV Emerald Gem 6.8x4.9,O,,
+,EM,RD,0.53,GRN,275.00,ER05300,,er05300.jpg,,,5.40|5.40|3.10,,,Emerald. Round. Green 5.4MM,O,,
+,EM,CU,0.53,GRN,950.00,EC05300,,ec05300.jpg,,,5.30|5.30|3.00,,,Emerald. Cushion. Green 5.3X5.3,O,,
+,RU,PS,1.08,RED,450.00,XRP6044,,XRP6044.jpg,,,6.00|4.20|2.90,,,Ruby. PS. Red 6.0X4.2,H,,
+,EM,EC,0.55,GRN,900.00,EE05500,,ee05500.jpg,,,6.00|4.10|2.90,,,Emerald. EC. Green 6.0X4.1,O,,
+,RU,RD,1.10,RED,500.00,XRR1100,,XRR1100.jpg,,,4.60|4.60|2.90,,,Ruby. Round. Red 4.6MM,H,,
+,RU,RD,1.11,RED,525.00,XRR4702,,XRR4702.jpg,,,4.70|4.70,,,RD Ruby Pair Gem. 4.7,H,,xrr4702
+,YS,RD,0.56,Yellow,250.00,YR0560,,YR0560.jpg,,,5.30|5.30|2.20,,,RD Y. Sapphire Gem 5.3MM,E,,yxl1000
+,EM,EC,0.56,GRN,850.00,EE05600,,ee05600.png,,,5.90|4.60|3.00,,,Emerald. EC. Green 5.9X4.6,O,,
+,EM,OV,0.57,GRN,900.00,EV05700,,ev05700.jpg,,,6.80|4.80|3.00,,,Emerald. Oval. Green 6.8X4.8,O,,
+,RU,RD,1.13,RED,600.00,XRR1130,,XRR1130.jpg,,,4.80|4.80|3.00,,,Ruby. Round. Red 4.8MM,H,,
+,RU,RD,1.15,RED,650.00,XRR4704,,XRR4704.jpg,,,4.70|4.70,,,RD Ruby Pair Gem. 4.7,H,,xrr4704
+,EM,RD,0.58,GRN,750.00,ER0580,,ER0580.jpg,,,5.70|5.70|3.10,,,RD Emerald Gem 5.70,O,,er0580
+,RU,EC,0.58,RED,675.00,RE0580,,RE0580.jpg,,,5.90|4.00|2.30,,,EC Ruby Gem 5.9x4.0,H,,rxl1002
+,EM,RD,0.58,GRN,675.00,ER05800,,er05800.jpg,,,5.20|5.20|3.70,,,Emerald. Round. Green 5.2MM,O,,
+,RU,RD,1.17,RED,575.00,XRR4800,,XRR4800.jpg,,,4.80|4.80,,,RD Ruby Pair Gem. 4.8,H,,xrr4800
+,RU,TR,0.60,RED,475.00,RT0600,,RT0600.jpg,,,5.50|5.40|2.40,,,TR Ruby Gem 5.5x5.4,H,,rxl1002
+,EM,RD,0.61,GRN,875.00,ER06100,,er06100.jpg,,,5.70|5.70|3.50,,,Emerald. Round. Green 5.7MM,O,,
+,EM,RD,0.61,GRN,675.00,ER06101,,ER06101.jpg,,,5.30|5.30|3.80,,,Emerald. Round. Green 5.3MM,O,,
+,SA,OV,0.62,BLU,185.00,SV0620,,sv0620.jpg,,,6.10|3.90|2.70,,,OV Sapphire Gem 6.10x3.90,H,,ov0620
+,SA,RD,1.25,BLU,150.00,XSR5200,,XSR5200.jpg,,,5.20|5.20,,,RD Sapphire Pair Gem. 5.2,H,,xsr5200
+,RU,RD,1.26,RED,700.00,XRR12600,,XRR12600.jpg,,,5.10|5.10|3.00,,,Ruby. Round. Red 5.1MM,H,,
+,EM,RD,0.65,GRN,250.00,ER06500,,er06500.jpg,,,5.80|5.80|3.40,,,Emerald. Round. Green 5.8MM,O,,
+,SA,PS,1.29,BLU,375.00,XSP6053,,,,,6.00|5.00|2.90,,,Sapphire. PS. Blue 6X5,H,,
+,SA,RD,1.32,BLU,325.00,XSR5003,,XSR5003.jpg,,,5.00|5.00,,,RD Sapphire Pair Gem. 5.0,H,,xsr5003
+,SA,RD,1.31,BLU,230.00,XSR5117,,XSR5117.jpg,,,5.10|5.10,,,RD Sapphire Pair Gem. 5.1,H,,xsr5117
+,YS,RD,1.32,Yellow,155.00,XYR5010,,XYR5010.jpg,,,5.00|5.00,,,RD Y. Sapphire Pair Gem. 5.0,E,,xyr5010
+,EM,RD,0.66,GRN,675.00,ER0660,,ER0660.jpg,,,5.50|5.50|4.10,,,RD Emerald Gem 5.50,O,,er0660
+,YS,CU,1.31,Yellow,175.00,XYC5100,,XYC5100.jpg,,,5.10|5.10|2.80,,,Y. Sapphire. Cushion. Yellow 5.1X5.1,,,
+,RU,RD,0.66,RED,450.00,RR06600,,RR06600.jpg,,,5.50|5.50|2.50,,,Ruby. Round. Red 5.5MM,H,,
+,YS,RD,0.66,Yellow,275.00,YR06600,,yr06600.jpg,,,5.60|5.60|3.00,,,Y. Sapphire. Round. Yellow 5.6MM,,,
+,YS,CU,1.33,Yellow,175.00,XYC4800,,XYC4800.jpg,,,4.80|4.80|3.30,,,Y. Sapphire. Cushion. Yellow 4.8X4.8,,,
+,EM,RD,0.67,GRN,750.00,ER067SH,,er067s.jpg,,,6.00|6.00|3.20,,,Emerald. Round. Green 6.0MM,O,,
+,SA,CU,0.68,BLU,950.00,SC0680,,SC0680.jpg,,,5.10|5.10|3.20,,,CC Sapphire Gem 5.10x5.10,H,,
+,RU,OV,0.68,RED,325.00,RV06800,,rv06800.jpg,,,6.10|5.00|2.50,,,Ruby. Oval. Red 6.1X5.0MM,H,,
+,RU,OV,0.68,RED,475.00,RV06801,,rv06801.jpg,,,6.10|5.10|2.40,,,Ruby. Oval. Red 6.1X5.1MM,H,,
+,RU,OV,0.69,RED,450.00,RV06900,,rv06900.jpg,,,6.00|4.80|2.70,,,Ruby. Oval. Red 6.0X4.8,H,,
+,SA,CU,1.39,BLU,500.00,XSC1390,,XSC1390.jpg,,,5.10|4.90,,,CC Sapphire Gem Pair 5.10x4.90,H,,
+,EM,RD,0.70,GRN,1250.00,ER610255,,er610255.jpg,,,6.00|6.00|3.70,,,Emerald. Round. Green6.0MM,O,,
+,EM,RD,0.71,GRN,900.00,ER0711,,er0711.jpg,,,5.80|5.80|3.60,,,RD Emerald Gem 5.80,O,,er0711
+,YS,OV,0.71,Yellow,250.00,YV0710,,YV0710.jpg,,,6.50|4.90|2.60,,,OV Y. Sapphire Gem 6.5X4.9,E,,yxl1000
+,EM,OV,0.71,GRN,785.00,EV07100,,ev07100.jpg,,,6.90|4.90|3.30,,,Emerald. Oval. Green 6.9X4.9,O,,
+,YS,RD,0.71,Yellow,250.00,YR07100,,yr07100.jpg,,,5.50|5.50|3.00,,,Y. Sapphire. Round. Yellow 5.5MM,,,
+,RU,RD,1.44,RED,550.00,XRR5505,,XRR5505.jpg,,,5.50,,,RD Ruby Pair Gem 5.50,H,,rrl5059
+,EM,OV,0.72,GRN,950.00,EV0720,,EV0720.jpg,,,6.40|4.80|3.70,,,OV Emerald Gem 6.4x4.8,O,,exl0400
+,EM,RD,0.72,GRN,1250.00,ER610266,,er610266.jpg,,,6.10|6.10|3.30,,,Emerald. Round. Green 6.1MM,O,,
+,SA,EC,0.73,BLU,325.00,SE0730,,SE0730.jpg,,,5.90|4.90|2.30,,,EC Sapphire Gem. 5.9-4.9,H,,se0730
+,RU,RD,1.46,RED,600.00,XRR5100,,XRR5100.jpg,,,5.10|5.10,,,RD Ruby Pair Gem. 5.1,H,,xrr5100
+,RU,RD,0.73,RED,750.00,RR07300,,rr07300.jpg,,,5.50|5.50|3.00,,,Ruby. Round. Red 5.5MM,H,,
+,SA,OV,1.45,BLU,375.00,XSV6242,,xsr6242.jpg,,,6.20|4.20|3.30,,,Sapphire. Oval. Blue 6.2X4.2,H,,
+,RU,OV,0.74,RED,575.00,RV0740,,RV0740.jpg,,,6.60|4.30|2.50,,,OV Ruby Gem 6.60x4.30,H,,
+,EM,OV,0.74,GRN,650.00,EV07400,,ev07400.jpg,,,7.00|5.10|3.50,,,Emerald. Oval. Green 7.0X5.1,O,,
+,EM,RD,0.75,GRN,800.00,ER07500,,er07500.jpg,,,5.90|5.90|3.90,,,Emerald. Round. Green 5.9MM,O,,
+,EM,RD,0.75,GRN,950.00,ER075SH,,er075sh.jpg,,,5.80|5.80|3.80,,,Emerald. Round. Green 5.8MM,O,,
+,PS,RD,0.76,PNK,475.00,PR0760,,pr0760.jpg,,,5.70|5.70|2.80,,,RD P. Sapphire Gem 5.70,,,pr0760
+,RU,PS,0.76,RED,500.00,RP0760,,RP0760.jpg,,,7.10|5.00|2.60,,,PS Ruby Gem,H,,
+,EM,EC,0.76,GRN,675.00,EE0760,,EE0760.jpg,,,6.70|4.70|3.60,,,EC Emerald Gem 6.70x4.70,O,,
+,RU,EC,0.76,RED,850.00,RE0760,,re0760.jpg,,,5.60|4.30|2.90,,,EC Ruby Gem 5.6x4.3,H,,rel1000
+,EM,TR,0.76,GRN,675.00,ET0760,,ET0760.jpg,,,6.10|6.10|4.10,,,TR Emerald Gem 6.1x6.1,O,,exl0400
+,EM,RD,0.76,GRN,1250.00,ER0760,,er0760.jpg,,,5.60|5.60|3.50,,,RD Emerald Gem 5.60,O,,
+,EM,RD,0.76,GRN,750.00,ER07600,,er07600.jpg,,,5.80|5.80|4.10,,,Emerald. Round. Green 5.8MM,O,,
+,SA,EC,0.77,BLU,325.00,SE0770,,SE0770.jpg,,,6.50|4.50|2.40,,,EC Sapphire Gem. 6.5-4.5,H,,se0770
+,EM,RD,0.78,GRN,850.00,ER0780,,ER0780.jpg,,,6.20|6.20|3.60,,,RD Emerald Gem 6.20,O,,er0780
+,PS,PS,0.80,PNK,350.00,PP0800,,PP0800.jpg,,,7.00|5.00|3.10,,,PS P. Sapphire Gem. 7.0-5.0,E,,pp0800
+,SA,OV,0.80,BLU,700.00,SV0800,,SV0800.jpg,,,7.00|5.00,,,OV Sapphire Gem 7.0X5.0,H,,
+,EM,RD,0.81,GRN,750.00,ER0810,,ER0810.jpg,,,6.30|6.30|3.60,,,RD Emerald Gem. 6.3,O,,er0810
+,SA,RD,1.62,BLU,450.00,XSR5504,,XSR5504.jpg,,,5.50|5.50,,,RD Sapphire Pair Gem. 5.5,H,,xsr5504
+,YS,RD,0.81,Yellow,250.00,YR0811,,YR0811.jpg,,,5.70|5.70|3.10,,,RD Y.Sapphire Gem 5.70,,,yr0811
+,SA,OV,0.81,BLU,475.00,SV0813,,SV0813.jpg,,,6.00|5.00,,,OV Sapphire Gem 6.0x5.0,H,,
+,EM,OV,0.81,GRN,250.00,EV08100,,ev08100.jpg,,,6.70|4.90|3.60,,,Emerald. Oval. Green 6.7X4.9,O,,
+,PS,RD,0.82,PNK,375.00,PR0820,,pr0820.jpg,,,5.80|5.80|2.70,,,RD P. Sapphire Gem 5.80,E,,pr0820
+,RU,OV,1.63,RED,685.00,XRV1630,,XRV1630.jpg,,,6.20|4.60,,,OV Ruby Pair Gem 6.2x4.6,H,,rxl1002
+,YS,RD,0.82,Yellow,185.00,YR08200,,yr08200.jpg,,,5.80|5.80|3.00,,,Y. Sapphire. Round. Yellow 5.8MM,,,
+,YS,RD,0.82,Yellow,250.00,YR08201,,yr08201.jpg,,,5.20|5.20|3.60,,,Y. Sapphire. Round. Yellow 5.2MM,,,
+,EM,OV,1.66,GRN,2300.00,XEV7753,,XEV7753.jpg,,,7.70|5.30,,,OV Emerald Pair Gem. 7.7-5.3,O,,xev7753
+,EM,OV,1.65,GRN,1850.00,XEV7854,,XEV7854.jpg,,,7.80|5.40,,,OV Emerald Pair Gem. 7.8-5.4,O,,xev7854
+,YS,RD,0.83,Yellow,200.00,YR0830,,YR0830.jpg,,,5.90|5.90|3.40,,,RD Y.Sapphire Gem 5.90,,,yr0830
+,SA,CU,0.83,BLU,950.00,SC0831,,SC0831.jpg,,,6.90|4.80|2.90,,,CC Sapphire Gem 6.90x4.80,H,,
+,RU,RD,0.83,RED,650.00,RR08300,,RR08300.jpg,,,5.40|5.40|3.30,,,Ruby. Round. Red 5.4MM,H,,
+,RU,RD,0.83,RED,450.00,RR08302,,RR08302.jpg,,,5.60|5.60|3.00,,,Ruby. Round. Red 5.6MM,H,,
+,EM,OV,0.84,GRN,3500.00,EV0842,,EV0842.jpg,,,7.60|5.50|3.40,,,OV Emerald Gem. 7.6-5.5,O,,ev0842
+,SA,CU,0.84,BLU,475.00,SC0840,,SC0840.jpg,,,5.20|5.10|3.50,,,CC Sapphire Gem 5.20x5.10,H,,
+,EM,EC,0.84,GRN,675.00,EE0840,,EE0840.jpg,,,6.40|5.00|3.70,,,EC Emerald Gem 6.40x5.00,O,,
+,RU,RD,0.84,RED,750.00,RR08401,,RR08401.jpg,,,5.50|5.50|3.40,,,Ruby. Round. Red 5.5MM,H,,
+,RU,OV,0.84,RED,375.00,RV08400,,rv08400.jpg,,,6.10|4.90|3.00,,,Ruby. Oval. Red 6.1X4.9MM,H,,
+,EM,RD,0.85,GRN,850.00,ER0851,,ER0851.jpg,,,6.60|3.40,,,RD Emerald Gem 6.60,O,,er0851
+,RU,OV,0.85,RED,475.00,RV0852,,RV0852.jpg,,,6.00|4.60|3.50,,,OV Ruby Gem 6.0x4.6,H,,rxl1002
+,RU,OV,0.85,RED,1275.00,RV0853,,RV0853.jpg,,,6.60|4.70|3.10,,,OV Ruby Gem 6.6x4.7,H,,rxl7050
+,YS,RD,1.72,Yellow,175.00,XYR5603,,XYR5603.jpg,,,5.60|5.60,,,RD Y. Sapphire Pair Gem. 5.6,E,,xyr5603
+,PS,RD,0.86,PNK,375.00,PR0860,,pr0860.jpg,,,5.40|5.40|3.30,,,RD P. Sapphire Gem 5.40,E,,pr0860
+,SA,CU,0.86,BLU,475.00,SC0862,,SC0862.jpg,,,5.40|5.40|3.40,,,CC Sapphire Gem 5.40x5.40,H,,
+,RU,OV,0.86,RED,600.00,RV08600,,rv08600.jpg,,,7.00|5.10|2.60,,,Ruby. Oval. Red 7.0X5.1,H,,
+,EM,OV,0.86,GRN,1200.00,EV08600,,ev08600.jpg,,,7.10|5.10|3.60,,,Emerald. Oval. Green 7.1X5.1,O,,
+,SA,RD,0.86,BLU,850.00,SR561966,,sr561966.jpg,,,5.60|5.60|3.20,,,Sapphire. Round. Blue 5.6MM,H,,
+,SA,EC,0.87,BLU,325.00,SE0870,,SE0870.jpg,,,5.60|5.00|3.10,,,EC Sapphire Gem. 5.6-5.0,H,,se0870
+,YS,OV,0.87,Yellow,250.00,YV0870,,YV0870.jpg,,,6.30|5.60|3.00,,,OV Y.Sapphire Gem 6.30x5.60,,,
+,SA,OV,0.87,BLU,475.00,SV0873,,SV0873.jpg,,,6.20|5.00,,,OV Sapphire Gem 6.2x5.0,H,,
+,RU,TR,0.87,RED,650.00,RT0870,,rt0870.jpg,,,5.60|5.60|3.40,,,TR Ruby Gem 5.60,H,,rtl5364
+,RU,OV,0.87,RED,675.00,RV08700,,rv08700.jpg,,,6.00|5.00|2.90,,,Ruby. Oval. Red 6.0X5.0,H,,
+,EM,CU,0.87,GRN,1250.00,EC08700,,ec08700.jpg,,,6.00|6.00|4.00,,,Emerald. Cushion. Green 6.0X6.0,O,,
+,RU,RD,0.87,RED,600.00,RR08700,,RR08700.jpg,,,5.30|5.30|3.50,,,Ruby. Round. Red 5.3MM,H,,
+,RU,RD,0.88,RED,485.00,RR0880,,RR0880.jpg,,,5.50|5.50|3.50,,,RD Ruby Gem,H,,rr0880
+,RU,OV,0.88,RED,475.00,RV0881,,RV0881.jpg,,,6.40|4.50|3.40,,,OV Ruby Gem 6.4x4.5,H,,rxl1002
+,EM,RD,0.88,GRN,850.00,ER088SH,,er088sh.jpg,,,6.00|6.00|4.10,,,Emerald. Round. Green 6.0MM,O,,
+,SA,EC,0.89,BLU,325.00,SE0890,,SE0890.jpg,,,6.70|5.20|2.50,,,EC Sapphire Gem. 6.7-5.2,H,,se0890
+,RU,CU,0.89,RED,850.00,RC0890,,rc0890.jpg,,,6.40|5.20|2.90,,,CC Ruby Gem 6.40x5.20,H,,pc0890
+,RU,TR,0.89,RED,650.00,RT0890,,rt0890.jpg,,,5.40|5.40|3.20,,,TR Ruby Gem 5.40,H,,rtl5364
+,YS,RAD,0.89,Yellow,235.00,YD08901,,yd08901.jpg,,,6.00|5.00|3.50,,,Sapphire. Radiant. Yellow 6.0X5.0,,,
+,PS,RD,0.89,PNK,350.00,PR08900,,PR08900.jpg,,,5.60|5.60|3.20,,,P. Sapphire. Round. Pink 5.6MM,,,
+,EM,RD,0.89,GRN,850.00,ER089SH,,er089sh.jpg,,,6.00|6.00|4.30,,,Emerald. Round. Green 6.0MM,O,,
+,SA,RD,0.89,BLU,400.00,SR591066,,sr591066.jpg,,,5.80|5.80|3.40,,,Sapphire. Round. Blue 5.8MM,H,,
+,YS,RAD,0.90,Yellow,275.00,YD0930,,yd0930.jpg,,,6.00|5.00|3.40,,,RAD Y. Sapphire.,,,yd0930
+,RU,OV,0.90,RED,1275.00,RV0900,,rv0900.jpg,,,7.00|5.00|2.80,,,OV Ruby Gem 7.0x5.0,H,,rxl7050
+,RU,OV,0.90,RED,385.00,RV09000,,rv09000.jpg,,,6.00|5.00|3.60,,,Ruby. Oval. Red 6.0X5.0,H,,
+,SA,RD,0.90,BLU,425.00,SR09000,,sr09000.jpg,,,5.80|5.80|3.50,,,Sapphire. Round. Blue 5.8MM,H,,
+,PS,RD,0.90,PNK,375.00,PR09000,,pr09000.jpg,,,5.40|5.40|3.50,,,P. Sapphire. Round. Pink 5.4MM,,,
+,RU,OV,0.91,RED,600.00,RV0910,,RV0910.jpg,,,6.00|5.00|3.30,,,OV Ruby Gem. 6.0-5.0,H,,rv0910
+,YS,RAD,0.91,Yellow,300.00,YD09100,,yd09100.jpg,,,6.00|5.10|3.30,,,Sapphire. Radiant. Yellow 6.0X5.1,,,
+,PS,RD,0.91,PNK,500.00,PR09100,,pr09100.jpg,,,5.70|5.70|3.60,,,P. Sapphire. Round. Pink 5.7MM,,,
+,RU,RD,0.91,RED,650.00,RR09100,,rr09100.jpg,,,5.30|5.30|3.80,,,Ruby. Round. Red 5.3MM,H,,
+,SA,PS,0.92,BLU,285.00,SP0950,,SP0950.jpg,,,6.50|5.20|3.40,,,PS Sapphire Gem. 6.5-5.2,H,,sp0950
+,SA,RD,1.84,BLU,750.00,XSR5619,,xsr5619.jpg,,,5.60|5.60|3.70,,,RD Sapphire Pair Gem 5.60,H,,srl5503
+,SA,RD,0.92,BLU,600.00,SR0927,,SR0927.jpg,,,5.60|5.60|3.50,,,RD Sapphire Gem 5.60,H,,srl5155
+,SA,RD,0.92,BLU,500.00,SR0928,,sr0928.jpg,,,5.80|5.80|3.20,,,RD Sapphire Gem 5.80,H,,srl6005
+,YS,RAD,0.92,Yellow,300.00,YD0920D,,yd0920d.jpg,,,6.10|5.10|3.30,,,Sapphire. Radiant. Yellow 6.1X5.1,,,
+,YS,RD,0.92,Yellow,285.00,YR09200,,yr09200.jpg,,,5.80|5.80|3.40,,,Sapphire. Round. Yellow 5.8MM,,,
+,SA,RD,0.92,BLU,450.00,SR09200,,sr09200.jpg,,,5.80|5.80|3.40,,,Sapphire. Round. Blue 5.8MM,H,,
+,EM,EC,0.92,GRN,950.00,EE09200,,ee09200.jpg,,,6.90|4.80|3.70,,,Emerald. EC. Green 6.9X4.8,O,,
+,RU,RD,0.92,RED,500.00,RR09200,,rr09200.jpg,,,5.30|5.30|3.80,,,Ruby. Round. Red 5.3MM,H,,
+,SA,EC,0.93,BLU,385.00,SE0930,,SE0930.jpg,,,6.70|4.60|2.80,,,EC Sapphire Gem. 6.7-4.6,H,,se0930
+,RU,OV,0.93,RED,475.00,RV0930,,rv0930.jpg,,,6.50|4.80|3.10,,,OV Ruby Gem. 6.5-4.8,H,,rv0930
+,EM,RD,0.93,GRN,850.00,ER0950,,ER0950.jpg,,,6.30|6.30|4.10,,,RD Emerald Gem 6.30,O,,er0950
+,SA,OV,0.93,BLU,475.00,SV0953,,SV0953.jpg,,,6.20|5.10,,,OV Sapphire Gem 6.2x5.1,H,,
+,SA,RD,0.93,BLU,285.00,SR0937,,sr0937.jpg,,,5.60|5.60|3.70,,,RD Sapphire Gem 5.60,H,,srl5062
+,SA,RD,0.93,BLU,650.00,SR09300,,sr09300.jpg,,,5.80|5.80|3.50,,,Sapphire. Round. Blue 5.8MM,H,,
+,EM,RD,0.93,GRN,275.00,ER09300,,er09300.jpg,,,6.50|6.50|4.00,,,Emerald. Round. Green 6.5MM,O,,
+,SA,RD,0.94,BLU,650.00,SR0943,,sr0943.jpg,,,5.60|5.60|3.60,,,RD Sapphire Gem 5.6,H,,srl5503
+,RU,TR,0.94,RED,650.00,RT0940,,rt0940.jpg,,,5.60|5.60|3.80,,,TR Ruby Gem 5.60,H,,rtl5364
+,EM,RD,0.94,GRN,785.00,ER094SH,,er094sh.jpg,,,6.50|6.50|4.00,,,Emerald. Round. Green 6.5MM,O,,
+,YS,RD,1.90,Yellow,200.00,XYR6001,,XYR6001.jpg,,,6.00|6.00,,,RD Y. Sapphire Pair Gem. 6.0,E,,xyr6001
+,EM,TR,0.95,GRN,850.00,ET0950,,ET0950.jpg,,,7.00|7.00|3.90,,,TR Emerald Gem. 7.0,O,,et0950
+,PS,RD,0.95,PNK,575.00,PR0950,,pr0950.jpg,,,5.40|5.40|3.80,,,RD P. Sapphire Gem 5.40,E,,pr0950
+,YS,CU,0.95,Yellow,235.00,YC09501,,yc09501.jpg,,,6.00|6.00|2.90,,,Sapphire. Cushion. Yellow 6.0X6.0,,,
+,SA,OV,0.95,BLU,350.00,SV09500,,sv09500.jpg,,,6.90|5.00|2.90,,,Sapphire. Oval. Blue 6.9X5.0,H,,
+,SA,RD,0.95,BLU,375.00,SR09500,,sr09500.jpg,,,5.80|5.80|3.50,,,Sapphire. Round. Blue 5.8MM,H,,
+,PS,RD,0.95,PNK,375.00,PR09501,,PR09501.jpg,,,5.70|5.70|3.40,,,P. Sapphire. Round. Pink 5.7,,,
+,SA,RD,0.95,BLU,800.00,SR591466,,sr591466.jpg,,,5.90|5.90|3.20,,,Sapphire. Round. Blue 5.9M,H,,
+,EM,OV,0.96,GRN,1850.00,EV0960,,ev0960.jpg,,,7.50|5.70|3.80,,,OV Emerald Gem. 7.5-5.7,O,,ev0960
+,PS,RD,1.92,PNK,475.00,XPR19200,,xpr19200.jpg,,,5.60|5.60|3.60,,,P. Sapphire. Round. Pink  5.6MM,,,
+,YS,RD,1.93,Yellow,235.00,XYR6000,,XYR6000.jpg,,,6.00|6.00,,,RD Y. Sapphire Pair Gem. 6.0,E,,xyr6000
+,YS,RD,0.97,Yellow,185.00,YR09700,,yr09700.jpg,,,5.80|5.80|3.50,,,Y. Sapphire. Round. Yellow 5.8MM,,,
+,SA,RD,0.97,BLU,725.00,SR194066,,sr194066.jpg,,,6.00|6.00|3.50,,,Sapphire. Round. Blue 6.0MM,H,,
+,RU,RD,1.96,RED,575.00,XRR5500,,XRR5500.jpg,,,5.50|5.50,,,RD Ruby Pair Gem. 5.5,H,,xrr5500
+,SA,RD,0.98,BLU,450.00,SR0982,,SR0982.jpg,,,5.70|3.80,,,RD Sapphire Gem 5.70,H,,sr0982
+,YS,RAD,0.98,Yellow,275.00,YD1000,,yd1000.jpg,,,6.00|5.00|3.60,,,Y. Sapphire. RAD 6.0x5.0,,,yd1000
+,YS,RD,0.98,Yellow,250.00,YR0980,,yr0980.jpg,,,5.50|5.50|3.90,,,RD Y.Sapphire Gem 5.50,,,yr0980
+,YS,CU,0.98,Yellow,225.00,YC09802,,yc09802.jpg,,,5.90|5.90|3.10,,,Sapphire. Cushion. Yellow 5.9X5.9,,,
+,SA,RD,0.98,BLU,870.00,SR561955,,sr561955.jpg,,,5.50|5.50|3.80,,,Sapphire. Round. Blue 5.5MM,H,,
+,EM,OV,0.99,GRN,3000.00,EV0990,,ev0990.jpg,,,8.30|5.60|3.50,,,OV Emerald Gem. 8.3-5.6,O,,ev0990
+,SA,TR,0.99,BLU,350.00,ST0990,,st0990.jpg,,,5.50|5.50|4.00,,,TR Sapphire Gem. 5.5,H,,st0990
+,SA,CU,0.99,BLU,1350.00,SC0990,,sc0990.jpg,,,6.70|4.80|3.50,,,CC Sapphire Gem 6.70x4.80,H,,
+,SA,RD,0.99,BLU,700.00,SR194055,,SR194055.jpg,,,5.90|5.90|3.50,,,Sapphire. Round. Blue 5.9MM,H,,
+,RU,CU,0.99,RED,2000.00,RC580055,,rc580055.jpg,,,5.70|5.80|3.30,,,Ruby. Cushion. Red 5.7X5.8MM,H,,
+,SA,TR,1.00,BLU,525.00,ST1000,,st1000.jpg,,,6.30|6.30|3.30,,,TR Sapphire Gem. 6.3,H,,st1000
+,SA,TR,1.00,BLU,350.00,ST1001,,st1001.jpg,,,5.80|5.80|3.70,,,TR Sapphire Gem. 5.8,H,,st1001
+,RU,OV,1.00,RED,2000.00,RV1002,,RV1002.jpg,,,7.10|5.10|3.10,,,OV Ruby Gem 7.10x5.10,H,,rv1002
+,YS,RD,1.00,Yellow,225.00,YR1001,,yr1001.jpg,,,5.70|5.70|3.50,,,RD Y. Sapphire Gem 5.7,E,,yr1001
+,SA,CU,1.00,BLU,1350.00,SC1000,,SC1000.jpg,,,6.80|4.90|3.30,,,CC Sapphire Gem 6.80x4.90,H,,
+,YS,CU,1.00,Yellow,325.00,YC10000,,yc1000.jpg,,,5.50|5.40|3.70,,,Sapphire. Cushion. Yellow 5.5X5.4,,,
+,RU,OV,1.01,RED,950.00,RV1013,,RV1013.jpg,,,6.90|4.90|3.50,,,OV Ruby Gem 6.9x4.9,H,,
+,RU,OV,1.01,RED,450.00,RV1014,,RV1014.jpg,,,6.60|4.70|3.30,,,OV Ruby Gem 6.6X4.7,H,,rxl1002
+,RU,RD,1.01,RED,1750.00,RR1012,,RR1012.jpg,,,6.00|6.00|3.30,,,RD Ruby Gem 6.00,H,,
+,SA,CU,1.02,BLU,1275.00,SC1023,,SC1023.jpg,,,6.20|5.90|3.50,,,CC Sapphire Gem 6.20x5.90,H,,
+,RU,CU,1.02,RED,1750.00,RC10200,,rc10200.jpg,,,5.80|5.70|3.50,,,Ruby. Cushion. Red 5.8X5.7,H,,
+,SA,RD,1.03,BLU,800.00,SR1038,,sr1038.jpg,,,5.60|5.60|3.90,,,RD Sapphire Gem 5.60,H,,srl6006
+,PS,OV,1.03,PNK,650.00,PV10300,,pv10300.jpg,,,7.00|5.10|3.40,,,P. Sapphire. Oval. Pink,,,
+,PS,OV,1.04,PNK,475.00,PV1050,,pv1050.jpg,,,7.20|5.30|3.20,,,OV Ruby Gem. 7.2-5.3,E,,pv1050
+,RU,OV,2.08,RED,750.00,XRV5852,,XRV5852.jpg,,,5.80|5.20,,,OV Ruby Pair Gem. 5.8-5.2,H,,xrv5852
+,YS,RD,1.04,Yellow,250.00,YR1040,,YR1040.jpg,,,5.90|5.90|3.40,,,RD Y. Sapphire Gem,E,,yr1040
+,RU,CU,1.04,RED,1750.00,RC1040,,RC1040.jpg,,,6.20|6.20|3.20,,,CC Ruby Gem 6.2,H,,
+,RU,OV,1.04,RED,450.00,RV1040,,RV1040.jpg,,,7.20|4.50|3.40,,,OV Ruby Gem 7.2X4.5,H,,rxl1002
+,SA,CU,1.04,BLU,550.00,SC10401,,sc10401.jpg,,,5.90|5.30|3.80,,,Sapphire. Cushion. Blue 5.9X5.3,H,,
+,RU,EC,2.10,RED,855.00,XRE2090,,XRR2090.jpg,,,6.50|4.50|3.70,,,EC Ruby pair Gem 6.4x4.5,H,,rel1000
+,SA,RD,1.05,BLU,575.00,SR1058,,SR1058.jpg,,,6.10|6.10|3.60,,,RD Sapphire Gem. 6.10,H,,xsr6107
+,YS,CU,1.05,Yellow,290.00,YC10501,,yc10501.jpg,,,5.50|5.50|3.80,,,Sapphire. Cushion. Yellow 5.5X5.5,,,
+,YS,CU,1.05,Yellow,375.00,YC10500,,yc10500.jpg,,,5.70|5.70|3.60,,,Y. Sapphire. Cushion. Yellow 5.7X5.7,,,
+,RU,OV,2.12,RED,1200.00,XRV6552,,XRV6552.jpg,,,6.50|5.20,,,OV Ruby Pair Gem. 6.5-5.2,H,,xrv6552
+,PS,OV,1.06,PNK,450.00,PV1060,,PV1060.jpg,,,7.10|5.70|2.90,,,OV P.Sapphire Gem 7.10x5.70,E,,pv1060
+,YS,OV,1.06,Yellow,250.00,YV1060,,YV1060.jpg,,,6.70|5.40|3.20,,,OV  Y. Sapphire Gem 6.7X5.4,E,,yxl1000
+,SA,CU,2.12,BLU,575.00,XSC5501,,,,,5.50|5.40|3.50,,,Sapphire. Cushion. Blue5.5X5.4,H,,
+,SA,RD,1.07,BLU,485.00,SR1070,,sr1070.jpg,,,6.10|6.10|3.40,,,RD Sapphire Gem 6.1,H,,sr1070
+,YS,CU,1.07,Yellow,250.00,YC1070,,YC1070.jpg,,,6.50|5.40|3.40,,,CC Y. Sapphire Gem 6.5x5.4,E,,yc1070
+,YS,RD,1.07,Yellow,225.00,YR1070,,yr1070.jpg,,,6.20|6.20|3.40,,,RD Y. Sapphire Gem 6.2,E,,yr1070
+,LV,RD,1.07,LAV,350.00,LR1070,,,,,5.90|5.90|3.90,,,RD L.Sapphire Gem 5.90,,,lr1070
+,SA,CU,1.08,BLU,825.00,SC1080,,sc1080.jpg,,,6.30|5.10|3.50,,,CC Sapphire Gem 6.30x5.10,H,,sc1080
+,SA,RD,1.08,BLU,750.00,SR10800,,SR10800.jpg,,,5.70|5.70|4.10,,,RD Sapphire Gem 5.7MM,H,,
+,PS,OV,1.09,PNK,350.00,PV1090,,PV1090.jpg,,,6.90|4.50|3.90,,,OV P. Sapphire Gem. 6.9-4.5,E,,pv1090
+,PS,RD,1.09,PNK,675.00,PR1090,,PR1090.jpg,,,5.70|5.70|3.80,,,RD P. Sapphire Gem 5.70,,,pr1090
+,PS,CU,1.09,PNK,575.00,PC1090,,PC1090.jpg,,,5.70|5.70|3.60,,,CC P.Sapphire Gem 5.70,,,pc1090
+,RU,HS,1.09,RED,585.00,HS1090,,hs1090.jpg,,,5.90|5.80|3.70,,,HS Ruby Gem 6.7x5.5,H,,rxl1002
+,RU,CAB,1.09,RED,185.00,RCA1090,,,,,5.70|5.20|3.60,,,CAB Ruby Gem 5.7X5.2,H,,rca2500
+,YS,EC,1.10,Yellow,250.00,YE1100,,YE1100.jpg,,,6.80|4.60|3.60,,,EC Y. Sapphire Gem 6.80x4.60,E,,ye1100
+,PS,RD,1.10,PNK,550.00,PR1100,,pr1100.jpg,,,5.80|5.80|3.90,,,RD P. Sapphire Gem 5.80,E,,pr1100
+,SA,OV,1.10,BLU,685.00,SV1101,,SV1101.jpg,,,7.10|5.20|3.50,,,OV Sapphire Gem 7.10x5.20,H,,
+,RU,OV,2.22,RED,1250.00,XRV6251,,XRV6251.jpg,,,6.20|5.10,,,OV Ruby Pair Gem. 6.2-5.1,H,,xrv6251
+,RU,PS,1.11,RED,975.00,RP1110,,RP1110.jpg,,,8.00|5.70|3.00,,,PS Ruby. Gem 8.0X5.7MM,H,,rp1110
+,YS,RD,1.11,Yellow,350.00,YR11100,,yr11100.jpg,,,6.20|6.20|3.40,,,Sapphire. Round. Yellow 6.2MM,,,
+,SA,OV,2.21,BLU,575.00,XSV2210,,xsv2210.jpg,,,7.00|5.10|3.50,,,Sapphire. Oval. Blue 7.0X5.1MM,H,,
+,RU,CU,1.12,RED,1650.00,RC580066,,rc580066.jpg,,,5.80|5.90|3.80,,,Ruby. Cushion. Red 5.8X5.9MM,H,,
+,YS,OV,1.14,Yellow,250.00,YV1140,,yv1140.jpg,,,7.00|5.50|3.40,,,OV Y. Sapphire Gem 7.00x5.50,E,,yv1140
+,PS,CU,1.14,PNK,400.00,PC11400,,pc11400.jpg,,,5.40|5.30|4.20,,,P. Sapphire. Cushion. Pink 5.4X5.3,,,
+,YS,OV,1.15,Yellow,225.00,YV11500,,yv11500.jpg,,,7.80|5.80|3.00,,,Sapphire. Oval. Yellow 7.8X5.8,,,
+,YS,RD,2.31,Yellow,250.00,XYR6100,,XYR6100.jpg,,,6.10|6.10,,,RD Y. Sapphire Pair Gem. 6.1,E,,xyr6100
+,SA,TR,1.16,BLU,685.00,ST1160,,ST1160.jpg,,,7.50|7.50|3.00,,,TR Sapphire Gem. 7.5,H,,st1160
+,YS,OV,1.16,Yellow,200.00,YV1160,,YV1160.jpg,,,7.10|5.20|3.60,,,OV Sapphire Gem 7.10x5.20,,,yv1160
+,PS,OV,1.17,PNK,385.00,PV1180,,PV1180.jpg,,,7.10|6.00|3.30,,,OV P. Sapphire Gem. 7.1-6.0,E,,pv1180
+,RU,TR,1.17,RED,650.00,RT1171,,rt1171.jpg,,,6.00|6.00|3.90,,,TR Ruby Gem 6.00,H,,rtl5364
+,YS,RD,1.17,Yellow,285.00,YR11700,,yr11700.jpg,,,6.00|6.00|3.60,,,Sapphire. Round. Yellow 6.0MM,,,
+,SA,TR,1.18,BLU,550.00,ST1181,,st1181.jpg,,,6.50|6.30|3.60,,,TR Sapphire Gem. 6.5-6.3,H,,st1181
+,RU,OV,1.20,RED,850.00,RV1200,,RV1200.jpg,,,7.30|5.40|3.40,,,OV Ruby Gem 7.30x5.40,H,,rv1200
+,PS,CU,1.20,PNK,350.00,PC1201,,PC1201.jpg,,,6.10|6.00|3.70,,,CC P.Sapphire Gem 6.10x6.00,,,pc1201
+,RU,OV,1.20,RED,450.00,RV12000AZ,,,,,5.90|5.20|4.50,,,Ruby. Oval. Red 5.9X5.2,H,,
+,PS,OV,1.21,PNK,385.00,PV1210,,PV1210.jpg,,,6.80|5.50|3.60,,,OV P.Sapphire Gem 6.80x5.50,E,,pv1210
+,RU,OV,1.21,RED,475.00,RV1211,,RV1211.jpg,,,7.20|5.20|3.70,,,OV Ruby Gem,H,,
+,YS,OV,1.21,Yellow,210.00,YV12101,,yv12101.jpg,,,7.50|6.00|3.00,,,Sapphire. Oval. Yellow 7.5X6.0,,,
+,RU,CU,1.21,RED,1750.00,RC12100,,rc12100.jpg,,,6.80|5.80|3.60,,,Ruby. Cushion. Red 6.8X5.8,H,,
+,,CC,60.56,,0.00,GE1000,,,,,,,,,,,
+,SA,RD,1.21,BLU,750.00,SR610155,,,,,6.10|6.10|4.10,,,Sapphire. Round. Blue 6.1mm,H,,
+,SA,RD,2.44,BLU,900.00,XSR5909,,XSR5909.jpg,,,5.90|5.90,,,RD Sapphire Pair Gem. 5.9,H,,xsr5909
+,SA,OV,1.22,BLU,450.00,SV12200,,sv12200.jpg,,,6.90|5.90|3.20,,,Sapphire. Oval. Blue 6.9X5.9,H,,
+,YS,RD,1.22,Yellow,275.00,YR12200,,yr12200.jpg,,,6.10|6.10|3.70,,,Y. Sapphire. Round. Yellow 6.1MM,,,
+,SA,RD,1.22,BLU,950.00,SR590955,,sr590955.jpg,,,5.90|5.90|4.20,,,Sapphire. Round. Blue 5.9MM,H,,
+,SA,RD,1.22,BLU,1100.00,SR590966,,SR590966.jpg,,,5.90|5.90|4.30,,,Sapphire. Round. Blue 5.9MM,H,,
+,EM,RD,1.23,GRN,1500.00,ER1230,,ER1230.jpg,,,7.50|7.50|3.70,,,RD Emerald  Gem. 7.5MM,O,,xer7500
+,RU,RD,1.24,RED,1750.00,RR1240,,RR1240.jpg,,,6.10|6.10|4.40,,,RD Ruby Gem 6.1MM,H,,xrr6100
+,SA,RD,1.24,BLU,1100.00,SR601255,,SR601255.jpg,,,6.00|6.00|4.00,,,Sapphire. Round. Blue 6.0MM,H,,
+,SA,OV,1.25,BLU,475.00,SV1251,,sv1251.jpg,,,7.60|6.10|3.00,,,OV Sapphire Gem 7.60x6.10,H,,sv1251
+,RU,OV,1.25,RED,485.00,RV12500AZ,,rv12500az.jpg,,,6.80|5.40|4.00,,,Ruby. Oval. Red 6.8X5.4,H,,
+,EM,RD,1.25,GRN,725.00,ER670055,,er670055.jpg,,,6.70|6.70|4.50,,,Emerald. Round. Green 4.5MM,O,,
+,RU,OV,1.26,RED,575.00,RV1261,,RV1261.jpg,,,7.30|5.20|3.60,,,OV Ruby Gem 7.30x5.20,H,,
+,Y. SAP,RD,1.26,Yellow,225.00,YR12600,,,,,6.00|6.00|4.20,,,Yellow Sapphire. Round. Yellow 6.0MM,H,,
+,SA,RD,2.52,BLU,750.00,XSR61010,,,,,6.10|6.10|4.40,,,Sapphire. Round. Blue 6.1X6.1,H,,
+,EM,RD,2.54,GRN,575.00,XER6700,,XER6700.jpg,,,6.70|6.70,,,RD Emerald Pair Gem. 6.7,O,,xer6700
+,SA,OV,1.27,BLU,650.00,SV12702,,sv12702.jpg,,,7.90|5.70|3.30,,,Sapphire. Oval. Blue 7.9X5.7,H,,
+,EM,RD,1.27,GRN,1100.00,ER670066,,,,,6.70|6.70|4.70,,,Emerald. Round. Green 6.7MM,O,,
+,GS,CU,1.28,GRN,285.00,GC1280,,,,,6.00|6.00|4.00,,,CC G. Sapphire Gem 6.00,,,gc1280
+,SA,OV,1.29,BLU,850.00,SV12900,,sv12900.jpg,,,7.40|6.20|3.50,,,Sapphire. Oval. Blue 7.4X6.2,H,,
+,LV,RD,1.30,LAV,350.00,LR1300,,LR1300.jpg,,,5.90|5.90|4.20,,,RD L. Sapphire Gem 5.90,E,,lr1300
+,SA,OV,1.30,BLU,850.00,SV13004,,sv13004.jpg,,,7.60|5.50|3.20,,,Sapphire. Oval. Blue 7.6X5.5,H,,
+,SA,CU,1.30,BLU,1150.00,SC13000,,sc13000.jpg,,,7.30|5.80|3.40,,,Sapphire. Cushion. Blue 7.3MM,H,,
+,PS,OV,1.30,PNK,450.00,PV13000,,pv13000.jpg,,,7.00|5.10|3.30,,,P. Sapphire. Oval. Pink 7.0X5.1,,,
+,PS,OV,1.31,PNK,425.00,PV1310,,PV1310.jpg,,,7.00|5.60|3.60,,,OV P.Sapphire Gem 7.00x5.60,E,,pv1310
+,GS,CU,1.31,GRN,285.00,GC1310,,,,,6.00|6.00|4.10,,,CC G. Sapphire Gem 6.00,,,gc1310
+,LV,CU,1.32,LAV,325.00,LC1320,,LC1320.jpg,,,6.10|6.00|3.90,,,CC L.Sapphire Gem 6.10x6.00,,,lc1320
+,GS,CU,1.33,GRN,450.00,GC13300,,,,,6.60|6.60|3.40,,,G. Sapphire. Cushion. Green 6.6MM,,,
+,SA,TR,1.34,BLU,550.00,ST1340,,st1340.jpg,,,6.80|6.80|3.60,,,TR Sapphire Gem. 6.8,H,,st1340
+,PS,OV,1.34,PNK,650.00,PV1340,,PV1340.jpg,,,8.00|6.00|2.90,,,OV P.Sapphire Gem 8.00x6.00,E,,pv1340
+,YS,RD,1.34,Yellow,225.00,YR13401,,yr13401.jpg,,,6.30|6.30|3.70,,,Y. Sapphire. Round. Yellow 6.3,,,
+,EM,RD,1.34,GRN,1100.00,ER750155,,er750155.jpg,,,7.50|7.50|4.50,,,Emerald. Round. Green 7.5MM,O,,
+,YS,RD,1.35,Yellow,250.00,YR1350,,YR1350.jpg,,,5.90|5.90|4.60,,,Y. Sapphire. Round. Yellow,,,yr1350
+,YS,RD,1.35,Yellow,200.00,YR13500,,YR13500.jpg,,,6.40|6.40|3.60,,,Y. Sapphire. Round. Yellow 6.4MM,,,
+,SA,CU,1.37,BLU,950.00,SC1371,,SC1371.jpg,,,7.50|5.80|3.60,,,CC Sapphire Gem 7.50x5.80,H,,sc1371
+,YS,OV,1.39,Yellow,250.00,YV13900,,yv13900.jpg,,,7.80|6.00|3.30,,,Sapphire. Oval. Yellow 7.8X6.0,,,
+,SA,RD,1.39,BLU,1100.00,SR601266,,sr601266.jpg,,,6.00|6.00|4.50,,,Sapphire. Round. Blue 6.0MM,H,,
+,YS,OV,1.40,Yellow,250.00,YV1401,,yv1401.jpg,,,7.90|5.70|3.50,,,OV Y.Sapphire Gem 7.90x5.70,,,
+,YS,RD,1.40,Yellow,275.00,YR14000,,YR14000.jpg,,,6.60|6.60|3.85,,,Y. Sapphire. Round. Yellow 6.6MM,,,
+,SA,CU,1.42,BLU,975.00,SC1422,,sc1422.jpg,,,7.00|5.50|3.80,,,CC Sapphire Gem 7.00x5.50,H,,sc1422
+,SA,OV,1.42,BLU,575.00,SV14200,,sv14200.jpg,,,7.30|5.50|4.20,,,Sapphire. Oval. Blue 7.3X5.5,H,,
+,EM,MQ,1.43,GRN,2750.00,EM1430,,EM1430.jpg,,,11.20|6.00|3.80,,,MQ Emerald Gem. 11.2-6.0,O,,em1430
+,SA,TR,1.43,BLU,550.00,ST1430,,ST1430.jpg,,,6.60|6.60|4.20,,,TR Sapphire Gem. 6.6,H,,st1430
+,GS,RD,1.44,GRN,285.00,GR1440,,,,,6.30|6.30|4.00,,,RD G. Sapphire Gem 6.30,,,gr1440
+,GS,RD,1.45,GRN,375.00,GR14500,,,,,6.40|6.40|4.10,,,G. Sapphire. Round. Green,,,
+,YS,OV,1.46,Yellow,250.00,YV1461,,YV1461.jpg,,,8.00|6.20|3.60,,,OV Y.Sapphire Gem 8.00x6.20,,,
+,EM,RD,1.47,GRN,950.00,ER1490,,ER1490.jpg,,,7.40|7.40|4.30,,,RD Emerald Gem,O,,er1490
+,YS,RD,1.47,Yellow,275.00,YR14700,,YR14700.jpg,,,6.50|6.50|4.00,,,Y. Sapphire. Round. Yellow 6.5MM,,,
+,RU,RD,1.47,RED,3000.00,RR310055,,RR310055.jpg,,,7.00|7.00|3.70,,,Ruby. Round. Red 7.0MM,H,,
+,LV,CU,1.49,LAV,375.00,LC1490,,LC1490.jpg,,,6.80|6.70|3.50,,,CC L. Sapphire Gem 6.80x6.70,,,lc1490
+,YS,OV,1.50,Yellow,235.00,YV15000,,yv15000.jpg,,,8.00|6.10|3.50,,,Sapphire. Oval. Yellow 8.0X6.1,,,
+,EM,RD,1.50,GRN,850.00,ER750166,,er750166.jpg,,,7.50|7.50|4.50,,,Emerald. Round. Green 7.5MM,O,,
+,SA,TR,1.51,BLU,450.00,ST1510,,st1510.jpg,,,6.70|6.70|4.00,,,TR Sapphire Gem. 6.7,H,,st1510
+,YS,RD,1.51,Yellow,250.00,YR15100,,YR15100.jpg,,,6.50|6.50|4.00,,,Y. Sapphire. Round. Yellow 6.5MM,,,
+,SA,OV,1.52,BLU,475.00,SV15200,,sv15200.jpg,,,7.50|5.80|4.00,,,Sapphire. Oval. Blue 7.5X5.8,H,,
+,PS,OV,1.53,PNK,375.00,PV1530,,PV1530.jpg,,,7.40|5.70|3.70,,,OV P.Sapphire Gem 7.40x5.70,E,,pv1530
+,SA,CU,1.54,BLU,850.00,SC15400,,sc15400.jpg,,,6.90|5.70|4.40,,,Sapphire. Cushion. Blue 6.9X5.7,H,,
+,SA,OV,1.55,BLU,525.00,SV15500,,sv15500.jpg,,,8.00|6.10|3.40,,,Sapphire. Oval. Blue 8.0X6.1,H,,
+,LV,CU,1.57,LAV,450.00,LC1570,,LC1570.jpg,,,6.50|6.50|4.30,,,CC L.Sapphire Gem 6.50,,,lc1570
+,SA,CU,1.57,BLU,825.00,SC15701,,sc15701.jpg,,,7.40|5.80|4.00,,,Sapphire. Cushion. Blue 7.4X5.8,H,,
+,P. SAP,CU,3.18,Pink,450.00,XPC7001,,,,,7.00|7.00|3.30,,,CC P.Sapphire Pair Gem 7.00,H,,xpc7001
+,SA,OV,1.59,BLU,475.00,SV15900,,sv15900.jpg,,,7.50|5.60|4.20,,,Sapphire. Oval. Blue 7.5X5.6,H,,
+,PS,CU,1.60,PNK,800.00,PC1600,,PC1600.jpg,,,6.50|6.50|4.00,,,CC P. Sapphire Gem 6.50,,,pc1600
+,SA,TR,1.60,BLU,550.00,ST1600,,ST1600.jpg,,,7.00|7.00|4.10,,,TR Sapphire Gem. 7.0,H,,st1600
+,SA,OV,1.60,BLU,475.00,SV16000,,sv16000.jpg,,,7.20|6.00|4.10,,,Sapphire. Oval. Blue 7.2X6.0,H,,
+,PS,RD,1.61,PNK,500.00,PR1610,,pr1610.jpg,,,6.40|6.40|4.50,,,RD P.Sapphire Gem 6.40,,,pr1610
+,SA,CU,1.61,BLU,900.00,SC16100,,sc16100.jpg,,,7.00|6.00|4.10,,,Sapphire. CC. Blue,H,,
+,SA,CU,72.84,,0.00,MN1000,,,,,,,,Sapphire. Cushion,H,,
+,GS,CU,1.65,GRN,285.00,GC1650,,,,,6.40|6.40|4.40,,,CC G. Sapphire Gem 6.40,,,gc1650
+,SA,OV,1.66,BLU,475.00,SV16600,,sv16600.jpg,,,7.00|6.00|4.30,,,Sapphire. Oval. Blue 7.0X6.0,H,,
+,RU,PS,1.68,RED,1750.00,RP1680,,RP1680.jpg,,,9.00|6.40|3.70,,,PS Ruby Gem 9.00x6.40,H,,rp1680
+,YS,HS,1.70,Yellow,275.00,YH1700,,YH1700.jpg,,,7.40|7.10|3.80,,,HS Y.Sapphire Gem 7.40x7.10,E,,yh1700
+,SA,OV,1.71,BLU,650.00,SV17100,,sv17100.jpg,,,7.20|5.70|4.50,,,Sapphire. Oval. Blue 7.2X5.7,H,,
+,LV,EC,1.72,LAV,525.00,LD1710,,LD1710.jpg,,,7.50|6.20|4.00,,,EC L.Sapphire Gem 7.50x6.20,,,ld1710
+,SA,PS,1.73,BLU,385.00,SP1735,,SP1735.jpg,,,7.50|7.00|4.70,,,PS Sapphire Gem. 7.5-7.0,H,,sp1735
+,SA,CU,1.73,BLU,750.00,SC1732,,SC1732.jpg,,,6.70|6.60|3.90,,,CC Sapphire Gem 6.70x6.60,H,,
+,SA,PS,1.74,BLU,975.00,SP17400,,sp17400.jpg,,,9.50|5.90|4.10,,,Sapphire. PS. Blue 9.5X5.9,H,,
+,SA,TR,1.76,BLU,350.00,ST1760,,st1760.jpg,,,7.30|7.30|4.00,,,TR Sapphire Gem. 7.3,H,,st1760
+,PS,OV,1.77,PNK,450.00,PV17700,,pv17700.jpg,,,8.00|5.80|4.00,,,P. Sapphire. Oval. Pink 8.0X5.8,,,
+,LV,HS,1.80,LAV,350.00,LH1800,,LH1800.jpg,,,7.70|7.20|4.30,,,HS L. Sapphire Gem 7.70x7.20,E,,lh1800
+,PS,CU,1.80,PNK,1250.00,PC1801,,PC1801.jpg,,,8.10|6.20|3.90,,,CC P.Sapphire Gem 8.10x6.20,,,
+,PS,PS,1.82,PNK,600.00,PP1820,,pp1820.jpg,,,8.30|6.10|4.30,,,PS P. Sapphire Gem 8.30x6.10,E,,pp1820
+,SA,OV,1.82,BLU,475.00,SV18200,,,,,8.10|6.10,,,Sapphire. Oval. Blue 8.1X6.1,H,,
+,YS,CU,1.86,Yellow,350.00,YC1860,,YC1860.jpg,,,7.30|7.30|4.00,,,CC Y. Sapphire Gem 7.30,,,
+,EM,EC,1.86,GRN,1750.00,EE18600NY,,,,,8.50|6.80|4.40,,,Emerald. EC. Green 8.5x6.8,O,,
+,EM,EC,1.87,GRN,1600.00,EE1871SH,,,,,9.00|6.90|4.40,,,Emerald. EC. Green 9.0X6.9,O,,
+,LV,OV,1.91,LAV,400.00,LV1910,,LV1910.jpg,,,7.90|6.40|3.90,,,OV L.Sapphire Gem 7.90x6.40,E,,pv1910
+,SA,OV,1.92,BLU,675.00,SV19200,,sv19200.jpg,,,7.80|6.30|4.40,,,Sapphire. Oval. Blue. 7.8X6.3,H,,
+,PS,CU,1.93,PNK,475.00,PC19300,,pc19300.jpg,,,7.50|7.50|3.50,,,P. Sapphire. Cushion. Pink 7.5X7.5,,,
+,GS,CU,1.96,GRN,375.00,GC19600,,,,,6.70|6.70|4.90,,,G. Sapphire. Cushion. Green 6.7MM,,,
+,PS,RD,1.97,PNK,685.00,PR1970,,,,,7.40|7.40|4.20,,,P. Sapphire. Round. Pink 7.40MM,H,,or1970
+,SA,PS,1.97,Blue,800.00,SP1970,,SP1970.jpg,,,8.90|6.90|4.50,,,PS Sapphire Gem 8.90x6.90,H,,
+,YS,OV,1.98,Yellow,350.00,YC1980,,YC1980.jpg,,,8.00|6.30|4.70,,,OV Y. Sapphire Gem 8.00X6.30,,,yc1980
+,RU,OV,2.00,RED,3250.00,RV2002,,RV2002.jpg,,,8.00|5.80|4.70,,,OV Ruby Gem. 8.0-5.8,H,,rv2002
+,SA,ST,2.00,BLU,250.00,SSTR201,,,,,8.40|6.70|3.40,,,Sapphire. STAR. Blue,H,,sstr201
+,SA,OV,2.00,BLU,0.00,SV20001,,sv20001.jpg,,,7.80|6.80|3.90,,,Sapphire. Oval. Blue 7.8X6.8,H,,
+,SA,OV,2.00,BLU,0.00,SV20002,,,,,8.60|6.10|3.90,,,Sapphire. Oval. Blue 8.6X6.1,H,,
+,SA,CU,2.00,BLU,1275.00,SC20000,,sc20000.jpg,,,7.30|6.40|4.40,,,Sapphire. Cushion. Blue 7.3X6.4,H,,
+,YS,CU,2.02,Yellow,375.00,YC2020,,YC2020.jpg,,,7.90|6.90|4.00,,,CSHN Y. Sapphire Gem. 7.9-6.9,,,yc2020
+,SA,OV,2.04,BLU,1600.00,SV20400T,,sv20400t.jpg,,,8.10|5.70|4.60,,,Sapphire. Oval. Blue 8.1X5.7,H,,
+,EM,EC,2.04,GRN,1600.00,EE2041SH,,,,,8.50|7.00|4.50,,,Emerald. EC. Green 8.5X7.0,O,,
+,YS,RD,2.06,Yellow,325.00,YR20600,,YR20600.jpg,,,6.70|6.70|5.20,,,Y. Sapphire. Round. Yellow 6.7MM,,,
+,SA,PS,2.07,BLU,750.00,SP2070,,SP2070.jpg,,,9.20|6.90|4.50,,,PS Sapphire Gem 9.20x6.90,H,,
+,SA,PS,2.10,BLU,1500.00,SP21000,,sp21000.jpg,,,9.30|6.90|4.10,,,Sapphire. PS. Blue 9.3X6.9,H,,
+,SA,OV,2.11,BLU,0.00,SV21100,,,,,8.10|6.40|4.60,,,Sapphire. Oval. Blue 8.1X6.4,H,,
+,GS,OV,2.12,GRN,400.00,GV21200,,,,,8.20|6.00|4.30,,,G. Sapphire. Oval. Green 8.2X6.0,H,,
+,SA,HS,2.15,BLU,800.00,SH856755,,SH856755.jpg,,,8.60|6.70|4.80,,,Sapphire. HM. Blue 8.6X6.7,H,,
+,SA,OV,2.16,BLU,0.00,SV21601,,,,,8.80|6.40|4.00,,,Sapphire. Oval. Blue 8.8X6.4,H,,
+,PS,OV,2.20,PNK,485.00,PV2200,,PV2200.jpg,,,7.60|6.30|5.10,,,OV P. Sapphire Gem. 7.6-6.3,E,,pv2200
+,RU,PS,2.22,RED,2000.00,RP2220,,RP2220.jpg,,,9.00|6.80|4.30,,,PS Ruby Gem. 9.0-6.8,H,,rp2220
+,SA,OV,2.26,BLU,375.00,SV2260,,SV2260.jpg,,,9.00|7.00|4.00,,,OV Sapphire Gem 9.00x7.00,H,,sv2260
+,PS,CU,2.27,PNK,450.00,PC2270,,pc2270.jpg,,,7.20|7.20|5.00,,,P. Sapphire. Cushion. Pink 7.2,,,
+,SA,OV,2.29,BLU,950.00,SV22900,,,,,9.30|7.50,,,Sapphire. Oval. Blue 9.3X7.5,H,,
+,SA,CU,2.35,BLU,750.00,SC2350,,sc2350.jpg,,,8.20|7.40|4.20,,,CC Sapphire Gem 8.20x7.40,H,,
+,SA,OV,2.35,BLU,1250.00,SV2350,,sv2350.jpg,,,8.30|6.40|4.80,,,OV Sapphire Gem 8.3x6.4,H,,
+,SA,OV,2.46,BLU,0.00,SV24600,,,,,8.50|6.70|4.70,,,Sapphire. Oval. Blue 8.5X6.7,H,,
+,RU,CU,2.47,RED,2850.00,RC2470,,RC2470.jpg,,,8.00|8.00|4.30,,,CSHN Ruby Gem. 8.0,H,,rc2470
+,SA,PS,2.51,BLU,1350.00,SP2510,,SP2510.jpg,,,10.00|7.70|4.60,,,PS Sapphire Gem. 10.0-7.7,H,,sp2510
+,SA,CU,2.51,BLU,1875.00,SC2510,,SC2510.jpg,,,8.80|6.40|4.40,,,CC Sapphire Gem 8.80x6.40,H,,sc2510
+,OS,CU,2.52,Orange,675.00,OC25200,,,,,7.60|7.60|4.60,,,O. Sapphire. Cushion. Orange 7.6X7.6,,,
+,GS,OV,2.55,GRN,450.00,GV25500,,,,,8.90|6.90|4.70,,,G. Sapphire. Oval. Green 8.9X6.9MM,,,
+,OS,RAD,2.56,Orange,325.00,OD2580,,,,,7.20|6.90|5.20,,,RAD O. Sapphire Gem. 7.2-6.9,E,,od2580
+,PS,CU,2.58,PNK,1275.00,PC25800,,pc25800.jpg,,,8.50|8.50|4.30,,,P. Sapphire. Cushion. Pink  8.5X8.5,,,
+,OS,CU,2.77,Orange,675.00,OC2770,,,,,8.90|7.40|4.30,,,CC O.Sapphire Gem 8.90x7.40,,,oc2770
+,GS,OV,2.90,GRN,425.00,GV29000,,,,,9.10|7.00|5.30,,,G. Sapphire. Oval. Green,H,,
+,LV,OV,2.99,LAV,400.00,LV2980,,,,,10.00|8.00|4.00,,,OV L.Sapphire Gem 10.00x8.00,,,lv2980
+,GS,CU,3.55,Green,450.00,GC3550,,,,,8.50|8.40|5.60,,,CC G.Sapphire Gem 8.50x8.40,,,
+,PAD,OV,5.05,PNK,3500.00,PD505SH,,,,,11.00|8.50|5.90,,,Padparacha. Oval. Pink 11X8.5,,,
+,PAD,CU,5.07,PNK,5000.00,PD507SH,,,,,11.20|8.40|5.40,,,Padparacha. Cushion. Pink 11.2X8.4,,,
+,SA,CAB,6.77,BLU,125.00,SCA6770,,,,,11.70|9.50|6.20,,,CAB Sapphire Gem. 11.7-9.5,H,,sca6770
+,BT,PS,19.95,BLU,1100.00,BTPS1995,,,,,10.20|4.50,,,B. Tourmaline. PS. Blue 10.2x4.5,,,
+,SA,,9.88,BLU,125.00,SAL4050,,,,,,,,RD Sapphire Gem,H,,sal4050
+,TZ,,90.79,,0.00,AG1000,,,,,,,,MIX  Gem,E,,ag1000
+,SA,,15.91,BLU,250.00,SAL1250,,,,,,,,Sapphire Gem,H,,sal1250
+,SA,,10.87,BLU,250.00,SAL7170,,,,,,,,CSHN Sapphire Gem,H,,sal7170
+,SA,,4.89,BLU,285.00,SAL2400,,,,,,,,Sapphire Gem,H,,sal2400
+,PA,PS,10.11,BLU,15000.00,XPBP10110,,XPBP10110.jpg,,,,,,Paraiba. PS. Blue,H,,
+,PS,RD,0.82,PNK,475.00,PR17066,,,,,5.50|5.50|3.10,,,P. Sapphire. Round. Pink 5.5MM,H,,
+,PS,RD,0.88,PNK,475.00,PR17055,,,,,5.60|5.60|3.30,,,P. Sapphire. Round. Pink,H,,
+,,,90.90,,0.00,DIA1000,,,,,,,,,,,
+,SA,RD,1.02,BLU,450.00,SR10202,,sr10202.jpg,,,6.00|6.00|3.60,,,Sapphire. Round. Blue 6.0MM,H,,
+,WS,RD,1.31,White,450.00,SWR1310,,SWR1310.jpg,,,6.40|6.40|4.50,,,W.Sapphire. Round. White 6.4MM,H,,
+,PA,PS,1.98,BLU,12500.00,PBP1980Z,,PBP1980Z.jpg,,,7.90|7.70|4.60,,,Paraiba. PS. Blue 7.9X7.7MM,,,
+,SA,OV,2.00,BLU,1200.00,SV40466,,SV40466.jpg,,,7.60|6.10|4.90,,,Sapphire. Oval. Blue 7.6X6.1,H,,
+,SA,OV,2.04,BLU,1200.00,SV40455,,SV40455.jpg,,,7.70|6.10|4.70,,,Sapphire. Oval. Blue 7.7X6.1,H,,
+,PS,CU,2.13,PNK,475.00,XPC21300,,xpc21300.jpg,,,6.00|6.00|3.30,,,P. Sapphire. Cushion. Pink 6.0X6.0,H,,
+,PA,OV,2.64,BLU,5000.00,PBV2640,,PBV2640.jpg,,,10.10|7.80|4.40,,,Paraiba. Oval. Blue 10.1X7.8MM,,,
+,PA,CU,2.75,BLU,12000.00,PBC2750Z,,PBC2750Z.jpg,,,8.40|7.60|5.60,,,Paraiba. Cushion. Blue 8.4X7.6MM,,,
+,SA,CU,2.83,BLU,1750.00,SC2830MN,,,,,8.20|8.20,,,Sapphire. Cushion. Blue 8.2X8.2,H,,
+,PS,RAD,3.91,PNK,1200.00,PD3910NS,,PD3910NS.jpg,,,10.40|8.00|5.10,,,P. Sapphire. RAD. Pink10.4X8.0,H,,
+,SA,CU,6.03,BLU,1250.00,SC6030NS,,sc6030ns.jpg,,,11.40|9.50|5.90,,,Sapphire. Cushion. Blue 11.4X9.4,H,,
+,SA,OV,7.15,BLU,1275.00,SV7150NS,,SV7150NS.jpg,,,12.70|10.10|6.60,,,Sapphire. Oval. Blue 12.7X10.10,H,,
+,RU,RD,0.80,RED,650.00,RR08000,,rr08000.jpg,,,5.40|5.40|3.40,,,RD Ruby Gem 5.4MM,H,,rrl5059
+,RU,RD,0.89,RED,495.00,RR08901,,RR08901.jpg,,,5.30|5.30|3.60,,,RD Ruby Gem 5.3MM,H,,rrl5059
+,SA,OV,0.99,BLU,350.00,SV0990,,sv0990.jpg,,,7.20|4.70|3.20,,,OV Sapphire Gem. 7.2-4.7,H,,sv0990
+,RU,RD,1.00,RED,875.00,RR10000,,rr10000.jpg,,,5.30|5.30|3.80,,,RD Ruby Gem 5.3MM,H,,rrl5059
+,RU,RD,1.10,RED,850.00,RR11000,,rr11000.jpg,,,5.50|5.50|4.40,,,RD Ruby Gem 5.5MM,H,,rrl5059
+,EM,PS,1.18,GRN,1250.00,EP1180,,EP1180.jpg,,,8.60|5.60|4.30,,,PS Emerald Gem. 8.6-5.6,O,,ep1180
+,PS,OV,1.24,PNK,450.00,PV1240,,PV1240.jpg,,,6.70|5.40|3.80,,,OV P.Sapphire Gem 6.7x5.4mm,H,,pv1240
+,SA,OV,1.76,BLU,450.00,SV1760,,sv1760.jpg,,,8.10|6.30|4.00,,,OV Sapphire Gem. 8.3-6.6,H,,sv1760
+,,CC,194.32,,0.00,IC1000,,,,,,,,MIX  Gem,H,,ic1000
+,SA,OV,4.45,BLU,2250.00,SV4450,,sv4450.jpg,,,10.10|8.20|6.10,,,OV Sapphire Gem. 10.1-8.2,H,,sv4450
+,SA,OV,7.35,BLU,2000.00,SV7350,,sv7350.jpg,,,12.10|9.70|7.00,,,OV Sapphire Gem. 12.1-9.7,H,,sv7350
+,YS,RD,1.00,Yellow,150.00,YR10000,,yr10000.jpg,,,5.60|5.60|4.10,,,Y. Sapphire. Round. Yellow 5.6MM,H,,
+,PA,RD,0.93,BLU,2000.00,PBRL13Z,,PBRL13Z.jpg,,,1.30|1.30,,,Paraiba. Round. Blue 1.3MM,H,,
+,EM,TR,0.11,GRN,650.00,XET2500,,,,,2.50|2.50,,,TR Emerald Pair Gem. 2.5,O,,xet2500
+,PA,OV,0.12,BLU,2250.00,XPBV1200Z,,xpbv1200z.jpg,,,3.00|2.20|1.50,,,Paraiba. Oval3.0X2.2,H,,
+,PA,OV,0.12,BLU,2250.00,XPBV1201Z,,xpbv1201z.jpg,,,2.90|2.20|1.80,,,Paraiba. Oval. Blue2.9X2.2,H,,
+,PA,OV,0.12,BLU,2250.00,XPBV1202Z,,xpbv1202z.jpg,,,3.00|2.10,,,Paraiba. Oval. Blue3.0X2.1,H,,
+,PA,OV,0.12,BLU,2250.00,XPBV1203Z,,xpbv1203z.jpg,,,3.00|2.00,,,Paraiba. Oval. Blue3.0X2.0,H,,
+,EM,TR,0.14,GRN,750.00,XET3002,,,,,3.00|3.00|1.40,,,TR Emerald Pair Gem. 3.0,O,,xet3002
+,PA,OV,0.13,BLU,2250.00,XPBV1300Z,,xpbv1300z.jpg,,,3.50|2.20|1.30,,,Paraiba. Oval. Blue,H,,
+,PA,OV,0.14,BLU,2250.00,XPBV1400Z,,xpbv1400z.jpg,,,3.10|2.10,,,Paraiba. Oval. Blue3.1X2.1,H,,
+,PA,MIX,3.39,BLU,2500.00,PBMXZ1,,PBMXZ1.jpg,,,,,,Paraiba. Mixed. Blue,H,,
+,PA,TR,0.16,BLU,2500.00,XPBT0160Z,,xpbt0160z.jpg,,,2.90|2.90,,BRA,Paraiba. TR. Blue. 2.9x2.9mm,H,,
+,EM,TR,0.17,GRN,650.00,XET3001,,xet3001.jpg,,,3.00|3.00,,,TR Emerald Pair Gem. 3.0-3.0,O,,xet3001
+,PA,OV,0.18,BLU,2500.00,XPBV1800Z,,xpbv1800z.jpg,,,3.50|2.30,,,Paraiba. Oval. Blue3.5X2.3,H,,
+,PA,OV,0.18,BLU,2000.00,XPBV1801Z,,xpbv1801z.jpg,,,3.20|2.50,,,Paraiba. Oval. Blue3.2X2.5,H,,
+,PA,OV,0.17,BLU,2000.00,XPBV1700Z,,xpbv1700z.jpg,,,3.30|2.60,,,Paraiba. Oval 3.3X2.6,H,,
+,PA,TR,0.17,BLU,2400.00,XPBT1701Z,,xpbt1701z.jpg,,,3.00|3.00,,,Paraiba. TR. Blue 3.0MM,H,,
+,PA,TR,0.18,BLU,2500.00,XPBT1800Z,,xpbt1800z.jpg,,,2.90|2.90,,,Paraiba. TR. Blue2.9MM,H,,
+,PA,OV,0.18,BLU,2500.00,XPBV18001Z,,xpbv18001z.jpg,,,3.50|2.50,,,Paraiba. Oval. Blue 3.5X2.5,H,,
+,PA,OV,0.18,BLU,2500.00,XPBV1802Z,,xpbv1802z.jpg,,,3.40|2.50,,,Paraiba. Oval. Blue 3.4X2.5,H,,
+,PA,TR,0.18,BLU,2500.00,XPBT0180Z,,xpbt0180z.jpg,,,2.80|2.80,,BRA,Paraiba. TR. Blue. 2.8x2.8mm,H,,
+,PA,OV,0.19,BLU,2500.00,XPBV1900Z,,xpbv1900z.jpg,,,3.20|2.40,,,Paraiba. Oval. Blue3.2X2.4,H,,
+,PA,OV,0.19,BLU,2500.00,XPBV1901Z,,xpbv1901z.jpg,,,3.20|2.70,,,Paraiba. Oval. Blue3.2X2.7,H,,
+,PA,MQ,0.19,BLU,2500.00,PBVM1900Z,,pbvm1900z.jpg,,,5.30|2.00,,,Paraiba. MQ. Blue 5.3X2.0,H,,
+,PA,OV,0.19,BLU,2500.00,XPBV1902Z,,xpbv1902z.jpg,,,3.50|2.30,,,Paraiba. Oval. Blue 3.5X2.3,H,,
+,EM,RD,0.24,GRN,600.00,XER3400,,,,,3.40|3.40|2.00,,,Emerald. Round. Green 3.4mm,O,,
+,EM,TR,0.25,GRN,550.00,XET3300,,xet3300.jpg,,,3.30|3.30,,,TR Emerald Pair Gem. 3.3,O,,xet3300
+,EM,TR,0.28,GRN,650.00,XET3401,,xet3401.jpg,,,3.40|3.40,,,TR Emerald Pair Gem. 3.4,O,,xet3401
+,EM,TR,0.28,GRN,450.00,XET3706,,,,,3.70|3.70,,,TR Emerald Pair Gem. 3.7,O,,xet3706
+,PA,OV,0.28,BLU,3750.00,XPBV2800Z,,xpbv2800z.jpg,,,4.20|3.00|2.00,,,Paraiba. Oval. Blue 4.2X3.0,H,,
+,PA,TR,0.27,BLU,4000.00,XPBT2700Z,,xpbt2800z.jpg,,,3.60|3.60|2.10,,,Paraiba. TR. Blue 3.6MM,H,,
+,PA,MIX,3.18,BLU,3000.00,PBMXZ15,,pbmxz15.jpg,,,,,BRA,Paraiba. Blue. Brazil,H,,
+,EM,TR,0.30,GRN,650.00,XET3501,,xet3501.jpg,,,3.50|3.50,,,TR Emerald Pair Gem. 3.5,O,,xet3501
+,PA,OV,0.29,BLU,3750.00,XPBV2901Z,,xpbv2901z.jpg,,,4.10|2.90|1.90,,,Paraiba. Oval. Blue4.1X2.9,H,,
+,PA,RD,0.15,BLU,4000.00,PBR1500Z,,pbr1500z.jpg,,,3.30|3.30,,,Paraiba. Round. Blue 3.3mm,H,,
+,PA,RD,0.30,BLU,2500.00,XPBR300Z,,xpbr300z.jpg,,,3.20|3.20,,,Paraiba. Round. Blue 3.2MM,H,,
+,PA,RD,0.29,BLU,3500.00,XPBR290Z,,xpbr290z.jpg,,,3.30|3.30,,,Paraiba. Round. Blue 3.3MM,H,,
+,EM,TR,0.31,GRN,450.00,XET3601,,xet3601.jpg,,,3.60|3.60,,,TR Emerald Pair Gem. 3.6,O,,xet3601
+,EM,TR,0.31,GRN,500.00,XET3702,,xet3702.jpg,,,3.70|3.70,,,TR Emerald Pair Gem. 3.7,O,,xet3702
+,EM,TR,0.31,GRN,450.00,XET3701,,xet3701.jpg,,,3.70|3.70,,,TR Emerald Pair Gem. 3.7,O,,xet3701
+,PA,PS,0.16,BLU,2250.00,XPBP1600Z,,xpbp1600z.jpg,,,3.80|2.50,,,Paraiba. PS. Blue 3.8X2.5,H,,
+,EM,TR,0.34,GRN,650.00,XET3705,,xet3705.jpg,,,3.70|3.70,,,TR Emerald Pair Gem. 3.7,O,,xet3705
+,EM,TR,0.33,GRN,600.00,XET3800,,xet3800.jpg,,,3.80|3.80,,,TR Emerald Pair Gem. 3.8,O,,xet3800
+,EM,RD,0.34,GRN,650.00,XER3401,,,,,3.40|3.40|2.40,,,Emerald. Round. Green 3.4mm,O,,
+,EM,TR,0.35,GRN,600.00,XET3600,,,,,3.60|3.60,,,TR Emerald Pair Gem. 3.6,O,,xet3600
+,EM,TR,0.35,GRN,600.00,XET3804,,,,,3.80|3.80,,,TR Emerald Pair Gem. 3.8,O,,xet3804
+,EM,RD,0.36,GRN,650.00,XER3600,,,,,3.60|3.60|2.70,,,Emerald. Round. Green 3.6mm,O,,
+,EM,RD,0.37,GRN,525.00,XER3701,,XER3701.jpg,,,3.70|3.70,,,RD Emerald Pair Gem. 3.7,O,,xer3701
+,EM,TR,0.37,GRN,750.00,XET3703,,xet3703.jpg,,,3.70|3.70,,,TR Emerald Pair Gem. 3.7,O,,xet3703
+,EM,TR,0.39,GRN,475.00,XET4000,,xet4000.jpg,,,4.00|4.00,,,TR Emerald Pair Gem. 4.0,O,,xet4000
+,EM,RD,0.41,GRN,475.00,XER3800,,XER3800.jpg,,,3.80|3.80,,,RD Emerald Pair Gem. 3.8,O,,xer3800
+,EM,TR,0.41,GRN,600.00,XET4001,,xet4001.jpg,,,4.00|4.00,,,TR Emerald Pair Gem. 4.0-4.0,O,,xet4001
+,RU,TR,0.41,RED,450.00,XRT4000,,XRT4000.jpg,,,4.00|4.00,,,TR Ruby Pair Gem. 4.0,H,,xrt4000
+,SA,TR,0.45,BLU,450.00,XST3601,,xst3601.jpg,,,3.60|3.60|2.40,,,TR Sapphire Pair Gem. 3.6,H,,xst3601
+,EM,TR,0.47,GRN,575.00,XET4400,,,,,4.40|4.40,,,TR Emerald Pair Gem. 4.4,O,,xet4400
+,YS,TR,0.48,Yellow,175.00,XYT3701,,XYT3701.jpg,,,3.70|3.70,,,TR Y. Sapphire Pair Gem. 3.7,E,,xyt3701
+,EM,SQ,0.50,GRN,850.00,XEPR050,,xepr050.jpg,,,4.00|4.00|2.60,,,Emerald. SQ. Green 4.0mm,O,,
+,SA,RD,0.51,BLU,200.00,XSR4203,,XSR4203.jpg,,,4.20|4.20,,,RD Sapphire Pair Gem. 4.2,H,,xsr4203
+,EM,TR,0.52,GRN,575.00,XET4301,,,,,4.30|4.30,,,TR Emerald Pair Gem. 4.3,O,,xet4301
+,EM,SQ,0.28,GRN,725.00,EPR0280,,epr0280.jpg,,,4.00|4.00|2.90,,,Emerald. SQ. Green 4.0mm,O,,
+,EM,PS,0.60,GRN,675.00,XEP51001,,xep51001.jpg,,,5.10|4.10|2.80,,,Emerald. PS. 5.1x4.1mm,H,,
+,EM,RD,0.62,GRN,875.00,XER4505,,,,,4.50|4.50,,,RD Emerald Pair Gem 4.50,O,,
+,SA,RD,0.61,BLU,275.00,XSR0610,,xsr0610.jpg,,,4.00|4.00|2.60,,,Sapphire. Round. 4.0MM,H,,
+,PS,RD,0.61,PNK,375.00,XPR39000,,xpr39000.jpg,,,3.90|3.90|2.50,,,P. Sapphire. Round. Pink 3.9mm,H,,
+,SA,RD,0.64,BLU,230.00,XSR3700,,XSR3700.jpg,,,3.70|3.70,,,RD Sapphire Pair Gem. 3.7,H,,xsr3700
+,SA,RD,0.64,BLU,375.00,XSR3802,,XSR3802.jpg,,,3.80|3.80,,,Round Sapphire,H,,xsr3802
+,SA,PC,0.63,BLU,450.00,XPRS3400,,,,,3.40|3.40,,,Sapphire. PC 3.4mm,H,,
+,SA,RD,0.66,BLU,325.00,XSR4000,,xsr4000.jpg,,,4.00|4.00|2.70,,,Sapphire. Round. Blue 4.0MM,H,,
+,SA,RD,0.66,BLU,300.00,XSR4001,,xsr4001.jpg,,,4.00|4.00|2.80,,,Sapphire. Round. Blue 4.0MM,H,,
+,EM,SQ,0.66,GRN,950.00,XEPR066,,xepr066.jpg,,,4.10|4.10|3.20,,,Emerald. SQ. Green 4.1mm,O,,
+,EM,TR,0.67,GRN,575.00,XET4700,,XET4700.jpg,,,4.70|4.70,,,TR Emerald Pair Gem. 4.7,O,,xet4700
+,EM,TR,0.69,GRN,450.00,XET5005,,XET5005.jpg,,,5.00|5.00,,,TR Emerald Pair Gem. 5.0,O,,xet5005
+,SA,RD,0.70,BLU,275.00,XSR4141,,xsr4141.jpg,,,4.10|4.10|2.90,,,Sapphire. Round. Blue 4.1MM,H,,
+,EM,PS,0.36,GRN,750.00,EP0360,,EP0360.jpg,,,6.00|3.90|2.60,,,PS Emerald Gem. 6.0-3.9,O,,ep0360
+,EM,RD,0.71,GRN,1300.00,XER4504,,,,,4.50|4.50,,,RD Emerald Pair Gem 4.50,O,,
+,RU,TR,0.74,RED,375.00,XRT4400,,XRT4400.jpg,,,4.40|4.40,,,TR Ruby Pair Gem. 4.4,H,,xrt4400
+,EM,RD,0.73,GRN,900.00,XER4805,,,,,4.80|4.80|3.00,,,Emerald Pairs. Round. Green 4.8MM,O,,
+,EM,PS,0.37,GRN,785.00,EP03700,,ep03700.jpg,,,6.20|4.30|2.80,,,Emerald. PS. Green 6.2X4.3,O,,
+,EM,OV,0.37,GRN,750.00,EV03700,,,,,5.70|4.00|3.00,,,Emerald. Oval. Green 5.7X4.0,O,,
+,EM,PS,0.37,GRN,650.00,EP03701,,,,,5.90|4.00|2.80,,,Emerald. PS. Green 5.9x4.0,O,,
+,RU,TR,0.76,RED,580.00,XRT4300,,XRT4300.jpg,,,4.30|4.30,,,TR Ruby Pair Gem. 4.3,H,,xrt4300
+,SA,TR,0.75,BLU,450.00,XST4100,,XST4100.jpg,,,4.10|4.10,,,TR Sapphire Pair Gem. 4.1,H,,xst4100
+,Y. SAP,TR,0.75,Yellow,175.00,XYT4240,,XYT4240.jpg,,,4.20|4.00|2.70,,,Yellow Sapphire. TR. Yellow 4.2X4.0,H,,
+,SA,RD,0.76,BLU,275.00,XSR4305,,xsr4305.jpg,,,4.30|4.30|2.60,,,Sapphire. Round. Blue 4.3MM,H,,
+,EM,PS,0.38,GRN,1000.00,EP03800,,,,,5.90|4.20|2.80,,,Emerald. PS. Green 5.9X4.2,O,,
+,PS,RD,0.76,PNK,475.00,XPR4444,,,,,4.40|4.40|2.70,,,P. Sapphire. Round. Pink 4.4mm,H,,
+,SA,RD,0.75,BLU,275.00,XSR41411,,xsr41411.JPG,,,4.10|4.10|2.30,,,Sapphire. Round 4.1mm,H,,
+,EM,TR,0.78,GRN,600.00,XET4800,,XET4800.jpg,,,4.80|4.80,,,TR Emerald Pair Gem. 4.8,O,,xet4800
+,EM,TR,0.77,GRN,675.00,XET5001,,xet5001.jpg,,,5.00|5.00|2.70,,,TR Emerald Pair Gem. 5.0,O,,xet5001
+,EM,EC,0.39,GRN,750.00,EE03900,,,,,5.50|3.70|2.80,,,Emerald. EC. Green 5.5X3.7,O,,
+,EM,OV,0.39,GRN,500.00,EV03900,,,,,5.30|4.20|2.80,,,Emerald. Oval. Green 5.3X4.2,O,,
+,SA,RD,0.77,BLU,275.00,XSR41410,,xsr41410.JPG,,,4.10|4.10|2.20,,,Sapphire. Round 4.1mm,H,,
+,SA,RD,0.80,BLU,230.00,XSR4302,,xsr4302.jpg,,,4.30|4.30,,,RD Sapphire Pair Gem. 4.3,H,,xsr4302
+,YS,TR,0.80,Yellow,175.00,XYT4002,,XYT4002.jpg,,,4.00|4.00,,,TR Y. Sapphire Pair Gem. 4.0,E,,xyt4002
+,SA,RD,0.79,BLU,275.00,XSR4206,,xsr4206.jpg,,,4.20|4.20|2.80,,,Sapphire. Round. Blue 4.2MM,H,,
+,EM,EC,0.40,GRN,900.00,EE04000,,,,,5.20|3.70|2.40,,,Emerald. EC. Green 5.2X3.7,O,,
+,SA,RD,0.80,Blue,500.00,XSR0800,,xsr0800.jpg,,,4.50|4.50|2.70,,,Sapphire. Round. Blue 4.5mm,H,,
+,SA,RD,0.81,BLU,325.00,XSR4303,,xsr4303.jpg,,,4.30|4.30|2.80,,,Sapphire. Round. Blue 4.3MM,H,,
+,SA,RD,0.82,BLU,175.00,XSR0820,,xsr0820.jpg,,,4.50|4.50|2.40,,,Sapphire. Round. Blue 4.5MM,H,,
+,PS,CU,0.41,PNK,450.00,PC04100,,pc04100.jpg,,,4.30|4.30|2.60,,,Sapphire. Cushion. Pink 4.3X4.3MM,H,,
+,SA,OV,0.82,BLU,225.00,XSV0820,,XSV0820.jpg,,,4.90|4.00|2.60,,,Sapphire. Oval. Blue 4.9X4.,H,,
+,SA,TR,0.82,BLU,475.00,XST4301,,xst4300.jpg,,,4.30|4.30,,,Sapphire. TR. Blue 4.3MM,H,,
+,SA,RD,0.84,BLU,250.00,XSR4202,,XSR4202.jpg,,,4.20|4.20,,,RD Sapphire Pair Gem. 4.2,H,,xsr4202
+,EM,TR,0.83,GRN,925.00,XET5006,,XET5006.jpg,,,5.00|5.00,,,TR Emerald Pair Gem. 5.0,O,,xet5006
+,EM,TR,0.83,GRN,600.00,XET5401,,XET5401.jpg,,,5.40|5.40,,,TR Emerald Pair Gem. 5.4,O,,xet5401
+,EM,RD,0.86,GRN,700.00,XER5004,,XER5004.jpg,,,5.00|5.00,,,RD Emerald Pair Gem. 5.0,O,,xer5004
+,SA,RD,0.85,BLU,350.00,XSR4304,,xsr4304.jpg,,,4.30|4.30|2.90,,,Sapphire. Round. Blue 4.3MM,H,,
+,SA,RD,0.86,BLU,350.00,XSR4500,,xsr4500.jpg,,,4.50|4.50|2.60,,,Sapphire. Round. Blue 4.5MM,H,,
+,SA,HS,0.88,BLU,350.00,XSH4700,,XSH4700.jpg,,,4.70|4.70,,,HS Sapphire Pair Gem. 4.7,H,,xsh4700
+,SA,RD,0.87,BLU,375.00,XSR4704,,XSR4704.jpg,,,4.70|4.70,,,RD Sapphire Pair Gem. 4.7,H,,xsr4704
+,RU,RD,0.87,RED,375.00,XRR4401,,xrr4401.jpg,,,4.40|4.40|2.80,,,RD Ruby Gem 4.4MM,H,,rrl4000
+,EM,PS,0.44,GRN,750.00,EP04400,,,,,6.10|4.10|2.90,,,Emerald. PS. Green 6.1X4.1,O,,
+,EM,RD,0.89,GRN,1250.00,XER4702,,XER4702.jpg,,,4.70|4.70,,,RD Emerald Pair Gem. 4.7,O,,xer4702
+,EM,RD,0.89,GRN,600.00,XER5011,,,,,5.00|5.00|3.40,,,Emerald. Round. Green 5.0X5.0,O,,
+,EM,PS,0.45,GRN,750.00,EP04500,,,,,7.10|4.10|2.90,,,Emerald. PS. Green 7.1X4.1,O,,
+,EM,TR,0.92,GRN,800.00,XET5402,,XET5402.jpg,,,5.40|5.40,,,TR Emerald Pair Gem. 5.4,O,,xet5402
+,SA,RD,0.92,BLU,350.00,XSR0920,,xsr0920.jpg,,,4.40|4.40|3.20,,,Sapphire. Round. Blue 4.4MM,H,,
+,RU,PS,0.91,RED,500.00,XRP6045,,XRR6045.jpg,,,6.00|4.20|2.50,,,Ruby. PS. Red 6.0X4.2,H,,
+,EM,MQ,0.46,GRN,750.00,EQ04600,,,,,7.70|4.00|2.80,,,Emerald. MQ. Green 7.7X4.0,O,,
+,EM,OV,0.46,GRN,800.00,EV04600,,,,,6.40|4.40|2.60,,,Emerald. Oval. Green 6.4X4.4,O,,
+,EM,EC,0.46,GRN,700.00,EE04600,,,,,5.80|4.00|2.80,,,Emerald. EC. Green 5.8X4.0,O,,
+,EM,OV,0.46,GRN,500.00,EV04601,,,,,5.80|4.10|3.50,,,Emerald. Oval. Green 5.8X4.1,O,,
+,SA,RD,0.92,BLU,550.00,XSR0921,,xsr0921.jpg,,,4.60|4.60|2.90,,,Sapphire. Round. Blue 4.6mm,H,,
+,EM,EC,0.47,GRN,1250.00,EE04700,,,,,6.10|4.10|2.60,,,Emerald. EC. Green 6.1X4.1,O,,
+,PS,RD,0.94,PNK,475.00,XPR4501,,,,,4.50|4.50|3.00,,,P. Sapphire. Round. Pink 4.5mm,H,,
+,EM,RD,0.95,GRN,675.00,XER5516,,XER5516.jpg,,,5.50|5.50,,,RD Emerald Pair Gem. 5.5,O,,xer5516
+,SA,RD,0.96,BLU,625.00,XSR0960,,,,,4.80|4.80|2.70,,,Sapphire. Round. Blue 4.8mm,H,,
+,SA,RD,0.97,BLU,300.00,XSR4702,,XSR4702.jpg,,,4.70|4.70,,,RD Sapphire Pair Gem. 4.7,H,,xsr4702
+,EM,TR,0.97,GRN,775.00,XET5502,,XET5502.jpg,,,5.50|5.50,,,TR Emerald Pair Gem. 5.5,O,,xet5502
+,EM,RD,0.97,GRN,1250.00,XER5203,,,,,5.20|5.20,,,RD Emerald Pair Gem 5.20,O,,
+,SA,OV,0.97,BLU,225.00,XSV0970,,XSV0970.jpg,,,5.10|4.20|2.50,,,Sapphire. Oval. Blue 5.1X4.2,H,,
+,EM,EC,0.49,GRN,750.00,EE04900,,,,,5.50|3.90|3.30,,,Emerald. EC. Green 5.5X3.9,O,,
+,SA,RD,0.97,BLU,575.00,XSR0970,,xsr0970.jpg,,,4.70|4.70|3.00,,,Sapphire. Round. Blue 4.7mm,H,,
+,EM,RD,0.99,GRN,575.00,XER5103,,XER5103.jpg,,,5.10|5.10,,,RD Emerald Pair Gem. 5.1,O,,xer5103
+,SA,TR,0.99,BLU,450.00,XST4500,,XST4500.jpg,,,4.50|4.50,,,TR Sapphire Pair Gem. 4.5,H,,xst4500
+,SA,HM,1.00,BLU,650.00,XSH1000,,,,,5.60|3.50|2.70,,,Sapphire. HM. Blue 5.6X3.5,H,,
+,SA,TR,1.00,BLU,525.00,XST4502,,xst4500.jpg,,,4.50|4.50,,,Sapphire. TR. Blue 4.5MM,H,,
+,SA,RD,1.00,BLU,550.00,XSR1000,,xsr1000.jpg,,,4.70|4.70|3.00,,,Sapphire. Round. Blue 4.7mm,H,,
+,SA,RD,1.00,BLU,475.00,XSR1001,,xsr1001.jpg,,,4.30|4.30|3.20,,,Sapphire. Round. Blue 4.3mm,H,,
+,SA,RD,1.00,BLU,525.00,XSR1002,,XSR1002.jpg,,,4.60|4.60|3.30,,,Sapphire. Round. Blue 4.6 mm,H,,
+,SA,RD,1.01,BLU,350.00,XSR4806,,XSR4806.jpg,,,4.80|4.80,,,RD Sapphire Pair Gem. 4.8,H,,xsr4806
+,EM,TR,1.01,GRN,800.00,XET5300,,XET5300.jpg,,,5.30|5.30,,,TR Emerald Pair Gem. 5.3,O,,xet5300
+,SA,CU,1.02,BLU,650.00,XSC4800,,xsc4800.jpg,,,4.80|4.80|2.40,,,Sapphire. Cushion. Blue 4.8mm,H,,
+,RU,EC,1.03,RED,900.00,XRE5540,,XRE5540.jpg,,,5.50|4.00,,,EC Ruby Pair Gem. 5.5-4.0,H,,xre5540
+,EM,PS,1.04,GRN,750.00,XEP7501,,,,,7.00|5.00|2.70,,,PS Emerald Pair Gem 7.0X5.0,O,,
+,SA,RD,1.04,BLU,375.00,XSR4706,,xsr4706.jpg,,,4.70|4.70|2.90,,,Sapphire. Round. Blue 4.7MM,H,,
+,SA,PC,1.04,BLU,475.00,XPRS4200,,,,,4.20|4.20,,,Sapphire. PC 4.2mm,H,,
+,SA,RD,1.03,BLU,485.00,XSR10300,,xsr10300.jpg,,,4.70|4.70|2.90,,,Sapphire. Round. Blue 4.7mm,H,,
+,SA,RD,1.06,BLU,450.00,XSR5122,,XSR5122.jpg,,,5.10|5.10,,,RD Sapphire Pair Gem. 5.1,H,,xsr5122
+,SA,RD,1.06,BLU,575.00,XSR1060,,XSR1060.jpg,,,4.70|4.70|3.80,,,Sapphire. Round. Blue 4.7mm,H,,
+,EM,TR,1.08,GRN,750.00,XET5800,,XET5800.jpg,,,5.80|5.80,,,TR Emerald Pair Gem. 5.8,O,,xet5800
+,EM,RD,1.08,GRN,1650.00,XER5009,,,,,5.00|5.00,,,RD Emerald Pair Gem 5.00,O,,
+,SA,CU,0.54,BLU,400.00,SC05400,,sc05400.jpg,,,5.00|5.00,,,Sapphire. Cushion. Blue 5.0X5.0,H,,
+,SA,RD,1.08,BLU,375.00,XSR4403,,xsr4403.jpg,,,4.40|4.40|3.30,,,Sapphire. Round. Blue 4.4MM,H,,
+,SA,RD,1.08,BLU,450.00,XSR4707,,xsr4707.jpg,,,4.70|4.70|3.30,,,Sapphire. Round. Blue 4.7MM,H,,
+,EM,SQ,0.54,GRN,1100.00,EQ05400,,,,,4.50|4.50|3.40,,,Emerald. SQ. Green 4.5mm,O,,
+,RU,OV,1.10,RED,600.00,XRV6041,,XRV6041.jpg,,,6.00|4.00,,,OV Ruby Pair Gem. 6.0-4.0,H,,xrv6041
+,SA,RD,1.10,BLU,250.00,XSR4802,,XSR4802.jpg,,,4.80|4.80,,,RD Sapphire Pair Gem. 4.8,H,,xsr4802
+,SA,RD,0.55,BLU,375.00,SR05500,,sr05500.jpg,,,4.90|4.90|3.00,,,RD Sapphire Gem 4.9MM,H,,srl5062
+,SA,TR,1.09,BLU,575.00,XST4803,,xst4800.jpg,,,4.80|4.80,,,Sapphire. TR. Blue 4.8MM,H,,
+,SA,RD,1.09,BLU,325.00,XSR1090,,xsr1090.jpg,,,4.70|4.70|3.10,,,Sapphire. Round. Blue 4.7mm,H,,
+,SA,RD,1.10,BLU,525.00,XSR1100,,xsr1100.jpg,,,4.70|4.70|3.40,,,Sapphire. Round. Blue 4.7mm,H,,
+,SA,RD,1.11,BLU,200.00,XSR5004,,XSR5004.jpg,,,5.00|5.00,,,RD Sapphire Pair Gem. 5.0,H,,xsr5004
+,EM,RD,1.11,GRN,800.00,XER5501,,XER5501.jpg,,,5.50|5.50,,,RD Emerald Pair Gem. 5.5,O,,xer5501
+,PS,OV,0.56,PNK,225.00,PV05600,,pv05600.jpg,,,5.90|4.20|2.50,,,P. Sapphire. Oval. Pink,H,,
+,EM,OV,0.56,GRN,700.00,EV05600,,,,,5.70|4.40|3.40,,,Emerald. Oval. Green 5.7X4.4,O,,
+,SA,RD,1.11,BLU,525.00,XSR1110,,xsr1110.jpg,,,4.60|4.60|3.40,,,Sapphire. Round. Blue 4.6mm,H,,
+,EM,RD,1.14,GRN,800.00,XER5305,,XER5305.jpg,,,5.30|5.30,,,RD Emerald Pair Gem. 5.3,O,,xer5305
+,RU,OV,0.57,RED,1275.00,RV0570,,rc0570.jpg,,,5.90|4.80|2.40,,,OV Ruby Gem 5.9X4.8,H,,rxl7050
+,SA,CU,1.13,BLU,650.00,XSC5000,,xsc5000.jpg,,,5.00|5.00|2.60,,,Sapphire. Cushion. Blue 5.0mm,H,,
+,SA,RD,1.14,BLU,550.00,XSR1140,,xsr1140.jpg,,,4.70|4.70|3.20,,,Sapphire. Round. Blue 4.7mm,H,,
+,SA,RD,1.16,BLU,175.00,XSR5009,,XSR5009.jpg,,,5.00|5.00,,,RD Sapphire Pair Gem. 5.0,H,,xsr5009
+,EM,TR,1.16,GRN,850.00,XET5500,,XET5500.jpg,,,5.50|5.50,,,TR Emerald Pair Gem. 5.5,O,,xet5500
+,EM,PC,0.58,GRN,0.00,EPR0580,,,,,4.80|4.80|3.80,,,Emerald. PC. Green 4.8MM,O,,
+,SA,CU,1.15,BLU,450.00,XSC4700,,xsc4700.jpg,,,4.70|4.70|2.90,,,Sapphire. Cushion. Blue 4.7mm,H,,
+,EM,RD,1.17,GRN,1350.00,XER5007,,XER5007.jpg,,,5.00|5.00,,,RD Emerald Pair Gem. 5.0,O,,xer5007
+,SA,RD,1.17,BLU,550.00,XSR1170,,XSR1170.jpg,,,4.80|4.80|3.30,,,Sapphire. Round. Blue 4.8mm,H,,
+,EM,RD,1.19,GRN,900.00,XER5517,,,,,5.50|5.50,,,RD Emerald Pair Gem 5.50,O,,
+,RU,RD,1.19,RED,550.00,XRR5003,,XRR5003.jpg,,,5.00|5.00|2.80,,,Ruby. Round. Red 5.0MM,H,,
+,SA,RD,1.19,BLU,275.00,XSR5017,,xsr5017.jpg,,,5.00|5.00|2.90,,,Sapphire. Round. Blue 5.0MM,H,,
+,EM,PS,0.60,GRN,950.00,EP06000,,,,,7.00|4.60|3.50,,,Emerald. PS. Green 7.0X4.6,O,,
+,SA,RD,0.60,BLU,600.00,SR06000,,,,,5.20|5.20,,,Sapphire. Round. Blue 5.2mm,H,,
+,EM,TR,1.22,GRN,750.00,XET6000,,XET6000.jpg,,,6.00|6.00,,,TR Emerald Pair Gem. 6.0,O,,xet6000
+,EM,PS,1.21,GRN,700.00,XEP7503,,,,,7.00|5.00|3.00,,,PS Emerald Pair Gem 7.0x5.0,O,,
+,PS,OV,0.61,PNK,225.00,PV06100,,pv06100.jpg,,,6.10|4.20|2.80,,,P. Sapphire. Oval. Pink,H,,
+,SA,RD,1.22,BLU,300.00,XSR5151,,xsr5151.jpg,,,5.10|5.10|2.80,,,Sapphire. Round. Blue 5.1MM,H,,
+,RU,TR,1.24,RED,900.00,XRT5502,,XRT5502.jpg,,,5.50|5.50,,,TR Ruby Pair Gem. 5.5,H,,xrt5502
+,SA,RD,1.23,BLU,675.00,XSR510005,,xsr510005.jpg,,,5.10|5.10|2.90,,,Sapphire. Round. Blue 5.1mm,H,,
+,RU,STB,0.63,RED,650.00,RB0630,,,,,5.40|3.80|2.40,,,STB Ruby Gem 5.4x3.8,H,,rxl1002
+,RU,RD,1.26,RED,750.00,XRR1260,,xrr1260.jpg,,,5.40|5.40|2.60,,,Ruby. Round. Red 5.4MM,H,,
+,PS,OV,0.63,PNK,225.00,PV06300,,pv06300.jpg,,,6.10|4.20|2.70,,,P. Sapphire. Oval. Pink,H,,
+,SA,RD,1.26,BLU,575.00,XSR50002,,xsr50002.jpg,,,5.00|5.00|3.10,,,Sapphire. Round. Blue 5.0mm,H,,
+,SA,PS,1.27,BLU,275.00,XSP6050,,XSP6050.jpg,,,6.00|5.00,,,PS Sapphire Pair Gem. 6.0-5.0,H,,xsp6050
+,RU,RD,1.27,RED,475.00,XRR5103,,xrr5103.jpg,,,5.10|5.10|3.00,,,Ruby. Round. Red 5.1MM,H,,
+,SA,RD,1.27,BLU,585.00,XSR50001,,xsr50001.jpg,,,5.00|5.00|3.20,,,Sapphire. Round. Blue 5.0mm,H,,
+,EM,OV,1.29,GRN,1275.00,XEV6850,,XEV6850.jpg,,,6.80|5.00,,,OV Emerald Pair Gem. 6.8-5.0,O,,xev6850
+,EM,RD,1.30,GRN,700.00,XER5508,,XER5508.jpg,,,5.50|5.50,,,RD Emerald Pair Gem. 5.5,O,,xer5508
+,SA,RD,1.29,BLU,300.00,XSR5123,,XSR5123.jpg,,,5.10|5.10,,,RD Sapphire Pair Gem. 5.1,H,,xsr5123
+,EM,TR,1.30,GRN,850.00,XET5900,,XET5900.jpg,,,5.90|5.90,,,TR Emerald Pair Gem. 5.9,O,,xet5900
+,SA,RD,1.30,BLU,450.00,XSR5528,,xsr5528.jpg,,,5.50|5.50|3.10,,,RD Sapphire Pair Gem 5.50,H,,srl5057
+,RU,RD,1.30,RED,750.00,XRR1300,,xrr1300.jpg,,,5.40|5.40|2.70,,,Ruby. Round. Red 5.4MM,H,,
+,PS,RD,0.65,PNK,275.00,PR06500,,pr06500.jpg,,,5.10|5.10|2.80,,,P. Sapphire. Round. Pink 5.1MM,,,
+,RU,RD,0.65,RED,575.00,RR06500,,RR06500.jpg,,,5.20|5.20|2.90,,,Ruby. Round. Red 5.2MM,H,,
+,SA,CU,1.29,BLU,650.00,XSC4900,,xsc4900.jpg,,,4.90|4.90|3.10,,,Sapphire. Cushion. Blue 4.9mm,H,,
+,SA,RD,1.29,BLU,600.00,XSR510004,,xsr510004.jpg,,,5.10|5.10|3.20,,,Sapphire. Round. Blue 5.1mm,H,,
+,RU,RD,1.29,RED,750.00,XRR53000,,xrr53000.jpg,,,5.30|5.30|2.70,,,Ruby. Round. Red 5.3mm,H,,
+,EM,RD,1.32,GRN,1875.00,XER5303,,XER5303.jpg,,,5.30|5.30,,,RD Emerald Pair Gem. 5.3,O,,xer5303
+,SA,RD,1.32,BLU,150.00,XSR5201,,xsr5201.jpg,,,5.20|5.20,,,RD Sapphire Pair Gem. 5.2,H,,xsr5201
+,SA,TR,1.31,BLU,600.00,XST5505,,XST5505.jpg,,,5.50|5.50,,,TR Sapphire Pair Gem. 5.5,H,,xst5505
+,EM-P,RD,1.31,GRN,1200.00,XER5704,,,,,5.70|5.70|3.70,,,RD Emerald Pair Gem 5.70MM,,,
+,PS,RD,0.66,PNK,375.00,PR06600,,pr06600.jpg,,,4.80|4.80|3.50,,,P. Sapphire. Round. Pink 4.8MM,,,
+,SA,RD,1.31,BLU,525.00,XSR510002,,xsr510002.jpg,,,5.10|5.10|3.40,,,Sapphire. Round. Blue 5.1mm,H,,
+,RU,RD,0.67,RED,800.00,RR06700,,rr06700.jpg,,,5.50|5.50|2.50,,,Ruby. Round. Red 5.5MM,H,,
+,SA,RD,0.67,BLU,475.00,SR06700,,sr06700.jpg,,,5.10|5.10|3.30,,,RD Sapphire Gem5.1MM,H,,srl5056
+,SA,RD,0.67,BLU,600.00,SR067001,,sr0926.jpg,,,5.00|5.00,,,Sapphire. Round. Blue 5.0mm,H,,
+,SA,RD,1.33,BLU,625.00,XSR51002,,xsr51002.jpg,,,5.10|5.10|3.20,,,Sapphire. Round. Blue 5.1mm,H,,
+,SA,RD,1.34,BLU,575.00,XSR520003,,xsr520003.jpg,,,5.20|5.20|3.20,,,Sapphire. Round. Blue 5.2mm,H,,
+,SA,RD,1.34,BLU,625.00,XSR520005,,xsr520005.jpg,,,5.20|5.20|3.10,,,Sapphire. Round. Blue 5.2mm,H,,
+,EM,RD,1.35,GRN,1285.00,XER5502,,XER5502.jpg,,,5.50|5.50,,,RD Emerald Pair Gem. 5.5,O,,xer5502
+,EM,RD,1.36,GRN,1250.00,XER5512,,XER5512.jpg,,,5.50|5.50,,,RD Emerald Pair Gem. 5.5,O,,xer5512
+,SA,RD,1.35,BLU,280.00,XSR5111,,XSR5111.jpg,,,5.10|5.10,,,RD Sapphire Pair Gem. 5.1,H,,xsr5111
+,SA,TR,1.35,BLU,650.00,XST5700,,XST5700.jpg,,,5.70|5.70,,,TR Sapphire Pair Gem. 5.7,H,,xst5700
+,EM,TR,1.35,GRN,850.00,XET6002,,XET6002.jpg,,,6.00|6.00,,,TR Emerald Pair Gem. 6.0,O,,xet6002
+,EM,RD,1.35,GRN,750.00,XER135SH,,XER135SH.jpg,,,6.10|6.10|3.80,,,Emerald. Round. Green 6.1MM,O,,
+,PS,CU,1.36,PNK,650.00,XPC4900,,xpc4900.jpg,,,4.90|4.90,,,P. Sapphire. Cushion. Pink 4.9mm,H,,
+,SA,RD,1.36,BLU,525.00,XSR510003,,xsr510003.jpg,,,5.10|5.10|3.30,,,Sapphire. Round. Blue 5.1mm,H,,
+,SA,RD,1.35,BLU,575.00,XSR49000,,xsr49000.jpg,,,4.90|4.90|3.50,,,Sapphire. Round. Blue 4.9mm,E,,
+,SA,RD,1.35,BLU,650.00,XSR510007,,xsr510007.jpg,,,5.10|5.10|3.30,,,Sapphire. Round. Blue 5.1mm,H,,
+,SA,RD,1.36,BLU,625.00,XSR510008,,,,,5.10|5.10|3.20,,,Sapphire. Round. Blue 5.1mm,H,,
+,SA,HS,0.69,BLU,475.00,SH0690,,SH0690.jpg,,,5.70|5.40|2.70,,,HS Sapphire Gem. 5.7-5.4,H,,sh0690
+,SA,PS,1.38,BLU,250.00,XSP6251,,XSP6251.jpg,,,6.20|5.10,,,PS Sapphire Pair Gem. 6.2-5.1,H,,xsp6251
+,EM,RD,1.37,GRN,1875.00,XER5603,,XER5603.jpg,,,5.60|5.60,,,RD Emerald Pair Gem. 5.6,O,,xer5603
+,SA,CU,0.69,BLU,485.00,SC06901,,sc06901.jpg,,,5.10|5.10,,,Sapphire. Cushion. Blue 5.1X5.1,H,,
+,EM,RD,1.38,GRN,850.00,XER138SH,,XER138SH.jpg,,,6.10|6.10|4.00,,,Emerald. Round. Green 6.1MM,O,,
+,SA,RD,1.38,BLU,575.00,XSR510001,,xsr510001.jpg,,,5.10|5.10|3.30,,,Sapphire. Round. Blue 5.1mm,H,,
+,RU,TR,1.40,RED,950.00,XRT5508,,XRT5508.jpg,,,5.50|5.50,,,TR Ruby Pair Gem. 5.5,H,,xrt5508
+,RU,RD,0.70,RED,485.00,RR0700,,RR0700.jpg,,,5.60|5.60|2.80,,,RD Ruby Gem 5.60,H,,rr0700
+,RU,OV,0.70,RED,850.00,RV07000,,RV07000.jpg,,,6.10|4.80|2.60,,,Ruby. Oval. Red 6.1X4.8,H,,
+,SA,RD,1.39,BLU,600.00,XSR51001,,xsr51001.jpg,,,5.10|5.10|3.50,,,Sapphire. Round. Blue 5.1mm,H,,
+,SA,RD,1.39,BLU,550.00,XSR53000,,,,,5.30|5.30|3.10,,,Sapphire. Round. Blue 5.3mm,H,,
+,RU,MQ,0.71,RED,475.00,RM0710,,RM0710.jpg,,,8.20|4.20|2.70,,,MQ Ruby Gem. 8.2-4.2,H,,rm0710
+,EM,RD,1.41,GRN,750.00,XER5511,,XER5511.jpg,,,5.50|5.50,,,RD Emerald Pair Gem. 5.5,O,,xer5511
+,RU,TR,1.41,RED,950.00,XRT5503,,XRT5503.jpg,,,5.50|5.50|2.80,,,TR Ruby Pair Gem. 5.5,H,,xrt5503
+,SA,RD,1.41,BLU,450.00,XSR5127,,XSR5127.jpg,,,5.10|5.10,,,RD Sapphire Pair Gem 5.10x5.10,H,,xsr5127
+,EM,RD,1.42,GRN,1250.00,XER6102,,,,,6.10|6.10,,,RD Emerald Pair Gem 6.10,O,,
+,PS,RD,0.71,PNK,375.00,PR07100,,pr07100.jpg,,,5.00|5.00|3.40,,,P. Sapphire. Round. Pink 5.0MM,,,
+,SA,CU,0.72,BLU,350.00,SC07201,,sc07201.jpg,,,5.10|5.10,,,Sapphire. Cushion. Blue 5.1X5.1,H,,
+,SA,PS,1.43,BLU,450.00,XSP6054,,,,,6.00|5.00|3.00,,,Sapphire. PS. Blue 6X5,H,,
+,RU,RD,0.72,RED,650.00,RR07200,,rr07200.jpg,,,5.40|5.40|3.00,,,Ruby. Round. Red 5.4MM,H,,
+,SA,PS,1.45,BLU,450.00,XSP6047,,XSP6047.jpg,,,6.00|4.70,,,PS Sapphire Pair Gem. 6.0-4.7,H,,xsp6047
+,EM,RD,1.45,GRN,1100.00,XER5514,,XER5514.jpg,,,5.50|5.50,,,RD Emerald Pair Gem. 5.5,O,,xer5514
+,SA,RD,0.73,BLU,450.00,SR0730,,sr0730.jpg,,,5.50|5.50|3.00,,,RD Sapphire Gem 5.50,H,,sr0730
+,RU,CU,0.73,RED,850.00,RC07300,,rc07300.jpg,,,5.50|5.50|2.60,,,Ruby. Cushion. Red 5.5X5.5,H,,
+,SA,RD,0.73,BLU,485.00,SR07300,,sr07300.jpg,,,5.10|5.10|3.20,,,RD Sapphire  Gem. 5.1MM,H,,xsr5126
+,RU,RD,1.46,RED,700.00,XRR1460,,xrr1460.jpg,,,5.30|5.30|3.00,,,Ruby. Round. Red 5.3MM,H,,
+,SA,RD,0.75,BLU,285.00,SR07500,,sr07500.jpg,,,5.50|5.50|3.30,,,Sapphire. Round. Blue 5.5MM,H,,
+,SA,CU,0.75,BLU,450.00,SC07501,,sc07501.jpg,,,5.00|5.00,,,Sapphire. Cushion. Blue 5.0X5.0,H,,
+,EM,RD,1.50,GRN,1400.00,XER150SH,,XER150SH.jpg,,,6.00|6.00|3.80,,,Emerald. Round. Green 6.0MM,O,,
+,SA,RD,0.75,BLU,375.00,SR07501,,SR07501.jpg,,,5.50|5.50|3.10,,,Sapphire. Round. Blue 5.5MM,H,,
+,SA,RD,0.75,BLU,525.00,SR07502,,SR07502.jpg,,,5.40|5.40|3.20,,,RD Sapphire Gem 5.4MM,H,,srl5056
+,SA,RD,1.50,BLU,750.00,XSR1500,,,,,5.40|5.40|3.20,,,Sapphire. Round. Blue 5.4mm,H,,
+,SA,RD,1.49,BLU,550.00,XSR55000,,xsr55000.jpg,,,5.50|5.50|3.10,,,Sapphire. Round. Blue 5.5mm,H,,
+,SA,RD,1.50,BLU,750.00,XSR510006,,xsr510006.jpg,,,5.10|5.10|3.70,,,Sapphire. Round. Blue 5.1mm,H,,
+,SA,RD,1.50,BLU,780.00,XSR550004,,xsr550004.jpg,,,5.50|5.50|3.20,,,Sapphire. Round. Blue 5.5mm,H,,
+,RU,PS,1.51,RED,1100.00,XRP7053,,XRP7053.jpg,,,7.00|5.00,,,PS Ruby Pair Gem. 7.0-5.0,H,,xrp7053
+,SA,RD,1.51,BLU,300.00,XSR5524,,XSR5524.jpg,,,5.50|5.50|3.20,,,RD Sapphire Pair Gem. 5.5,H,,xsr5524
+,SA,RD,1.51,BLU,485.00,XSR4903,,XSR4903.jpg,,,4.90|4.90|3.80,,,RD Sapphire Pair Gem. 4.9,H,,xsr4903
+,RU,OV,0.76,RED,525.00,RV0761,,RC0761.jpg,,,5.50|4.50|3.40,,,OV Ruby Gem 5.5x4.5,H,,rxl1002
+,SA,RD,0.76,BLU,350.00,SR07600,,sr07600.jpg,,,5.70|5.70|2.90,,,Sapphire. Round. Blue 5.7MM,H,,
+,SA,RD,0.76,BLU,550.00,SR07601,,SR07601.jpg,,,5.60|5.60|3.10,,,RD Sapphire Gem 5.6MM,H,,srl5056
+,PS,RD,0.76,PNK,300.00,PR07600,,pr07600.jpg,,,5.50|5.50|3.00,,,P. Sapphire. Round. Pink 5.5MM,,,
+,RU,RD,1.51,RED,675.00,XRR51000,,xrr51000.jpg,,,5.10|5.10|3.60,,,Ruby. Round. Red 5.1mm,H,,
+,SA,TR,1.54,BLU,675.00,XST5506,,XST5506.jpg,,,5.50|5.50,,,TR Sapphire Pair Gem. 5.5,H,,xst5506
+,YS,RD,0.77,Yellow,250.00,YR0770,,,,,5.60|5.60|3.10,,,Y. Sapphire. Round. Yellow 5.6MM,,,or0770
+,SA,OV,0.77,BLU,240.00,SV07700,,sv07700.jpg,,,6.00|4.30,,,Sapphire. Oval. Blue 6.0X4.3mm,H,,
+,SA,RD,0.77,BLU,850.00,SR591455,,SR591455.jpg,,,5.80|5.80|2.80,,,Sapphire. Round. Blue 5.8MM,H,,
+,SA,RD,0.77,BLU,585.00,SR07700,,SR07700.jpg,,,5.50|5.50|3.10,,,RD Sapphire Gem 5.5MM,H,,srl5056
+,SA,RD,1.54,BLU,600.00,XSR52000,,xsr52000.jpg,,,5.20|5.20|3.50,,,Sapphire. Round. Blue 5.2mm,H,,
+,SA,RD,1.56,BLU,385.00,XSR5518,,XSR5518.jpg,,,5.50|5.50,,,RD Sapphire Pair Gem. 5.5,H,,xsr5518
+,SA,RD,1.55,BLU,375.00,XSR5612,,XSR5612.jpg,,,5.60|5.60,,,RD Sapphire Pair Gem. 5.6,H,,xsr5612
+,EM,TR,1.56,GRN,950.00,XET6200,,XET6200.jpg,,,6.20|6.20,,,TR Emerald Pair Gem. 6.2,O,,xet6200
+,SA,TR,1.55,BLU,700.00,XST5201,,XST5201.jpg,,,5.20|5.20,,,TR Sapphire Pair Gem. 5.2,H,,xst5201
+,SA,TR,1.55,BLU,675.00,XST5352,,XST5352.jpg,,,5.30|5.20,,,TR Sapphire Pair Gem. 5.3-5.2,H,,xst5352
+,RU,RD,1.56,RED,625.00,XRR5607,,XRR5607.jpg,,,5.60|5.60,,,RD Ruby Pair Gem 5.60,H,,rrl5059
+,RU,RD,1.55,RED,600.00,XRR5609,,XRR5609.jpg,,,5.60|5.60,,,RD Ruby Pair Gem 5.60,H,,rrl5059
+,SA,RD,0.78,BLU,550.00,SR0780,,sr0780.jpg,,,5.80|5.80|3.00,,,RD Sapphire Gem 5.80,H,,srl6006
+,SA,OV,0.78,BLU,350.00,SV07800,,sv07800.jpg,,,6.00|5.00,,,Sapphire. Oval. Blue 6.0X5.0,H,,
+,SA,RD,0.78,BLU,375.00,SR07800,,SR07800.jpg,,,5.60|5.60|3.10,,,RD Sapphire Gem 5.6MM,H,,srl5062
+,SA,RD,0.78,BLU,350.00,SR07801,,SR07801.jpg,,,5.60|5.60|3.20,,,RD Sapphire Gem 5.6MM,H,,srl5062
+,EM,OV,0.78,GRN,750.00,EV07800,,ev07800.jpg,,,7.10|5.20|3.30,,,Emerald. Oval. Green 7.1X5.2,O,,
+,PS,OV,0.78,PNK,475.00,PV07800,,pv07800.jpg,,,6.80|4.70|2.70,,,P. Sapphire. Oval. Pink 6.8X4.7,H,,
+,RU,OV,0.78,RED,685.00,RV07801,,RV07801.jpg,,,7.00|4.90|2.40,,,Ruby. Oval. Red 7.0X4.9,H,,
+,SA,PS,1.57,BLU,350.00,XSP6250,,XSP6250.jpg,,,6.20|5.00,,,PS Sapphire Pair Gem. 6.2-5.0,H,,xsp6250
+,YS,RD,0.79,Yellow,275.00,YR0790,,,,,5.50|5.50|3.60,,,Y. Sapphire. Round. Yellow 5.5MM,E,,or0790
+,SA,RD,0.79,BLU,350.00,SR0791,,sr0791.jpg,,,5.40|5.40|3.40,,,RD Sapphire Gem 5.40,H,,srl5057
+,SA,RD,0.79,BLU,300.00,SR07901,,sr07901.jpg,,,5.80|5.80|2.80,,,Sapphire. Round. Blue 5.8MM,H,,
+,SA,RD,1.58,BLU,275.00,XSR5410,,xsr5410.jpg,,,5.40|5.40|3.40,,,Sapphire. Round. Blue 5.4MM,H,,
+,RU,RD,0.79,RED,550.00,RR07900,,rr07900.jpg,,,5.20|5.20|3.60,,,Ruby. Round. Red 5.2MM,H,,
+,SA,RD,1.58,BLU,750.00,XSR55002,,xsr55002.jpg,,,5.50|5.50|3.60,,,Sapphire. Round. Blue 5.5mm,H,,
+,RU,TR,1.60,RED,1200.00,XRT5505,,XRT5505.jpg,,,5.50|5.50,,,TR Ruby Pair Gem. 5.5,H,,xrt5505
+,SA,TR,1.59,BLU,800.00,XST5102,,XST5102.jpg,,,5.10|5.10,,,TR Sapphire Pair Gem. 5.1,H,,xst5102
+,SA,RD,0.80,BLU,475.00,SR0803,,sr0803.jpg,,,5.20|5.20|3.50,,,RD Sapphire Gem 5.20,H,,srl5057
+,EM,RD,1.60,GRN,850.00,XER160SH,,XER160SH.jpg,,,6.00|6.00|4.40,,,Emerald. Round. Green 6.0MM,O,,
+,YS,RD,0.80,Yellow,225.00,YR08000,,yr08000.jpg,,,5.50|5.50|3.50,,,Y. Sapphire. Round. Yellow 5.5MM,H,,
+,RBL,RD,0.80,BLU,750.00,SR08001,,sr08001.jpg,,,5.60|5.60|3.60,,,Rubellite. Round. Blue 5.6mm,H,,
+,SA,PS,1.61,BLU,300.00,XSP6350,,XSP6350.jpg,,,6.30|5.00,,,PS Sapphire Pair Gem. 6.3-5.0,H,,xsp6350
+,SA,TR,1.62,BLU,675.00,XST5200,,XST5200.jpg,,,5.20,,,TR Sapphire Pair Gem. 5.2,H,,xst5200
+,SA,RD,0.81,BLU,450.00,SR0813,,sr0813.jpg,,,5.70|5.70|3.10,,,RD Sapphire Gem 5.70,H,,srl6005
+,SA,RD,0.81,BLU,450.00,SR08100,,sr08100.jpg,,,5.50|5.50|3.50,,,Sapphire. Round. Blue 5.5MM,H,,
+,RU,RD,0.81,RED,750.00,RR570355,,rr570355.jpg,,,5.60|5.60|3.10,,,Sapphire. Round. Red 5.6MM,H,,
+,SA,RD,1.62,BLU,750.00,XSR55001,,xsr55001.jpg,,,5.50|5.50|3.90,,,Sapphire. Round. Blue,H,,
+,SA,RD,1.63,BLU,450.00,XSR5527,,xsr5527.jpg,,,5.50|5.50|3.90,,,RD Sapphire Pair Gem 5.50,H,,srl5057
+,SA,RD,0.82,BLU,500.00,SR08200,,sr08200.jpg,,,5.90|5.90|3.10,,,Sapphire. Round. Blue 5.9MM,H,,
+,GS,RD,0.82,GRN,350.00,GR08200,,gr08200.jpg,,,5.70|5.70|3.20,,,G. Sapphire. Round. Green 5.7MM,,,
+,SA,MIX,1.63,BLU,450.00,XSR5530,,xsr5530.jpg,,,5.50|5.50|3.80,,,RD Sapphire Pair 5.5mm,H,,
+,SA,PS,1.66,BLU,450.00,XSP4766,,XSP4766.jpg,,,6.60|4.70,,,PS Sapphire Pair Gem. 6.6-4.7,H,,xsp4766
+,SA,RD,1.66,BLU,450.00,XSR5402,,xsr5402.jpg,,,5.40|5.40,,,RD Sapphire Pair Gem. 5.4,H,,xsr5402
+,SA,TR,1.66,BLU,700.00,XST5901,,XST5901.jpg,,,5.90|5.90,,,TR Sapphire Pair Gem. 5.9,H,,xst5901
+,SA,TR,1.65,BLU,700.00,XST6002,,XST6002.jpg,,,6.00|6.00,,,TR Sapphire Pair Gem. 6.0,H,,xst6002
+,SA,RD,0.83,BLU,375.00,SR0831,,SR0831.jpg,,,5.60|5.60|3.40,,,RD Sapphire Gem 5.60mm,H,,sr0831
+,RU,EC,0.83,RED,850.00,RE0830,,re0830.jpg,,,6.30|4.00|2.90,,,EC Ruby Gem 6.3x4.0,H,,rel1000
+,SA,RD,0.83,BLU,300.00,SR08301,,sr08301.jpg,,,5.50|5.50|3.50,,,Sapphire. Round. Blue 5.5MM,H,,
+,SA,OV,0.83,BLU,275.00,SV08300,,sv08300.jpg,,,6.20|4.30,,,Sapphire. Oval. Blue  6.2X4.3,H,,
+,SA,RD,0.83,BLU,285.00,SR08300,,sr08300.jpg,,,5.70|5.70|3.50,,,Sapphire. Round. Blue 5.7MM,H,,
+,RU,RD,0.83,RED,550.00,RR08301,,RR08301.jpg,,,5.40|5.40|3.30,,,Ruby. Round. Red 5.4MM,H,,
+,SA,RD,0.83,BLU,680.00,SR08302,,SR08302.jpg,,,5.30|5.30|3.50,,,RD Sapphire Gem 5.3MM,H,,srl5056
+,RU,RD,1.65,RED,900.00,XRR1650,,xrr1650.jpg,,,5.90|5.90|2.90,,,Ruby. Round. Red 5.9MM,H,,
+,RU,OV,0.84,RED,675.00,RV0840,,rc0840.jpg,,,5.60|4.70|3.40,,,OV Ruby Gem. 5.6-4.7,H,,rc0840
+,SA,TR,1.67,BLU,675.00,XST6001,,XST6001.jpg,,,6.00|6.00,,,TR Sapphire Pair Gem. 6.0,H,,xst6001
+,SA,RD,0.84,BLU,375.00,SR0842,,SR0842.jpg,,,5.60|5.60|3.40,,,RD Sapphire Gem 5.60,H,,sr0842
+,RU,OV,0.84,RED,575.00,RV08420,,RC0842.jpg,,,5.50|4.70|3.70,,,OV Ruby Gem 5.5x4.7,H,,rxl1002
+,RU,RD,1.68,RED,800.00,XRR5606,,XRR5606.jpg,,,5.60|5.60,,,RD Ruby Pair Gem 5.60,H,,rrl5059
+,RU,RD,1.68,RED,550.00,XRR5508,,XRR5508.jpg,,,5.50|5.50,,,RD Ruby Pair Gem 5.50,H,,rrl5059
+,RU,PS,0.84,RED,875.00,RP08400,,rp08400.jpg,,,6.80|5.70|2.70,,,Ruby. PS. Red 6.8X5.7,H,,
+,RU,RD,0.84,RED,385.00,RR08400,,RR08400.jpg,,,5.90|5.90|2.70,,,Ruby. Round. Red 5.9MM,H,,
+,SA,RD,0.84,BLU,375.00,SR08400,,SR08400.jpg,,,5.60|5.60|3.30,,,RD Sapphire Gem 5.6MM,H,,srl5062
+,SA,RD,1.69,BLU,350.00,XSR5520,,XSR5520.jpg,,,5.50|5.50,,,RD Sapphire Pair Gem. 5.5,H,,xsr5520
+,SA,RD,0.85,BLU,475.00,SR0852,,SR0852.jpg,,,5.90|5.90|3.10,,,RD Sapphire Gem 5.90,H,,
+,SA,RD,0.85,BLU,650.00,SR0854,,sr0854.jpg,,,5.80|5.80|3.20,,,Sapphire. Round. Blue 5.8MM,H,,
+,SA,OV,0.85,BLU,250.00,SV08500,,SV08500.jpg,,,6.00|4.80,,,Sapphire. Oval. Blue 6.0X4.8,H,,
+,SA,RD,0.85,BLU,585.00,SR08501,,sr08501.jpg,,,5.70|5.70|3.30,,,Sapphire. Round. Blue 5.7MM,H,,
+,SA,RD,0.85,BLU,385.00,SR08500,,sr08500.jpg,,,5.50|5.50|3.30,,,Sapphire. Round. Blue 5.5MM,H,,
+,SA,RD,0.86,BLU,650.00,SR0860,,SR0860.jpg,,,5.50|5.50|3.50,,,RD Sapphire Gem 5.50,H,,sr0860
+,SA,RD,0.86,BLU,650.00,SR08600,,SR08600.jpg,,,5.80|5.80|3.30,,,Sapphire. Round. Blue 5.8MM,H,,
+,SA,RD,1.72,BLU,750.00,XSR5914,,xsr5914.jpg,,,5.90|5.90|3.00,,,Sapphire. Round. Blue 5.9MM,H,,
+,PS,CU,0.86,PNK,475.00,PC08600,,pc08600.jpg,,,5.30|5.30|3.10,,,P. Sapphire. Cushion. Pink,H,,
+,YS,RD,0.86,Yellow,285.00,YR08600,,yr08600.jpg,,,5.60|5.60|3.50,,,Y. Sapphire. Round. Yellow 5.6MM,H,,
+,SA,RD,0.86,BLU,475.00,SR08601,,SR08601.jpg,,,5.70|5.70|3.30,,,RD Sapphire Gem 5.7MM,H,,srl5056
+,WS,RAD,0.86,White,475.00,SWD0860,,SWD0860.jpg,,,6.00|4.50|3.60,,,W.Sapphire. RAD. White 6.0X4.5,H,,
+,RU,RD,1.74,RED,900.00,XRR5602,,XRR5602.jpg,,,5.60|5.60,,,RD Ruby Pair Gem. 5.6,H,,xrr5602
+,SA,RD,1.73,BLU,450.00,XSR5502,,XSR5502.jpg,,,5.50|5.50,,,RD Sapphire Pair Gem. 5.5,H,,xsr5502
+,SA,RD,1.73,BLU,400.00,XSR5521,,XSR5521.jpg,,,5.50|5.50,,,RD Sapphire Pair Gem. 5.5,H,,xsr5521
+,SA,RD,0.87,BLU,450.00,SR0871,,SR0871.jpg,,,5.70|5.70|3.40,,,Round Sapphire,H,,sr0871
+,SA,RD,1.73,BLU,650.00,XSR5409,,xsr5409.jpg,,,5.40|5.40|3.40,,,RD Sapphire Pair Gem 5.40,H,,srl5503
+,RU,RD,1.74,RED,750.00,XRR5703,,XRR5703.jpg,,,5.70|5.70,,,RD Ruby Pair Gem 5.70,H,,rrl5059
+,SA,OV,0.87,BLU,250.00,SV08700,,SV08700.jpg,,,6.20|5.00,,,Sapphire. Oval. Blue 6.2X5.0,H,,
+,SA,RD,0.87,BLU,550.00,SR08700,,sr08700.jpg,,,5.50|5.50|3.60,,,Sapphire. Round. Blue 5.5MM,H,,
+,PS,CU,0.87,PNK,575.00,PC08700,,,,,5.40|5.40|3.30,,,P. Sapphire. Cushion. Pink 5.4X5.4,H,,
+,SA,PS,1.76,BLU,275.00,XSP6348,,XSP6348.jpg,,,6.30|4.80,,,PS Sapphire Pair Gem. 6.3-4.8,H,,xsp6348
+,SA,RD,0.88,BLU,425.00,SR0881,,SR0881.jpg,,,5.70|5.70|3.40,,,RD Sapphire Gem 5.70,H,,sr0881
+,SA,RD,1.76,BLU,650.00,XSR5620,,xsr5620.jpg,,,5.60|5.60|3.20,,,RD Sapphire Pair Gem 5.60,H,,srl5503
+,SA,RD,0.88,BLU,375.00,SR08800,,sr08800.jpg,,,5.90|5.90|3.40,,,Sapphire. Round. Blue 5.9MM,H,,
+,SA,RD,0.88,BLU,450.00,SR08801,,sr08801.jpg,,,5.80|5.80|3.20,,,Sapphire. Round. Blue 5.8MM,H,,
+,SA,RD,0.88,BLU,475.00,SR591055,,SR591055.jpg,,,5.90|5.90|3.20,,,Sapphire. Round. Blue 5.9MM,H,,
+,SA,MQ,0.89,BLU,325.00,SM0890,,SM0890.jpg,,,8.20|4.20|3.10,,,MQ Sapphire Gem. 8.2-4.2,H,,sm0890
+,SA,RD,0.89,BLU,800.00,SR0890,,SR0890.jpg,,,5.80|5.80|3.20,,,RD Sapphire Gem 5.80,H,,sr0890
+,YS,RD,0.89,Yellow,275.00,YR0890,,,,,5.60|5.60|3.60,,,Y. Sapphire. Round. Yellow 5.6MM,E,,or0890
+,SA,CU,0.89,BLU,285.00,SC08902,,sc08902.jpg,,,5.50|5.50,,,Sapphire. Cushion. Blue 5.5X5.5,H,,
+,SA,RD,0.89,BLU,350.00,SR08900,,sr08900.jpg,,,5.60|5.60|3.40,,,Sapphire. Round. Blue 5.6MM,H,,
+,RU,RD,0.89,RED,550.00,RR08902,,RR08902.jpg,,,5.30|5.30|3.80,,,Ruby. Round. Red 5.3MM,H,,
+,SA,RD,0.89,BLU,650.00,SR186066,,sr186066.jpg,,,5.80|5.80|3.20,,,Sapphire. Round. Blue 5.8MM,H,,
+,SA,TR,1.80,BLU,875.00,XST5602,,XST5602.jpg,,,5.60|5.60,,,TR Sapphire Pair Gem. 5.6,H,,xst5602
+,SA,RD,0.90,BLU,650.00,SR0903,,sr0903.jpg,,,5.50|5.50|3.80,,,RD Sapphire Gem 5.5,H,,srl5503
+,SA,RD,0.90,BLU,285.00,SR09001,,sr09001.jpg,,,5.50|5.50|3.60,,,Sapphire. Round. Blue 5.5MM,H,,
+,SA,OV,0.90,BLU,475.00,SV09000,,sv09000.jpg,,,6.80|5.00,,,Sapphire. Oval. Blue 6.8X5.0,H,,
+,SA,RD,0.90,BLU,600.00,SR09002,,sr09002.jpg,,,6.10|6.10|3.00,,,Sapphire. Round. Blue 6.1MM,H,,
+,RU,PS,0.90,RED,1400.00,RP09000,,RP09000.jpg,,,7.50|5.30|3.00,,,Ruby. PS. Red 7.5X5.3,H,,
+,SA,RD,0.90,BLU,525.00,SR09003,,sr09003.jpg,,,5.70|5.70|4.50,,,RD Sapphire Gem 5.7MM,H,,srl5056
+,RU,RD,0.90,RED,1050.00,RR580455,,rr580455.jpg,,,5.80|5.80|3.30,,,Ruby. Round. Red 5.8MM,H,,
+,SA,EC,0.91,BLU,385.00,SE0910,,SE0910.jpg,,,5.70|4.90|3.10,,,EC Sapphire Gem. 5.7-4.9,H,,se0910
+,SA,RD,0.91,BLU,625.00,SR0986,,sr0986.jpg,,,5.70|5.70|3.30,,,RD Sapphire Gem 5.70,H,,srl5155
+,SA,CU,0.91,BLU,300.00,SC09101,,sc09101.jpg,,,5.50|5.50,,,Sapphire. Cushion. Blue 5.5X5.5,H,,
+,SA,PS,1.83,BLU,475.00,XSP7059,,XSP7059.jpg,,,7.00|5.00|3.50,,,Sapphire. PS. Blue 7X5,H,,xsp7059
+,SA,RD,0.92,BLU,575.00,SR0921,,SR0921.jpg,,,5.70|5.70|3.40,,,RD Sapphire Gem 5.70,H,,sr0921
+,RU,RD,0.92,RED,750.00,RR0920,,RR0920.jpg,,,5.50|5.50|3.80,,,RD Ruby Gem 5.50,H,,rrl5059
+,YS,RAD,0.92,Yellow,275.00,YD09201,,yd09201.jpg,,,6.00|5.00|3.30,,,Sapphire. Radiant. Yellow 6.0X5.0MM,,,
+,SA,RD,0.92,BLU,550.00,SR09201,,sr09201.jpg,,,5.60|5.60|3.70,,,RD Sapphire Gem 5.6MM,H,,srl5056
+,PS,RD,0.92,PNK,475.00,PR09200,,,,,5.80|5.80|3.50,,,P. Sapphire. Round 5.8X3.5MM,H,,
+,SA,RD,0.93,BLU,600.00,SR0930,,sr0930.jpg,,,5.20|5.20|4.00,,,RD Sapphire Gem 5.20,H,,sr0930
+,RU,PS,1.85,RED,850.00,XRP1850,,XRP1850.jpg,,,6.50|4.90,,,PS Ruby Pair Gem 6.5X4.9,H,,rxl1002
+,SA,CU,0.93,BLU,325.00,SC09301,,sc09301.jpg,,,5.50|5.50,,,Sapphire. Cushion. Blue 5.5X5.5,H,,
+,PS,OV,0.93,PNK,450.00,PV09300,,pv09300.jpg,,,6.80|5.00|3.30,,,P. Sapphire. Oval. Pink 6.8X5.0,H,,
+,SA,CU,0.93,BLU,1000.00,SC189255,,sc189255.jpg,,,6.10|5.20|3.20,,,Sapphire. Cushion. Blue 6.1X5.2MM,H,,
+,SA,OV,0.93,BLU,350.00,SV09300,,sv09300.jpg,,,7.00|4.80|3.40,,,Sapphire. Oval. Blue 7.0X4.8MM,H,,
+,SA,EC,0.94,BLU,385.00,SE0940,,SE0940.jpg,,,6.80|4.60|3.00,,,EC Sapphire Gem. 6.8-4.6,H,,se0940
+,SA,RD,0.94,BLU,550.00,SR0945,,sr0945.jpg,,,5.50|5.50|3.80,,,RD Sapphire Gem 5.50,H,,srl6005
+,SA,RD,0.94,BLU,525.00,SR09400,,sr09400.jpg,,,5.50|5.50|3.70,,,Sapphire. Round. Blue 5.5MM,H,,
+,SA,EC,0.94,BLU,450.00,SE09400,,se09400.jpg,,,6.80|4.80|2.70,,,EC Sapphire Gem 6.8X4.8,H,,sel7501
+,RU,RD,1.87,RED,800.00,XRR1870,,xrr1870.jpg,,,5.40|5.40|4.10,,,Ruby. Round. Red 5.4MM,H,,
+,RU,RD,0.94,RED,875.00,RR630266,,rr630266.jpg,,,6.30|6.30|2.80,,,Ruby. Round. Red 6.3MM,H,,
+,PS,OV,0.94,PNK,485.00,PV09400,,pv09400.jpg,,,6.70|5.00|3.20,,,P. Sapphire. Oval. Pink 6.7X5.0,H,,
+,RU,RD,0.94,RED,950.00,RR570366,,rr570366.jpg,,,5.70|5.70|3.30,,,Ruby. Round. Red 5.7MM,H,,
+,SA,HS,0.94,BLU,650.00,SH09400,,sh09400.jpg,,,5.50|5.60|3.80,,,Sapphire. Heart Shape. Blue 5.5X5.6,H,,
+,RU,RD,0.95,RED,850.00,RR0950,,RR0950.jpg,,,5.70|5.70|3.40,,,RD Ruby Gem 5.7mm,H,,rr0950
+,SA,RD,0.95,BLU,550.00,SR0953,,sr0953.jpg,,,5.80|5.80|3.60,,,RD Sapphire Gem,H,,sr0953
+,RU,RD,1.90,RED,1400.00,XRR5804,,xrr5804.jpg,,,5.80|5.80|3.40,,,Ruby. Round. Red,H,,
+,SA,RD,0.96,BLU,575.00,SR0961,,sr0961.jpg,,,6.10|6.10|3.30,,,RD Sapphire Gem 6.10,H,,sr0961
+,SA,RD,0.96,BLU,950.00,SR0965,,sr0965.jpg,,,5.80|5.80|3.30,,,RD Sapphire Gem 5.80,H,,
+,SA,RD,0.96,BLU,650.00,SR0966,,sr0966.jpg,,,5.60|5.60|3.80,,,RD Sapphire Gem 5.60,H,,srl5155
+,SA,RD,0.96,BLU,685.00,SR09602,,sr09602.jpg,,,5.90|5.90|3.30,,,Sapphire. Round. Blue 5.9MM,H,,
+,SA,RD,0.96,BLU,650.00,SR09601,,sr09601.jpg,,,5.80|5.80|3.40,,,Sapphire. Round. Blue 5.8MM,H,,
+,EM,CU,0.96,GRN,2000.00,EC09600,,ec09600.jpg,,,6.40|6.20|4.10,,,Emerald. Cushion. Green 6.4X6.2,O,,
+,SA,RD,0.96,BLU,650.00,SR562255,,sr562255.jpg,,,5.70|5.70|3.90,,,Sapphire. Round. Blue 5.7MM,H,,
+,SA,SQ,0.96,BLU,900.00,SQ570055,,SQ570055.jpg,,,5.50|5.50|2.90,,,Sapphire. SQ. Blue 5.5MM,H,,
+,SA,CU,0.96,BLU,1000.00,SC189266,,sc189266.jpg,,,6.20|5.20|3.30,,,Sapphire. Cushion. Blue 6.2X5.2MM,H,,
+,SA,RD,0.96,BLU,650.00,SR09600,,sr09600.jpg,,,5.50|5.50|3.70,,,Sapphire. Round. Blue 5.5mm,H,,
+,SA,PS,1.94,BLU,600.00,XSP6453,,XSP6453.jpg,,,6.40|5.30,,,PS Sapphire Pair Gem. 6.4-5.3,H,,xsp6453
+,PS,RD,0.97,PNK,550.00,PR0970,,pr0970.jpg,,,5.80|5.80|3.40,,,RD P. Sapphire Gem 5.80,H,,pr0970
+,SA,RD,1.93,BLU,900.00,XSR5821,,XSR5821.jpg,,,5.80|5.80,,,RD Sapphire Pair Gem 5.80x5.80,H,,xsr5821
+,SA,RD,0.97,BLU,800.00,SR09700,,sr09700.jpg,,,5.60|5.60|3.80,,,Sapphire. Round. Blue 5.6mm,H,,
+,SA,RD,1.94,BLU,550.00,XSR1940,,xsr1940.jpg,,,6.00|6.00|3.50,,,Sapphire. Round. Blue 6.0MM,H,,
+,SA,RD,0.97,BLU,650.00,SR186055,,sr186055.jpg,,,5.90|5.90|3.50,,,Sapphire. Round. Blue 5.9MM,H,,
+,RU,OV,0.98,RED,675.00,RV09801,,rc0980.jpg,,,6.10|5.10|3.50,,, OV  Ruby Gem 6.10x5.10,H,,rc0980
+,SA,RD,0.98,BLU,800.00,SR0985,,sr0985.jpg,,,5.90|5.90|3.50,,,RD Sapphire Gem 5.90,H,,
+,PS,RD,0.98,PNK,485.00,PR09800,,pr09800.jpg,,,6.10|6.10|3.30,,,P. Sapphire. Round. Pink 6.1MM,E,,
+,SA,CU,0.98,BLU,475.00,SC09800,,sc09800.jpg,,,5.70|5.70|3.40,,,Sapphire. Cushion. Blue 5.7X5.7,H,,
+,PS,OV,1.96,PNK,475.00,XPV6950,,xpv6950.jpg,,,6.90|5.00|3.40,,,P. Sapphire. Oval. Pink 6.9X5.0,H,,
+,SA,RD,0.99,BLU,750.00,SR0992,,SR0992.jpg,,,5.60|5.60|3.70,,,RD Sapphire Gem 5.60,H,,sr0992
+,YS,RD,0.99,Yellow,350.00,YR09900,,,,,6.00|6.00|3.80,,,Y. Sapphire. Round. Yellow 6.0MM,,,or0990
+,SA,RD,0.99,BLU,750.00,SR0995,,SR0995.jpg,,,5.70|5.70|3.90,,,RD Sapphire Gem 5.70,H,,srl6006
+,SA,RD,0.99,BLU,550.00,SR0996,,sr0996.jpg,,,5.80|5.80|3.60,,,RD Sapphire Gem 5.80,H,,srl6005
+,SA,CU,0.99,BLU,475.00,SC09901,,sc09901.jpg,,,6.00|6.00,,,Sapphire. Cushion. Blue 6X6,H,,
+,SA,OV,0.99,BLU,250.00,SV09901,,sv09901.jpg,,,6.00|5.00,,,Sapphire. Oval. Blue 6.0X5.0,H,,
+,RU,RD,0.99,RED,1000.00,RR570055,,rr570055.jpg,,,5.60|5.60|3.80,,,Ruby. Round. Red 5.6MM,H,,
+,PS,OV,1.97,PNK,575.00,XPV7200,,xpv7200.jpg,,,7.20|5.20|2.70,,,P. Sapphire. Oval. Pink 7.2X5.2,H,,
+,SA,RD,1.00,BLU,725.00,SR10000,,sr10000.jpg,,,5.60|5.60|3.80,,,RD Sapphire 5.6MM,H,,xsr5600
+,RU,RD,1.00,RED,2000.00,RR601355,,rr601355.jpg,,,6.00|6.00|3.00,,,Ruby. Round. Red 6.0MM,H,,
+,RU,OV,1.00,RED,525.00,RV10000,,RV10000.jpg,,,7.30|5.20|2.70,,,Ruby. Oval. Red 7.3X5.2,H,,
+,RU,RD,1.00,RED,1100.00,RR10001,,rr10001.jpg,,,6.10|6.10|2.90,,,Ruby. Round. Red 6.1X6.1,H,,
+,RU,RD,1.00,RED,1100.00,RR580466,,rr580466.jpg,,,5.80|5.80|3.60,,,Ruby. Round. Red 5.8MM,H,,
+,SA,RD,1.00,BLU,1350.00,SR570766,,SR570766.jpg,,,5.70|5.70|4.00,,,Sapphire. Round. Blue 5.7MM,H,,
+,EM,EC,2.02,GRN,550.00,XEE6261,,XEE6261.jpg,,,6.20|6.10,,,EC Emerald Pair Gem. 6.2-6.1,O,,xee6261
+,RU,OV,2.02,RED,800.00,XRV5849,,XRV5849.jpg,,,5.80|4.90,,,OV Ruby Pair Gem. 5.8-4.9,H,,xrv5849
+,RU,RD,1.01,RED,900.00,RR10101,,rr10101.jpg,,,6.10|6.10,,,Ruby. Round. Red 6.1MM,H,,
+,RU,RD,2.03,RED,1400.00,XRR5700,,XRR5700.jpg,,,5.70|5.70,,,RD Ruby Pair Gem. 5.7,H,,xrr5700
+,RU,TR,2.04,RED,1400.00,XRT5900,,XRT5900.jpg,,,5.90|5.90,,,TR Ruby Pair Gem. 5.9,H,,xrt5900
+,RU,OV,1.02,RED,2000.00,RV1021,,rv1021.jpg,,,7.00|5.20|3.20,,,OV Ruby Gem 7.00x5.20,H,,rv1012
+,RU,PS,1.02,RED,1200.00,RP1020,,RP1020.jpg,,,7.00|4.80|3.60,,,PS Ruby Gem 7.00x4.80,H,,rp1020
+,SA,CU,2.03,BLU,475.00,XSC5800,,XSC5800.jpg,,,5.80|5.80,,,CC Sapphire Pair Gem 5.80x5.80,H,,xsc5800
+,YS,RD,1.02,Yellow,250.00,YR10210,,,,,6.00|6.00|3.80,,,Y. Sapphire. Round. Yellow 6.0MM,,,or1021
+,RU,OV,30.49,RED,850.00,RVL75000,,,,,,,,Ruby. Oval. Red,H,,
+,SA,EC,1.03,BLU,385.00,SE1030,,se1030.jpg,,,6.00|4.80|3.30,,,EC Sapphire Gem. 6.0-4.8,H,,se1030
+,YS,CU,2.06,Yellow,350.00,XYC6002,,XYC6002.jpg,,,6.00|6.00,,,CC Y.Sapphire Pair 6.0mm,,,xyc6002
+,SA,CU,1.03,BLU,750.00,SC1030,,SC1030.jpg,,,5.40|5.30|3.80,,,CC Sapphire Gem 5.40x5.30,H,,
+,SA,CU,1.03,BLU,850.00,SC10300,,sc10300.jpg,,,6.40|5.30,,,Sapphire. Cushion. Blue 6.4X5.3,H,,
+,PS,RD,1.03,PNK,375.00,PR10302,,,,,5.50|5.50|3.70,,,P. Sapphire. Round. Pink 5.5MM,,,
+,SA,OV,1.03,BLU,475.00,SV10300,,sv10300.jpg,,,6.60|4.70|3.70,,,Sapphire. Oval. Blue 6.6X4.7MM,H,,
+,RU,OV,1.03,RED,750.00,RV10300,,rv10300.jpg,,,7.20|5.20|2.90,,,Ruby. Oval. Red 7.2X5.2,H,,
+,SA,RD,1.03,BLU,925.00,SR560166,,sr560166.jpg,,,5.60|5.60|3.80,,,Sapphire. Round. Blue 5.6MM,H,,
+,SA,RD,1.03,BLU,1100.00,SR10300,,sr10300.jpg,,,5.90|5.90|3.60,,,Sapphire. Round. Blue,H,,
+,SA,RD,1.03,BLU,925.00,SR10301,,sr10301.jpg,,,5.70|5.70|3.80,,,Sapphire. Round. 5.6,H,,
+,RU,TR,2.08,RED,1400.00,XRT5700,,XRT5700.jpg,,,5.70|5.70,,,TR Ruby Pair Gem. 5.7,H,,xrt5700
+,RU,PS,1.04,RED,585.00,RP1040,,rp1040.jpg,,,6.70|5.10|3.50,,,PS Ruby Gem 6.7x5.1,H,,rxl1002
+,RU,RD,2.08,RED,650.00,XRR5608,,XRR5608.jpg,,,5.60,,,RD Ruby Pair Gem 5.60,H,,rrl5059
+,RU,RD,1.04,RED,1100.00,RR570066,,rr570066.jpg,,,5.60|5.60|3.90,,,Ruby. Round. Red 5.6MM,H,,
+,SA,OV,1.04,BLU,350.00,SV10401,,sv10401.jpg,,,6.80|5.00|3.50,,,Sapphire. Oval. Blue 6.8X5.0,H,,
+,PS,CU,1.04,PNK,575.00,PC10400,,,,,5.90|5.80|3.40,,,P. Sapphire. Cushion. Pink5.9X5.8,H,,
+,RU,CU,2.10,RED,2650.00,XRC5800,,XRC5800.jpg,,,5.80|5.80|3.80,,,CC Ruby Pair Gem. 5.8,H,,xrc5800
+,RU,OV,1.05,RED,850.00,RV10500,,RV10500.jpg,,,7.00|5.40|3.40,,,OV Ruby Gem 7.00x5.40,H,,rv1210
+,SA,PS,1.05,BLU,900.00,SP1050,,sp1050.jpg,,,7.90|5.90|3.10,,,PS Sapphire. Gem,H,,sp1050
+,EM,RD,2.10,GRN,700.00,XER210SH,,XER210SH.jpg,,,6.40|6.40|4.50,,,Emerald. Round. Green 6.4MM,O,,
+,RU,RD,1.05,RED,950.00,RR10500,,,,,5.90|5.90|3.40,,,Ruby. Round. Red 5.9mm,H,,
+,PS,CU,1.05,PNK,650.00,PC10500,,,,,5.70|5.60|3.60,,,P. Sapphire. Cushion. Pink 5.7X5.6,H,,
+,SA,TR,2.12,BLU,800.00,XST6007,,XST6007.jpg,,,6.00|6.00,,,TR Sapphire Pair Gem. 6.0,H,,xst6007
+,RU,OV,1.06,RED,850.00,RV1061,,RV1061.jpg,,,6.40|5.40|3.40,,,OV Ruby Gem 6.40x5.40,H,,rv1061
+,SA,CU,1.06,BLU,800.00,SC10600,,sc10600.jpg,,,6.80|5.90|3.10,,,Sapphire. Cushion. Blue 6.8X5.9,H,,
+,SA,RD,1.06,BLU,475.00,SR600766,,sr600766.jpg,,,6.00|6.00|3.50,,,Sapphire. Round. Blue 6.0MM,H,,
+,SA,RD,1.06,BLU,750.00,SR562266,,sr562266.jpg,,,5.70|5.70|4.30,,,Sapphire. Round. Blue 5.7MM,H,,
+,SA,RD,2.11,BLU,1350.00,XSR5707,,xsr5707.jpg,,,5.70|5.70|3.90,,,Sapphire. Round. Blue 5.7,H,,
+,SA,RD,2.14,BLU,750.00,XSR5601,,XSR5601.jpg,,,5.60|5.60,,,RD Sapphire Pair Gem. 5.6,H,,xsr5601
+,SA,RD,2.13,BLU,525.00,XSR6007,,xsr6007.jpg,,,6.00|6.00,,,RD Sapphire Pair Gem. 6.0,H,,xsr6007
+,PS,EC,1.07,PNK,450.00,PE1070,,PE1070.jpg,,,7.20|5.20|2.70,,,EC P.Sapphire Gem 7.20x5.20,H,,pe1070
+,RU,PS,1.07,RED,585.00,RP1070,,rp1070.jpg,,,6.90|5.50|3.10,,,PS Ruby Gem 6.9x5.5,H,,rxl1002
+,RU,OV,1.07,RED,1500.00,RV1072,,rv1072.jpg,,,7.00|5.20|2.90,,,OV Ruby Gem 7.0x5.2,H,,rxl7050
+,EM,CU,1.07,GRN,900.00,EC10700,,ec10700.jpg,,,7.30|6.70|3.80,,,Emerald. EC. Green 7.3X6.7,O,,
+,SA,RD,1.07,BLU,650.00,SR600755,,sr600755.jpg,,,6.00|6.00|3.60,,,Sapphire. Round. Blue 6.0MM,H,,
+,SA,RD,1.07,BLU,675.00,SR10700,,sr10700.jpg,,,6.10|6.10|3.40,,,Sapphire. Round. Blue 6.1MM,H,,
+,SA,CU,1.07,Purple,525.00,PC10700,,,,,6.00|6.00|3.30,,,Sapphire. Cushion. Purple  6.0X6.0mm,H,,
+,YS,RD,1.08,Yellow,350.00,YR1080,,,,,5.90|5.90|3.80,,,Y. Sapphire. Round. Yellow 5.9MM,,,or1080
+,SA,OV,1.08,BLU,350.00,SV10800,,sv10800.jpg,,,7.00|5.10|3.30,,,Sapphire. Oval. Blue 7.0X5.1,H,,
+,RU,OV,1.09,RED,1400.00,RV10900,,rv10900.jpg,,,7.10|5.20|3.20,,,Ruby. Oval. Red 7.1X5.2,H,,
+,SA,RD,1.09,BLU,625.00,SR10900,,sr10900.jpg,,,6.00|6.00|3.80,,,Sapphire. Round. Blue 6.0MM,H,,
+,RU,RD,2.19,RED,2300.00,XRR6013,,xrr6013.jpg,,,6.00|6.00,,,RD Ruby Pair Gem 6.00,H,,
+,YS,CU,1.10,Yellow,325.00,YC11001,,yc11001.jpg,,,6.00|6.00|3.40,,,Sapphire. Cushion. Yellow 6.0X6.0,,,
+,SA,OV,2.20,BLU,300.00,XSV2200,,XSV2200.jpg,,,7.00|5.30|3.40,,,Sapphire. Oval. Blue 7.0X5.3MM,H,,
+,SA,RD,1.10,BLU,550.00,SR11002,,sr11002.jpg,,,6.40|6.40|3.10,,,Sapphire. Round. Blue 6.4MM,H,,
+,RU,RD,2.22,RED,975.00,XRR5503,,XRR5503.jpg,,,5.50|5.50,,,RD Ruby Pair Gem. 5.5-5.5,H,,xrr5503
+,RU,RD,2.21,RED,1200.00,XRR6302,,XRR6302.jpg,,,6.30|6.30,,,RD Ruby Pair Gem. 6.3,H,,xrr6302
+,RU,TR,2.22,RED,1200.00,XRT6300,,XRT6300.jpg,,,6.30|6.30,,,TR Ruby Pair Gem. 6.3,H,,xrt6300
+,SA,OV,1.11,BLU,1000.00,SV1113,,SV1113.jpg,,,6.70|5.50|3.80,,,OV Sapphire Gem 6.70x5.50,H,,sv1113
+,YS,RD,1.11,Yellow,350.00,YR1110,,,,,6.00|6.00|4.20,,,Y. Sapphire. Round. Yellow 6.0MM,,,or1110
+,RU,OV,1.11,RED,650.00,RV11100,,rv11100.jpg,,,7.10|5.00|3.30,,,Ruby. Oval. Red 7.1X5.0,H,,
+,YS,CU,1.11,Yellow,285.00,YC11101,,yc11101.jpg,,,5.60|5.60|3.90,,,Y. Sapphire. Cushion 5.6mm,H,,
+,SA,RD,1.11,BLU,950.00,SR560155,,sr560155.jpg,,,5.70|5.70|4.10,,,Sapphire. Round. Blue 5.7MM,H,,
+,SA,EC,1.11,BLU,1100.00,SE11100,,se11100.jpg,,,5.90|5.00|3.80,,,Sapphire. EC. Blue 5.9X5.0,H,,
+,RU,OV,1.12,RED,785.00,RV1120,,rv1120.jpg,,,6.90|5.60|3.00,,,OV Ruby Gem 6.90x5.60,H,,rc1120
+,SA,TR,1.12,BLU,750.00,ST1120,,st1120.jpg,,,6.30|6.30|3.90,,,TR Sapphire Gem 6.30,H,,stl5065
+,RU,PS,1.12,RED,900.00,RP11201,,rp11201.jpg,,,6.90|5.70|3.60,,,Ruby. PS. Red 6.9X5.7,H,,
+,SA,CU,1.12,BLU,950.00,SC11201,,sc11201.jpg,,,6.00|5.40|3.90,,,Sapphire. Cushion. 6.0X5.4,H,,
+,SA,RD,1.12,BLU,1350.00,SR570755,,SR570755.jpg,,,5.70|5.70|4.30,,,Sapphire. Round. Blue 5.7MM,H,,
+,LV,RD,1.12,LAV,600.00,LR11200,,lr11200.jpg,,,6.30|6.30|4.20,,,L.Sapphire. Round 6.3mm,H,,
+,SA,RD,2.24,BLU,800.00,XSR22400,,xsr22400.jpg,,,5.90|5.90|4.10,,,Sapphire. Round. Blue 5.9MM,H,,
+,SA,HS,2.25,BLU,500.00,XSH7462,,XSH7462.jpg,,,7.40|6.20,,,HS Sapphire Pair Gem. 7.4-6.2,H,,xsh7462
+,SA,TR,2.26,BLU,800.00,XST5800,,XST5800.jpg,,,6.80|6.80,,,TR Sapphire Pair Gem. 6.8,H,,xst5800
+,SA,RD,1.13,BLU,750.00,SR11301,,sr11301.jpg,,,5.60|5.60|4.20,,,Sapphire. Round. Blue 5.6MM,H,,
+,SA,PS,2.25,BLU,650.00,XSP8060,,XSP8060.jpg,,,8.00|6.00|3.00,,,Sapphire. PS. Blue 8X6,H,,
+,SA,CU,1.13,BLU,1000.00,SC11300,,sc11300.jpg,,,6.00|5.30|3.80,,,Sapphire. Cushion. 6.0,H,,
+,SA,RD,1.13,BLU,800.00,SR11302,,sr11302.jpg,,,6.00|6.00|3.70,,,Sapphire. Round. Blue 6.0MM,H,,
+,LV,OV,1.13,LAV,575.00,LV11300,,lv11300.jpg,,,7.10|5.10|3.60,,,L.Sapphire. Oval. 7.1x5.1mm,H,,
+,EM,EC,1.13,GRN,4000.00,EE11300,,,,,6.70|5.80,,,Emerald. EC. Green 6.7x5.8,O,,
+,SA,RD,1.14,BLU,850.00,SR5600,,sr5600.jpg,,,5.60|5.60|4.20,,,RD Sapphire  5.6MM,H,,xsr5600
+,YS,CU,1.14,Yellow,375.00,YC11400,,yc11400.jpg,,,5.70|5.70|3.90,,,Y. Sapphire. Cushion. Yellow 5.7X5.7,,,
+,SA,EC,1.14,BLU,250.00,SE11400,,se11400.jpg,,,6.90|5.10|3.40,,,EC Sapphire Gem 6.9X5.1,H,,sel7501
+,SA,OV,1.14,BLU,675.00,SV11401,,sv11401.jpg,,,7.10|5.20|3.70,,,Sapphire. Oval. Blue 7.1X5.2MM,H,,
+,OS,CU,2.28,Orange,550.00,XOC5800,,,,,5.80|5.80|3.90,,,O. Sapphire. Cushion. Orange 5.8MM,,,
+,RU,RD,1.14,RED,2000.00,RR11400,,,,,5.70|5.70|3.80,,,Ruby. Round. Red 5.7,H,,
+,PS,RD,1.14,Pink,650.00,PR1140,,pr1140.jpg,,,6.20|6.20|3.50,,,P. Sapphire. 6.2mm,H,,
+,SA,RD,1.14,BLU,900.00,SR11400,,sr11400.jpg,,,6.10|6.10|3.80,,,Sapphire. Round. Blue 6.1MM,H,,
+,YS,CU,1.15,Yellow,325.00,YC1150,,YC1150.jpg,,,6.00|6.00|3.60,,,CC Y.Sapphire Gem 6.00,,,yc1150
+,SA,OV,1.15,BLU,575.00,SV11500,,sv11500.jpg,,,6.40|5.40|3.70,,,Sapphire. Oval. Blue 6.4X5.4,H,,
+,SA,RD,1.15,BLU,675.00,SR11501,,sr11501.jpg,,,6.10|6.10|3.60,,,Sapphire. Round. Blue 6.1,H,,
+,SA,OV,1.15,BLU,350.00,SV11501,,sv11501.jpg,,,7.20|5.20|3.30,,,Sapphire. Oval. Blue 7.2X5.2,H,,
+,SA,RD,2.30,Blue,825.00,XSR23001,,xsr23001.jpg,,,6.00|6.00|4.60,,,Sapphire. Round. Blue 6.0MM,H,,
+,SA,RD,1.16,BLU,350.00,SR11600,,sr11600.jpg,,,6.00|6.00|3.80,,,RD Sapphire Gem 6.0MM,H,,srl5062
+,SA,RD,1.16,BLU,450.00,SR640266,,sr640266.jpg,,,6.40|6.40|3.50,,,Sapphire. Round. Blue 6.4MM,H,,
+,SA,RD,1.16,BLU,750.00,SR11601,,sr11601.jpg,,,6.10|6.10|3.60,,,Sapphire. Round. Blue 6.1,H,,
+,EM,TR,2.33,GRN,2000.00,XET7000,,XET7000.jpg,,,7.00|7.00,,,TR Emerald Pair Gem. 7.0,O,,xet7000
+,YS,CU,1.17,Yellow,250.00,YC1170,,YC1170.jpg,,,6.50|5.40|3.70,,,CC Y. Sapphire Gem 6.5x5.4,E,,yc1170
+,YS,RD,1.17,Yellow,250.00,YR11701,,,,,6.10|6.10|4.10,,,Y. Sapphire. Round. Yellow 6.1MM,,,or1170
+,SA,PS,1.17,BLU,450.00,SP1171,,sp1171.jpg,,,7.80|5.90|3.30,,,PS Sapphire Gem 7.80x5.90,H,,
+,SA,CU,2.34,BLU,1375.00,XSC7555,,,,,7.50|5.50|3.20,,,Sapphire. Cushion. Blue 7.5X5.5,H,,
+,SA,RD,1.17,BLU,375.00,SR11701,,sr11701.jpg,,,6.20|6.20|3.70,,,Sapphire. Round. Blue 6.2MM,H,,
+,RU,RD,1.17,RED,1750.00,RR11700,,RR11700.jpg,,,6.10|6.10|3.70,,,Ruby. Round. Red 6.1X6.1,H,,
+,SA,CU,1.17,BLU,950.00,SC1170,,sc1170.jpg,,,6.20|5.70|3.90,,,Sapphire. 6.2x5.7mm,H,,
+,RU,HS,2.35,RED,1200.00,XRH5963,,XRH5963.jpg,,,5.90|6.30,,,HS Ruby Pair Gem. 5.9-6.3,H,,xrh5963
+,SA,TR,2.36,BLU,750.00,XST6901,,XST6901.jpg,,,6.90|6.90,,,TR Sapphire Pair Gem. 6.9,H,,xst6901
+,RU,OV,1.18,RED,950.00,RV1181,,RV1181.jpg,,,7.30|5.90|2.80,,,OV Ruby Gem 7.30x5.90,H,,rv1181
+,LV,CU,1.18,LAV,325.00,LC1181,,LC1181.jpg,,,6.50|6.50|3.00,,,CC L.Sapphire Gem 6.50,,,lc1181
+,RU,RD,1.18,RED,1750.00,RR1181,,rr1181.jpg,,,6.30|6.30|3.40,,,RD Ruby Gem 6.30mm,H,,
+,SA,RD,1.18,BLU,375.00,SR11800,,sr11800.jpg,,,6.00|6.00|4.00,,,RD Sapphire Gem 6.0MM,H,,srl5062
+,OS,CU,2.35,Orange,575.00,XOC6058,,,,,6.00|5.80|3.60,,,O. Sapphire. Cushion. Orange 6.0X5.8,,,
+,LV,RD,1.18,LAV,550.00,LR11800,,lr11800.jpg,,,6.30|6.30|3.60,,,L.Sapphire. Round 6.3mm,H,,
+,SA,RD,1.19,BLU,375.00,SR1193,,sr1193.jpg,,,5.90|5.90|4.10,,,RD Sapphire Gem 5.90,H,,srl5062
+,YS,CU,1.19,Yellow,350.00,YC11900,,yc11900.jpg,,,5.60|5.60|4.10,,,Y. Sapphire. Cushion. Yellow 5.6X5.6,,,
+,RU,RD,1.19,RED,2250.00,RR601366,,rr601366.jpg,,,6.10|6.10|3.30,,,Ruby. Round. Red 6.1MM,H,,
+,SA,RD,1.19,BLU,950.00,SR590366,,sr590366.jpg,,,5.70|5.70|4.10,,,Sapphire. Round. Blue 5.7MM,H,,
+,SA,RD,1.19,BLU,1250.00,SR580055,,sr580055.jpg,,,5.80|5.80|4.40,,,Sapphire. Round. Blue 5.8MM,H,,
+,SA,OV,1.20,BLU,500.00,SV12000,,SV12000.jpg,,,6.50|5.50|3.70,,,Sapphire. Oval. Blue 6.5x5.5,H,,
+,SA,EC,1.20,BLU,450.00,SE705066,,SE705066.jpg,,,7.10|5.20|3.00,,,Sapphire. EC. Blue 7.1X5.2,H,,
+,SA,RD,1.20,BLU,750.00,SR12000,,sr12000.jpg,,,6.50|6.50|3.40,,,Sapphire. Round. Blue 6.5,H,,
+,SA,PS,1.21,BLU,750.00,SP1210,,SP1210.jpg,,,9.10|5.40|3.50,,,PS Sapphire. Gem,H,,sp1210
+,YS,CU,2.44,Yellow,450.00,XYC6100,,XYC6100.jpg,,,6.10|6.10,,,CC Y.Sapphire Pair Gem 6.10,,,xyc6100
+,SA,RD,1.22,BLU,450.00,SR610466,,sr610466.jpg,,,6.10|6.10|3.70,,,Sapphire. Round. Blue 6.1MM,H,,
+,SA,TR,2.46,BLU,750.00,XST6008,,XST6008.jpg,,,6.00|6.00,,,TR Sapphire Pair Gem. 6.0-6.0,H,,xst6008
+,SA,RD,2.47,BLU,475.00,XSR6104,,XSR6104.jpg,,,6.10|6.10,,,RD Sapphire Pair Gem. 6.1,H,,xsr6104
+,RU,PS,1.24,RED,785.00,RP12400,,rp12400.jpg,,,8.60|6.40|2.80,,,Ruby. PS. Red 8.6X6.4,H,,
+,SA,CU,1.24,BLU,1050.00,SC12402,,sc12402.jpg,,,6.90|6.50|3.80,,,Sapphire. Cushion. Blue 6.9X6.5,H,,
+,SA,RD,2.48,BLU,1250.00,XSR58001,,xsr58001.jpg,,,5.80|5.80|4.60,,,Sapphire. Round. Blue 5.8,H,,
+,GS,RD,1.24,Green,450.00,GR12400,,gr12400.jpg,,,6.10|6.10|3.80,,,G. Sapphire. Round 6.1mm,H,,
+,SA,TR,2.49,BLU,950.00,XST6300,,XST6300.jpg,,,6.30|6.30,,,TR Sapphire Pair Gem. 6.3,H,,xst6300
+,SA,RD,1.25,BLU,750.00,SR700266,,sr700266.jpg,,,6.90|6.90|3.30,,,Sapphire. Round. Blue 6.9MM,H,,
+,SA,RD,1.25,BLU,450.00,SR610455,,sr610455.jpg,,,6.10|6.10|4.00,,,Sapphire. Round. Blue 6.1MM,H,,
+,YS,RD,1.26,Yellow,350.00,YR1260,,,,,6.00|6.00|4.20,,,Y. Sapphire. Round. Yellow 6.0MM,,,or1260
+,YS,TRAP,2.51,Yellow,385.00,XYF7753,,XYF7753.jpg,,,7.70|5.30,,,TRAP Y.Sapphire Gem pair 7.70x5.30,,,xyf7753
+,YS,OV,1.27,Yellow,200.00,YV12700,,yv12700.jpg,,,7.20|5.50|3.50,,,OV Y. Sapphire Gem 7.2X5.5,E,,smc1000
+,RU,RD,1.27,RED,1200.00,RR630255,,rr630255.jpg,,,6.30|6.30|3.80,,,Ruby. Round. Red 6.3MM,H,,
+,SA,CU,1.27,BLU,1100.00,SC12700,,sc12700.jpg,,,6.30|5.60|3.70,,,Sapphire. Cushion. 6.3X5.6,H,,
+,SA,RD,1.27,BLU,575.00,XSR520004,,xsr520004.jpg,,,5.20|5.20|3.00,,,Sapphire. Round. Blue 5.2mm,H,,
+,SA,RD,2.55,BLU,950.00,XSR5903,,XSR5903.jpg,,,5.90|5.90,,,RD Sapphire Pair Gem. 5.9,H,,xsr5903
+,SA,TR,2.55,BLU,900.00,XST6600,,XST6600.jpg,,,6.60|6.60,,,TR Sapphire Pair Gem. 6.6,H,,xst6600
+,SA,RD,1.28,BLU,1250.00,SR580066,,sr580066.jpg,,,5.80|5.80|4.60,,,Sapphire. Round. Blue 5.8MM,H,,
+,SA,TR,2.58,BLU,850.00,XST7500,,XST7500.jpg,,,7.50|7.50,,,TR Sapphire Pair Gem. 7.5,H,,xst7500
+,SA,RD,1.29,BLU,675.00,SR690155,,sr690155.jpg,,,6.90|6.90|3.60,,,Sapphire. Round. Blue 6.9MM,H,,
+,SA,OV,1.29,BLU,350.00,SV12901,,sv12901.jpg,,,7.00|5.20|3.90,,,Sapphire. Oval. Blue 7.0x5.2,H,,
+,SA,CU,1.30,BLU,900.00,SC1301,,SC1301.jpg,,,6.80|5.30|3.80,,,CC Sapphire Gem 6.80x5.30,H,,sc1301
+,SA,PS,1.30,BLU,650.00,SP1300,,sp1300.jpg,,,7.60|6.30|3.80,,,PS Sapphire. Gem,H,,sp1300
+,SA,OV,1.30,BLU,485.00,SV13002,,sv13002.jpg,,,7.10|4.90|3.90,,,Sapphire. Oval. Blue 7.1X4.9,H,,
+,SA,RD,1.30,BLU,950.00,SR13001,,sr13001.jpg,,,6.00|6.00|4.40,,,Sapphire. Round. Blue 6.0MM,H,,
+,SA,EC,1.30,BLU,750.00,SE705566,,SE705566.jpg,,,7.20|5.70,,,Sapphire. EC. Blue 7.2X5.7,H,,
+,SA,RD,1.30,BLU,725.00,SR13002,,sr13002.jpg,,,6.10|6.10|4.00,,,Sapphire. Round. Blue 6.1,H,,
+,SA,RD,1.30,BLU,485.00,SR13003,,sr13003.jpg,,,6.10|6.10|4.00,,,Sapphire. Round. Blue 6.1MM,H,,
+,RU,RD,1.30,RED,800.00,RR13001,,rr13001.jpg,,,6.20|6.20,,,Ruby. Round. Red 6.2MM,H,,
+,SA,TR,2.61,BLU,850.00,XST6200,,XST6200.jpg,,,6.20|6.20,,,TR Sapphire Pair Gem. 6.2,H,,xst6200
+,YS,CU,1.31,Yellow,285.00,YC1310,,YC1310.jpg,,,6.00|6.00|4.40,,,Y. Sapphire. Cushion. Yellow,,,yc1310
+,SA,RD,1.31,BLU,750.00,SR13101,,sr13101.jpg,,,6.50|6.50|4.00,,,Sapphire. Round. Blue 6.5MM,H,,
+,SA,TR,2.63,BLU,1100.00,XST6801,,xst6801.jpg,,,6.80|6.80,,,TR Sapphire Pair Gem. 6.8,H,,xst6801
+,YS,RD,1.32,Yellow,345.00,YR13200,,,,,6.10|6.10|4.10,,,Y. Sapphire. Round. Yellow 6.1MM,,,or1320
+,SA,PS,1.32,BLU,575.00,SP1320,,sp1320.jpg,,,8.00|6.00|3.60,,,PS Sapphire Gem 8.00x6.00,H,,
+,RU,PS,1.32,RED,1350.00,RP13202,,rp13202.jpg,,,8.10|5.10|3.90,,,Ruby. PS. 8.1x5.1mm,H,,
+,RU,PS,1.32,RED,1200.00,RP13201,,rp13201.jpg,,,7.30|6.20|3.50,,,Ruby. PS. Red 7.3X6.2,H,,
+,PS,OV,1.32,PNK,450.00,PV13200,,pv10200.jpg,,,7.10|5.10|4.20,,,P. Sapphire. Oval. Pink 7.1X5.1,,,
+,SA,RD,1.32,BLU,750.00,SR610166,,SR610166.jpg,,,6.10|6.10|4.40,,,Sapphire. Round. Blue 6.1MM,H,,
+,SA,OV,1.32,BLU,350.00,SV13200,,sv13200.jpg,,,7.10|5.20|4.00,,,Sapphire. Oval. Blue 7.1X5.2,H,,
+,SA,EC,2.66,BLU,525.00,XSE7055,,XSE7055.jpg,,,7.00|5.50,,,EC Sapphire Pair Gem. 7.0-5.5,H,,xse7055
+,SA,TR,2.65,BLU,800.00,XST7000,,XST7000.jpg,,,7.00|7.00,,,TR Sapphire Pair Gem. 7.0,H,,xst7000
+,PS,CU,1.33,PNK,450.00,PC13300,,,,,6.40|6.00|3.60,,,P. Sapphire. Cushion. Pink 6.4X6.0,H,,
+,SA,OV,1.34,BLU,450.00,SV1341,,sv1341.jpg,,,8.10|6.00|3.00,,,OV Sapphire Gem 8.10x6.00,H,,sv1341
+,RU,OV,1.34,RED,475.00,RV1340,,RV1340.jpg,,,7.30|5.30|3.90,,,OV Ruby Gem 7.30x5.30,H,,
+,SA,OV,1.34,BLU,650.00,SV13400,,sv13400.jpg,,,7.30|5.70,,,Sapphire. Oval. Blue 7.3X5.7,H,,
+,SA,EC,1.34,BLU,275.00,SE13400,,se13400.jpg,,,6.80|5.10|3.60,,,EC Sapphire Gem 6.8X5.1,H,,sel7501
+,SA,RD,2.70,BLU,650.00,XSR7002,,xsr7002.jpg,,,7.00|7.00,,,RD Sapphire Pair Gem. 7.0,H,,xsr7002
+,SA,OV,1.35,BLU,780.00,SV13500,,sv13500.jpg,,,7.30|5.80|3.40,,,Sapphire. Oval. Blue 7.3X5.8,H,,
+,SA,EC,1.35,BLU,1250.00,SE13500,,se13500.jpg,,,6.50|5.70|37.00,,,Sapphire. EC. Blue 6.5X5.7,H,,
+,SA,OV,1.36,BLU,375.00,SV1350,,sv1350.jpg,,,7.80|6.00|3.40,,,OV Sapphire Gem 7.80x6.00,H,,sv1350
+,SA,RD,1.36,BLU,825.00,SR1360,,SR1360.jpg,,,6.20|6.20|4.20,,,Sapphire. Round. Blue,H,,sr1360
+,SA,PS,1.36,BLU,700.00,SP13600,,sp13600.jpg,,,8.00|6.00|3.70,,,PS Sapphire Gem 8.0x6.0,H,,
+,YS,RD,1.36,Yellow,350.00,YR1362,,,,,6.00|6.00|4.00,,,Y. Sapphire. Round. Yellow 6.0MM,,,
+,SA,RD,1.36,BLU,1350.00,SR611166,,sr611166.jpg,,,6.10|6.10|4.60,,,Sapphire. Round. Blue 6.1mm,H,,
+,SA,RD,1.36,BLU,950.00,SR590355,,sr590355.jpg,,,5.90|5.90|4.50,,,Sapphire. Round. Blue 5.9MM,H,,
+,SA,EC,1.36,BLU,600.00,SE705555,,SE705555.jpg,,,7.10|5.50|3.10,,,Sapphire. EC. Blue 7.1X5.5,H,,
+,YS,RAD,2.73,Yellow,250.00,XYD7654,,XYD7654.jpg,,,7.60|5.40,,,RAD Y. Sapphire Pair Gem. 7.6-5.4,E,,xyd7654
+,RU,PS,1.37,RED,1275.00,RP13700,,rp13700.jpg,,,7.40|5.90|4.00,,,Ruby. PS. Red 7.4X5.9,H,,
+,SA,CU,1.37,BLU,950.00,SC13700,,sc13700.jpg,,,7.80|5.50|3.10,,,Sapphire. Cushion. Blue 7.8X5.5,H,,
+,SA,RD,1.37,BLU,1250.00,SR611155,,sr611155.jpg,,,6.10|6.10|4.50,,,Sapphire. Round. Blue 6.1mm,H,,
+,SA,RD,1.37,BLU,400.00,SR700155,,sr700155.jpg,,,7.00|7.00|3.60,,,Sapphire. Round. Blue 7.0MM,H,,
+,PS,CU,1.37,PNK,750.00,PC13700,,,,,6.60|5.80|3.60,,,P. Sapphire. Cushion. Pink 6.6X5.8,H,,
+,GS,HS,1.37,GRN,450.00,GH13700,,,,,6.10|6.10|4.30,,,G. Sapphire. Heart Shape. Green 6.1X6.1,H,,
+,SA,RD,2.75,BLU,275.00,XSR6402,,XSR6402.jpg,,,6.40|6.40,,,RD Sapphire Pair Gem. 6.4,H,,xsr6402
+,SA,RD,1.38,BLU,1100.00,SR611055,,sr611055.jpg,,,6.00|6.00|4.40,,,Sapphire. Round. Blue 6.0MM,H,,
+,SA,EC,1.38,BLU,750.00,SE705055,,se705055.jpg,,,7.20|5.20|3.40,,,Sapphire. EC. Blue 7.2X5.2,H,,
+,SA,RD,1.38,BLU,850.00,SR13800,,sr13800.jpg,,,6.90|6.90|3.90,,,Sapphire. Round. 6.9,H,,
+,YS,RD,2.78,Yellow,425.00,XYR7000,,XYR7000.jpg,,,7.00|7.00,,,RD Y. Sapphire Pair Gem 7.00,,,xyr7000
+,RU,OV,1.39,RED,1200.00,RV1392,,RV1392.jpg,,,8.00|6.00|3.40,,,OV Ruby Gem 8.00x6.00,H,,rv1392
+,YS,CU,1.39,Yellow,375.00,YC1390,,yc1390.jpg,,,6.00|6.00|4.20,,,Y. Sapphire. Cushion 6.0mm,H,,oc1390
+,SA,RD,1.39,BLU,1200.00,SR611066,,sr611066.jpg,,,6.00|6.00|4.40,,,Sapphire. Round. Blue 6.0MM,H,,
+,SA,RD,1.39,BLU,700.00,SR13901,,sr13901.jpg,,,6.50|6.50|3.90,,,Sapphire. Round. Blue 6.5,H,,
+,PS,CU,1.39,PNK,475.00,PC13900,,,,,7.50|5.70|3.40,,,P. Sapphire. Cushion. Pink 7.5X5.7,H,,
+,PS,CU,1.39,PNK,675.00,PC13901,,,,,6.50|6.40|3.80,,,P. Sapphire. Cushion. Pink 6.5X6.4,H,,
+,RU,RD,1.40,RED,1275.00,RR14000,,rr14000.jpg,,,6.20|6.20,,,Ruby. Round 6.2mm,H,,
+,PS,RD,1.40,PNK,750.00,PR640055,,pr640055.jpg,,,6.40|6.40|4.00,,,P. Sapphire 6.4mm,H,,
+,SA,RD,1.41,BLU,750.00,SR670066,,sr670066.jpg,,,6.70|6.70|3.80,,,Sapphire. Round. Blue 6.7MM,H,,
+,SA,EC,1.41,BLU,950.00,SE685366,,se685366.jpg,,,6.90|5.40|3.40,,,Sapphire. EC. Blue 6.9X5.4,H,,
+,EM,RD,2.83,GRN,750.00,XER7501,,XER7501.jpg,,,7.50|7.50,,,RD Emerald Pair Gem. 7.5,O,,xer7501
+,PS,CU,1.43,PNK,350.00,PC1431,,PC1431.jpg,,,6.90|6.00|3.90,,,CC P. Sapphire Gem. 6.9-6.0,H,,pc1431
+,EM,MQ,1.43,GRN,875.00,EM1431,,EM1431.jpg,,,11.03|5.06|4.10,,,MQ Emerald Gem. 11.0-5.0,O,,em1431
+,PS,RD,2.86,PNK,675.00,XPR6400,,XPR6400.jpg,,,6.40|6.40,,,RD P. Sapphire Pair Gem. 6.4,E,,xpr6400
+,SA,RD,2.86,BLU,750.00,XSR6201,,XSR6201.jpg,,,6.20|6.20,,,RD Sapphire Pair Gem. 6.2,H,,xsr6201
+,SA,RD,2.85,BLU,650.00,XSR6901,,XSR6901.jpg,,,6.90|6.90,,,RD Sapphire Pair Gem. 6.9,H,,xsr6901
+,SA,OV,1.43,BLU,485.00,SV1434,,sv1434.jpg,,,7.70|6.00|3.60,,,OV Sapphire Gem 7.70x6.00,H,,sv1434
+,SA,OV,1.43,BLU,950.00,SV14300,,sv14300.jpg,,,7.20|6.10|3.40,,,Sapphire. Oval. Blue 7.2X6.1,H,,
+,SA,RD,1.43,BLU,525.00,SR650666,,sr650666 (2).jpg,,,6.60|6.60|4.10,,,Sapphire. Round. Blue 6.6MM,H,,
+,SA,RD,1.43,BLU,750.00,SR620166,,sr620166.jpg,,,6.20|6.20|4.50,,,Sapphire. Round. Blue 6.2MM,H,,
+,SA,CU,1.43,BLU,1200.00,SC14300,,sc14300.jpg,,,6.50|5.60|4.50,,,Sapphire. Cushion. Blue 6.5X5.6,H,,
+,SA,RD,2.87,BLU,750.00,XSR6700,,XSR6700.jpg,,,6.70|6.70,,,RD Sapphire Pair Gem. 6.7,H,,xsr6700
+,SA,RD,1.44,BLU,800.00,SR620155,,sr620155.jpg,,,6.20|6.20|4.40,,,Sapphire. Round. Blue 6.2MM,H,,
+,YS,CU,2.90,Yellow,300.00,XYC7560,,XYC7560_.jpg,,,7.50|6.00,,,CSHN Y. Sapphire Pair Gem. 7.5-6.0,H,,xyc7560
+,SA,RD,1.45,BLU,525.00,SR700255,,sr700255.jpg,,,7.00|7.00|3.50,,,Sapphire. Round. Blue 7.0MM,H,,
+,YS,CU,1.45,Yellow,325.00,YC14500,,yc14500.jpg,,,6.60|6.60|3.80,,,Y. Sapphire. Cushion. Yellow 6.6MM,H,,
+,SA,RD,1.45,BLU,850.00,SR680466,,sr680466.jpg,,,6.70|6.70|3.90,,,Sapphire. Round. Blue  6.7MM,H,,
+,SA,RD,1.45,BLU,400.00,SR14500,,sr14500.jpg,,,6.30|6.30|4.40,,,Sapphire. Round. Blue 6.3MM,H,,
+,SA,RD,2.92,BLU,400.00,XSR7001,,xsr7001.jpg,,,7.00|7.00,,,RD Sapphire Pair Gem. 7.0,H,,xsr7001
+,YS,OV,1.46,Yellow,350.00,YV1460,,yv1460.jpg,,,7.00|6.10|4.10,,,OV Y. Sapphire Gem 7.0x6.1,E,,yv1460
+,SA,PS,1.46,BLU,650.00,SP14600,,sp14600.jpg,,,8.10|6.10|3.40,,,PS Sapphire Gem,H,,
+,SA,RD,1.46,BLU,650.00,SR670055,,sr670055.jpg,,,6.80|6.80|4.00,,,Sapphire. Round. Blue 6.8MM,H,,
+,PS,RD,1.46,PNK,750.00,PR640066,,pr640066.jpg,,,6.50|6.50|4.00,,,P. Sapphire. Round 6.5mm,H,,
+,YS,CU,1.47,Yellow,285.00,YC1470,,YC1470.jpg,,,6.60|6.60|3.60,,,CC Y.Sapphire Gem 6.60,,,yc1470
+,RU,OV,1.47,RED,2200.00,RV14709,,,,,8.10|6.00,,,Ruby. Oval. Red 8.1X6.0,H,,
+,YS,CU,1.48,Yellow,325.00,YC14800,,yc14800.jpg,,,6.70|6.70|3.80,,,Y. Sapphire. Cushion. Yellow 6.7MM,H,,
+,SA,RD,1.49,BLU,600.00,SR14900,,SR14900.jpg,,,6.80|6.80|4.00,,,Sapphire. Round. 6.8,H,,
+,EM,EC,1.49,GRN,3000.00,EE14900,,,,,7.60|5.80,,,Emerald. EC. Green 7.6x5.8,O,,
+,PS,RD,1.50,PNK,475.00,XPR6300,,XPR6300.jpg,,,6.30|6.30,,,RD P. Sapphire Pair Gem. 6.3,E,,xpr6300
+,GS,RD,1.50,GRN,450.00,GR1500,,gr1500.jpg,,,6.60|6.60|4.00,,,G. Sapphire. Round. 6.6mm,H,,
+,SA,CU,1.50,BLU,2250.00,SC15000AF,,,,,6.90|6.10,,,Sapphire. Cushion 6.9x6.1mm,N,,
+,PS,RD,1.50,PNK,600.00,PR01500,,,,,6.30|6.30|4.30,,, Round Pink Sapphire 6.3mm,H,,
+,YS,CU,1.51,Yellow,275.00,YC1510,,YC1510.jpg,,,7.50|6.00|3.60,,,CSHN Y. Sapphire Gem. 7.5-6.0,H,,yc1510
+,YS,CU,1.51,Yellow,300.00,YC1511,,yc1511.jpg,,,6.70|6.60|4.20,,,CC Y.Sapphire Gem 6.70x6.60,,,yc1511
+,SA,PS,1.51,BLU,950.00,SP15100,,sp15100.jpg,,,8.00|6.30|4.00,,,Sapphire. PS. Blue 8.0X6.3,H,,
+,RU,OV,1.53,RED,1400.00,RV1530,,RV1530.jpg,,,8.00|5.80|3.80,,,Ruby. Oval 8.0x5.8mm,H,,rv1530
+,YS,RD,1.53,Yellow,350.00,YR15300,,,,,6.20|6.20|4.50,,,Y. Sapphire. Round. Yellow 6.2MM,,,or1530
+,SA,CU,1.53,BLU,1275.00,SC15300,,sc15300.jpg,,,6.40|5.70|4.50,,,Sapphire. Cushion. 6.4X5.7,H,,
+,SA,CU,3.10,BLU,1375.00,XSC7655,,xsc7655.jpg,,,7.60|5.50|3.90,,,Sapphire. Cushion. Blue 7.6X5.5,H,,
+,SA,RD,1.55,BLU,550.00,SR700166,,sr700166.jpg,,,7.00|7.00|3.90,,,Sapphire. Round. Blue 7.0MM,H,,
+,SA,HS,1.56,BLU,650.00,SH1560,,SH1560.jpg,,,7.00|6.10|4.30,,,HS Sapphire Gem. 7.0-6.1,H,,sh1560
+,RU,OV,1.56,RED,600.00,RV1560,,RV1560.jpg,,,8.10|6.20|3.40,,,OV Ruby Gem 8.10x6.20,H,,
+,SA,RD,1.56,BLU,700.00,SR690166,,sr690166.jpg,,,6.80|6.80|4.20,,,Sapphire. Round. Blue 6.8MM,H,,
+,SA,CU,1.56,BLU,950.00,SC15600,,sc15600.jpg,,,7.40|6.20|3.90,,,Sapphire. Cushion. Blue 7.4X6.2,H,,
+,YS,CU,1.57,Yellow,275.00,YC1570,,YC1570.jpg,,,7.50|6.00|3.50,,,CSHN Y. Sapphire Gem. 7.5-6.0,,,yc1570
+,YS,CU,1.57,Yellow,275.00,YC15701,,yc15701.jpg,,,7.00|7.00|3.70,,,Sapphire. Cushion. Yellow 7X7,,,
+,RU,OV,1.57,RED,3000.00,RV15701,,rv15701.jpg,,,7.20|6.20|3.60,,,Ruby. Oval. Red 7.2X6.2,H,,
+,PS,TR,1.58,PNK,525.00,PT1580,,pt1580.jpg,,,6.80|6.80|4.30,,,TR P. Sapphire Gem. 6.8,H,,pt1580
+,OS,CU,3.15,Orange,485.00,XOC6300,,,,,6.30|6.30,,,CC O.Sapphire Pair Gem 6.30,,,xoc6300
+,YS,CU,1.58,Yellow,325.00,YC1580,,yc1580.jpg,,,6.80|6.80|3.70,,,Y. Sapphire. Cushion. Yellow 6.8MM,,,oc1580
+,YS,CU,1.58,Yellow,385.00,YC15800,,yc15800.jpg,,,6.80|6.80|4.00,,,Y. Sapphire. Cushion. Yellow 6.8X6.8,,,
+,SA,OV,1.58,BLU,650.00,SV15800,,sv15800.jpg,,,8.00|6.00|3.70,,,Sapphire. Oval. Blue 8X6,H,,
+,SA,RD,1.59,BLU,450.00,SR640255,,sr640255.jpg,,,6.50|6.50|4.50,,,Sapphire. Round. Blue 6.5MM,H,,
+,YS,OV,1.60,Yellow,250.00,YV1600,,yv1600.jpg,,,7.90|6.20|4.00,,,OV Y.Sapphire Gem 7.9x6.2,,,
+,SA,RD,1.60,BLU,675.00,SR1600,,sr1600.jpg,,,6.70|6.70|4.40,,,Sapphire. Round. 6.7mm,H,,
+,YS,OV,1.61,Yellow,200.00,YV16100,,yv16100.jpg,,,7.90|5.90|3.70,,,Sapphire. Oval. Yellow 7.9X5.9,,,
+,RU,OV,1.62,RED,3000.00,RV16200,,rv16200.jpg,,,7.20|5.80|4.40,,,Ruby. Oval. Red 7.2X5.8mm,H,,
+,YS,CU,1.62,Yellow,350.00,YC16200,,yc16200.jpg,,,6.90|6.90|4.00,,,Y. Sapphire. Cushion. Yellow 6.9X6.9,,,
+,SA,RD,1.62,BLU,650.00,SR16200,,sr16200.jpg,,,7.10|7.10|3.80,,,Sapphire. Round. Blue 7.1,H,,
+,SA,RD,1.62,BLU,650.00,SR16201,,sr16201.jpg,,,7.00|7.00|4.40,,,Sapphire. Round. Blue 7.0,H,,
+,LV,OV,1.62,LAV,575.00,LV16200,,lv16200.jpg,,,8.10|6.10|3.90,,,L.Sapphire. Oval. 8.1x6.1mm,H,,
+,SA,CU,1.63,BLU,1250.00,SC16300,,sc16300.jpg,,,7.30|6.40|3.20,,,Sapphire 7.3x6.4mm,H,,
+,YS,RD,1.65,Yellow,350.00,YR1650,,,,,6.50|6.50|4.30,,,Y. Sapphire. Round. Yellow 6.5MM,,,or1650
+,YS,RD,1.65,Yellow,300.00,YR16500,,YR16500.jpg,,,6.70|6.70|4.40,,,Y. Sapphire. Round. Yellow 6.7MM,H,,
+,SA,RD,1.65,BLU,600.00,SR16501,,sr16501.jpg,,,7.20|7.20|3.90,,,Sapphire. Round. 7.2,H,,
+,RU,OV,1.65,Red,2700.00,RV16509,,,,,8.00|6.00,,,Ruby. Oval. Green 8X6,H,,
+,EM,RD,1.66,GRN,150.00,ER16600,,,,,7.40|7.40|5.00,,,Emerald. Round. Green 7.4MM,O,,
+,PA,RD,1.67,BLU,3650.00,PBR1670,,pbr1670.jpg,,,7.50|7.50|5.20,,,Paraiba. Round. 7.5mm,,,
+,YS,CU,1.68,Yellow,375.00,YC1680,,yc1680.jpg,,,6.90|6.90|4.20,,,Y. Sapphire. Cushion 6.9mm,H,,oc1680
+,RU,OV,1.68,RED,700.00,RV1680,,RV1680.jpg,,,8.20|6.20|3.90,,,OV Ruby Gem,H,,
+,RU,RD,1.69,RED,2650.00,RR372066,,rr372066.jpg,,,7.40|7.40|4.00,,,Ruby. Round. Red 7.4MM,H,,
+,SA,RD,1.69,BLU,750.00,SR16901,,sr16901.jpg,,,6.80|6.80|4.20,,,Sapphire. Round. Blue 6.8,H,,
+,RU,PS,1.70,RED,850.00,RP17000,,rp17000.jpg,,,9.20|6.30|3.40,,,Ruby. PS. Red 9.2X6.3,H,,
+,PS,RD,1.70,PNK,450.00,XPR1700,,xpr1700.jpg,,,5.60|5.60|3.30,,,Sapphire. Round. Pink 5.6MM,H,,
+,YS,RD,1.72,Yellow,350.00,YR1720,,,,,6.60|6.60|4.50,,,Y. Sapphire. Round. Yellow 6.6MM,,,or1720
+,YS,CU,1.72,Yellow,375.00,YC17200,,yc17200.jpg,,,7.20|7.20|3.60,,,Y. Sapphire. Cushion. Yellow 7.2X7.2,,,
+,SA,RD,1.72,BLU,875.00,SR17200,,sr17200.jpg,,,7.00|7.00|4.20,,,Sapphire. Round. Blue 7.0,H,,
+,SA,OV,1.75,BLU,675.00,SV17500,,sv17500.jpg,,,9.00|6.60,,,Sapphire. Oval. Blue 9.0X6.6,H,,
+,SA,RD,1.75,BLU,675.00,SR17500,,sr17500.jpg,,,7.00|7.00|4.20,,,RD Sapphire 7.0MM,H,,xsr7006
+,SA,PS,1.75,BLU,675.00,SP17500,,,,,,,,Sapphire. PS. Blue,H,,
+,YS,CU,3.51,Yellow,450.00,XYC7000,,XYC7000.jpg,,,7.00|7.00,,,CC Y.Sapphire Pair 7.00mm,,,xyc7000
+,SA,OV,1.77,BLU,650.00,SV17700,,sv17700.jpg,,,8.70|6.40,,,Sapphire. Oval. Blue 8.7X6.4,H,,
+,RU,PS,1.79,RED,2300.00,RP1790,,RP1790.jpg,,,8.60|6.10|3.80,,,PS Ruby Gem. 8.6X6.1,H,,rp1790
+,YS,OV,1.79,Yellow,235.00,YV17900,,yv17900.jpg,,,7.90|6.20|4.00,,,Sapphire. Oval. Yellow 7.9X6.2,,,
+,SA,OV,1.84,BLU,1275.00,SV18400,,sv18400.jpg,,,7.60|6.30|4.20,,,Sapphire. Oval. Blue 7.6X6.3,H,,
+,PA,PS,1.84,Blue,8000.00,PBP184,,pbp184.jpg,,,11.70|6.20|4.10,,BRA,Paraiba. PS. 11.7x6.2mm,H,,
+,SA,RD,1.85,BLU,875.00,SR18500,,sr18500.jpg,,,6.80|6.80|4.70,,,Sapphire. Round. Blue,H,,
+,GS,CU,1.86,GRN,285.00,GC1860,,gc1860.jpg,,,7.00|7.00|4.30,,,G. Sapphire. Cushion 7.0x7.0mm,H,,gc1860
+,RU,RD,3.72,RED,3000.00,XRR3720,,XRR3720.jpg,,,7.40|7.40,,,RD Ruby Gem. Pair 7.40,H,,
+,RU,RD,1.86,RED,2300.00,RR720055,,,,,7.20|7.20|4.70,,,Ruby. Round. Red 7.2MM,H,,
+,SA,RD,3.73,BLU,875.00,XSR7301,,xsr7301.jpg,,,7.30|7.30,,,RD Sapphire Pair Gem. 7.3,H,,xsr7301
+,SA,OV,1.87,BLU,450.00,SV1870,,sv1870.jpg,,,8.20|6.10|4.30,,,OV Sapphire Gem 8.20x6.10,H,,sv1870
+,SA,HS,1.92,BLU,1100.00,SH856766,,SH856766.jpg,,,8.40|7.10|4.30,,,Sapphire. HM. Blue 8.4X7.1,H,,
+,EM,EC,1.92,GRN,2000.00,EE19200,,,,,8.90|6.70|4.70,,,Emerald. EC. Green8.9X6.7,O,,
+,EM,EC,1.93,GRN,2500.00,EE1930SH,,ee1930sh.jpg,,,9.10|7.00|4.30,,,Emerald. EC. 9.1X7.0MM,H,,
+,SA,OV,1.94,BLU,550.00,SV19400,,sv19400.jpg,,,8.10|6.10,,,Sapphire. Oval. 8.1x6.1mm,H,,
+,RU,RD,1.94,RED,1850.00,RR720066,,RR720066.jpg,,,7.20|7.20|4.50,,,Ruby. Round. Red 7.2MM,H,,
+,SA,RD,1.94,BLU,625.00,SR730055,,sr730055.jpg,,,7.40|7.40|4.80,,,Sapphire. Round. Blue 7.4MM,H,,
+,PS,CU,3.92,PNK,950.00,XPC3920MN,,,,,7.00|7.00,,,P. Sapphire. Cushion. Pink7.0X7.0,H,,
+,SA,CU,1.96,BLU,1275.00,SC19600,,sc19600.jpg,,,7.10|7.00|4.20,,,Sapphire. 7.1x7.0mm,H,,
+,SA,RD,3.93,BLU,850.00,XSR7401,,xsr7401.jpg,,,7.40|7.40,,,RD Sapphire Pair Gem. 7.4,H,,xsr7401
+,SA,RD,1.99,BLU,850.00,SR730066,,sr730066.jpg,,,7.10|7.10|5.30,,,Sapphire. Round. Blue 7.1MM,H,,
+,SA,RD,1.99,BLU,850.00,SR19900,,sr19900.jpg,,,7.10|7.10|4.90,,,Sapphire. Round. Blue 7.1,H,,
+,GS,CU,2.00,GRN,425.00,GC20000,,gc20000.jpg,,,7.10|7.10|4.40,,,G. Sapphire. Cushion 7.1mm,H,,
+,SA,MQ,2.01,BLU,650.00,SM2010,,SM2010.jpg,,,10.90|6.30|3.90,,,MQ Sapphire Gem. 10.9-6.3,H,,sm2010
+,SA,SQ,2.01,BLU,675.00,XSQ5700,,XSQ5700.jpg,,,5.70|5.70,,,SQ Sapphire Pair Gem. 5.7,H,,xsq5700
+,SA,CU,2.01,BLU,1375.00,SC20100,,sc20100.jpg,,,6.80|6.80|4.80,,,Sapphire. Cushion. Blue 6.8X6.8,H,,
+,SA,CU,2.01,BLU,1275.00,SC2010,,sc2010.jpg,,,7.00|6.50|4.60,,,Sapphire. 7.0x6.5mm,H,,
+,RU,RD,2.03,RED,2450.00,RR372055,,rr372055.jpg,,,7.40|7.40|4.70,,,Ruby. Round. Red 7.4MM,H,,
+,SA,CU,2.03,BLU,1275.00,SC20300,,sc20300.jpg,,,8.10|7.20|3.90,,,Sapphire. 8.1x7.2mm,H,,
+,SA,HS,4.07,BLU,750.00,XSH8567,,XSH8567.jpg,,,8.50|6.70,,,HS Sapphire Pair Gem. 8.5-6.7,H,,xsh8567
+,EM,OV,2.05,GRN,3000.00,EV2050SH,,,,,9.70|7.50|4.30,,,Emerald. Oval. Green 9.7X7.5,O,,
+,EM,EC,2.05,GRN,1900.00,EE20500,,,,,8.50|7.00|4.60,,,Emerald. EC. Green8.5X7.0,O,,
+,SA,EC,2.07,BLU,1600.00,SE20701,,,,,8.20|5.30|4.40,,,Sapphire. EC 8.2x5.3mm,H,,
+,PS,CU,2.07,PNK,825.00,PC20700,,pc20700.jpg,,,7.10|6.00|5.00,,,P. Sapphire. 7.1x6.0mm,N,,
+,SA,RD,2.10,BLU,850.00,SR21000,,sr21000.jpg,,,7.40|7.40|4.60,,,Sapphire. Round. Blue 7.4,H,,
+,RU,CU,2.10,RED,2500.00,RC2100MN,,,,,7.40|6.80,,,Ruby. Cushion. Red 7.4X6.8,H,,
+,GS,HS,2.11,GRN,450.00,GH21100,,gh21100.jpg,,,7.60|8.00|3.80,,,G. Sapphire. Heart Shape 7.6X8.0MM,H,,
+,EM,EC,2.12,GRN,1375.00,EE45800,,,,,9.00|6.70|4.70,,,Emerald. EC. Green9X6.7,O,,
+,SA,OV,2.13,BLU,650.00,SV21300,,SV21300.jpg,,,8.60|6.80|4.30,,,Sapphire. Oval. Blue 8.6X6.8,H,,
+,RU,PS,2.13,RED,2250.00,RP21300,,rp21300.jpg,,,10.10|6.60|3.60,,,Ruby. PS. Red 10.1X6.6,H,,
+,GS,OV,2.13,GRN,450.00,GV21300,,gv21300.jpg,,,8.50|6.60|4.30,,,G. Sapphire. Oval 8.5x6.6mm,H,,
+,EM,EC,2.13,GRN,1875.00,EE2121SH,,ee2121sh.jpg,,,8.50|6.90|4.70,,,Emerald. EC. Green 8.5X6.9,O,,
+,SA,CU,2.15,BLU,1450.00,SC21500,,sc21500.jpg,,,8.10|7.00|4.50,,,Sapphire. Cushion. Blue 8.1X7.0,H,,
+,SA,CU,2.15,BLU,1275.00,SC21501,,sc21501.jpg,,,7.00|6.40|4.70,,,Sapphire. Cushion. Blue 7.0X6.4,H,,
+,YS,CU,2.19,Yellow,175.00,YC2190,,YC2190.jpg,,,9.00|6.80|3.40,,,CSHN Y. Sapphire Gem. 9.0-6.8,,,yc2190
+,YS,HS,2.19,Yellow,425.00,YH21900,,YH21900.jpg,,,8.20|8.30|3.70,,,Y. Sapphire. Heart Shape. Yellow 8.2X8.3,H,,
+,SA,OV,2.20,BLU,600.00,SV22000,,SV22000.jpg,,,9.00|6.70|4.10,,,Sapphire. Oval. Blue 9.0X6.7,H,,
+,EM,EC,2.20,GRN,2400.00,EE2201SH,,ee2201sh.jpg,,,8.40|7.60|4.50,,,Emerald. EC. Green 8.4X7.6,O,,
+,SA,RD,2.20,BLU,1200.00,SR22000,,sr22000.jpg,,,7.30|7.30|5.00,,,Sapphire. Round. Blue 7.3MM,H,,
+,EM,OV,2.21,GRN,1750.00,EV2211,,EV2211.jpg,,,9.50|7.40|5.20,,,OV Emerald Gem. 9.5-7.4,O,,ev2211
+,PA,PS,2.21,Blue,15000.00,PBP221,,pbp221.jpg,,,11.40|8.40|3.90,,BRA,Paraiba. PS. 11.4x8.4mm,H,,
+,SA,EC,2.21,BLU,1275.00,SE221MN,,,,,8.75|5.75,,,Sapphire. EC. Blue 8.75X5.75,H,,
+,SA,RD,2.22,BLU,975.00,SR22200,,sr22200.jpg,,,7.90|7.90|4.30,,,Sapphire. Round. Blue 7.9,H,,
+,SA,RD,2.23,BLU,950.00,SR22300,,sr22300.jpg,,,7.60|7.60|4.70,,,Sapphire. Round. 7.6,H,,
+,SA,RD,2.24,BLU,950.00,SR2231,,sr2231.jpg,,,7.40|7.40|4.90,,,RD Sapphire Gem 7.40,H,,sr2231
+,SA,PS,2.24,BLU,1250.00,SP22400,,sp22400.jpg,,,9.30|7.00|4.30,,,Sapphire. PS. Blue 9.3X7.0,H,,
+,SA,RD,2.24,BLU,550.00,SR22400,,,,,7.40|7.40|4.80,,,Sapphire. Round. Blue 7.4mm,H,,
+,SA,EC,2.27,BLU,1900.00,SE22700,,,,,8.40|6.00|4.30,,,Sapphire. EC 8.4x6.0mm,H,,
+,SA,RD,2.29,BLU,925.00,SR22900,,,,,7.10|7.10|5.30,,,Sapphire. Round. Blue 7.1mm,H,,
+,SA,EC,2.30,BLU,675.00,SE23000,,se23000.jpg,,,8.90|6.80|3.60,,,Sapphire. EC. Blue 8.9X6.8,H,,
+,SA,CU,2.30,BLU,1800.00,SC23001,,sc23001.jpg,,,7.70|6.60|4.70,,,Sapphire. Cushion. Blue 7.7X6.6,H,,
+,SA,OV,2.32,BLU,1275.00,SV23200,,sv23200.jpg,,,8.00|7.00|4.50,,,Sapphire. Oval. Blue 8.0X7.0,H,,
+,SA,RD,2.35,BLU,875.00,SR23500,,sr23500.jpg,,,7.60|7.60|5.10,,,Sapphire. Round. Blue 7.6,H,,
+,SA,OV,2.36,BLU,625.00,SV23600,,sv23600.jpg,,,8.90|7.00,,,Sapphire. Oval. Blue 8.9X7.0,H,,
+,YS,OV,2.37,Yellow,425.00,YV23700,,yv23700.jpg,,,8.30|6.50|5.00,,,Y. Sapphire. Oval. Yellow8.3X6.5,H,,
+,EM,EC,2.43,Green,2500.00,EE2430SH,,ee2430sh.jpg,,,9.00|7.00|5.70,,,Emerald. EC. 9.0X7.0MM,H,,
+,PS,OV,2.44,PNK,750.00,PV244AF,,,,,9.30|6.80,,,P. Sapphire. Oval. Pink 9.3X6.8,H,,
+,SA,CU,2.46,BLU,1800.00,SC24600,,sc24600.jpg,,,7.40|7.40|4.60,,,Sapphire. Cushion. Blue 7.4X7.4,H,,
+,EM,EC,2.49,GRN,1400.00,EE24900,,,,,9.10|7.00|5.20,,,Emerald. EC. Green9.1X7.0,O,,
+,SA,PS,2.53,BLU,0.00,SP25300,,,,,9.90|6.90|4.40,,,Sapphire. PS. Blue 9.9X6.9,H,,
+,SA,OV,2.54,BLU,1650.00,SV25400,,SV25400.jpg,,,8.60|7.60|4.60,,,Sapphire. Oval. Blue 8.6X7.6,H,,
+,SA,OV,2.56,BLU,800.00,SV2560,,sv2560.jpg,,,9.10|7.00|4.70,,,OV Sapphire Gem 9.10x7.00,H,,
+,EM,EC,2.57,GRN,2750.00,EE257SH,,,,,8.00|8.00,,,Emerald. EC. Green 8.0X8.0,O,,
+,RU,CU,2.57,RED,5000.00,RC257BN,,,,,8.20|7.30|4.40,,,Ruby. Cushion. 8.2x7.3mm,H,,
+,SA,HS,2.58,BLU,750.00,SH2580,,SH2580.jpg,,,9.30|7.20|4.80,,,HS Sapphire Gem. 9.3-7.2,H,,sh2580
+,RU,OV,2.58,RED,1250.00,RV2580,,RV2580.jpg,,,9.70|7.10|3.80,,,OV Ruby Gem. 9.7-7.1,H,,rv2580
+,SA,EC,2.60,BLU,975.00,SE26000,,,,,9.20|6.80,,,Sapphire. EC. Blue 9.2x6.8,H,,
+,SA,PS,2.62,BLU,1150.00,SP2620,,SP2620.jpg,,,10.40|8.60|4.10,,,PS Sapphire Gem. 10.4-8.6,H,,sp2620
+,EM,EC,2.65,Green,3850.00,EE26509,,,,,10.00|7.30,,,Emerald. EC. Green 10X7.3,O,,
+,PS,OV,2.67,PNK,750.00,PV2670GD,,,,,9.40|6.20,,,P. Sapphire. Oval. Pink 9.4X6.2,H,,
+,EM,EC,2.70,GRN,4500.00,EE27009,,,,,8.90|7.20,,,Emerald. EC. Green 8.9X7.2,O,,
+,SA,EC,2.71,BLU,500.00,XSE6853,,XSE6853.jpg,,,6.80|5.30,,,EC Sapphire Pair Gem. 6.8-5.3,H,,xse6853
+,PS,CU,2.72,PNK,575.00,PC27200,,,,,8.10|8.00|4.70,,,P. Sapphire. Cushion. 8.1MM,,,
+,PS,OV,2.74,PNK,850.00,PV2740,,PV2740.jpg,,,9.80|7.60|4.00,,,OV P. Sapphire Gem 9.80x7.60,H,,pv2740
+,SA,PS,2.74,BLU,1400.00,SP2740,,SP2740.jpg,,,10.00|6.70|5.50,,,PS Sapphire Gem 10.00x6.70,H,,
+,PS,HS,5.48,PNK,1000.00,XPH5480RJ,,xph5480rj.jpg,,,9.00|8.50|4.50,,,P. Sapphire. Heart Shape. Pink 9.0X8.5,,,
+,SA,RD,2.76,BLU,950.00,SR27600,,sr27600.jpg,,,8.20|8.20|5.00,,,Sapphire. Round. Blue 8.2,H,,
+,RU,RD,2.76,RED,3500.00,RR27600,,rr27600.jpg,,,8.10|8.10|4.40,,,Ruby. Round 8.1mm,,,
+,PS,CC,2.86,PNK,850.00,PC28600,,pc28600.jpg,,,10.10|8.10,,,P. Sapphire. CC. Pink10.1X8.1,H,,
+,EM,EC,2.87,GRN,5500.00,EE2871,,EE2871.jpg,,,9.40|8.20|6.00,,,EC Emerald Gem 9.40x8.20,O,,ee2871
+,SA,RD,5.76,BLU,950.00,XSR57600,,xsr57600.jpg,,,8.30|8.30,,,Sapphire. Round. Blue 8.3MM,H,,
+,PA,PS,5.80,BLU,100.00,PBMT580,,pbmt580.jpg,,,13.50|8.50,,,Paraiba. Matrix.  PS. Blue 13.5X8.5,H,,
+,YS,CU,2.93,Yellow,385.00,YC29300,,yc29300.jpg,,,9.70|7.40|4.20,,,Y. Sapphire. CC. Yellow 9.7X7.4,,,
+,YS,EC,2.95,Yellow,450.00,YE29500,,YE29500.jpg,,,8.20|6.80|4.60,,,Y. Sapphire. EC. Yellow 8.2x6.8,H,,
+,EM,EC,2.99,GRN,975.00,EE299SH,,,,,10.30|8.00|4.80,,,Emerald. EC. Green 10.3X8.0,O,,
+,EM,EC,2.99,GRN,4000.00,EE29909,,,,,9.90|7.10,,,Emerald. EC. Green 9.9X7.1,O,,
+,SA,PS,3.00,BLU,0.00,SP30000,,,,,9.30|7.60|5.10,,,Sapphire. PS. Blue 9.3X7.6,H,,
+,SA,PS,3.00,BLU,1650.00,SP30002,,sp30002.jpg,,,10.30|7.80|5.10,,,Sapphire. PS. Blue 10.3X7.8,H,,
+,SA,PS,3.01,BLU,1275.00,SP3010,,SP3010.jpg,,,9.00|8.20|5.00,,,PS Sapphire Gem 9.0x8.2,H,,
+,EM,EC,3.01,GRN,950.00,EE301SH,,,,,10.00|7.60|4.80,,,Emerald. EC. Green 10X7.6,O,,
+,EM,EC,3.03,GRN,3500.00,EE30309,,,,,8.90|7.40,,,Emerald. EC. Green 8.9X7.4,V.F,,
+,SA,CU,3.05,BLU,1675.00,SC3050,,SC3050.jpg,,,8.90|6.90|5.40,,,CC Sapphire Gem 8.90x6.90,H,,
+,RU,OV,3.06,RED,1200.00,RV3060,,RV3060.JPG,,,8.50|7.50|5.40,,,OV Ruby Gem. 8.5-7.5,H,,rv3060
+,PS,OV,3.07,PNK,950.00,PV30700,,pv30700.jpg,,,9.30|7.60,,,P. Sapphire. Oval. Pink 9.3X7.6,H,,
+,SA,OV,3.09,BLU,1150.00,SV30901,,sv30901.jpg,,,9.70|8.00|4.70,,,Sapphire. Oval. Blue 9.7X8.00,H,,
+,RU,RD,3.10,RED,2500.00,XRR3100,,XRR3100.jpg,,,7.00|7.00,,,RD Ruby Gem. Pair 7.00,H,,
+,OS,CU,3.12,Orange,575.00,OC3120,,,,,8.80|7.50|5.00,,,CSHN O. Sapphire Gem. 8.8-7.5,H,,oc3120
+,SA,OV,3.12,BLU,1800.00,SV3120RJ,,sv3120rj.jpg,,,9.00|6.90|5.20,,,Sapphire. Oval. Blue 9.0X6.9,H,,
+,SA,RD,3.15,BLU,1650.00,SR31500,,sr31500.jpg,,,8.80|8.80|5.30,,,Sapphire. Round. Blue 8.8MM,H,,
+,SA,EC,3.17,BLU,1275.00,SE3170NS,,se3170ns.jpg,,,9.50|7.00|4.70,,,Sapphire. EC. Blue 9.5X7.0,H,,
+,SA,EC,3.19,BLU,1500.00,SE319EL,,,,,9.10|6.30,,,Sapphire. EC. Blue 9.1X6.3,H,,
+,YS,EC,3.22,Yellow,450.00,YE32200,,YE32200.jpg,,,9.50|7.60|4.80,,,Y. Sapphire. EC. 9.5X7.6,,,
+,SA,EC,3.22,Blue,2300.00,SE322099,,se322099.jpg,,,9.10|7.30,,,Sapphire. EC. Blue9.1X7.3,H,,
+,SA,PS,3.27,BLU,1650.00,SP32700,,sp32700.jpg,,,10.60|7.50|5.50,,,Sapphire. PS. Blue 10.6X7.5,H,,
+,PS,OV,3.29,PNK,950.00,PV329BN,,,,,9.80|7.70,,,P. Sapphire. Pink 9.8X7.7,H,,
+,PS,RD,3.31,PNK,1200.00,PR33100,,pr33100.jpg,,,8.80|8.80,,,P. Sapphire. Round. Pink 8.8MM,H,,
+,SA,OV,3.31,BLU,1475.00,SV3310,,sv3310.jpg,,,10.90|8.40|4.40,,,Sapphire. Oval. 10.9x8.4mm,H,,
+,RU,PS,3.34,RED,1400.00,RP33400,,rp33400.jpg,,,10.50|8.70|4.50,,,Ruby. PS. Red 10.5X8.7,H,,
+,SA,OV,3.41,BLU,975.00,SV3410NS,,,,,9.80|7.20|5.70,,,Sapphire. Oval. Blue 9.8X7.2,H,,
+,RU,PS,3.44,RED,2500.00,RP3440,,RP3440.jpg,,,9.40|8.00|5.80,,,PS Ruby Gem. 9.4-8.0,H,,rp3440
+,SA,OV,3.47,BLU,2000.00,SV34700,,SV34700.jpg,,,9.20|8.20|5.30,,,Sapphire. Oval. Blue 9.2X8.2,H,,
+,YS,EC,3.50,Yellow,450.00,YE35000,,YE35000.jpg,,,10.20|7.90|4.60,,,Y. Sapphire. EC. 10.2X7.9,,,
+,RU,OV,3.51,RED,5500.00,RV35100,,rv35100.jpg,,,9.90|7.80|5.10,,,Ruby. Oval. Red 9.9X7.8,H,,
+,SA,RD,3.56,BLU,1700.00,SR3560,,sr3560.jpg,,,9.00|9.00|5.70,,,RD Sapphire Gem. 9.0,H,,sr3560
+,YS,EC,3.67,Yellow,400.00,YE36700,,YE36700.jpg,,,8.90|7.80|4.80,,,Y. Sapphire. EC. Yellow 8.9X7.8,,,
+,EM,EC,3.67,GRN,2850.00,EE3670NY,,,,,8.60|8.60|7.00,,,Emerald. EC. Green 8.6X8.6,O,,
+,EM,EC,3.67,GRN,3250.00,EE367SH,,,,,10.70|8.50,,,Emerald. EC. Green 10.7X8.5,O,,
+,EM,OV,3.73,GRN,2800.00,EV373SH,,,,,11.70|9.00,,,Emerald. Oval. Green11.7X9.0,O,,
+,YS,EC,3.93,Yellow,450.00,YE39300,,YE39300.jpg,,,9.70|7.70|4.90,,,Y. Sapphire. EC. Yellow 9.7X7.7,,,
+,SA,CU,3.97,BLU,3000.00,SC3970MN,,,,,9.70|8.90|5.10,,,Sapphire. Cushion. Blue 9.7X8.9,H,,
+,SA,OV,4.04,BLU,1200.00,XSV40400,,XSV40400.jpg,,,7.60|6.10|4.70,,,Sapphire. Oval. Blue 7.6X6.1,H,,
+,PA,PS,4.07,BLU,5500.00,PBP4079,,pbp4079.jpg,,,15.70|8.50,,,Paraiba. PS. Blue 15.7X8.5,H,,
+,SA,CU,4.08,BLU,2000.00,SC4080,,SC4080.jpg,,,9.70|8.10|5.50,,,CSHN Sapphire Gem. 9.7-8.1,H,,sc4080
+,SA,CU,4.09,BLU,2300.00,SC4090,,SC4090.jpg,,,9.90|7.60,,,CC Sapphire Gem 9.90x7.60,H,,
+,SA,EC,4.15,BLU,1800.00,SE41500,,,,,10.79|7.25,,,Sapphire. EC. Blue 10.8X7.3,H,,
+,GS,OV,4.25,Green,450.00,GV4250,,,,,11.00|9.20|5.20,,,OV G.Sapphire Gem 11.00x9.20,,,
+,PS,OV,4.26,PNK,975.00,PV42609,,,,,11.20|8.40|5.70,,,P. Sapphire. Oval. Pink 11.2x8.4,N,,
+,PA,PS,8.66,BLU,0.00,PBMT866,,,,,16.50|10.00,,,Paraiba.Matrix. PS. Blue 16.5X10.0mm,H,,
+,YS,EC,4.38,Yellow,400.00,YE4380,,YE4380.jpg,,,9.10|8.50|5.60,,,EC Y. Sapphire Gem. 9.1-8.5,H,,ye4380
+,PS,CU,4.43,PNK,2250.00,PC44300,,pc44300.jpg,,,11.40|10.00|4.40,,,P. Sapphire. Cushion. Pink 11.4X10,,,
+,EM,OV,4.43,GRN,4500.00,EV4430SN,,ev4430sn.jpg,,,12.70|9.70|6.10,,ZAM,Emerald. Oval.12.7x9.7mm,H,,
+,PA,TR,9.00,BLU,100.00,PBMT900,,pbmt900.jpg,,,18.00|12.00|3.00,,,Paraiba.Matrix. TR. Blue 18.0X12.0mm,H,,
+,SA,RD,4.51,BLU,575.00,XSR7300,,XSR7300.jpg,,,7.30|7.30,,,RD Sapphire Pair Gem. 7.3,H,,xsr7300
+,SA,EC,4.53,BLU,2200.00,SE45300,,,,,10.85|8.53,,,Sapphire. EC. Blue 10.9X8.6,H,,
+,YS,RAD,4.56,Yellow,325.00,YD4560RJ,,YD4560RJ.jpg,,,10.30|7.60|5.40,,,Y. Sapphire. RAD. 10.3X7.6MM,H,,
+,SA,RD,4.58,BLU,875.00,XSR45800,,,,,7.60|7.60,,,Sapphire. Round. Blue 7.6MM,H,,
+,EM,OV,4.61,GRN,2500.00,EV461SH,,,,,12.00|9.70,,,Emerald. Oval. Green 12X9.7,O,,
+,EM,EC,4.66,GRN,3000.00,EE466SH,,,,,9.70|8.70,,,Emerald. EC. Green 9.7X8.7,O,,
+,EM,EC,4.72,GRN,2500.00,EE4720,,,,,10.80|8.70|6.70,,,Emerald. 10.8x8.7mm,H,,
+,PA,PS,4.79,BLU,5850.00,PBP4799,,pbp4799.jpg,,,15.00|9.00,,,Paraiba. PS. Blue 15X9.0,H,,
+,EM,EC,4.98,GRN,975.00,EE49809,,ee49809.jpg,,,10.60|9.90|7.20,,,Emerald. EC. Green 10.6x9.9,O,,
+,SA,PS,5.05,BLU,2400.00,SP50500IC,,sp50500ic.jpg,,,14.10|8.20,,,Sapphire. PS. Blue 14.1x8.2mm,H,,
+,EM,EC,5.15,GRN,2300.00,EE5150,,,,,11.70|9.40|6.00,,,Emerald. 11.7x9.4mm,H,,
+,YS,CU,5.27,Yellow,325.00,YC5270RJ,,YC5270RJ.jpg,,,10.80|8.60|5.60,,,Y. Sapphire. Cushion. 10.8X8.6MM,H,,
+,PA,PS,10.97,BLU,90.00,PBMT1097,,pbmt1097.jpg,,,25.00|10.00,,,Paraiba.Matrix. PS. Blue 25.0X10.0mm,H,,
+,EM,EC,5.50,GRN,6000.00,EE550SH,,ee550sh.jpg,,,12.30|9.80|6.30,,,Emerald. EC. 12.3x9.8mm,H,,
+,PA,PS,11.20,Blue,95.00,PBMT1120,,pbmt1120.jpg,,,21.00|10.90|3.60,,,Paraiba. Matrix 21.0x10.9mm,H,,
+,YS,CU,5.65,Yellow,325.00,YC5650RJ,,yc5650rj.jpg,,,10.30|9.80|6.40,,,Y. Sapphire. Cushion. 10.3X9.8MM,H,,
+,PA,PS,11.51,BLU,100.00,PBMT1151,,pbmt1151.jpg,,,18.00|12.00,,,Paraiba.Matrix. PS. Blue 18.0X12.0mm,H,,
+,SA,CU,5.83,BLU,2000.00,SC5830,,SC5830.jpg,,,11.50|8.90|5.90,,,CC Sapphire Gem 11.50x8.90,H,,
+,PA,PS,11.73,BLU,90.00,PBMT1173,,pbmt1173.jpg,,,21.00|12.00,,,Paraiba.Matrix. PS. Blue 21.0X12.0mm,H,,
+,EM,EC,5.90,Green,4250.00,EE590SH,,ee590sh.jpg,,,11.60|10.60|7.70,,,Emerald. EC. 11.6x10.6mm,H,,
+,PA,CU,5.99,BLU,8000.00,PBC59909,,pbc59909.jpg,,,11.00|11.00,,,Paraiba. Cushion. 11.0x11.0mm,,,
+,PA,PS,12.54,BLU,95.00,PBMT1254,,pbmt1254.jpg,,,20.00|11.00|3.50,,,Paraiba. Matrix 20.0x11.0mm,H,,
+,YS,OV,6.65,Yellow,400.00,YV6650,,YV6650.jpg,,,12.90|10.10|6.10,,,OV Y. Sapphire Gem. 12.9-10.1,,,yv6650
+,PA,OV,6.65,BLU,4000.00,PBV6650,,pbv6650.jpg,,,14.30|10.70|5.80,,,Paraiba. Oval. 14.3x10.7mm,H,,
+,EM,EC,6.67,GRN,3850.00,EE66709,,,,,14.00|10.00|7.10,,,Emerald. EC. 14.0x10.0mm,O,,
+,EM,EC,6.95,GRN,2850.00,EE69509,,,,,12.50|10.40|7.00,,,Emerald. EC. 12.5x10.4mm,O,,
+,EM,EC,7.00,GRN,2600.00,EE70009,,,,,12.20|10.00|7.20,,,Emerald. EC. 12.2x10.0mm,O,,
+,YS,CU,7.04,Yellow,350.00,YC7040RJ,,YC7040RJ.jpg,,,12.60|8.80|6.30,,,Y. Sapphire. Cushion. 12.6X8.5MM,H,,
+,PA,PS,14.25,BLU,0.00,PMBT1425,,,,,21.00|13.50,,,Paraiba.Matrix. PS. Blue 21.0X13.5mm,H,,
+,PA,OV,14.28,BLU,100.00,PBMT1428,,pbmt1428.jpg,,,18.00|13.10|3.60,,,Paraiba.Matrix. Oval. Blue 18.0X13.10mm,H,,
+,PA,OV,7.48,BLU,3600.00,PBV7480,,pbv7480.jpg,,,14.20|10.30|6.90,,,Paraiba. Oval. 14.2x10.3mm,H,,
+,YS,OV,7.52,Yellow,325.00,YV7520RJ,,YV7520RJ.jpg,,,12.20|9.60|7.00,,,Y. Sapphire. Oval. 12.2X9.6MM,H,,
+,PA,CC,15.82,BLU,120.00,PBMT1582,,pbmt1582.jpg,,,23.50|12.00,,,Paraiba.Matrix. CC. Blue 23.5X12.0mm,H,,
+,PA,PS,15.86,BLU,0.00,PBMT1586,,,,,22.00|12.50,,,Paraiba. Matrix. PS. Blue 22.0X12.5mm,H,,
+,PA,FY,15.86,BLU,100.00,PBMT15860,,pbmt15860.jpg,,,27.00|11.00|3.20,,,Paraiba.Matrix. FY. Blue 27.0X11.0mm,H,,
+,PA,PS,15.92,BLU,95.00,PBMT1592,,pbmt1592.jpg,,,18.90|13.90|3.90,,,Paraiba. Matrix 18.9x13.9mm,H,,
+,PA,CU,8.02,BLU,6000.00,PBC80200,,pbc80200.jpg,,,12.20|9.80|8.30,,,Paraiba. 12.2x9.8mm,H,,
+,SA,EC,8.10,BLU,4500.00,SE81000,,,,,11.70|10.20|7.20,,,Sapphire. EC. Blue 11.7X10.2,N,,
+,YS,OV,8.15,Yellow,325.00,YV8150RJ,,YV8150RJ.jpg,,,12.10|9.70|6.60,,,Y. Sapphire. Oval. 12.1X9.7MM,H,,
+,EM,EC,8.17,GRN,1450.00,EE8170,,,,,13.00|11.00|8.20,,,Emerald. 13.0x11.0mm,H,,
+,SA,PS,8.22,BLU,1275.00,SP82200SK,,sp82200sk.jpg,,,15.00|10.50,,,Sapphire. PS 15.0x10.5mm,H,,
+,EM,EC,8.67,GRN,3250.00,EE867SH,,,,,13.00|11.00,,,Emerald. EC. Green 13X11,O,,
+,EM,EC,9.35,GRN,4500.00,EE935SH,,,,,12.30|11.00,,,Emerald. EC. Green 12.3X11,O,,
+,PA,PS,9.99,BLU,6000.00,PBP99909,,pbp99909.jpg,,,21.90|10.70,,,Paraiba. PS. 21.9x10.7mm,,,
+,SA,PS,10.08,BLU,1275.00,SP100800SK,,sp100800sk.jpg,,,20.30|10.00,,,Sapphire. PS 20.3x10.0mm,H,,
+,RBL,PS,155.42,RED,585.00,RBLT2,,,,,,,,Rubellite. PS. Red,H,,
+,PA,PS,10.50,BLU,7500.00,PBP10500,,PBP10500.jpg,,,18.00|13.30|7.00,,,Paraiba. PS. 18.0X13.3,H,,
+,PA,OV,10.52,BLU,6000.00,PBV10529,,pbv10529.jpg,,,16.30|10.70,,,Paraiba. Oval 16.3x10.7mm,,,
+,PA,FY,21.54,BLU,120.00,PBMT2154,,pbmt2154.jpg,,,23.13|14.20|3.90,,,Paraiba.Matrix. FY. Blue 23.13X14.20mm,H,,
+,PA,PS,22.39,BLU,0.00,PBMT2239,,,,,22.00|17.00,,,Paraiba.Matrix. PS. Blue 22.0X17.0mm,H,,
+,PA,PS,22.91,BLU,120.00,PBMT2291,,pbmt2291.jpg,,,32.00|12.50,,,Paraiba.Matrix. PS. Blue 32.0X12.5mm,H,,
+,PA,OV,11.68,BLU,3250.00,PBV11680,,pbv11680.jpg,,,17.50|12.50|7.70,,,Paraiba. Oval. 17.5x12.5mm,H,,
+,PA,FY,25.40,BLU,120.00,PBMT2540,,pbmt2540.jpg,,,27.60|15.10|3.70,,,Paraiba.Matrix. FY. Blue 27.60X15.10mm,H,,
+,RBL,OV,230.38,RED,585.00,RBLT1,,,,,,,,Rubellite. Oval. Red,H,,
+,PA,PS,28.23,BLU,100.00,PBMT2823,,pbmt2823.jpg,,,26.40|18.40|3.80,,,Paraiba.Matrix. PS. Blue 26.40X18.40mm,H,,
+,PA,OV,14.75,BLU,2500.00,PBV14750,,PBV14750.jpg,,,17.20|14.80|9.10,,,Paraiba. Oval. Blue 17.2X14.8MM,,,
+,PA,OV,14.91,BLU,3950.00,PBV149109,,,,,17.70|13.10|10.30,,,Paraiba. Oval. Blue 17.7X13.1,H,,
+,AQ,OV,36.70,BLU,750.00,AQ36709,,,,,23.40|16.50|12.20,,,Aquamarine. Oval. Blue 23.4x16.5,N,,
+,AQ,EC,38.47,LBL,800.00,AQ38470,,AQ38470.jpg,,,23.90|17.20|12.50,,,Aquamarine. EC. Light Blue23.9X17.2,,,
+,EM,EC,15.44,GRN,5000.00,EE1544SH,,EE1544SH.jpg,EE1544SH_CERT.jpg,,17.00|13.20|8.80,,,Emerald. EC. Green 17X13.2,O,GIA,
+,EM,EC,15.96,GRN,6750.00,EE1596SH,,EE1596SH.jpg,EE1596SH_CERT.jpg,,18.40|13.90|8.80,,,Emerald. EC. Green 18.4X13.9,O,GRS,
+,EM,EC,4.98,GRN,7000.00,EE4980MN,,ee4980mn.jpg,ee4980mn_cert.jpg,,12.20|8.90,,,Emerald. EC. Green 12.2x8.9,O,,
+,EM,EC,8.23,GRN,5750.00,EE823GS,,,EE823GS_CERT.jpg,,14.10|11.60|7.00,,,Emerald. EC. Green 14.1X11.6,O,,
+,EM,OV,2.40,GRN,3750.00,EV24000AZ,,ev24000az.jpg,ev24000az_CERT.jpg,,9.80|8.30|5.30,,,Emerald. Oval. Green 9.8X8.3,O,GIA,5172101562
+,PA,CU,1.40,BLU,25000.00,PBC14009Z,,pbc14009z.jpg,pbc14009z_cert.jpg,,8.10|6.00,,,Paraiba. Cushion. Blue 8.1X6.0,H,GIA,
+,PA,CU,1.52,BLU,14500.00,PBC152Z,,,pbc152z_cert.jpg,,8.00|5.90|3.70,,BRA,Paraiba. Cushion. Blue 8x6mm,H,GIA,6221841454
+,PA,CU,3.24,Greenish Blue,4000.00,PBC3240,,,PBC3240_CERT.jpg,,9.10|8.30|5.70,,,Paraiba. Cushion. Greenish Blue 9.1X8.3,,GIA,6192539382
+,PA,CU,3.25,BLU,18000.00,PBC325Z,,,pbc325z_cert.jpg,,9.10|7.60|6.20,,BRA,Paraiba. Cushion. Blue 9.1x7.6mm,H,GIA,1229815776
+,PA,CU,4.49,BLU,35000.00,PBC449Z,,PBC449Z.jpg,pbc449z_cert.jpg,,11.30|8.70|5.70,,BRA,Paraiba. Cushion. Blue 11.4x8.8mm,H,GIA,3225855371
+,PA,CU,4.82,BLU,30000.00,PBC482Z,,pbc482z_.jpg,pbc482z_cert.jpg,,11.80|8.30|5.90,,BRA,Paraiba. Cushion. Blue 12x8.4mm,H,GIA,6222815871
+,PA,CU,6.11,BLU,100000.00,PBC611Z,,PBC611Z.jpg,PBC611Z_CERT.jpg,,10.40|10.10|7.60,,BRA,Paraiba. Cushion. Blue. Brazil 10.4X10.1,E,GIA,1187400615
+,PA,CU,6.91,GRN,8000.00,PBC691Z,,pbc691z.jpg,pbc691z_cert.jpg,,11.90|10.50|7.60,,BRA,Paraiba 11.9x10.5mm,H,GIA,1162828897
+,PA,CU,7.45,BLU,30000.00,PBC745Z,,pbc745z.jpg,pbc745z_cert.jpg,,11.40|11.20|8.10,,BRA,Paraiba. Cushion. 11.4x11.2mm,H,GIA,6192790185
+,PA,PS,11.65,BLU,2750.00,PBP11659,,pbp11659.jpg,pbp11659_cert.jpg,,19.20|11.30|9.30,,MOZ,Paraiba. PS. 19.2x11.3mm,H,GIA,6173282334
+,PA,PS,1.41,BLU,24000.00,PBP1419Z,,pbp1419z.jpg,pbp1419z_cert.jpg,,9.60|6.00,,,Paraiba. PS. Blue 9.6X6.0,H,,
+,PA,PS,2.13,BLU,6500.00,PBP2130,,PBP2130.jpg,pbp2130_cert.jpg,,11.00|6.90|5.00,,,Paraiba. PS. 11.00x6.90mm,H,GIA,6225098931
+,PA,PS,23.42,BLU,6500.00,PBP23420,,pbp23420_.jpg,pbp23420_cert.jpg,,22.60|15.20|11.00,,,Paraiba. PS 22.6x15.2mm,H,GIA,1215069562
+,PA,PS,3.51,BLU,9500.00,PBP3510,,pbp3510.jpg,pbp3510_cert.jpg,,14.00|8.80|4.70,,,Paraiba. PS 14.0x8.8mm,H,GIA,
+,PA,PS,2.57,BLU,28500.00,PBPS257Z,,PBPS257Z.jpg,PBPS257Z_CERT.jpg,,10.30|6.90|5.70,,,Paraiba. PS. Greenish Blue 10.3X6.9,,GIA,1199539432
+,PA,PS,3.53,BLU,7500.00,PBPS353,,PBPS353.jpg,PBPS353_CERT.jpg,,16.00|8.20|4.50,,,Paraiba. PS. Greenish Blue 10X8.2,,GIA,3195539332
+,PA,OV,10.80,BLU,12000.00,PBV10800,,pbv10800.jpg,pbv10800_cert.jpg,,15.40|11.30|9.40,,,Paraiba. Oval 15.4X11.3mm,H,GIA,2171489171
+,PA,OV,11.55,BLU,14000.00,PBV11550,,PBV11550.jpg,pbv11550_CERT.jpg,,14.10|12.70|9.00,,,Paraiba. Oval. Blue 14X12,,GIA,6162274719
+,PA,OV,1.42,BLU,22500.00,PBV1420Z,,pbv1420z.jpg,pbv1420z_cert.jpg,,7.70|5.80|4.70,,,Paraiba. Oval 7.7X5.8mm,H,GIA,
+,PA,OV,1.44,BLU,25000.00,PBV1449Z,,pbv1449z.jpg,pbv1449z_cert.jpg,,8.50|6.80,,,Paraiba. Oval. Blue 8.5X6.8,H,GIA,
+,PA,OV,1.47,BLU,22500.00,PBV1470Z,,pbv1470z.jpg,pbv1470z_cert.jpg,,8.00|6.70|3.90,,BRA,Paraiba. Oval 8.0x6.7mm,H,GIA,
+,PA,OV,1.54,BLU,14500.00,PBV154Z,,,pbv154z_cert.jpg,,8.90|6.50|3.90,,BRA,Paraiba. Oval. Blue 9x6.5mm,H,GIA,5223815148
+,PA,OV,1.57,BLU,12000.00,PBV1570Z,,pbv1570z.jpg,pbv1570z_cert.jpg,,8.00|6.90|4.60,,BRA,Paraiba. Oval. 8.00x6.90mm,H,GIA,6222098033
+,PA,OV,1.76,BLU,0.00,PBV176Z,,,pbv176z_cert.jpg,,8.50|6.20|4.80,,BRA,Paraiba. Oval. Blue 8.5x6.2mm,H,GIA,5226815213
+,PA,OV,1.80,BLU,4500.00,PBV180,,,PBV180_CERT.jpg,,8.90|6.90|4.70,,,Paraiba. Oval. Greenish Blue 8.9X6.9,,GIA,1197539291
+,PA,OV,1.81,BLU,24000.00,PBV1819Z,,pbv1819z.jpg,pbv1819z_cert.jpg,,8.50|6.40,,,Paraiba. Oval. Blue 8.5X6.4,H,GIA,
+,PA,OV,1.97,BLU,17500.00,PBV197Z,,,pbv197z_cert.jpg,,9.00|6.90|5.00,,BRA,Paraiba. Oval. Blue 9x7mm,H,GIA,6222815251
+,PA,OV,2.25,BLU,5250.00,PBV2250,,pbv2250.jpg,pbv2250_cert.jpg,,10.20|6.40|5.10,,,Paraiba. Oval. 10.20x6.40mm,H,GIA,7226098926
+,PA,OV,2.51,BLU,15000.00,PBV251Z,,pbv251z.jpg,pbv251z_cert.jpg,,9.70|7.20|5.40,,BRA,Paraiba. Oval. Blue 9.8x7.3mm,H,GIA,1225815328
+,PA,OV,2.58,BLU,4850.00,PBV2580,,pbv2580.jpg,pbv2580_cert.jpg,,9.80|7.10|5.50,,,Paraiba. Oval. 9.80x7.10mm,H,GIA,7222098938
+,PA,OV,2.61,BLU,12500.00,PBV261Z,,pbv261z.jpg,pbv261z_cert.jpg,,9.30|7.10|5.40,,BRA,Paraiba. Oval. Blue 9.4x7.2mm,H,GIA,1223815363
+,PA,OV,2.62,BLU,5500.00,PBV2620Z,,PBV2620Z.jpg,pbv2620z_CERT.jpg,,10.00|8.00,,, Oval Paraiba (Brazil) 10X8,,AIGS,PGR14051907
+,PA,OV,2.83,BG,12000.00,PBV2830Z,,PBV2830Z.jpg,PBV2830Z_CERT.jpg,,10.10|7.90|5.50,,BRA,Paraiba. Oval. Blue Green. Brazil 10.1X7.9,H,GIA,6205747005
+,PA,OV,3.01,BLU,50000.00,PBV301Z,,PBV301Z.jpg,pbv301z_CERT.jpg,,11.70|7.70|5.00,,,Paraiba. Oval. Greenish Blue 11.7X7.7,,GIA,1162958284
+,PA,OV,3.28,BLU,20000.00,PBV328Z,,pbv328z.jpg,pbv328z_cert.jpg,,10.50|8.10|6.10,,BRA,Paraiba. Oval. Blue 10.6x8mm,H,GIA,7228855346
+,PA,OV,3.57,BLU,15000.00,PBV357Z,,,pbv357z_cert.jpg,,11.00|7.20|6.10,,BRA,Paraiba. Oval. Blue 11x7.3mm,H,GIA,6222815400
+,PA,OV,3.80,BLU,27500.00,PBV380Z,,pbv380z.jpg,pbv380z_cert.jpg,,11.90|8.40|5.40,,BRA,Paraiba. Oval. Blue 12x8.5 mm,H,GIA,6222815455
+,PA,OV,4.04,BLU,35000.00,PBV4040Z,,pbv4040z.jpg,pbv4040z_cert.jpg,,10.50|8.40|6.50,,BRA,Paraiba. Oval. 10.5x8.4mm,H,GIA,2197792817
+,PA,OV,6.22,BLU,35000.00,PBV622Z,,pbv622z.jpg,pbv622z_cert.jpg,,12.90|9.50|7.70,,BRA,Paraiba. Oval. Blue 13x9.5mm,H,GIA,6222815715
+,PA,OV,6.34,Blue,8000.00,PBV6340,,PBV6340.jpg,pbv6340_cert.jpg,,11.10|10.70|7.30,,MOZ,Paraiba. Oval 11.1x10.7mm,H,GIA,
+,PS,EC,4.15,PNK,650.00,PE4150,,PE4150.jpg,pe4150_CERT.jpg,,9.90|8.30|4.80,,,CERT EC P. Sapphire Gem. 9.9-8.3,N,TGL,19080432
+,PS,OV,11.65,Pink,6500.00,PS116500,,PS116500.jpg,PS116500_CERT.jpg,,14.60|10.70|8.70,,MAD,P. Sapphire. Oval 14.6X10.7,H,GRS,GRS2014-084816
+,PS,OV,1.44,PNK,800.00,PV1440,,pv1440.jpg,pv1440_CERT.jpg,,7.10|5.90|4.00,,,OV P. Sapphire Gem. 7.1-5.9,N,TGL,16040502
+,PS,OV,4.06,PNK,1650.00,PV4060ZB,,pv4060zb.jpg,pv4060zb_cert.jpg,,11.60|7.60|5.00,,,P. Sapphire. Oval 11.6x7.6mm,N,TGL,
+,PS,OV,4.21,PNK,800.00,PV4210ZB,,pv4210zb.jpg,pv4210zb_cert.jpg,,11.70|9.20|4.60,,,P. Sapphire. Oval 11.7x9.2mm,H,TGL,
+,PS,OV,4.48,PNK,1000.00,PV44800,,PV44800.jpg,PV44800_CERT.jpg,,10.30|8.10|6.10,,,P. Sapphire. Oval. Pink 10.3x8.1,H,,25080918
+,PS,OV,5.11,PNK,2500.00,PV5110ZB,,pv5110zb.jpg,pv5110zb_cert.jpg,,13.70|10.20|4.60,,,P. Sapphire. Oval 13.7x10.2mm,H,GRS,
+,RU,CU,2.06,RED,6000.00,RC2060MN,,rc2060mn.jpg,rc2060mn_cert.jpg,,6.70|6.50,,,Ruby. Cushion. Red 6.7x6.5mm,H,GIA,6177509550
+,RU,CU,4.06,RED,3850.00,RC4061,,RC4061.jpg,rc4061_CERT.jpg,,11.80|8.10|4.30,,,CERT CC Ruby Gem 11.80x8.10,H,GRS,GRS2012-110343T
+,RU,CU,5.12,RED,4500.00,RC5120,,RC5120.jpg,rc5120_CERT.jpg,,10.40|9.20|5.90,,,CERT CC Ruby Gem. 10.4-9.2,H,GRS,GRS2011-070712T
+,RU,EC,5.20,RED,4850.00,RE52000,,re52000.jpg,re52000_cert.jpg,,9.00|8.30|6.60,,MOZ,Ruby. EC 9.0x8.3mm,H,GRS,GRS2012-013022
+,RU,OV,8.48,RED,20000.00,RV84800,,RV84800.jpg,RV84800_CERT.jpg,,13.40|10.50|7.00,,,Ruby. Oval. Red 13.4X10.5,H,GRS,GRS2014-081786
+,SA,CU,11.73,BLU,14000.00,SC1173ZB,,sc1173zb.jpg,sc1173zb_cert.jpg,,13.20|11.20|8.60,,,Sapphire. Cushion 13.2x11.2mm,N,,
+,SA,CU,11.75,BLU,7500.00,SC11750,,SC11750.jpg,sc11750_CERT.jpg,,14.40|11.40|7.30,,,CERT CC Sapphire Gem 14.40x11.40,H,GRS,GRS2014-082136
+,SA,CU,2.83,BLU,1850.00,SC28301VC,,SC28301VC.jpg,SC28301VC_VERT.jpg,,9.30|7.50|4.00,,MAD,Sapphire. Cushion. 9.3x7.5mm,N,GIA,
+,SA,CU,3.10,BLU,2500.00,SC3102,,SC3102.jpg,sc3102_CERT.jpg,,8.50|7.20,,,Sapphire. Cushion. Blue,N,TGL,23091137
+,SA,CU,4.09,BLU,2000.00,SC4091,,SC4091.jpg,sc4091_CERT.jpg,,9.40|7.80|6.20,,,CERT CC Sapphire Gem 9.40x7.80,H,GRS,GRS2013-092276
+,SA,CU,4.72,BLU,1500.00,SC47200,,sc47200.jpg,sc47200_cert.jpg,,9.50|8.70,,,Sapphire. Cushion. Blue 9.5X8.7,N,TGL,
+,SA,CU,4.83,BLU,1450.00,SC4830ZB,,sc4830zb.jpg,sc4830zb_cert.jpg,,9.60|8.40|6.20,,,Sapphire. Cushion 9.6x8.4mm,N,TGL,
+,SA,CU,5.03,BLU,2000.00,SC50300,,sc50300.jpg,SC50300_CERT.jpg,,8.80|10.80|5.70,,,Sapphire. Cushion. 8.8X10.8,H,TGL,25080782
+,SA,CU,6.04,BLU,1275.00,SC6040ZB,,sc6040zb.jpg,sc6040zb_cert.jpg,,11.40|9.50|5.90,,,Sapphire. Cushion 11.4x9.5mm,N,TGL,
+,SA,CU,6.05,BLU,3800.00,SC60500,,sc60500.jpg,SC60500_CERT.jpg,,10.60|10.00|6.20,,,Sapphire. Cushion. Blue 10.6X10.0,H,TGL,25090027
+,SA,CC,53.76,BLU,2500.00,SCAB5376,,SCAB5376.jpg,scab_5376_cert.jpg,,20.40|16.74,,,SRI LANKA Cab Sapphire.CC 20.40x16.74,N,,
+,SA,EC,7.39,BLU,4000.00,SE7390VC,,se7390vc_.jpg,se7390vc_cert.jpg,,10.50|9.40|7.30,,,Sapphire. EC 10.5x9.4mm,H,GIA,
+,SA,PS,2.53,BLU,1650.00,SP25301,,SP25301.jpg,SP25301_CERT.jpg,,9.90|6.90|4.40,,,Sapphire. PS. Blue 9.9X6.9,N,TGL,25021140
+,SA,PS,9.16,Blue,4000.00,SP91600,,SP91600.jpg,SP91600_CERT.jpg,,17.40|9.30|7.60,,,Sapphire. PS. 17.4X9.3MM,H,GRS,GRS2014-069638
+,SA,PR,3.91,BLU,1400.00,SPR3910,,spr3910.jpg,SPR3910_CERT.jpg,,7.90|7.80|6.10,,,CERT PC Sapphire Gem 7.90x7.80,H,GRS,GRS2013-070114
+,SA,RD,1.56,BLU,1400.00,SR15600,,sr15600.jpg,sr15600_cert.jpg,,7.20|7.20|3.60,,,Natural Sapphire. Round 7.2mm,N,TGL,26030225
+,SA,RD,1.56,BLU,975.00,SR15601,,sr15601.jpg,sr15601_cert.jpg,,7.50|7.40|3.40,,,Natural. Sapphire. Round 7.5x7.4mm,N,TGL,26030224
+,SA,RD,3.04,BLU,1850.00,SR3040,,SR3040.jpg,SR3040_CERT.jpg,,8.10|8.10|5.70,,,RD Sapphire Gem 8.10,N,TGL,24080104
+,SA,RD,3.46,BLU,1650.00,SR34600,,sr34600.jpg,sr34600_cert.jpg,,8.50|8.50,,,Sapphire. Round. Blue 8.5MM,N,TGL,
+,SA,OV,10.30,BLU,6750.00,SV10300V,,sv10300v.jpg,sv10300v_cert.jpg,,14.30|10.70|7.60,,,Sapphire. Oval. 14.3x10.7mm,H,GIA,1172064057
+,SA,OV,11.04,BLU,7500.00,SV110400,,sv110400.jpg,sv110400_cert.jpg,,14.10|12.00|7.70,,CEY,Sapphire. Oval 14.1x12.0mm,H,GRS,GRS2013-094324
+,SA,OV,1.11,Blue,1200.00,SV11100SK,,SV11100SK.jpg,SV11100SK_CERT.jpg,,6.80|5.70|3.50,,,Sapphire. Oval. Blue 6.8X5.7MM,N,GIA,51611534127
+,SA,OV,1.19,BLU,1275.00,SV11900VC,,SV11900VC.jpg,SV11900VC_CERT.jpg,,8.10|6.00|2.50,,,Sapphire. Oval. 8.1x6.0mm,N,AIGS,GB15051998
+,SA,OV,1.19,BLU,1275.00,SV11902VC,,SV11902VC.jpg,SV11902VC_CERT.jpg,,7.50|6.00|2.90,,,Sapphire. Oval. 7.5x6.0mm,N,GIA,
+,SA,OV,12.70,BLU,16000.00,SV127000,,sv127000.jpg,sv127000_cert.jpg,,15.40|11.90|7.90,,,Natural. Sapphire 15.4x11.9mm,N,,GRS2014-105458
+,SA,OV,13.58,BLU,12500.00,SV135800,,sv135800.jpg,sv135800_cert.jpg,,14.40|11.90|9.10,,CEY,Natural Sapphire. Oval 14.4x11.9mm,N,GRS,GRS2015-099734
+,SA,OV,14.44,BLU,7500.00,SV144400,,sv144400.jpg,sv144400_cert.jpg,,16.20|11.90|8.60,,CEY,Sapphire. Oval 16.2x11.9mm,H,,GRS2014-101756
+,SA,OV,2.04,BLU,3250.00,SV20400VC,,SV20400VC.jpg,SV20400VC_CERT.jpg,,8.00|6.60|4.30,,BUR,Sapphire. Oval. 8.0x6.6mm,N,GIA,
+,SA,OV,2.12,Blue,1375.00,SV21200SK,,SV21200SK.jpg,SV21200SK_CERT.jpg,,8.90|6.70|4.10,,,Sapphire. Oval. Blue 8.9X6.7MM,N,GIA,5164539501
+,SA,OV,2.13,Blue,1400.00,SV21300SK,,SV21300SK.jpg,SV21300SK_CERT.jpg,,8.70|6.10|4.60,,,Sapphire. Oval. Blue 8.7x6.1MM,N,GIA,1162539692
+,SA,OV,3.09,BLU,2000.00,SV30900,,SV30900.jpg,SV30900_CERT.jpg,,9.50|7.30|5.20,,,Sapphire. Oval. Blue9.5X7.3,N,,
+,SA,OV,5.15,BLU,2500.00,SV51500,,SV51500.jpg,SV51500_CERT.jpg,,11.70|9.00|5.60,,,Sapphire. Oval 11.7X9.0,H,AIGS,
+,SA,OV,5.23,BLU,1950.00,SV52300,,SV52300.jpg,SV52300_CERT.jpg,,10.50|8.20|7.00,,,Sapphire. Oval. Blue 10.5X8.2,N,TGL,25090976
+,SA,OV,8.82,BLU,2500.00,SV8820,,sv8820.jpg,sv8820_CERT.jpg,,13.20|10.10|7.00,,,CERT OV Sapphire Gem 13.20x10.10,H,TGL,23120382
+,PA,PS,2.52,BLU,4500.00,XPBP2520,,xpbp2520.jpg,xpbp2520_cert.jpg,,10.50|5.80,,,Paraiba. PS 10.5x5.8mm,H,GIA,
+,PA,PS,4.08,BLU,5000.00,XPBP4080,,xpbp4080.jpg,xpbp4080_cert.jpg,,10.00|7.00,,,Paraiba. PS 10.0x7.0mm,H,GIA,
+,PA,RD,4.10,BLU,5000.00,XPBR4100,,xpbr4100.jpg,xpbr4100_cert.jpg,,7.90|7.90|5.00,,,Paraiba. Round 7.9MM,H,GIA,
+,PA,OV,5.12,BLU,15000.00,XPBV5120Z,,xpbv5120z.jpg,xpbv5120z_cert.jpg,,9.80|7.20|5.50,,BRA,Paraiba. Oval. 9.8x7.2mm,H,,
+,PA,OV,2.60,BLU,14000.00,XPV260Z,,XPV260Z.jpg,XPV260Z_CERT.jpg,,7.20|6.10|4.70,,BRA,Paraiba. Oval. Blue. Brazil 7.2X6.1,E,GIA,
+,YS,CU,2.24,Yellow,600.00,YC2240SK,,YC2240SK.jpg,YC2240SK_CERT.jpg,,8.20|7.10|4.20,,,Y. Sapphire. Cushion. Yellow 8.2X7.1MM,N,AGTA,94003707
+,YS,CU,8.05,Yellow,975.00,YC8050ZB,,yc8050zb.jpg,yc8050zb_cert.jpg,,11.00|10.90|6.70,,,Y. Sapphire. Cushion 11.0x10.9mm,H,TGL,
+,YS,CU,8.46,Yellow,675.00,YC8470,,YC8470.jpg,yc8470_CERT.jpg,,10.80|9.90|8.30,,,CC Y. Sapphire Gem. 10.8-9.9,N,GIA,1142874468
+,YS,RAD,10.56,Yellow,975.00,YD105600,,YD105600.jpg,YD105600_CERT.jpg,,13.20|10.50|8.08,,,Y. Sapphire. RAD 13.2x10.5mm,N,,25080783
+,YS,RAD,15.44,Yellow,1200.00,YD154400,,yd154400.jpg,yd154400_cert.jpg,,14.70|13.60|7.80,,,Y. Sapphire 14.7X13.6mm,H,GIA,16116294
+,YS,RAD,18.60,Yellow,1600.00,YD186000,,YD186000.jpg,yd186000_cert.jpg,,17.20|13.00|9.20,,,Y. Sapphire 17.2X13.0mm,N,AGTA,91010110
+,YS,EC,2.03,Yellow,750.00,YE2030SK,,YE2030SK.jpg,YE2030SK_CERT.jpg,,8.20|6.40|3.80,,,Y. Sapphire. EC. Yellow 8.2X6.4MM,N,GIA,2155571275
+,YS,EC,2.10,Yellow,750.00,YE21000SK,,YE21000SK.jpg,YE21000SK_CERT.jpg,,8.50|6.30|3.90,,,Y. Sapphire. EC. Yellow 8.5X6.3MM,N,GIA,2155571667
+,YS,EC,2.14,Yellow,600.00,YE21400SK,,YE21400SK.jpg,YE21400SK_CERT.jpg,,8.50|6.90|3.50,,,Y. Sapphire. EC. Yellow 8.5X6.9MM,N,AGTA,97010608
+,YS,OV,1.97,Yellow,600.00,YV19700SK,,YV19700SK.jpg,YV19700SK_CERT.jpg,,8.50|6.80|3.90,,,Y. Sapphire. Oval. Yellow 8.5X6.8MM,N,GIA,5161539432
+,YS,OV,2.67,Yellow,750.00,YV26700SK,,YV26700SK.jpg,YV26700SK_CERT.jpg,,9.10|6.90|4.70,,,Y. Sapphire. Oval. Yellow 9.1X6.9MM,N,GIA,2165539710
+,YS,OV,2.83,Yellow,750.00,YV28300SK,,YV28300SK.jpg,YV28300SK_CERT.jpg,,9.40|7.40|4.70,,,Y. Sapphire. Oval. Yellow 9.4X7.4MM,N,GIA,5161539572
+,PA,OV,4.61,BLU,150000.00,PBV461Z,,PBV461Z.jpg,pbv461z_CERT.jpg,,10.80|8.30|7.60,,,Paraiba. Oval. Blue 10.8X8.3,,GRS,GRS2014-114015
+,SA,CU,5.21,BLU,2500.00,SC5210,,,sc5210_cert.jpg,,9.50|9.00|6.40,,,Sapphire 9.5x9.0 mm,H,AIGS,
