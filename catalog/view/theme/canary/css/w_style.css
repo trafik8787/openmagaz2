@@ -315,4 +315,181 @@ home hover efect
     border-image: linear-gradient(90deg, rgba(135, 206, 235, 0), #b7ebfc 50%, rgba(135, 206, 235, 0) 100%) 0 0 100%;
     border-style: solid;
     margin-top: 0;
+    margin-bottom: 1px;
+}
+
+
+
+
+.w-navigate-circle {
+    position:relative;
+}
+
+.w-navigate-circle .active-circle{
+    animation: shadowThrob 1.5s infinite;
+    animation-direction: alternate;
+    -webkit-animation: shadowThrob 1.5s cubic-bezier(0.08, 0.65, 0.36, 1) infinite;
+    -webkit-animation-direction: alternate;
+}
+
+
+.w-navigate-circle .circle-content {
+    position: absolute;
+    display: inline-block;
+    border: 1px solid grey;
+    top: 7px;
+    left: 7px;
+    text-align: center;
+    width: 90%;
+    border-radius: 51%;
+    height: 90%;
+}
+
+
+.w-navigate-circle .w-one-block > *{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.w-navigate-circle .w-one-block .box-img {
+    position: absolute;
+    top: 10%;
+    left: 38%;
+}
+
+.w-navigate-circle .w-one-block .box-img img {
+    width: 22%;
+}
+
+.w-navigate-circle .w-one-block .title {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 19.5px;
+    color: #ff5959;
+    position: absolute;
+    top: 37%;
+    text-align: center;
+}
+
+.w-navigate-circle .w-one-block .text {
+    position: absolute;
+    text-align: center;
+    top: 58%;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.w-navigate-circle .my-div {
+    position: relative;
+    display: inline-block;
+    height: 220px;
+    width: 220px;
+    border-radius: 110px;
+    border: 1px solid rgba(128, 128, 128, 0.39);
+
+}
+
+@keyframes shadowThrob {
+    from {box-shadow: 0 0 20px 4px rgba(128, 128, 128, 0.55);}
+    to {box-shadow: 0 0 1px 0px rgba(128, 128, 128, 0.74);}
+}
+@-webkit-keyframes shadowThrob {
+    from {box-shadow: 0 0 20px 4px rgba(128, 128, 128, 0.55);}
+    to {box-shadow: 0 0 1px 0px rgba(128, 128, 128, 0.74);}
+}
+
+
+
+.w-navigate-circle *:before, .w-navigate-circle *:after { content: ''; }
+.w-navigate-circle hr {
+    border: 0;
+    margin: 1.35em auto;
+    background-position: 50%;
+    box-sizing: border-box;
+}
+
+.w-navigate-circle .active-hr {
+    box-shadow: -10px 10px 0 hsla(0, 0%, 100%, 0.15), 10px -10px 0 hsla(0, 0%, 100%, 0.15);
+    background-image: radial-gradient( closest-side, #015bb3, hsla(0, 0%, 50%, 0) 100%)!important;
+}
+
+.w-navigate-circle .active-hr:after {
+    background-color: #0179b5!important;
+}
+
+.w-navigate-circle .accessory {
+    height: 4px;
+    background-image: radial-gradient(
+            closest-side,
+            hsla(0, 0%, 50%, 1.0),
+            hsla(0, 0%, 50%, 0) 100%);
+    position: relative;
+    display: inline-block;
+    width: 23%;
+    bottom: 82px;
+}
+.w-navigate-circle .accessory:after {
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    display:block;
+    background-color: hsl(0, 0%, 75%);
+    height: 17px;
+    width: 17px;
+    transform: rotate(45deg);
+    margin-top:  -9px;
+    margin-left: -10px;
+    border-radius: 4px 0;
+    border: 4px solid hsla(0, 0%, 100%, 0.35);
+    background-clip: padding-box;
+    box-shadow: -10px 10px 0 hsla(0, 0%, 100%, 0.15), 10px -10px 0 hsla(0, 0%, 100%, 0.15);
+}
+
+
+.w-navigate-circle .w-opacity {
+    opacity: 0.5;
+}
+
+.w-navigate-circle .popover-content {
+    font-size: 23px;
+    background-color: #808080;
+    border-radius: 38px;
+    padding: 10px 20px 10px 24px;
+    max-width: 356px;
+}
+
+.w-navigate-circle .popover {
+    background-color: #808080;
+    color: #FFFFFF;
+    border-radius: 38px;
+    /*left: 4%!important;*/
+    margin-left: 10%;
+    max-width: 356px;
+}
+
+
+.w-navigate-circle .popover.top > .arrow:after {
+    border-top-color: #808080;
+}
+
+.w-navigate-circle .popover.top > .arrow {
+    margin-left: -130px!important;
+}
+
+
+@media (max-width: 767px) {
+    .w-navigate-circle .my-div {
+        height: 110px;
+        width: 110px;
+    }
+
+    .w-navigate-circle .w-one-block .box-img img {
+        width: 50%;
+    }
+
+    .w-navigate-circle .w-one-block .box-img {
+        top: 23%;
+        left: 22%;
+    }
 }

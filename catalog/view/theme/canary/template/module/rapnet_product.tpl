@@ -26,16 +26,10 @@
         <div class="center-bl">
             <div class="one-product clearfix">
                 <div class="one-product-slider">
-                    <div class="w-slider-for" style="margin-bottom: 20px;border: 1px solid #808080;border-radius: 2px; text-align: center">
+                    <div class="w-slider-for" style="margin-bottom: 20px;border: 1px solid #808080;border-radius: 2px; text-align: center;">
                         <img src="<?=imageDiamont($product->response->body->diamond->shape)?>" width="auto" title="" alt="fgh">
                     </div>
-                    <div class="slider-nav">
 
-
-                        <!--*<div class="wrapper-img-slider"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>"></div>*-->
-
-
-                    </div>
                 </div>
                 <div class="one-product-info" id="product">
                     <div class="text-article clearfix"><?=$product->response->body->diamond->shape?> <?=$product->response->body->diamond->size?> CARAT <?=$product->response->body->diamond->color?> <?=$product->response->body->diamond->clarity?> <div class="product-code">Product code: <strong>SKU:<?=$product->response->body->diamond->diamond_id?></strong></div></div>

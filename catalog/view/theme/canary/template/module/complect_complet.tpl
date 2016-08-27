@@ -6,6 +6,7 @@
 <?//dd($CanaryDiamontCom)?>
 
 <main class="w-diamonds-product w-general-container">
+    <hr class="fade-2">
     <section class="static-page">
         <div class="center-bl">
 
