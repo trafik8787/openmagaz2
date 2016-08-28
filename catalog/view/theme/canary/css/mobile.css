@@ -770,7 +770,8 @@
     margin: 0 0 10px; }
 
   .list-product .filter-product-line .dropdown {
-    height: 40px; }
+    /*height: 40px; */
+  }
 
   .list-product .filter-product-line .dropdown > a {
     padding: 10px; }
@@ -797,9 +798,9 @@
   .wrapper-product-table .table tbody tr {
     width: 50%;
     height: inherit;
-    min-height: 220px;
-    margin: 0 0 30px;
-    padding: 20px 10px 0 125px;
+    min-height: 140px;
+    margin: 0 0 15px;
+    padding: 60px 10px 0 125px;
     position: relative;
     display: block; }
     .wrapper-product-table .table tbody tr:nth-child(4n) {
@@ -1025,9 +1026,9 @@
   .wrapper-product-table .table tbody tr {
     width: 100%;
     height: inherit;
-    min-height: 220px;
-    margin: 0 0 30px;
-    padding: 20px 0 0 150px;
+    min-height: 140px;
+    margin: 0 0 15px;
+    padding: 60px 0 0 150px;
     position: relative;
     display: block; }
     .wrapper-product-table .table tbody tr td {
