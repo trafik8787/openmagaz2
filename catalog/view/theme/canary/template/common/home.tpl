@@ -8,9 +8,14 @@
             <!--*<div class="text">
                 This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
             </div>*-->
-            <a href="/diamonds" class="brand-btn" style="margin-bottom: 10px;">Start With a Diamond</a><br>
+            <!--*<a href="/diamonds" class="brand-btn" style="margin-bottom: 10px;">Start With a Diamond</a><br>*-->
+            <!--*<p></p>*-->
+            <!--*<a href="/engagement-rings" class="brand-btn">Start With a Setting</a>*-->
+
+            <span  class="w1-btn-5"><a href="/diamonds">Start With a Diamond</a></span>
             <p></p>
-            <a href="/engagement-rings" class="brand-btn">Start With a Setting</a>
+            <span  class="w1-btn-5"><a href="/engagement-rings">Start With a Setting</a></span>
+
         </div>
     </section>
     <div class="panel-group brilliant-panel-main" id="accordion" role="tablist" aria-multiselectable="true">

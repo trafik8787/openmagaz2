@@ -2,28 +2,7 @@
 <footer>
     <section class="newsletter-main clearfix">
         <div class="newsletter-form background-4">
-            <div class="wrapper-form">
-                <div class="title">
-                    NEWSLETTER
-                </div>
-                <div class="text">
-                    Sign up to receive the latest news and exclusive offers
-                </div>
-                <form action="" class="form-nl">
-                    <div class="gender clearfix">
-                        <div class="one-block active">
-                            <i class="fa fa-venus"></i> woman
-                        </div>
-                        <div class="one-block">
-                            <i class="fa fa-mars"></i> man
-                        </div>
-                    </div>
-                    <div class="clearfix">
-                        <input type="text" placeholder="Enter your email adress...">
-                        <button class="form-brand">subscribe</button>
-                    </div>
-                </form>
-            </div>
+            <?=$newsletter?>
         </div>
         <div class="bg-right"></div>
     </section>
@@ -32,7 +11,6 @@
         <div class="wrapper-footer clearfix">
             <div class="one-block">
                 <div class="title">CONTACT US</div>
-                <!--<div class="one-line"><i class="pin-ico"></i><span>123 New York Land, king street, USA</span></div>-->
                 <div class="one-line"><i class="mail-ico"></i><span>info@brilliantcanary.com</span></div>
                 <div class="one-line"><i class="call-2-ico"></i><span>800-214-6550</span></div>
             </div>
