@@ -401,7 +401,7 @@
             $url_price = '&price='+queryStr['price'].split(',')[0]+','+queryStr['price'].split(',')[1];
         } else {
             $get_price_from = 200;
-            $get_price_to = 999000;
+            $get_price_to = 990000;
         }
 
 
@@ -668,24 +668,30 @@
         });
 
 
-        $('.w-input-price-from').val($get_price_from);
-        $('.w-input-price-to').val($get_price_to);
+        $('.w-input-price-from').val(numeral($get_price_from).format('$0,0'));
+        $('.w-input-price-to').val(numeral($get_price_to).format('$0,0'));
+
+        var w_slider_price_from;
+        var w_slider_price_to;
 
         var $w_slider_price = $('#w-slider-price').slider({
             min: 200,
-            max: 999000,
+            max: 990000,
             range: true,
             step: 10,
             animate: 'slow',
             values: [$get_price_from, $get_price_to],
             slide: function( event, ui ) {
-
-                $('.w-input-price-from').val(Math.round(Math.easeIn(ui.values[0], 200, 999000, 6.9)));
-                $('.w-input-price-to').val(Math.round(Math.easeIn(ui.values[1],  200, 999000, 6.9)));
+                w_slider_price_from = Math.round(Math.easeIn(ui.values[0], 200, 990000, 6.9));
+                w_slider_price_to = Math.round(Math.easeIn(ui.values[1],  200, 990000, 6.9));
+                console.log(w_slider_price_from);
+                console.log(w_slider_price_to);
+                $('.w-input-price-from').val(numeral(w_slider_price_from).format('$0,0'));
+                $('.w-input-price-to').val(numeral(w_slider_price_to).format('$0,0'));
             },
             change: function( event, ui ) {
 
-                $url_price = '&price='+$('.w-input-price-from').val()+','+$('.w-input-price-to').val();
+                $url_price = '&price='+numeral().unformat($('.w-input-price-from').val())+','+numeral().unformat($('.w-input-price-to').val());
                 redirect =  generate_url();
                 history.pushState('', '', redirect);
 
@@ -695,14 +701,22 @@
 
 
         $('.w-input-price-from').on('change', function(){
-            $w_slider_price.slider("values", 0, $(this).val());
+            $w_slider_price.slider("values", 0, numeral().unformat($(this).val()));
         });
 
         $('.w-input-price-to').on('change', function(){
-            $w_slider_price.slider("values", 1, $(this).val());
+            $w_slider_price.slider("values", 1, numeral().unformat($(this).val()));
         });
 
-
+        $('.w-input-price-to, .w-input-price-from').inputmask("numeric", {
+            radixPoint: ".",
+            groupSeparator: ",",
+            digits: 2,
+            autoGroup: true,
+            prefix: '$', //No Space, this will truncate the first character
+            rightAlign: false,
+            oncleared: function () { self.Value(''); }
+        });
 
         //advendset
 
@@ -862,7 +876,7 @@
 
         $(document).on('click', '.w-pagination-diamonts .pagination li a', function(){
 
-           //alert($(this).href());
+            //alert($(this).href());
 
             var $gets = parseQueryString ($(this).attr("href"));
             console.log($gets);
@@ -957,7 +971,7 @@
 
             });
             $('html, body').animate({ scrollTop: 0 }, 'slow');
-           return false;
+            return false;
         });
 
 

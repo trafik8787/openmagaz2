@@ -40,7 +40,7 @@
 
 
 
-<?//dd($categories[3])?>
+<?//dd($categories)?>
 
 <body>
 <header>
@@ -198,13 +198,13 @@
                     </div>
                 </li>
 
-                <li class="dropdown-b"><!--WEDDING RINGS-->
+                <li class="dropdown-b"><!--*WEDDING RINGS*-->
                     <a href="<?php echo $categories[2]['href']?>" class="w-general-category"><?php echo $categories[2]['name']?></a>
                     <div class="dropdown-inside">
                         <div class="row clearfix">
                             <div class="col-md-8 col-sm-8 col-xs-8">
 
-                                <div class="title">WOMAN</div><!--woman-->
+                                <div class="title">WOMAN</div><!--*woman*-->
                                 <ul class="brilliant-style brilliant-style-long ul-first-drop">
 
 
@@ -228,7 +228,7 @@
                                 </ul>
 
 
-                                <div class="title">MAN</div><!--man-->
+                                <div class="title">MAN</div><!--*man*-->
                                 <ul class="brilliant-style brilliant-style-long ul-first-drop" style="width: 73%">
 
                                     <?if (!empty($categories[2]['children'][4])):?>
@@ -325,6 +325,69 @@
 
                     </div>
                 </li>
+
+
+                <li class="dropdown-b" data-target="menu4">
+                    <a href="<?php echo $categories[4]['href']?>" class="w-general-category"><?php echo $categories[4]['name']?></a>
+                    <div class="dropdown-inside">
+                        <div class="row clearfix">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="title">search gemstones gallery</div>
+                                <ul class="brilliant-style gemstones-box">
+                                    <li>
+                                        <a href="#"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="gemstones gemstones2"></i><span>pinc sapphire</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="gemstones gemstones4"></i><span>red ruby</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="gemstones gemstones5"></i><span>green emerald</span></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="title">desighn your own</div>
+                                <ul class="style-br-long ul-first-drop">
+                                    <li>
+                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-13"></i></span> <span>Diamond engagement rings</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span>Diamond studs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-14"></i></span> <span>Diamond pendant</span></a>
+                                    </li>
+                                    <li class="last-li-destones">
+                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span>Matching Gemstone Pairs</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <div class="title">mille coeurs colections</div>
+                                <ul class="style-br-long ul-first-drop">
+                                    <li>
+                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-11"></i></span> <span>Diamond engagement rings</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span>Diamond studs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-12"></i></span> <span>Diamond pendant</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/img18.png" alt="img" class="img-under-style">
+                        </div>
+                    </div>
+                </li>
+
 
                 <li class="bord-l"></li>
                 <li>

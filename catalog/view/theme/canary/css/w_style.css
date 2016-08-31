@@ -198,13 +198,13 @@ home hover efect
 }
 
 .ehover2 .overlay {
-    background-color: rgba(0, 0, 0, 0.38);
     opacity: 0;
-    -webkit-transform: translate(460px, -100px) rotate(180deg);
-    -ms-transform: translate(460px, -100px) rotate(180deg);
-    transform: translate(460px, -100px) rotate(180deg);
-    -webkit-transition: all .2s .4s ease-in-out;
-    transition: all .2s .4s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.38);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 
@@ -479,7 +479,6 @@ home hover efect
     background-color: hsl(0, 0%, 75%);
     height: 15px;
     width: 15px;
-    transform: rotate(45deg);
     margin-top: -8.6px;
     margin-left: -10px;
     border-radius: 10px;

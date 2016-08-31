@@ -3564,7 +3564,7 @@ button:hover, button:focus {
   height: 10px; }
 
 .precious-box .btn-filter {
-  width: 135px;
+  width: 140px;
   text-align: left; }
 
 .ui-slider-horizontal .ui-slider-range {
@@ -4106,9 +4106,10 @@ button:hover, button:focus {
     text-transform: uppercase; }
 
 .precious-box .btn-filter {
-  margin-right: 15px;
-  padding: 0 0 0 25px;
-  position: relative; }
+  margin-right: 50px;
+  padding: 0 0 0 23px;
+  position: relative;
+}
   .precious-box .btn-filter.active:before {
     background-color: #fac652; }
   .precious-box .btn-filter:before {

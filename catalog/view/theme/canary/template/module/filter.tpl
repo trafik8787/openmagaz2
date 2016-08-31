@@ -1,5 +1,4 @@
 
-        <?//dd($filter_groups)?>
         <?php foreach ($filter_groups as $filter_group):?>
 
             <?php if (!empty($filter_group['filter'])):?>
@@ -61,8 +60,8 @@
                         <div class="filter-block filter1">
                             <div id="slider"></div>
                             <div class="clearfix">
-                                <input type="text" value="<?php if (!empty($PriceFrom)) { echo $PriceFrom; } else { echo $filter_group['dop_filter']['min']; }?>" id="amountPrice1" class="dop-filtr-price-min input-slider-p pull-left" name="min_price">
-                                <input type="text" value="<?php if (!empty($PriceTo)) { echo  $PriceTo; } else { echo $filter_group['dop_filter']['max']; }?>" id="amountPrice2" class="dop-filtr-price-max input-slider-p pull-right" name="max_price">
+                                <input type="text" value="$<?php if (!empty($PriceFrom)) { echo $PriceFrom; } else { echo number_format($filter_group['dop_filter']['min']); }?>" id="amountPrice1" class="dop-filtr-price-min input-slider-p pull-left" name="min_price">
+                                <input type="text" value="$<?php if (!empty($PriceTo)) { echo  $PriceTo; } else { echo number_format($filter_group['dop_filter']['max']); }?>" id="amountPrice2" class="dop-filtr-price-max input-slider-p pull-right" name="max_price">
                             </div>
                         </div>
                     </div>
@@ -102,14 +101,15 @@ $(document).ready(function () {
         $('input[name^=\'filter\']:checked').each(function (element) {
             filter.push(this.value);
         });
+        var min_price_val = numeral().unformat($('input[name=\'min_price\']').val());
+        var max_price_val = numeral().unformat($('input[name=\'max_price\']').val());
 
-
-        if ($('input[name=\'min_price\']').val() != '' && $('input[name=\'min_price\']').val() != undefined) {
-            min_price = '&PriceFrom=' + $('input[name=\'min_price\']').val();
+        if (min_price_val != '' && min_price_val != undefined) {
+            min_price = '&PriceFrom=' + min_price_val;
         }
 
-        if ($('input[name=\'max_price\']').val() != '' && $('input[name=\'max_price\']').val() != undefined) {
-            max_price = '&PriceTo=' + $('input[name=\'max_price\']').val();
+        if (max_price_val != '' && max_price_val != undefined) {
+            max_price = '&PriceTo=' + max_price_val;
         }
 
 
@@ -146,9 +146,12 @@ $(document).ready(function () {
     var max = parseInt("<?php echo !empty($filter_group['dop_filter']['max']) ? $filter_group['dop_filter']['max'] : 0 ?>");
 
 
-    var ValMin = $(".dop-filtr-price-min").val();
-    var ValMax = $(".dop-filtr-price-max").val();
+    var ValMin = numeral().unformat($(".dop-filtr-price-min").val());
+    var ValMax = numeral().unformat($(".dop-filtr-price-max").val());
 
+
+    var val_curent_max;
+    var val_curent_min;
 
     var slider = $("#slider").slider({
         range: true,
@@ -158,8 +161,10 @@ $(document).ready(function () {
         max: max,
         values: [ValMin, ValMax],
         slide: function( event, ui ) {
-          $('.dop-filtr-price-max').val(Math.round(Math.easeIn(ui.values[1], min, max, 4.3)));
-          $('.dop-filtr-price-min').val(Math.round(Math.easeIn(ui.values[0], min, max, 4.3)));
+            val_curent_max = Math.round(Math.easeIn(ui.values[1], min, max, 4.3));
+            val_curent_min = Math.round(Math.easeIn(ui.values[0], min, max, 4.3));
+          $('.dop-filtr-price-max').val(numeral(val_curent_max).format('$0,0'));
+          $('.dop-filtr-price-min').val(numeral(val_curent_min).format('$0,0'));
         },
         change: function( event, ui ) {
 
@@ -170,8 +175,8 @@ $(document).ready(function () {
                 filter.push(this.value);
             });
 
-            min_price = '&PriceFrom='+$('.dop-filtr-price-min').val();
-            max_price = '&PriceTo='+$('.dop-filtr-price-max').val();
+            min_price = '&PriceFrom='+numeral().unformat($(".dop-filtr-price-min").val());
+            max_price = '&PriceTo='+numeral().unformat($(".dop-filtr-price-max").val());
 
             var action = $('.w-action_page').val();
             redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
@@ -200,13 +205,25 @@ $(document).ready(function () {
     });
 
   $('.dop-filtr-price-max').on('change', function(){
-    slider.slider("values", 1, $(this).val());
+    slider.slider("values", 1, numeral().unformat($(this).val()));
   });
 
   $('.dop-filtr-price-min').on('change', function(){
-    slider.slider("values", 0, $(this).val());
+
+    slider.slider("values", 0, numeral().unformat($(this).val()));
   });
 
+
+
+    $('.dop-filtr-price-min, .dop-filtr-price-max').inputmask("numeric", {
+        radixPoint: ".",
+        groupSeparator: ",",
+        digits: 2,
+        autoGroup: true,
+        prefix: '$', //No Space, this will truncate the first character
+        rightAlign: false,
+        oncleared: function () { self.Value(''); }
+    });
 
 
 });
