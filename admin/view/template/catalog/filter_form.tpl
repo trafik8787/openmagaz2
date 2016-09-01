@@ -45,7 +45,7 @@
                     <select class="form-control" name="dop_filtr" id="input-sort-dop-filtr">
                         <option value="">Выбрать</option>
                         <option <? if (!empty($filter_group_description[$language['language_id']]['dop_filtr']) and $filter_group_description[$language['language_id']]['dop_filtr'] == 'price_filtr') {?> selected <?}?> value="price_filtr">Цена</option>
-
+                        <option <? if (!empty($filter_group_description[$language['language_id']]['dop_filtr']) and $filter_group_description[$language['language_id']]['dop_filtr'] == 'weight_filtr') {?> selected <?}?> value="weight_filtr">Weight</option>
                     </select>
 
                 </div>

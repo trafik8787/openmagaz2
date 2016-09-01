@@ -48,6 +48,11 @@ class ControllerModuleFilter extends Controller {
                 $data['PriceTo'] = $this->request->get['PriceTo'];
             }
 
+            if (isset($this->request->get['WeightFrom']) and isset($this->request->get['WeighteTo'])) {
+                $data['WeightFrom'] = $this->request->get['WeightFrom'];
+                $data['WeighteTo'] = $this->request->get['WeighteTo'];
+            }
+
 			$this->load->model('catalog/product');
 
 			$data['filter_groups'] = array();

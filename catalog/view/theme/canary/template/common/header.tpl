@@ -580,7 +580,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="title">desighn your own</div>
+                                    <div class="title">Gemstone Jewelry</div>
                                     <ul class="style-br-long ul-first-drop">
                                         <li>
                                             <a href="#"><span class="wrap-ico2"><i class="own-b own-b-13"></i></span> <span>Diamond engagement rings</span></a>
@@ -596,20 +596,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="title">mille coeurs colections</div>
-                                    <ul class="style-br-long ul-first-drop">
-                                        <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-11"></i></span> <span>Diamond engagement rings</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-10"></i></span> <span>Diamond studs</span></a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><span class="wrap-ico2"><i class="own-b own-b-12"></i></span> <span>Diamond pendant</span></a>
-                                        </li>
-                                    </ul>
-                                </div>
+
                                 <img src="/catalog/view/theme/canary/img/img18.png" alt="img" class="img-under-style">
                             </div>
                         </div>

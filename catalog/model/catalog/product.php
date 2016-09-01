@@ -114,6 +114,13 @@ class ModelCatalogProduct extends Model {
             }
         }
 
+        //todo добавляем в запрос выборки товаров условие по диапазону карат
+        if (!empty($data['weight_filter'])) {
+            if ($data['weight_filter']['min'] != '' and $data['weight_filter']['max'] != '') {
+                $sql .= " AND (p.weight BETWEEN " . $data['weight_filter']['min'] . " AND " . $data['weight_filter']['max'] . ")";
+            }
+        }
+
 		if (!empty($data['filter_name']) || !empty($data['filter_tag'])) {
 			$sql .= " AND (";
 
@@ -478,6 +485,13 @@ class ModelCatalogProduct extends Model {
         if (!empty($data['price_filter'])) {
             if ($data['price_filter']['min'] != '' and $data['price_filter']['max'] != '') {
                 $sql .= " AND (p.price BETWEEN " . $data['price_filter']['min'] . " AND " . $data['price_filter']['max'] . ")";
+            }
+        }
+
+        //todo добавляем в запрос выборки товаров условие по диапазону карат количество товаров
+        if (!empty($data['weight_filter'])) {
+            if ($data['weight_filter']['min'] != '' and $data['weight_filter']['max'] != '') {
+                $sql .= " AND (p.weight BETWEEN " . $data['weight_filter']['min'] . " AND " . $data['weight_filter']['max'] . ")";
             }
         }
 

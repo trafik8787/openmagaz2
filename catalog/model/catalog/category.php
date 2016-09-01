@@ -162,23 +162,28 @@ class ModelCatalogCategory extends Model {
 
         if (!empty($query)) {
             $result = array();
-
+            //dd($query->rows);
             foreach ($query->rows as $item) {
 
-                switch ($item['dop_filter']) {
-                    case 'price_filtr':
-                        $price = $this->getPriceProduct($category_id);
-                }
 
-                if ($price) {
+                if ($item['dop_filter'] === 'price_filtr') {
+                    $price = $this->getPriceProduct($category_id);
                     $result[] = array('filter_group_id' => $item['filter_group_id'],
                         'name' => $item['name'],
                         'dop_filter' => $price);
                 }
 
+                if ($item['dop_filter'] === 'weight_filtr') {
+                    $weight = $this->getWeightProduct($category_id);
+                    $result[] = array('filter_group_id' => $item['filter_group_id'],
+                        'name' => $item['name'],
+                        'dop_filter' => $weight);
+                }
+
             }
 
         }
+        //dd($result);
         return $result;
     }
 
@@ -191,6 +196,12 @@ class ModelCatalogCategory extends Model {
         $max = $this->db->query("SELECT MAX(price) maxprice FROM " . DB_PREFIX . "product pr INNER JOIN ". DB_PREFIX ."product_to_category ptc ON(pr.product_id = ptc.product_id) WHERE ptc.category_id = ".$category_id);
         $min = $this->db->query("SELECT MIN(price) minprice FROM " . DB_PREFIX . "product pr INNER JOIN ". DB_PREFIX ."product_to_category ptc ON(pr.product_id = ptc.product_id) WHERE ptc.category_id = ".$category_id);
         return array('min' => $min->row['minprice'], 'max' => $max->row['maxprice']);
+    }
+
+    public function getWeightProduct ($category_id) {
+        $max = $this->db->query("SELECT MAX(weight) maxweight FROM " . DB_PREFIX . "product pr INNER JOIN ". DB_PREFIX ."product_to_category ptc ON(pr.product_id = ptc.product_id) WHERE ptc.category_id = ".$category_id);
+        $min = $this->db->query("SELECT MIN(weight) minweight FROM " . DB_PREFIX . "product pr INNER JOIN ". DB_PREFIX ."product_to_category ptc ON(pr.product_id = ptc.product_id) WHERE ptc.category_id = ".$category_id);
+        return array('min' => $min->row['minweight'], 'max' => $max->row['maxweight']);
     }
 
 

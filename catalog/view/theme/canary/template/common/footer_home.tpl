@@ -82,7 +82,9 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/device.min.js"></script>
 <script type="text/javascript" src="/catalog/view/javascript/app.js" ></script>
 <script type="text/javascript" src="/catalog/view/javascript/common.js" ></script>
-
+<script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
 
 </body>
 </html>

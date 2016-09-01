@@ -31,6 +31,16 @@ class ControllerProductCategory extends Controller {
             $PriceTo = '';
         }
 
+        if (isset($this->request->get['WeightFrom']) and isset($this->request->get['WeightTo'])) {
+            //dd($this->request->get);
+            $WeightFrom = $this->request->get['WeightFrom'];
+            $WeightTo = $this->request->get['WeightTo'];
+        } else {
+            $WeightFrom = '';
+            $WeightTo = '';
+        }
+
+
 
 		if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
@@ -189,6 +199,7 @@ class ControllerProductCategory extends Controller {
 				'filter_category_id' => $category_id,
 				'filter_filter'      => $filter,
                 'price_filter'		 => array('min' => $PriceFrom, 'max' => $PriceTo), //добавлен фильтр по цене
+                'weight_filter'		 => array('min' => $WeightFrom, 'max' => $WeightTo), //добавлен фильтр по каратам
 				'sort'               => $sort,
 				'order'              => $order,
 				'start'              => ($page - 1) * $limit,
@@ -264,6 +275,10 @@ class ControllerProductCategory extends Controller {
             //todo добавляем цену к части урла который попалает в сортировку
             if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
                 $url .= '&PriceFrom=' . $this->request->get['PriceFrom'].'&PriceTo=' . $this->request->get['PriceTo'];
+            }
+
+            if (isset($this->request->get['WeightFrom']) and isset($this->request->get['WeightTo'])) {
+                $url .= '&WeightFrom=' . $this->request->get['WeightFrom'].'&WeightTo=' . $this->request->get['WeightTo'];
             }
 
 			if (isset($this->request->get['limit'])) {

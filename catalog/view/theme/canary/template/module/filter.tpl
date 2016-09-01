@@ -54,19 +54,48 @@
             <?endif?>
 
             <?php if (!empty($filter_group['dop_filter'])):?>
+                <?if ($filter_group['name'] === 'Price'):?>
+                    <?
+                        $min_price = !empty($filter_group['dop_filter']['min']) ? $filter_group['dop_filter']['min'] : 0;
+                        $max_price = !empty($filter_group['dop_filter']['max']) ? $filter_group['dop_filter']['max'] : 0;
+                    ?>
+                    <div class="right-f3">
+                        <div class="one-line">
+                            <div class="title">Price
 
-                <div class="right-f3">
-                    <div class="one-line">
-                        <div class="filter-block filter1">
-                            <div id="slider"></div>
-                            <div class="clearfix">
-                                <input type="text" value="$<?php if (!empty($PriceFrom)) { echo $PriceFrom; } else { echo number_format($filter_group['dop_filter']['min']); }?>" id="amountPrice1" class="dop-filtr-price-min input-slider-p pull-left" name="min_price">
-                                <input type="text" value="$<?php if (!empty($PriceTo)) { echo  $PriceTo; } else { echo number_format($filter_group['dop_filter']['max']); }?>" id="amountPrice2" class="dop-filtr-price-max input-slider-p pull-right" name="max_price">
+                            </div>
+                            <div class="filter-block filter1">
+                                <div id="slider"></div>
+                                <div class="clearfix">
+                                    <input type="text" value="$<?php if (!empty($PriceFrom)) { echo $PriceFrom; } else { echo number_format($filter_group['dop_filter']['min']); }?>" id="amountPrice1" class="dop-filtr-price-min input-slider-p pull-left" name="min_price">
+                                    <input type="text" value="$<?php if (!empty($PriceTo)) { echo  $PriceTo; } else { echo number_format($filter_group['dop_filter']['max']); }?>" id="amountPrice2" class="dop-filtr-price-max input-slider-p pull-right" name="max_price">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                <?elseif ($filter_group['name'] === 'Weight'):?>
+                    <?//dd($filter_group)?>
+                    <?
+                        $min_weight = !empty($filter_group['dop_filter']['min']) ? $filter_group['dop_filter']['min'] : 0;
+                        $max_weight = !empty($filter_group['dop_filter']['max']) ? $filter_group['dop_filter']['max'] : 0;
+                    ?>
+                    <div class="right-f3">
+                        <div class="one-line">
+                            <div class="title">Carat
+
+                            </div>
+                            <div class="filter-block filter1">
+                                <div id="slider-weight"></div>
+                                <div class="clearfix">
+                                    <input type="text" value="<?php if (!empty($WeightFrom)) { echo $WeightFrom; } else { echo number_format($filter_group['dop_filter']['min']); }?>" id="amountWeight1" class="dop-filtr-weight-min input-slider-p pull-left" name="min_weight">
+                                    <input type="text" value="<?php if (!empty($WeighteTo)) { echo  $WeightTo; } else { echo number_format($filter_group['dop_filter']['max']); }?>" id="amountWeight2" class="dop-filtr-weight-max input-slider-p pull-right" name="max_weight">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <?endif?>
             <?endif?>
 
         <?endforeach?>
@@ -113,8 +142,19 @@ $(document).ready(function () {
         }
 
 
+        var min_weight_val = $('input[name=\'min_weight\']').val();
+        var max_weight_val = $('input[name=\'max_weight\']').val();
+
+        if (min_weight_val != '' && min_weight_val != undefined) {
+            min_weight = '&WeightFrom=' + min_weight_val;
+        }
+
+        if (max_weight_val != '' && max_weight_val != undefined) {
+            max_weight = '&WeightTo=' + max_weight_val;
+        }
+
         var action = $('.w-action_page').val();
-        redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
+        redirect = action + '&filter=' + filter.join(',') + min_price + max_price + min_weight + max_weight;
         history.pushState('', '', redirect);
 
        // console.log(location.search);
@@ -125,7 +165,7 @@ $(document).ready(function () {
             type: "GET", // будем передавать данные через POST
             dataType: "HTML", // указываем, что нам вернется JSON
             url: redirect,
-            data: '&filter=' + filter.join(',') + min_price + max_price, // передаем данные из формы
+            data: '&filter=' + filter.join(',') + min_price + max_price + min_weight + max_weight, // передаем данные из формы
             success: function (response) { // когда получаем ответ
                 // console.log(response);
 
@@ -142,9 +182,8 @@ $(document).ready(function () {
     });
 
 
-    var min = parseInt("<?php echo !empty($filter_group['dop_filter']['min']) ? $filter_group['dop_filter']['min'] : 0 ?>");
-    var max = parseInt("<?php echo !empty($filter_group['dop_filter']['max']) ? $filter_group['dop_filter']['max'] : 0 ?>");
-
+    var min = parseInt("<?php echo $min_price ?>");
+    var max = parseInt("<?php echo $max_price ?>");
 
     var ValMin = numeral().unformat($(".dop-filtr-price-min").val());
     var ValMax = numeral().unformat($(".dop-filtr-price-max").val());
@@ -204,6 +243,65 @@ $(document).ready(function () {
         }
     });
 
+
+
+    var min_weight_min = parseInt("<?php echo $min_weight ?>");
+    var max_weight_max = parseInt("<?php echo $max_weight ?>");
+
+    var ValMinWeight = $(".dop-filtr-weight-min").val();
+    var ValMaxWeight = $(".dop-filtr-weight-max").val();
+
+
+    var slider_weight = $('#slider-weight').slider({
+        range: true,
+        min: min_weight_min,
+        animate: 'slow',
+        step: 0.05,
+        max: max_weight_max,
+        values: [ValMinWeight, ValMaxWeight],
+        slide: function (event, ui) {
+            $('.dop-filtr-weight-max').val(Math.easeIn(ui.values[1], min_weight_min, max_weight_max, 3.6).toFixed(2));
+            $('.dop-filtr-weight-min').val(Math.easeIn(ui.values[0], min_weight_min, max_weight_max, 3.6).toFixed(2));
+        },
+        change: function( event, ui ) {
+
+            $('.container-loader').show();
+
+            filter = [];
+            $('input[name^=\'filter\']:checked').each(function (element) {
+                filter.push(this.value);
+            });
+
+            min_weight = '&WeightFrom='+$(".dop-filtr-weight-min").val();
+            max_weight = '&WeightTo='+$(".dop-filtr-weight-max").val();
+
+            var action = $('.w-action_page').val();
+            redirect = action + '&filter=' + filter.join(',') + min_weight + max_weight;
+            history.pushState('', '', redirect);
+
+
+            $.ajax({ // описываем наш запрос
+                type: "GET", // будем передавать данные через POST
+                dataType: "HTML", // указываем, что нам вернется JSON
+                url: redirect,
+                data: '&filter=' + filter.join(',') + min_weight + max_weight, // передаем данные из формы
+                success: function (response) { // когда получаем ответ
+
+                    $('.w-category-ajax').empty();
+                    $('.w-category-ajax').html(response);
+                    $('.container-loader').hide();
+
+                    //initialize_grid();
+
+                }
+
+            });
+
+
+        }
+    });
+
+
   $('.dop-filtr-price-max').on('change', function(){
     slider.slider("values", 1, numeral().unformat($(this).val()));
   });
@@ -213,6 +311,14 @@ $(document).ready(function () {
     slider.slider("values", 0, numeral().unformat($(this).val()));
   });
 
+
+    $('.dop-filtr-weight-max').on('change', function(){
+        slider_weight.slider("values", 1, $(this).val());
+    });
+
+    $('.dop-filtr-weight-min').on('change', function(){
+        slider_weight.slider("values", 0, $(this).val());
+    });
 
 
     $('.dop-filtr-price-min, .dop-filtr-price-max').inputmask("numeric", {
