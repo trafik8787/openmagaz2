@@ -69,13 +69,16 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,EM,RD,0.39,GRN,850.00,ER03900,,er03900.jpg,,,4.90|4.90|3.00,,,Emerald. Round. 4.9MM,O,,
 ,PS,RD,0.78,PNK,250.00,XPR4545,,xrp4545.jpg,,,4.50|4.50|2.40,,,P. Sapphire. Round. Pink 4.5MM,,,
 ,EM,RD,0.79,GRN,975.00,XER4802,,XER4802.jpg,,,4.80|4.80,,,RD Emerald Gem 4.80,O,,xer4802
+,EM,RD,0.40,GRN,625.00,ER04000,,er04000.jpg,,,4.90|4.90|3.00,,,Emerald. Round. 4.9MM,O,,
 ,EM,RD,0.81,GRN,975.00,XER4704,,XER4704.jpg,,,4.70|4.70,,,Round Emerald pair,O,,xer4704
 ,EM,RD,0.42,GRN,1350.00,ER04200,,er04200.jpg,,,4.70|4.70|3.40,,,Emerald. Round. Green 4.7MM,O,,
 ,RU,RD,0.85,RED,375.00,XRR4501,,xrr4501.jpg,,,4.50|4.50|2.60,,,Ruby. Round. Red 4.5MM,H,,
+,EM,RD,0.44,GRN,950.00,ER0440,,ER0440.jpg,,,4.90|4.90|3.40,,,RD Emerald Gem 4.90,O,,er0440
 ,RU,PC,0.87,RED,550.00,XRPC087,,,,,4.00|4.00|2.60,,,Ruby. PC. Red 4.0MM,H,,
 ,EM,RD,0.90,GRN,600.00,XER5107,,,,,5.10|5.10|3.00,,,Emerald. Round. Green 5.1MM,O,,
 ,EM,RD,0.92,GRN,975.00,XER4703,,XER4703.jpg,,,4.70|4.70,,,Round Emerald pair,O,,xer4703
 ,RU,RD,0.92,RED,375.00,XRR4500,,XRR4500.jpg,,,4.50|4.50|2.70,,,Ruby. Round. Red 4.5MM,H,,
+,EM,RD,0.46,GRN,585.00,ER04600,,ER04600.jpg,,,5.00|5.00|3.50,,,Emerald. Round. Green 5.0MM,O,,
 ,RU,RD,0.94,RED,450.00,XRR4600,,XRR4600.jpg,,,4.60|4.60,,,RD Ruby Pair Gem. 4.6,H,,xrr4600
 ,EM,RD,0.95,GRN,750.00,XER5204,,,,,5.20|5.20,,,RD Emerald Pair Gem 5.20x5.20,O,,
 ,EM,RD,0.48,GRN,850.00,ER04801,,er04801.jpg,,,4.90|4.90|3.20,,,Emerald. Round. Green 4.9MM,O,,
@@ -136,7 +139,6 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,RU,RD,1.44,RED,550.00,XRR5505,,XRR5505.jpg,,,5.50,,,RD Ruby Pair Gem 5.50,H,,rrl5059
 ,EM,OV,0.72,GRN,950.00,EV0720,,EV0720.jpg,,,6.40|4.80|3.70,,,OV Emerald Gem 6.4x4.8,O,,exl0400
 ,EM,RD,0.72,GRN,1250.00,ER610266,,er610266.jpg,,,6.10|6.10|3.30,,,Emerald. Round. Green 6.1MM,O,,
-,SA,EC,0.73,BLU,325.00,SE0730,,SE0730.jpg,,,5.90|4.90|2.30,,,EC Sapphire Gem. 5.9-4.9,H,,se0730
 ,RU,RD,1.46,RED,600.00,XRR5100,,XRR5100.jpg,,,5.10|5.10,,,RD Ruby Pair Gem. 5.1,H,,xrr5100
 ,RU,RD,0.73,RED,750.00,RR07300,,rr07300.jpg,,,5.50|5.50|3.00,,,Ruby. Round. Red 5.5MM,H,,
 ,SA,OV,1.45,BLU,375.00,XSV6242,,xsr6242.jpg,,,6.20|4.20|3.30,,,Sapphire. Oval. Blue 6.2X4.2,H,,
@@ -151,7 +153,6 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,EM,TR,0.76,GRN,675.00,ET0760,,ET0760.jpg,,,6.10|6.10|4.10,,,TR Emerald Gem 6.1x6.1,O,,exl0400
 ,EM,RD,0.76,GRN,1250.00,ER0760,,er0760.jpg,,,5.60|5.60|3.50,,,RD Emerald Gem 5.60,O,,
 ,EM,RD,0.76,GRN,750.00,ER07600,,er07600.jpg,,,5.80|5.80|4.10,,,Emerald. Round. Green 5.8MM,O,,
-,SA,EC,0.77,BLU,325.00,SE0770,,SE0770.jpg,,,6.50|4.50|2.40,,,EC Sapphire Gem. 6.5-4.5,H,,se0770
 ,EM,RD,0.78,GRN,850.00,ER0780,,ER0780.jpg,,,6.20|6.20|3.60,,,RD Emerald Gem 6.20,O,,er0780
 ,PS,PS,0.80,PNK,350.00,PP0800,,PP0800.jpg,,,7.00|5.00|3.10,,,PS P. Sapphire Gem. 7.0-5.0,E,,pp0800
 ,SA,OV,0.80,BLU,700.00,SV0800,,SV0800.jpg,,,7.00|5.00,,,OV Sapphire Gem 7.0X5.0,H,,
@@ -284,6 +285,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,YS,CU,1.07,Yellow,250.00,YC1070,,YC1070.jpg,,,6.50|5.40|3.40,,,CC Y. Sapphire Gem 6.5x5.4,E,,yc1070
 ,YS,RD,1.07,Yellow,225.00,YR1070,,yr1070.jpg,,,6.20|6.20|3.40,,,RD Y. Sapphire Gem 6.2,E,,yr1070
 ,LV,RD,1.07,LAV,350.00,LR1070,,,,,5.90|5.90|3.90,,,RD L.Sapphire Gem 5.90,,,lr1070
+,RU,EC,1.07,RED,985.00,RE1071,,re1071.jpg,,,7.40|4.50|3.10,,,EC Ruby Gem 7.4x4.5,H,,rel1000
 ,SA,CU,1.08,BLU,825.00,SC1080,,sc1080.jpg,,,6.30|5.10|3.50,,,CC Sapphire Gem 6.30x5.10,H,,sc1080
 ,SA,RD,1.08,BLU,750.00,SR10800,,SR10800.jpg,,,5.70|5.70|4.10,,,RD Sapphire Gem 5.7MM,H,,
 ,PS,OV,1.09,PNK,350.00,PV1090,,PV1090.jpg,,,6.90|4.50|3.90,,,OV P. Sapphire Gem. 6.9-4.5,E,,pv1090
@@ -477,18 +479,15 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,EM,PS,1.18,GRN,1250.00,EP1180,,EP1180.jpg,,,8.60|5.60|4.30,,,PS Emerald Gem. 8.6-5.6,O,,ep1180
 ,PS,OV,1.24,PNK,450.00,PV1240,,PV1240.jpg,,,6.70|5.40|3.80,,,OV P.Sapphire Gem 6.7x5.4mm,H,,pv1240
 ,SA,OV,1.76,BLU,450.00,SV1760,,sv1760.jpg,,,8.10|6.30|4.00,,,OV Sapphire Gem. 8.3-6.6,H,,sv1760
-,,CC,194.32,,0.00,IC1000,,,,,,,,MIX  Gem,H,,ic1000
+,,CC,198.69,,0.00,IC1000,,,,,,,,MIX  Gem,H,,ic1000
 ,SA,OV,4.45,BLU,2250.00,SV4450,,sv4450.jpg,,,10.10|8.20|6.10,,,OV Sapphire Gem. 10.1-8.2,H,,sv4450
-,SA,OV,7.35,BLU,2000.00,SV7350,,sv7350.jpg,,,12.10|9.70|7.00,,,OV Sapphire Gem. 12.1-9.7,H,,sv7350
 ,YS,RD,1.00,Yellow,150.00,YR10000,,yr10000.jpg,,,5.60|5.60|4.10,,,Y. Sapphire. Round. Yellow 5.6MM,H,,
 ,PA,RD,0.93,BLU,2000.00,PBRL13Z,,PBRL13Z.jpg,,,1.30|1.30,,,Paraiba. Round. Blue 1.3MM,H,,
 ,EM,TR,0.11,GRN,650.00,XET2500,,,,,2.50|2.50,,,TR Emerald Pair Gem. 2.5,O,,xet2500
-,PA,OV,0.12,BLU,2250.00,XPBV1200Z,,xpbv1200z.jpg,,,3.00|2.20|1.50,,,Paraiba. Oval3.0X2.2,H,,
 ,PA,OV,0.12,BLU,2250.00,XPBV1201Z,,xpbv1201z.jpg,,,2.90|2.20|1.80,,,Paraiba. Oval. Blue2.9X2.2,H,,
 ,PA,OV,0.12,BLU,2250.00,XPBV1202Z,,xpbv1202z.jpg,,,3.00|2.10,,,Paraiba. Oval. Blue3.0X2.1,H,,
 ,PA,OV,0.12,BLU,2250.00,XPBV1203Z,,xpbv1203z.jpg,,,3.00|2.00,,,Paraiba. Oval. Blue3.0X2.0,H,,
 ,EM,TR,0.14,GRN,750.00,XET3002,,,,,3.00|3.00|1.40,,,TR Emerald Pair Gem. 3.0,O,,xet3002
-,PA,OV,0.13,BLU,2250.00,XPBV1300Z,,xpbv1300z.jpg,,,3.50|2.20|1.30,,,Paraiba. Oval. Blue,H,,
 ,PA,OV,0.14,BLU,2250.00,XPBV1400Z,,xpbv1400z.jpg,,,3.10|2.10,,,Paraiba. Oval. Blue3.1X2.1,H,,
 ,PA,MIX,3.39,BLU,2500.00,PBMXZ1,,PBMXZ1.jpg,,,,,,Paraiba. Mixed. Blue,H,,
 ,PA,TR,0.16,BLU,2500.00,XPBT0160Z,,xpbt0160z.jpg,,,2.90|2.90,,BRA,Paraiba. TR. Blue. 2.9x2.9mm,H,,
@@ -501,7 +500,6 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,PA,OV,0.18,BLU,2500.00,XPBV18001Z,,xpbv18001z.jpg,,,3.50|2.50,,,Paraiba. Oval. Blue 3.5X2.5,H,,
 ,PA,OV,0.18,BLU,2500.00,XPBV1802Z,,xpbv1802z.jpg,,,3.40|2.50,,,Paraiba. Oval. Blue 3.4X2.5,H,,
 ,PA,TR,0.18,BLU,2500.00,XPBT0180Z,,xpbt0180z.jpg,,,2.80|2.80,,BRA,Paraiba. TR. Blue. 2.8x2.8mm,H,,
-,PA,OV,0.19,BLU,2500.00,XPBV1900Z,,xpbv1900z.jpg,,,3.20|2.40,,,Paraiba. Oval. Blue3.2X2.4,H,,
 ,PA,OV,0.19,BLU,2500.00,XPBV1901Z,,xpbv1901z.jpg,,,3.20|2.70,,,Paraiba. Oval. Blue3.2X2.7,H,,
 ,PA,MQ,0.19,BLU,2500.00,PBVM1900Z,,pbvm1900z.jpg,,,5.30|2.00,,,Paraiba. MQ. Blue 5.3X2.0,H,,
 ,PA,OV,0.19,BLU,2500.00,XPBV1902Z,,xpbv1902z.jpg,,,3.50|2.30,,,Paraiba. Oval. Blue 3.5X2.3,H,,
@@ -510,7 +508,6 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,EM,TR,0.28,GRN,650.00,XET3401,,xet3401.jpg,,,3.40|3.40,,,TR Emerald Pair Gem. 3.4,O,,xet3401
 ,EM,TR,0.28,GRN,450.00,XET3706,,,,,3.70|3.70,,,TR Emerald Pair Gem. 3.7,O,,xet3706
 ,PA,OV,0.28,BLU,3750.00,XPBV2800Z,,xpbv2800z.jpg,,,4.20|3.00|2.00,,,Paraiba. Oval. Blue 4.2X3.0,H,,
-,PA,TR,0.27,BLU,4000.00,XPBT2700Z,,xpbt2800z.jpg,,,3.60|3.60|2.10,,,Paraiba. TR. Blue 3.6MM,H,,
 ,PA,MIX,3.18,BLU,3000.00,PBMXZ15,,pbmxz15.jpg,,,,,BRA,Paraiba. Blue. Brazil,H,,
 ,EM,TR,0.30,GRN,650.00,XET3501,,xet3501.jpg,,,3.50|3.50,,,TR Emerald Pair Gem. 3.5,O,,xet3501
 ,PA,OV,0.29,BLU,3750.00,XPBV2901Z,,xpbv2901z.jpg,,,4.10|2.90|1.90,,,Paraiba. Oval. Blue4.1X2.9,H,,
@@ -562,6 +559,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,EM,PS,0.37,GRN,650.00,EP03701,,,,,5.90|4.00|2.80,,,Emerald. PS. Green 5.9x4.0,O,,
 ,RU,TR,0.76,RED,580.00,XRT4300,,XRT4300.jpg,,,4.30|4.30,,,TR Ruby Pair Gem. 4.3,H,,xrt4300
 ,SA,TR,0.75,BLU,450.00,XST4100,,XST4100.jpg,,,4.10|4.10,,,TR Sapphire Pair Gem. 4.1,H,,xst4100
+,EM,RD,0.76,GRN,850.00,XER4602,,,,,4.60|4.60,,,RD Emerald Pair Gem 4.60,O,,
 ,Y. SAP,TR,0.75,Yellow,175.00,XYT4240,,XYT4240.jpg,,,4.20|4.00|2.70,,,Yellow Sapphire. TR. Yellow 4.2X4.0,H,,
 ,SA,RD,0.76,BLU,275.00,XSR4305,,xsr4305.jpg,,,4.30|4.30|2.60,,,Sapphire. Round. Blue 4.3MM,H,,
 ,EM,PS,0.38,GRN,1000.00,EP03800,,,,,5.90|4.20|2.80,,,Emerald. PS. Green 5.9X4.2,O,,
@@ -735,7 +733,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,RU,CU,0.73,RED,850.00,RC07300,,rc07300.jpg,,,5.50|5.50|2.60,,,Ruby. Cushion. Red 5.5X5.5,H,,
 ,SA,RD,0.73,BLU,485.00,SR07300,,sr07300.jpg,,,5.10|5.10|3.20,,,RD Sapphire  Gem. 5.1MM,H,,xsr5126
 ,RU,RD,1.46,RED,700.00,XRR1460,,xrr1460.jpg,,,5.30|5.30|3.00,,,Ruby. Round. Red 5.3MM,H,,
-,SA,RD,0.75,BLU,285.00,SR07500,,sr07500.jpg,,,5.50|5.50|3.30,,,Sapphire. Round. Blue 5.5MM,H,,
+,EM,RD,0.74,GRN,575.00,XER4646,,,,,4.60|4.60|3.20,,,Emerald. Round. Green 4.6mm,O,,
 ,SA,CU,0.75,BLU,450.00,SC07501,,sc07501.jpg,,,5.00|5.00,,,Sapphire. Cushion. Blue 5.0X5.0,H,,
 ,EM,RD,1.50,GRN,1400.00,XER150SH,,XER150SH.jpg,,,6.00|6.00|3.80,,,Emerald. Round. Green 6.0MM,O,,
 ,SA,RD,0.75,BLU,375.00,SR07501,,SR07501.jpg,,,5.50|5.50|3.10,,,Sapphire. Round. Blue 5.5MM,H,,
@@ -801,7 +799,6 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,SA,TR,1.65,BLU,700.00,XST6002,,XST6002.jpg,,,6.00|6.00,,,TR Sapphire Pair Gem. 6.0,H,,xst6002
 ,SA,RD,0.83,BLU,375.00,SR0831,,SR0831.jpg,,,5.60|5.60|3.40,,,RD Sapphire Gem 5.60mm,H,,sr0831
 ,RU,EC,0.83,RED,850.00,RE0830,,re0830.jpg,,,6.30|4.00|2.90,,,EC Ruby Gem 6.3x4.0,H,,rel1000
-,SA,RD,0.83,BLU,300.00,SR08301,,sr08301.jpg,,,5.50|5.50|3.50,,,Sapphire. Round. Blue 5.5MM,H,,
 ,SA,OV,0.83,BLU,275.00,SV08300,,sv08300.jpg,,,6.20|4.30,,,Sapphire. Oval. Blue  6.2X4.3,H,,
 ,SA,RD,0.83,BLU,285.00,SR08300,,sr08300.jpg,,,5.70|5.70|3.50,,,Sapphire. Round. Blue 5.7MM,H,,
 ,RU,RD,0.83,RED,550.00,RR08301,,RR08301.jpg,,,5.40|5.40|3.30,,,Ruby. Round. Red 5.4MM,H,,
@@ -848,7 +845,6 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,SA,RD,0.89,BLU,800.00,SR0890,,SR0890.jpg,,,5.80|5.80|3.20,,,RD Sapphire Gem 5.80,H,,sr0890
 ,YS,RD,0.89,Yellow,275.00,YR0890,,,,,5.60|5.60|3.60,,,Y. Sapphire. Round. Yellow 5.6MM,E,,or0890
 ,SA,CU,0.89,BLU,285.00,SC08902,,sc08902.jpg,,,5.50|5.50,,,Sapphire. Cushion. Blue 5.5X5.5,H,,
-,SA,RD,0.89,BLU,350.00,SR08900,,sr08900.jpg,,,5.60|5.60|3.40,,,Sapphire. Round. Blue 5.6MM,H,,
 ,RU,RD,0.89,RED,550.00,RR08902,,RR08902.jpg,,,5.30|5.30|3.80,,,Ruby. Round. Red 5.3MM,H,,
 ,SA,RD,0.89,BLU,650.00,SR186066,,sr186066.jpg,,,5.80|5.80|3.20,,,Sapphire. Round. Blue 5.8MM,H,,
 ,SA,TR,1.80,BLU,875.00,XST5602,,XST5602.jpg,,,5.60|5.60,,,TR Sapphire Pair Gem. 5.6,H,,xst5602
@@ -874,10 +870,8 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,PS,OV,0.93,PNK,450.00,PV09300,,pv09300.jpg,,,6.80|5.00|3.30,,,P. Sapphire. Oval. Pink 6.8X5.0,H,,
 ,SA,CU,0.93,BLU,1000.00,SC189255,,sc189255.jpg,,,6.10|5.20|3.20,,,Sapphire. Cushion. Blue 6.1X5.2MM,H,,
 ,SA,OV,0.93,BLU,350.00,SV09300,,sv09300.jpg,,,7.00|4.80|3.40,,,Sapphire. Oval. Blue 7.0X4.8MM,H,,
-,SA,EC,0.94,BLU,385.00,SE0940,,SE0940.jpg,,,6.80|4.60|3.00,,,EC Sapphire Gem. 6.8-4.6,H,,se0940
 ,SA,RD,0.94,BLU,550.00,SR0945,,sr0945.jpg,,,5.50|5.50|3.80,,,RD Sapphire Gem 5.50,H,,srl6005
 ,SA,RD,0.94,BLU,525.00,SR09400,,sr09400.jpg,,,5.50|5.50|3.70,,,Sapphire. Round. Blue 5.5MM,H,,
-,SA,EC,0.94,BLU,450.00,SE09400,,se09400.jpg,,,6.80|4.80|2.70,,,EC Sapphire Gem 6.8X4.8,H,,sel7501
 ,RU,RD,1.87,RED,800.00,XRR1870,,xrr1870.jpg,,,5.40|5.40|4.10,,,Ruby. Round. Red 5.4MM,H,,
 ,RU,RD,0.94,RED,875.00,RR630266,,rr630266.jpg,,,6.30|6.30|2.80,,,Ruby. Round. Red 6.3MM,H,,
 ,PS,OV,0.94,PNK,485.00,PV09400,,pv09400.jpg,,,6.70|5.00|3.20,,,P. Sapphire. Oval. Pink 6.7X5.0,H,,
@@ -931,6 +925,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,SA,CU,2.03,BLU,475.00,XSC5800,,XSC5800.jpg,,,5.80|5.80,,,CC Sapphire Pair Gem 5.80x5.80,H,,xsc5800
 ,YS,RD,1.02,Yellow,250.00,YR10210,,,,,6.00|6.00|3.80,,,Y. Sapphire. Round. Yellow 6.0MM,,,or1021
 ,RU,OV,30.49,RED,850.00,RVL75000,,,,,,,,Ruby. Oval. Red,H,,
+,SA,RD,1.02,BLU,800.00,SR10204,,sr10204.jpg,,,5.90|5.90|3.60,,,Sapphire. Round. Blue 5.9MM,H,,
 ,SA,EC,1.03,BLU,385.00,SE1030,,se1030.jpg,,,6.00|4.80|3.30,,,EC Sapphire Gem. 6.0-4.8,H,,se1030
 ,YS,CU,2.06,Yellow,350.00,XYC6002,,XYC6002.jpg,,,6.00|6.00,,,CC Y.Sapphire Pair 6.0mm,,,xyc6002
 ,SA,CU,1.03,BLU,750.00,SC1030,,SC1030.jpg,,,5.40|5.30|3.80,,,CC Sapphire Gem 5.40x5.30,H,,
@@ -1105,6 +1100,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,SA,CU,1.37,BLU,950.00,SC13700,,sc13700.jpg,,,7.80|5.50|3.10,,,Sapphire. Cushion. Blue 7.8X5.5,H,,
 ,SA,RD,1.37,BLU,1250.00,SR611155,,sr611155.jpg,,,6.10|6.10|4.50,,,Sapphire. Round. Blue 6.1mm,H,,
 ,SA,RD,1.37,BLU,400.00,SR700155,,sr700155.jpg,,,7.00|7.00|3.60,,,Sapphire. Round. Blue 7.0MM,H,,
+,SA,RD,1.37,BLU,585.00,SR13700,,sr13700 (2).jpg,,,6.50|6.50|4.00,,,Sapphire. Round. Blue 6.5,H,,
 ,PS,CU,1.37,PNK,750.00,PC13700,,,,,6.60|5.80|3.60,,,P. Sapphire. Cushion. Pink 6.6X5.8,H,,
 ,GS,HS,1.37,GRN,450.00,GH13700,,,,,6.10|6.10|4.30,,,G. Sapphire. Heart Shape. Green 6.1X6.1,H,,
 ,SA,RD,2.75,BLU,275.00,XSR6402,,XSR6402.jpg,,,6.40|6.40,,,RD Sapphire Pair Gem. 6.4,H,,xsr6402
@@ -1118,6 +1114,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,SA,RD,1.39,BLU,700.00,SR13901,,sr13901.jpg,,,6.50|6.50|3.90,,,Sapphire. Round. Blue 6.5,H,,
 ,PS,CU,1.39,PNK,475.00,PC13900,,,,,7.50|5.70|3.40,,,P. Sapphire. Cushion. Pink 7.5X5.7,H,,
 ,PS,CU,1.39,PNK,675.00,PC13901,,,,,6.50|6.40|3.80,,,P. Sapphire. Cushion. Pink 6.5X6.4,H,,
+,SA,RD,1.39,BLU,750.00,SR139001,,sr139001.jpg,,,6.50|6.50|4.20,,,Sapphire. Round. Blue 6.5MM,H,,
 ,RU,RD,1.40,RED,1275.00,RR14000,,rr14000.jpg,,,6.20|6.20,,,Ruby. Round 6.2mm,H,,
 ,PS,RD,1.40,PNK,750.00,PR640055,,pr640055.jpg,,,6.40|6.40|4.00,,,P. Sapphire 6.4mm,H,,
 ,SA,RD,1.41,BLU,750.00,SR670066,,sr670066.jpg,,,6.70|6.70|3.80,,,Sapphire. Round. Blue 6.7MM,H,,
@@ -1146,6 +1143,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,SA,RD,1.46,BLU,650.00,SR670055,,sr670055.jpg,,,6.80|6.80|4.00,,,Sapphire. Round. Blue 6.8MM,H,,
 ,PS,RD,1.46,PNK,750.00,PR640066,,pr640066.jpg,,,6.50|6.50|4.00,,,P. Sapphire. Round 6.5mm,H,,
 ,YS,CU,1.47,Yellow,285.00,YC1470,,YC1470.jpg,,,6.60|6.60|3.60,,,CC Y.Sapphire Gem 6.60,,,yc1470
+,RU,RD,1.47,RED,900.00,RR14700,,rr14700.jpg,,,6.80|6.80,,,Ruby. Round 6.8mm,H,,
 ,RU,OV,1.47,RED,2200.00,RV14709,,,,,8.10|6.00,,,Ruby. Oval. Red 8.1X6.0,H,,
 ,YS,CU,1.48,Yellow,325.00,YC14800,,yc14800.jpg,,,6.70|6.70|3.80,,,Y. Sapphire. Cushion. Yellow 6.7MM,H,,
 ,SA,RD,1.49,BLU,600.00,SR14900,,SR14900.jpg,,,6.80|6.80|4.00,,,Sapphire. Round. 6.8,H,,
@@ -1160,6 +1158,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,RU,OV,1.53,RED,1400.00,RV1530,,RV1530.jpg,,,8.00|5.80|3.80,,,Ruby. Oval 8.0x5.8mm,H,,rv1530
 ,YS,RD,1.53,Yellow,350.00,YR15300,,,,,6.20|6.20|4.50,,,Y. Sapphire. Round. Yellow 6.2MM,,,or1530
 ,SA,CU,1.53,BLU,1275.00,SC15300,,sc15300.jpg,,,6.40|5.70|4.50,,,Sapphire. Cushion. 6.4X5.7,H,,
+,RU,RD,1.55,RED,2500.00,RR1550,,RR1550.jpg,,,7.10|7.10|4.10,,,RD Ruby Gem 7.10,H,,
 ,SA,CU,3.10,BLU,1375.00,XSC7655,,xsc7655.jpg,,,7.60|5.50|3.90,,,Sapphire. Cushion. Blue 7.6X5.5,H,,
 ,SA,RD,1.55,BLU,550.00,SR700166,,sr700166.jpg,,,7.00|7.00|3.90,,,Sapphire. Round. Blue 7.0MM,H,,
 ,SA,HS,1.56,BLU,650.00,SH1560,,SH1560.jpg,,,7.00|6.10|4.30,,,HS Sapphire Gem. 7.0-6.1,H,,sh1560
@@ -1199,6 +1198,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,YS,RD,1.72,Yellow,350.00,YR1720,,,,,6.60|6.60|4.50,,,Y. Sapphire. Round. Yellow 6.6MM,,,or1720
 ,YS,CU,1.72,Yellow,375.00,YC17200,,yc17200.jpg,,,7.20|7.20|3.60,,,Y. Sapphire. Cushion. Yellow 7.2X7.2,,,
 ,SA,RD,1.72,BLU,875.00,SR17200,,sr17200.jpg,,,7.00|7.00|4.20,,,Sapphire. Round. Blue 7.0,H,,
+,SA,RD,1.73,BLU,875.00,SR17300,,SR17300.jpg,,,7.10|7.10|4.10,,,Sapphire. Round. Blue 7.1,H,,
 ,SA,OV,1.75,BLU,675.00,SV17500,,sv17500.jpg,,,9.00|6.60,,,Sapphire. Oval. Blue 9.0X6.6,H,,
 ,SA,RD,1.75,BLU,675.00,SR17500,,sr17500.jpg,,,7.00|7.00|4.20,,,RD Sapphire 7.0MM,H,,xsr7006
 ,SA,PS,1.75,BLU,675.00,SP17500,,,,,,,,Sapphire. PS. Blue,H,,
@@ -1301,6 +1301,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,EM,EC,2.99,GRN,4000.00,EE29909,,,,,9.90|7.10,,,Emerald. EC. Green 9.9X7.1,O,,
 ,SA,PS,3.00,BLU,0.00,SP30000,,,,,9.30|7.60|5.10,,,Sapphire. PS. Blue 9.3X7.6,H,,
 ,SA,PS,3.00,BLU,1650.00,SP30002,,sp30002.jpg,,,10.30|7.80|5.10,,,Sapphire. PS. Blue 10.3X7.8,H,,
+,SA,RD,3.00,BLU,900.00,SR30000,,sr30000.jpg,,,8.30|8.30|5.50,,,Sapphire. Round. Blue 8.3,H,,
 ,SA,PS,3.01,BLU,1275.00,SP3010,,SP3010.jpg,,,9.00|8.20|5.00,,,PS Sapphire Gem 9.0x8.2,H,,
 ,EM,EC,3.01,GRN,950.00,EE301SH,,,,,10.00|7.60|4.80,,,Emerald. EC. Green 10X7.6,O,,
 ,EM,EC,3.03,GRN,3500.00,EE30309,,,,,8.90|7.40,,,Emerald. EC. Green 8.9X7.4,V.F,,
@@ -1362,7 +1363,6 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,PA,PS,11.20,Blue,95.00,PBMT1120,,pbmt1120.jpg,,,21.00|10.90|3.60,,,Paraiba. Matrix 21.0x10.9mm,H,,
 ,YS,CU,5.65,Yellow,325.00,YC5650RJ,,yc5650rj.jpg,,,10.30|9.80|6.40,,,Y. Sapphire. Cushion. 10.3X9.8MM,H,,
 ,PA,PS,11.51,BLU,100.00,PBMT1151,,pbmt1151.jpg,,,18.00|12.00,,,Paraiba.Matrix. PS. Blue 18.0X12.0mm,H,,
-,SA,CU,5.83,BLU,2000.00,SC5830,,SC5830.jpg,,,11.50|8.90|5.90,,,CC Sapphire Gem 11.50x8.90,H,,
 ,PA,PS,11.73,BLU,90.00,PBMT1173,,pbmt1173.jpg,,,21.00|12.00,,,Paraiba.Matrix. PS. Blue 21.0X12.0mm,H,,
 ,EM,EC,5.90,Green,4250.00,EE590SH,,ee590sh.jpg,,,11.60|10.60|7.70,,,Emerald. EC. 11.6x10.6mm,H,,
 ,PA,CU,5.99,BLU,8000.00,PBC59909,,pbc59909.jpg,,,11.00|11.00,,,Paraiba. Cushion. 11.0x11.0mm,,,
@@ -1436,7 +1436,6 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,PA,OV,1.80,BLU,4500.00,PBV180,,,PBV180_CERT.jpg,,8.90|6.90|4.70,,,Paraiba. Oval. Greenish Blue 8.9X6.9,,GIA,1197539291
 ,PA,OV,1.81,BLU,24000.00,PBV1819Z,,pbv1819z.jpg,pbv1819z_cert.jpg,,8.50|6.40,,,Paraiba. Oval. Blue 8.5X6.4,H,GIA,
 ,PA,OV,1.97,BLU,17500.00,PBV197Z,,,pbv197z_cert.jpg,,9.00|6.90|5.00,,BRA,Paraiba. Oval. Blue 9x7mm,H,GIA,6222815251
-,PA,OV,2.25,BLU,5250.00,PBV2250,,pbv2250.jpg,pbv2250_cert.jpg,,10.20|6.40|5.10,,,Paraiba. Oval. 10.20x6.40mm,H,GIA,7226098926
 ,PA,OV,2.51,BLU,15000.00,PBV251Z,,pbv251z.jpg,pbv251z_cert.jpg,,9.70|7.20|5.40,,BRA,Paraiba. Oval. Blue 9.8x7.3mm,H,GIA,1225815328
 ,PA,OV,2.58,BLU,4850.00,PBV2580,,pbv2580.jpg,pbv2580_cert.jpg,,9.80|7.10|5.50,,,Paraiba. Oval. 9.80x7.10mm,H,GIA,7222098938
 ,PA,OV,2.61,BLU,12500.00,PBV261Z,,pbv261z.jpg,pbv261z_cert.jpg,,9.30|7.10|5.40,,BRA,Paraiba. Oval. Blue 9.4x7.2mm,H,GIA,1223815363
@@ -1464,13 +1463,12 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,SA,CU,11.73,BLU,14000.00,SC1173ZB,,sc1173zb.jpg,sc1173zb_cert.jpg,,13.20|11.20|8.60,,,Sapphire. Cushion 13.2x11.2mm,N,,
 ,SA,CU,11.75,BLU,7500.00,SC11750,,SC11750.jpg,sc11750_CERT.jpg,,14.40|11.40|7.30,,,CERT CC Sapphire Gem 14.40x11.40,H,GRS,GRS2014-082136
 ,SA,CU,2.83,BLU,1850.00,SC28301VC,,SC28301VC.jpg,SC28301VC_VERT.jpg,,9.30|7.50|4.00,,MAD,Sapphire. Cushion. 9.3x7.5mm,N,GIA,
-,SA,CU,3.10,BLU,2500.00,SC3102,,SC3102.jpg,sc3102_CERT.jpg,,8.50|7.20,,,Sapphire. Cushion. Blue,N,TGL,23091137
+,SA,CU,3.11,BLU,2000.00,SC3110,,SC3110.JPG,sc3110_CERT.jpg,,8.60|6.70|5.70,,,CC Sapphire Gem 8.60x6.70,N,TGL,23030388
 ,SA,CU,4.09,BLU,2000.00,SC4091,,SC4091.jpg,sc4091_CERT.jpg,,9.40|7.80|6.20,,,CERT CC Sapphire Gem 9.40x7.80,H,GRS,GRS2013-092276
 ,SA,CU,4.72,BLU,1500.00,SC47200,,sc47200.jpg,sc47200_cert.jpg,,9.50|8.70,,,Sapphire. Cushion. Blue 9.5X8.7,N,TGL,
 ,SA,CU,4.83,BLU,1450.00,SC4830ZB,,sc4830zb.jpg,sc4830zb_cert.jpg,,9.60|8.40|6.20,,,Sapphire. Cushion 9.6x8.4mm,N,TGL,
 ,SA,CU,5.03,BLU,2000.00,SC50300,,sc50300.jpg,SC50300_CERT.jpg,,8.80|10.80|5.70,,,Sapphire. Cushion. 8.8X10.8,H,TGL,25080782
 ,SA,CU,6.04,BLU,1275.00,SC6040ZB,,sc6040zb.jpg,sc6040zb_cert.jpg,,11.40|9.50|5.90,,,Sapphire. Cushion 11.4x9.5mm,N,TGL,
-,SA,CU,6.05,BLU,3800.00,SC60500,,sc60500.jpg,SC60500_CERT.jpg,,10.60|10.00|6.20,,,Sapphire. Cushion. Blue 10.6X10.0,H,TGL,25090027
 ,SA,CC,53.76,BLU,2500.00,SCAB5376,,SCAB5376.jpg,scab_5376_cert.jpg,,20.40|16.74,,,SRI LANKA Cab Sapphire.CC 20.40x16.74,N,,
 ,SA,EC,7.39,BLU,4000.00,SE7390VC,,se7390vc_.jpg,se7390vc_cert.jpg,,10.50|9.40|7.30,,,Sapphire. EC 10.5x9.4mm,H,GIA,
 ,SA,PS,2.53,BLU,1650.00,SP25301,,SP25301.jpg,SP25301_CERT.jpg,,9.90|6.90|4.40,,,Sapphire. PS. Blue 9.9X6.9,N,TGL,25021140
@@ -1492,7 +1490,7 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,SA,OV,2.12,Blue,1375.00,SV21200SK,,SV21200SK.jpg,SV21200SK_CERT.jpg,,8.90|6.70|4.10,,,Sapphire. Oval. Blue 8.9X6.7MM,N,GIA,5164539501
 ,SA,OV,2.13,Blue,1400.00,SV21300SK,,SV21300SK.jpg,SV21300SK_CERT.jpg,,8.70|6.10|4.60,,,Sapphire. Oval. Blue 8.7x6.1MM,N,GIA,1162539692
 ,SA,OV,3.09,BLU,2000.00,SV30900,,SV30900.jpg,SV30900_CERT.jpg,,9.50|7.30|5.20,,,Sapphire. Oval. Blue9.5X7.3,N,,
-,SA,OV,5.15,BLU,2500.00,SV51500,,SV51500.jpg,SV51500_CERT.jpg,,11.70|9.00|5.60,,,Sapphire. Oval 11.7X9.0,H,AIGS,
+,SA,OV,3.43,BLU,1250.00,SV34300,,SV34300.jpg,SV34300_CERT.jpg,,9.30|7.80|5.10,,,Sapphire. Oval. Blue 9.3X7.8,H,,25080926
 ,SA,OV,5.23,BLU,1950.00,SV52300,,SV52300.jpg,SV52300_CERT.jpg,,10.50|8.20|7.00,,,Sapphire. Oval. Blue 10.5X8.2,N,TGL,25090976
 ,SA,OV,8.82,BLU,2500.00,SV8820,,sv8820.jpg,sv8820_CERT.jpg,,13.20|10.10|7.00,,,CERT OV Sapphire Gem 13.20x10.10,H,TGL,23120382
 ,PA,PS,2.52,BLU,4500.00,XPBP2520,,xpbp2520.jpg,xpbp2520_cert.jpg,,10.50|5.80,,,Paraiba. PS 10.5x5.8mm,H,GIA,
@@ -1513,4 +1511,3 @@ Supplier ID,Stone Type,Shape,Carat Weight,Primary Color,Price per Carat,Stock #,
 ,YS,OV,2.67,Yellow,750.00,YV26700SK,,YV26700SK.jpg,YV26700SK_CERT.jpg,,9.10|6.90|4.70,,,Y. Sapphire. Oval. Yellow 9.1X6.9MM,N,GIA,2165539710
 ,YS,OV,2.83,Yellow,750.00,YV28300SK,,YV28300SK.jpg,YV28300SK_CERT.jpg,,9.40|7.40|4.70,,,Y. Sapphire. Oval. Yellow 9.4X7.4MM,N,GIA,5161539572
 ,PA,OV,4.61,BLU,150000.00,PBV461Z,,PBV461Z.jpg,pbv461z_CERT.jpg,,10.80|8.30|7.60,,,Paraiba. Oval. Blue 10.8X8.3,,GRS,GRS2014-114015
-,SA,CU,5.21,BLU,2500.00,SC5210,,,sc5210_cert.jpg,,9.50|9.00|6.40,,,Sapphire 9.5x9.0 mm,H,AIGS,

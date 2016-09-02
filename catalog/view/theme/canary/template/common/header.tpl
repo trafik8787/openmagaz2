@@ -565,7 +565,7 @@
                                             <a href="#"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="gemstones gemstones2"></i><span>pinc sapphire</span></a>
+                                            <a href="#"><i class="gemstones gemstones2"></i><span>pink sapphire</span></a>
                                         </li>
                                         <li>
                                             <a href="#"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a>

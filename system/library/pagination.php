@@ -30,11 +30,11 @@ class Pagination {
 
 		$this->url = str_replace('%7Bpage%7D', '{page}', $this->url);
 
-		$output = '<ul class="pagination">';
+		$output = '<ul class="w-custom-pagination">';
 
 		if ($page > 1) {
-			$output .= '<li><a href="' . str_replace('{page}', 1, $this->url) . '">' . $this->text_first . '</a></li>';
-			$output .= '<li><a href="' . str_replace('{page}', $page - 1, $this->url) . '">' . $this->text_prev . '</a></li>';
+			$output .= '<li class="w-custom-pagination-item"><a class="pagination-link" href="' . str_replace('{page}', 1, $this->url) . '">' . $this->text_first . '</a></li>';
+			$output .= '<li class="w-custom-pagination-item"><a class="pagination-link" href="' . str_replace('{page}', $page - 1, $this->url) . '">' . $this->text_prev . '</a></li>';
 		}
 
 		if ($num_pages > 1) {
@@ -58,16 +58,16 @@ class Pagination {
 
 			for ($i = $start; $i <= $end; $i++) {
 				if ($page == $i) {
-					$output .= '<li class="active"><span>' . $i . '</span></li>';
+					$output .= '<li class="w-custom-pagination-item is-active"><span class="pagination-link">' . $i . '</span></li>';
 				} else {
-					$output .= '<li><a href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a></li>';
+					$output .= '<li class="w-custom-pagination-item"><a class="pagination-link" href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a></li>';
 				}
 			}
 		}
 
 		if ($page < $num_pages) {
-			$output .= '<li><a href="' . str_replace('{page}', $page + 1, $this->url) . '">' . $this->text_next . '</a></li>';
-			$output .= '<li><a href="' . str_replace('{page}', $num_pages, $this->url) . '">' . $this->text_last . '</a></li>';
+			$output .= '<li class="w-custom-pagination-item"><a class="pagination-link" href="' . str_replace('{page}', $page + 1, $this->url) . '">' . $this->text_next . '</a></li>';
+			$output .= '<li class="w-custom-pagination-item last-number"><a class="pagination-link" href="' . str_replace('{page}', $num_pages, $this->url) . '">' . $this->text_last . '</a></li>';
 		}
 
 		$output .= '</ul>';

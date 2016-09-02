@@ -540,3 +540,41 @@ home hover efect
         width: 14%;
     }
 }
+
+
+
+/*pagination*/
+.w-custom-pagination {
+    margin-top: 40px;
+}
+
+
+.w-custom-pagination-item {
+    list-style-type: none;
+    display: inline-block;
+    border-right: 1px solid #d7dadb;
+
+    transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
+}
+
+.w-custom-pagination-item:hover,
+.w-custom-pagination-item.is-active {
+    background-color: #ffc644;
+    border-right: 1px solid #fff;
+}
+.w-custom-pagination-item .pagination-link {
+    color: #fff;
+}
+
+.w-custom-pagination-item.last-number {
+    border-right: none;
+}
+
+.w-custom-pagination-item .pagination-link {
+    padding: 0.9em 1.1em;
+    display: inline-block;
+    text-decoration: none;
+    color: #4a4a4a;
+
+    transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(20deg) skewY(0deg);
+}

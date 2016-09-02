@@ -271,7 +271,7 @@
                                 <div class="title">EARRINGS</div>
                                 <ul class="style-br-long ul-first-drop">
                                     <li>
-                                        <a href="<?php echo $categories[3]['children'][0]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-16" ></i></span> <span><?php echo $categories[3]['children'][0]['name']?></span></a>
+                                        <a href="<?php echo $categories[3]['children'][0]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-16" style="background-position-y: 0;" ></i></span> <span><?php echo $categories[3]['children'][0]['name']?></span></a>
                                     </li>
                                     <li>
                                         <a href="<?php echo $categories[3]['children'][1]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-9" style="background-position-y: 1px;"></i></span> <span><?php echo $categories[3]['children'][1]['name']?></span></a>
@@ -338,7 +338,7 @@
                                         <a href="#"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="gemstones gemstones2"></i><span>pinc sapphire</span></a>
+                                        <a href="#"><i class="gemstones gemstones2"></i><span>pink sapphire</span></a>
                                     </li>
                                     <li>
                                         <a href="#"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a>
@@ -356,16 +356,16 @@
                                 <div class="title">Gemstone Jewelry</div>
                                 <ul class="style-br-long ul-first-drop">
                                     <li>
-                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-13"></i></span> <span>Diamond engagement rings</span></a>
+                                        <a href="<?php echo $categories[3]['children'][6]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-fashion-necklace" style="background-position-y: -8px;background-position-x: 3px;"></i></span> <span><?php echo $categories[3]['children'][6]['name']?></span></a>
                                     </li>
                                     <li>
-                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span>Diamond studs</span></a>
+                                        <a href="<?php echo $categories[3]['children'][4]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-15" style="background-position-y: 6px;"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a>
                                     </li>
                                     <li>
-                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-14"></i></span> <span>Diamond pendant</span></a>
+                                        <a href="<?php echo $categories[3]['children'][2]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-earring" style="background-position-y: -12px;"></i></span> <span><?php echo $categories[3]['children'][2]['name']?></span></a>
                                     </li>
-                                    <li class="last-li-destones">
-                                        <a href="#"><span class="wrap-ico2"><i class="own-b own-b-9"></i></span> <span>Matching Gemstone Pairs</span></a>
+                                    <li>
+                                        <a href="<?php echo $categories[3]['children'][9]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-gemstone-bracelet"></i></span> <span><?php echo $categories[3]['children'][9]['name']?></span></a>
                                     </li>
                                 </ul>
                             </div>

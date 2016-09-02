@@ -899,15 +899,20 @@ button:hover, button:focus {
   margin-right: 10px;
   display: inline-block; }
   .gemstones.gemstones1 {
-    background: url("../img/gemstones1.png") no-repeat center/contain; }
+    background: url("../img/BLUE SAPPHIRE.png") no-repeat center/contain;
+  }
   .gemstones.gemstones2 {
-    background: url("../img/gemstones2.png") no-repeat center/contain; }
+    background: url("../img/PINK SAPPHIRE.png") no-repeat center/contain;
+  }
   .gemstones.gemstones3 {
-    background: url("../img/gemstones3.png") no-repeat center/contain; }
+    background: url("../img/YELLOW SAPPHIRE.png") no-repeat center/contain;
+  }
   .gemstones.gemstones4 {
-    background: url("../img/gemstones4.png") no-repeat center/contain; }
+    background: url("../img/RUBY.png") no-repeat center/contain;
+  }
   .gemstones.gemstones5 {
-    background: url("../img/gemstones5.png") no-repeat center/contain; }
+    background: url("../img/EMERALD.png") no-repeat center/contain;
+  }
 
 .wedding1 {
   width: 87px;
