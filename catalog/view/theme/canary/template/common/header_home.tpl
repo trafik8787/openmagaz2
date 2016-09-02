@@ -303,7 +303,7 @@
                                         <a href="<?php echo $categories[3]['children'][3]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-13" style="background-position-y: 10px;"></i></span> <span><?php echo $categories[3]['children'][3]['name']?></span></a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo $categories[3]['children'][4]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-15" style="background-position-y: 0;"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a>
+                                        <a href="<?php echo $categories[3]['children'][4]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-15" style="background-position-y: 5px; background-position-x: -4px;"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a>
                                     </li>
                                 </ul>
 

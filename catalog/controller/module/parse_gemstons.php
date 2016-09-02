@@ -15,13 +15,17 @@ class ControllerModuleParseGemstons extends Controller {
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
         $file->setCsvControl($delimiter);
-        //dd($file->current());
+        dd($file->current());
         $file->seek(2);
         //dd($file->current());
 
         while (!$file->eof()) {
+
             $curent = $file->current();
+
+
             dd($curent);
+            $file->next();
         }
     }
 
