@@ -48,7 +48,7 @@ class ControllerCommonFileManager extends Controller {
 
 		// Split the array based on current page number and max number of items per page of 10
 		$images = array_splice($images, ($page - 1) * 16, 16);
-        dd(DIR_IMAGE);
+
 		foreach ($images as $image) {
 			$name = str_split(basename($image), 14);
 
