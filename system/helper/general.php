@@ -174,7 +174,8 @@ function list_metal ($value = null) {
         'yellow_gold_18' => '18K Yellow Gold',
         'rose_gold_18' => '18K Rose Gold',
         'platinum' => 'Platinum',
-        'palladium' => 'Palladium'
+        'palladium' => 'Palladium',
+        'gemstones' => 'GEMSTONES'
     );
 
     if ($value !== null) {
