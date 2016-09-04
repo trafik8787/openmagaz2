@@ -218,6 +218,7 @@ class ControllerModuleParseGemstons extends Controller {
                 //размеры
                 $this->dimensions = $this->parseDimensions($curent[11]);
 
+
                 $this->image_general = 'catalog/img_gemstones/'.$curent[8];
                 $this->image_galery[] = 'catalog/img_gemstones/'.$curent[8];
                 $this->copyImage($curent[8]);
@@ -277,8 +278,21 @@ class ControllerModuleParseGemstons extends Controller {
 
 
     private function parseDimensions ($dimens) {
+
         $pieces = explode("|", trim($dimens));
-        return (array) $pieces;
+        if (empty($pieces)) {
+            $pieces[0] = 0.00000000;
+            $pieces[1] = 0.00000000;
+            $pieces[2] = 0.00000000;
+        } else {
+            if (empty($pieces[1])) {
+                $pieces[1] = 0.00000000;
+            } elseif (empty($pieces[2])) {
+                $pieces[2] = 0.00000000;
+            }
+        }
+
+        return $pieces;
     }
 
 
@@ -307,9 +321,9 @@ class ControllerModuleParseGemstons extends Controller {
             points = '" . 0 . "', 
             weight = '" . $this->carat . "', 
             weight_class_id = '" . 2 . "', 
-            length = '" . !empty($this->dimensions[0]) ? $this->dimensions[0] : 0 . "', 
-            width = '" . !empty($this->dimensions[1]) ? $this->dimensions[1] : 0 . "', 
-            height = '" . !empty($this->dimensions[2]) ? $this->dimensions[2] : 0 . "', 
+            length = '" . $this->dimensions[0] . "', 
+            width = '" . $this->dimensions[1] . "', 
+            height = '" . $this->dimensions[2] . "', 
             length_class_id = '" . 2 . "', 
             status = '" . 1 . "', 
             tax_class_id = '" . 0 . "', 
