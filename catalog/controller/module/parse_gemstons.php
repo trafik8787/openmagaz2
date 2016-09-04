@@ -174,7 +174,8 @@ class ControllerModuleParseGemstons extends Controller {
 
     public function sylviogems () {
 
-        $filePath = '/home/canary/www/sylviogems.csv';
+        //$filePath = '/home/canary/www/sylviogems.csv';
+        $filePath = '/home/brilliantcanary/gems_pars/sylviogems.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
