@@ -195,7 +195,7 @@ class ControllerModuleParseGemstons extends Controller {
 
             if ($curent[8] and $curent[2] !== 'CC') {
 
-                dd($curent);
+                //dd($curent);
 
                 $this->sku = $curent[6];
                 $this->model = $this->sku;
@@ -232,9 +232,9 @@ class ControllerModuleParseGemstons extends Controller {
                 $this->addGalery();
 
                 dd($this->product_id_insert);
-                if ($x > 2) {
-                    break;
-                }
+//                if ($x > 2) {
+//                    break;
+//                }
             }
 
             $file->next();
