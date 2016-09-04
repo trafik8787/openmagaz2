@@ -1,4 +1,4 @@
-
+    <?//dd($filter_groups)?>
         <?php foreach ($filter_groups as $filter_group):?>
 
             <?php if (!empty($filter_group['filter'])):?>
@@ -145,16 +145,12 @@ $(document).ready(function () {
         var min_weight_val = $('input[name=\'min_weight\']').val();
         var max_weight_val = $('input[name=\'max_weight\']').val();
 
-        if (min_weight_val != '' && min_weight_val != undefined) {
+        if (min_weight_val != '' && min_weight_val != '') {
             min_weight = '&WeightFrom=' + min_weight_val;
-        } else {
-            min_weight = '';
         }
 
-        if (max_weight_val != '' && max_weight_val != undefined) {
+        if (max_weight_val != '' && max_weight_val != '') {
             max_weight = '&WeightTo=' + max_weight_val;
-        } else {
-            max_weight = '';
         }
 
         var action = $('.w-action_page').val();
