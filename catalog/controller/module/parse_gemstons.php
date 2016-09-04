@@ -183,14 +183,14 @@ class ControllerModuleParseGemstons extends Controller {
         dd($file->current());
         $file->seek(2);
         //dd($file->current());
-        $x = 0;
+
+        $this->category[] = 94;
 
         while (!$file->eof()) {
 
-            $x++;
 
             $this->filter = array();
-
+            $this->image_galery = array();
             $curent = $file->current();
 
             if ($curent[8] and $curent[2] !== 'CC') {
@@ -203,7 +203,7 @@ class ControllerModuleParseGemstons extends Controller {
                 $this->price = floor(($this->carat * $curent[5]) * 2);
                 $this->name = $this->color[$curent[4]].' '.$this->shape[$curent[2]].' '.$this->stone_type[$curent[1]].' '.$curent[3];
 
-                $this->category[] = 94;
+
 
                 $this->description = $this->name;
                 $this->title_seo = $this->name.' | '. $this->sku;
