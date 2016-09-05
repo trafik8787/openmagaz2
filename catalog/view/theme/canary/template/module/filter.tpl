@@ -147,10 +147,14 @@ $(document).ready(function () {
 
         if (min_weight_val != '' && min_weight_val != '') {
             min_weight = '&WeightFrom=' + min_weight_val;
+        } else {
+            min_weight = '';
         }
 
         if (max_weight_val != '' && max_weight_val != '') {
             max_weight = '&WeightTo=' + max_weight_val;
+        } else {
+            max_weight = '';
         }
 
         var action = $('.w-action_page').val();
