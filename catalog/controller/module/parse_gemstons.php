@@ -294,36 +294,39 @@ class ControllerModuleParseGemstons extends Controller {
         $arr_id_product = array();
         $in_product = null;
 
-        foreach ($query->rows as $row) {
-            $arr_id_product[] = $row['product_id'];
+        if (!empty($query->rows)) {
+
+            foreach ($query->rows as $row) {
+                $arr_id_product[] = $row['product_id'];
+            }
+
+            $in_product = implode(',', $arr_id_product);
+
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_attribute WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_description WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_discount WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_filter WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_image WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_option WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_option_value WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_related WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_related WHERE related_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_reward WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_special WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_category WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_download WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_layout WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_store WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "product_recurring WHERE product_id IN (" . $in_product . ")");
+            $this->db->query("DELETE FROM " . DB_PREFIX . "review WHERE product_id IN (" . $in_product . ")");
+
+            foreach ($arr_id_product as $item) {
+                $this->db->query("DELETE FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . $item . "'");
+            }
+
+            $this->cache->delete('product');
         }
-
-        $in_product = implode(',', $arr_id_product);
-
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_attribute WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_description WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_discount WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_filter WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_image WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_option WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_option_value WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_related WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_related WHERE related_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_reward WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_special WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_category WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_download WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_layout WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_store WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "product_recurring WHERE product_id IN (" . $in_product . ")");
-        $this->db->query("DELETE FROM " . DB_PREFIX . "review WHERE product_id IN (" . $in_product . ")");
-
-        foreach ($arr_id_product as $item) {
-            $this->db->query("DELETE FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . $item . "'");
-        }
-
-        $this->cache->delete('product');
     }
 
 
