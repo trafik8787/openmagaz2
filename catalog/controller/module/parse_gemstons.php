@@ -174,8 +174,8 @@ class ControllerModuleParseGemstons extends Controller {
 
     public function sylviogems () {
 
-        $filePath = '/home/canary/www/sylviogems.csv';
-        //$filePath = '/home/brilliantcanary/gems_pars/sylviogems.csv';
+        //$filePath = '/home/canary/www/sylviogems.csv';
+        $filePath = '/home/brilliantcanary/gems_pars/sylviogems.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
@@ -186,6 +186,7 @@ class ControllerModuleParseGemstons extends Controller {
 
         $this->category[] = 94;
 
+        $x = 0;
         while (!$file->eof()) {
 
 
@@ -195,7 +196,9 @@ class ControllerModuleParseGemstons extends Controller {
 
             if ($curent[8] AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS') {
 
-                dd($curent);
+                //dd($curent);
+
+                $x++;
 
                 $this->sku = $curent[6];
                 $this->model = $this->sku;
@@ -233,9 +236,9 @@ class ControllerModuleParseGemstons extends Controller {
                 $this->addGalery();
 
                 dd($this->product_id_insert);
-//                if ($x > 2) {
-//                    break;
-//                }
+                if ($x > 20) {
+                    break;
+                }
             }
 
             $file->next();
