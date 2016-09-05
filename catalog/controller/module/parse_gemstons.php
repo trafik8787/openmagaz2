@@ -4,6 +4,8 @@
  * User: Vitalik
  * Date: 02.09.2016
  * Time: 17:07
+ *
+ * /index.php?route=module/parse_gemstons/sylviogems
  */
 
 
@@ -44,7 +46,8 @@ class ControllerModuleParseGemstons extends Controller {
 
 
         $this->metal = 'gemstones';
-        $this->manufactured = '';
+        $this->manufactured = 13;
+        $this->category[] = 94;
 
         /**
          * 'Price' => 4,
@@ -174,6 +177,7 @@ class ControllerModuleParseGemstons extends Controller {
 
     public function sylviogems () {
 
+        $this->deleteProduct();
         //$filePath = '/home/canary/www/sylviogems.csv';
         $filePath = '/home/brilliantcanary/gems_pars/sylviogems.csv';
         $delimiter = ',';
@@ -184,9 +188,8 @@ class ControllerModuleParseGemstons extends Controller {
         $file->seek(2);
         //dd($file->current());
 
-        $this->category[] = 94;
 
-        $x = 0;
+
         while (!$file->eof()) {
 
 
@@ -198,7 +201,6 @@ class ControllerModuleParseGemstons extends Controller {
 
                 //dd($curent);
 
-                $x++;
 
                 $this->sku = $curent[6];
                 $this->model = $this->sku;
@@ -236,9 +238,7 @@ class ControllerModuleParseGemstons extends Controller {
                 $this->addGalery();
 
                 dd($this->product_id_insert);
-                if ($x > 20) {
-                    break;
-                }
+
             }
 
             $file->next();
@@ -268,6 +268,63 @@ class ControllerModuleParseGemstons extends Controller {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function deleteProduct() {
+
+        $query = $this->db->query("SELECT product_id FROM " . DB_PREFIX . "product WHERE manufacturer_id = ".$this->manufactured." AND metal = 'gemstones'");
+
+        $arr_id_product = array();
+        $in_product = null;
+
+        foreach ($query->rows as $row) {
+            $arr_id_product[] = $row['product_id'];
+        }
+
+        $in_product = implode(',', $arr_id_product);
+
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_attribute WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_description WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_discount WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_filter WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_image WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_option WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_option_value WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_related WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_related WHERE related_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_reward WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_special WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_category WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_download WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_layout WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_store WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_recurring WHERE product_id IN (" . $in_product . ")");
+        $this->db->query("DELETE FROM " . DB_PREFIX . "review WHERE product_id IN (" . $in_product . ")");
+
+        foreach ($arr_id_product as $item) {
+            $this->db->query("DELETE FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . $item . "'");
+        }
+
+        $this->cache->delete('product');
+    }
 
 
     private function copyImage ($img) {
