@@ -328,7 +328,7 @@
 
 
                 <li class="dropdown-b" data-target="menu4">
-                    <a href="<?php echo $categories[4]['href']?>" class="w-general-category"><?php echo $categories[4]['name']?></a>
+                    <a href="/gemstones&filter=55,56,57" class="w-general-category"><?php echo $categories[4]['name']?></a>
                     <div class="dropdown-inside">
                         <div class="row clearfix">
                             <div class="col-md-4 col-sm-4 col-xs-4">

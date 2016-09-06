@@ -195,6 +195,11 @@ class ModelCatalogCategory extends Model {
     public function getPriceProduct ($category_id) {
         $max = $this->db->query("SELECT MAX(price) maxprice FROM " . DB_PREFIX . "product pr INNER JOIN ". DB_PREFIX ."product_to_category ptc ON(pr.product_id = ptc.product_id) WHERE ptc.category_id = ".$category_id);
         $min = $this->db->query("SELECT MIN(price) minprice FROM " . DB_PREFIX . "product pr INNER JOIN ". DB_PREFIX ."product_to_category ptc ON(pr.product_id = ptc.product_id) WHERE ptc.category_id = ".$category_id);
+
+        if ($min->row['minprice'] == 0) {
+            $min->row['minprice'] = 100;
+        }
+
         return array('min' => $min->row['minprice'], 'max' => $max->row['maxprice']);
     }
 
