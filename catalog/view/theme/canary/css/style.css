@@ -2822,7 +2822,7 @@ button:hover, button:focus {
   margin-bottom: 75px; }
   .box-img-main .ih-item {
     position: relative;
-    height: 494px;
+    height: 410px;
     overflow: hidden; }
     .box-img-main .ih-item > a {
       width: 100%;
@@ -2981,13 +2981,13 @@ button:hover, button:focus {
   margin: 0 auto; }
   .newsletter-main .bg-right {
     width: 50%;
-    height: 518px;
+    height: 380px;
     float: left;
     overflow: hidden;
     background: url("../img/img-new12.jpg") no-repeat center/cover; }
   .newsletter-main .newsletter-form {
     width: 50%;
-    height: 518px;
+    height: 380px;
     padding: 10px;
     float: left;
     overflow: hidden;

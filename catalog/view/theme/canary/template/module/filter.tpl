@@ -77,8 +77,8 @@
                 <?elseif ($filter_group['name'] === 'Weight'):?>
                     <?//dd($filter_group)?>
                     <?
-                        $min_weight = !empty($filter_group['dop_filter']['min']) ? $filter_group['dop_filter']['min'] : 0;
-                        $max_weight = !empty($filter_group['dop_filter']['max']) ? $filter_group['dop_filter']['max'] : 0;
+                        $min_weight = !empty($filter_group['dop_filter']['min']) ? round($filter_group['dop_filter']['min'], 2) : 0;
+                        $max_weight = !empty($filter_group['dop_filter']['max']) ? round($filter_group['dop_filter']['max'], 2) : 0;
                     ?>
                     <div class="right-f3">
                         <div class="one-line">
@@ -88,8 +88,8 @@
                             <div class="filter-block filter1">
                                 <div id="slider-weight"></div>
                                 <div class="clearfix">
-                                    <input type="text" value="<?php if (!empty($WeightFrom)) { echo $WeightFrom; } else { echo number_format($filter_group['dop_filter']['min']); }?>" id="amountWeight1" class="dop-filtr-weight-min input-slider-p pull-left" name="min_weight">
-                                    <input type="text" value="<?php if (!empty($WeighteTo)) { echo  $WeightTo; } else { echo number_format($filter_group['dop_filter']['max']); }?>" id="amountWeight2" class="dop-filtr-weight-max input-slider-p pull-right" name="max_weight">
+                                    <input type="text" value="<?php if (!empty($WeightFrom)) { echo $WeightFrom; } else { echo round($filter_group['dop_filter']['min'], 2); }?>" id="amountWeight1" class="dop-filtr-weight-min input-slider-p pull-left" name="min_weight">
+                                    <input type="text" value="<?php if (!empty($WeighteTo)) { echo  $WeightTo; } else { echo round($filter_group['dop_filter']['max'], 2); }?>" id="amountWeight2" class="dop-filtr-weight-max input-slider-p pull-right" name="max_weight">
                                 </div>
                             </div>
                         </div>
@@ -249,23 +249,23 @@ $(document).ready(function () {
 
 
 
-    var min_weight_min = parseInt("<?php echo $min_weight ?>");
-    var max_weight_max = parseInt("<?php echo $max_weight ?>");
+    var min_weight_min = parseFloat("<?=$min_weight ?>");
+    var max_weight_max = parseFloat("<?=$max_weight ?>");
 
     var ValMinWeight = $(".dop-filtr-weight-min").val();
     var ValMaxWeight = $(".dop-filtr-weight-max").val();
 
-
+    console.log(min_weight_min);
     var slider_weight = $('#slider-weight').slider({
         range: true,
         min: min_weight_min,
         animate: 'slow',
-        step: 0.05,
+        step: 0.01,
         max: max_weight_max,
         values: [ValMinWeight, ValMaxWeight],
         slide: function (event, ui) {
-            $('.dop-filtr-weight-max').val(Math.easeIn(ui.values[1], min_weight_min, max_weight_max, 3.6).toFixed(2));
-            $('.dop-filtr-weight-min').val(Math.easeIn(ui.values[0], min_weight_min, max_weight_max, 3.6).toFixed(2));
+            $('.dop-filtr-weight-max').val(Math.easeIn(ui.values[1], min_weight_min, max_weight_max, 1.6).toFixed(2));
+            $('.dop-filtr-weight-min').val(Math.easeIn(ui.values[0], min_weight_min, max_weight_max, 1.6).toFixed(2));
         },
         change: function( event, ui ) {
 
