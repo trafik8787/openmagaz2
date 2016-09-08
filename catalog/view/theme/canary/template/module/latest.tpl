@@ -4,13 +4,6 @@
     <h2><?php echo $heading_title; ?></h2>
     <div class="panel product-tabs panel-default">
         <div class="panel-heading">
-            <!--<ul class="nav nav-tabs">-->
-                <!--<li class="active"><a href="#product1" data-toggle="tab">DIAMONDS</a></li>-->
-                <!--<li><a href="#product2" data-toggle="tab">ENGAGEMENT RINGS</a></li>-->
-                <!--<li><a href="#product3" data-toggle="tab">WEDDING RINGS</a></li>-->
-                <!--<li><a href="#product4" data-toggle="tab">GEMSTONES</a></li>-->
-                <!--<li><a href="#product5" data-toggle="tab">FINE JEWELRY</a></li>-->
-            <!--</ul>-->
         </div>
         <div class="panel-body product-panel-body center-bl">
             <div class="tab-content">
