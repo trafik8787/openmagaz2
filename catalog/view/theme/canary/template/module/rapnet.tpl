@@ -4,7 +4,7 @@
         <div class="left-f">
             <div class="one-line height-inherit">
                 <div class="title">shape
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Choose the diamond shape based on the recipients personality, as well as the shape that will look the best in the ring setting you select.">
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Select the diamond shape that best suits the recipients style, along with what looks best in the ring setting you choose.">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>
                 </div>
@@ -44,7 +44,7 @@
             <div class="box-line-l">
                 <div class="one-line">
                     <div class="title">color
-                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Although these diamonds are slightly warm, they still offer a great value.">
+                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Narrow your diamond search by selecting the color range you are interested in browsing.">
                             <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                         </button>
                     </div>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="one-line">
                     <div class="title">clarity
-                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Some inclusions could be visible to the naked eye.">
+                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Narrow your diamond search by selecting the clarity range you are interested in browsing.">
                             <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                         </button>
                     </div>

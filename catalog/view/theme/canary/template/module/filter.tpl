@@ -255,7 +255,7 @@ $(document).ready(function () {
     var ValMinWeight = $(".dop-filtr-weight-min").val();
     var ValMaxWeight = $(".dop-filtr-weight-max").val();
 
-    console.log(min_weight_min);
+
     var slider_weight = $('#slider-weight').slider({
         range: true,
         min: min_weight_min,
