@@ -61,19 +61,19 @@ class ControllerModuleExelParser extends Controller {
         );
 
         //ENGAGEMENT RINGS
-        $this->category_arr = array(
-            'Three-stone' => 63,
-            'Three Stone' => 63,
-            'Vintage' => 66,
-            'Bezel set' => 64,
-            'Halo' => 65,
-            'Bypass' => 62,
-            'Pave' => 60,
-            'Solitaire' => 59,
-            'Modern'    => 89,
-            'Channel'   => 61,
-            'Channel Set' => 61
-        );
+//        $this->category_arr = array(
+//            'Three-stone' => 63,
+//            'Three Stone' => 63,
+//            'Vintage' => 66,
+//            'Bezel set' => 64,
+//            'Halo' => 65,
+//            'Bypass' => 62,
+//            'Pave' => 60,
+//            'Solitaire' => 59,
+//            'Modern'    => 89,
+//            'Channel'   => 61,
+//            'Channel Set' => 61
+//        );
 
         //WOMAN WEDDING RINGS
 //        $this->category_arr = array(
@@ -84,18 +84,18 @@ class ControllerModuleExelParser extends Controller {
 //        );
 
         //FINE JEWERLY
-//        $this->category_arr = array(
-//            'Diamond Bracelets' => 85,
-//            'Diamond Earrings' => 84,
-//            'Diamond Pendant' => 86,
-//            'Diamond Rings' => 88,
-//            'Diamond Studs' => 83,
-//            'Diamond Fashion Necklace' => 92,
-//            'Gemstone Bracelets' => 93,
-//            'Gemstone Earrings' => 87,
-//            'Gemstone Pendants' => 91,
-//            'Gemstone Rings' => 90
-//        );
+        $this->category_arr = array(
+            'Diamond Bracelets' => 85,
+            'Diamond Earrings' => 84,
+            'Diamond Pendant' => 86,
+            'Diamond Rings' => 88,
+            'Diamond Studs' => 83,
+            'Diamond Fashion Necklace' => 92,
+            'Gemstone Bracelets' => 93,
+            'Gemstone Earrings' => 87,
+            'Gemstone Pendants' => 91,
+            'Gemstone Rings' => 90
+        );
 
 
         $this->list_filtr = array(
@@ -235,7 +235,9 @@ class ControllerModuleExelParser extends Controller {
         //$filePath = '/home/canary/www/diamond hoops 2.csv';
         //$filePath = '/home/canary/www/channel set engagement rings-STULLER.csv';
         //$filePath = '/home/canary/www/channel set engagement rings.csv';
-        $filePath = '/home/brilliantcanary/htdocs/channel set engagement rings.csv';
+        //$filePath = '/home/canary/www/diamond earrings.csv';
+        $filePath = '/home/brilliantcanary/htdocs/diamond earrings.csv';
+        //$filePath = '/home/brilliantcanary/htdocs/channel set engagement rings.csv';
         //$filePath = '/home/brilliantcanary/htdocs/channel set engagement rings-STULLER.csv';
         //$filePath = '/home/brilliantcanary/htdocs/diamond hoops 2.csv';
         //$filePath = '/home/brilliantcanary/htdocs/Copy of diamond studs.csv';
@@ -334,17 +336,17 @@ class ControllerModuleExelParser extends Controller {
                 }
 
                 //galery image
-                $this->GaleryUrlImg($metal, $sku);
+                //$this->GaleryUrlImg($metal, $sku);
 
 
                 //ENGAGEMENT RINGS
-                $this->category[] = 20;
+                //$this->category[] = 20;
 
                 //WOMAN WEDDING RINGS
                 //$this->category[] = 69;
 
                 //FINE JEWERLY
-                //$this->category[] = 82;
+                $this->category[] = 82;
 
                 if (!empty($curent[11])) {
                     $this->category[] = $this->category_arr[trim($curent[11])];
@@ -358,8 +360,8 @@ class ControllerModuleExelParser extends Controller {
 
 
                 //image general
-                $this->image_general = 'catalog/galery_rings/'.$name_file_general_img;
-                //$this->image_general = '';
+                //$this->image_general = 'catalog/galery_rings/'.$name_file_general_img;
+                $this->image_general = '';
 
 
                 $this->model = $this->sku;
@@ -389,7 +391,7 @@ class ControllerModuleExelParser extends Controller {
                 $this->addCategory();
                 $this->addFilters();
                 $this->addUrl();
-                $this->addGalery();
+                //$this->addGalery();
                 $this->addStore();
 
                 $this->addOption();
