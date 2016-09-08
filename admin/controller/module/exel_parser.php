@@ -234,7 +234,9 @@ class ControllerModuleExelParser extends Controller {
         //$filePath = '/home/canary/www/diamond hoops.csv';
         //$filePath = '/home/canary/www/diamond hoops 2.csv';
         //$filePath = '/home/canary/www/channel set engagement rings-STULLER.csv';
-        $filePath = '/home/brilliantcanary/htdocs/channel set engagement rings-STULLER.csv';
+        //$filePath = '/home/canary/www/channel set engagement rings.csv';
+        $filePath = '/home/brilliantcanary/htdocs/channel set engagement rings.csv';
+        //$filePath = '/home/brilliantcanary/htdocs/channel set engagement rings-STULLER.csv';
         //$filePath = '/home/brilliantcanary/htdocs/diamond hoops 2.csv';
         //$filePath = '/home/brilliantcanary/htdocs/Copy of diamond studs.csv';
         //$filePath = '/home/brilliantcanary/htdocs/diamond hoops.csv';
