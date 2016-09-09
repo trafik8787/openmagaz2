@@ -256,7 +256,9 @@ home hover efect
     background: radial-gradient(ellipse at top left, rgba(105,155,200,1) 0%,rgb(183, 235, 252) 57%);
 }
 
-
+.popover {
+    max-width: 305px;
+}
 
 /*zoom image hover*/
 .w-zoom-image-hover {

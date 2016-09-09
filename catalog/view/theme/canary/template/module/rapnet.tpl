@@ -4,7 +4,7 @@
         <div class="left-f">
             <div class="one-line height-inherit">
                 <div class="title">shape
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Select the diamond shape that best suits the recipients style, along with what looks best in the ring setting you choose.">
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="Select the diamond shape that best suits the recipients style, along with what looks best in the ring setting you choose.">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>
                 </div>
@@ -44,7 +44,7 @@
             <div class="box-line-l">
                 <div class="one-line">
                     <div class="title">color
-                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Narrow your diamond search by selecting the color range you are interested in browsing.">
+                        <button type="button" class="question-filter-btn" id="help-color" >
                             <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                         </button>
                     </div>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="one-line">
                     <div class="title">clarity
-                        <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Narrow your diamond search by selecting the clarity range you are interested in browsing.">
+                        <button type="button" class="question-filter-btn" id="help-clarity">
                             <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                         </button>
                     </div>
@@ -98,7 +98,7 @@
         <div class="right-f">
             <div class="one-line">
                 <div class="title">cut
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Quality cut at a great value, without compromising beauty and sparkle.">
+                    <button type="button" class="question-filter-btn" id="help-cut" data-toggle="popover" data-trigger="click" data-placement="bottom">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>
                 </div>
@@ -180,26 +180,26 @@
                             </div>
                         </div>
                     </li>
-                    <li data-toggle="tooltip" data-placement="left" title="Laboratory diamond">
-                        lab
-                        <div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-labs"  data-toggle="buttons">
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="labs" value="GIA"> GIA
-                            </div>
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="labs" value="IGI"> IGI
-                            </div>
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="labs" value="AGS"> AGS
-                            </div>
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="labs" value="HRD"> HRD
-                            </div>
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="labs" value="EGL_USA"> EGL_USA
-                            </div>
-                        </div>
-                    </li>
+                    <!--*<li data-toggle="tooltip" data-placement="left" title="Laboratory diamond">*-->
+                        <!--*lab*-->
+                        <!--*<div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-labs"  data-toggle="buttons">*-->
+                            <!--*<div class="btn btn-filter">*-->
+                                <!--*<input type="checkbox" name="labs" value="GIA"> GIA*-->
+                            <!--*</div>*-->
+                            <!--*<div class="btn btn-filter">*-->
+                                <!--*<input type="checkbox" name="labs" value="IGI"> IGI*-->
+                            <!--*</div>*-->
+                            <!--*<div class="btn btn-filter">*-->
+                                <!--*<input type="checkbox" name="labs" value="AGS"> AGS*-->
+                            <!--*</div>*-->
+                            <!--*<div class="btn btn-filter">*-->
+                                <!--*<input type="checkbox" name="labs" value="HRD"> HRD*-->
+                            <!--*</div>*-->
+                            <!--*<div class="btn btn-filter">*-->
+                                <!--*<input type="checkbox" name="labs" value="EGL_USA"> EGL_USA*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                    <!--*</li>*-->
                     <li data-target="depth-slider" data-toggle="tooltip" data-placement="left" title="Depth refers to the distance between the culet and the table when the diamond is viewed from the side.">
                         depth
                         <div class="filter-block filter1 filter-drop-drop">
@@ -242,10 +242,13 @@
                                 <input type="checkbox" name="fluorescence_intensities" value="Medium"> Medium
                             </div>
                             <div class="btn btn-filter">
-                                <input type="checkbox" name="fluorescence_intensities" value="Faint"> Feint
+                                <input type="checkbox" name="fluorescence_intensities" value="Faint"> Faint
                             </div>
                             <div class="btn btn-filter">
                                 <input type="checkbox" name="fluorescence_intensities" value="Very Slight"> Very slight
+                            </div>
+                            <div class="btn btn-filter">
+                                <input type="checkbox" name="fluorescence_intensities" value="None"> None
                             </div>
                         </div>
                     </li>
@@ -261,7 +264,7 @@
 </div>
 
 
-
+<?=$popap?>
 
 
 
@@ -271,6 +274,33 @@
 
 
     $(document).ready(function () {
+
+
+        // Enables popover #2
+        $("#help-cut").popover({
+            html : true,
+            trigger: 'click',
+            placement : 'top',
+            container: 'body',
+            content: $("#popower-cut").html()
+        });
+
+        $("#help-color").popover({
+            html : true,
+            trigger: 'click',
+            placement : 'top',
+            container: 'body',
+            content: $("#popower-color").html()
+        });
+
+        $("#help-clarity").popover({
+            html : true,
+            trigger: 'click',
+            placement : 'top',
+            container: 'body',
+            content: $("#popower-clarity").html()
+        });
+
         var $action =  "<?=$action?>";
         var $url_color='';
         var $url_shape='';

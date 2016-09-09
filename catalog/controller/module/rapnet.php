@@ -101,7 +101,7 @@ class ControllerModuleRapnet extends Controller {
 
         $data['data'] = $this->load->view($this->config->get('config_template') . '/template/module/rapnet_show.tpl', $result);
 
-
+        $data['popap'] = $this->load->view($this->config->get('config_template') . '/template/module/rapnet_popap.tpl');
 
         if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/rapnet.tpl')) {
             return $this->load->view($this->config->get('config_template') . '/template/module/rapnet.tpl', $data);
@@ -323,6 +323,7 @@ class ControllerModuleRapnet extends Controller {
             $page = 1;
         }
 
+        //dd($fluorescence_intensities_arr);
         if (empty($this->GetCache($page))) {
 
             $data = array('request' => array('header' => array('username' => $this->config->get('rapnet_name'), 'password' => $this->config->get('rapnet_pass')),
@@ -347,7 +348,7 @@ class ControllerModuleRapnet extends Controller {
                     'symmetry_to' => $symmetry_to,
                     'price_total_from' => $price_from,
                     'price_total_to' => $price_to,
-                    'labs' => $labs_arr,
+                    'labs' => array('GIA'),//$labs_arr,
                     'depth_percent_from' => $depth_from,
                     'depth_percent_to' => $depth_to,
                     'table_percent_from' => $table_from,

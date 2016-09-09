@@ -68,7 +68,8 @@
                                         <li><span>GIRDLE: </span><span><?=$product->response->body->diamond->girdle_max?></span></li>
                                         <li><span>TABLE %: </span><span><?=$product->response->body->diamond->table_percent?></span></li>
                                         <li><span>CULET: </span><span><?=$product->response->body->diamond->culet_size?></span></li>
-                                        <li><span>CERTIFICATE: </span><span><?=$product->response->body->diamond->lab?></span></li>
+                                        <li><span>CERTIFICATE: </span><span><?=$product->response->body->diamond->lab?></span>
+                                            <a href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$product->response->body->diamond->diamond_id?>">view certificate</a></li>
                                     </ul>
 
                                 </div>
