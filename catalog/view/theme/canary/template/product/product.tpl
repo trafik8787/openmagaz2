@@ -38,7 +38,7 @@
                                     <video autoplay loop class="myVideo" src="<?=$image['video']?>" onclick="this.play();" style="margin-left: auto; margin-right: auto; width: 100%;"></video>
                                 </div>
                             <?else:?>
-                                <div><img src="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" style="margin-left: auto; margin-right: auto;"></div>
+                                <div><img src="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" style="margin-left: auto; margin-right: auto; width: 100%;"></div>
                             <?endif?>
                         <?endforeach?>
 
@@ -52,7 +52,7 @@
                                     <video width="69px" height="65px" src="<?=$image['video']?>"></video>
                                 </div>
                             <?else:?>
-                                <div class="wrapper-img-slider"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>"></div>
+                                <div class="wrapper-img-slider"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" ></div>
                             <?endif?>
 
 

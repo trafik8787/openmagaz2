@@ -1112,8 +1112,12 @@ button:hover, button:focus {
             vertical-align: middle;
             margin-right: -4px;
         }
+
+    }
+
+    @media (min-width: 1300px){
         .one-product-slider .slider-for .slick-track img {
-            width: 100%;
+            width: auto!important;
         }
     }
 
@@ -4143,7 +4147,7 @@ button:hover, button:focus {
 
 
 .one-product-slider {
-  width: 50%;
+  width: 45%;
   margin-bottom: 90px;
   float: left; }
   .one-product-slider .slider-pro {
@@ -4230,7 +4234,7 @@ button:hover, button:focus {
   text-align: center; }
 
 .one-product-info {
-  width: 45%;
+  width: 50%;
   float: right;
   font-size: 14px;
   color: #444444;
