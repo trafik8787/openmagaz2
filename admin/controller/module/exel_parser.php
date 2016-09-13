@@ -83,19 +83,28 @@ class ControllerModuleExelParser extends Controller {
 //            'Diamond' => 79
 //        );
 
-        //FINE JEWERLY
+        //MAN WEDDING RINGS
         $this->category_arr = array(
-            'Diamond Bracelets' => 85,
-            'Diamond Earrings' => 84,
-            'Diamond Pendant' => 86,
-            'Diamond Rings' => 88,
-            'Diamond Studs' => 83,
-            'Diamond Fashion Necklace' => 92,
-            'Gemstone Bracelets' => 93,
-            'Gemstone Earrings' => 87,
-            'Gemstone Pendants' => 91,
-            'Gemstone Rings' => 90
+            'Modern' => 75,
+            'Diamond' => 74,
+            'Classic' => 72,
+            'Carved' => 73
         );
+
+
+        //FINE JEWERLY
+//        $this->category_arr = array(
+//            'Diamond Bracelets' => 85,
+//            'Diamond Earrings' => 84,
+//            'Diamond Pendant' => 86,
+//            'Diamond Rings' => 88,
+//            'Diamond Studs' => 83,
+//            'Diamond Fashion Necklace' => 92,
+//            'Gemstone Bracelets' => 93,
+//            'Gemstone Earrings' => 87,
+//            'Gemstone Pendants' => 91,
+//            'Gemstone Rings' => 90
+//        );
 
 
         $this->list_filtr = array(
@@ -236,7 +245,8 @@ class ControllerModuleExelParser extends Controller {
         //$filePath = '/home/canary/www/channel set engagement rings-STULLER.csv';
         //$filePath = '/home/canary/www/channel set engagement rings.csv';
         //$filePath = '/home/canary/www/diamond earrings.csv';
-        $filePath = '/home/brilliantcanary/htdocs/diamond earrings.csv';
+        $filePath = '/home/canary/www/Stuller Classic Bands Mens.csv';
+        //$filePath = '/home/brilliantcanary/htdocs/diamond earrings.csv';
         //$filePath = '/home/brilliantcanary/htdocs/channel set engagement rings.csv';
         //$filePath = '/home/brilliantcanary/htdocs/channel set engagement rings-STULLER.csv';
         //$filePath = '/home/brilliantcanary/htdocs/diamond hoops 2.csv';
@@ -343,10 +353,10 @@ class ControllerModuleExelParser extends Controller {
                 //$this->category[] = 20;
 
                 //WOMAN WEDDING RINGS
-                //$this->category[] = 69;
+                $this->category[] = 69;
 
                 //FINE JEWERLY
-                $this->category[] = 82;
+                //$this->category[] = 82;
 
                 if (!empty($curent[11])) {
                     $this->category[] = $this->category_arr[trim($curent[11])];
