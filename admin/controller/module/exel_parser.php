@@ -231,8 +231,6 @@ class ControllerModuleExelParser extends Controller {
 
     private function  fixParse (){
 
-        //$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$store_id ."'");
-        //dd($query->rows);
         //$filePath = '/home/canary/www/website.csv';
         //$filePath = '/home/canary/www/website_weding_woman.csv';
         //$filePath = '/home/canary/www/fashion_jewelry.csv';
@@ -263,7 +261,7 @@ class ControllerModuleExelParser extends Controller {
         //$filePath = '/home/brilliantcanary/htdocs/website_weding_woman.csv';
         //$filePath = '/home/brilliantcanary/htdocs/website.csv';
 
-        $filePath = trim($this->file_path);
+        $filePath = $_SERVER['DOCUMENT_ROOT'].'/'.trim($this->file_path);
 
         $delimiter = ';';
         $file = new SplFileObject($filePath, 'r');
