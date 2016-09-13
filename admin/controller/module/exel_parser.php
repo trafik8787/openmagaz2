@@ -334,14 +334,14 @@ class ControllerModuleExelParser extends Controller {
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
-                } elseif ($metal == 'Platinum') {
+                } elseif ($metal == 'Platinum' OR $metal == 'platinum') {
                     $this->metal = $this->list_metal['Platinum'];
                     $this->sku = $curent[1] . '-PL';
                     $this->filter[] = $this->list_filtr['Platinum'];
 
                     $name_file_general_img = $sku.'.jpg';
 
-                } elseif ($metal == 'Palladium') {
+                } elseif ($metal == 'Palladium' or $metal == 'palladium') {
                     $this->metal = $this->list_metal['Palladium'];
                     $this->sku = $curent[1] . '-PA';
                     $this->filter[] = $this->list_filtr['Palladium'];
