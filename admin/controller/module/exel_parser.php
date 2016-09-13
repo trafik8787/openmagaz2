@@ -44,7 +44,7 @@ class ControllerModuleExelParser extends Controller {
     private $array_product;
 
     private $price;
-
+    private $file_path;
 
     public function __construct($registry){
         parent::__construct($registry);
@@ -152,6 +152,7 @@ class ControllerModuleExelParser extends Controller {
 
         if (!empty($this->request->post['parsing_success'])) {
             $data['progres'] = 'Syccess';
+            $this->file_path = $this->request->post['path_file'];
             $this->fixParse();
         }
 
@@ -246,7 +247,7 @@ class ControllerModuleExelParser extends Controller {
         //$filePath = '/home/canary/www/channel set engagement rings.csv';
         //$filePath = '/home/canary/www/diamond earrings.csv';
         //$filePath = '/home/canary/www/Stuller Classic Bands Mens.csv';
-        $filePath = '/home/brilliantcanary/htdocs/Stuller Classic Bands Mens.csv';
+        //$filePath = '/home/brilliantcanary/htdocs/Stuller Classic Bands Mens.csv';
         //$filePath = '/home/brilliantcanary/htdocs/diamond earrings.csv';
         //$filePath = '/home/brilliantcanary/htdocs/channel set engagement rings.csv';
         //$filePath = '/home/brilliantcanary/htdocs/channel set engagement rings-STULLER.csv';
@@ -261,6 +262,9 @@ class ControllerModuleExelParser extends Controller {
         //$filePath = '/home/brilliantcanary/htdocs/fashion_jewelry.csv';
         //$filePath = '/home/brilliantcanary/htdocs/website_weding_woman.csv';
         //$filePath = '/home/brilliantcanary/htdocs/website.csv';
+
+        $filePath = trim($this->file_path);
+
         $delimiter = ';';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
@@ -393,9 +397,16 @@ class ControllerModuleExelParser extends Controller {
                 $this->list_atribute[18] = $curent[17];
 
 
+                $tmp_price = strripos($curent[18], '$');
 
-                $this->price = (int)substr(str_replace(" ","",$curent[18]), 1);
-                //$this->price = $curent[18];
+                if ($tmp_price === false) {
+                    $this->price = $curent[18];
+                } else {
+                    $this->price = (int)substr(str_replace(" ","",$curent[18]), 1);
+                }
+
+
+
 
                 $this->product_id_insert = $this->addProduct();
                 $this->addDescription();

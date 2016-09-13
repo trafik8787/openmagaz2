@@ -27,12 +27,19 @@
                 <h3 class="panel-title"><i class="fa fa-pencil"></i> <?php echo $text_edit; ?></h3>
             </div>
             <div class="panel-body">
-                <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-html" class="form-horizontal">
+                <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data"  class="form-horizontal">
 
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="input-progres">Progres</label>
                         <div class="col-sm-10">
                             <?=!empty($progres) ? $progres : ''?>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-progres">Path</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" required="required" name="path_file">
                         </div>
                     </div>
 
