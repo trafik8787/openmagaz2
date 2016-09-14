@@ -17,6 +17,9 @@ $(document).ready(function() {
     $(document).on('change', '.w-wsubcat' ,function(){
         input_sort ($(this).data('href'));
         history.pushState('', '', $(this).data('href'));
+        if ($(document).scrollTop() < 500) {
+            $('html, body').animate({scrollTop: 500}, 'slow');
+        }
         return false;
     });
 

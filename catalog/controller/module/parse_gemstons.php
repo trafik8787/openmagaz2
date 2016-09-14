@@ -6,6 +6,7 @@
  * Time: 17:07
  *
  * /index.php?route=module/parse_gemstons/sylviogems
+ * /index.php?route=module/parse_gemstons/sylviojewelry
  */
 
 
@@ -41,12 +42,19 @@ class ControllerModuleParseGemstons extends Controller {
 
     private $category;
 
+
+    //gemstone jeverly изделия
+    private $category_gemstone;
+    private $manufactured_gemstone;
+
+
     public function __construct($registry) {
         parent::__construct($registry);
 
 
         $this->metal = 'gemstones';
         $this->manufactured = 13;
+        $this->manufactured_gemstone = 14;
         $this->category[] = 94;
 
         /**
@@ -150,6 +158,19 @@ class ControllerModuleParseGemstons extends Controller {
             'Yellow' => 'Yellow'
         );
 
+
+        $this->category_gemstone = array(
+            'BNGL' => 93, //'Gemstone Bracelets',
+            'ERNG' => 87, //'Gemstone Earrings',
+            'NL' => 91, //'Gemstone Pendants',
+            'PDT' => 91, //'Gemstone Pendants',
+            'RG' => 90, //'Gemstone Rings',
+            'STU' => 87, //'Gemstone Earrings',
+            'TNSB' => 93 //'Gemstone Bracelets'
+        );
+
+
+
     }
 
 
@@ -248,7 +269,21 @@ class ControllerModuleParseGemstons extends Controller {
 
 
     public function sylviojewelry () {
-        dd('sdfsdfs');
+
+        $filePath = '/home/canary/www/sylviojewelry.csv';
+        $delimiter = ',';
+        $file = new SplFileObject($filePath, 'r');
+        $file->setFlags(SplFileObject::READ_CSV);
+        $file->setCsvControl($delimiter);
+        dd($file->current());
+        $file->seek(2);
+        //dd($file->current());
+
+        while (!$file->eof()) {
+
+            dd($file->current());
+            $file->next();
+        }
     }
 
 

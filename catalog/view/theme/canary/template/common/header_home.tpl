@@ -33,8 +33,8 @@
     <script src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <?php foreach ($analytics as $analytic) { ?>
     <?php echo $analytic; ?>
