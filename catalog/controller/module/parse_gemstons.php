@@ -46,6 +46,8 @@ class ControllerModuleParseGemstons extends Controller {
     //gemstone jeverly изделия
     private $category_gemstone;
     private $manufactured_gemstone;
+    private $metal_gemstone;
+
 
 
     public function __construct($registry) {
@@ -159,6 +161,14 @@ class ControllerModuleParseGemstons extends Controller {
         );
 
 
+
+
+
+
+
+
+
+
         $this->category_gemstone = array(
             'BNGL' => 93, //'Gemstone Bracelets',
             'ERNG' => 87, //'Gemstone Earrings',
@@ -168,6 +178,22 @@ class ControllerModuleParseGemstons extends Controller {
             'STU' => 87, //'Gemstone Earrings',
             'TNSB' => 93 //'Gemstone Bracelets'
         );
+
+        $this->metal_gemstone = array(
+            '14K ROSE' => 'rose_gold_14',
+            '14KTT' => 'two_tone_14',
+            '14KW'  => 'white_gold_14',
+            '18KP'  => 'rose_gold_14', // ? не уверен что выставлен нужный метал
+            '18KTT' => 'two_tone_18',
+            '18KW'  => 'white_gold_18',
+            '18KY'  =>  'yellow_gold_18',
+            '2T14K' => 'two_tone_14',
+            'PL18K' => 'platinum',
+            'PLAT/18K' => 'platinum',
+            'PLTN'  => 'palladium'
+        );
+
+
 
 
 
@@ -218,7 +244,7 @@ class ControllerModuleParseGemstons extends Controller {
             $this->image_galery = array();
             $curent = $file->current();
 
-            if ($curent[8] AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS') {
+            if ($curent[8] AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
 
                 //dd($curent);
 
@@ -268,6 +294,32 @@ class ControllerModuleParseGemstons extends Controller {
     }
 
 
+    /**
+     *  [0] => Vendor SKU
+    [1] => Category
+    [2] => Center Stone Type
+    [3] => Center Stone Shape
+    [4] => Center Stone Color
+    [5] => # of Center Stones
+    [6] => Center Stone Measurements
+    [7] => Center Stone Weight
+    [8] => Total Diamond Weight
+    [9] => # of side Diamonds
+    [10] => Color of Side diamonds
+    [11] => Clarity of Side diamonds
+    [12] => # of Pave Diamonds
+    [13] => Color of Pave diamonds
+    [14] => Clarity of Pave Diamonds
+    [15] => Metal
+    [16] => Ring Size
+    [17] => Item Name
+    [18] => R2Net Cost
+    [19] => Suggested Retail
+    [20] => Shank Width in MM
+    [21] => Shank Height
+    [22] => Image Name
+    [23] => Long Description
+     */
     public function sylviojewelry () {
 
         $filePath = '/home/canary/www/sylviojewelry.csv';
@@ -278,16 +330,55 @@ class ControllerModuleParseGemstons extends Controller {
         dd($file->current());
         $file->seek(2);
         //dd($file->current());
-
+        $rert = array();
         while (!$file->eof()) {
 
-            dd($file->current());
+            $curent = $file->current();
+
+           if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4])) and  !empty($this->category_gemstone[$curent[1]])) {
+
+
+               $this->sku = $curent[0];
+               $this->model = $this->sku;
+
+               if ($curent[18] <= 5999) {
+                   $this->getPrice($curent[18], 15);
+
+               } elseif ($curent[18] >= 5000 AND $curent[18] <= 16999) {
+                   $this->getPrice($curent[18], 20);
+
+               } elseif ($curent[18] >= 17000) {
+                   $this->getPrice($curent[18], 25);
+               }
+
+               //dd($curent);
+
+               //$this->name =
+
+               if ($curent[15]) {
+                    $rert[$curent[15]] = $curent[15];
+               }
+
+               //$this->name = $curent[4].' '.$this->shape[$curent[2]].' '.$this->stone_type[$curent[1]].' '.$curent[3];
+
+
+           }
+
+            dd($curent);
             $file->next();
         }
+        dd($rert);
     }
 
 
-
+    /**
+     * расчет цены
+     */
+    public function getPrice ($price, $percent) {
+        $this->price = $price * 2;
+        $tmp_price = ($price * $percent)/100;
+        $this->price = $this->price - $tmp_price;
+    }
 
 
 
