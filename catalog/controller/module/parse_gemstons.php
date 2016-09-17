@@ -44,20 +44,15 @@ class ControllerModuleParseGemstons extends Controller {
 
 
     //gemstone jeverly изделия
-    private $category_gemstone;
-    private $manufactured_gemstone;
+    private $category_gemstone_arr;
     private $metal_gemstone;
-
-
+    private $list_filtr_gemstone;
+    private $list_options;
 
     public function __construct($registry) {
         parent::__construct($registry);
 
 
-        $this->metal = 'gemstones';
-        $this->manufactured = 13;
-        $this->manufactured_gemstone = 14;
-        $this->category[] = 94;
 
         /**
          * 'Price' => 4,
@@ -169,7 +164,7 @@ class ControllerModuleParseGemstons extends Controller {
 
 
 
-        $this->category_gemstone = array(
+        $this->category_gemstone_arr = array(
             'BNGL' => 93, //'Gemstone Bracelets',
             'ERNG' => 87, //'Gemstone Earrings',
             'NL' => 91, //'Gemstone Pendants',
@@ -180,21 +175,37 @@ class ControllerModuleParseGemstons extends Controller {
         );
 
         $this->metal_gemstone = array(
-            '14K ROSE' => 'rose_gold_14',
-            '14KTT' => 'two_tone_14',
-            '14KW'  => 'white_gold_14',
-            '18KP'  => 'rose_gold_14', // ? не уверен что выставлен нужный метал
-            '18KTT' => 'two_tone_18',
-            '18KW'  => 'white_gold_18',
-            '18KY'  =>  'yellow_gold_18',
-            '2T14K' => 'two_tone_14',
-            'PL18K' => 'platinum',
-            'PLAT/18K' => 'platinum',
-            'PLTN'  => 'palladium'
+            '14K ROSE' => array('rose_gold_14', '14K Rose Gold'),
+            '14KTT' => array('two_tone_14', '14K Two Tone'),
+            '14KW'  => array('white_gold_14', '14K White Gold'),
+            '18KP'  => array('rose_gold_14', '14K Rose Gold'), // ? не уверен что выставлен нужный метал
+            '18KTT' => array('two_tone_18', '18K Two Tone'),
+            '18KW'  => array('white_gold_18', '18K White Gold'),
+            '18KY'  => array('yellow_gold_18', '18K Yellow Gold'),
+            '2T14K' => array('two_tone_14', '14K Two Tone'),
+            'PL18K' => array('platinum', 'Platinum'),
+            'PLAT/18K' => array('platinum', 'Platinum'),
+            'PLTN'  => array('palladium', 'Palladium')
         );
 
 
+        $this->list_filtr_gemstone = array(
+            'Price' => 4,
+            'All metals' => 7,
+            '14K ROSE' => 14,
+            '14KTT' => 59,
+            '14KW'  => 6,
+            '18KP'  => 14,
+            '18KTT' => 60,
+            '18KW'  => 5,
+            '18KY'  =>  12,
+            '2T14K' => 59,
+            'PL18K' => 13,
+            'PLAT/18K' => 13,
+            'PLTN'  => 16
+        );
 
+        $this->list_options = array(46,47,48,55,56,57,58,59,60,68,69);
 
 
     }
@@ -223,6 +234,10 @@ class ControllerModuleParseGemstons extends Controller {
 
 
     public function sylviogems () {
+
+        $this->metal = 'gemstones';
+        $this->manufactured = 13;
+        $this->category[] = 94;
 
         $this->deleteProduct();
         //$filePath = '/home/canary/www/sylviogems.csv';
@@ -322,7 +337,10 @@ class ControllerModuleParseGemstons extends Controller {
      */
     public function sylviojewelry () {
 
-        $filePath = '/home/canary/www/sylviojewelry.csv';
+        $this->manufactured = 14;
+
+        $this->deleteProduct(true);
+        $filePath = '/home/brilliantcanary/gems_pars/sylviojewelry.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
@@ -330,16 +348,25 @@ class ControllerModuleParseGemstons extends Controller {
         dd($file->current());
         $file->seek(2);
         //dd($file->current());
-        $rert = array();
+
         while (!$file->eof()) {
 
             $curent = $file->current();
+            $this->filter = array();
+            $this->category = array();
+            $this->image_galery = array();
 
-           if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4])) and  !empty($this->category_gemstone[$curent[1]])) {
+           if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4])) and  !empty($this->category_gemstone_arr[$curent[1]])) {
 
 
                $this->sku = $curent[0];
                $this->model = $this->sku;
+               $this->carat = !empty($curent[7]) ? $curent[7] : '';
+
+               //filters
+               $this->filter[] = $this->list_filtr_gemstone['Price'];
+               $this->filter[] = $this->list_filtr_gemstone['All metals'];
+               $this->filter[] = $this->list_filtr_gemstone[$curent[15]];
 
                if ($curent[18] <= 5999) {
                    $this->getPrice($curent[18], 15);
@@ -351,23 +378,38 @@ class ControllerModuleParseGemstons extends Controller {
                    $this->getPrice($curent[18], 25);
                }
 
+               $this->metal = $this->metal_gemstone[$curent[15]][0];
+               $this->category[] = $this->category_gemstone_arr[$curent[1]];
+
+               $this->image_general = 'catalog/img_gemstones/'.$curent[22];
+               $this->image_galery[] = 'catalog/img_gemstones/'.$curent[22];
+
+               $this->name = $curent[2].' '.$curent[3].' '.$curent[4]. ' '.$this->metal_gemstone[$curent[15]][1];
+               $this->description = $this->name;
+               $this->title_seo = $this->name;
+               $this->description_seo = $this->name. ' '. $curent[23];
+               $this->keywords_seo = $this->name;
+
+               $this->dimensions = array('', $curent[20], $curent[21]);
+
+
+               $this->product_id_insert = $this->addProduct();
+               $this->copyImage($curent[22]);
+               $this->addFilters();
+               $this->addDescription();
+               $this->addUrl();
+               $this->addStore();
+               $this->addCategory();
+               $this->addGalery();
+               $this->addOption();
+
                //dd($curent);
-
-               //$this->name =
-
-               if ($curent[15]) {
-                    $rert[$curent[15]] = $curent[15];
-               }
-
-               //$this->name = $curent[4].' '.$this->shape[$curent[2]].' '.$this->stone_type[$curent[1]].' '.$curent[3];
-
-
+               dd($this->product_id_insert);
            }
 
-            dd($curent);
             $file->next();
         }
-        dd($rert);
+
     }
 
 
@@ -413,9 +455,13 @@ class ControllerModuleParseGemstons extends Controller {
 
 
 
-    public function deleteProduct() {
+    public function deleteProduct($gemstones = false) {
 
-        $query = $this->db->query("SELECT product_id FROM " . DB_PREFIX . "product WHERE manufacturer_id = ".$this->manufactured." AND metal = 'gemstones'");
+        if ($gemstones === true) {
+            $query = $this->db->query("SELECT product_id FROM " . DB_PREFIX . "product WHERE manufacturer_id = " . $this->manufactured);
+        } else {
+            $query = $this->db->query("SELECT product_id FROM " . DB_PREFIX . "product WHERE manufacturer_id = " . $this->manufactured . " AND metal = 'gemstones'");
+        }
 
         $arr_id_product = array();
         $in_product = null;
@@ -543,6 +589,33 @@ class ControllerModuleParseGemstons extends Controller {
             $this->db->query("INSERT INTO " . DB_PREFIX . "product_to_category SET 
             product_id = '" . (int)$this->product_id_insert . "', 
             category_id = '" . (int)$category_id . "'");
+        }
+
+    }
+
+
+    private function addOption () {
+
+        $this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET
+            product_id = '" . (int)$this->product_id_insert . "',
+            option_id = '" . 11 . "',
+            required = '" . 1 . "'");
+        $product_option_id = $this->db->getLastId();
+
+        foreach ($this->list_options as $product_option_value) {
+            $this->db->query("INSERT INTO " . DB_PREFIX . "product_option_value SET
+            product_option_id = '" . (int)$product_option_id . "',
+            product_id = '" . (int)$this->product_id_insert . "',
+            option_id = '" . 11 . "',
+            option_value_id = '" . (int)$product_option_value . "',
+            quantity = '" . 0 . "',
+            subtract = '" . 0 . "',
+            price = '" . 0.0000 . "',
+            price_prefix = '" . $this->db->escape('+') . "',
+            points = '" . 0 . "',
+            points_prefix = '" . $this->db->escape('+') . "',
+            weight = '" . 0.00000000 . "',
+            weight_prefix = '" . $this->db->escape('+') . "'");
         }
 
     }
