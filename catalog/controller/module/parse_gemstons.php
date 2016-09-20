@@ -259,7 +259,7 @@ class ControllerModuleParseGemstons extends Controller {
             $this->image_galery = array();
             $curent = $file->current();
 
-            if ($curent[8] AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
+            if (!empty($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
 
                 //dd($curent);
 
@@ -356,7 +356,7 @@ class ControllerModuleParseGemstons extends Controller {
             $this->category = array();
             $this->image_galery = array();
 
-           if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4])) and  !empty($this->category_gemstone_arr[$curent[1]])) {
+           if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4]) OR !empty($curent[22])) and  !empty($this->category_gemstone_arr[$curent[1]])) {
 
 
                $this->sku = $curent[0];
