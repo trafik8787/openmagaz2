@@ -47,10 +47,10 @@
                     Follow us
                 </div>
                 <div class="social-footer">
-                    <a href="#" class="facebook-ico"></a>
-                    <a href="#" class="twitter-ico"></a>
+                    <a href="https://www.facebook.com/BrilliantCanaryRings" class="facebook-ico"></a>
+                    <a href="https://twitter.com/TheBrilliantC" class="twitter-ico"></a>
                     <a href="#" class="rss-ico"></a>
-                    <a href="#" class="in-ico"></a>
+                    <a href="https://www.instagram.com/brilliantcanaryrings/" class="in-ico"></a>
                 </div>
                 <div class="payments-box">
                     <div class="wrapper-card">
@@ -63,8 +63,15 @@
                 </div>
             </div>
         </div>
+        <hr>
         <div class="copyright text-center">
-            ©2016 All Rights Reserved <a href="/privacy" class="w-general-category">Privacy Policy</a>
+            <p>©2016 All Rights Reserved</p>
+            <ul class="list-inline w-list-link">
+                <li><a href="/privacy" class="w-general-category">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+            </ul>
+
         </div>
     </section>
 
@@ -85,6 +92,43 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.bxslider.min.js" ></script>
+
+<script>
+    $(document).ready(function(){
+        $('.bxslider').bxSlider({
+            auto: true,
+            minSlides: 2,
+            maxSlides: 2,
+            slideWidth: 200,
+            slideMargin: 30,
+            responsive: true,
+            pager: false
+
+        });
+
+
+        $('.w-more-info').on('click', function () {
+            var $collapse = $('.collapse');
+            $collapse.collapse('toggle');
+        });
+
+        $('.collapse').on('shown.bs.collapse', function () {
+            $('.w-more-info span').removeClass('glyphicon-chevron-down');
+            $('.w-more-info span').addClass('glyphicon-chevron-up');
+
+        });
+
+        $('.collapse').on('hidden.bs.collapse', function () {
+            $('.w-more-info span').removeClass('glyphicon-chevron-up');
+            $('.w-more-info span').addClass('glyphicon-chevron-down');
+
+        });
+
+    });
+
+</script>
+</head>
 
 </body>
 </html>
