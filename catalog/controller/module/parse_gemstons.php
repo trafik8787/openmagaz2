@@ -259,48 +259,46 @@ class ControllerModuleParseGemstons extends Controller {
             $this->image_galery = array();
             $curent = $file->current();
 
-            if (!empty($curent[8]) AND $this->copyImage($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'RBL' AND $curent[2] !== 'GB' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
+            if (!empty($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'RBL' AND $curent[2] !== 'GB' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
 
-                //dd($curent);
-
-
-                $this->sku = $curent[6];
-                $this->model = $this->sku;
-                $this->carat = $curent[3];
-                $this->price = floor(($this->carat * $curent[5]) * 2);
-                $this->name = $this->color[$curent[4]].' '.$this->shape[$curent[2]].' '.$this->stone_type[$curent[1]].' '.$curent[3];
+                if ($this->copyImage($curent[8])) {
 
 
-
-                $this->description = $this->name;
-                $this->title_seo = $this->name.' | '. $this->sku;
-                $this->description_seo = $this->name.' '. $this->sku;
-                $this->keywords_seo = $this->color[$curent[4]].', '.$this->shape[$curent[2]].', '.$this->stone_type[$curent[1]].', '.$curent[3].', Carat';
-
-                $this->filter = $this->filter_all;
-                $this->filter[] = $this->filter_stone_type[$curent[1]];
-                $this->filter[] = $this->filter_shape[$curent[2]];
-                $this->filter[] = $this->filter_color[$curent[4]];
-
-                //размеры
-                $this->dimensions = $this->parseDimensions($curent[11]);
+                    $this->sku = $curent[6];
+                    $this->model = $this->sku;
+                    $this->carat = $curent[3];
+                    $this->price = floor(($this->carat * $curent[5]) * 2);
+                    $this->name = $this->color[$curent[4]] . ' ' . $this->shape[$curent[2]] . ' ' . $this->stone_type[$curent[1]] . ' ' . $curent[3];
 
 
-                $this->image_general = 'catalog/img_gemstones/'.$curent[8];
-                $this->image_galery[] = 'catalog/img_gemstones/'.$curent[8];
+                    $this->description = $this->name;
+                    $this->title_seo = $this->name . ' | ' . $this->sku;
+                    $this->description_seo = $this->name . ' ' . $this->sku;
+                    $this->keywords_seo = $this->color[$curent[4]] . ', ' . $this->shape[$curent[2]] . ', ' . $this->stone_type[$curent[1]] . ', ' . $curent[3] . ', Carat';
+
+                    $this->filter = $this->filter_all;
+                    $this->filter[] = $this->filter_stone_type[$curent[1]];
+                    $this->filter[] = $this->filter_shape[$curent[2]];
+                    $this->filter[] = $this->filter_color[$curent[4]];
+
+                    //размеры
+                    $this->dimensions = $this->parseDimensions($curent[11]);
 
 
+                    $this->image_general = 'catalog/img_gemstones/' . $curent[8];
+                    $this->image_galery[] = 'catalog/img_gemstones/' . $curent[8];
 
-                $this->product_id_insert = $this->addProduct();
-                $this->addFilters();
-                $this->addDescription();
-                $this->addUrl();
-                $this->addStore();
-                $this->addCategory();
-                $this->addGalery();
 
-                dd($this->product_id_insert);
+                    $this->product_id_insert = $this->addProduct();
+                    $this->addFilters();
+                    $this->addDescription();
+                    $this->addUrl();
+                    $this->addStore();
+                    $this->addCategory();
+                    $this->addGalery();
 
+                    dd($this->product_id_insert);
+                }
             }
 
             $file->next();
@@ -356,55 +354,57 @@ class ControllerModuleParseGemstons extends Controller {
             $this->category = array();
             $this->image_galery = array();
 
-           if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4]) OR !empty($curent[22]) OR  $this->copyImage($curent[22])) and  !empty($this->category_gemstone_arr[$curent[1]])) {
+           if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4]) OR $curent[22] != '') and  !empty($this->category_gemstone_arr[$curent[1]])) {
+
+               if ($this->copyImage($curent[22])) {
+
+                   $this->sku = $curent[0];
+                   $this->model = $this->sku;
+                   $this->carat = !empty($curent[7]) ? $curent[7] : '';
+
+                   //filters
+                   $this->filter[] = $this->list_filtr_gemstone['Price'];
+                   $this->filter[] = $this->list_filtr_gemstone['All metals'];
+                   $this->filter[] = $this->list_filtr_gemstone[$curent[15]];
+
+                   if ($curent[18] <= 5999) {
+                       $this->getPrice($curent[18], 15);
+
+                   } elseif ($curent[18] >= 5000 AND $curent[18] <= 16999) {
+                       $this->getPrice($curent[18], 20);
+
+                   } elseif ($curent[18] >= 17000) {
+                       $this->getPrice($curent[18], 25);
+                   }
+
+                   $this->metal = $this->metal_gemstone[$curent[15]][0];
+                   $this->category[] = $this->category_gemstone_arr[$curent[1]];
+
+                   $this->image_general = 'catalog/img_gemstones/' . $curent[22];
+                   $this->image_galery[] = 'catalog/img_gemstones/' . $curent[22];
+
+                   $this->name = $curent[2] . ' ' . $curent[3] . ' ' . $curent[4] . ' ' . $this->metal_gemstone[$curent[15]][1];
+                   $this->description = $this->name;
+                   $this->title_seo = $this->name;
+                   $this->description_seo = $this->name . ' ' . $curent[23];
+                   $this->keywords_seo = $this->name;
+
+                   $this->dimensions = array('', $curent[20], $curent[21]);
 
 
-               $this->sku = $curent[0];
-               $this->model = $this->sku;
-               $this->carat = !empty($curent[7]) ? $curent[7] : '';
+                   $this->product_id_insert = $this->addProduct();
 
-               //filters
-               $this->filter[] = $this->list_filtr_gemstone['Price'];
-               $this->filter[] = $this->list_filtr_gemstone['All metals'];
-               $this->filter[] = $this->list_filtr_gemstone[$curent[15]];
+                   $this->addFilters();
+                   $this->addDescription();
+                   $this->addUrl();
+                   $this->addStore();
+                   $this->addCategory();
+                   $this->addGalery();
+                   $this->addOption();
 
-               if ($curent[18] <= 5999) {
-                   $this->getPrice($curent[18], 15);
-
-               } elseif ($curent[18] >= 5000 AND $curent[18] <= 16999) {
-                   $this->getPrice($curent[18], 20);
-
-               } elseif ($curent[18] >= 17000) {
-                   $this->getPrice($curent[18], 25);
+                   //dd($curent);
+                   dd($this->product_id_insert);
                }
-
-               $this->metal = $this->metal_gemstone[$curent[15]][0];
-               $this->category[] = $this->category_gemstone_arr[$curent[1]];
-
-               $this->image_general = 'catalog/img_gemstones/'.$curent[22];
-               $this->image_galery[] = 'catalog/img_gemstones/'.$curent[22];
-
-               $this->name = $curent[2].' '.$curent[3].' '.$curent[4]. ' '.$this->metal_gemstone[$curent[15]][1];
-               $this->description = $this->name;
-               $this->title_seo = $this->name;
-               $this->description_seo = $this->name. ' '. $curent[23];
-               $this->keywords_seo = $this->name;
-
-               $this->dimensions = array('', $curent[20], $curent[21]);
-
-
-               $this->product_id_insert = $this->addProduct();
-
-               $this->addFilters();
-               $this->addDescription();
-               $this->addUrl();
-               $this->addStore();
-               $this->addCategory();
-               $this->addGalery();
-               $this->addOption();
-
-               //dd($curent);
-               dd($this->product_id_insert);
            }
 
             $file->next();
