@@ -61,19 +61,19 @@ class ControllerModuleExelParser extends Controller {
         );
 
         //ENGAGEMENT RINGS
-        $this->category_arr = array(
-            'Three-stone' => 63,
-            'Three Stone' => 63,
-            'Vintage' => 66,
-            'Bezel set' => 64,
-            'Halo' => 65,
-            'Bypass' => 62,
-            'Pave' => 60,
-            'Solitaire' => 59,
-            'Modern'    => 89,
-            'Channel'   => 61,
-            'Channel Set' => 61
-        );
+//        $this->category_arr = array(
+//            'Three-stone' => 63,
+//            'Three Stone' => 63,
+//            'Vintage' => 66,
+//            'Bezel set' => 64,
+//            'Halo' => 65,
+//            'Bypass' => 62,
+//            'Pave' => 60,
+//            'Solitaire' => 59,
+//            'Modern'    => 89,
+//            'Channel'   => 61,
+//            'Channel Set' => 61
+//        );
 
         //WOMAN WEDDING RINGS
 //        $this->category_arr = array(
@@ -93,18 +93,18 @@ class ControllerModuleExelParser extends Controller {
 
 
         //FINE JEWERLY
-//        $this->category_arr = array(
-//            'Diamond Bracelets' => 85,
-//            'Diamond Earrings' => 84,
-//            'Diamond Pendant' => 86,
-//            'Diamond Rings' => 88,
-//            'Diamond Studs' => 83,
-//            'Diamond Fashion Necklace' => 92,
-//            'Gemstone Bracelets' => 93,
-//            'Gemstone Earrings' => 87,
-//            'Gemstone Pendants' => 91,
-//            'Gemstone Rings' => 90
-//        );
+        $this->category_arr = array(
+            'Diamond Bracelets' => 85,
+            'Diamond Earrings' => 84,
+            'Diamond Pendant' => 86,
+            'Diamond Rings' => 88,
+            'Diamond Studs' => 83,
+            'Diamond Fashion Necklace' => 92,
+            'Gemstone Bracelets' => 93,
+            'Gemstone Earrings' => 87,
+            'Gemstone Pendants' => 91,
+            'Gemstone Rings' => 90
+        );
 
 
         $this->list_filtr = array(
@@ -291,7 +291,7 @@ class ControllerModuleExelParser extends Controller {
                 //METAL
                 if ($metal == '14K White Gold' OR $metal == '14k White Gold') {
                     $this->metal = $this->list_metal['14K White Gold'];
-                    $this->sku = $curent[1] . 'W14';
+                    $this->sku = $curent[1] . '-W14';
                     $this->filter[] = $this->list_filtr['14K White Gold'];
 
                     $name_file_general_img = $sku.'.jpg';
@@ -299,49 +299,49 @@ class ControllerModuleExelParser extends Controller {
 
                 } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
                     $this->metal = $this->list_metal['14K Yellow Gold'];
-                    $this->sku = $curent[1] . 'Y14';
+                    $this->sku = $curent[1] . '-Y14';
                     $this->filter[] = $this->list_filtr['14K Yellow Gold'];
 
                     $name_file_general_img = $sku.'.alt.jpg';
 
                 } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
                     $this->metal = $this->list_metal['14K Rose Gold'];
-                    $this->sku = $curent[1] . 'R14';
+                    $this->sku = $curent[1] . '-R14';
                     $this->filter[] = $this->list_filtr['14K Rose Gold'];
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
                 } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
                     $this->metal = $this->list_metal['18K White Gold'];
-                    $this->sku = $curent[1] . 'W18';
+                    $this->sku = $curent[1] . '-W18';
                     $this->filter[] = $this->list_filtr['18K White Gold'];
 
                     $name_file_general_img = $sku.'.jpg';
 
                 } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
                     $this->metal = $this->list_metal['18K Yellow Gold'];
-                    $this->sku = $curent[1] . 'Y18';
+                    $this->sku = $curent[1] . '-Y18';
                     $this->filter[] = $this->list_filtr['18K Yellow Gold'];
 
                     $name_file_general_img = $sku.'.alt.jpg';
 
                 } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
                     $this->metal = $this->list_metal['18K Rose Gold'];
-                    $this->sku = $curent[1] . 'R18';
+                    $this->sku = $curent[1] . '-R18';
                     $this->filter[] = $this->list_filtr['18K Rose Gold'];
 
                     $name_file_general_img = $sku.'.alt1.jpg';
 
                 } elseif ($metal == 'Platinum' OR $metal == 'platinum') {
                     $this->metal = $this->list_metal['Platinum'];
-                    $this->sku = $curent[1] . 'PL';
+                    $this->sku = $curent[1] . '-PL';
                     $this->filter[] = $this->list_filtr['Platinum'];
 
                     $name_file_general_img = $sku.'.jpg';
 
                 } elseif ($metal == 'Palladium' or $metal == 'palladium') {
                     $this->metal = $this->list_metal['Palladium'];
-                    $this->sku = $curent[1] . 'PA';
+                    $this->sku = $curent[1] . '-PA';
                     $this->filter[] = $this->list_filtr['Palladium'];
 
                     $name_file_general_img = $sku.'.jpg';
@@ -384,7 +384,13 @@ class ControllerModuleExelParser extends Controller {
                 $this->title_seo = $curent[4];
                 $this->description_seo = $curent[5];
                 $this->keywords_seo = $curent[6];
-                $this->manufactured = $this->list_manufactured[trim($curent[10])];
+
+                if (!empty($curent[10])) {
+                    $this->manufactured = $this->list_manufactured[trim($curent[10])];
+                } else {
+                    $this->manufactured = '';
+                }
+
 
                 $this->width = substr($curent[8],0,-2);
 
