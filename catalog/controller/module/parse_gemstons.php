@@ -259,7 +259,7 @@ class ControllerModuleParseGemstons extends Controller {
             $this->image_galery = array();
             $curent = $file->current();
 
-            if (!empty($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
+            if (!empty($curent[8]) AND $this->copyImage($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
 
                 //dd($curent);
 
@@ -288,7 +288,7 @@ class ControllerModuleParseGemstons extends Controller {
 
                 $this->image_general = 'catalog/img_gemstones/'.$curent[8];
                 $this->image_galery[] = 'catalog/img_gemstones/'.$curent[8];
-                $this->copyImage($curent[8]);
+
 
 
                 $this->product_id_insert = $this->addProduct();
@@ -356,7 +356,7 @@ class ControllerModuleParseGemstons extends Controller {
             $this->category = array();
             $this->image_galery = array();
 
-           if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4]) OR !empty($curent[22])) and  !empty($this->category_gemstone_arr[$curent[1]])) {
+           if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4]) OR !empty($curent[22]) OR  $this->copyImage($curent[22])) and  !empty($this->category_gemstone_arr[$curent[1]])) {
 
 
                $this->sku = $curent[0];
@@ -394,7 +394,7 @@ class ControllerModuleParseGemstons extends Controller {
 
 
                $this->product_id_insert = $this->addProduct();
-               $this->copyImage($curent[22]);
+
                $this->addFilters();
                $this->addDescription();
                $this->addUrl();
@@ -507,7 +507,9 @@ class ControllerModuleParseGemstons extends Controller {
         $img_gemstones = '/home/brilliantcanary/htdocs/image/catalog/img_gemstones/'.$img;
 
         if (file_exists($gems_pars)) {
-            copy($gems_pars, $img_gemstones);
+            return copy($gems_pars, $img_gemstones);
+        } else {
+            return false;
         }
     }
 
