@@ -259,7 +259,7 @@ class ControllerModuleParseGemstons extends Controller {
             $this->image_galery = array();
             $curent = $file->current();
 
-            if (!empty($curent[8]) AND $this->copyImage($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
+            if (!empty($curent[8]) AND $this->copyImage($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'RBL' AND $curent[2] !== 'GB' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
 
                 //dd($curent);
 
