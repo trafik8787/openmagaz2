@@ -34,7 +34,7 @@ class ControllerModuleFeed extends Controller {
         $description = $channel->appendChild($xml->createElement('description'));
 
         $title->appendChild($xml->createTextNode('Мебель для дома'));
-        $link->appendChild($xml->createTextNode('http://www.examplemebel.ru'));
+        $link->appendChild($xml->createTextNode(HostSite()));
         $description->appendChild($xml->createTextNode('мебель, мебельный магазин, детская мебель, кухни, кухонные гарнитуры, прихожие, прихожая'));
 
         foreach ($results as $rows) {
