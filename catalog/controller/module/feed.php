@@ -36,33 +36,41 @@ class ControllerModuleFeed extends Controller {
         $title->appendChild($xml->createTextNode('Diamonds and Jewelry'));
         $link->appendChild($xml->createTextNode(HostSite()));
         $description->appendChild($xml->createTextNode('Diamonds, engagement rings, wedding rings, jewelry, gemstones, earrings, necklaces, rings, bands, bracelets, studs'));
-
+        //dd($_SERVER['DOCUMENT_ROOT'], true);
         foreach ($results as $rows) {
 
+            if (!empty($rows['image']) ) {
 
-            $item = $channel->appendChild($xml->createElement('item'));
-            $item_link = $item->appendChild($xml->createElement('link'));
-            $item_gId = $item->appendChild($xml->createElement('g:id'));
-            $item_gPrice = $item->appendChild($xml->createElement('g:price'));
-            $item_gCondition = $item->appendChild($xml->createElement('g:condition'));
-            $item_gAvailability = $item->appendChild($xml->createElement('g:availability'));
-            //$item_gProduct_type = $item->appendChild($xml->createElement('g:product_type'));
-            $item_gImage_link = $item->appendChild($xml->createElement('g:image_link'));
-            $item_title = $item->appendChild($xml->createElement('title'));
-            $item_description = $item->appendChild($xml->createElement('description'));
+                $image = $this->model_tool_image->resize($rows['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+                if (!empty($image)) {
+
+                    $item = $channel->appendChild($xml->createElement('item'));
+                    $item_link = $item->appendChild($xml->createElement('link'));
+                    $item_gId = $item->appendChild($xml->createElement('g:id'));
+                    $item_gPrice = $item->appendChild($xml->createElement('g:price'));
+                    $item_gCondition = $item->appendChild($xml->createElement('g:condition'));
+                    $item_gAvailability = $item->appendChild($xml->createElement('g:availability'));
+                    //$item_gProduct_type = $item->appendChild($xml->createElement('g:product_type'));
+                    $item_gImage_link = $item->appendChild($xml->createElement('g:image_link'));
+                    $item_title = $item->appendChild($xml->createElement('title'));
+                    $item_description = $item->appendChild($xml->createElement('description'));
 
 
-            $item_link->appendChild($xml->createTextNode($this->generateUrl($rows['product_id'])));
-            $item_gId->appendChild($xml->createTextNode($rows['product_id']));
-            $item_gPrice->appendChild($xml->createTextNode($rows['price'].' USD'));
-            $item_gCondition->appendChild($xml->createTextNode('new'));
-            $item_gAvailability->appendChild($xml->createTextNode('available for order'));
-            //$item_gProduct_type->appendChild($xml->createTextNode('available for order'));
-            $image = $this->model_tool_image->resize($rows['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
-            $item_gImage_link->appendChild($xml->createTextNode($image));
-            $item_title->appendChild($xml->createTextNode($rows['name']));
-            $item_description->appendChild($xml->createTextNode($rows['description']));
+                    $item_link->appendChild($xml->createTextNode($this->generateUrl($rows['product_id'])));
+                    $item_gId->appendChild($xml->createTextNode($rows['product_id']));
+                    $item_gPrice->appendChild($xml->createTextNode($rows['price'] . ' USD'));
+                    $item_gCondition->appendChild($xml->createTextNode('new'));
+                    $item_gAvailability->appendChild($xml->createTextNode('available for order'));
+                    //$item_gProduct_type->appendChild($xml->createTextNode('available for order'));
+
+                    $item_gImage_link->appendChild($xml->createTextNode($image));
+                    $item_title->appendChild($xml->createTextNode($rows['name']));
+                    $item_description->appendChild($xml->createTextNode($rows['description']));
+                }
+
+            }
         }
+
         $xml->formatOutput = true;
         $xml->save($_SERVER['DOCUMENT_ROOT'].'/feed.xml');
     }
