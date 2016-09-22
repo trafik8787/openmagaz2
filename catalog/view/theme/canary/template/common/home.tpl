@@ -31,45 +31,7 @@
                             <span class="h1">Top Selling Engagement Rings</span>
                         </div>
                         <div>
-                            <ul class="bxslider">
-                                <li>
-                                    <div class="text-center">
-                                        <a href="#">
-                                            <img class="img-circle" src="/image/cache/catalog/galery_rings/50901-E-200x200.jpg" />
-                                        </a>
-                                        <div><span class="h4">14k White Gold Classic Six Prong Solitaire</span></div>
-                                        <div class="w-price">$200.00</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="text-center">
-                                        <a href="#">
-                                            <img class="img-circle"  src="/image/cache/catalog/galery_rings/50915-E.alt-200x200.jpg" />
-                                        </a>
-                                        <div><span class="h4">14k White Gold Classic Six Prong Solitaire</span></div>
-                                        <div class="w-price">$200.00</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="text-center">
-                                        <a href="#">
-                                            <img class="img-circle"  src="/image/cache/catalog/galery_rings/50946-E.alt1-200x200.jpg" />
-                                        </a>
-                                        <div><span class="h4">14k White Gold Classic Six Prong Solitaire</span></div>
-                                        <div class="w-price">$200.00</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="text-center">
-                                        <a href="#">
-                                            <img class="img-circle" src="/image/cache/catalog/galery_rings/81881-E.alt1-200x200.jpg" />
-                                        </a>
-                                        <div><span class="h4">14k White Gold Classic Six Prong Solitaire</span></div>
-                                        <div class="w-price">$200.00</div>
-                                    </div>
-
-                                </li>
-                            </ul>
+                            <?php echo $content_bottom; ?>
                         </div>
                     </div>
                     <div class="panel-footer">
@@ -196,28 +158,28 @@
             <div class="col-md-4 col-sm-4">
                 <div class="w-bloc-home-category">
                     <div class="thumbnail">
-                        <div class="h3 text-center"><a href="#">Wedding Rings</a></div>
-                        <img src="/catalog/view/theme/canary/img/demo_new_template/1-category.jpeg" alt="">
+                        <div class="h3 text-center"><a href="/wedding-rings">Wedding Rings</a></div>
+                        <img src="/catalog/view/theme/canary/img/demo_new_template/wedding_rings.png" alt="">
                     </div>
                     <div class="list-group text-center">
-                        <a href="#" class="w-list-group-item">Classical Weddings Rings</a>
-                        <a href="#" class="w-list-group-item">Wedding Rings with Diamonds</a>
-                        <a href="#" class="w-list-group-item">Eternity Wedding Rings</a>
-                        <a href="#" class="w-list-group-item">Wedding Rings for Men</a>
+                        <a href="/wedding-rings/classik_woman" class="w-list-group-item">Classical Weddings Rings</a>
+                        <a href="/wedding-rings/diamond_woman" class="w-list-group-item">Wedding Rings with Diamonds</a>
+                        <a href="/wedding-rings/eternity_woman" class="w-list-group-item">Eternity Wedding Rings</a>
+                        <a href="/wedding-rings/classic_man" class="w-list-group-item">Wedding Rings for Men</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">
                 <div class="w-bloc-home-category">
                     <div class="thumbnail">
-                        <div class="h3 text-center"><a href="#">Diamond Jewelry</a></div>
-                        <img src="/catalog/view/theme/canary/img/demo_new_template/2-category.jpg" alt="">
+                        <div class="h3 text-center"><a href="/fine_jeverly">Diamond Jewelry</a></div>
+                        <img src="/catalog/view/theme/canary/img/demo_new_template/diamons_jewelry.png" alt="">
                     </div>
                     <div class="list-group text-center">
-                        <a href="#" class="w-list-group-item">Diamond Studs</a>
-                        <a href="#" class="w-list-group-item">Diamond Earrings</a>
-                        <a href="#" class="w-list-group-item">Diamond Pendants</a>
-                        <a href="#" class="w-list-group-item">Diamond Necklaces</a>
+                        <a href="/fine_jeverly/diamond_studs" class="w-list-group-item">Diamond Studs</a>
+                        <a href="/fine_jeverly/diamond_earrings" class="w-list-group-item">Diamond Earrings</a>
+                        <a href="/fine_jeverly/diamond_pendants" class="w-list-group-item">Diamond Pendants</a>
+                        <a href="/fine_jeverly/fashion_necklaces" class="w-list-group-item">Diamond Necklaces</a>
                     </div>
                 </div>
             </div>
@@ -225,13 +187,13 @@
                 <div class="w-bloc-home-category">
                     <div class="thumbnail">
                         <div class="h3 text-center"><a href="#">Gemstones Jewelry</a></div>
-                        <img src="/catalog/view/theme/canary/img/demo_new_template/3-category.jpg" alt="">
+                        <img src="/catalog/view/theme/canary/img/demo_new_template/gemstones_jewelry.png" alt="">
                     </div>
                     <div class="list-group text-center">
-                        <a href="#" class="w-list-group-item">Gemstones Earrings</a>
-                        <a href="#" class="w-list-group-item">Gemstones Pendants</a>
-                        <a href="#" class="w-list-group-item">Gemstones Rings</a>
-                        <a href="#" class="w-list-group-item">Gemstones Bracelets</a>
+                        <a href="/fine_jeverly/gemstone_earrings&filter=7" class="w-list-group-item">Gemstones Earrings</a>
+                        <a href="/fine_jeverly/gemstone_pendants&filter=7" class="w-list-group-item">Gemstones Pendants</a>
+                        <a href="/fine_jeverly/gemstone_rings&filter=7" class="w-list-group-item">Gemstones Rings</a>
+                        <a href="/fine_jeverly/gemstone_bracelets&filter=7" class="w-list-group-item">Gemstones Bracelets</a>
                     </div>
                 </div>
             </div>
@@ -568,120 +530,6 @@
         <li><a href="/faq">FAQ</a></li>
         <li><a href="/about_us">ABOUT</a></li>
     </ul>
-    <!--*<div class="bacgraund-gradiend-home1">*-->
-        <!--*<section class="privilege center-bl clearfix">*-->
-            <!--*<div class="col-md-4 col-sm-4 col-xs-4">*-->
-                <!--*<div class="wrapper-box">*-->
-                    <!--*<div class="wrapper-ico">*-->
-                        <!--*<a href="#">*-->
-                            <!--*<div class="cta__button">*-->
-                                <!--*<i class="shipping-ico"></i>*-->
-                            <!--*</div>*-->
-                        <!--*</a>*-->
-                    <!--*</div>*-->
-                    <!--*<div class="title">FREE SHIPPING</div>*-->
-
-                <!--*</div>*-->
-            <!--*</div>*-->
-            <!--*<div class="col-md-4 col-sm-4 col-xs-4">*-->
-                <!--*<div class="wrapper-box">*-->
-                    <!--*<div class="wrapper-ico">*-->
-                        <!--*<a href="#">*-->
-                            <!--*<div class="cta__button">*-->
-                                <!--*<i class="money-ico"></i>*-->
-                            <!--*</div>*-->
-                        <!--*</a>*-->
-                    <!--*</div>*-->
-                    <!--*<div class="title">100% MONEY BACK</div>*-->
-
-                <!--*</div>*-->
-            <!--*</div>*-->
-            <!--*<div class="col-md-4 col-sm-4 col-xs-4">*-->
-                <!--*<div class="wrapper-box">*-->
-                    <!--*<div class="wrapper-ico">*-->
-                        <!--*<a href="#">*-->
-                            <!--*<div class="cta__button">*-->
-                                <!--*<i class="support-ico"></i>*-->
-                            <!--*</div>*-->
-                        <!--*</a>*-->
-                    <!--*</div>*-->
-                    <!--*<div class="title">LIFETIME WARRANTY</div>*-->
-
-                <!--*</div>*-->
-            <!--*</div>*-->
-        <!--*</section>*-->
-        <!--*<section class="box-img-main clearfix">*-->
-
-            <!--*<div style="width: 80%;margin: 0 auto;">*-->
-                <!--*<div class="ih-item colored effect5">*-->
-
-                    <!--*<div class="w-hover ehover2">*-->
-                        <!--*<img class="img-responsive" src="/catalog/view/theme/canary/img/img-new5.jpg" alt="img">*-->
-                        <!--*<div class="overlay">*-->
-                            <!--*<h3>ENGAGEMENT RINGS</h3>*-->
-                            <!--*<a href="/engagement-rings"><button class="info" >Show Rings*-->
-                            <!--*</button></a>*-->
-                        <!--*</div>*-->
-                    <!--*</div>*-->
-
-                <!--*</div>*-->
-                <!--*<div class="ih-item colored effect5">*-->
-
-                    <!--*<div class="w-hover ehover2">*-->
-                        <!--*<img class="img-responsive" src="/catalog/view/theme/canary/img/img-new3.jpg" alt="img">*-->
-                        <!--*<div class="overlay">*-->
-                            <!--*<h3>Loose Diamonds</h3>*-->
-                            <!--*<a href="/diamonds">*-->
-                                <!--*<button class="info">Show Diamonds</button>*-->
-                            <!--*</a>*-->
-                        <!--*</div>*-->
-                    <!--*</div>*-->
-
-                <!--*</div>*-->
-                <!--*<div class="ih-item colored effect5">*-->
-
-                    <!--*<div class="w-hover ehover2">*-->
-                        <!--*<img class="img-responsive" src="/catalog/view/theme/canary/img/img-new4.jpg" alt="img">*-->
-                        <!--*<div class="overlay">*-->
-                            <!--*<h3>Wedding Rings</h3>*-->
-                            <!--*<a href="/wedding-rings">*-->
-                                <!--*<button class="info">Show Rings</button>*-->
-                            <!--*</a>*-->
-                        <!--*</div>*-->
-                    <!--*</div>*-->
-
-                <!--*</div>*-->
-                <!--*<div class="ih-item colored effect5">*-->
-
-                    <!--*<div class="w-hover ehover2">*-->
-                        <!--*<img class="img-responsive" src="/catalog/view/theme/canary/img/img-new2.jpg" alt="img">*-->
-                        <!--*<div class="overlay">*-->
-                            <!--*<h3>Mens Wedding Rings</h3>*-->
-                            <!--*<a href="/wedding-rings/classic_man">*-->
-                                <!--*<button class="info">Show Rings</button>*-->
-                            <!--*</a>*-->
-                        <!--*</div>*-->
-                    <!--*</div>*-->
-
-                <!--*</div>*-->
-                <!--*<div class="ih-item colored effect5">*-->
-
-                    <!--*<div class="w-hover ehover2">*-->
-                        <!--*<img class="img-responsive" src="/catalog/view/theme/canary/img/img-new6.jpg" alt="img">*-->
-                        <!--*<div class="overlay">*-->
-                            <!--*<h3>Fashion Jewelry</h3>*-->
-                            <!--*<a href="/fine_jeverly">*-->
-                                <!--*<button class="info">Show Jewelry</button>*-->
-                            <!--*</a>*-->
-                        <!--*</div>*-->
-                    <!--*</div>*-->
-                <!--*</div>*-->
-            <!--*</div>*-->
-        <!--*</section>*-->
-    <!--*</div>*-->
-
-
-    <!--*<?php echo $content_bottom; ?>*-->
 
 
 </main>

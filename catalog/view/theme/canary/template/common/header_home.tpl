@@ -56,7 +56,9 @@
 <header>
     <div class="user-line index-page">
         <div class="center-bl clearfix">
-            <a href="/" class="logo w-general-category"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+            <a href="/" class="logo w-general-category">
+                <img src="/catalog/view/theme/canary/img/logo.png" alt="logo">
+            </a>
             <div class="telephone">
                 <i class="ico-telephone"></i>
                 <span><?php echo $telephone; ?> | 24/7</span>
@@ -91,7 +93,10 @@
     </div>
     <div class="center-bl">
         <div class="menu">
-            <a href="/" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+            <a href="/" class="logo">
+                <img src="/catalog/view/theme/canary/img/logo.png" alt="logo">
+                <span class="text-down-logo">Beyong Brilliant</span>
+            </a>
             <ul>
                 <li class="dropdown-b"><!--*DIAMONDS*-->
                     <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a>

@@ -49,11 +49,37 @@
     margin-bottom: 30px;
 }
 
+.margin-buttom-20 {
+    margin-bottom: 20px;
+}
+
+.paging-20 {
+    padding: 20px;
+}
+
+.padding-0 {
+    padding: 0;
+}
+
+.text-down-logo {
+    text-transform: none;
+    font-size: 21px;
+    color: #9a9a9a;
+    text-align: center;
+    display: block;
+}
+
 .w-price {
     color: #ff5959;
     font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
+    font-family: 'SegoeUI', sans-serif;
+}
+
+.w-bredcrum-border {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
 .w-more-info {

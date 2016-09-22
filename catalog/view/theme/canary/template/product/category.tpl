@@ -2,19 +2,33 @@
 <?//dd($products)?>
 
 <main class="w-general-container">
-    <hr class="fade-2">
+    <!--*<hr class="fade-2">*-->
     <input type="hidden" class="w-action_page" value="<?php echo $action_page?>">
     <section class="static-page">
 
 
         <div class="center-bl">
 
-            <ul class="breadcrumbs">
-                <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-                    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-                    <li>></li>
-                <?php } ?>
-            </ul>
+            <div class="row margin-buttom-30 w-bredcrum-border">
+                <div class="col-md-5 col-sm-5 hidden-xs ">
+                    <ul class="breadcrumbs">
+                        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                        <li>></li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-12 padding-0">
+                    <img src="/catalog/view/theme/canary/img/demo_new_template/baner-746-52.jpg" width="100%" style="vertical-align: middle;">
+                </div>
+            </div>
+            <div class="row margin-buttom-20">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <span class="h1"><?=$heading_title?></span>
+                </div>
+            </div>
+
+
 
             <?php echo $content_top; ?>
             <!--*<h2><?php echo $heading_title; ?></h2>*-->
@@ -132,7 +146,7 @@
                 </table>
 
             </div>
-
+            <hr>
             <div class="center-bl clearfix">
                 <div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>
             </div>

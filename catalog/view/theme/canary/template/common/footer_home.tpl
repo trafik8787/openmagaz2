@@ -94,40 +94,6 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.bxslider.min.js" ></script>
 
-<script>
-    $(document).ready(function(){
-        $('.bxslider').bxSlider({
-            auto: true,
-            minSlides: 2,
-            maxSlides: 2,
-            slideWidth: 200,
-            slideMargin: 30,
-            responsive: true,
-            pager: false
-
-        });
-
-
-        $('.w-more-info').on('click', function () {
-            var $collapse = $('.collapse');
-            $collapse.collapse('toggle');
-        });
-
-        $('.collapse').on('shown.bs.collapse', function () {
-            $('.w-more-info span').removeClass('glyphicon-chevron-down');
-            $('.w-more-info span').addClass('glyphicon-chevron-up');
-
-        });
-
-        $('.collapse').on('hidden.bs.collapse', function () {
-            $('.w-more-info span').removeClass('glyphicon-chevron-up');
-            $('.w-more-info span').addClass('glyphicon-chevron-down');
-
-        });
-
-    });
-
-</script>
 </head>
 
 </body>

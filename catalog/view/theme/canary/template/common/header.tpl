@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/style.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/easydropdown.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/jquery.bxslider.min.css"/>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -343,7 +344,9 @@
         <div class="user-line">
             <div class="center-bl clearfix">
                 <button class="menu-l-open"><i class="fa fa-bars"></i></button>
-                <a href="/" class="logo w-general-category"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+                <a href="/" class="logo w-general-category">
+                    <img src="/catalog/view/theme/canary/img/logo.png" alt="logo">
+                </a>
                 <div class="telephone">
                     <i class="ico-telephone"></i>
                     <span><?php echo $telephone; ?> | 24/7</span>
@@ -381,7 +384,10 @@
 
             <div class="menu">
                 <button class="menu-l-open"><i class="fa fa-bars"></i></button>
-                <a href="/" class="logo"><img src="/catalog/view/theme/canary/img/logo.png" alt="logo"></a>
+                <a href="/" class="logo">
+                    <img src="/catalog/view/theme/canary/img/logo.png" alt="logo">
+                    <span class="text-down-logo">Beyong Brilliant</span>
+                </a>
                 <ul>
                     <li class="dropdown-b" data-target="menu1">
                         <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a><!--DIAMONDS-->

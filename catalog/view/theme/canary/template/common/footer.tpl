@@ -93,7 +93,7 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
-
+<script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.bxslider.min.js" ></script>
 
 
 </body>
