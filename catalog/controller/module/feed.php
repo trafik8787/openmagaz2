@@ -33,9 +33,9 @@ class ControllerModuleFeed extends Controller {
         $link = $channel->appendChild($xml->createElement('link'));
         $description = $channel->appendChild($xml->createElement('description'));
 
-        $title->appendChild($xml->createTextNode('Мебель для дома'));
+        $title->appendChild($xml->createTextNode('Diamonds and Jewelry'));
         $link->appendChild($xml->createTextNode(HostSite()));
-        $description->appendChild($xml->createTextNode('мебель, мебельный магазин, детская мебель, кухни, кухонные гарнитуры, прихожие, прихожая'));
+        $description->appendChild($xml->createTextNode('Diamonds, engagement rings, wedding rings, jewelry, gemstones, earrings, necklaces, rings, bands, bracelets, studs'));
 
         foreach ($results as $rows) {
 
@@ -64,7 +64,7 @@ class ControllerModuleFeed extends Controller {
             $item_description->appendChild($xml->createTextNode($rows['description']));
         }
         $xml->formatOutput = true;
-        $xml->save($_SERVER['DOCUMENT_ROOT'].'/goods.xml');
+        $xml->save($_SERVER['DOCUMENT_ROOT'].'/feed.xml');
     }
 
 
