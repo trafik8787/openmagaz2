@@ -418,11 +418,43 @@ class ModelCatalogProduct extends Model {
 	public function getProductRelated($product_id) {
 		$product_data = array();
 
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_related pr LEFT JOIN " . DB_PREFIX . "product p ON (pr.related_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pr.product_id = '" . (int)$product_id . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_related pr LEFT JOIN "
+            . DB_PREFIX . "product p ON (pr.related_id = p.product_id) LEFT JOIN "
+            . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) 
+            WHERE pr.product_id = '" . (int)$product_id . "' 
+            AND p.status = '1' AND p.date_available <= NOW() 
+            AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");
 
-		foreach ($query->rows as $result) {
-			$product_data[$result['related_id']] = $this->getProduct($result['related_id']);
-		}
+
+        if (empty($query->rows)) {
+            $count = $this->db->query("SELECT COUNT(*) as count FROM " . DB_PREFIX . "product");
+
+            //к какой категории принадлежит товар
+            $cat = $this->db->query("SELECT *  FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (p.product_id = ptc.product_id) WHERE p.product_id = ".(int)$product_id." ORDER BY ptc.category_id DESC LIMIT 1");
+
+            $sql = array();
+            //количество похожих продуктов 5
+            while (count($sql) < 5) {
+                $sql[] = "(SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN "
+                    . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN ". DB_PREFIX ."product_to_category ptc ON (p.product_id = ptc.product_id)
+                WHERE  p.status = '1' AND p.date_available <= NOW() 
+                AND p2s.store_id = " . (int)$this->config->get('config_store_id')." LIMIT ".mt_rand(0, $count->rows[0]['count']).", 1)";
+            }
+
+            $sql = implode(' UNION ', $sql);
+
+            $query = $this->db->query($sql);
+
+            foreach ($query->rows as $result) {
+                $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
+            }
+
+        } else {
+            foreach ($query->rows as $result) {
+                $product_data[$result['related_id']] = $this->getProduct($result['related_id']);
+            }
+        }
+
 
 		return $product_data;
 	}
