@@ -390,7 +390,7 @@
                 </a>
                 <ul>
                     <li class="dropdown-b" data-target="menu1">
-                        <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a><!--DIAMONDS-->
+                        <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a><!--*DIAMONDS*-->
                         <div class="dropdown-inside">
                             <div class="title">search diamond gallery</div>
                             <ul class="brilliant-style">

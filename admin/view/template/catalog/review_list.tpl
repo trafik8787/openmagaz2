@@ -107,7 +107,7 @@
               <tbody>
                 <?php if ($reviews) { ?>
                 <?php foreach ($reviews as $review) { ?>
-                <tr>
+                <tr <?if ($review['status_int'] != 1):?> class="warning" <?endif?>>
                   <td class="text-center"><?php if (in_array($review['review_id'], $selected)) { ?>
                     <input type="checkbox" name="selected[]" value="<?php echo $review['review_id']; ?>" checked="checked" />
                     <?php } else { ?>

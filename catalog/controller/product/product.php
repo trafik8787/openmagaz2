@@ -233,7 +233,6 @@ class ControllerProductProduct extends Controller {
 
             $data['path'] = isset($this->request->get['path']) ? (int)$this->request->get['path'] : $category_product['category_id'];
             $data['telephone'] = $this->config->get('config_telephone');
-
 			$data['text_select'] = $this->language->get('text_select');
 			$data['text_manufacturer'] = $this->language->get('text_manufacturer');
 			$data['text_model'] = $this->language->get('text_model');
@@ -417,8 +416,9 @@ class ControllerProductProduct extends Controller {
 				$data['customer_name'] = '';
 			}
 
-			$data['reviews'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
+			$data['reviews'] = '('.$product_info['reviews']. ' customer ratings)';
 			$data['rating'] = (int)$product_info['rating'];
+
 
 			// Captcha
 			if ($this->config->get($this->config->get('config_captcha') . '_status') && in_array('review', (array)$this->config->get('config_captcha_page'))) {

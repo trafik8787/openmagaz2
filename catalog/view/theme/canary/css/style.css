@@ -4288,10 +4288,8 @@ button:hover, button:focus {
       float: right; }
 
 .size-product {
-  margin-bottom: 15px;
-  padding: 20px 0;
-  border-top: 1px solid #eaeaea;
-  border-bottom: 1px solid #eaeaea; }
+    padding-top: 11px;
+}
   .size-product .title {
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -4360,10 +4358,11 @@ button:hover, button:focus {
         margin-bottom: 5px;
     }
 
-  .line-price-product .price-product {
-    font-size: 29px;
+  .price-product {
+    font-size: 34px;
     color: #000000;
-    line-height: 49px; }
+    line-height: 49px;
+  }
   .line-price-product .setting-price {
     padding: 9px;
     font-size: 12px;

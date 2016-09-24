@@ -9,16 +9,17 @@
 
 
 <main class="w-general-container">
-    <hr class="fade-2">
-    <section class="static-page">
-        <div class="center-bl">
-            <ul class="breadcrumbs">
-                <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-                <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-                <li>></li>
-                <?php } ?>
-            </ul>
 
+    <section class="static-page">
+        <div class="center-bl ">
+            <div class="row margin-buttom-30 w-bredcrum-border">
+                <ul class="breadcrumbs">
+                    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                    <li>></li>
+                    <?php } ?>
+                </ul>
+            </div>
 
             <?php echo $content_top; ?>
 
@@ -33,13 +34,13 @@
                     <div class="slider-for">
                         <?php foreach ($images as $image):?>
 
-                            <?if (!empty($image['video'])):?>
-                                <div>
-                                    <video autoplay loop class="myVideo" src="<?=$image['video']?>" onclick="this.play();" style="margin-left: auto; margin-right: auto; width: 100%;"></video>
-                                </div>
-                            <?else:?>
-                                <div><img src="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" style="margin-left: auto; margin-right: auto; width: 100%;"></div>
-                            <?endif?>
+                        <?if (!empty($image['video'])):?>
+                        <div>
+                            <video autoplay loop class="myVideo" src="<?=$image['video']?>" onclick="this.play();" style="margin-left: auto; margin-right: auto; width: 100%;"></video>
+                        </div>
+                        <?else:?>
+                        <div><img src="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" style="margin-left: auto; margin-right: auto; width: 100%;"></div>
+                        <?endif?>
                         <?endforeach?>
 
                     </div>
@@ -47,13 +48,13 @@
 
                         <?php foreach ($images as $image):?>
 
-                            <?if (!empty($image['video'])):?>
-                                <div class="wrapper-img-slider" >
-                                    <video width="69px" height="65px" src="<?=$image['video']?>"></video>
-                                </div>
-                            <?else:?>
-                                <div class="wrapper-img-slider"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" ></div>
-                            <?endif?>
+                        <?if (!empty($image['video'])):?>
+                        <div class="wrapper-img-slider" >
+                            <video width="69px" height="65px" src="<?=$image['video']?>"></video>
+                        </div>
+                        <?else:?>
+                        <div class="wrapper-img-slider"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" ></div>
+                        <?endif?>
 
 
                         <?endforeach?>
@@ -61,236 +62,461 @@
                     </div>
                 </div>
                 <div class="one-product-info" id="product">
-                    <div class="text-article clearfix"><?=$name?> <div class="product-code">Product code: <strong>SKU:<?=$sku?></strong></div></div>
-                    <div class="rating">
-                        <i class="star active"></i>
-                        <i class="star active"></i>
-                        <i class="star active"></i>
-                        <i class="star active"></i>
-                        <i class="star"></i>
-                        <span>(14)</span>
-                    </div>
-                    <div class="one-info">
-                        <div class="title-red">SETTING SPECIFICATIONS <strong>SKU: <?=$sku?></strong></div>
-                        <?=$description?>
-                    </div>
-                    <div class="one-info one-info-last clearfix">
-                        <div class="title-red">SETTING SPECIFICATIONS SKU: <?=$sku?></div>
-                        METAL: <?=list_metal($metal)?><br/>
-                        <?if ($weight != ''):?>
-                            WEIGHT: <?=$weight?> g.
-                            <br/>
-                        <?endif?>
-                        <?if ($width != ''):?>
-                            WIDTH: <?=$width?> mm.
-                            <br/>
-                        <?endif?>
 
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="rating">
+                                <?php for ($i = 1; $i <= 5; $i++) { ?>
+                                <?php if ($rating < $i) { ?>
+                                <i class="star"></i>
+                                <?php } else { ?>
+                                <i class="star active"></i>
+                                <?php } ?>
+                                <?php } ?>
 
-                        <?if (!empty($attribute_groups)):?>
-                            <?foreach ($attribute_groups[0]['attribute'] as $row):?>
-                                <?=$row['name']?>: <?=$row['text']?> <br/>
-                            <?endforeach?>
-                        <?endif?>
-
-
-                        <!--*<a href="#" class="more-diamant">more about diamonds>>></a>*-->
+                                <span><a href="" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: 1500}, 'slow'); return false;"><?php echo $reviews; ?></a></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 text-right">
+                            <strong>SKU:<?=$sku?></strong>
+                        </div>
                     </div>
 
-                    <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
-                    <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
 
-                    <?php if ($options) :?>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <h1 class="w-product-name-h1"><?=$name?></h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 paging-bottom-20">
+                            <h3><?=$description?></h3>
+                        </div>
+                    </div>
 
-                        <div class="size-product">
+                    <div class="row">
 
-                            <?php foreach ($options as $option):?>
+                        <div class="col-md-12 col-sm-12">
+                            <div class="thumbnail">
 
-                                <?php if ($option['type'] == 'radio' AND $option['name'] == 'SIZE'):?>
 
-                                    <div class="title">Size</div>
-                                    <div class="one-line size-radio height-inherit" id="input-option<?php echo $option['product_option_id']; ?>" data-toggle="buttons">
+                                <div class="h3 text-center margin-top-0">Setting details</div>
 
-                                        <?php foreach ($option['product_option_value'] as $option_value): ?>
+                                <div class="table-responsive table table-condensed margin-buttom-0">
+                                    <table class="table">
+                                        <tr>
+                                            <td>METAL: <?=list_metal($metal)?></td>
+                                            <td>WEIGHT: <?=$weight?> g.</td>
+                                        </tr>
+                                        <?if (!empty($attribute_groups)):?>
+                                        <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
 
-                                            <label class="btn btn-filter">
-                                                <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">  <?php echo $option_value['name']; ?>
-                                            </label>
-
+                                        <tr>
+                                            <td><?=$row[0]['name']?>: <?=$row[0]['text']?></td>
+                                            <td><?=$row[1]['name']?>: <?=$row[1]['text']?></td>
+                                        </tr>
                                         <?endforeach?>
-                                        <!--<button class="find-size-btn">Find your ring size</button>-->
-                                    </div>
-
-                                <?endif?>
-
-
-                                <?php if ($option['type'] == 'select' AND $option['name'] == 'SIZE'):?>
-
-
-                                    <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-                                        <div class="title" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></div>
-                                        <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="dropdown" >
-                                            <option value=""><?php echo $text_select; ?></option>
-                                            <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                                            <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
-                                                <?php if ($option_value['price']) { ?>
-                                                (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
-                                                <?php } ?>
-                                            </option>
-                                            <?php } ?>
-                                        </select>
-                                    </div>
-
-
-                                <?endif?>
-
-                            <?endforeach?>
-
-                            <?if (!empty($products_metal)):?>
-                                <div class="title">Precious metal</div>
-                                <div class="cc-shipping-row">
-                                    <input type="text" class="shipping-input select-simulate-input" id="si7" required>
-                                    <label for="si7" class="shipping-label"><?=list_metal($metal)?></label>
-                                    <a href="#" class="select-simulate-btn"></a>
-                                    <ul class="select-simulate-list">
-                                        <?php foreach ($products_metal as $key => $row_metal): ?>
-                                            <li><a class="w-product-ajax" href="<?php echo $row_metal['href']; ?>" data-value="<?php echo $row_metal['href']; ?>"><?php echo $row_metal['name']; ?></a></li>
-                                        <?endforeach?>
-
-                                    </ul>
+                                        <?endif?>
+                                        <?if (!empty($tags)):?>
+                                        <tr>
+                                            <td colspan="2">
+                                                <ul class="list-inline">
+                                                    <li>Tags:</li>
+                                                    <?foreach ($tags as $row_tags):?>
+                                                    <li>
+                                                        <a href="<?=$row_tags['href']?>"><span class="glyphicon glyphicon-tag"></span> <?=$row_tags['tag']?></a>
+                                                    </li>
+                                                    <?endforeach?>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <?endif?>
+                                    </table>
                                 </div>
 
-                            <?endif?>
+                                <div class="alert alert-info margin-buttom-0">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
 
+                                            <?php if ($options) :?>
+
+                                            <div class="size-product">
+
+                                                <?php foreach ($options as $option):?>
+
+                                                <?php if ($option['type'] == 'radio' AND $option['name'] == 'SIZE'):?>
+
+                                                <!--*<div class="title">Size</div>*-->
+                                                <div class="one-line size-radio height-inherit" id="input-option<?php echo $option['product_option_id']; ?>" data-toggle="buttons">
+
+                                                    <?php foreach ($option['product_option_value'] as $option_value): ?>
+
+                                                    <label class="btn btn-filter">
+                                                        <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">  <?php echo $option_value['name']; ?>
+                                                    </label>
+
+                                                    <?endforeach?>
+
+                                                </div>
+
+                                                <?endif?>
+
+
+                                                <?php if ($option['type'] == 'select' AND $option['name'] == 'SIZE'):?>
+
+
+                                                <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
+                                                    <!--*<div class="title" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></div>*-->
+                                                    <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="dropdown">
+                                                        <option value=""><?php echo $text_select; ?></option>
+                                                        <?php foreach ($option['product_option_value'] as $option_value) { ?>
+                                                        <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                                                            <?php if ($option_value['price']) { ?>
+                                                            (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                                                            <?php } ?>
+                                                        </option>
+                                                        <?php } ?>
+                                                    </select>
+                                                </div>
+
+
+                                                <?endif?>
+
+                                                <?endforeach?>
+
+                                                <?if (!empty($products_metal)):?>
+                                                <!--*<div class="title">Precious metal</div>*-->
+                                                <div class="cc-shipping-row">
+                                                    <input type="text" class="shipping-input select-simulate-input" id="si7" required>
+                                                    <label for="si7" class="shipping-label"><?=list_metal($metal)?></label>
+                                                    <a href="#" class="select-simulate-btn"></a>
+                                                    <ul class="select-simulate-list">
+                                                        <?php foreach ($products_metal as $key => $row_metal): ?>
+                                                        <li><a class="w-product-ajax" href="<?php echo $row_metal['href']; ?>" data-value="<?php echo $row_metal['href']; ?>"><?php echo $row_metal['name']; ?></a></li>
+                                                        <?endforeach?>
+
+                                                    </ul>
+                                                </div>
+
+                                                <?endif?>
+
+                                            </div>
+
+                                            <?endif?>
+
+                                            <div class="text-center"><a href="#">select you ring size</a></div>
+
+                                        </div>
+
+
+                                        <div class="col-md-6 col-sm-6">
+                                            <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
+                                            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
+                                            <div class="price-product">
+                                                <span><?php echo $price; ?></span> <span class="h5">(Setting price only)</span>
+                                            </div>
+                                            <div class="line-price-product clearfix">
+                                                <div>
+                                                    <?if ($path == 69): //weding rings?>
+                                                    <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="red-btn"><?php echo $button_cart; ?></button>
+                                                    <?else:?>
+                                                    <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="red-btn">Select This Setting</button>
+                                                    <?endif?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
-                    <?endif?>
-
-                    <div class="one-line-information">
-                        <i class="truck-ico"></i>Free FedEx Priority Overnight Shipping:
                     </div>
 
-                    <div class="one-line-information">
-                        <i class="risk-free-ico"></i>Risk-free Retail
-                    </div>
-                    <div class="line-price-product clearfix">
-                        <div class="price-product"><?php echo $price; ?></div>
-                        <div class="setting-price">(Setting price only)</div>
-                        <div>
-                            <?if ($path == 69): //weding rings?>
-                            <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="red-btn"><?php echo $button_cart; ?></button>
-                            <?else:?>
-                                <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="red-btn">Select This Setting</button>
-                            <?endif?>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="heart-ico"></i> Wish It</a>
+
+                                </li>
+                            </ul>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+
+                            <div class="alert alert-warning">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-3">
+                                        <span class="h4">Need Help?</span>
+                                    </div>
+                                    <div class="col-md-9 col-sm-9">
+                                        <ul class="list-inline w-help-ned">
+                                            <li><a href="#"><span class="glyphicon glyphicon-comment"></span> Online Chat now</a></li>
+                                            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Email</a></li>
+                                            <li><a href="#"><span class="glyphicon glyphicon-phone-alt"></span> <?=$telephone?> | 24/7</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <span class="h3">Best quality and service</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row margin-top-10">
+                        <div class="col-md-6 col-sm-6">
+                            <div>
+                                <a href="#">
+                                    <div class="alert alert-info">
+                                        <div class="media">
+                                        <span class="pull-left">
+                                            <i class="truck-ico"></i>
+                                        </span>
+                                            <div class="media-body">
+                                                <h4 class="media-heading"><b>Free and Fast Shipping</b></h4>
+                                                <small>Fully Insured Overnight <br> Shipping</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <div class="alert alert-info">
+                                        <div class="media">
+                                        <span class="pull-left">
+                                            <i class="risk-free-ico"></i>
+                                        </span>
+                                            <div class="media-body">
+                                                <h4 class="media-heading"><b>Risk-free Retail</b></h4>
+                                                <small>100% Money Back <br> Guarantee</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div>
+                                <a href="#">
+                                    <div class="alert alert-info">
+                                        <div class="media">
+                                        <span class="pull-left">
+                                            <i class="glyphicon glyphicon-compressed" style="color: #fac652;font-size: 25px;"></i>
+                                        </span>
+                                            <div class="media-body">
+                                                <h4 class="media-heading"><b>Free Resizing and Engraving</b></h4>
+                                                On All Bridal <br> Jewerly
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <div class="alert alert-info">
+                                        <div class="media">
+                                        <span class="pull-left">
+                                            <i class="glyphicon glyphicon-map-marker" style="color: #fac652;font-size: 25px;"></i>
+                                        </span>
+
+                                            <div class="media-body">
+                                                <h4 class="media-heading"><b>Helping Others</b></h4>
+                                                A Partion of Your Purchase Goest <br> to Charity
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-3 col-sm-3">
+                    <a href="">
+                        <div class="thumbnail">
+                            <div class="text-center">
+                                <p><span class="h3">Beautiful</span></p>
+                                <p><span class="h3">packaging</span></p>
+                            </div>
+
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/beautiful-gift-box-icon-69188.png" width="96px" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <a href="">
+                        <div class="thumbnail">
+                            <div class="text-center">
+                                <p><span class="h3">Lifetime</span></p>
+                                <p><span class="h3">Warranty</span></p>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/Lifetime-Warranty.png" width="130px" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <a href="">
+                        <div class="thumbnail">
+                            <div class="text-center">
+                                <p><span class="h3">No Hassle</span></p>
+                                <p><span class="h3">Returns</span></p>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/Easy_Returns-128.png" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <a href="">
+                        <div class="thumbnail">
+                            <div class="text-center">
+                                <p><span class="h3">Diamond</span></p>
+                                <p><span class="h3">Certificate</span></p>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/diamond_certifikate.png" width="127px" alt="">
+                        </div>
+                    </a>
+                </div>
+
             </div>
 
         </div>
     </section>
 
-    <section class="top-main-r top-main-r3">
-        <!--*<div class="wrapper-main-r text-center">
-            <div class="title">This is Photoshop version</div>
-            <div class="text">
-                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-            </div>
-        </div>*-->
-    </section>
 
     <?php if ($products):?>
 
-        <section class="single-product">
-            <div class="title-for-product"><?php echo $text_related; ?></div>
-            <div class="owl-carousel owl-product">
+    <section class="single-product">
+        <div class="title-for-product"><?php echo $text_related; ?></div>
+        <div class="owl-carousel owl-product">
 
-                <?foreach ($products as $row):?>
+            <?foreach ($products as $row):?>
 
 
-                    <div class="item">
-                        <div class="box-img"><a href="<?=$row['href']?>"><img src="<?=$row['img']?>" alt="<?=$row['name']?>"></a></div>
-                        <div class="article"><a href="<?=$row['href']?>"><?=$row['name']?></a></div>
-                    </div>
-
-                <?endforeach?>
-
+            <div class="item">
+                <div class="box-img"><a href="<?=$row['href']?>"><img src="<?=$row['img']?>" alt="<?=$row['name']?>"></a></div>
+                <div class="article"><a href="<?=$row['href']?>"><?=$row['name']?></a></div>
             </div>
-        </section>
+
+            <?endforeach?>
+
+        </div>
+    </section>
     <?endif?>
 
 
-    <section class="center-bl comment-brand clearfix">
+    <section class="center-bl comment-brand clearfix thumbnail">
         <?php if ($review_status):?>
-            <div class="comment-box">
-                <div class="btn-box-comment">
-                    <div>
-                        <button class="comment-btn"><?php echo $reviews; ?></button>
-                        <button class="comment-btn">Questions(2)</button>
+        <div class="comment-box">
+
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#reviews" data-toggle="tab">Reviews <?php echo $reviews; ?></a></li>
+                <li><a href="#questions" data-toggle="tab">Questions</a></li>
+
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane fade in active" id="reviews">
+
+                    <button class="comment-btn" id="write-review">write a review</button>
+
+                    <div id="write-review-form" class="panel-collapse collapse">
+                        <div class="panel-body">
+
+                            <form class="form-horizontal" id="form-review">
+                                <span class="h3"><?php echo $text_write; ?></span>
+                                <?php if ($review_guest) { ?>
+                                <div class="form-group required">
+                                    <div class="col-sm-12">
+                                        <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
+                                        <input type="text" name="name" value="" id="input-name" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group required">
+                                    <div class="col-sm-12">
+                                        <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
+                                        <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
+                                        <div class="help-block"><?php echo $text_note; ?></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group required">
+
+                                    <div class="col-sm-5 col-md-5">
+                                        <div><?php echo $entry_rating; ?>:</div>
+                                        <div class="star-rating">
+
+                                            <fieldset>
+                                                <input type="radio" id="star5" name="rating" value="5" />
+                                                <label for="star5" title="Outstanding">5 stars</label>
+                                                <input type="radio" id="star4" name="rating" value="4" />
+                                                <label for="star4" title="Very Good">4 stars</label>
+                                                <input type="radio" id="star3" name="rating" value="3" />
+                                                <label for="star3" title="Good">3 stars</label>
+                                                <input type="radio" id="star2" name="rating" value="2" />
+                                                <label for="star2" title="Poor">2 stars</label>
+                                                <input type="radio" id="star1" name="rating" value="1" />
+                                                <label for="star1" title="Very Poor">1 star</label>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7 col-md-7">
+
+                                        <div class="pull-right">
+                                            <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary">Send</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <?php echo $captcha; ?>
+
+                                <?php } else { ?>
+                                <?php echo $text_login; ?>
+                                <?php } ?>
+                            </form>
+
+                        </div>
                     </div>
-                    <div>
-                        <button class="comment-btn" id="write-review">write a review</button>
-                        <span class="comment-btn">ask a questions</span>
-                    </div>
+
+                    <div id="review"></div>
+
                 </div>
 
-                <div id="write-review-form" class="panel-collapse collapse">
-                    <div class="panel-body">
-
-                        <form class="form-horizontal" id="form-review">
-                            <h2><?php echo $text_write; ?></h2>
-                            <?php if ($review_guest) { ?>
-                            <div class="form-group required">
-                                <div class="col-sm-12">
-                                    <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
-                                    <input type="text" name="name" value="" id="input-name" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="form-group required">
-                                <div class="col-sm-12">
-                                    <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
-                                    <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
-                                    <div class="help-block"><?php echo $text_note; ?></div>
-                                </div>
-                            </div>
-                            <div class="form-group required">
-                                <div class="col-sm-12">
-                                    <label class="control-label"><?php echo $entry_rating; ?></label>
-                                    &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
-                                    <input type="radio" name="rating" value="1" />
-                                    &nbsp;
-                                    <input type="radio" name="rating" value="2" />
-                                    &nbsp;
-                                    <input type="radio" name="rating" value="3" />
-                                    &nbsp;
-                                    <input type="radio" name="rating" value="4" />
-                                    &nbsp;
-                                    <input type="radio" name="rating" value="5" />
-                                    &nbsp;<?php echo $entry_good; ?></div>
-                            </div>
-                            <?php echo $captcha; ?>
-                            <div class="buttons clearfix">
-                                <div class="pull-right">
-                                    <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_continue; ?></button>
-                                </div>
-                            </div>
-                            <?php } else { ?>
-                            <?php echo $text_login; ?>
-                            <?php } ?>
-                        </form>
-
-                    </div>
+                <div class="tab-pane fade" id="questions">
+                    <button class="comment-btn" id="write-questions">ask a questions</button>
                 </div>
-
-                <div id="review"></div>
-
             </div>
+
+
+
+
+
+        </div>
 
         <?endif?>
 
 
 
     </section>
+
+
 
 
     <div class="modal fade" id="w-modal-cart" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -371,7 +597,7 @@
                 $('#button-cart').button('reset');
             },
             success: function(json) {
-                $('.alert, .text-danger').remove();
+                $('.text-danger').remove();
                 $('.form-group').removeClass('has-error');
                 //console.log(json);
                 if (json['error']) {
@@ -418,6 +644,7 @@
                                 });
                                 $('.dropdown').popover('show');
                             }
+
                         }
                     }
 

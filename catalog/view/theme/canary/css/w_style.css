@@ -22,6 +22,11 @@
     left: -65px!important;
 }
 
+.w-product-name-h1 {
+    border: none;
+    font-size: 20px;
+}
+
 .paging-top-10 {
     padding-top: 10px;
 }
@@ -53,8 +58,26 @@
     margin-bottom: 20px;
 }
 
+.margin-buttom-0 {
+    margin-bottom: 0;
+}
+
+.margin-top-0 {
+    margin-top: 0;
+}
+
+.text-danger {
+    color: #ff3434;
+    font-size: 18px;
+}
+
 .paging-20 {
     padding: 20px;
+}
+
+.w-help-ned li {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .padding-0 {
