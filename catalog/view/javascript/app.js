@@ -41,36 +41,36 @@ $(document).ready(function() {
 
 
     //load controller general category
-    $(document).on('click', '.w-general-category', function(){
-
-        var $url = $(this).attr('href');
-        history.pushState('', '', $url);
-
-        $.ajax({ // описываем наш запрос
-            type: "POST", // будем передавать данные через POST
-            dataType: "HTML", // указываем, что нам вернется JSON
-            url: $url,
-            data: 'general_category=1',
-            beforeSend: function() {
-                $('.container-loader').show();
-                $(".menu > ul > li > .dropdown-inside").hide();
-            },
-            complete: function() {
-                $('.container-loader').hide();
-            },
-            success: function (response) { // когда получаем ответ
-
-                $('.w-general-container').empty();
-                $('.w-general-container').html(response);
-                $('.question-filter-btn').popover();
-
-            }
-
-        });
-
-        $('html, body').animate({ scrollTop: 0 }, 'slow');
-        return false;
-    });
+    // $(document).on('click', '.w-general-category', function(){
+    //
+    //     var $url = $(this).attr('href');
+    //     history.pushState('', '', $url);
+    //
+    //     $.ajax({ // описываем наш запрос
+    //         type: "POST", // будем передавать данные через POST
+    //         dataType: "HTML", // указываем, что нам вернется JSON
+    //         url: $url,
+    //         data: 'general_category=1',
+    //         beforeSend: function() {
+    //             $('.container-loader').show();
+    //             $(".menu > ul > li > .dropdown-inside").hide();
+    //         },
+    //         complete: function() {
+    //             $('.container-loader').hide();
+    //         },
+    //         success: function (response) { // когда получаем ответ
+    //
+    //             $('.w-general-container').empty();
+    //             $('.w-general-container').html(response);
+    //             $('.question-filter-btn').popover();
+    //
+    //         }
+    //
+    //     });
+    //
+    //     $('html, body').animate({ scrollTop: 0 }, 'slow');
+    //     return false;
+    // });
 
 
 

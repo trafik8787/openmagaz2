@@ -19,9 +19,8 @@ class ControllerModuleFeed extends Controller {
 
         $this->load->model('tool/image');
 
-
         $results = $this->getProduct();
-       // dd($this->arrUrlQuery, true);
+        //dd($results , true);
 
         $xml = new DomDocument('1.0','utf-8');
         $rss = $xml->createElement("rss");
@@ -45,40 +44,66 @@ class ControllerModuleFeed extends Controller {
                 if (!empty($image)) {
 
                     $item = $channel->appendChild($xml->createElement('item'));
+                    $item_title = $item->appendChild($xml->createElement('title'));
                     $item_link = $item->appendChild($xml->createElement('link'));
+                    $item_description = $item->appendChild($xml->createElement('description'));
                     $item_gId = $item->appendChild($xml->createElement('g:id'));
                     $item_gPrice = $item->appendChild($xml->createElement('g:price'));
                     $item_gCondition = $item->appendChild($xml->createElement('g:condition'));
                     $item_gAvailability = $item->appendChild($xml->createElement('g:availability'));
+                    $item_gIdentifier_exists = $item->appendChild($xml->createElement('g:identifier_exists'));
+                    $item_gBrand = $item->appendChild($xml->createElement('g:brand'));
+                    $item_gMpn = $item->appendChild($xml->createElement('g:mpn'));
+
+                    $item_gGoogle_product_category = $item->appendChild($xml->createElement('g:google_product_category'));
+
+                    $item_gTax = $item->appendChild($xml->createElement('g:tax'));
+                        $gTax_gCountry = $item_gTax->appendChild($xml->createElement('g:country'));
+                        $gTax_gRegion = $item_gTax->appendChild($xml->createElement('g:region'));
+                        $gTax_gRate = $item_gTax->appendChild($xml->createElement('g:rate'));
+                        $gTax_gTax_ship = $item_gTax->appendChild($xml->createElement('g:tax_ship'));
+
+
                     //$item_gProduct_type = $item->appendChild($xml->createElement('g:product_type'));
                     $item_gImage_link = $item->appendChild($xml->createElement('g:image_link'));
-                    $item_title = $item->appendChild($xml->createElement('title'));
-                    $item_description = $item->appendChild($xml->createElement('description'));
 
 
+                    $item_title->appendChild($xml->createTextNode($rows['name']));
                     $item_link->appendChild($xml->createTextNode($this->generateUrl($rows['product_id'])));
+                    $item_description->appendChild($xml->createTextNode($rows['description']));
                     $item_gId->appendChild($xml->createTextNode($rows['product_id']));
                     $item_gPrice->appendChild($xml->createTextNode($rows['price'] . ' USD'));
                     $item_gCondition->appendChild($xml->createTextNode('new'));
-                    $item_gAvailability->appendChild($xml->createTextNode('available for order'));
+                    $item_gAvailability->appendChild($xml->createTextNode('in stock'));
+                    $item_gIdentifier_exists->appendChild($xml->createTextNode('FALSE'));
+                    $item_gBrand->appendChild($xml->createTextNode($rows['manufacture']));
+                    $item_gMpn->appendChild($xml->createTextNode($rows['sku']));
+
+                    $item_gGoogle_product_category->appendChild($xml->createTextNode('200'));
+
+
+                    $gTax_gCountry->appendChild($xml->createTextNode('US'));
+                    $gTax_gRegion->appendChild($xml->createTextNode('TN'));
+                    $gTax_gRate->appendChild($xml->createTextNode('9.25'));
+                    $gTax_gTax_ship->appendChild($xml->createTextNode('n'));
+
                     //$item_gProduct_type->appendChild($xml->createTextNode('available for order'));
 
                     $item_gImage_link->appendChild($xml->createTextNode($image));
-                    $item_title->appendChild($xml->createTextNode($rows['name']));
-                    $item_description->appendChild($xml->createTextNode($rows['description']));
+
                 }
 
             }
         }
 
         $xml->formatOutput = true;
-        $xml->save($_SERVER['DOCUMENT_ROOT'].'/feed.xml');
+        $xml->save($_SERVER['DOCUMENT_ROOT'].'/brilliantcanary.xml');
     }
 
 
     private function getProduct () {
 
-        $query = $this->db->query("SELECT p.product_id, p.model, p.image, p.price, pd.name, pd.description, ptc.category_id FROM ". DB_PREFIX . "product p LEFT JOIN ".DB_PREFIX."product_description pd  ON (p.product_id = pd.product_id) 
+        $query = $this->db->query("SELECT p.product_id, p.sku, p.model, p.image, p.price, man.name as manufacture, pd.name, pd.description, ptc.category_id FROM ". DB_PREFIX . "product p INNER JOIN ".DB_PREFIX."manufacturer man ON (p.manufacturer_id = man.manufacturer_id) LEFT JOIN ".DB_PREFIX."product_description pd  ON (p.product_id = pd.product_id) 
         LEFT JOIN ".DB_PREFIX."product_to_category ptc ON (p.product_id = ptc.product_id)");
         $CoupTmp = array();
         $result = array();
