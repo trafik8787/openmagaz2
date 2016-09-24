@@ -417,6 +417,7 @@
 
     <section class="center-bl comment-brand clearfix thumbnail">
         <?php if ($review_status):?>
+
         <div class="comment-box">
 
 
@@ -426,6 +427,7 @@
                 <li><a href="#questions" data-toggle="tab">Questions</a></li>
 
             </ul>
+
 
             <!-- Tab panes -->
             <div class="tab-content">
