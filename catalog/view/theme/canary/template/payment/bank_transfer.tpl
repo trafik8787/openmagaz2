@@ -1,5 +1,5 @@
-<h2><?php echo $text_instruction; ?></h2>
-<p><b><?php echo $text_description; ?></b></p>
+<div class="h3 text-center"><?php echo $text_instruction; ?></div>
+<p class="text-center"><b><?php echo $text_description; ?></b></p>
 <div class="well well-sm">
   <p><?php echo $bank; ?></p>
   <p><?php echo $text_payment; ?></p>

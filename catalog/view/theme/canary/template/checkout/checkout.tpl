@@ -78,7 +78,7 @@
 
                         <div class="checkout-center panel-group" id="accordion">
                             <div class="panel cc-block">
-                                <!--1. SIGN IN TO CHECKOUT-->
+                                <!--*1. SIGN IN TO CHECKOUT*-->
                                 <div class="cc-header">
                                     <div class="cc-title"><?php echo $text_checkout_option; ?></div>
                                 </div>
@@ -151,7 +151,6 @@
                                 </div>
 
                             <?endif?>
-
 
 
 

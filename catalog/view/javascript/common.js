@@ -188,7 +188,7 @@ var cart = {
 				}, 100);
 
 				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
-					location = 'index.php?route=checkout/cart';
+					location = '/index.php?route=checkout/cart';
 				} else {
                     $('.cart-basket').load('/index.php?route=common/cart/info .w-cart-basket');
 				}
@@ -212,6 +212,7 @@ var cart = {
 			},
 			success: function(json) {
 				// Need to set timeout otherwise it wont update the total
+                console.log(json);
 				setTimeout(function () {
 					$('#w-but-cart').html('<span>cart ('+json['count']+')</span>');
 				}, 100);
@@ -219,9 +220,9 @@ var cart = {
                 //console.log(json);
 
 				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
-					location = 'index.php?route=checkout/cart';
+					location = '/index.php?route=checkout/cart';
 				} else {
-					$('.cart-basket').load('index.php?route=common/cart/info .w-cart-basket');
+					$('.cart-basket').load('/index.php?route=common/cart/info .w-cart-basket');
 				}
 			},
 	        error: function(xhr, ajaxOptions, thrownError) {

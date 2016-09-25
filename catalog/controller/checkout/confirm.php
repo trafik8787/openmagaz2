@@ -405,7 +405,7 @@ class ControllerCheckoutConfirm extends Controller {
 					'text'  => $this->currency->format($total['value']),
 				);
 			}
-
+            dd($this->session->data['payment_method']['code']);
 			$data['payment'] = $this->load->controller('payment/' . $this->session->data['payment_method']['code']);
 		} else {
 			$data['redirect'] = $redirect;
