@@ -1,12 +1,12 @@
 
 <?//dd($wsubcategory)?>
 <div class="filter-box clearfix">
-    <div class="filter-wrapper padding-b0 clearfix">
+    <div class="filter-wrapper paging-20 clearfix thumbnail">
         <?if (!empty($wsubcategory)):?>
 
             <?if ($category_id == 20): //ENGAGEMENT RINGS?>
                 <div class="one-line brilliant-style height-inherit w-group-wsubcat">
-                    <div class=" btn-group-filter box-color gemstones-box rings-box" data-toggle="buttons">
+                    <div class=" btn-group-filter box-color gemstones-box rings-box" >
                         <?php foreach ($wsubcategory as $key => $row):?>
                                 <?php
 
@@ -36,9 +36,13 @@
                                 ?>
 
                                 <label class="btn btn-filter <?php if ($child_id == $row['cat_id']):?> active <?endif?> brackets">
-                                    <input type="radio" class="w-wsubcat" data-href="<?php echo $row['href']?>"> <i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i>
+                                    <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i></a>
+
+                                    <!--*<input type="radio" class="w-wsubcat" data-href="<?php echo $row['href']?>"> <i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i>*-->
                                     <br><?php echo $row['name']?>
                                 </label>
+
+
 
                         <?endforeach?>
                     </div>
