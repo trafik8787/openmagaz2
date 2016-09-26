@@ -84,27 +84,27 @@ class ControllerModuleExelParser extends Controller {
 //        );
 
         //MAN WEDDING RINGS
-//        $this->category_arr = array(
-//            'Modern' => 75,
-//            'Diamond' => 74,
-//            'Classic' => 72,
-//            'Carved' => 73
-//        );
+        $this->category_arr = array(
+            'Modern' => 75,
+            'Diamond' => 74,
+            'Classic' => 72,
+            'Carved' => 73
+        );
 
 
         //FINE JEWERLY
-        $this->category_arr = array(
-            'Diamond Bracelets' => 85,
-            'Diamond Earrings' => 84,
-            'Diamond Pendant' => 86,
-            'Diamond Rings' => 88,
-            'Diamond Studs' => 83,
-            'Diamond Fashion Necklace' => 92,
-            'Gemstone Bracelets' => 93,
-            'Gemstone Earrings' => 87,
-            'Gemstone Pendants' => 91,
-            'Gemstone Rings' => 90
-        );
+//        $this->category_arr = array(
+//            'Diamond Bracelets' => 85,
+//            'Diamond Earrings' => 84,
+//            'Diamond Pendant' => 86,
+//            'Diamond Rings' => 88,
+//            'Diamond Studs' => 83,
+//            'Diamond Fashion Necklace' => 92,
+//            'Gemstone Bracelets' => 93,
+//            'Gemstone Earrings' => 87,
+//            'Gemstone Pendants' => 91,
+//            'Gemstone Rings' => 90
+//        );
 
 
         $this->list_filtr = array(
