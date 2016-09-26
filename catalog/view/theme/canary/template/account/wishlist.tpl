@@ -74,7 +74,7 @@
                                         </span>
                                     </td>
                                     <td data-th="Action">
-                                        <a href="#" onclick="cart.add('<?php echo $product['product_id']; ?>'); return false;" data-toggle="tooltip" title="<?php echo $button_cart; ?>" class="wishlist-action wa-cart"></a>
+                                        <!--*<a href="#" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-toggle="tooltip" title="<?php echo $button_cart; ?>" class="wishlist-action wa-cart"></a>*-->
                                         <a href="<?php echo $product['remove']; ?>" data-toggle="tooltip" title="<?php echo $button_remove; ?>"  class="wishlist-action wa-delete"></a>
                                     </td>
                                 </tr>
