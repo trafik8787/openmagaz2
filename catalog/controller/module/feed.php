@@ -36,7 +36,6 @@ class ControllerModuleFeed extends Controller {
         $this->load->model('tool/image');
 
         $results = $this->getProduct();
-        dd($results , true);
 
         $xml = new DomDocument('1.0','utf-8');
         $rss = $xml->createElement("rss");
