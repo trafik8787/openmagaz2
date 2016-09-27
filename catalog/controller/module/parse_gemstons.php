@@ -625,7 +625,7 @@ class ControllerModuleParseGemstons extends Controller {
 
     private function addUrl() {
 
-        $keyword = str_replace(' ', '-', strtolower(trim($this->name))).'-'.$this->sku.'-'.$this->product_id_insert;
+        $keyword = str_replace(' ', '-', strtolower(trim($this->name))).'-'.$this->sku;
 
         $this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET 
             query = 'product_id=" . (int)$this->product_id_insert . "', 
