@@ -98,7 +98,7 @@ class ControllerModuleFeed extends Controller {
                     $item_gMpn->appendChild($xml->createTextNode($rows['sku']));
                     $item_gAge_group->appendChild($xml->createTextNode('adult'));
                     $item_gGender->appendChild($xml->createTextNode('unisex'));
-                    $item_gColor->appendChild($xml->createTextNode('unisex'));
+                    $item_gColor->appendChild($xml->createTextNode($this->arr_color[$rows['metal']]));
 
                     $item_gGoogle_product_category->appendChild($xml->createTextNode('200'));
 
