@@ -9,9 +9,25 @@
 class ControllerModuleFeed extends Controller {
 
     private $arrUrlQuery;
+    private $arr_color;
 
     public function __construct($registry) {
         parent::__construct($registry);
+
+        $this->arr_color = array(
+            'white_gold_14' => 'White&#47;Gold',
+            'yellow_gold_14' => 'Yellow&#47;Gold',
+            'rose_gold_14' => 'Rose&#47;Gold',
+            'white_gold_18' => 'White&#47;Gold',
+            'yellow_gold_18' => 'Yellow&#47;Gold',
+            'rose_gold_18' => 'Rose&#47;Gold',
+            'platinum' => 'White',
+            'palladium' => 'White',
+            'two_tone_14' => 'White&#47;Rose&#47;Yellow',
+            'two_tone_18' => 'White&#47;Rose&#47;Yellow',
+            'gemstones' => 'Red&#47;Pink&#47;Blue'
+        );
+
         $this->getUrl();
     }
 
@@ -20,7 +36,7 @@ class ControllerModuleFeed extends Controller {
         $this->load->model('tool/image');
 
         $results = $this->getProduct();
-        //dd($results , true);
+        dd($results , true);
 
         $xml = new DomDocument('1.0','utf-8');
         $rss = $xml->createElement("rss");
@@ -38,7 +54,7 @@ class ControllerModuleFeed extends Controller {
         //dd($_SERVER['DOCUMENT_ROOT'], true);
         foreach ($results as $rows) {
 
-            if (!empty($rows['image']) ) {
+            if (!empty($rows['image'] AND !empty($this->arr_color[$rows['metal']])) ) {
 
                 $image = $this->model_tool_image->resize($rows['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
                 if (!empty($image)) {
@@ -54,6 +70,9 @@ class ControllerModuleFeed extends Controller {
                     $item_gIdentifier_exists = $item->appendChild($xml->createElement('g:identifier_exists'));
                     $item_gBrand = $item->appendChild($xml->createElement('g:brand'));
                     $item_gMpn = $item->appendChild($xml->createElement('g:mpn'));
+                    $item_gAge_group = $item->appendChild($xml->createElement('g:age_group'));
+                    $item_gGender = $item->appendChild($xml->createElement('g:gender'));
+                    $item_gColor = $item->appendChild($xml->createElement('g:color'));
 
                     $item_gGoogle_product_category = $item->appendChild($xml->createElement('g:google_product_category'));
 
@@ -78,6 +97,9 @@ class ControllerModuleFeed extends Controller {
                     $item_gIdentifier_exists->appendChild($xml->createTextNode('FALSE'));
                     $item_gBrand->appendChild($xml->createTextNode($rows['manufacture']));
                     $item_gMpn->appendChild($xml->createTextNode($rows['sku']));
+                    $item_gAge_group->appendChild($xml->createTextNode('adult'));
+                    $item_gGender->appendChild($xml->createTextNode('unisex'));
+                    $item_gColor->appendChild($xml->createTextNode('unisex'));
 
                     $item_gGoogle_product_category->appendChild($xml->createTextNode('200'));
 
@@ -103,7 +125,7 @@ class ControllerModuleFeed extends Controller {
 
     private function getProduct () {
 
-        $query = $this->db->query("SELECT p.product_id, p.sku, p.model, p.image, p.price, man.name as manufacture, pd.name, pd.description, ptc.category_id FROM ". DB_PREFIX . "product p INNER JOIN ".DB_PREFIX."manufacturer man ON (p.manufacturer_id = man.manufacturer_id) LEFT JOIN ".DB_PREFIX."product_description pd  ON (p.product_id = pd.product_id) 
+        $query = $this->db->query("SELECT p.product_id, p.sku, p.model, p.image, p.metal, p.price, man.name as manufacture, pd.name, pd.description, ptc.category_id FROM ". DB_PREFIX . "product p INNER JOIN ".DB_PREFIX."manufacturer man ON (p.manufacturer_id = man.manufacturer_id) LEFT JOIN ".DB_PREFIX."product_description pd  ON (p.product_id = pd.product_id) 
         LEFT JOIN ".DB_PREFIX."product_to_category ptc ON (p.product_id = ptc.product_id)");
         $CoupTmp = array();
         $result = array();
