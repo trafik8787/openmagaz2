@@ -244,12 +244,16 @@ class ControllerCatalogProduct extends Controller {
 
 	protected function getList() {
 
-
-
         if (isset($this->request->get['filter_product_id'])) {
             $filter_product_id = $this->request->get['filter_product_id'];
         } else {
             $filter_product_id = null;
+        }
+
+        if (isset($this->request->get['filter_category'])) {
+            $filter_category = $this->request->get['filter_category'];
+        } else {
+            $filter_category = null;
         }
 
 		if (isset($this->request->get['filter_name'])) {
@@ -307,6 +311,10 @@ class ControllerCatalogProduct extends Controller {
             $url .= '&filter_product_id=' . $this->request->get['filter_product_id'];
         }
 
+        if (isset($this->request->get['filter_category'])) {
+            $url .= '&filter_category=' . $this->request->get['filter_category'];
+        }
+
 		if (isset($this->request->get['filter_name'])) {
 			$url .= '&filter_name=' . urlencode(html_entity_decode($this->request->get['filter_name'], ENT_QUOTES, 'UTF-8'));
 		}
@@ -358,7 +366,8 @@ class ControllerCatalogProduct extends Controller {
 		$data['products'] = array();
 
 		$filter_data = array(
-			'filter_product_id'	  => $filter_product_id,
+		    'filter_category' => $filter_category,
+			'filter_product_id'	 => $filter_product_id,
 			'filter_name'	  => $filter_name,
 			'filter_model'	  => $filter_model,
 			'filter_price'	  => $filter_price,
@@ -371,10 +380,13 @@ class ControllerCatalogProduct extends Controller {
 		);
 
 		$this->load->model('tool/image');
+		$this->load->model('catalog/category');
 
 		$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 		$results = $this->model_catalog_product->getProducts($filter_data);
+
+        $data['category_list'] = $this->model_catalog_category->getCategories();
 
 		foreach ($results as $result) {
 //		    /dd($result['image']);
@@ -413,6 +425,8 @@ class ControllerCatalogProduct extends Controller {
 				'edit'       => $this->url->link('catalog/product/edit', 'token=' . $this->session->data['token'] . '&product_id=' . $result['product_id'] . $url, 'SSL')
 			);
 		}
+
+
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
@@ -470,6 +484,10 @@ class ControllerCatalogProduct extends Controller {
             $url .= '&filter_product_id=' . $this->request->get['filter_product_id'];
         }
 
+        if (isset($this->request->get['filter_category'])) {
+            $url .= '&filter_category=' . $this->request->get['filter_category'];
+        }
+
 		if (isset($this->request->get['filter_name'])) {
 			$url .= '&filter_name=' . urlencode(html_entity_decode($this->request->get['filter_name'], ENT_QUOTES, 'UTF-8'));
 		}
@@ -514,6 +532,10 @@ class ControllerCatalogProduct extends Controller {
             $url .= '&filter_product_id=' . $this->request->get['filter_product_id'];
         }
 
+        if (isset($this->request->get['filter_category'])) {
+            $url .= '&filter_category=' . $this->request->get['filter_category'];
+        }
+
 		if (isset($this->request->get['filter_name'])) {
 			$url .= '&filter_name=' . urlencode(html_entity_decode($this->request->get['filter_name'], ENT_QUOTES, 'UTF-8'));
 		}
@@ -552,7 +574,9 @@ class ControllerCatalogProduct extends Controller {
 
 		$data['results'] = sprintf($this->language->get('text_pagination'), ($product_total) ? (($page - 1) * $this->config->get('config_limit_admin')) + 1 : 0, ((($page - 1) * $this->config->get('config_limit_admin')) > ($product_total - $this->config->get('config_limit_admin'))) ? $product_total : ((($page - 1) * $this->config->get('config_limit_admin')) + $this->config->get('config_limit_admin')), $product_total, ceil($product_total / $this->config->get('config_limit_admin')));
 
+
 		$data['filter_product_id'] = $filter_product_id;
+		$data['filter_category'] = $filter_category;
 		$data['filter_name'] = $filter_name;
 		$data['filter_model'] = $filter_model;
 		$data['filter_price'] = $filter_price;

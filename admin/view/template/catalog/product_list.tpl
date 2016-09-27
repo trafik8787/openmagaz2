@@ -56,6 +56,18 @@
                 <input type="text" name="filter_quantity" value="<?php echo $filter_quantity; ?>" placeholder="<?php echo $entry_quantity; ?>" id="input-quantity" class="form-control" />
               </div>
 
+                <div class="form-group">
+
+                    <label class="control-label" for="filter_category">Category</label>
+                    <select name="filter_category" id="filter_category" class="form-control">
+                        <option value="all" selected="selected">All</option>
+
+                        <?foreach ($category_list as $row):?>
+                            <option value="<?=$row['category_id']?>" <?if ($filter_category == $row['category_id']):?> selected="selected" <?endif?> ><?=$row['name']?></option>
+                        <?endforeach?>
+
+                    </select>
+                </div>
             </div>
             <div class="col-sm-4">
               <div class="form-group">
@@ -175,9 +187,14 @@ $('#button-filter').on('click', function() {
 	var url = 'index.php?route=catalog/product&token=<?php echo $token; ?>';
 
     var filter_product_id = $('input[name=\'filter_product_id\']').val();
+    var filter_category = $('select[name=\'filter_category\']').val();
 
     if (filter_product_id) {
         url += '&filter_product_id=' + encodeURIComponent(filter_product_id);
+    }
+
+    if (filter_category) {
+        url += '&filter_category=' + encodeURIComponent(filter_category);
     }
 
 	var filter_name = $('input[name=\'filter_name\']').val();
