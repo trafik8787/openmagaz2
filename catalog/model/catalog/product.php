@@ -5,7 +5,67 @@
  * todo модель вывод продуктов
  */
 class ModelCatalogProduct extends Model {
-	public function updateViewed($product_id) {
+
+    private $stone_type;
+    private $shape;
+    private $primary_color;
+
+    public function __construct($registry){
+        parent::__construct($registry);
+
+        $this->stone_type = array(
+            55 => true,
+            20 => true,
+            24 => true,
+            28 => true,
+            17 => true,
+            21 => true,
+            25 => true,
+            29 => true,
+            18 => true,
+            22 => true,
+            26 => true,
+            19 => true,
+            23 => true,
+            27 => true
+        );
+
+        $this->shape = array(
+            56 => true,
+            33 => true,
+            37 => true,
+            41 => true,
+            30 => true,
+            34 => true,
+            38 => true,
+            42 => true,
+            31 => true,
+            35 => true,
+            39 => true,
+            32 => true,
+            36 => true,
+            40 => true
+        );
+
+        $this->primary_color = array(
+            57 => true,
+            46 => true,
+            50 => true,
+            54 => true,
+            43 => true,
+            47 => true,
+            51 => true,
+            44 => true,
+            48 => true,
+            52 => true,
+            45 => true,
+            49 => true,
+            53 => true
+        );
+
+    }
+
+    public function updateViewed($product_id) {
 		$this->db->query("UPDATE " . DB_PREFIX . "product SET viewed = (viewed + 1) WHERE product_id = '" . (int)$product_id . "'");
 	}
 
@@ -63,6 +123,8 @@ class ModelCatalogProduct extends Model {
 	}
 
 	public function getProducts($data = array()) {
+
+
 		$sql = "SELECT p.product_id, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special";
 
 		if (!empty($data['filter_category_id'])) {
@@ -73,7 +135,15 @@ class ModelCatalogProduct extends Model {
 			}
 
 			if (!empty($data['filter_filter'])) {
-				$sql .= " LEFT JOIN " . DB_PREFIX . "product_filter pf ON (p2c.product_id = pf.product_id) LEFT JOIN " . DB_PREFIX . "product p ON (pf.product_id = p.product_id)";
+
+                $filters_join = explode(',', $data['filter_filter']);
+                //rray_shift($filters_join);
+                $sql_join = '';
+                foreach ($filters_join as $key => $filter_id) {
+                    $sql_join .= " INNER JOIN ". DB_PREFIX ."product_filter pf".$key." ON (p2c.product_id = pf".$key.".product_id) ";
+                }
+
+				$sql .= " LEFT JOIN " . DB_PREFIX . "product_filter pf ON (p2c.product_id = pf.product_id) LEFT JOIN " . DB_PREFIX . "product p ON (pf.product_id = p.product_id)" . $sql_join;
 			} else {
 				$sql .= " LEFT JOIN " . DB_PREFIX . "product p ON (p2c.product_id = p.product_id)";
 			}
@@ -89,17 +159,63 @@ class ModelCatalogProduct extends Model {
 			} else {
 				$sql .= " AND p2c.category_id = '" . (int)$data['filter_category_id'] . "'";
 			}
-
+           // dd($data);
 			if (!empty($data['filter_filter'])) {
 				$implode = array();
 
 				$filters = explode(',', $data['filter_filter']);
 
-				foreach ($filters as $filter_id) {
-					$implode[] = (int)$filter_id;
-				}
 
-				$sql .= " AND pf.filter_id IN (" . implode(',', $implode) . ")";
+
+                $stone_type_tmp = array();
+                $shape_tmp = array();
+                $primary_color_tmp = array();
+
+                foreach ($filters as $key => $filter_id) {
+
+                    if (!empty($this->stone_type[$filter_id])) {
+                        $stone_type_tmp[] = $filter_id;
+                    }
+
+                    if (!empty($this->shape[$filter_id])) {
+                        $shape_tmp[] = $filter_id;
+                    }
+
+                    if (!empty($this->primary_color[$filter_id])) {
+                        $primary_color_tmp[] = $filter_id;
+                    }
+
+                }
+                $ret = array();
+                if (!empty($stone_type_tmp)) {
+                    $ret[] = $stone_type_tmp;
+                }
+                if (!empty($shape_tmp)) {
+                    $ret[] = $shape_tmp;
+                }
+                if (!empty($primary_color_tmp)) {
+                    $ret[] = $primary_color_tmp;
+                }
+
+
+                if (empty($ret)) {
+                    foreach ($filters as $filter_id) {
+                        $implode[] = (int)$filter_id;
+                    }
+
+                    $sql .= " AND pf.filter_id IN (" . implode(',', $implode) . ")";
+
+                } else {
+
+                    foreach ($ret as $x => $item_ret) {
+                        if (!empty($item_ret)) {
+                            $sql .= " AND pf" . $x . ".filter_id IN (" . implode(',', $item_ret) . ") ";
+                        }
+                    }
+                }
+
+
+
 			}
             else { //добавлено условие для вывода только колец из белого золота если фильтр не используется
                 $sql .= " AND p.metal = 'white_gold_14' ";
@@ -212,7 +328,7 @@ class ModelCatalogProduct extends Model {
 		$product_data = array();
 
 		$query = $this->db->query($sql);
-
+        //dd($sql);
 		foreach ($query->rows as $result) {
 			$product_data[$result['product_id']] = $this->getProduct($result['product_id']);
 		}
@@ -447,7 +563,15 @@ class ModelCatalogProduct extends Model {
 			}
 
 			if (!empty($data['filter_filter'])) {
-				$sql .= " LEFT JOIN " . DB_PREFIX . "product_filter pf ON (p2c.product_id = pf.product_id) LEFT JOIN " . DB_PREFIX . "product p ON (pf.product_id = p.product_id)";
+
+                $filters_join = explode(',', $data['filter_filter']);
+                //array_shift($filters_join);
+                $sql_join = '';
+                foreach ($filters_join as $key => $filter_id) {
+                    $sql_join .= " INNER JOIN ". DB_PREFIX ."product_filter pf".$key." ON (p2c.product_id = pf".$key.".product_id) ";
+                }
+
+				$sql .= " LEFT JOIN " . DB_PREFIX . "product_filter pf ON (p2c.product_id = pf.product_id) LEFT JOIN " . DB_PREFIX . "product p ON (pf.product_id = p.product_id) ".$sql_join;
 			} else {
 				$sql .= " LEFT JOIN " . DB_PREFIX . "product p ON (p2c.product_id = p.product_id)";
 			}
@@ -469,11 +593,52 @@ class ModelCatalogProduct extends Model {
 
 				$filters = explode(',', $data['filter_filter']);
 
-				foreach ($filters as $filter_id) {
-					$implode[] = (int)$filter_id;
-				}
+                $stone_type_tmp = array();
+                $shape_tmp = array();
+                $primary_color_tmp = array();
 
-				$sql .= " AND pf.filter_id IN (" . implode(',', $implode) . ")";
+                foreach ($filters as $key => $filter_id) {
+
+                    if (!empty($this->stone_type[$filter_id])) {
+                        $stone_type_tmp[] = $filter_id;
+                    }
+
+                    if (!empty($this->shape[$filter_id])) {
+                        $shape_tmp[] = $filter_id;
+                    }
+
+                    if (!empty($this->primary_color[$filter_id])) {
+                        $primary_color_tmp[] = $filter_id;
+                    }
+
+                }
+                $ret = array();
+
+                if (!empty($stone_type_tmp)) {
+                    $ret[] = $stone_type_tmp;
+                }
+                if (!empty($shape_tmp)) {
+                    $ret[] = $shape_tmp;
+                }
+                if (!empty($primary_color_tmp)) {
+                    $ret[] = $primary_color_tmp;
+                }
+
+                if (empty($ret)) {
+                    foreach ($filters as $filter_id) {
+                        $implode[] = (int)$filter_id;
+                    }
+
+                    $sql .= " AND pf.filter_id IN (" . implode(',', $implode) . ")";
+
+                } else {
+
+                    foreach ($ret as $x => $item_ret) {
+                        if (!empty($item_ret)) {
+                            $sql .= " AND pf" . $x . ".filter_id IN (" . implode(',', $item_ret) . ") ";
+                        }
+                    }
+                }
 			}
             else { //добавлено условие для вывода только колец из белого золота если фильтр не используется
                 $sql .= " AND p.metal = 'white_gold_14' ";
