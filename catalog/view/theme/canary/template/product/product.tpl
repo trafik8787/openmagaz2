@@ -218,9 +218,9 @@
                                             <div class="line-price-product clearfix">
                                                 <div>
                                                     <?if ($path == 69): //weding rings?>
-                                                    <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="red-btn"><?php echo $button_cart; ?></button>
+                                                        <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="red-btn"><?php echo $button_cart; ?></button>
                                                     <?else:?>
-                                                    <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="red-btn">Select This Setting</button>
+                                                        <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="red-btn">Select This Setting</button>
                                                     <?endif?>
                                                 </div>
                                             </div>
@@ -417,7 +417,6 @@
 
     <section class="center-bl comment-brand clearfix thumbnail">
         <?php if ($review_status):?>
-
         <div class="comment-box">
 
 
@@ -427,7 +426,6 @@
                 <li><a href="#questions" data-toggle="tab">Questions</a></li>
 
             </ul>
-
 
             <!-- Tab panes -->
             <div class="tab-content">
@@ -517,7 +515,6 @@
 
 
     </section>
-
 
 
 

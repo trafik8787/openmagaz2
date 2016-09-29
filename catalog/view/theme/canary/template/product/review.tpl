@@ -19,12 +19,12 @@
                 <?php echo $review['text']; ?>
             </div>
             <div class="share-box clearfix">
-                <a href="#" class="share-comment"><i class="share-ico"></i>share</a>
-                <div class="like-dislike">
-                    <a href="#">Was This Review Helpful?</a>
-                    <a href="#" class="like"><i class="like-ico"></i></a> 1
-                    <a href="#" class="dislike"><i class="dislike-ico"></i></a> 0
-                </div>
+                <!--*<a href="#" class="share-comment"><i class="share-ico"></i>share</a>*-->
+                <!--*<div class="like-dislike">*-->
+                    <!--*<a href="#">Was This Review Helpful?</a>*-->
+                    <!--*<a href="#" class="like"><i class="like-ico"></i></a> 1*-->
+                    <!--*<a href="#" class="dislike"><i class="dislike-ico"></i></a> 0*-->
+                <!--*</div>*-->
             </div>
         </div>
     <?endforeach?>

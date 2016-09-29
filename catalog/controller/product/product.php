@@ -157,7 +157,8 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
-        //dd($product_info);
+
+        //dd((int)$this->request->get['path']);
 		if ($product_info) {
 			$url = '';
 
@@ -231,7 +232,9 @@ class ControllerProductProduct extends Controller {
             $data['name'] = $product_info['name'];
             $data['id_product'] = $product_info['product_id'];
 
+
             $data['path'] = isset($this->request->get['path']) ? (int)$this->request->get['path'] : $category_product['category_id'];
+
             $data['telephone'] = $this->config->get('config_telephone');
 			$data['text_select'] = $this->language->get('text_select');
 			$data['text_manufacturer'] = $this->language->get('text_manufacturer');
