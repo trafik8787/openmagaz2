@@ -67,11 +67,11 @@
 
 </footer>
 
-<!--<div class="container-loader container1" style="display: none">
+<!--*<div class="container-loader container1" style="display: none">
     <div class="circle circle1"></div>
     <div class="circle circle2"></div>
     <div class="circle circle3"></div>
-</div>-->
+</div>*-->
 
 <img src="/catalog/view/theme/canary/img/preloader.png" class="container-loader" alt="" style="display: none">
 
@@ -94,6 +94,18 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
 
+<!--*<script type="text/javascript">*-->
+    <!--*$(document).ready(function () {*-->
+       <!--*$(document).on('change', "#filter-group7 input[value='55']", function () {*-->
+           <!--*$(this).prop("disabled", true);*-->
+            <!--*if ($(this).parents('btn-filter').hasClass('active')) {*-->
+                <!--*$(this).prop("disabled", true);*-->
+            <!--*}*-->
+
+            <!--*return false;*-->
+       <!--*});*-->
+    <!--*});*-->
+<!--*</script>*-->
 
 </body>
 </html>
