@@ -94,18 +94,7 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
 
-<!--*<script type="text/javascript">*-->
-    <!--*$(document).ready(function () {*-->
-       <!--*$(document).on('change', "#filter-group7 input[value='55']", function () {*-->
-           <!--*$(this).prop("disabled", true);*-->
-            <!--*if ($(this).parents('btn-filter').hasClass('active')) {*-->
-                <!--*$(this).prop("disabled", true);*-->
-            <!--*}*-->
 
-            <!--*return false;*-->
-       <!--*});*-->
-    <!--*});*-->
-<!--*</script>*-->
 
 </body>
 </html>

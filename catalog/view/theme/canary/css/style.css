@@ -3396,8 +3396,13 @@ button:hover, button:focus {
   width: 75%;
   float: left; }
   .filter-box .left-f3 .title {
-    margin-bottom: 20px;
-    text-transform: uppercase; }
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      padding-left: 13px;
+      margin-top: 30px;
+      font-weight: bold;
+
+  }
   .filter-box .left-f3 .btn-filter {
     font-family: 'SegoeUI', sans-serif; }
 .filter-box .right-f3 {

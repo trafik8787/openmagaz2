@@ -6,23 +6,27 @@
 
                     <div class="left-f3">
                         <div class="title"><?php echo $filter_group['name']; ?></div>
-                        <div class="one-line precious-box height-inherit" data-toggle="buttons" id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
 
+                        <ul class="w-checed-list" id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
                             <?php foreach ($filter_group['filter'] as $filter) :?>
                                 <?php if (in_array($filter['filter_id'], $filter_category)): ?>
-                                    <label class="btn btn-filter active">
-                                        <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" checked="checked"/><?php echo $filter['name']; ?>
-                                    </label>
+                                    <li class="list__item btn">
+                                        <label class="label--checkbox">
+                                            <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
+                                            <span data-text="<?php echo $filter['name']; ?>"><?php echo $filter['name']; ?></span>
+                                        </label>
+                                    </li>
                                 <?else:?>
-                                    <label class="btn btn-filter">
-                                        <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>"/>
-                                        <?php echo $filter['name']; ?>
-                                    </label>
+                                    <li class="list__item btn">
+                                        <label class="label--checkbox">
+                                            <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
+                                            <span data-text="<?php echo $filter['name']; ?>"><?php echo $filter['name']; ?></span>
+                                        </label>
+                                    </li>
                                 <?endif?>
-
                             <?endforeach?>
+                        </ul>
 
-                        </div>
                     </div>
 
                 <?elseif($filter_group['type_control'] == 'radio'):?>
@@ -30,23 +34,27 @@
 
                     <div class="left-f3">
                         <div class="title"><?php echo $filter_group['name']; ?></div>
-                        <div class="one-line precious-box height-inherit" data-toggle="buttons" id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
 
-                            <?php foreach ($filter_group['filter'] as $filter):?>
-
-                                <?php if (in_array($filter['filter_id'], $filter_category)):?>
-                                    <label class="btn btn-filter active">
-                                        <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>" checked="checked"/><?php echo $filter['name']; ?>
-                                    </label>
+                        <ul class="w-checed-list" id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
+                            <?php foreach ($filter_group['filter'] as $filter) :?>
+                                <?php if (in_array($filter['filter_id'], $filter_category)): ?>
+                                    <li class="list__item btn">
+                                        <label class="label--checkbox">
+                                            <input type="checkbox" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
+                                            <span data-text="<?php echo $filter['name']; ?>"><?php echo $filter['name']; ?></span>
+                                        </label>
+                                    </li>
                                 <?else:?>
-                                    <label class="btn btn-filter">
-                                        <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>"/><?php echo $filter['name']; ?>
-                                    </label>
+                                    <li class="list__item btn">
+                                        <label class="label--checkbox">
+                                            <input type="checkbox" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
+                                            <span data-text="<?php echo $filter['name']; ?>"><?php echo $filter['name']; ?></span>
+                                        </label>
+                                    </li>
                                 <?endif?>
-
                             <?endforeach?>
+                        </ul>
 
-                        </div>
                     </div>
 
                 <?endif?>

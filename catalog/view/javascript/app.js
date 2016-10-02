@@ -13,6 +13,29 @@ $(document).ready(function() {
     });
 
 
+    $(document).on('change', "#filter-group7 input[value='55'], #filter-group8 input[value='56'], #filter-group9 input[value='57']", function () {
+        $(this).parents('.w-checed-list').find('input:checkbox:checked').prop("checked", false);
+        $(this).prop("checked", true);
+
+    });
+    $(document).on('change', "#filter-group7 input[value!='55']", function () {
+        $("#filter-group7 input[value='55']").prop("checked", false);
+        //$(this).prop("checked", true);
+
+    });
+
+    $(document).on('change', "#filter-group8 input[value!='56']", function () {
+        $("#filter-group8 input[value='56']").prop("checked", false);
+
+    });
+
+    $(document).on('change', "#filter-group9 input[value!='57']", function () {
+        $("#filter-group9 input[value='57']").prop("checked", false);
+
+    });
+
+
+
     //загрузка товаров из подкатегории
     // $(document).on('change', '.w-wsubcat' ,function(){
     //     input_sort ($(this).data('href'));
