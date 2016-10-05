@@ -191,3 +191,100 @@ function list_metal ($value = null) {
         return $arr;
     }
 }
+
+
+
+function arr_filtr_stone_type ($value = null) {
+
+    $arr = array(
+        1 => 'Sapphire',
+        2 => 'Ruby',
+        3 => 'Emerald',
+        4 => 'Yellow Sapphire',
+        5 => 'Pink Sapphire',
+        6 => 'Green Sapphire',
+        7 => 'Lavender Sapphire',
+        8 => 'Padparacha Sapphire',
+        9 => 'Orange Sapphire',
+        10 => 'Aquamarine',
+        11 => 'Paraiba Tourmaline',
+        12 => 'Tanzanite'
+    );
+
+    if ($value !== null) {
+        if (!empty($arr[$value])) {
+            return $arr[$value];
+        } else {
+            return '';
+        }
+
+    } else {
+        return $arr;
+    }
+}
+
+
+
+function arr_filtr_shape ($value = null) {
+
+    $arr = array(
+        1 => 'Cabochon',
+        2 => 'Cushion Cut',
+        3 => 'Emerald Cut',
+        4 => 'Fancy Cut',
+        5 => 'Heart Shape',
+        6 => 'Marquise',
+        7 => 'Mixed Cut',
+        8 => 'Oval Cut',
+        9 => 'Princess Cut',
+        10 => 'Pear Shape',
+        11 => 'Radiant Cut',
+        12 => 'Round Cut',
+        13 => 'Square Cut'
+    );
+
+    if ($value !== null) {
+        if (!empty($arr[$value])) {
+            return $arr[$value];
+        } else {
+            return '';
+        }
+
+    } else {
+        return $arr;
+    }
+
+}
+
+function arr_primary_color ($value = null) {
+
+    $arr = array(
+        1 => 'Blue Green',
+        2 => 'Blue',
+        3 => 'Green',
+        4 => 'Greenish Blue',
+        5 => 'Lavender',
+        6 => 'Light Blue',
+        7 => 'Orange',
+        8 => 'Pink',
+        9 => 'Purple',
+        10 => 'Red',
+        11 => 'White',
+        12 => 'Yellow'
+    );
+
+    if ($value !== null) {
+        if (!empty($arr[$value])) {
+            return $arr[$value];
+        } else {
+            return '';
+        }
+
+    } else {
+        return $arr;
+    }
+
+}
+
+
+

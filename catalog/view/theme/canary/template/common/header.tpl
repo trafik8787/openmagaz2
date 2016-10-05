@@ -264,19 +264,19 @@
                     <div class="title">Search Gemstones Gallery</div>
                     <ul class="brilliant-style gemstones-box">
                         <li>
-                            <a href="/gemstones&filter=17"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a>
+                            <a href="/gemstones&stone_type=1"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a>
                         </li>
                         <li>
-                            <a href="/gemstones&filter=21"><i class="gemstones gemstones2"></i><span>pink sapphire</span></a>
+                            <a href="/gemstones&stone_type=5"><i class="gemstones gemstones2"></i><span>pink sapphire</span></a>
                         </li>
                         <li>
-                            <a href="/gemstones&filter=20"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a>
+                            <a href="/gemstones&stone_type=4"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a>
                         </li>
                         <li>
-                            <a href="/gemstones&filter=18"><i class="gemstones gemstones4"></i><span>red ruby</span></a>
+                            <a href="/gemstones&stone_type=2"><i class="gemstones gemstones4"></i><span>red ruby</span></a>
                         </li>
                         <li>
-                            <a href="/gemstones&filter=19"><i class="gemstones gemstones5"></i><span>green emerald</span></a>
+                            <a href="/gemstones&stone_type=3"><i class="gemstones gemstones5"></i><span>green emerald</span></a>
                         </li>
 
                     </ul>
@@ -620,26 +620,26 @@
 
 
                     <li class="dropdown-b" data-target="menu4">
-                        <a href="/gemstones&filter=55,56,57" class="w-general-category"><?php echo $categories[4]['name']?></a>
+                        <a href="/gemstones" class="w-general-category"><?php echo $categories[4]['name']?></a>
                         <div class="dropdown-inside">
                             <div class="row clearfix">
                                 <div class="col-md-4 col-sm-4 col-xs-4">
                                     <div class="title">Search Gemstones Gallery</div>
                                     <ul class="brilliant-style gemstones-box">
                                         <li>
-                                            <a href="/gemstones&filter=17" class="w-general-category"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a>
+                                            <a href="/gemstones&stone_type=1" class="w-general-category"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a>
                                         </li>
                                         <li>
-                                            <a href="/gemstones&filter=21" class="w-general-category"><i class="gemstones gemstones2"></i><span>pink sapphire</span></a>
+                                            <a href="/gemstones&stone_type=5" class="w-general-category"><i class="gemstones gemstones2"></i><span>pink sapphire</span></a>
                                         </li>
                                         <li>
-                                            <a href="/gemstones&filter=20" class="w-general-category"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a>
+                                            <a href="/gemstones&stone_type=4" class="w-general-category"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a>
                                         </li>
                                         <li>
-                                            <a href="/gemstones&filter=18" class="w-general-category"><i class="gemstones gemstones4"></i><span>red ruby</span></a>
+                                            <a href="/gemstones&stone_type=2" class="w-general-category"><i class="gemstones gemstones4"></i><span>red ruby</span></a>
                                         </li>
                                         <li>
-                                            <a href="/gemstones&filter=19" class="w-general-category"><i class="gemstones gemstones5"></i><span>green emerald</span></a>
+                                            <a href="/gemstones&stone_type=3" class="w-general-category"><i class="gemstones gemstones5"></i><span>green emerald</span></a>
                                         </li>
 
                                     </ul>

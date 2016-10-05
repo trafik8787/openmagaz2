@@ -4,7 +4,7 @@
         <div class="left-f">
             <div class="one-line height-inherit">
                 <div class="title">shape
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="top" data-content="Select the diamond shape that best suits the recipients style, along with what looks best in the ring setting you choose.">
+                    <button type="button" class="question-filter-btn" data-container="body" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Select the diamond shape that best suits the recipients style, along with what looks best in the ring setting you choose.">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>
                 </div>
@@ -44,7 +44,7 @@
             <div class="box-line-l">
                 <div class="one-line">
                     <div class="title">color
-                        <button type="button" class="question-filter-btn" id="help-color" >
+                        <button type="button" class="question-filter-btn" id="help-color" data-toggle="popover">
                             <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                         </button>
                     </div>
@@ -116,7 +116,7 @@
             </div>
             <div class="one-line">
                 <div class="title">carat
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Carat refers to the weight of a diamond, which is directly proportional to its size. Use the sliders or enter a value to find the range you are interested in browsing.">
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Carat refers to the weight of a diamond, which is directly proportional to its size. Use the sliders or enter a value to find the range you are interested in browsing.">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>
                 </div>
@@ -130,7 +130,7 @@
             </div>
             <div class="one-line">
                 <div class="title">price
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="The price slider is for the DIAMOND only.">
+                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="The price slider is for the DIAMOND only.">
                         <span class="question-filter"><i class="fa fa-question-circle"></i></span>
                     </button>
                 </div>
@@ -276,6 +276,17 @@
     $(document).ready(function () {
 
 
+
+        $('body').on('click', function (e) {
+            //did not click a popover toggle, or icon in popover toggle, or popover
+            if ($(e.target).data('toggle') !== 'popover'
+                    && $(e.target).parents('[data-toggle="popover"]').length === 0
+                    && $(e.target).parents('.popover.in').length === 0) {
+                $('[data-toggle="popover"]').popover('hide');
+
+            }
+        });
+
         // Enables popover #2
         $("#help-cut").popover({
             html : true,
@@ -283,14 +294,40 @@
             placement : 'top',
             container: 'body',
             content: $("#popower-cut").html()
+        }).on("mouseenter", function () {
+            var _this = this;
+            $(this).popover("show");
+            $(".popover").on("mouseleave", function () {
+                $(_this).popover('hide');
+            });
+        }).on("mouseleave", function () {
+            var _this = this;
+            setTimeout(function () {
+                if (!$(".popover:hover").length) {
+                    $(_this).popover("hide");
+                }
+            }, 300);
         });
 
         $("#help-color").popover({
             html : true,
-            trigger: 'click',
+            trigger: 'manual',
             placement : 'top',
             container: 'body',
             content: $("#popower-color").html()
+        }).on("mouseenter", function () {
+            var _this = this;
+            $(this).popover("show");
+            $(".popover").on("mouseleave", function () {
+                $(_this).popover('hide');
+            });
+        }).on("mouseleave", function () {
+            var _this = this;
+            setTimeout(function () {
+                if (!$(".popover:hover").length) {
+                    $(_this).popover("hide");
+                }
+            }, 300);
         });
 
         $("#help-clarity").popover({
@@ -299,6 +336,19 @@
             placement : 'top',
             container: 'body',
             content: $("#popower-clarity").html()
+        }).on("mouseenter", function () {
+            var _this = this;
+            $(this).popover("show");
+            $(".popover").on("mouseleave", function () {
+                $(_this).popover('hide');
+            });
+        }).on("mouseleave", function () {
+            var _this = this;
+            setTimeout(function () {
+                if (!$(".popover:hover").length) {
+                    $(_this).popover("hide");
+                }
+            }, 300);
         });
 
         var $action =  "<?=$action?>";

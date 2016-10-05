@@ -394,6 +394,57 @@
                   </div>
                 </div>
               </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-gemston-filter"><span data-toggle="tooltip" title="input-gemston-filter">Gemstons Filtr</span></label>
+                    <div class="col-sm-10">
+
+                        <div class="form-group">
+                            <div class="col-sm-12">
+
+                                <label for="filtr_stone_type">Stone Type</label>
+                                <select class="form-control" name="gemston_filtr_stone_type" id="filtr_stone_type">
+                                    <option value="0">Selected Stone Type</option>
+                                    <?foreach (arr_filtr_stone_type() as $value => $row):?>
+                                        <option value="<?=$value?>" <? if ($value == $gemston_filtr_stone_type):?> selected="selected" <?endif?>><?=$row?></option>
+                                    <?endforeach?>
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-12">
+
+                                <label for="filtr_stone_type">Shape</label>
+                                <select class="form-control" name="gemston_filtr_shape" id="filtr_stone_type">
+                                    <option value="0">Selected Shape</option>
+                                    <?foreach (arr_filtr_shape() as $value => $row):?>
+                                        <option value="<?=$value?>" <? if ($value == $gemston_filtr_shape):?> selected="selected" <?endif?>><?=$row?></option>
+                                    <?endforeach?>
+                                </select>
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-12">
+
+                                <label for="filtr_stone_type">Primary Color</label>
+                                <select class="form-control" name="gemston_filtr_primary_color" id="filtr_stone_type">
+                                    <option value="0">Selected Primary Color</option>
+                                    <?foreach (arr_primary_color() as $value => $row):?>
+                                        <option value="<?=$value?>" <? if ($value == $gemston_filtr_primary_color):?> selected="selected" <?endif?>><?=$row?></option>
+                                    <?endforeach?>
+                                </select>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
               <div class="form-group">
                 <label class="col-sm-2 control-label"><?php echo $entry_store; ?></label>
                 <div class="col-sm-10">

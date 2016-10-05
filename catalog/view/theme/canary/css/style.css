@@ -3403,8 +3403,21 @@ button:hover, button:focus {
       font-weight: bold;
 
   }
+.filter-box .w-gems-filtr-cecbox .title {
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      padding-left: 13px;
+      margin-top: 30px;
+      font-weight: bold;
+
+  }
   .filter-box .left-f3 .btn-filter {
-    font-family: 'SegoeUI', sans-serif; }
+    font-family: 'SegoeUI', sans-serif;
+  }
+
+.filter-box .w-gems-filtr-cecbox .btn-filter {
+    font-family: 'SegoeUI', sans-serif;
+  }
 .filter-box .right-f3 {
   width: 25%;
   float: right; }
@@ -3480,7 +3493,16 @@ button:hover, button:focus {
   text-align: justify;
   position: relative; }
   .filter-box .brilliant-style li {
-    display: inline; }
+    display: inline;
+  }
+.w-gems-filtr-cecbox .w-checed-list .list__item {
+    display: inline-block;
+    width: 150px;
+    margin-right: 50px;
+    position: relative;
+    text-align: left;
+    padding: 2px 0 2px 0;
+}
   .filter-box .brilliant-style > a {
     text-align: center;
     padding: 4px;

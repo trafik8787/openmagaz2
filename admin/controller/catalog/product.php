@@ -1007,6 +1007,34 @@ class ControllerCatalogProduct extends Controller {
         }
 
 
+
+        if (isset($this->request->post['gemston_filtr_stone_type'])) {
+            $data['gemston_filtr_stone_type'] = $this->request->post['gemston_filtr_stone_type'];
+        } elseif (!empty($product_info)) {
+            $data['gemston_filtr_stone_type'] = $product_info['filtr_stone_type'];
+        } else {
+            $data['gemston_filtr_stone_type'] = null;
+        }
+
+
+        if (isset($this->request->post['gemston_filtr_shape'])) {
+            $data['gemston_filtr_shape'] = $this->request->post['gemston_filtr_shape'];
+        } elseif (!empty($product_info)) {
+            $data['gemston_filtr_shape'] = $product_info['filtr_shape'];
+        } else {
+            $data['gemston_filtr_shape'] = null;
+        }
+
+        if (isset($this->request->post['gemston_filtr_primary_color'])) {
+            $data['gemston_filtr_primary_color'] = $this->request->post['gemston_filtr_primary_color'];
+        } elseif (!empty($product_info)) {
+            $data['gemston_filtr_primary_color'] = $product_info['filtr_primary_color'];
+        } else {
+            $data['gemston_filtr_primary_color'] = null;
+        }
+
+
+
 		if (isset($this->request->post['sort_order'])) {
 			$data['sort_order'] = $this->request->post['sort_order'];
 		} elseif (!empty($product_info)) {
@@ -1034,6 +1062,14 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['status'] = true;
 		}
+
+
+
+
+
+
+
+
 
 		if (isset($this->request->post['weight'])) {
 			$data['weight'] = $this->request->post['weight'];

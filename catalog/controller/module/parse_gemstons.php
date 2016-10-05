@@ -34,11 +34,19 @@ class ControllerModuleParseGemstons extends Controller {
     private $shape;
     private $color;
 
+
+
+
+
     private $filter_stone_type;
     private $filter_all;
     private $filter_shape;
     private $filter_color;
     private $filter;
+
+    private $Gemston_stone_type;
+    private $Gemston_shape;
+    private $Gemston_color;
 
     private $category;
 
@@ -64,18 +72,18 @@ class ControllerModuleParseGemstons extends Controller {
         $this->filter_all = array(4,58,55,56,57);
 
         $this->filter_stone_type = array(
-            'SA' => 17,
-            'RU' => 18,
-            'EM' => 19,
-            'YS' => 20,
-            'PS' => 21,
-            'GS' => 22,
-            'LV' => 23,
-            'PAD' => 24,
-            'OS' => 25,
-            'AQ' => 26,
-            'PA' => 27,
-            'TZ' => 28
+            'SA' => 1,
+            'RU' => 2,
+            'EM' => 3,
+            'YS' => 4,
+            'PS' => 5,
+            'GS' => 6,
+            'LV' => 7,
+            'PAD' => 8,
+            'OS' => 9,
+            'AQ' => 10,
+            'PA' => 11,
+            'TZ' => 12
         );
 
         $this->stone_type = array(
@@ -94,19 +102,19 @@ class ControllerModuleParseGemstons extends Controller {
         );
 
         $this->filter_shape = array(
-            'Cab' => 30,
-            'CU' => 31,
-            'EC' => 32,
-            'FY' => 33,
-            'HS' => 34,
-            'MQ' => 35,
-            'MIX' => 36,
-            'OV' => 37,
-            'PR' => 38,
-            'PS' => 39,
-            'RAD' => 40,
-            'RD' => 41,
-            'SQ' => 42
+            'Cab' => 1,
+            'CU' => 2,
+            'EC' => 3,
+            'FY' => 4,
+            'HS' => 5,
+            'MQ' => 6,
+            'MIX' => 7,
+            'OV' => 8,
+            'PR' => 9,
+            'PS' => 10,
+            'RAD' => 11,
+            'RD' => 12,
+            'SQ' => 13
         );
 
         $this->shape = array(
@@ -126,18 +134,18 @@ class ControllerModuleParseGemstons extends Controller {
         );
 
         $this->filter_color = array(
-            'BG' => 43,
-            'BLU' => 44,
-            'Blue' => 44,
-            'Green' => 45,
-            'GRN' => 45,
-            'LAV' => 47,
-            'LBL' => 48,
-            'Pink' => 50,
-            'PNK' => 50,
-            'RED' => 52,
-            'White' => 53,
-            'Yellow' => 54
+            'BG' => 1,
+            'BLU' => 2,
+            'Blue' => 3,
+            'Green' => 4,
+            'GRN' => 5,
+            'LAV' => 6,
+            'LBL' => 7,
+            'Pink' => 8,
+            'PNK' => 9,
+            'RED' => 10,
+            'White' => 11,
+            'Yellow' => 12
         );
 
         $this->color = array(
@@ -240,8 +248,8 @@ class ControllerModuleParseGemstons extends Controller {
         $this->category[] = 94;
 
         $this->deleteProduct();
-        //$filePath = '/home/canary/www/sylviogems.csv';
-        $filePath = '/home/brilliantcanary/gems_pars/sylviogems.csv';
+        $filePath = '/home/canary/www/sylviogems.csv';
+        //$filePath = '/home/brilliantcanary/gems_pars/sylviogems.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
@@ -261,7 +269,7 @@ class ControllerModuleParseGemstons extends Controller {
 
             if (!empty($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'RBL' AND $curent[2] !== 'GB' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
 
-                if ($this->copyImage($curent[8])) {
+                if ($this->copyImage($curent[8]) OR true) {
 
 
                     $this->sku = $curent[6];
@@ -276,10 +284,15 @@ class ControllerModuleParseGemstons extends Controller {
                     $this->description_seo = $this->name . ' ' . $this->sku;
                     $this->keywords_seo = $this->color[$curent[4]] . ', ' . $this->shape[$curent[2]] . ', ' . $this->stone_type[$curent[1]] . ', ' . $curent[3] . ', Carat';
 
-                    $this->filter = $this->filter_all;
-                    $this->filter[] = $this->filter_stone_type[$curent[1]];
-                    $this->filter[] = $this->filter_shape[$curent[2]];
-                    $this->filter[] = $this->filter_color[$curent[4]];
+
+                    $this->Gemston_stone_type = $this->filter_stone_type[$curent[1]];
+                    $this->Gemston_shape = $this->filter_shape[$curent[2]];
+                    $this->Gemston_color = $this->filter_color[$curent[4]];
+
+//                    $this->filter = $this->filter_all;
+//                    $this->filter[] = $this->filter_stone_type[$curent[1]];
+//                    $this->filter[] = $this->filter_shape[$curent[2]];
+//                    $this->filter[] = $this->filter_color[$curent[4]];
 
                     //размеры
                     $this->dimensions = $this->parseDimensions($curent[11]);
@@ -290,7 +303,7 @@ class ControllerModuleParseGemstons extends Controller {
 
 
                     $this->product_id_insert = $this->addProduct();
-                    $this->addFilters();
+                    //$this->addFilters();
                     $this->addDescription();
                     $this->addUrl();
                     $this->addStore();
@@ -538,6 +551,9 @@ class ControllerModuleParseGemstons extends Controller {
 
         $this->db->query("INSERT INTO " . DB_PREFIX . "product SET 
             metal = '".$this->db->escape($this->metal)."', 
+            filtr_stone_type = '".$this->db->escape($this->Gemston_stone_type)."', 
+            filtr_shape = '".$this->db->escape($this->Gemston_shape)."', 
+            filtr_primary_color = '".$this->db->escape($this->Gemston_color)."', 
             model = '" . $this->db->escape($this->model) . "', 
             sku = '" . $this->db->escape($this->sku) . "', 
             upc = '" . $this->db->escape('') . "', 

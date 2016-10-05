@@ -20,7 +20,7 @@ class ControllerProductCategory extends Controller {
 			$filter = '';
 		}
 
-
+       // dd($this->request->get);
         //передача параметров для фильтра цены
         if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
             //dd($this->request->get);
@@ -42,7 +42,27 @@ class ControllerProductCategory extends Controller {
 
 
 
-		if (isset($this->request->get['sort'])) {
+
+        $gemston_filter_stone_type = null;
+        if (isset($this->request->get['stone_type']) AND $this->request->get['stone_type'] !== 0) {
+            $gemston_filter_stone_type = $this->request->get['stone_type'];
+        }
+
+        $gemston_filter_shape = null;
+        if (isset($this->request->get['shape']) AND $this->request->get['shape'] !== 0) {
+            $gemston_filter_shape = $this->request->get['shape'];
+        }
+
+        $gemston_primary_color = null;
+        if (isset($this->request->get['primary_color']) AND $this->request->get['primary_color'] !== 0) {
+            $gemston_primary_color = $this->request->get['primary_color'];
+        }
+
+
+
+
+
+        if (isset($this->request->get['sort'])) {
 			$sort = $this->request->get['sort'];
 		} else {
 			$sort = 'p.price';
@@ -200,6 +220,9 @@ class ControllerProductCategory extends Controller {
 				'filter_filter'      => $filter,
                 'price_filter'		 => array('min' => $PriceFrom, 'max' => $PriceTo), //добавлен фильтр по цене
                 'weight_filter'		 => array('min' => $WeightFrom, 'max' => $WeightTo), //добавлен фильтр по каратам
+                'gemston_filter_stone_type' => $gemston_filter_stone_type,
+                'gemston_filter_shape' => $gemston_filter_shape,
+                'gemston_primary_color' => $gemston_primary_color,
 				'sort'               => $sort,
 				'order'              => $order,
 				'start'              => ($page - 1) * $limit,
@@ -271,6 +294,22 @@ class ControllerProductCategory extends Controller {
 			if (isset($this->request->get['filter'])) {
 				$url .= '&filter=' . $this->request->get['filter'];
 			}
+
+
+            //gemstones filtr
+            if (isset($this->request->get['stone_type'])) {
+                $url .= '&stone_type=' . $this->request->get['stone_type'];
+            }
+
+
+            if (isset($this->request->get['shape'])) {
+                $url .= '&shape=' . $this->request->get['shape'];
+            }
+
+
+            if (isset($this->request->get['primary_color'])) {
+                $url .= '&primary_color=' . $this->request->get['primary_color'];
+            }
 
             //todo добавляем цену к части урла который попалает в сортировку
             if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
@@ -349,9 +388,29 @@ class ControllerProductCategory extends Controller {
 				$url .= '&filter=' . $this->request->get['filter'];
 			}
 
+
+            //gemstones filtr
+            if (isset($this->request->get['stone_type'])) {
+                $url .= '&stone_type=' . $this->request->get['stone_type'];
+            }
+
+
+            if (isset($this->request->get['shape'])) {
+                $url .= '&shape=' . $this->request->get['shape'];
+            }
+
+
+            if (isset($this->request->get['primary_color'])) {
+                $url .= '&primary_color=' . $this->request->get['primary_color'];
+            }
+
             //todo добавляем цену к части урла который попалает в сортировку
             if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
                 $url .= '&PriceFrom=' . $this->request->get['PriceFrom'].'&PriceTo=' . $this->request->get['PriceTo'];
+            }
+
+            if (isset($this->request->get['WeightFrom']) and isset($this->request->get['WeightTo'])) {
+                $url .= '&WeightFrom=' . $this->request->get['WeightFrom'] . '&WeightTo='. $this->request->get['WeightTo'];
             }
 
 			if (isset($this->request->get['sort'])) {
@@ -381,6 +440,30 @@ class ControllerProductCategory extends Controller {
 			if (isset($this->request->get['filter'])) {
 				$url .= '&filter=' . $this->request->get['filter'];
 			}
+
+
+            //gemstones filtr
+            if (isset($this->request->get['stone_type'])) {
+                $url .= '&stone_type=' . $this->request->get['stone_type'];
+            }
+
+
+            if (isset($this->request->get['shape'])) {
+                $url .= '&shape=' . $this->request->get['shape'];
+            }
+
+
+            if (isset($this->request->get['primary_color'])) {
+                $url .= '&primary_color=' . $this->request->get['primary_color'];
+            }
+
+            if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
+                $url .= '&PriceFrom=' . $this->request->get['PriceFrom'].'&PriceTo=' . $this->request->get['PriceTo'];
+            }
+
+            if (isset($this->request->get['WeightFrom']) and isset($this->request->get['WeightTo'])) {
+                $url .= '&WeightFrom=' . $this->request->get['WeightFrom'] . '&WeightTo='. $this->request->get['WeightTo'];
+            }
 
 
 			if (isset($this->request->get['sort'])) {
