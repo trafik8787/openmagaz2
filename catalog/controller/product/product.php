@@ -232,7 +232,6 @@ class ControllerProductProduct extends Controller {
             $data['name'] = $product_info['name'];
             $data['id_product'] = $product_info['product_id'];
 
-
             $data['path'] = isset($this->request->get['path']) ? (int)$this->request->get['path'] : $category_product['category_id'];
 
             $data['telephone'] = $this->config->get('config_telephone');
