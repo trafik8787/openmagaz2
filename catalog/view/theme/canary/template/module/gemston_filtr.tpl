@@ -8,14 +8,14 @@
                     <ul class="w-checed-list" id="id-filtr-stone-type">
                         <li class="list__item btn">
                             <label class="label--checkbox">
-                                <input type="checkbox" name="stone_type" value="0" class="checkbox" <? if (in_array(0, $stone_type)) :?> checked="checked" <?endif?>>
+                                <input type="checkbox" name="stone_type_gem" value="0" class="checkbox" <? if (in_array(0, $stone_type_gem)) :?> checked="checked" <?endif?>>
                                 <span>Show All</span>
                             </label>
                         </li>
                         <?php foreach (arr_filtr_stone_type() as $val => $rows) :?>
                         <li class="list__item btn">
                             <label class="label--checkbox">
-                                <input type="checkbox" name="stone_type[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($stone_type) and in_array($val, $stone_type)) :?> checked="checked" <?endif?>>
+                                <input type="checkbox" name="stone_type_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($stone_type_gem) and in_array($val, $stone_type_gem)) :?> checked="checked" <?endif?>>
                                 <span><?php echo $rows; ?></span>
                             </label>
                         </li>
@@ -27,14 +27,14 @@
                     <ul class="w-checed-list" id="id-filtr-shape">
                         <li class="list__item btn">
                             <label class="label--checkbox">
-                                <input type="checkbox" name="shape" value="0" class="checkbox" <? if (in_array(0, $shape)) :?> checked="checked" <?endif?>>
+                                <input type="checkbox" name="shape_gem" value="0" class="checkbox" <? if (in_array(0, $shape_gem)) :?> checked="checked" <?endif?>>
                                 <span>Show All</span>
                             </label>
                         </li>
                         <?php foreach (arr_filtr_shape() as $val => $rows) :?>
                         <li class="list__item btn">
                             <label class="label--checkbox">
-                                <input type="checkbox" name="shape[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($shape) and in_array($val, $shape)) :?> checked="checked" <?endif?>>
+                                <input type="checkbox" name="shape_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($shape_gem) and in_array($val, $shape_gem)) :?> checked="checked" <?endif?>>
                                 <span><?php echo $rows; ?></span>
                             </label>
                         </li>
@@ -46,14 +46,14 @@
                     <ul class="w-checed-list" id="id-filtr-primary_color">
                         <li class="list__item btn">
                             <label class="label--checkbox">
-                                <input type="checkbox" name="primary_color" value="0" class="checkbox" <? if (in_array(0, $primary_color)) :?> checked="checked" <?endif?>>
+                                <input type="checkbox" name="primary_color_gem" value="0" class="checkbox" <? if (in_array(0, $primary_color_gem)) :?> checked="checked" <?endif?>>
                                 <span>Show All</span>
                             </label>
                         </li>
                         <?php foreach (arr_primary_color() as $val => $rows) :?>
                         <li class="list__item btn">
                             <label class="label--checkbox">
-                                <input type="checkbox" name="primary_color[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($primary_color) and in_array($val, $primary_color)) :?> checked="checked" <?endif?>>
+                                <input type="checkbox" name="primary_color_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($primary_color_gem) and in_array($val, $primary_color_gem)) :?> checked="checked" <?endif?>>
                                 <span><?php echo $rows; ?></span>
                             </label>
                         </li>
@@ -101,9 +101,9 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-        var stone_type = '';
-        var shape = '';
-        var primary_color = '';
+        var stone_type_gem = '';
+        var shape_gem = '';
+        var primary_color_gem = '';
 
         var min_price = '';
         var max_price = '';
@@ -141,18 +141,18 @@
             filter_shape = [];
             filter_primary_color = [];
 
-            $('input[name^=\'stone_type\']:checked').each(function (element) {
+            $('input[name^=\'stone_type_gem\']:checked').each(function (element) {
                 filter_stone_type.push(this.value);
             });
 
 
 
-            $('input[name^=\'shape\']:checked').each(function (element) {
+            $('input[name^=\'shape_gem\']:checked').each(function (element) {
 
                 filter_shape.push(this.value);
             });
 
-            $('input[name^=\'primary_color\']:checked').each(function (element) {
+            $('input[name^=\'primary_color_gem\']:checked').each(function (element) {
 
                 filter_primary_color.push(this.value);
             });
@@ -162,19 +162,19 @@
 
 
 
-            stone_type = '';
+            stone_type_gem = '';
             if (filter_stone_type.length != 0) {
-                stone_type = '&stone_type=' + filter_stone_type.join(',');
+                stone_type_gem = '&stone_type_gem=' + filter_stone_type.join(',');
             }
 
-            shape = '';
+            shape_gem = '';
             if (filter_shape.length != 0) {
-                shape = '&shape=' + filter_shape.join(',');
+                shape_gem = '&shape_gem=' + filter_shape.join(',');
             }
 
-            primary_color = '';
+            primary_color_gem = '';
             if (filter_primary_color.length != 0) {
-                primary_color = '&primary_color=' + filter_primary_color.join(',');
+                primary_color_gem = '&primary_color_gem=' + filter_primary_color.join(',');
             }
 
 
@@ -192,7 +192,7 @@
             }
 
 
-            redirect = action + stone_type + shape + primary_color + min_price + max_price;
+            redirect = action + stone_type_gem + shape_gem + primary_color_gem + min_price + max_price;
             history.pushState('', '', redirect);
 
              //console.log(filter_stone_type);
@@ -203,7 +203,7 @@
                 type: "GET", // будем передавать данные через POST
                 dataType: "HTML", // указываем, что нам вернется JSON
                 url: redirect,
-                data: stone_type + shape + primary_color + min_price + max_price + min_weight + max_weight, // передаем данные из формы
+                data: stone_type_gem + shape_gem + primary_color_gem + min_price + max_price + min_weight + max_weight, // передаем данные из формы
                 success: function (response) { // когда получаем ответ
                     // console.log(response);
 
@@ -261,7 +261,7 @@
                 max_price = '&PriceTo='+numeral().unformat($(".dop-filtr-price-max").val());
 
                 var action = $('.w-action_page').val();
-                redirect = action + stone_type + shape + primary_color + min_price + max_price + min_weight + max_weight;
+                redirect = action + stone_type_gem + shape_gem + primary_color_gem + min_price + max_price + min_weight + max_weight;
                 history.pushState('', '', redirect);
 
 
@@ -269,7 +269,7 @@
                     type: "GET", // будем передавать данные через POST
                     dataType: "HTML", // указываем, что нам вернется JSON
                     url: redirect,
-                    data: action + stone_type + shape + primary_color + min_price + max_price + min_weight + max_weight, // передаем данные из формы
+                    data: action + stone_type_gem + shape_gem + primary_color_gem + min_price + max_price + min_weight + max_weight, // передаем данные из формы
                     success: function (response) { // когда получаем ответ
 
                         $('.w-category-ajax').empty();
@@ -318,7 +318,7 @@
                 max_weight = '&WeightTo='+$(".dop-filtr-weight-max").val();
 
                 var action = $('.w-action_page').val();
-                redirect = action + stone_type + shape + primary_color + min_price + max_price  + min_weight + max_weight;
+                redirect = action + stone_type_gem + shape_gem + primary_color_gem + min_price + max_price  + min_weight + max_weight;
                 history.pushState('', '', redirect);
 
 
@@ -326,7 +326,7 @@
                     type: "GET", // будем передавать данные через POST
                     dataType: "HTML", // указываем, что нам вернется JSON
                     url: redirect,
-                    data: stone_type + shape + primary_color +  min_price + max_price + min_weight + max_weight, // передаем данные из формы
+                    data: stone_type_gem + shape_gem + primary_color_gem +  min_price + max_price + min_weight + max_weight, // передаем данные из формы
                     success: function (response) { // когда получаем ответ
 
                         $('.w-category-ajax').empty();

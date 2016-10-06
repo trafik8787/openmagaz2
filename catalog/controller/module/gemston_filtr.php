@@ -16,28 +16,28 @@ class ControllerModuleGemstonFiltr extends Controller {
         $weight = $this->model_catalog_category->getWeightProduct($category_id);
 
 
-        if (isset($this->request->get['stone_type'])) {
+        if (isset($this->request->get['stone_type_gem'])) {
 
-            $data['stone_type'] = explode(',', $this->request->get['stone_type']);
+            $data['stone_type_gem'] = explode(',', $this->request->get['stone_type_gem']);
 
 
         } else {
-            $data['stone_type'][] = 0;
+            $data['stone_type_gem'][] = 0;
         }
 
         //dd($data['stone_type']);
 
-        if (isset($this->request->get['shape'])) {
-            $data['shape'] = explode(',', $this->request->get['shape']);
+        if (isset($this->request->get['shape_gem'])) {
+            $data['shape_gem'] = explode(',', $this->request->get['shape_gem']);
         } else {
-            $data['shape'][] = 0;
+            $data['shape_gem'][] = 0;
         }
 
-        if (isset($this->request->get['primary_color'])) {
+        if (isset($this->request->get['primary_color_gem'])) {
 
-            $data['primary_color'] = explode(',', $this->request->get['primary_color']);
+            $data['primary_color_gem'] = explode(',', $this->request->get['primary_color_gem']);
         } else {
-            $data['primary_color'][] = 0;
+            $data['primary_color_gem'][] = 0;
         }
 
 

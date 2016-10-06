@@ -44,18 +44,18 @@ class ControllerProductCategory extends Controller {
 
 
         $gemston_filter_stone_type = null;
-        if (isset($this->request->get['stone_type']) AND $this->request->get['stone_type'] !== 0) {
-            $gemston_filter_stone_type = $this->request->get['stone_type'];
+        if (isset($this->request->get['stone_type_gem']) AND $this->request->get['stone_type_gem'] !== 0) {
+            $gemston_filter_stone_type = $this->request->get['stone_type_gem'];
         }
 
         $gemston_filter_shape = null;
-        if (isset($this->request->get['shape']) AND $this->request->get['shape'] !== 0) {
-            $gemston_filter_shape = $this->request->get['shape'];
+        if (isset($this->request->get['shape_gem']) AND $this->request->get['shape_gem'] !== 0) {
+            $gemston_filter_shape = $this->request->get['shape_gem'];
         }
 
         $gemston_primary_color = null;
-        if (isset($this->request->get['primary_color']) AND $this->request->get['primary_color'] !== 0) {
-            $gemston_primary_color = $this->request->get['primary_color'];
+        if (isset($this->request->get['primary_color_gem']) AND $this->request->get['primary_color_gem'] !== 0) {
+            $gemston_primary_color = $this->request->get['primary_color_gem'];
         }
 
 
@@ -297,18 +297,18 @@ class ControllerProductCategory extends Controller {
 
 
             //gemstones filtr
-            if (isset($this->request->get['stone_type'])) {
-                $url .= '&stone_type=' . $this->request->get['stone_type'];
+            if (isset($this->request->get['stone_type_gem'])) {
+                $url .= '&stone_type_gem=' . $this->request->get['stone_type_gem'];
             }
 
 
-            if (isset($this->request->get['shape'])) {
-                $url .= '&shape=' . $this->request->get['shape'];
+            if (isset($this->request->get['shape_gem'])) {
+                $url .= '&shape_gem=' . $this->request->get['shape_gem'];
             }
 
 
-            if (isset($this->request->get['primary_color'])) {
-                $url .= '&primary_color=' . $this->request->get['primary_color'];
+            if (isset($this->request->get['primary_color_gem'])) {
+                $url .= '&primary_color_gem=' . $this->request->get['primary_color_gem'];
             }
 
             //todo добавляем цену к части урла который попалает в сортировку
@@ -390,18 +390,18 @@ class ControllerProductCategory extends Controller {
 
 
             //gemstones filtr
-            if (isset($this->request->get['stone_type'])) {
-                $url .= '&stone_type=' . $this->request->get['stone_type'];
+            if (isset($this->request->get['stone_type_gem'])) {
+                $url .= '&stone_type_gem=' . $this->request->get['stone_type_gem'];
             }
 
 
-            if (isset($this->request->get['shape'])) {
-                $url .= '&shape=' . $this->request->get['shape'];
+            if (isset($this->request->get['shape_gem'])) {
+                $url .= '&shape_gem=' . $this->request->get['shape_gem'];
             }
 
 
-            if (isset($this->request->get['primary_color'])) {
-                $url .= '&primary_color=' . $this->request->get['primary_color'];
+            if (isset($this->request->get['primary_color_gem'])) {
+                $url .= '&primary_color_gem=' . $this->request->get['primary_color_gem'];
             }
 
             //todo добавляем цену к части урла который попалает в сортировку
@@ -443,18 +443,18 @@ class ControllerProductCategory extends Controller {
 
 
             //gemstones filtr
-            if (isset($this->request->get['stone_type'])) {
-                $url .= '&stone_type=' . $this->request->get['stone_type'];
+            if (isset($this->request->get['stone_type_gem'])) {
+                $url .= '&stone_type_gem=' . $this->request->get['stone_type_gem'];
             }
 
 
-            if (isset($this->request->get['shape'])) {
-                $url .= '&shape=' . $this->request->get['shape'];
+            if (isset($this->request->get['shape_gem'])) {
+                $url .= '&shape_gem=' . $this->request->get['shape_gem'];
             }
 
 
-            if (isset($this->request->get['primary_color'])) {
-                $url .= '&primary_color=' . $this->request->get['primary_color'];
+            if (isset($this->request->get['primary_color_gem'])) {
+                $url .= '&primary_color_gem=' . $this->request->get['primary_color_gem'];
             }
 
             if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
