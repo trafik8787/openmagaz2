@@ -5,7 +5,7 @@
             <div class="top clearfix">
                 <div class="date"><?php echo $review['date_added']; ?></div>
                 <div class="box-img">
-                    <img src="catalog/view/theme/canary/img/noavatar.png" class="img-circle" alt="img">
+                    <img src="/catalog/view/theme/canary/img/noavatar.png" class="img-circle" alt="img">
                 </div>
                 <div class="box-text">
                     <div class="author"><?php echo $review['author']; ?></div>

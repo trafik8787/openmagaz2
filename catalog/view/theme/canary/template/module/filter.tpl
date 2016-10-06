@@ -110,7 +110,7 @@
 
     </div>
     <div class="functional-filter clearfix">
-        <button class="filter-default-result pull-right">clear filter</button>
+        <button class="filter-default-result w-clear-filtr-product pull-right">clear filter</button>
         <button class="filter-change pull-right">close filter</button>
     </div>
 </div>
@@ -199,8 +199,8 @@ $(document).ready(function () {
     var min = parseInt("<?php echo $min_price ?>");
     var max = parseInt("<?php echo $max_price ?>");
 
-    var ValMin = numeral().unformat($(".dop-filtr-price-min").val());
-    var ValMax = numeral().unformat($(".dop-filtr-price-max").val());
+    var ValMin = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-min").val()),min,max,4.3));
+    var ValMax = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-max").val()),min,max,4.3));
 
 
     var val_curent_max;
@@ -216,6 +216,7 @@ $(document).ready(function () {
         slide: function( event, ui ) {
             val_curent_max = Math.round(Math.easeIn(ui.values[1], min, max, 4.3));
             val_curent_min = Math.round(Math.easeIn(ui.values[0], min, max, 4.3));
+
           $('.dop-filtr-price-max').val(numeral(val_curent_max).format('$0,0'));
           $('.dop-filtr-price-min').val(numeral(val_curent_min).format('$0,0'));
         },
@@ -320,13 +321,13 @@ $(document).ready(function () {
     });
 
 
+
   $('.dop-filtr-price-max').on('change', function(){
-    slider.slider("values", 1, numeral().unformat($(this).val()));
+      slider.slider("values", 1, Math.round(Math.easeOut(numeral().unformat($(this).val()),min,max,4.3)));
   });
 
   $('.dop-filtr-price-min').on('change', function(){
-
-    slider.slider("values", 0, numeral().unformat($(this).val()));
+    slider.slider("values", 0, Math.round(Math.easeOut(numeral().unformat($(this).val()),min,max,4.3)));
   });
 
 

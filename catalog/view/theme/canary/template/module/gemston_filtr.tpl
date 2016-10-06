@@ -84,7 +84,7 @@
                             <div id="slider-weight"></div>
                             <div class="clearfix">
                                 <input type="text" value="<?=round($WeightFrom, 2)?>" id="amountWeight1" class="dop-filtr-weight-min input-slider-p pull-left" name="min_weight">
-                                <input type="text" value="<?=round($WeighteTo, 2)?>" id="amountWeight2" class="dop-filtr-weight-max input-slider-p pull-right" name="max_weight">
+                                <input type="text" value="<?=round($WeightTo, 2)?>" id="amountWeight2" class="dop-filtr-weight-max input-slider-p pull-right" name="max_weight">
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,6 @@
 
 
             </div>
-
 
 
         </div>
@@ -229,12 +228,12 @@
 
 
 
-        var min = parseInt("<?= !empty($PriceFrom) ? $PriceFrom : 0?>");
-        var max = parseInt("<?= !empty($PriceTo) ? $PriceTo : 0?>");
+        var min = parseInt("<?= !empty($PriceFromStable) ? $PriceFromStable : 0?>");
+        var max = parseInt("<?= !empty($PriceToStable) ? $PriceToStable : 0?>");
 
-        var ValMin = numeral().unformat($(".dop-filtr-price-min").val());
-        var ValMax = numeral().unformat($(".dop-filtr-price-max").val());
 
+        var ValMin = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-min").val()),min,max,4.3));
+        var ValMax = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-max").val()),min,max,4.3));
 
         var val_curent_max;
         var val_curent_min;
@@ -291,12 +290,13 @@
 
 
 
-        var min_weight_min = parseFloat("<?= !empty($WeightFrom) ? $WeightFrom : 0?>");
-        var max_weight_max = parseFloat("<?= !empty($WeighteTo) ? $WeighteTo : 0?>");
+        var min_weight_min = parseFloat("<?= !empty($WeightFromStable) ? $WeightFromStable : 0?>");
+        var max_weight_max = parseFloat("<?= !empty($WeightToStable) ? $WeightToStable : 0?>");
 
-        var ValMinWeight = $(".dop-filtr-weight-min").val();
-        var ValMaxWeight = $(".dop-filtr-weight-max").val();
-
+        var ValMinWeight = Math.easeOut($(".dop-filtr-weight-min").val(), min_weight_min, max_weight_max, 1.6).toFixed(2);
+        var ValMaxWeight = Math.easeOut($(".dop-filtr-weight-max").val(), min_weight_min,max_weight_max, 1.6).toFixed(2);
+        console.log($(".dop-filtr-weight-min").val());
+        console.log($(".dop-filtr-weight-max").val());
 
         var slider_weight = $('#slider-weight').slider({
             range: true,
@@ -348,12 +348,11 @@
 
 
         $('.dop-filtr-price-max').on('change', function(){
-            slider.slider("values", 1, numeral().unformat($(this).val()));
+            slider.slider("values", 1, Math.round(Math.easeOut(numeral().unformat($(this).val()),min,max,4.3)));
         });
 
         $('.dop-filtr-price-min').on('change', function(){
-
-            slider.slider("values", 0, numeral().unformat($(this).val()));
+            slider.slider("values", 0, Math.round(Math.easeOut(numeral().unformat($(this).val()),min,max,4.3)));
         });
 
         $('.dop-filtr-price-min, .dop-filtr-price-max').inputmask("numeric", {
@@ -369,7 +368,13 @@
 
 
 
+        $('.dop-filtr-weight-max').on('change', function(){
+            slider_weight.slider("values", 1, Math.easeOut($(this).val(),min_weight_min,max_weight_max,1.6).toFixed(2));
+        });
 
+        $('.dop-filtr-weight-min').on('change', function(){
+            slider_weight.slider("values", 0, Math.easeOut($(this).val(),min_weight_min,max_weight_max,1.6).toFixed(2));
+        });
 
 
 

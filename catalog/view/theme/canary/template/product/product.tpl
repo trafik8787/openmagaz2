@@ -129,7 +129,7 @@
 
                                     <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
                                         <div class="title" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></div>
-                                        <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="dropdown">
+                                        <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="dropdown" >
                                             <option value=""><?php echo $text_select; ?></option>
                                             <?php foreach ($option['product_option_value'] as $option_value) { ?>
                                             <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -177,10 +177,11 @@
                         <div class="price-product"><?php echo $price; ?></div>
                         <div class="setting-price">(Setting price only)</div>
                         <div>
+                            <?if ($path == 69): //weding rings?>
                             <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="red-btn"><?php echo $button_cart; ?></button>
-
-                            <button type="button" id="w-button-add-product-complect" class="red-btn">Choose this setting</button>
-
+                            <?else:?>
+                                <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="red-btn">Select This Setting</button>
+                            <?endif?>
                         </div>
                     </div>
                 </div>
@@ -190,12 +191,12 @@
     </section>
 
     <section class="top-main-r top-main-r3">
-        <!--<div class="wrapper-main-r text-center">
+        <!--*<div class="wrapper-main-r text-center">
             <div class="title">This is Photoshop version</div>
             <div class="text">
                 This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
             </div>
-        </div>-->
+        </div>*-->
     </section>
 
     <?php if ($products):?>
@@ -291,6 +292,32 @@
 
     </section>
 
+
+    <div class="modal fade" id="w-modal-cart" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <div class="modal-body text-center">
+                    <p class="w-modal-button">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <span class="text-centr">What would you like to do?</span>
+                    </p>
+                    <div class="line-price-product clearfix">
+                        <p>
+                            <button type="button" data-dismiss="modal" aria-hidden="true" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="red-btn w-modal-button"><?php echo $button_cart; ?></button>
+                        </p>
+
+                        <p>
+                            <button type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect" class="red-btn w-modal-button">Add a diamond</button>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </main>
 
 
@@ -328,6 +355,8 @@
     });
 
 
+
+
     //add product to cart
     $('#button-cart').on('click', function() {
         $.ajax({
@@ -351,9 +380,43 @@
                             var element = $('#input-option' + i.replace('_', '-'));
 
                             if (element.parent().hasClass('input-group')) {
-                                element.parents('.dropdown').after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+
+                                element.parents('.dropdown').after('<div class="text-danger w-tex-popo">' + json['error']['option'][i] + '</div>');
+                                $(".dropdown").popover({
+                                    placement : 'top',
+                                    container: '.size-product',
+                                    content: 'Please select size!'
+                                }).on("mouseenter", function () {
+                                    var _this = this;
+                                    $(this).popover("show");
+                                    $(".popover").on("mouseleave", function () {
+                                        $(_this).popover('hide');
+                                    });
+                                }).on("mouseleave", function () {
+                                    var _this = this;
+                                    setTimeout(function () {
+                                        if (!$(".popover:hover").length) {
+                                            $(_this).popover("hide");
+                                        }
+                                    }, 300);
+                                });
+                                $('.dropdown').popover('show');
                             } else {
+
                                 element.parents('.dropdown').after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                                $(".dropdown").popover({
+                                    placement : 'top',
+                                    container: '.size-product',
+                                    content: 'Please select size!'
+                                }).on("mouseleave", function () {
+                                    var _this = this;
+                                    setTimeout(function () {
+                                        if (!$(".popover:hover").length) {
+                                            $(_this).popover("hide");
+                                        }
+                                    }, 3000);
+                                });
+                                $('.dropdown').popover('show');
                             }
                         }
                     }
@@ -374,6 +437,7 @@
                     $('html, body').animate({ scrollTop: 0 }, 'slow');
 
                     $('.cart-basket').load('/index.php?route=common/cart/info .w-cart-basket');
+                    $('#w-but-cart').trigger('click');
                 }
             },
             error: function(xhr, ajaxOptions, thrownError) {

@@ -513,6 +513,7 @@ home hover efect
     opacity: 0.5;
 }
 
+.size-product .popover-content,
 .w-navigate-circle .popover-content {
     font-size: 23px;
     background-color: #808080;
@@ -520,7 +521,7 @@ home hover efect
     padding: 10px 20px 10px 24px;
     max-width: 356px;
 }
-
+.size-product  .popover,
 .w-navigate-circle .popover {
     background-color: #808080;
     color: #FFFFFF;
@@ -531,6 +532,7 @@ home hover efect
 }
 
 
+.size-product  .popover.top > .arrow:after,
 .w-navigate-circle .popover.top > .arrow:after {
     border-top-color: #808080;
 }
@@ -560,6 +562,11 @@ home hover efect
     .w-navigate-circle .accessory {
         width: 14%;
     }
+}
+
+
+.btn.btn-filter.brackets a {
+    color: inherit;
 }
 
 

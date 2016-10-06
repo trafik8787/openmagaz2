@@ -2,6 +2,19 @@
  * Created by Vitalik on 24.02.2016.
  */
 
+//logarifm
+Math.easeIn = function (val, min, max, strength) {
+    val /= max;
+    return (max-1)*Math.pow(val, strength) + min;
+};
+
+Math.easeOut = function (val, min, max, strength) {
+    var res;
+    res = (val-min)/(max-1);
+    res = Math.pow(res, 1/strength);
+    return max*res;
+};
+
 $(document).ready(function() {
 
 
@@ -36,11 +49,11 @@ $(document).ready(function() {
     //});
 
 
-    //logarifm
-    Math.easeIn = function (val, min, max, strength) {
-        val /= max;
-        return (max-1)*Math.pow(val, strength) + min;
-    };
+
+
+
+
+
 
 
     //load controller general category

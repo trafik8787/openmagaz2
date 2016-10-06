@@ -39,7 +39,8 @@
                                     <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i></a>
 
                                     <!--*<input type="radio" class="w-wsubcat" data-href="<?php echo $row['href']?>"> <i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i>*-->
-                                    <br><?php echo $row['name']?>
+                                    <br>
+                                    <a href="<?php echo $row['href']?>"><?php echo $row['name']?></a>
                                 </label>
 
 

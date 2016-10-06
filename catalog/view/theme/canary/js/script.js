@@ -191,11 +191,16 @@ $( document ).ready(function( $ ) {
 
     $(".filter-default-result").click(function() {
 
-        $("#w-slider-color").slider('values',[0,8]);
+        $("#w-slider-color").slider('values',[0,10]);
         $("#w-slider-clarity").slider('values',[0,8]);
         $("#w-slider-cut").slider('values',[0,4]);
-        $("#w-slider-carat").slider('values',[0.5,15]);
-        $("#w-slider-price").slider('values',[200,999000]);
+
+        $("#w-slider-carat").slider('values',[0.25,15]);
+        $('.w-input-carat-from').val(0.25);
+        $('.w-input-carat-to').val(15);
+
+        $("#w-slider-price").slider('values',[200,990000]);
+
         $("#w-slider-polish").slider('values',[0,4]);
         $("#w-slider-symmetry").slider('values',[0,4]);
         $("#w-slider-depth").slider('values',[45,80]);

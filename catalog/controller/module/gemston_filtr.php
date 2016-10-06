@@ -41,6 +41,9 @@ class ControllerModuleGemstonFiltr extends Controller {
         }
 
 
+        $data['PriceFromStable'] = $price['min'];
+        $data['PriceToStable'] = $price['max'];
+
         if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
             $data['PriceFrom'] = $this->request->get['PriceFrom'];
             $data['PriceTo'] = $this->request->get['PriceTo'];
@@ -49,12 +52,16 @@ class ControllerModuleGemstonFiltr extends Controller {
             $data['PriceTo'] = $price['max'];
         }
 
-        if (isset($this->request->get['WeightFrom']) and isset($this->request->get['WeighteTo'])) {
+
+        $data['WeightFromStable'] = $weight['min'];
+        $data['WeightToStable'] = $weight['max'];
+
+        if (isset($this->request->get['WeightFrom']) and isset($this->request->get['WeightTo'])) {
             $data['WeightFrom'] = $this->request->get['WeightFrom'];
-            $data['WeighteTo'] = $this->request->get['WeighteTo'];
+            $data['WeightTo'] = $this->request->get['WeightTo'];
         } else {
             $data['WeightFrom'] = $weight['min'];
-            $data['WeighteTo'] = $weight['max'];
+            $data['WeightTo'] = $weight['max'];
         }
 
 
