@@ -15,6 +15,13 @@ class ModelCatalogCategory extends Model {
 		return $query->rows;
 	}
 
+
+    public function getCategoryProductId($product_id){
+        //$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "category_description cd ON (c.category_id = cd.category_id)");
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "category c INNER JOIN " . DB_PREFIX . "product_to_category ptc ON (c.category_id = ptc.category_id) WHERE c.parent_id = 0 AND ptc.product_id = ".(int)$product_id);
+        return $query->row;
+	}
+
     /**
      * @param bool $flag
      * @return array|null

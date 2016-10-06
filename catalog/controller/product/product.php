@@ -224,10 +224,15 @@ class ControllerProductProduct extends Controller {
 			$this->document->addScript('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js');
 			$this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css');
 
+            $category_product = $this->model_catalog_category->getCategoryProductId($product_info['product_id']);
+
+
 			$data['heading_title'] = $product_info['name'];
             $data['name'] = $product_info['name'];
             $data['id_product'] = $product_info['product_id'];
-           // $data['path'] = $this->request->get['path'];
+
+            $data['path'] = isset($this->request->get['path']) ? (int)$this->request->get['path'] : $category_product['category_id'];
+            $data['telephone'] = $this->config->get('config_telephone');
 
 			$data['text_select'] = $this->language->get('text_select');
 			$data['text_manufacturer'] = $this->language->get('text_manufacturer');
@@ -500,7 +505,7 @@ class ControllerProductProduct extends Controller {
 
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
 
-
+           // dd($data);
             $data['column_left'] = $this->load->controller('common/column_left');
             $data['column_right'] = $this->load->controller('common/column_right');
             $data['content_top'] = $this->load->controller('common/content_top');
