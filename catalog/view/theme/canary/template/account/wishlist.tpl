@@ -47,7 +47,7 @@
                                     <td data-th="Image">
                                         <div class="wishlist-image">
                                             <?php if ($product['thumb']): ?>
-                                                <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>"></a>
+                                                <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" width="47" title="<?php echo $product['name']; ?>"></a>
                                             <?endif?>
                                         </div>
                                     </td>

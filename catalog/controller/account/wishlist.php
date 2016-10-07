@@ -24,6 +24,19 @@ class ControllerAccountWishList extends Controller {
 			$this->response->redirect($this->url->link('account/wishlist'));
 		}
 
+        if (isset($this->request->get['removeDiamond'])) {
+
+            if ($this->customer->isLogged()) {
+                $this->model_account_wishlist->deleteWishlistDiamond($this->request->get['removeDiamond']);
+                $this->session->data['success'] = $this->language->get('text_remove');
+                $this->response->redirect($this->url->link('account/wishlist'));
+            } else {
+                unset($this->session->data['wishlist_diamond'][$this->request->get['removeDiamond']]);
+            }
+
+
+        }
+
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$data['breadcrumbs'] = array();
@@ -71,12 +84,18 @@ class ControllerAccountWishList extends Controller {
 
 		$data['products'] = array();
 
+
 		$results = $this->model_account_wishlist->getWishlist();
+        //dd($this->session->data['wishlist'][0]);
 
 		foreach ($results as $result) {
-			$product_info = $this->model_catalog_product->getProduct($result['product_id']);
 
-			if ($product_info) {
+
+             $product_info = $this->model_catalog_product->getProduct($result['product_id']);
+
+
+
+			if ($product_info and $result['diamond'] == 0) {
 				if ($product_info['image']) {
 					$image = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_wishlist_width'), $this->config->get('config_image_wishlist_height'));
 				} else {
@@ -114,7 +133,23 @@ class ControllerAccountWishList extends Controller {
 					'href'       => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
 					'remove'     => $this->url->link('account/wishlist', 'remove=' . $product_info['product_id'])
 				);
-			}
+
+			} else {
+                $result_obj = json_decode($result['diamond_data']);
+                $result_obj = $result_obj->response->body->diamond;
+
+                $data['products'][] = array(
+                    'product_id' => $result_obj->diamond_id,
+                    'thumb'      => imageDiamont($result_obj->shape),
+                    'name'       => $result_obj->shape.' '.$result_obj->size.' '.$result_obj->color.' '.$result_obj->clarity,
+                    'model'      => $result_obj->shape.' '.$result_obj->size.' '.$result_obj->color.' '.$result_obj->clarity,
+                    'stock'      => 100,
+                    'price'      => $this->currency->format($this->tax->calculate($result_obj->total_sales_price, $product_info['tax_class_id'], $this->config->get('config_tax'))),
+                    'special'    => false,
+                    'href'       => '/diamond_page?diamond_id='.$result_obj->diamond_id,
+                    'remove'     => $this->url->link('account/wishlist', 'removeDiamond=' . $result_obj->diamond_id)
+                );
+            }
 		}
 
 		$data['continue'] = $this->url->link('account/account', '', 'SSL');
@@ -150,7 +185,7 @@ class ControllerAccountWishList extends Controller {
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 
 		if ($product_info) {
-			//if ($this->customer->isLogged()) {
+			if ($this->customer->isLogged()) {
 				// Edit customers cart
 				$this->load->model('account/wishlist');
 
@@ -159,22 +194,61 @@ class ControllerAccountWishList extends Controller {
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
 
 				$json['total'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
-//			} else {
-//				if (!isset($this->session->data['wishlist'])) {
-//					$this->session->data['wishlist'] = array();
-//				}
-//
-//				$this->session->data['wishlist'][] = $this->request->post['product_id'];
-//
-//				$this->session->data['wishlist'] = array_unique($this->session->data['wishlist']);
-//
-//				$json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', 'SSL'), $this->url->link('account/register', '', 'SSL'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
-//
-//				$json['total'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
-//			}
+			} else {
+				if (!isset($this->session->data['wishlist'])) {
+					$this->session->data['wishlist'] = array();
+				}
+
+				$this->session->data['wishlist'][] = $this->request->post['product_id'];
+
+				$this->session->data['wishlist'] = array_unique($this->session->data['wishlist']);
+
+				$json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', 'SSL'), $this->url->link('account/register', '', 'SSL'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+
+				$json['total'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
+			}
 		}
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+
+    public function addDiamond() {
+
+        $this->load->language('account/wishlist');
+
+        if (isset($this->request->post['diamond_id'])) {
+            $diamond_id = $this->request->post['diamond_id'];
+        } else {
+            $diamond_id = false;
+        }
+
+        $json = array();
+
+        if ($diamond_id) {
+
+            $this->load->model('account/wishlist');
+
+            $diamond_data = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $diamond_id));
+
+            if ($this->customer->isLogged()) {
+
+                $diamond_data_obj = json_decode($diamond_data);
+
+                $this->model_account_wishlist->addDiamond($diamond_id, $diamond_data);
+                $json['success'] = $diamond_data_obj->response->body->diamond->diamond_id;
+                $json['total'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
+
+            } else {
+
+                $this->session->data['wishlist_diamond'][$diamond_id] = array('diamond_id' => $diamond_id, 'diamond_data' => $diamond_data);
+
+            }
+        }
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
+    }
+
 }

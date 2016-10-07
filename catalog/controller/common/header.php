@@ -53,7 +53,18 @@ class ControllerCommonHeader extends Controller {
 
 			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
 		} else {
-			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
+
+            if (!empty($this->session->data['wishlist']) AND empty($this->session->data['wishlist_diamond'])) {
+                $coun_wishlist = count($this->session->data['wishlist']);
+            } elseif (!empty($this->session->data['wishlist_diamond']) AND empty($this->session->data['wishlist'])) {
+                $coun_wishlist = count($this->session->data['wishlist_diamond']);
+            } elseif (!empty($this->session->data['wishlist']) AND !empty($this->session->data['wishlist_diamond'])) {
+                $coun_wishlist = count($this->session->data['wishlist']) + count($this->session->data['wishlist_diamond']);
+            } else {
+                $coun_wishlist = 0;
+            }
+
+			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), ($coun_wishlist));
 		}
 
 		$data['text_shopping_cart'] = $this->language->get('text_shopping_cart');

@@ -16,7 +16,9 @@ class ControllerCommonSeoUrl extends Controller {
         'module/complect/del_complect' => 'del_complect',
         'product/compare' => 'compare',
         'marketing/newsletter/add' => 'newsletter_add',
-        'checkout/success' => 'checkout_success'
+        'checkout/success' => 'checkout_success',
+        'checkout/cart' => 'shop-cart',
+        'checkout/checkout' => 'shop-checkout'
     );
 
 	public function index() {

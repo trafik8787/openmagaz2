@@ -83,7 +83,7 @@
                                     <a href="#" class="cart-btn-item w-diamont-button-cart-category" data-toggle="tooltip" data-placement="top" title="<?php echo $button_cart; ?>"></a>
                                     <a href="#" class="compare-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_compare; ?>"></a>
                                     <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="search-btn-item w-product-diamonts" data-toggle="tooltip" data-placement="top" title="Views"></a>
-                                    <a href="#" class="wishlist-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_wishlist; ?>"></a>
+                                    <a href="#" class="wishlist-btn-item" onclick="wishlist.addDiamond(<?=$row->diamond_id?>); return false;" data-toggle="tooltip" data-placement="top" title="<?php echo $button_wishlist; ?>"></a>
                                 </div>
                                 <div class="box-tovar-th">
                                     <div class="name"><?=$row->shape?> <?=$row->size?> CARAT <?=$row->color?> <?=$row->clarity?></div>

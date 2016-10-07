@@ -86,19 +86,19 @@
                                             <a href="<?php echo $product['href']; ?>" class="w-product-ajax"><img src="<?php echo $product['thumb']; ?>"  alt="<?php echo $product['name']; ?>"
                                                              title="<?php echo $product['name']; ?>"></a>
                                         </div>
-                                        <?php if ($product['rating']):?>
+                                        <!--*<?php if ($product['rating']):?>*-->
 
-                                            <div class="rating">
-                                                <?php for ($i = 1; $i <= 5; $i++) { ?>
-                                                    <?php if ($product['rating'] < $i):?>
-                                                        <i class="star"></i>
-                                                    <?else:?>
-                                                        <i class="star active"></i>
-                                                    <?endif?>
-                                                <?}?>
+                                            <!--*<div class="rating">*-->
+                                                <!--*<?php for ($i = 1; $i <= 5; $i++) { ?>*-->
+                                                    <!--*<?php if ($product['rating'] < $i):?>*-->
+                                                        <!--*<i class="star"></i>*-->
+                                                    <!--*<?else:?>*-->
+                                                        <!--*<i class="star active"></i>*-->
+                                                    <!--*<?endif?>*-->
+                                                <!--*<?}?>*-->
 
-                                            </div>
-                                        <?endif?>
+                                            <!--*</div>*-->
+                                        <!--*<?endif?>*-->
                                         <div class="btn-box">
                                             <a href="#" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_cart; ?>"></a>
                                             <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;" data-placement="top" title="<?php echo $button_compare; ?>"></a>

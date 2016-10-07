@@ -1729,7 +1729,7 @@ button:hover, button:focus {
 
 /* wishlist */
 .wish-list-page {
-  padding: 70px 0 40px; }
+  padding: 10px 0 40px; }
 
 .wish-list-title,
 .wish-login-text {
@@ -1784,7 +1784,6 @@ button:hover, button:focus {
       color: #372323; }
   .wishlist-table tbody td {
     text-align: center;
-    padding: 10px;
     vertical-align: middle;
     font-family: 'SegoeUI', sans-serif; }
 
