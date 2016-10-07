@@ -243,6 +243,8 @@ class ControllerAccountWishList extends Controller {
             } else {
 
                 $this->session->data['wishlist_diamond'][$diamond_id] = array('diamond_id' => $diamond_id, 'diamond_data' => $diamond_data);
+                $json['success'] = 'Sysses';
+                $json['total'] = sprintf($this->language->get('text_wishlist'), count($this->session->data['wishlist_diamond']));
 
             }
         }
