@@ -54,48 +54,62 @@
     })(window,document,'script','dataLayer','GTM-PHJ8N6');</script>
 <!-- End Google Tag Manager -->
 <header>
-    <div class="user-line index-page">
-        <div class="center-bl clearfix">
-            <a href="/" class="logo w-general-category">
-                <img src="/catalog/view/theme/canary/img/logo.png" alt="logo">
-            </a>
-            <div class="telephone">
-                <i class="ico-telephone"></i>
-                <span><?php echo $telephone; ?> | 24/7</span>
-            </div>
-            <ul class="top-menu-b main-page">
 
-                <li>
-                    <?php if ($logged) { ?>
+    <div class="user-line index-page">
+        <div class="center-bl clearfix top-header">
+            <div class="col-md-4 col-sm-3">
+                <a href="/" class="logo w-general-category">
+                    <img src="/catalog/view/theme/canary/img/logo.png" alt="briliantcanary">
+                </a>
+                <div class="telephone font-montserrat-regular">
+
+                    <span><?php echo $telephone; ?> | 24/7</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-7">
+                <ul class="top-menu-b main-page">
+                    <li>
+                        <?php if ($logged) { ?>
                         <a href="<?php echo $account; ?>" class="w-general-category">
-                            <i class="man-ico"></i>
+                            <i class="icons-login_icon"></i>
                             <span><?php echo $text_account; ?></span>
                         </a>
-                    <?php } else { ?>
-
+                        <?php } else { ?>
                         <a href="<?php echo $login; ?>"  class="w-general-category">
-                            <i class="man-ico"></i>
+                            <i class="icons-login_icon"></i>
                             <span><?php echo $text_login; ?></span>
                         </a>
-                    <?php } ?>
-                </li>
-                <li><a href="<?php echo $wishlist; ?>" id="wishlist-total" class="w-general-category" title="<?php echo $text_wishlist; ?>"><i class="heart-ico"></i><span><?php echo $text_wishlist; ?></span></a></li>
-                <li><a href="/compare"><i class="fa fa-exchange" style="color: #f9d35a;"></i><span>Compare</span></a></li>
-                <li class="cart-bl">
-                    <?php echo $cart; ?>
-                </li>
-                <!--*<li class="triangle"><a href="#">currency usd</a></li>*-->
-            </ul>
+                        <?php } ?>
+                    </li>
+                    <li>
+                        <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="w-general-category" title="<?php echo $text_wishlist; ?>">
+                            <i class="icons-wishlist_icon"></i>
+                            <span>Wish List</span>
+                        </a>
+                    </li>
+                    <li><a href="/compare"><i class="icons-compare_icon"></i>
+                            <span>Compare</span></a>
+                    </li>
+                    <li class="cart-bl">
+                        <?php echo $cart; ?>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-2">
 
-            <?php echo $search; ?>
+
+                <?php echo $search; ?>
+            </div>
+
+
 
         </div>
     </div>
     <div class="center-bl">
         <div class="menu">
             <a href="/" class="logo">
-                <img src="/catalog/view/theme/canary/img/logo.png" alt="logo">
-                <span class="text-down-logo">Beyong Brilliant</span>
+                <img src="/catalog/view/theme/canary/img/logo_new_header.png" alt="logo">
+
             </a>
             <ul>
                 <li class="dropdown-b"><!--*DIAMONDS*-->
@@ -155,6 +169,7 @@
                         </div>
                     </div>
                 </li>
+                <li><span class="w-top-marcer-menu">.</span></li>
                 <li class="dropdown-b"><!--engagement rings-->
                     <a href="<?php echo $categories[1]['href']?>" class="w-general-category"><?php echo $categories[1]['name']?></a>
                     <div class="dropdown-inside">
@@ -185,34 +200,15 @@
                             </li>
                         </ul>
                         <div class="row clearfix">
-                            <!--*<div class="col-md-5 col-sm-5 col-xs-5">
-                                <div class="title">designer  preset colections</div>
-                                <ul class="style-br-long">
-                                    <li>
-                                        <a href="#"><i class="brilliant-ico brilliant-s7"></i> <span>Designer  preset colections</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="brilliant-ico brilliant-s7"></i> <span>Designer  preset colections</span></a>
-                                    </li>
-                                </ul>
-                            </div>*-->
+
                             <div class="col-md-7 col-sm-7 col-xs-7 text-right">
                                 <img src="/catalog/view/theme/canary/img/img13.png" alt="img" class="img-under-style">
                             </div>
                         </div>
-                        <!--*<div class="clearfix link-drop-menu">
-                            <div class="pull-left">
-                                <a href="#">START WITH A SETTING </a>
-                                <a href="#">START WITH A DIAMOND</a>
-                            </div>
-                            <div class="pull-right">
-                                <a href="#">inspiration gallery</a>
-                            </div>
 
-                        </div>*-->
                     </div>
                 </li>
-
+                <li><span class="w-top-marcer-menu">.</span></li>
                 <li class="dropdown-b"><!--*WEDDING RINGS*-->
                     <a href="<?php echo $categories[2]['href']?>" class="w-general-category"><?php echo $categories[2]['name']?></a>
                     <div class="dropdown-inside">
@@ -273,9 +269,7 @@
                         </div>
                     </div>
                 </li>
-
-
-
+                <li><span class="w-top-marcer-menu">.</span></li>
 
                 <li class="dropdown-b">
                     <a href="<?php echo $categories[3]['href']?>" class="w-general-category"><?php echo $categories[3]['name']?></a>
@@ -340,7 +334,7 @@
 
                     </div>
                 </li>
-
+                <li><span class="w-top-marcer-menu">.</span></li>
 
                 <li class="dropdown-b" data-target="menu4">
                     <a href="/gemstones" class="w-general-category"><?php echo $categories[4]['name']?></a>
@@ -390,10 +384,9 @@
                     </div>
                 </li>
 
-
                 <li class="bord-l"></li>
                 <li>
-                    <a href="/education"  class="w-general-category">EDUCATION</a>
+                    <a href="/education"  class="w-general-category">INFO</a>
                 </li>
 
             </ul>

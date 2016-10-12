@@ -21,10 +21,12 @@ $(document).ready(function() {
         auto: true,
         minSlides: 2,
         maxSlides: 2,
-        slideWidth: 200,
+        slideWidth: 220,
         slideMargin: 30,
         responsive: true,
         pager: false
+        // nextSelector: '.icons-next_slider_icon',
+        // prevSelector: '.icons-prev_slider_icon'
 
     });
 
@@ -34,17 +36,7 @@ $(document).ready(function() {
         $collapse.collapse('toggle');
     });
 
-    $('.collapse').on('shown.bs.collapse', function () {
-        $('.w-more-info span').removeClass('glyphicon-chevron-down');
-        $('.w-more-info span').addClass('glyphicon-chevron-up');
 
-    });
-
-    $('.collapse').on('hidden.bs.collapse', function () {
-        $('.w-more-info span').removeClass('glyphicon-chevron-up');
-        $('.w-more-info span').addClass('glyphicon-chevron-down');
-
-    });
 
     //пагинация ajax
     $(document).on('click', '.w-pagination-product .pagination a', function(){
@@ -380,6 +372,42 @@ function input_sort (value) {
 
     });
 }
+
+
+$(document).ready(function() {
+
+    //пременная отступа
+    var cont_left = $(".w-diamond-home-sparite").position().left;
+
+    // рапределяем миниатюра по длинне,
+    // смещая их по горизонтали
+    $(".w-diam-row").each(function(index) {
+        var left = (index * 120) + cont_left;
+        $(this).css("left", left + "px");
+    });
+
+
+    $(".w-diam-row").hover(function() {
+        // при наведении курсора мыши
+        $(this).css("z-index", 2);
+        $(this).find('.w-diamond-name-sparite').css('text-decoration','underline');
+        $(this).animate({
+            width    : "150px",
+            left             : "-=10",
+            top              : "-=15"
+        }, "fast").find('.w-home-briliant').addClass('w-sparite-shadow');
+    }, function() {
+        // hover out
+        $(this).css("z-index", 0);
+        $(this).find('.w-diamond-name-sparite').css('text-decoration','none');
+        $(this).animate({
+            width           : "120px",
+            left             : "+=10",
+            top              : "+=15"
+        }, "fast").find('.w-home-briliant').removeClass('w-sparite-shadow');
+    });
+
+});
 
 
 

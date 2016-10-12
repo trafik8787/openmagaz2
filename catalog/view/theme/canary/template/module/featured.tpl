@@ -4,11 +4,15 @@
         <li>
             <div class="text-center">
                 <a href="<?=$product['href']?>">
-                    <img class="img-circle" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+                    <img src="<?php echo $product['thumb']; ?>" width="70%" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
                 </a>
-                <div><span class="h4"><?=$product['name']?></span></div>
+                <div>
+                    <a href="<?=$product['href']?>"><span class="h4 w-bx-prod-name"><?=$product['name']?></span></a>
+                </div>
                 <div class="w-price"><?=$product['price']?></div>
+
             </div>
+
         </li>
     <?endforeach?>
 </ul>

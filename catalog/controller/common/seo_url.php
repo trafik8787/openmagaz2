@@ -18,7 +18,8 @@ class ControllerCommonSeoUrl extends Controller {
         'marketing/newsletter/add' => 'newsletter_add',
         'checkout/success' => 'checkout_success',
         'checkout/cart' => 'shop-cart',
-        'checkout/checkout' => 'shop-checkout'
+        'checkout/checkout' => 'shop-checkout',
+        'product/search' => 'search'
     );
 
 	public function index() {

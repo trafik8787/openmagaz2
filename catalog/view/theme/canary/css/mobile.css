@@ -703,7 +703,9 @@
   .main-page li {
     display: none; }
     .main-page li:nth-child(1) {
-      display: inline-block; }
+      display: inline-block;
+      border: none;
+      }
 
   .search-top-f {
     display: none; }
@@ -725,7 +727,9 @@
 
   .top-menu-b > li.cart-bl {
     margin-left: 5px;
-    display: inline-block; }
+    display: inline-block;
+    border: none;
+    }
 
   .top-menu-b > li.cart-bl > a:before {
     display: none; }

@@ -1,280 +1,423 @@
 
 <?php echo $header; ?>
 <?//dd($categories)?>
+<!--*center-bl*-->
 <main class="w-general-container">
-    <section class="center-bl">
+    <section class="containaer-home">
         <div class="row">
-            <div class="col-md-12 col-sm-6">
-                <div class="text-center paging-bottom-20">
-                    <!--*<a href="#"><span class="h2">Buy Engagement Ring and Get 20% Off Your Wedding Band</span></a>*-->
-                    <a href="#"><img src="/catalog/view/theme/canary/img/demo_new_template/BANNER_12.jpg" alt=""></a>
-                </div>
+            <div class="col-md-12 col-sm-6 padding-0">
+                    <div class="home-top-baneer">
+                        <div class="center-bl">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="w-button-in-baner">
+                                    <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
+                                    <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="w-right-home-top-slider">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="text-center">
+                                                <span class="h1">Top Selling Engagement Rings</span>
+                                                <span><i class="icons-selling_engagement_icon"></i></span>
+                                            </div>
+                                            <div>
+                                                <?php echo $content_bottom; ?>
+                                            </div>
+
+                                            <div class="list-category">
+                                                <ul class="list-inline w-list-link">
+                                                    <li><a href="/engagement-rings/solitaire">Solitare</a></li>
+                                                    <li><span>.</span></li>
+                                                    <li><a href="/engagement-rings/pave">Pave</a></li>
+                                                    <li><span>.</span></li>
+                                                    <li><a href="/engagement-rings/halo">Halo</a></li>
+                                                    <li><span>.</span></li>
+                                                    <li><a href="/engagement-rings/vintage">Vintage</a></li>
+                                                    <li><span>.</span></li>
+                                                    <li><a href="/engagement-rings">All Engagement Rings</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-sm-6">
-                <div class="thumbnail">
-                    <img  src="/catalog/view/theme/canary/img/demo_new_template/left_img_home.jpg" alt="">
-                    <div class="w-bloc-home-left">
-                        <div>
-                            <a class="btn btn-default btn-lg" href="/diamonds">Start With a Diamond</a>
-                            <a class="btn btn-default btn-lg" href="/engagement-rings">Start With a Setting</a>
-                        </div>
+            <div class="center-bl">
+                <div class="col-md-12 col-sm-12">
+                    <div class="text-center paging-top-40 paging-bottom-40">
+                        <img src="/catalog/view/theme/canary/img/demo_new_template/reckam-baner.jpg" alt="">
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-sm-6">
-
-                <div class="panel panel-default">
-                    <div class="panel-body" style="background-color: #f9f9f9;">
-                        <div class="text-center paging-bottom-8">
-                            <span class="h1">Top Selling Engagement Rings</span>
-                        </div>
-                        <div>
-                            <?php echo $content_bottom; ?>
-                        </div>
-                    </div>
-                    <div class="panel-footer">
-                        <ul class="list-inline w-list-link">
-                            <li><a href="/engagement-rings/solitaire">Solitare</a></li>
-                            <li><a href="/engagement-rings/pave">Pave</a></li>
-                            <li><a href="/engagement-rings/halo">Halo</a></li>
-                            <li><a href="/engagement-rings/vintage">Vintage</a></li>
-                            <li><a href="/engagement-rings">All Engagement Rings</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <div class="thumbnail thumbnail-box-shadow">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="h3 text-center margin-top-10">Best Quality and Service Canary Store</div>
-                        </div>
-                    </div>
-                    <div class="row w-best-quality">
-                        <div class="col-md-3 col-sm-3">
-                            <a href="#">
-                                <div class="alert alert-info">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <i class="truck-ico"></i>
-                                        </span>
-                                        <div class="media-body">
-                                            <h4 class="media-heading"><b>Free and Fast Shipping</b></h4>
-                                            <small>Fully Insured Overnight <br> Shipping</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-3">
+        <div class="row w-bloc-best-servise">
 
-                            <a href="#">
-                                <div class="alert alert-info">
-                                    <div class="media">
-                                        <span class="pull-left">
-                                            <i class="risk-free-ico"></i>
-                                        </span>
-                                        <div class="media-body">
-                                            <h4 class="media-heading"><b>Risk-free Retail</b></h4>
-                                            <small>100% Money Back <br> Guarantee</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+            <div class="center-bl">
 
+                <div class="col-md-12 col-sm-12">
+
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="h3 text-center margin-top-10">Best Quality And Service</div>
+                                <div class="icons-quality_service_icon"></div>
+                            </div>
                         </div>
-                        <div class="col-md-3 col-sm-3">
-                            <a href="#">
-                                <div class="alert alert-info">
-                                    <div class="media">
+                        <div class="row w-best-quality">
+                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                <a href="#">
+                                    <div class="alert alert-info">
+                                        <div class="media">
                                         <span class="pull-left">
-                                            <i class="glyphicon glyphicon-compressed" style="color: #fac652;font-size: 25px;"></i>
+                                            <i class="icons-free_shiping_icon"></i>
                                         </span>
-                                        <div class="media-body">
-                                            <h4 class="media-heading"><b>Free Resizing and Engraving</b></h4>
-                                            On All Bridal <br> Jewerly
+                                            <div class="media-body">
+                                                <h4 class="media-heading"><b>Free and Fast Shipping</b></h4>
+                                                <small>Fully Insured Overnight Shipping</small>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="w-shadow-slider"></div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-6">
+
+                                <a href="#">
+                                    <div class="alert alert-info">
+                                        <div class="media">
+                                        <span class="pull-left">
+                                            <i class="icons-retail_icon"></i>
+                                        </span>
+                                            <div class="media-body">
+                                                <h4 class="media-heading"><b>Risk-free Retail</b></h4>
+                                                <small>100% Money Back Guarantee</small>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-3">
-                            <a href="#">
-                                <div class="alert alert-info">
-                                    <div class="media">
+                                    <div class="w-shadow-slider"></div>
+                                </a>
+
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                <a href="#">
+                                    <div class="alert alert-info">
+                                        <div class="media">
                                         <span class="pull-left">
-                                            <i class="glyphicon glyphicon-map-marker" style="color: #fac652;font-size: 25px;"></i>
+                                            <i class="icons-engraving_icon"></i>
+                                        </span>
+                                            <div class="media-body">
+                                                <h4 class="media-heading"><b>Free Resizing and Engraving</b></h4>
+                                                On All Bridal Jewerly
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="w-shadow-slider"></div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                <a href="#">
+                                    <div class="alert alert-info">
+                                        <div class="media">
+                                        <span class="pull-left">
+                                            <i class="icons-helping_icon"></i>
                                         </span>
 
-                                        <div class="media-body">
-                                            <h4 class="media-heading"><b>Helping Others</b></h4>
-                                            A Partion of Your Purchase Goest <br> to Charity
+                                            <div class="media-body">
+                                                <h4 class="media-heading"><b>Helping Others</b></h4>
+                                                A Partion of Your Purchase Goest to Charity
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
+                                    <div class="w-shadow-slider"></div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="row clas-raleway-regular14">
+                            <div class="col-md-6 col-sm-6">
 
                                 Brilliant Canary was formed with the customer in mind.
                                 Through many years of working in the industry, we heard the wants and needs of our customers.
 
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            All of our bridal jewelry is designed and crafted in the United States of America.
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                All of our bridal jewelry is designed and crafted in the United States of America.
                                 By supporting manufacturers in the United States, we can provide our customers with the highest
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="row collapse">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="row collapse clas-raleway-regular14">
+                            <div class="col-md-6 col-sm-6">
 
                                 With these in mind, we established a company that puts an emphasis on providing exceptional education,
                                 quality and service at the best price.
                                 We strongly believe in helping others—with every purchase made a portion of the profits goes to the charity of your choice.*
                                 Thank you for choosing Brilliant Canary, where everything is Beyond Brilliant!
 
-                        </div>
-                        <div class="col-md-6 col-sm-6">
+                            </div>
+                            <div class="col-md-6 col-sm-6">
 
                                 quality jewelry at afaster delivery time and an exceptional price.
+                            </div>
+                        </div>
+                        <div class="w-button-colaps w-more-info"><span>mode info</span></div>
+                        <!--*<button type="button" class="btn btn-warning w-more-info">More info <span class="glyphicon glyphicon-chevron-down"></span></button>*-->
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="row margin-top-40 w-bloc-best-category">
+            <div class="center-bl">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-bloc-home-category">
+                        <div class="thumbnail">
+                            <div class="w-category-gradient"></div>
+                            <div class="h3 text-center">
+                                <div class="icons-marcer_desing_left_icon"></div>
+                                <a href="/wedding-rings">Wedding Rings</a>
+                                <div class="icons-marcer_desing_right_icon"></div>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/wedding_rings.jpg" alt="">
+                        </div>
+                        <div class="list-group text-center">
+                            <a href="/wedding-rings/classik_woman" class="w-list-group-item">Classical Weddings Ringsspan <span class="w-cur-left"> > </span></a>
+                            <a href="/wedding-rings/diamond_woman" class="w-list-group-item">Wedding Rings with Diamonds <span class="w-cur-left"> > </span></a>
+                            <a href="/wedding-rings/eternity_woman" class="w-list-group-item">Eternity Wedding Rings <span class="w-cur-left"> > </span></a>
+                            <a href="/wedding-rings/classic_man" class="w-list-group-item">Wedding Rings for Men <span class="w-cur-left"> > </span></a>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-warning w-more-info">More info <span class="glyphicon glyphicon-chevron-down"></span></button>
+                    <div class="w-shadow-slider"></div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-bloc-home-category">
+                        <div class="thumbnail">
+                            <div class="w-category-gradient"></div>
+                            <div class="h3 text-center">
+                                <div class="icons-marcer_desing_left_icon"></div>
+                                    <a href="/fine_jeverly">Diamond Jewelry</a>
+                                <div class="icons-marcer_desing_right_icon"></div>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/diamons_jewelry.jpg" alt="">
+                        </div>
+                        <div class="list-group text-center">
+                            <a href="/fine_jeverly/diamond_studs" class="w-list-group-item">Diamond Studs <span class="w-cur-left"> > </span></a>
+                            <a href="/fine_jeverly/diamond_earrings" class="w-list-group-item">Diamond Earrings <span class="w-cur-left"> > </span></a>
+                            <a href="/fine_jeverly/diamond_pendants" class="w-list-group-item">Diamond Pendants <span class="w-cur-left"> > </span></a>
+                            <a href="/fine_jeverly/fashion_necklaces" class="w-list-group-item">Diamond Necklaces <span class="w-cur-left"> > </span></a>
+                        </div>
+                    </div>
+                    <div class="w-shadow-slider"></div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="w-bloc-home-category">
+                        <div class="thumbnail">
+                            <div class="w-category-gradient"></div>
+                            <div class="h3 text-center">
+                                <div class="icons-marcer_desing_left_icon"></div>
+                                    <a href="#">Gemstones Jewelry</a>
+                                <div class="icons-marcer_desing_right_icon"></div>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/gemstones_jewelry.jpg" alt="">
+                        </div>
+                        <div class="list-group text-center">
+                            <a href="/fine_jeverly/gemstone_earrings&filter=7" class="w-list-group-item">Gemstones Earrings <span class="w-cur-left"> > </span></a>
+                            <a href="/fine_jeverly/gemstone_pendants&filter=7" class="w-list-group-item">Gemstones Pendants <span class="w-cur-left"> > </span></a>
+                            <a href="/fine_jeverly/gemstone_rings&filter=7" class="w-list-group-item">Gemstones Rings <span class="w-cur-left"> > </span></a>
+                            <a href="/fine_jeverly/gemstone_bracelets&filter=7" class="w-list-group-item">Gemstones Bracelets <span class="w-cur-left"> > </span></a>
+                        </div>
+                    </div>
+                    <div class="w-shadow-slider"></div>
                 </div>
             </div>
         </div>
 
-        <div class="row margin-top-40">
-            <div class="col-md-4 col-sm-4">
-                <div class="w-bloc-home-category">
-                    <div class="thumbnail">
-                        <div class="h3 text-center"><a href="/wedding-rings">Wedding Rings</a></div>
-                        <img src="/catalog/view/theme/canary/img/demo_new_template/wedding_rings.png" alt="">
-                    </div>
-                    <div class="list-group text-center">
-                        <a href="/wedding-rings/classik_woman" class="w-list-group-item">Classical Weddings Rings</a>
-                        <a href="/wedding-rings/diamond_woman" class="w-list-group-item">Wedding Rings with Diamonds</a>
-                        <a href="/wedding-rings/eternity_woman" class="w-list-group-item">Eternity Wedding Rings</a>
-                        <a href="/wedding-rings/classic_man" class="w-list-group-item">Wedding Rings for Men</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="w-bloc-home-category">
-                    <div class="thumbnail">
-                        <div class="h3 text-center"><a href="/fine_jeverly">Diamond Jewelry</a></div>
-                        <img src="/catalog/view/theme/canary/img/demo_new_template/diamons_jewelry.png" alt="">
-                    </div>
-                    <div class="list-group text-center">
-                        <a href="/fine_jeverly/diamond_studs" class="w-list-group-item">Diamond Studs</a>
-                        <a href="/fine_jeverly/diamond_earrings" class="w-list-group-item">Diamond Earrings</a>
-                        <a href="/fine_jeverly/diamond_pendants" class="w-list-group-item">Diamond Pendants</a>
-                        <a href="/fine_jeverly/fashion_necklaces" class="w-list-group-item">Diamond Necklaces</a>
+
+
+
+        <div class="row w-bloc-search-diamond">
+
+            <div class="center-bl">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+
+                        <span class="h3">Search for diamonds</span>
+                        <div class="icons-search_diamond_icon"></div>
+                        <div class="search-diamond-test">Select a diamond shape to start your search for the perfect diamond</div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="w-bloc-home-category">
-                    <div class="thumbnail">
-                        <div class="h3 text-center"><a href="#">Gemstones Jewelry</a></div>
-                        <img src="/catalog/view/theme/canary/img/demo_new_template/gemstones_jewelry.png" alt="">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="w-container-sparite">
+                            <ul class="list-inline w-diamond-home-sparite">
+                                <li class="w-diam-row">
+                                    <div class="w-home-briliant">
+                                        <a href="/diamonds?&shape=Round"><img src="/image/catalog/shapes/round.png" alt=""></a>
+                                    </div>
+                                    <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Round">Round</a></div>
+                                </li>
+                                <li class="w-diam-row">
+                                    <div class="w-home-briliant">
+                                        <a href="/diamonds?&shape=Princess"><img src="/image/catalog/shapes/princess.png" alt=""></a>
+                                    </div>
+                                    <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Princess">Princess</a></div>
+                                </li>
+                                <li class="w-diam-row">
+                                    <div class="w-home-briliant">
+                                        <a href="/diamonds?&shape=Asscher"><img src="/image/catalog/shapes/asscher.png" alt=""></a>
+                                    </div>
+                                    <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Asscher">Asscher</a></div>
+                                </li>
+                                <li class="w-diam-row">
+                                    <div class="w-home-briliant">
+                                        <a href="/diamonds?&shape=Cushion"><img src="/image/catalog/shapes/cushion.png" alt=""></a>
+                                    </div>
+                                    <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Cushion">Cushion</a></div>
+                                </li>
+                                <li class="w-diam-row">
+                                    <div class="w-home-briliant">
+                                        <a href="/diamonds?&shape=Marquise"><img src="/image/catalog/shapes/marquise.png" alt=""></a>
+                                    </div>
+                                    <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Marquise">Marquise</a></div>
+                                </li>
+                                <li class="w-diam-row">
+                                    <div class="w-home-briliant">
+                                        <a href="/diamonds?&shape=Oval"><img src="/image/catalog/shapes/oval.png" alt=""></a>
+                                    </div>
+                                    <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Oval">Oval</a></div>
+                                </li>
+                                <li class="w-diam-row">
+                                    <div class="w-home-briliant">
+                                        <a href="/diamonds?&shape=Radiant"><img src="/image/catalog/shapes/radiant.png" alt=""></a>
+                                    </div>
+                                    <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Radiant">Radiant</a></div>
+                                </li>
+                                <li class="w-diam-row">
+                                    <div class="w-home-briliant">
+                                        <a href="/diamonds?&shape=Pear"><img src="/image/catalog/shapes/pear.png" alt=""></a>
+                                    </div>
+                                    <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Pear">Pear</a></div>
+                                </li>
+                                <li class="w-diam-row">
+                                    <div class="w-home-briliant">
+                                        <a href="/diamonds?&shape=Heart"><img src="/image/catalog/shapes/heart.png" alt=""></a>
+                                    </div>
+                                    <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Heart">Heart</a></div>
+                                </li>
+                                <li class="w-diam-row">
+                                    <div class="w-home-briliant">
+                                        <a href="/diamonds?&shape=Emerald"><img src="/image/catalog/shapes/emerald.png" alt=""></a>
+                                    </div>
+                                    <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Emerald">Emerald</a></div>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
-                    <div class="list-group text-center">
-                        <a href="/fine_jeverly/gemstone_earrings&filter=7" class="w-list-group-item">Gemstones Earrings</a>
-                        <a href="/fine_jeverly/gemstone_pendants&filter=7" class="w-list-group-item">Gemstones Pendants</a>
-                        <a href="/fine_jeverly/gemstone_rings&filter=7" class="w-list-group-item">Gemstones Rings</a>
-                        <a href="/fine_jeverly/gemstone_bracelets&filter=7" class="w-list-group-item">Gemstones Bracelets</a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="row w-blog-section">
+            <div class="center-bl">
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+
+                        <span class="h3">Stories from the Blog</span>
+                        <div class="icons-search_diamond_icon"></div>
+                    </div>
+                </div>
+
+                <div class="row margin-top-30 margin-buttom-30">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <div class="marc-date">
+                                <strong>Sep</strong>
+                                <div>27</div>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/blog1.jpg" alt="">
+                            <div class="caption">
+                                <h3>Ancient India and the Origins of Diamond Investing</h3>
+                                <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
+
+                            </div>
+                            <a href="#" class="btn btn-default" role="button">Read more</a>
+                        </div>
+                        <div class="w-shadow-slider"></div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <div class="marc-date">
+                                <strong>Sep</strong>
+                                <div>27</div>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/blog2.jpg" alt="">
+                            <div class="caption">
+                                <h3>Ancient India and the Origins of Diamond Investing</h3>
+                                <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
+
+                            </div>
+                            <a href="#" class="btn btn-default" role="button">Read more</a>
+                        </div>
+                        <div class="w-shadow-slider"></div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <div class="marc-date">
+                                <strong>Sep</strong>
+                                <div>27</div>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/blog3.jpg" alt="">
+                            <div class="caption">
+                                <h3>Ancient India and the Origins of Diamond Investing</h3>
+                                <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
+
+                            </div>
+                            <a href="#" class="btn btn-default" role="button">Read more</a>
+                        </div>
+                        <div class="w-shadow-slider"></div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <div class="marc-date">
+                                <strong>Sep</strong>
+                                <div>27</div>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/blog4.jpg" alt="">
+                            <div class="caption">
+                                <h3>Ancient India and the Origins of Diamond Investing</h3>
+                                <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
+
+                            </div>
+                            <a href="#" class="btn btn-default" role="button">Read more</a>
+                        </div>
+                        <div class="w-shadow-slider"></div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="row margin-buttom-30">
-            <div class="col-md-3 col-sm-3">
-                <span class="h2">Search for diamonds</span>
-                <p>Select a diamond shape to start your search for the perfect diamond.</p>
-            </div>
-
-            <div class="col-md-9 col-sm-9">
-                <ul class="list-inline">
-                    <li>
-                        <div class="w-home-briliant">
-                            <a href="/diamonds?&shape=Round"><img src="/image/catalog/shapes/round.png" alt=""></a>
-                            <div class="text-center"><a href="/diamonds?&shape=Round">Round</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w-home-briliant">
-                            <a href="/diamonds?&shape=Princess"><img src="/image/catalog/shapes/princess.png" alt=""></a>
-                            <div class="text-center"><a href="/diamonds?&shape=Princess">Princess</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w-home-briliant">
-                            <a href="/diamonds?&shape=Asscher"><img src="/image/catalog/shapes/asscher.png" alt=""></a>
-                            <div class="text-center"><a href="/diamonds?&shape=Asscher">Asscher</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w-home-briliant">
-                            <a href="/diamonds?&shape=Cushion"><img src="/image/catalog/shapes/cushion.png" alt=""></a>
-                            <div class="text-center"><a href="/diamonds?&shape=Cushion">Cushion</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w-home-briliant">
-                            <a href="/diamonds?&shape=Marquise"><img src="/image/catalog/shapes/marquise.png" alt=""></a>
-                            <div class="text-center"><a href="/diamonds?&shape=Marquise">Marquise</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w-home-briliant">
-                            <a href="/diamonds?&shape=Oval"><img src="/image/catalog/shapes/oval.png" alt=""></a>
-                            <div class="text-center"><a href="/diamonds?&shape=Oval">Oval</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w-home-briliant">
-                            <a href="/diamonds?&shape=Radiant"><img src="/image/catalog/shapes/radiant.png" alt=""></a>
-                            <div class="text-center"><a href="/diamonds?&shape=Radiant">Radiant</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w-home-briliant">
-                            <a href="/diamonds?&shape=Pear"><img src="/image/catalog/shapes/pear.png" alt=""></a>
-                            <div class="text-center"><a href="/diamonds?&shape=Pear">Pear</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w-home-briliant">
-                            <a href="/diamonds?&shape=Heart"><img src="/image/catalog/shapes/heart.png" alt=""></a>
-                            <div class="text-center"><a href="/diamonds?&shape=Heart">Heart</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="w-home-briliant">
-                            <a href="/diamonds?&shape=Emerald"><img src="/image/catalog/shapes/emerald.png" alt=""></a>
-                            <div class="text-center"><a href="/diamonds?&shape=Emerald">Emerald</a></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-
 
     </section>
-
 
 
 

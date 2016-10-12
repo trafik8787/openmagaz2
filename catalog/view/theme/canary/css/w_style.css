@@ -12,14 +12,52 @@
     -webkit-box-shadow: none!important;
     box-shadow: none!important;
     border: none!important;
-    background-color: #f9f9f9!important;
+    background-color: inherit!important;
+    margin-bottom: 46px!important;
+    margin-top: 20px!important;
 }
 
+ul.bxslider li {
+    background-color: #fff!important;
+    border-radius: 4px!important;
+    height: 252px!important;
+}
+.bx-wrapper .bx-viewport {
+
+}
+
+.bx-wrapper .bx-controls-direction a {
+    z-index: 2!important;
+}
+
+.bx-wrapper img {
+    margin: 0 auto!important;
+}
+ul.bxslider .w-bx-prod-name {
+
+color: #000;
+
+font-size: 12px;
+
+font-family: "Raleway-Regular", fantasy;
+}
+
+
 .bx-wrapper .bx-next {
-    right: -65px!important;
+    right: -40px!important;
+    background-image: url('../img/icons-s0bc91fa097.png')!important;
+    background-repeat: no-repeat!important;
+    background-position: -251px 0!important;
+    width: 14px!important;
+    height: 50px!important;
 }
 .bx-wrapper .bx-prev {
-    left: -65px!important;
+    left: -40px!important;
+    background-image: url('../img/icons-s0bc91fa097.png')!important;
+    background-repeat: no-repeat!important;
+    background-position: -265px 0!important;
+    width: 14px!important;
+    height: 50px!important;
 }
 
 .w-product-name-h1 {
@@ -38,20 +76,42 @@
 .paging-bottom-20 {
     padding-bottom: 20px;
 }
+
+.paging-top-40 {
+    padding-top: 40px;
+}
+
+.paging-bottom-40 {
+    padding-bottom: 40px;
+}
+
 .paging-bottom-8 {
     padding-bottom: 8px;
 }
 
 .margin-top-40 {
-    margin-top: 40px;
+    margin-top: 97px;
 }
 
 .margin-top-10 {
     margin-top: 10px;
 }
 
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
 .margin-buttom-30 {
     margin-bottom: 30px;
+}
+
+.margin-buttom-40 {
+    margin-bottom: 40px;
 }
 
 .margin-buttom-20 {
@@ -84,13 +144,6 @@
     padding: 0;
 }
 
-.text-down-logo {
-    text-transform: none;
-    font-size: 21px;
-    color: #9a9a9a;
-    text-align: center;
-    display: block;
-}
 
 .w-price {
     color: #ff5959;
@@ -106,10 +159,9 @@
 }
 
 .w-more-info {
-    position: relative;
-    top: 38px;
+    top: 17px;
     border-radius: 0 0 4px 4px;
-    left: 46%;
+    left: 45%;
 }
 
 .thumbnail-box-shadow {
@@ -145,10 +197,10 @@
     position: relative;
     display: block;
     padding: 10px 15px;
-    margin-bottom: 3px;
-    box-shadow: 0px 3px 7px #ccc;
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
+    background-color: #eaf6fc;
+    border-bottom: 1px solid #cccdce;
+    border-left: 1px solid #cccdce;
+    border-right: 1px solid #cccdce;
 }
 
 a.w-list-group-item {
@@ -162,7 +214,7 @@ a.w-list-group-item:hover {
 }
 
 .w-home-briliant img {
-    width: 78px;
+    width: 100%;
 }
 
 .w-no-border-radius-top {
@@ -172,30 +224,33 @@ a.w-list-group-item:hover {
 .w-bloc-home-category .thumbnail {
     margin-bottom: 0;
     border-radius: 0;
-    border-bottom: 0;
-    box-shadow: 0 4px 7px #ccc;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 0;
+    height: 317px;
 }
 
-.w-bloc-home-category .list-group {
+.w-bloc-home-category .list-group {font-family: "Raleway-Bold", fantasy;font-size: 15px;}
 
-}
+.w-bloc-home-category .list-group .w-cur-left {right: 25px;position: absolute;font-size: 18px;}
 
 .w-bloc-home-category .h3 {
-    margin-top: 2px;
+    font-family: "Raleway-Bold", fantasy;
+    font-size: 19px;
+    margin-bottom: 34px;
+    z-index: 3;
+    position: relative;
+    width: 100%;
 }
 
-.w-bloc-home-category .list-group .w-list-group-item:first-child {
-    border-top: 0;
+.w-bloc-home-category .h3 a {
+    color: #2f4680;
+}
+
+.w-bloc-home-category .list-group .w-list-group-item:last-child {
 }
 
 
-.w-best-quality .col-md-3,
-.w-best-quality .col-sm-3 {
-    padding-right: 2px;
-    padding-left: 2px;
-}
 
 .w-best-quality .col-md-3:first-child,
 .w-best-quality .col-sm-3:first-child {
@@ -214,6 +269,38 @@ a.w-list-group-item:hover {
 }
 
 
+
+.w-diamond-home-sparite {
+
+display: block;
+
+position: relative;
+}
+
+.w-diamond-home-sparite .w-diam-row {
+position: absolute;
+width: 120px;
+display: block;
+z-index: 0;
+}
+
+.w-diamond-home-sparite .w-diamond-name-sparite {
+    
+margin-top: 15px;
+}
+
+.w-diamond-home-sparite .w-diamond-name-sparite a {
+
+font-family: "Raleway-Bold", fantasy;
+
+font-size: 15px;
+
+color: #ffffff;
+}
+
+.w-sparite-shadow {
+    box-shadow: 2px 1px 4px #cccccc, -2px 0 4px #cccccc!important;
+}
 
 .w-box-rotate-animate .wave {
     opacity: .4;
@@ -261,13 +348,36 @@ a.w-list-group-item:hover {
 }
 
 
+.w-list-link {
+    text-align: center;
+}
+
 .w-list-link li {
-  border-right: 1px solid #ccc;
-    padding: 0 20px 0 20px;
+
+font-family: "Raleway-Bold", fantasy;
+
+font-size: 15px;
+}
+
+.w-list-link li a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.w-list-link li span {
+
+display: block;
+
+position: relative;
+
+top: -2px;
+
+font-weight: bold;
+
+font-size: 20px;
 }
 
 .w-list-link li:last-child {
-    border-right: none;
 }
 
 .w-bloc-home-left {

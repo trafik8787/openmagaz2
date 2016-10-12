@@ -65,6 +65,7 @@ class ControllerCommonHeaderHome extends Controller {
             }
 
             $data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), ($coun_wishlist));
+
 		}
 
 		$data['text_shopping_cart'] = $this->language->get('text_shopping_cart');

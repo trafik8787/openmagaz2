@@ -1,6 +1,13 @@
 
-<?//dd($products)?>
-<a href="#" onclick="return false" id="w-but-cart"><i class="cart-ico"></i><span>cart (<?php echo $count; ?>)</span></a>
+
+<a href="#" onclick="return false" id="w-but-cart">
+    <i class="icons-cart_icon"></i>
+    <?if (!empty($count)):?>
+        <span class="w-count-circle"><?php echo $count; ?></span>
+    <?endif?>
+
+    <span>cart</span>
+</a>
 <div class="cart-basket">
     <div class="w-cart-basket">
         <button class="close-cart-main"></button>
