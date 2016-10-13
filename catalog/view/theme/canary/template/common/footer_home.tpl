@@ -63,6 +63,16 @@
                         <li><a href="https://www.instagram.com/brilliantcanaryrings/" class="icon-instagram"></a></li>
                         <li><a href="" class="icon-p"></a></li>
                     </ul>
+                    <div class="text-left margin-top-20 w-copirait">
+                        <p>© 2016. All rights reserved.</p>
+                        <p>
+                            <a href="">Privacy Policy</a>
+                            <span>|</span>
+                            <a href="">Terms & Conditions</a>
+                            <span>|</span>
+                            <a href="">Cookie Policy</a>
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -114,64 +124,6 @@
         </section>
 
     </div>
-    <!--*<section class="footer-menu">*-->
-        <!--*<div class="wrapper-footer clearfix">*-->
-            <!--*<div class="one-block">*-->
-                <!--*<div class="title">CONTACT US</div>*-->
-                <!--*<div class="one-line"><i class="mail-ico"></i><span>info@brilliantcanary.com</span></div>*-->
-                <!--*<div class="one-line"><i class="call-2-ico"></i><span>800-214-6550</span></div>*-->
-            <!--*</div>*-->
-            <!--*<div class="one-block">*-->
-                <!--*<div class="title">INFORMATION</div>*-->
-                <!--*<ul>*-->
-                    <!--*<?php foreach ($informations as $information) { ?>*-->
-
-                        <!--*<?if ($information['bottom'] == 1):?>*-->
-                            <!--*<li><a href="<?php echo $information['href']; ?>" class="w-general-category">- <?php echo $information['title']; ?></a></li>*-->
-                        <!--*<?endif?>*-->
-
-                    <!--*<?php } ?>*-->
-                    <!--*<li><a href="<?php echo $contact; ?>" class="w-general-category">- <?php echo $text_contact; ?></a></li>*-->
-                    <!--*<li><a href="<?php echo $sitemap; ?>" class="w-general-category">- <?php echo $text_sitemap; ?></a></li>*-->
-                    <!--*<li><a href="/faq" class="w-general-category">- FAQ</a></li>*-->
-                <!--*</ul>*-->
-            <!--*</div>*-->
-            <!--*<div class="one-block">*-->
-                <!--*<div class="title">WHY PICK BRILLIANT CANARY?</div>*-->
-                <!--*<ul>*-->
-                    <!--*<?php foreach ($informations as $information):?>*-->
-
-                        <!--*<?if ($information['top'] == 1):?>*-->
-                            <!--*<li><a href="<?php echo $information['href']; ?>" class="w-general-category">- <?php echo $information['title']; ?></a></li>*-->
-                        <!--*<?endif?>*-->
-
-                    <!--*<?endforeach?>*-->
-
-                <!--*</ul>*-->
-            <!--*</div>*-->
-            <!--*<div class="one-block">*-->
-                <!--*<div class="text-footer">*-->
-                    <!--*Follow us*-->
-                <!--*</div>*-->
-                <!--*<div class="social-footer">*-->
-                    <!--*<a href="https://www.facebook.com/BrilliantCanaryRings" class="facebook-ico"></a>*-->
-                    <!--*<a href="https://twitter.com/TheBrilliantC" class="twitter-ico"></a>*-->
-                    <!--*<a href="#" class="rss-ico"></a>*-->
-                    <!--*<a href="https://www.instagram.com/brilliantcanaryrings/" class="in-ico"></a>*-->
-                <!--*</div>*-->
-                <!--*<div class="payments-box">*-->
-                    <!--*<div class="wrapper-card">*-->
-                        <!--*<a href="#" class="payments-card visa"><img src="catalog/view/theme/canary/img/visa.png" alt="visa"></a>*-->
-                        <!--*<a href="#" class="payments-card mastercard"><img src="catalog/view/theme/canary/img/mastercard.png" alt="mastercard"></a>*-->
-                        <!--*<a href="#" class="payments-card discover"><img src="catalog/view/theme/canary/img/discover.png" alt="discover"></a>*-->
-                        <!--*<a href="#" class="payments-card americanexpress"><img src="catalog/view/theme/canary/img/americanexpress.png" alt="americanexpress"></a>*-->
-                        <!--*<a href="#" class="payments-card paypal"><img src="catalog/view/theme/canary/img/paypal.png" alt="paypal"></a>*-->
-                    <!--*</div>*-->
-                <!--*</div>*-->
-            <!--*</div>*-->
-        <!--*</div>*-->
-
-    <!--*</section>*-->
 
 </footer>
 

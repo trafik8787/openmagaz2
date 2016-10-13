@@ -13,8 +13,8 @@
 
                                 <div class="col-md-6 col-sm-6">
                                     <div class="w-button-in-baner">
-                                        <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
-                                        <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
+                                        <a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
+                                        <a href="/engagement-rings" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6">

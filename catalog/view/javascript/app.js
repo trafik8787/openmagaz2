@@ -376,38 +376,38 @@ function input_sort (value) {
 
 $(document).ready(function() {
 
-    //пременная отступа
-    var cont_left = $(".w-diamond-home-sparite").position().left;
-
-    // рапределяем миниатюра по длинне,
-    // смещая их по горизонтали
-    $(".w-diam-row").each(function(index) {
-        var left = (index * 120) + cont_left;
-        $(this).css("left", left + "px");
-    });
-
 
     $(".w-diam-row").hover(function() {
-        // при наведении курсора мыши
-        $(this).css("z-index", 2);
-        $(this).find('.w-diamond-name-sparite').css('text-decoration','underline');
-        $(this).animate({
-            width    : "150px",
-            left             : "-=10",
-            top              : "-=15"
-        }, "fast").find('.w-home-briliant').addClass('w-sparite-shadow');
+
+        $(this).css({
+            'width': "150px",
+            //'height': "165px",
+            'top': '-20px',
+            'z-index': 2
+        });
+        $(this).parent().find('li').not($(this)).css({'top': '-31px'});
+         $(this).prevAll().css({'left': '15px'});
+         $(this).nextAll().css({'left': '-15px'});
+
+
     }, function() {
-        // hover out
-        $(this).css("z-index", 0);
-        $(this).find('.w-diamond-name-sparite').css('text-decoration','none');
-        $(this).animate({
-            width           : "120px",
-            left             : "+=10",
-            top              : "+=15"
-        }, "fast").find('.w-home-briliant').removeClass('w-sparite-shadow');
+        $(this).css({
+            'width': "120px",
+            //'height': "165px",
+            'top': '0',
+            'z-index': 1
+        });
+        $(this).parent().find('li').not($(this)).css({'top': '0'});
+        $(this).prevAll().css({'left': '0'});
+        $(this).nextAll().css({'left': '0'});
     });
 
 });
+
+
+
+
+
 
 
 

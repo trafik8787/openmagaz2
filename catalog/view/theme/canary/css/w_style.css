@@ -279,22 +279,20 @@ a.w-list-group-item {
 
 
 .w-diamond-home-sparite {
-
-display: block;
-
-position: relative;
+display: block;
+position: relative;
 }
 
 .w-diamond-home-sparite .w-diam-row {
-position: absolute;
 width: 120px;
+z-index: 1;
 display: inline-block;
-z-index: 0;
+position: relative;
+height: 170px;
 }
 
 .w-diamond-home-sparite .w-diamond-name-sparite {
-    
-margin-top: 15px;
+    padding-top: 15px;
 }
 
 .w-diamond-home-sparite .w-diamond-name-sparite a {

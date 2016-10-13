@@ -35,7 +35,8 @@ article, aside, figure, figcaption, footer, header, hgroup, nav, section, summar
 html, body {
   height: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  }
 
 main {
   max-width: 1920px;
@@ -909,6 +910,10 @@ z-index: 0;
 .w-bloc-search-diamond ul {
     
 margin: 0 auto;
+    
+display: table;
+    
+position: relative;
 }
 
 .w-bloc-search-diamond ul li {
@@ -955,12 +960,22 @@ padding: 0;
 .w-button-colaps:before {
     content: "";
     position: absolute;
-    bottom: -84px;
+    bottom: -83px;
     width: 100%;
-    left: -2px;
+    left: 0;
     border: 70px solid transparent;
     border-top: 14px solid #a5bed1;
 }
+
+
+.w-button-colaps:hover:before {
+    border-top: 14px solid #699EC7;
+}
+
+.w-button-colaps:hover {
+    background-color: #699EC7;
+}
+
 .w-button-colaps {
     width: 140px;
     height: 26px;
@@ -973,6 +988,12 @@ padding: 0;
     background-color: #a5bed1;
 }
 
+.w-copirait p,
+.w-copirait a {
+    color: #2f4680;
+    font-family: "Raleway-Regular", fantasy;
+    font-size: 14px;
+}
 
 .w-category-gradient {
     position: absolute;
@@ -1457,7 +1478,7 @@ text-align: center;
 }
 
 .w-footer-down {
-    background-color: #d1e1ef;
+    background-color: #cdddef;
     padding: 57px 0 72px 0;
     margin: 0;
 }
