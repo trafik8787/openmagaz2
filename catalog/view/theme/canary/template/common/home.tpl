@@ -5,43 +5,47 @@
 <main class="w-general-container">
     <section class="containaer-home">
         <div class="row">
-            <div class="col-md-12 col-sm-6 padding-0">
+            <div class="col-md-12 col-sm-12 padding-0">
                     <div class="home-top-baneer">
-                        <div class="center-bl">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="w-button-in-baner">
-                                    <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
-                                    <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="w-right-home-top-slider">
-                                    <div class="panel panel-default">
-                                        <div class="panel-body">
-                                            <div class="text-center">
-                                                <span class="h1">Top Selling Engagement Rings</span>
-                                                <span><i class="icons-selling_engagement_icon"></i></span>
-                                            </div>
-                                            <div>
-                                                <?php echo $content_bottom; ?>
-                                            </div>
 
-                                            <div class="list-category">
-                                                <ul class="list-inline w-list-link">
-                                                    <li><a href="/engagement-rings/solitaire">Solitare</a></li>
-                                                    <li><span>.</span></li>
-                                                    <li><a href="/engagement-rings/pave">Pave</a></li>
-                                                    <li><span>.</span></li>
-                                                    <li><a href="/engagement-rings/halo">Halo</a></li>
-                                                    <li><span>.</span></li>
-                                                    <li><a href="/engagement-rings/vintage">Vintage</a></li>
-                                                    <li><span>.</span></li>
-                                                    <li><a href="/engagement-rings">All Engagement Rings</a></li>
-                                                </ul>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-sm-12 w-content-baner">
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="w-button-in-baner">
+                                        <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
+                                        <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="w-right-home-top-slider">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <div class="text-center">
+                                                    <span class="h1">Top Selling Engagement Rings</span>
+                                                    <span><i class="icons-selling_engagement_icon"></i></span>
+                                                </div>
+                                                <div>
+                                                    <?php echo $content_bottom; ?>
+                                                </div>
+
+                                                <div class="list-category">
+                                                    <ul class="list-inline w-list-link">
+                                                        <li><a href="/engagement-rings/solitaire">Solitare</a></li>
+                                                        <li><span>.</span></li>
+                                                        <li><a href="/engagement-rings/pave">Pave</a></li>
+                                                        <li><span>.</span></li>
+                                                        <li><a href="/engagement-rings/halo">Halo</a></li>
+                                                        <li><span>.</span></li>
+                                                        <li><a href="/engagement-rings/vintage">Vintage</a></li>
+                                                        <li><span>.</span></li>
+                                                        <li><a href="/engagement-rings">All Engagement Rings</a></li>
+                                                    </ul>
+                                                </div>
+
                                             </div>
 
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -54,7 +58,7 @@
             <div class="center-bl">
                 <div class="col-md-12 col-sm-12">
                     <div class="text-center paging-top-40 paging-bottom-40">
-                        <img src="/catalog/view/theme/canary/img/demo_new_template/reckam-baner.jpg" alt="">
+                        <img src="/catalog/view/theme/canary/img/demo_new_template/reckam-baner.jpg" alt="" width="100%">
                     </div>
                 </div>
             </div>

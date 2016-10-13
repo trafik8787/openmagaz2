@@ -21,7 +21,7 @@ $(document).ready(function() {
         auto: true,
         minSlides: 2,
         maxSlides: 2,
-        slideWidth: 220,
+        slideWidth: 230,
         slideMargin: 30,
         responsive: true,
         pager: false
