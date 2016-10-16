@@ -8,6 +8,7 @@
                 </a>
                 <div>
                     <a href="<?=$product['href']?>"><span class="h4 w-bx-prod-name"><?=$product['name']?></span></a>
+                    <div class="icons-slider_marcer_icon"></div>
                 </div>
                 <div class="w-price"><?=$product['price']?></div>
 

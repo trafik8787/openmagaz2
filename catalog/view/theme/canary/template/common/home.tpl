@@ -9,15 +9,15 @@
                     <div class="home-top-baneer">
 
                         <div class="row">
-                            <div class="col-md-8 col-md-offset-2 col-sm-12 w-content-baner">
+                            <div class="center-bl w-content-baner">
 
-                                <div class="col-md-6 col-sm-6">
+                                <div class="col-md-6 col-sm-5">
                                     <div class="w-button-in-baner">
                                         <a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
                                         <a href="/engagement-rings" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-sm-6">
+                                <div class="col-md-6 col-sm-7">
                                     <div class="w-right-home-top-slider">
                                         <div class="panel panel-default">
                                             <div class="panel-body">
@@ -121,7 +121,7 @@
                                         </span>
                                             <div class="media-body">
                                                 <h4 class="media-heading"><b>Free Resizing and Engraving</b></h4>
-                                                On All Bridal Jewerly
+                                                <small>On All Bridal Jewerly</small>
                                             </div>
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@
 
                                             <div class="media-body">
                                                 <h4 class="media-heading"><b>Helping Others</b></h4>
-                                                A Partion of Your Purchase Goest to Charity
+                                                <small>A Partion of Your Purchase Goest to Charity</small>
                                             </div>
                                         </div>
                                     </div>
@@ -183,7 +183,6 @@
 
 
 
-
         <div class="row margin-top-40 w-bloc-best-category">
             <div class="center-bl">
                 <div class="col-md-4 col-sm-4 col-xs-12">
@@ -198,10 +197,10 @@
                             <img src="/catalog/view/theme/canary/img/demo_new_template/wedding_rings.jpg" alt="">
                         </div>
                         <div class="list-group text-center">
-                            <a href="/wedding-rings/classik_woman" class="w-list-group-item">Classical Weddings Ringsspan <span class="w-cur-left"> > </span></a>
-                            <a href="/wedding-rings/diamond_woman" class="w-list-group-item">Wedding Rings with Diamonds <span class="w-cur-left"> > </span></a>
-                            <a href="/wedding-rings/eternity_woman" class="w-list-group-item">Eternity Wedding Rings <span class="w-cur-left"> > </span></a>
-                            <a href="/wedding-rings/classic_man" class="w-list-group-item">Wedding Rings for Men <span class="w-cur-left"> > </span></a>
+                            <a href="/wedding-rings/classik_woman" class="w-list-group-item">Classical Weddings Ringsspan <span class="w-cur-left"> &#62; </span></a>
+                            <a href="/wedding-rings/diamond_woman" class="w-list-group-item">Wedding Rings with Diamonds <span class="w-cur-left"> &#62; </span></a>
+                            <a href="/wedding-rings/eternity_woman" class="w-list-group-item">Eternity Wedding Rings <span class="w-cur-left"> &#62; </span></a>
+                            <a href="/wedding-rings/classic_man" class="w-list-group-item">Wedding Rings for Men <span class="w-cur-left"> &#62; </span></a>
                         </div>
                     </div>
                     <div class="w-shadow-slider"></div>
@@ -218,10 +217,10 @@
                             <img src="/catalog/view/theme/canary/img/demo_new_template/diamons_jewelry.jpg" alt="">
                         </div>
                         <div class="list-group text-center">
-                            <a href="/fine_jeverly/diamond_studs" class="w-list-group-item">Diamond Studs <span class="w-cur-left"> > </span></a>
-                            <a href="/fine_jeverly/diamond_earrings" class="w-list-group-item">Diamond Earrings <span class="w-cur-left"> > </span></a>
-                            <a href="/fine_jeverly/diamond_pendants" class="w-list-group-item">Diamond Pendants <span class="w-cur-left"> > </span></a>
-                            <a href="/fine_jeverly/fashion_necklaces" class="w-list-group-item">Diamond Necklaces <span class="w-cur-left"> > </span></a>
+                            <a href="/fine_jeverly/diamond_studs" class="w-list-group-item">Diamond Studs <span class="w-cur-left"> &#62; </span></a>
+                            <a href="/fine_jeverly/diamond_earrings" class="w-list-group-item">Diamond Earrings <span class="w-cur-left"> &#62; </span></a>
+                            <a href="/fine_jeverly/diamond_pendants" class="w-list-group-item">Diamond Pendants <span class="w-cur-left"> &#62; </span></a>
+                            <a href="/fine_jeverly/fashion_necklaces" class="w-list-group-item">Diamond Necklaces <span class="w-cur-left"> &#62; </span></a>
                         </div>
                     </div>
                     <div class="w-shadow-slider"></div>
@@ -238,10 +237,10 @@
                             <img src="/catalog/view/theme/canary/img/demo_new_template/gemstones_jewelry.jpg" alt="">
                         </div>
                         <div class="list-group text-center">
-                            <a href="/fine_jeverly/gemstone_earrings&filter=7" class="w-list-group-item">Gemstones Earrings <span class="w-cur-left"> > </span></a>
-                            <a href="/fine_jeverly/gemstone_pendants&filter=7" class="w-list-group-item">Gemstones Pendants <span class="w-cur-left"> > </span></a>
-                            <a href="/fine_jeverly/gemstone_rings&filter=7" class="w-list-group-item">Gemstones Rings <span class="w-cur-left"> > </span></a>
-                            <a href="/fine_jeverly/gemstone_bracelets&filter=7" class="w-list-group-item">Gemstones Bracelets <span class="w-cur-left"> > </span></a>
+                            <a href="/fine_jeverly/gemstone_earrings&filter=7" class="w-list-group-item">Gemstones Earrings <span class="w-cur-left"> &#62; </span></a>
+                            <a href="/fine_jeverly/gemstone_pendants&filter=7" class="w-list-group-item">Gemstones Pendants <span class="w-cur-left"> &#62; </span></a>
+                            <a href="/fine_jeverly/gemstone_rings&filter=7" class="w-list-group-item">Gemstones Rings <span class="w-cur-left"> &#62; </span></a>
+                            <a href="/fine_jeverly/gemstone_bracelets&filter=7" class="w-list-group-item">Gemstones Bracelets <span class="w-cur-left"> &#62; </span></a>
                         </div>
                     </div>
                     <div class="w-shadow-slider"></div>
@@ -345,12 +344,15 @@
                     <div class="col-md-12 col-sm-12">
 
                         <span class="h3">Stories from the Blog</span>
+                        <div class="blog-control-prev"></div>
+                        <div class="blog-control-next"></div>
                         <div class="icons-search_diamond_icon"></div>
+
                     </div>
                 </div>
 
-                <div class="row margin-top-30 margin-buttom-30">
-                    <div class="col-sm-6 col-md-3">
+                <div class="margin-top-30 margin-buttom-30 bxslider-blog">
+                    <div class="slide">
                         <div class="thumbnail">
                             <div class="marc-date">
                                 <strong>Sep</strong>
@@ -367,7 +369,7 @@
                         <div class="w-shadow-slider"></div>
                     </div>
 
-                    <div class="col-sm-6 col-md-3">
+                    <div class="slide">
                         <div class="thumbnail">
                             <div class="marc-date">
                                 <strong>Sep</strong>
@@ -384,7 +386,7 @@
                         <div class="w-shadow-slider"></div>
                     </div>
 
-                    <div class="col-sm-6 col-md-3">
+                    <div class="slide">
                         <div class="thumbnail">
                             <div class="marc-date">
                                 <strong>Sep</strong>
@@ -401,7 +403,7 @@
                         <div class="w-shadow-slider"></div>
                     </div>
 
-                    <div class="col-sm-6 col-md-3">
+                    <div class="slide">
                         <div class="thumbnail">
                             <div class="marc-date">
                                 <strong>Sep</strong>
@@ -417,6 +419,42 @@
                         </div>
                         <div class="w-shadow-slider"></div>
                     </div>
+
+                    <div class="slide">
+                        <div class="thumbnail">
+                            <div class="marc-date">
+                                <strong>Sep</strong>
+                                <div>27</div>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/blog1.jpg" alt="">
+                            <div class="caption">
+                                <h3>Ancient India and the Origins of Diamond Investing</h3>
+                                <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
+
+                            </div>
+                            <a href="#" class="btn btn-default" role="button">Read more</a>
+                        </div>
+                        <div class="w-shadow-slider"></div>
+                    </div>
+
+
+                    <div class="slide">
+                        <div class="thumbnail">
+                            <div class="marc-date">
+                                <strong>Sep</strong>
+                                <div>27</div>
+                            </div>
+                            <img src="/catalog/view/theme/canary/img/demo_new_template/blog3.jpg" alt="">
+                            <div class="caption">
+                                <h3>Ancient India and the Origins of Diamond Investing</h3>
+                                <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
+
+                            </div>
+                            <a href="#" class="btn btn-default" role="button">Read more</a>
+                        </div>
+                        <div class="w-shadow-slider"></div>
+                    </div>
+
                 </div>
             </div>
         </div>

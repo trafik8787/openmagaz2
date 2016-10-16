@@ -19,14 +19,31 @@ $(document).ready(function() {
 
     $('.bxslider').bxSlider({
         auto: true,
-        minSlides: 2,
+        minSlides: 1,
         maxSlides: 2,
         slideWidth: 230,
-        slideMargin: 30,
+        slideMargin: 10,
         responsive: true,
-        pager: false
+        pager: false,
+        adaptiveHeight: true
         // nextSelector: '.icons-next_slider_icon',
         // prevSelector: '.icons-prev_slider_icon'
+
+    });
+
+    $('.bxslider-blog').bxSlider({
+        auto: true,
+        minSlides: 1,
+        maxSlides: 4,
+        slideWidth: 287,
+        slideMargin: 30,
+        moveSlides: 1,
+        infiniteLoop: true,
+        responsive: true,
+        pager: false,
+        adaptiveHeight: true,
+         nextSelector: '.blog-control-next',
+         prevSelector: '.blog-control-prev'
 
     });
 
@@ -382,10 +399,14 @@ $(document).ready(function() {
         $(this).css({
             'width': "150px",
             //'height': "165px",
-            'top': '-20px',
+            'top': '-17px',
             'z-index': 2
         });
-        $(this).parent().find('li').not($(this)).css({'top': '-31px'});
+        $(this).parent().find('li').not($(this)).css({'top': '-30px'});
+        $(this).find('.w-home-briliant').css({
+            'box-shadow': '-1px 0 3px #ccc, 1px 0 3px #ccc',
+            'border': '1px solid #cfdae6'
+        });
          $(this).prevAll().css({'left': '15px'});
          $(this).nextAll().css({'left': '-15px'});
 
@@ -396,6 +417,10 @@ $(document).ready(function() {
             //'height': "165px",
             'top': '0',
             'z-index': 1
+        });
+        $(this).find('.w-home-briliant').css({
+            'box-shadow': '0 0 1px #265293, 11px 15px 22px #144082',
+            'border': 'none'
         });
         $(this).parent().find('li').not($(this)).css({'top': '0'});
         $(this).prevAll().css({'left': '0'});

@@ -6,12 +6,12 @@
         <div class="row w-footer-newsletter">
 
             <div class="center-bl">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-3">
                     <div class="h3">
                         Sign up to receive Exclusive Offers & News
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 col-sm-9">
 
                     <form class="form-inline w-newsletter-form" role="form">
                         <div class="form-group">
@@ -27,7 +27,7 @@
         </div>
         <div class="row w-row-footer-menu">
             <div class="center-bl">
-                <div class="col-md-12">
+                <div class="col-md-12 col-sm-12">
                     <ul class="list-inline">
                         <li><a href="">ENGAGEMENT RINGS</a></li>
                         <li><span>.</span></li>
@@ -56,7 +56,7 @@
 
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="paging-right-50">
-                    <a href="/"><img src="/catalog/view/theme/canary/img/logo_new_footer.png" alt="briliantcanary"></a>
+                    <a href="/"><img src="/catalog/view/theme/canary/img/logo_new_footer.png" width="auto" class="logo-futer" alt="briliantcanary"></a>
                     <ul class="list-inline text-right">
                         <li><a href="https://www.facebook.com/BrilliantCanaryRings" class="icon-facebook"></a></li>
                         <li><a href="https://twitter.com/TheBrilliantC" class="icon-twitter"></a></li>

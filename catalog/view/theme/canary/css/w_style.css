@@ -55,7 +55,7 @@ font-family: "Raleway-Regular", fantasy;
     right: -40px!important;
     background-image: url('../img/icons-s0bc91fa097.png')!important;
     background-repeat: no-repeat!important;
-    background-position: -251px 0!important;
+    background-position: -642px 0!important;
     width: 14px!important;
     height: 50px!important;
 }
@@ -63,7 +63,7 @@ font-family: "Raleway-Regular", fantasy;
     left: -40px!important;
     background-image: url('../img/icons-s0bc91fa097.png')!important;
     background-repeat: no-repeat!important;
-    background-position: -265px 0!important;
+    background-position: -656px 0!important;
     width: 14px!important;
     height: 50px!important;
 }
@@ -157,7 +157,7 @@ font-family: "Raleway-Regular", fantasy;
     color: #ff5959;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 8px;
     font-family: 'SegoeUI', sans-serif;
 }
 
@@ -222,7 +222,7 @@ a.w-list-group-item {
 }
 
 .w-home-briliant img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .w-no-border-radius-top {
@@ -236,11 +236,13 @@ a.w-list-group-item {
     padding-right: 0;
     padding-top: 0;
     height: 317px;
+    z-index: 2;
+    position: relative;
 }
 
 .w-bloc-home-category .list-group {font-family: "Raleway-Bold", fantasy;font-size: 15px;}
 
-.w-bloc-home-category .list-group .w-cur-left {right: 25px;position: absolute;font-size: 18px;}
+.w-bloc-home-category .list-group .w-cur-left {right: 25px;position: absolute;font-size: 18px;color: #929394;}
 
 .w-bloc-home-category .h3 {
     font-family: "Raleway-Bold", fantasy;
@@ -286,7 +288,7 @@ a.w-list-group-item {
 .w-diamond-home-sparite .w-diam-row {
 width: 120px;
 z-index: 1;
-display: inline-block;
+display: table-cell;
 position: relative;
 height: 170px;
 }
