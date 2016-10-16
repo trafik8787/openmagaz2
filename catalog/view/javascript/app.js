@@ -398,7 +398,6 @@ $(document).ready(function() {
 
         $(this).css({
             'width': "150px",
-            //'height': "165px",
             'top': '-17px',
             'z-index': 2
         });
@@ -407,6 +406,10 @@ $(document).ready(function() {
             'box-shadow': '-1px 0 3px #ccc, 1px 0 3px #ccc',
             'border': '1px solid #cfdae6'
         });
+        $(this).find('.w-diamond-name-sparite a').css({
+            'text-decoration': 'underline'
+        });
+
          $(this).prevAll().css({'left': '15px'});
          $(this).nextAll().css({'left': '-15px'});
 
@@ -414,13 +417,16 @@ $(document).ready(function() {
     }, function() {
         $(this).css({
             'width': "120px",
-            //'height': "165px",
             'top': '0',
             'z-index': 1
         });
         $(this).find('.w-home-briliant').css({
             'box-shadow': '0 0 1px #265293, 11px 15px 22px #144082',
             'border': 'none'
+        });
+
+        $(this).find('.w-diamond-name-sparite a').css({
+            'text-decoration': 'none'
         });
         $(this).parent().find('li').not($(this)).css({'top': '0'});
         $(this).prevAll().css({'left': '0'});
