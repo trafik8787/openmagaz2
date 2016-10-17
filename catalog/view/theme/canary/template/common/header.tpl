@@ -462,7 +462,7 @@
                                 </div>
                             </li>
                             <li><span class="w-top-marcer-menu">.</span></li>
-                            <li class="dropdown-b"><!--engagement rings-->
+                            <li class="dropdown-b"><!--*engagement rings*-->
                                 <a href="<?php echo $categories[1]['href']?>" class="w-general-category"><?php echo $categories[1]['name']?></a>
                                 <div class="dropdown-inside">
                                     <div class="title">engagement setting rings</div>
@@ -629,7 +629,7 @@
                             <li><span class="w-top-marcer-menu">.</span></li>
 
                             <li class="dropdown-b" data-target="menu4">
-                                <a href="/gemstones" class="w-general-category"><?php echo $categories[4]['name']?></a>
+                                <a href="<?php echo $categories[4]['href']?>" class="w-general-category"><?php echo $categories[4]['name']?></a>
                                 <div class="dropdown-inside">
                                     <div class="row clearfix">
                                         <div class="col-md-4 col-sm-4 col-xs-4">

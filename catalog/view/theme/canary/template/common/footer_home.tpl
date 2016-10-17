@@ -29,17 +29,17 @@
             <div class="center-bl">
                 <div class="col-md-12 col-sm-12">
                     <ul class="list-inline">
-                        <li><a href="">ENGAGEMENT RINGS</a></li>
+                        <li><a href="<?php echo $categories[1]['href']?>"><?php echo $categories[1]['name']?></a></li>
                         <li><span>.</span></li>
-                        <li><a href="">WEDDING RINGS</a></li>
+                        <li><a href="<?php echo $categories[2]['href']?>"><?php echo $categories[2]['name']?></a></li>
                         <li><span>.</span></li>
-                        <li><a href="">DIAMONDS</a></li>
+                        <li><a href="/diamonds">DIAMONDS</a></li>
                         <li><span>.</span></li>
-                        <li><a href="">GEMSTONES</a></li>
+                        <li><a href="<?php echo $categories[4]['href']?>"><?php echo $categories[4]['name']?></a></li>
                         <li><span>.</span></li>
-                        <li><a href="">JEWELRY & GIFTS</a></li>
+                        <li><a href="<?php echo $categories[3]['href']?>"><?php echo $categories[3]['name']?></a></li>
                         <li><span>.</span></li>
-                        <li><a href="">INFO</a></li>
+                        <li><a href="/education">INFO</a></li>
                     </ul>
                 </div>
             </div>
