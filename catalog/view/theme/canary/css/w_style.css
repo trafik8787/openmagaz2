@@ -154,11 +154,10 @@ font-family: "Raleway-Regular", fantasy;
 
 
 .w-price {
-    color: #ff5959;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 8px;
-    font-family: 'SegoeUI', sans-serif;
+    color: #2b2a29;
+    font-size: 15.3px;
+    margin-top: 4px;
+    font-family: 'Montserrat-Regular', fantasy;
 }
 
 .w-bredcrum-border {
@@ -223,6 +222,7 @@ a.w-list-group-item {
 
 .w-home-briliant img {
     max-width: 100%;
+    height: 76px;
 }
 
 .w-no-border-radius-top {
@@ -1039,7 +1039,7 @@ star-rating
 
 
 
-/*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ checbox Ñ„Ð¸Ð»ÑŒÑ‚Ñ€Ð¾Ð²*/
+/*Ã‘ÂÃ‘â€šÃÂ¸ÃÂ»ÃÂ¸ ÃÂ´ÃÂ»Ã‘Â checbox Ã‘â€žÃÂ¸ÃÂ»Ã‘Å’Ã‘â€šÃ‘â‚¬ÃÂ¾ÃÂ²*/
 
 
 

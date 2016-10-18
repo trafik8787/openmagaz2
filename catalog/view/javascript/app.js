@@ -53,7 +53,15 @@ $(document).ready(function() {
         $collapse.collapse('toggle');
     });
 
+    $('.collapse').on('shown.bs.collapse', function () {
+        $('.w-more-info span').text('less info');
 
+    });
+
+    $('.collapse').on('hidden.bs.collapse', function () {
+        $('.w-more-info span').text('more info');
+
+    });
 
     //пагинация ajax
     $(document).on('click', '.w-pagination-product .pagination a', function(){
@@ -398,10 +406,13 @@ $(document).ready(function() {
 
         $(this).css({
             'width': "150px",
-            'top': '-17px',
+            'top': '-16px',
             'z-index': 2
         });
-        $(this).parent().find('li').not($(this)).css({'top': '-30px'});
+
+        $(this).find('a > img').css({'height': '102px'});
+
+        $(this).parent().find('li').not($(this)).css({'top': '-27px'});
         $(this).find('.w-home-briliant').css({
             'box-shadow': '-1px 0 3px #ccc, 1px 0 3px #ccc',
             'border': '1px solid #cfdae6'
@@ -420,6 +431,8 @@ $(document).ready(function() {
             'top': '0',
             'z-index': 1
         });
+        $(this).find('a > img').css({'height': '76px'});
+
         $(this).find('.w-home-briliant').css({
             'box-shadow': '0 0 1px #265293, 11px 15px 22px #144082',
             'border': 'none'

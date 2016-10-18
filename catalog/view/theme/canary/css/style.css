@@ -244,7 +244,20 @@ input {
 }
 @font-face {
     font-family: 'Felix Titling';
-    src: url("../fonts/felixti.ttf");
+    src: url('../fonts/felixti.eot');
+    src: url('../fonts/felixti.woff') format('woff'),
+        url('../fonts/felixti.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'Felix Titling';
+        src: url('../fonts/felixti.svg#Felix Titling') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
 }
 
 
