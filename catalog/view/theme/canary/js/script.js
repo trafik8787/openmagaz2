@@ -254,7 +254,7 @@ function Productslider () {
 
 
     $('.slider-nav').slick({
-        slidesToShow: 7,
+        slidesToShow: 5,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
         dots: false,

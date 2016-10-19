@@ -198,15 +198,17 @@ input {
   border: 1px solid rgba(255, 89, 89, 0.4); }
 
 .one-product-info .rating {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-family: 'Raleway-Regular', fantasy;
+  font-size: 14px;
+  line-height: 12px;
+}
 
 .rating .star {
   width: 18px;
   height: 17px;
   display: inline-block;
   vertical-align: middle;
-  font-size: 14px;
-  font-family: 'SegoeUI', sans-serif;
   background: url("../img/star-ico.png") no-repeat center/contain; }
   .rating .star.dark-star {
     background: url("../img/star-dark.png") no-repeat center/contain; }
@@ -215,7 +217,11 @@ input {
 .rating span {
   margin-left: 5px;
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: bottom;
+}
+.rating span a {
+  color: #2f2e2d;
+}
 
 
 @font-face {
@@ -4210,7 +4216,7 @@ display: block;
       max-width: 100%; }
 
 .step-product {
-  margin: 0 0 20px;
+  margin: 0 0 30px;
   -webkit-box-shadow:0 4px 4px #eaeaea;
   -moz-box-shadow:0 4px 4px #eaeaea;
   box-shadow:0 4px 4px #eaeaea;
@@ -5190,34 +5196,56 @@ display: block;
   .one-product-slider .slick-slider {
     position: relative; }
     .one-product-slider .slick-slider button {
-      width: 8px;
-      height: 27px;
+      width: 18px;
+      height: 60px;
       position: absolute;
       top: 50%;
-      margin-top: -13px;
+      margin-top: -30px;
       border: 0;
       text-indent: 100px;
       overflow: hidden; }
-      .one-product-slider .slick-slider button[aria-label="Previous"] {
-        left: 0;
-        background: url("../img/arrow-sx-copy.png") no-repeat center; }
+      .one-product-slider .slick-slider button[aria-label="Previous"],
       .one-product-slider .slick-slider button[aria-label="Next"] {
-        right: 0;
-        background: url("../img/arrow-dx-copy.png") no-repeat center; }
+        background: url("../img/th-nav-arrow.png") no-repeat center;
+      }
+      .one-product-slider .slick-slider button[aria-label="Previous"]:hover,
+      .one-product-slider .slick-slider button[aria-label="Next"]:hover {
+        background-image: url("../img/th-nav-arrow-active.png");
+      }
+      .one-product-slider .slick-slider button[aria-label="Previous"] {
+        left: 2px;
+      }
+      .one-product-slider .slick-slider button[aria-label="Next"] {
+        right: 2px;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+
     .one-product-slider .slick-slider .slick-list {
       margin: 0 30px;
       padding-right: 2px; }
     .one-product-slider .slick-slider .wrapper-img-slider {
-      margin: 0 5px;
+      margin: 0 4px;
       cursor: pointer;
-      border: 1px solid grey;
-        text-align: center;
-        height: 70px;
+      border: 1px solid #d7d7d7;
+      padding: 5px;
+      text-align: center;
+      height: 90px;
     }
       .one-product-slider .slick-slider .wrapper-img-slider img {
         width: 100%;
         height: 100%;
         object-fit: contain; }
+
+      .one-product-slider .slick-slider .wrapper-img-slider video {
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+      }
 
 .single-product {
   margin-bottom: 80px; }
@@ -5268,8 +5296,9 @@ display: block;
   width: 50%;
   float: right;
   font-size: 14px;
-  color: #444444;
-  font-family: 'SegoeUI', sans-serif; }
+  color: #2f2e2d;
+  font-family: 'Raleway-Regular', fantasy;
+}
   .one-product-info .text-article {
     margin-bottom: 15px;
     text-transform: uppercase; }
@@ -5342,8 +5371,19 @@ display: block;
 
 .slider-for {
   margin-bottom: 20px;
-  border: 1px solid #808080;
-  border-radius: 2px; }
+  border: 1px solid #d3d2d2;
+  position: relative;
+}
+.slider-for:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: url("../img/product-img-shadow.png") no-repeat top;
+  background-size: contain;
+}
 
 .size-radio .btn-filter {
   padding: 3px 0; }
@@ -6425,5 +6465,3 @@ margin-right: 12px!important;
       margin-right: 0; }
 }
 
-
-/*# sourceMappingURL=style.css.map */

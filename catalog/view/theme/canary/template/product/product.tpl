@@ -90,7 +90,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-sm-12 paging-bottom-20">
-                            <h3><?=$description?></h3>
+                            <h3 class="w-product-desc"><?=$description?></h3>
                         </div>
                     </div>
 
