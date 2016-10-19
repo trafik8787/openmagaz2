@@ -124,7 +124,7 @@ $( document ).ready(function( $ ) {
 
     $(document).on('click', '.filter-change', function() {
 
-        $(".filter-wrapper").slideToggle(500, function(){
+        $(".wrapper-filter-close").slideToggle(500, function(){
             $(".filter-box").toggleClass('open');
         });
 
@@ -249,8 +249,6 @@ function Productslider () {
         asNavFor: '.slider-nav'
 
     });
-
-
 
 
     $('.slider-nav').slick({
