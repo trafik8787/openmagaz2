@@ -1,14 +1,16 @@
 
 <?//dd($wsubcategory)?>
 <div class="filter-box clearfix">
-    <div class="filter-wrapper paging-20 clearfix thumbnail">
+    <div class="filter-wrapper clearfix thumbnail">
         <?if (!empty($wsubcategory)):?>
 
             <?if ($category_id == 20): //ENGAGEMENT RINGS?>
                 <div class="one-line brilliant-style height-inherit w-group-wsubcat">
-                    <div class=" btn-group-filter box-color gemstones-box rings-box" >
-                        <?php foreach ($wsubcategory as $key => $row):?>
-                                <?php
+                    <div class="one-line-new">
+                        <div class="article">Style</div>
+                        <div class=" btn-group-filter box-color gemstones-box rings-box" >
+                            <?php foreach ($wsubcategory as $key => $row):?>
+                            <?php
 
                                     switch ($key) {
                                         case 0:
@@ -35,17 +37,18 @@
                                     }
                                 ?>
 
-                                <label class="btn btn-filter <?php if ($child_id == $row['cat_id']):?> active <?endif?> brackets">
-                                    <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i></a>
+                            <label class="btn btn-filter <?php if ($child_id == $row['cat_id']):?> active <?endif?> brackets">
+                                <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i></a>
 
-                                    <!--*<input type="radio" class="w-wsubcat" data-href="<?php echo $row['href']?>"> <i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i>*-->
-                                    <br>
-                                    <a href="<?php echo $row['href']?>"><?php echo $row['name']?></a>
-                                </label>
+                                <!--*<input type="radio" class="w-wsubcat" data-href="<?php echo $row['href']?>"> <i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i>*-->
+                                <br>
+                                <a href="<?php echo $row['href']?>"><?php echo $row['name']?></a>
+                            </label>
 
 
 
-                        <?endforeach?>
+                            <?endforeach?>
+                        </div>
                     </div>
                 </div>
 
