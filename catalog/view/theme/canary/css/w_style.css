@@ -4,16 +4,16 @@
     }
 }
 
-.h1{
+.col-md-12 > .h1{
     padding-bottom: 20px;
+    color: #39487d;
+    font-size: 38px;
     position: relative;
     display: block;
     font-family: 'Felix Titling', sans-serif;
-    color: #39487d;
-    font-size: 38px;
 }
 
-.h1:before{
+.col-md-12 > .h1:before{
     width: 166px;
     height: 11px;
     display: block;
@@ -179,9 +179,8 @@ font-family: "Raleway-Regular", fantasy;
 }
 
 .w-price {
-    color: #ff5959;
-    font-size: 20px;
-    font-weight: bold;
+    color: #2b2a29;
+    font-size: 15px;
     margin-top: 8px;
     font-family: 'Montserrat-Regular', fantasy;
 }
