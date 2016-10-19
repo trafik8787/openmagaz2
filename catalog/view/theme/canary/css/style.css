@@ -8,7 +8,21 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   background: transparent; }
 
 body {
-  line-height: 1; }
+  line-height: 1;
+  font-family: 'Raleway-Regular', fantasy;
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 ol, ul {
   list-style: none; }
@@ -342,18 +356,21 @@ button:hover, button:focus {
   color: white;
   font-size: 10px;
   border: 0;
-  text-align: center; }
-  .red-btn:hover, .red-btn:focus {
-    text-decoration: none;
-    color: white;
-    background: rgba(255, 89, 89, 0.8); }
+  text-align: center;
+}
+.red-btn:hover, .red-btn:focus {
+  text-decoration: none;
+  color: white;
+  background: rgba(255, 89, 89, 0.8);
+}
 
 .close-cart-main, .close-fancy {
   width: 12px;
   height: 12px;
   display: inline-block;
   border: 0;
-  background: url("../img/close-cart-main.png") no-repeat center/contain; }
+  background: url("../img/close-cart-main.png") no-repeat center/contain;
+}
 
 .question-filter {
   margin-left: 2px;
@@ -361,7 +378,8 @@ button:hover, button:focus {
   text-align: center;
   color: #ff5959;
   font-size: 14px;
-  vertical-align: bottom; }
+  vertical-align: bottom;
+}
 
 .btn-filter {
   padding: 5px 0;
@@ -372,33 +390,23 @@ button:hover, button:focus {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
-  border-radius: 0; }
-  .btn-filter:active, .btn-filter.active {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none; }
-    .btn-filter:active:before, .btn-filter.active:before {
-      width: 20px;
-      top: 0;
-      bottom: 0;
-      position: absolute;
-      left: 0;
-      content: "";
-      border: 1px solid #808080;
-      border-right: 0; }
-    .btn-filter:active:after, .btn-filter.active:after {
-      width: 20px;
-      top: 0;
-      bottom: 0;
-      position: absolute;
-      right: 0;
-      content: "";
-      border: 1px solid #808080;
-      border-left: 0; }
-  .btn-filter .brilliant-ico2.brilliant-s10 {
-    margin-bottom: -3px; }
-  .btn-filter .brilliant-ico2.brilliant-s7 {
-    margin-bottom: -2px; }
+  border-radius: 0;
+}
+.btn-filter:active, .btn-filter.active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.btn-filter.active{
+  background-color: #c4d5eb;
+  font-family: "Raleway-Bold", fantasy;
+}
+.btn-filter .brilliant-ico2.brilliant-s10 {
+  margin-bottom: -3px;
+}
+.btn-filter .brilliant-ico2.brilliant-s7 {
+  margin-bottom: -2px;
+}
 
 .fancy-btn {
   padding: 22px 37px;
@@ -417,26 +425,48 @@ button:hover, button:focus {
   position: relative;
   padding: 5px 10px;
   background-color: white;
-  color: #444444; }
-  .filter-advanced:after {
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 14px;
-    right: 10px;
-    border-style: solid;
-    border-width: 6px 4px 0 4px;
-    border-color: #ff5959 transparent transparent transparent;
-    content: ""; }
+  color: #444444;
+}
+.filter-advanced:after {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  border-style: solid;
+  border-width: 6px 4px 0 4px;
+  border-color: #ff5959 transparent transparent transparent;
+  content: "";
+}
 
+.functional-filter{
+  padding: 20px 0;
+}
+.btn-filter{
+  font-size: 12px;
+  text-transform: none;
+}
 .filter-change span{
   text-decoration: underline;
   display: inline-block;
 }
-.functional-filter{
-  padding: 20px 0;
+.filter-change:after{
+  content: "\f106";
+  position: absolute;
+  right: 0;
+  top: 5px;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.open .filter-change:after{
+  content: "\f107";
 }
 .filter-change {
+  padding-right: 20px;
   position: relative;
   display: inline-block;
   background-color: transparent;
@@ -446,6 +476,7 @@ button:hover, button:focus {
 }
 
 .filter-default-result {
+  margin-right: 35px;
   padding: 0;
   background-color: transparent;
   border: 0;
@@ -647,6 +678,32 @@ height: 3%;
     display: block;
     margin-bottom: 16px;
     text-shadow: 0 0 2px #ffeccc;
+}
+
+.apply-btn i{
+  margin-right: 30px;
+  display: inline-block;
+  font-size: 18px;
+  vertical-align: top;
+}
+.apply-btn{
+  padding: 20px 35px;
+  border: 0;
+  border-bottom: 1px solid #d1902e;
+  box-shadow: 0 2px 2px #d0d1d2;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #e2e2e2;
+  font-family: "Raleway-Bold", fantasy;
+  background: -moz-linear-gradient(top, #fec130, #efac4a);
+  background: -webkit-linear-gradient(top, #fec130, #efac4a);
+  background: -o-linear-gradient(top, #fec130, #efac4a);
+  background: -ms-linear-gradient(top, #fec130, #efac4a);
+  background: linear-gradient(top, #fec130, #efac4a);
 }
 
 .w-right-home-top-slider .panel.panel-default .panel-footer {
@@ -4332,7 +4389,7 @@ display: block;
 
 .filter-box .filter-wrapper {
   height: inherit;
-  padding: 30px 30px 0;
+  padding: 0 30px 0;
 }
 .filter-box .filter-wrapper.filter-wrapper-pn {
     border: 1px solid #ccc;
@@ -4351,7 +4408,7 @@ display: block;
   text-align: right;
 }
 .filter-box .functional-filter .filter-change {
-  margin-right: 65px;
+  margin-right: 40px;
 }
 .filter-box .left-f {
   width: 44%;
@@ -4388,14 +4445,16 @@ display: block;
 }
 
 .one-line-new{
-  position: relative;
+  margin-top: -1px;
   padding-left: 115px;
+  position: relative;
 }
 .one-line-new .article{
   width: 110px;
   position: absolute;
   left: 0;
-  top: 40%;
+  top: 50%;
+  margin-top: -7px;
   color: #2f2e2d;
   font-family: "Raleway-Bold", fantasy;
   font-size: 15px;
@@ -5092,49 +5151,83 @@ display: block;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; }
-  .static-page .menu-mobile-l > * {
-    margin: 0 !important; }
-  .static-page .menu-mobile-l .copyright {
-    padding: 5px;
-    font-size: 14px;
-    text-align: center; }
-  .static-page .menu-mobile-l .mobile-link-menu {
-    padding: 10px 15px !important; }
-  .static-page .menu-mobile-l .brilliant-panel-main.panel-group {
-    border: 0;
-    border-bottom: 1px solid #dddddd; }
-
-.filter-box .filter-wrapper .box-color.rings-box .active {
-  color: #ff5959;
+  transition: 0.5s;
 }
+.static-page .menu-mobile-l > * {
+  margin: 0 !important;
+}
+.static-page .menu-mobile-l .copyright {
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+.static-page .menu-mobile-l .mobile-link-menu {
+  padding: 10px 15px !important;
+}
+
+.anyone-box{
+  padding: 23px 0;
+  border-bottom: 2px solid #f3f3f3;
+}
+.static-page .menu-mobile-l .brilliant-panel-main.panel-group {
+  border: 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+.all-line-filter a:last-child{
+  margin-right: 0;
+}
+.all-line-filter a.active{
+  background-color: #c4d5eb;
+  font-family: "Raleway-Bold", fantasy;
+}
+.all-line-filter a:hover{
+  background-color: #c4d5eb;
+}
+.all-line-filter a{
+  margin-right: 35px;
+  padding: 5px 12px 3px;
+  color: #2f2e2d;
+  vertical-align: middle;
+  display: inline-block;
+  background-color: #dededd;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+
+}
+
+.all-line-filter{
+  margin-right: 20px;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.brackets:not(.active):hover::before, .brackets:not(.active):hover::after{
+  display: none;
+}
+.filter-box .filter-wrapper .box-color label:hover{
+  background-color: #eff5fc;
+}
+
 .filter-box .filter-wrapper .box-color label {
-    height: 88px;
-    padding: 18px 7px;
-    display: inline-block;
-    position: relative;
+  margin: 0 10px;
+  padding: 11px 7px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
 }
 
-.filter-box .filter-wrapper .box-color label.active:before {
-  width: 20px;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  left: 0;
-  content: "";
-  border: 1px solid #808080;
-  border-right: 0;
+.filter-box .filter-wrapper .box-color label.btn-filter.active{
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding: 5px 10px;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
 }
-.filter-box .filter-wrapper .box-color label.active:after {
-  width: 20px;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  right: 0;
-  content: "";
-  border: 1px solid #808080;
-  border-left: 0;
-}
+
 .filter-box .filter-wrapper .box-color label .gemstones {
   width: 53px;
   height: 53px;

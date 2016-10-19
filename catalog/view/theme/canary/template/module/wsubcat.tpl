@@ -3,12 +3,27 @@
 <div class="filter-box clearfix">
     <div class="filter-wrapper clearfix thumbnail">
         <?if (!empty($wsubcategory)):?>
-
             <?if ($category_id == 20): //ENGAGEMENT RINGS?>
+            <div class="wrapper-filter-close">
+                <div class="anyone-box">
+                    <div class="one-line-new">
+                        <div class="article">For anyone</div>
+                        <div class=" btn-group-filter box-color gemstones-box rings-box">
+                            <div class="all-line-filter">
+                                <a href="#" class="active">All</a>
+                                <a href="#">Women</a>
+                                <a href="#">Sets for him and her</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="one-line brilliant-style height-inherit w-group-wsubcat">
                     <div class="one-line-new">
                         <div class="article">Style</div>
                         <div class=" btn-group-filter box-color gemstones-box rings-box" >
+                            <div class="all-line-filter">
+                                <a href="#" class="active">All</a>
+                            </div>
                             <?php foreach ($wsubcategory as $key => $row):?>
                             <?php
 
@@ -36,7 +51,6 @@
                                             break;
                                     }
                                 ?>
-
                             <label class="btn btn-filter <?php if ($child_id == $row['cat_id']):?> active <?endif?> brackets">
                                 <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i></a>
 
@@ -53,7 +67,7 @@
                 </div>
 
             <?elseif($category_id == 69): //WEDDING RINGS?>
-
+            <div class="wrapper-filter-close">
                 <div class="one-line brilliant-style height-inherit gender-box clearfix">
                     <div class="gender-title clearfix">
                         <div class="title">woman</div>
@@ -108,7 +122,7 @@
 
 
             <?elseif($category_id == 82): //FINE JEWERLY?>
-
+                <div class="wrapper-filter-close">
                 <div class="one-line brilliant-style height-inherit product-p-5 clearfix">
                     <div class=" btn-group-filter box-color gemstones-box rings-box">
                         <label class="btn btn-filter <?php if ($child_id == $wsubcategory[0]['cat_id']):?> active <?endif?> brackets">

@@ -9,6 +9,9 @@
     padding-bottom: 20px;
     position: relative;
     display: block;
+    font-family: 'Felix Titling', sans-serif;
+    color: #39487d;
+    font-size: 38px;
 }
 
 .h1:before{
