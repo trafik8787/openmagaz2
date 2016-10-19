@@ -51,6 +51,12 @@ class ControllerCommonFooterHome extends Controller {
 
         $data['newsletter'] = $this->load->controller('marketing/newsletter');
 
+        // Menu
+        $this->load->model('catalog/category');
+
+        $categories2 = $this->model_catalog_category->getCategoriesNew(true);
+        $data['categories'] = $categories2;
+
 		// Whos Online
 		if ($this->config->get('config_customer_online')) {
 			$this->load->model('tool/online');
