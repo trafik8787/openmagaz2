@@ -19,7 +19,7 @@
                     </ul>
                 </div>
                 <div class="col-md-7 col-sm-7 col-xs-12 padding-0">
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/baner-746-52.jpg" width="100%" style="vertical-align: middle;">
+                    <img src="/catalog/view/theme/canary/img/breadcrumb-img.png" class="bread-baner">
                 </div>
             </div>
             <div class="row margin-buttom-20">
@@ -150,6 +150,20 @@
                 <div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>
             </div>
 
+            <div class="box-stat-text center-bl">
+                <div class="h2">
+                    TEXT ABOUT ENGAGEMENT RINGS
+                </div>
+                <p>
+                    Moved thing evening Give good. Deep. Two evening doesn't replenish open creepeth signs spirit. Unto fill let. Created. Void can't spirit behold own days for behold one above waters. Subdue given from bring gathered he there moveth. Bring dry. Creature which you'll sea rule called fruit their you're kind you're, that all doesn't female creature signs fourth itself him great moveth There grass Behold behold under without divide dry. Void doesn't, form be likeness gathering place waters were which. Over behold, dry rule him wherein tree seed fruit tree Fruit him thing have was lesser fruit under. Lights image whales night heaven unto.
+                </p>
+                <p>
+                    Given. All male his, morning third they're you firmament and first replenish them deep of yielding i moving wherein you'll day second over divide All life gathered male over fill, male doesn't days seas. So sixth firmament waters face above appear you sixth one and. Blessed days Their created brought moveth fifth forth winged fourth saw, beast abundantly, two also, gathering creeping sea greater fly fish upon may.
+                </p>
+                <p>
+                    Were made doesn't deep you yielding us place abundantly that place hath greater you'll given fly female kind hath appear. Seas tree. Beginning was years him void very he Divide green lights. Hath had bearing said a open stars every deep abundantly had. Stars. Don't tree god without, created all seasons. Divide called give greater was us tree night sixth first fruit set that fifth it life seed Greater fruit moving earth over after third creepeth was so from him. Earth tree bring thing years firmament winged darkness great whose. Also gathered was god void. Don't third subdue midst light midst. First Tree upon all light seas after without divided gathering their be. Yielding, void male. So thing abundantly seasons beginning. Evening dominion don't bring moved meat sixth blessed.
+                </p>
+            </div>
 
         </div>
 

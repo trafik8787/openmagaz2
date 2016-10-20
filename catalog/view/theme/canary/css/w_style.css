@@ -25,6 +25,28 @@
     background: url("../img/bord-title-img.png") no-repeat center / contain;
 }
 
+.h2{
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    color: #39487d;
+    font-size: 29px;
+    position: relative;
+    text-align: center;
+    display: block;
+    font-family: 'Felix Titling', sans-serif;
+}
+.h2:before{
+    width: 166px;
+    height: 11px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -83px;
+    content: "";
+    background: url("../img/bord-title-img.png") no-repeat center / contain;
+}
+
 .bx-wrapper {
     -moz-box-shadow: none!important;
     -webkit-box-shadow: none!important;
@@ -201,9 +223,28 @@ font-family: "Raleway-Regular", fantasy;
     font-family: 'Montserrat-Regular', fantasy;
 }
 
+.bread-baner{
+    margin-top: -1px;
+    height: 100%;
+}
+.bread-baner{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.w-bredcrum-border .padding-0{
+    height: 60px;
+}
+
 .w-bredcrum-border {
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    height: 60px;
+    background-color: #dfe6ed;
+    border-top: 1px solid #cdd6df;
+    border-bottom: 1px solid #cdd6df;
+    -webkit-box-shadow: inset 0 2px 3px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 2px 3px rgba(0,0,0,0.1);
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.1);
 }
 
 .w-more-info {
@@ -319,40 +360,27 @@ a.w-list-group-item {
     transform: translate3d(0, 0, 0);
 }
 
-
-
 .w-diamond-home-sparite {
-
-display: block;
-
-position: relative;
+    display: block;
+    position: relative;
 }
 
 .w-diamond-home-sparite .w-diam-row {
-
-width: 120px;
-
-z-index: 1;
-
-display: table-cell;
-
-position: relative;
-
-height: 170px;
+    width: 120px;
+    height: 170px;
+    z-index: 1;
+    display: table-cell;
+    position: relative;
 }
 
 .w-diamond-home-sparite .w-diamond-name-sparite {
-    
-padding-top: 15px;
+    padding-top: 15px;
 }
 
 .w-diamond-home-sparite .w-diamond-name-sparite a {
-
-font-family: "Raleway-Bold", fantasy;
-
-font-size: 15px;
-
-color: #ffffff;
+    font-family: "Raleway-Bold", fantasy;
+    font-size: 15px;
+    color: #ffffff;
 }
 
 .w-sparite-shadow {
@@ -410,10 +438,8 @@ color: #ffffff;
 }
 
 .w-list-link li {
-
-font-family: "Raleway-Bold", fantasy;
-
-font-size: 15px;
+    font-family: "Raleway-Bold", fantasy;
+    font-size: 15px;
 }
 
 .w-list-link li a {
@@ -1271,7 +1297,7 @@ star-rating
 }
 
 .w-navigate-circle .my-div.active-circle{
-    background: #cfdfef;
+    background: #cfdfef url("../img/bg-step.png") no-repeat bottom left;
 }
 
 .w-navigate-circle .my-div.active-circle:after{
