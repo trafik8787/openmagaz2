@@ -29,7 +29,7 @@ class ControllerModuleWsubcat extends Controller {
         foreach ($results as $result) {
 
             $data['wsubcategory'][] = array(
-                'name' => $result['name'],
+                'name' => ucfirst(strtolower($result['name'])),
                 'image' => $result['image'],
                 'cat_id' => $result['category_id'],
                 'href' => $this->url->link('product/category', 'path=' . $result['parent_id'] . '_' . $result['category_id'])
