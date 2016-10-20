@@ -207,11 +207,6 @@ font-family: "Raleway-Regular", fantasy;
     text-decoration: none;
 }
 
-.w-help-ned .glyphicon {
-    margin-right: 5px;
-}
-
-
 .padding-0 {
     padding: 0;
 }
@@ -925,7 +920,7 @@ home hover efect
 .w-navigate-circle .my-div {
     width: 33%;
     height: 74px;
-    padding: 20px 40px 20px 85px;
+    padding: 20px 30px 20px 85px;
     position: relative;
     display: block;
     float: left;
@@ -1329,7 +1324,7 @@ star-rating
     left: 0;
     width: 100%;
     height: 6px;
-    background: url(../img/product-img-shadow.png) no-repeat top;
+    background: url("../img/product-img-shadow.png") no-repeat top;
     background-size: contain;
 }
 
@@ -1379,6 +1374,14 @@ star-rating
     border-radius: 50%;
 }
 
+.product-details .table .prod-more-spec {
+    color: #2f2e2d;
+    text-decoration: none;
+}
+.product-details .table .prod-more-spec:hover {
+    text-decoration: underline;
+}
+
 .product-tags {
     margin-left: -13px;
     color: #2f2e2d;
@@ -1422,6 +1425,37 @@ star-rating
     border: none;
     color: #2f2e2d;
     padding: 9px 20px 20px;
+}
+
+.product-buy-details .left {
+    float: left;
+    width: 220px;
+    max-width: calc(50% - 15px);
+}
+.product-buy-details .right {
+    float: right;
+    width: 220px;
+    max-width: calc(50% - 15px);
+}
+
+.product-buy-details .right .btn {
+    max-width: 100%;
+    margin: 0;
+}
+
+.your-ring-size {
+    color: #2f2e2d;
+    font-size: 15px;
+    line-height: 1;
+    text-decoration: underline;
+}
+.your-ring-size:focus {
+    text-decoration: underline;
+    color: #2f2e2d
+}
+.your-ring-size:hover {
+    text-decoration: none;
+    color: #2f2e2d
 }
 
 .bold-angle-right {
@@ -1478,8 +1512,8 @@ star-rating
 }
 .styled-modal .close span {
     position: relative;
-    top: -1px;
-    left: 1px;
+    top: -3px;
+    left: 0px;
 }
 
 .styled-modal .modal-body {
@@ -1540,7 +1574,7 @@ star-rating
     margin: 30px 0 40px;
     border: 1px solid #75aedb;
     background: linear-gradient(#1477c1, #0092dc);
-    padding: 13px;
+    padding: 11px;
     font-family: "Raleway-Regular", fantasy;
 }
 
@@ -1558,9 +1592,415 @@ star-rating
     display: inline-block;
 }
 
-.w-help-ned {
-
+.w-help-ned .help-ico {
+    margin-right: 5px;
 }
+
+.help-ico {
+    display: inline-block;
+    vertical-align: text-top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.help-ico-chat {
+    width: 17px;
+    height: 15px;
+    background: url("../img/h-ico-chat.png");
+}
+
+.help-ico-mail {
+    width: 16px;
+    height: 14px;
+    background: url("../img/h-main-ico.png");
+}
+
+.help-ico-phone {
+    width: 16px;
+    height: 16px;
+    background: url("../img/h-phone-ico.png");
+}
+
+.product-advantages {
+    margin: 25px 0 4px;
+}
+
+.product-advantages-header {
+    text-align: center;
+    margin: 0 0 12px;
+}
+
+.product-advantages-header .icons-quality_service_icon {
+    margin: 5px auto;
+}
+
+.product-advantages-title {
+    font-family: "Felix Titling", sans-serif;
+    color: #39487d;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: normal;
+    position: relative;
+    margin: 0;
+}
+
+.product-advantages-list {
+    margin: 0 -4px;
+}
+
+.product-advantages-col {
+    width: calc(50% - 8px);
+    float: left;
+    margin: 0 4px;
+}
+
+
+.product-advantages-item {
+    height: 60px;
+    border: 1px solid #b9cddb;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.product-advantages-item:before {
+    content: "";
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: url("../img/product-img-shadow.png") no-repeat top;
+    background-size: contain;
+}
+
+.product-advantages-item:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.product-advantages-item-img {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 95px;
+}
+
+.product-advantages-item-text {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 105px);
+    color: #39487d;
+    font-size: 15px;
+    line-height: 1.2;
+    font-family: 'Raleway-Bold', sans-serif;
+}
+
+.size-product .dropdown {
+    border: 1px solid #d0cec9;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+.size-product .dropdown:hover {
+    box-shadow: none;
+}
+
+.size-product .dropdown .selected {
+    line-height: 35px;
+    height: 37px;
+    padding: 0 14px;
+    color: #9b9c9c;
+    font-family: 'Montserrat-Regular', fantasy;
+    font-size: 12px;
+}
+
+.size-product .dropdown li {
+    color: #333;
+    font-family: 'Montserrat-Regular', fantasy;
+    font-size: 12px;
+}
+
+.size-product .dropdown .carat {
+    border: 4px solid transparent;
+    border-top: 7px solid #aaa9a9;
+}
+
+.size-product .dropdown.open {
+    box-shadow: none;
+}
+
+
+.size-product .dropdown.open .carat {
+    margin-top: -10px;
+    border-top: 4px solid transparent;
+    border-bottom: 7px solid #aaa9a9;
+}
+
+.size-product .shipping-input {
+    height: 37px;
+    padding: 0 14px;
+    color: #9b9c9c;
+    font-family: 'Montserrat-Regular', fantasy;
+    font-size: 12px;
+    border: 1px solid #d0cec9;
+    border-radius: 3px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.size-product .shipping-label {
+    height: 37px;
+    color: #9b9c9c;
+    font-family: 'Montserrat-Regular', fantasy;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.size-product .select-simulate-btn {
+    height: 37px;
+}
+
+.size-product .select-simulate-btn:before {
+    background: none;
+    border: 4px solid transparent;
+    border-top: 7px solid #aaa9a9;
+    width: auto;
+    height: auto;
+    right: 13px;
+    top: 50%;
+    margin-top: -4px;
+    left: auto;
+}
+
+.size-product .select-simulate-list {
+    border: 1px solid #d0cec9;
+    top: calc(100% - 1px);
+    border-top: 1px solid #eee;
+}
+
+.size-product .select-simulate-list a {
+    color: #333;
+    font-family: 'Montserrat-Regular', fantasy;
+    font-size: 12px;
+}
+
+.size-product .form-group,
+.size-product .cc-shipping-row {
+    margin-bottom: 8px;
+}
+
+.it-list {
+    margin: 35px -12px 0;
+}
+.it-list li {
+    padding: 0;
+    margin: 0 12px 5px;
+    vertical-align: middle;
+}
+
+.it-list a {
+    color: #2f2e2d;
+}
+
+.it-ico {
+    display: inline-block;
+    vertical-align: baseline;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 7px;
+}
+
+.it-ico-heart {
+    width: 18px;
+    height: 16px;
+    background-image: url("../img/it-ico-heart.png");
+}
+
+.it-ico-mail {
+    width: 17px;
+    height: 12px;
+    background-image: url("../img/it-ico-mail.png");
+}
+
+.it-ico-star {
+    width: 18px;
+    height: 16px;
+    background-image: url("../img/it-ico-star.png");
+}
+
+.it-ico-print {
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/it-ico-print.png");
+}
+
+.include-section {
+    background: linear-gradient(#f1ebdb, #f5f1e5);
+    border-top: 1px solid #f7e7af;
+    border-bottom: 1px solid #e8ddb7;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+    padding: 45px 0 35px;
+}
+
+.product-section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-section-title {
+    font-family: "Felix Titling", sans-serif;
+    color: #39487d;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: normal;
+    margin: 0 0 0;
+}
+
+.product-section-header .icons-quality_service_icon {
+    margin: 10px auto;
+}
+
+.p-include-item {
+    position: relative;
+    text-align: center;
+    border: 1px solid #dcd0be;
+    display: block;
+    padding: 4px 4px 27px;
+    background: linear-gradient(#f2ece0, #ece3c7);
+    max-height: 280px;
+}
+
+.p-include-item:hover {
+    border-color: #9ea3b2;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
+}
+
+
+.p-include-item:after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: url("../img/p-include-shadow.png") no-repeat top;
+    background-size: contain;
+}
+
+.p-include-img {
+    display: block;
+    height: 144px;
+    margin: 0 0 25px;
+}
+.p-include-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-include-title {
+    color: #39487d;
+    font-size: 21px;
+    line-height: 1;
+    font-family: "Raleway-Bold", sans-serif;
+    font-weight: normal;
+    margin: 0;
+    display: block;
+}
+.p-include-text {
+    color: #39487d;
+    line-height: 1.1;
+    display: block;
+}
+
+.p-include-dot {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 2px;
+    background: #f8c300;
+    margin: 10px auto;
+}
+
+.p-include-list {
+    margin: 0 -10px;
+}
+
+.p-include-list .p-include-item {
+    float: left;
+    width: calc(25% - 20px);
+    margin: 0 10px 20px;
+}
+
+.similar-section {
+    margin-top: 45px;
+}
+
+.similar-section .left {
+    float: left;
+    width: calc(100% - 326px);
+}
+
+.similar-section .right {
+    float: right;
+    width: 281px;
+}
+
+.similar-header {
+    margin-bottom: 30px;
+}
+
+.linebg-title {
+    position: relative;
+    text-align: center;
+    line-height: 1.1;
+    color: #39487d;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Felix Titling', sans-serif;
+}
+.linebg-title span {
+    position: relative;
+    background: #fff;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.linebg-line {
+    position: absolute;
+    left: 7px;
+    top: 9px;
+    width: calc(100% - 14px);
+    height: 1px;
+    background: #7e9fb7;
+}
+.linebg-line:before,
+.linebg-line:after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1px solid #687788;
+}
+.linebg-line:before {
+    left: -7px;
+}
+.linebg-line:after {
+    right: -7px;
+}
+
+
+
+
+
+
+
 
 
 
