@@ -72,10 +72,28 @@ class ControllerModuleFilter extends Controller {
                                 'filter_filter' => $filter['filter_id']
                             );
 
+                            //PRECIOUS METAL
+                            if ($filter_group['filter_group_id'] == 3) {
+
+                                $explod = explode(' ', $filter['name']);
+
+                                if (count($explod) > 1 AND $explod[0] !== 'All') {
+                                    $name_filtr = $explod[1];
+                                    $name_filtr_count = $explod[0];
+                                } else {
+                                    $name_filtr = $filter['name'];
+                                    $name_filtr_count = '';
+                                }
+                            } else {
+                                $name_filtr = $filter['name'];
+                                $name_filtr_count = '';
+                            }
+
                             $childen_data[] = array(
                                 'filter_id' => $filter['filter_id'],
                                 //'name' => $filter['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : '')
-                                'name' => $filter['name']
+                                'name' => $name_filtr,
+                                'name_count' => $name_filtr_count
                             );
                         }
 

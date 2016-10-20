@@ -125,7 +125,7 @@ class ControllerProductCategory extends Controller {
 
 				if ($category_info) {
 					$data['breadcrumbs'][] = array(
-						'text' => $category_info['name'],
+						'text' => ucfirst(strtolower($category_info['name'])),
 						'href' => $this->url->link('product/category', 'path=' . $path . $url)
 					);
 				}
@@ -166,7 +166,7 @@ class ControllerProductCategory extends Controller {
 
 			// Set the last category breadcrumb
 			$data['breadcrumbs'][] = array(
-				'text' => $category_info['name'],
+				'text' =>  ucfirst(strtolower($category_info['name'])),
 				'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'])
 			);
 
