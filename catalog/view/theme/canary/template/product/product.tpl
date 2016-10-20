@@ -60,10 +60,18 @@
                         <?endforeach?>
 
                     </div>
-                    <ul class="list-inline">
+                    <ul class="list-inline it-list">
                         <li>
-                            <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="heart-ico"></i> Wish It</a>
+                            <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                         </li>
+                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
+                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
+                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
+                        <li>
+                            <!-- space for chare -->
+                            <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
+                        </li>
+
                     </ul>
                 </div>
                 <div class="one-product-info" id="product">
@@ -86,8 +94,6 @@
                             <strong>SKU:<?=$sku?></strong>
                         </div>
                     </div>
-
-
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <h1 class="w-product-name-h1"><?=$name?></h1>
@@ -98,7 +104,6 @@
                             <h3 class="w-product-desc"><?=$description?></h3>
                         </div>
                     </div>
-
                     <div class="row">
 
                         <div class="col-md-12 col-sm-12">
@@ -122,6 +127,14 @@
                                         </tr>
                                         <?endforeach?>
                                         <?endif?>
+
+                                        <!-- TODO: More specifications btn
+                                        <tr>
+                                            <td></td>
+                                            <td><span><a href="#" class="prod-more-spec">More specifications »</a></span></td>
+                                        </tr>
+                                        -->
+
                                         <?if (!empty($tags)):?>
                                         <tr>
                                             <td colspan="2">
@@ -139,96 +152,90 @@
                                     </table>
                                 </div>
 
-                                <div class="alert alert-info margin-buttom-0 product-buy-details">
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-6">
+                                <div class="alert alert-info margin-buttom-0 product-buy-details clearfix">
+                                    <div class="left">
+                                        <?php if ($options) :?>
 
-                                            <?php if ($options) :?>
+                                        <div class="size-product">
 
-                                            <div class="size-product">
+                                            <?php foreach ($options as $option):?>
 
-                                                <?php foreach ($options as $option):?>
+                                            <?php if ($option['type'] == 'radio' AND $option['name'] == 'SIZE'):?>
 
-                                                <?php if ($option['type'] == 'radio' AND $option['name'] == 'SIZE'):?>
+                                            <!--*<div class="title">Size</div>*-->
+                                            <div class="one-line size-radio height-inherit" id="input-option<?php echo $option['product_option_id']; ?>" data-toggle="buttons">
 
-                                                <!--*<div class="title">Size</div>*-->
-                                                <div class="one-line size-radio height-inherit" id="input-option<?php echo $option['product_option_id']; ?>" data-toggle="buttons">
+                                                <?php foreach ($option['product_option_value'] as $option_value): ?>
 
-                                                    <?php foreach ($option['product_option_value'] as $option_value): ?>
-
-                                                    <label class="btn btn-filter">
-                                                        <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">  <?php echo $option_value['name']; ?>
-                                                    </label>
-
-                                                    <?endforeach?>
-
-                                                </div>
-
-                                                <?endif?>
-
-
-                                                <?php if ($option['type'] == 'select' AND $option['name'] == 'SIZE'):?>
-
-
-                                                <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-                                                    <!--*<div class="title" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></div>*-->
-                                                    <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="dropdown">
-                                                        <option value=""><?php echo $text_select; ?></option>
-                                                        <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                                                        <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
-                                                            <?php if ($option_value['price']) { ?>
-                                                            (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
-                                                            <?php } ?>
-                                                        </option>
-                                                        <?php } ?>
-                                                    </select>
-                                                </div>
-
-
-                                                <?endif?>
+                                                <label class="btn btn-filter">
+                                                    <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">  <?php echo $option_value['name']; ?>
+                                                </label>
 
                                                 <?endforeach?>
-
-                                                <?if (!empty($products_metal)):?>
-                                                <!--*<div class="title">Precious metal</div>*-->
-                                                <div class="cc-shipping-row">
-                                                    <input type="text" class="shipping-input select-simulate-input" id="si7" required>
-                                                    <label for="si7" class="shipping-label"><?=list_metal($metal)?></label>
-                                                    <a href="#" class="select-simulate-btn"></a>
-                                                    <ul class="select-simulate-list">
-                                                        <?php foreach ($products_metal as $key => $row_metal): ?>
-                                                        <li><a class="w-product-ajax" href="<?php echo $row_metal['href']; ?>" data-value="<?php echo $row_metal['href']; ?>"><?php echo $row_metal['name']; ?></a></li>
-                                                        <?endforeach?>
-
-                                                    </ul>
-                                                </div>
-
-                                                <?endif?>
 
                                             </div>
 
                                             <?endif?>
 
-                                            <div class="text-center"><a href="#">select you ring size</a></div>
+
+                                            <?php if ($option['type'] == 'select' AND $option['name'] == 'SIZE'):?>
+
+
+                                            <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
+                                                <!--*<div class="title" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></div>*-->
+                                                <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="dropdown">
+                                                    <option value=""><?php echo $text_select; ?></option>
+                                                    <?php foreach ($option['product_option_value'] as $option_value) { ?>
+                                                    <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                                                        <?php if ($option_value['price']) { ?>
+                                                        (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                                                        <?php } ?>
+                                                    </option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+
+
+                                            <?endif?>
+
+                                            <?endforeach?>
+
+                                            <?if (!empty($products_metal)):?>
+                                            <!--*<div class="title">Precious metal</div>*-->
+                                            <div class="cc-shipping-row">
+                                                <input type="text" class="shipping-input select-simulate-input" id="si7" required readonly>
+                                                <label for="si7" class="shipping-label"><?=list_metal($metal)?></label>
+                                                <a href="#" class="select-simulate-btn"></a>
+                                                <ul class="select-simulate-list">
+                                                    <?php foreach ($products_metal as $key => $row_metal): ?>
+                                                    <li><a class="w-product-ajax" href="<?php echo $row_metal['href']; ?>" data-value="<?php echo $row_metal['href']; ?>"><?php echo $row_metal['name']; ?></a></li>
+                                                    <?endforeach?>
+
+                                                </ul>
+                                            </div>
+
+                                            <?endif?>
 
                                         </div>
 
+                                        <?endif?>
+                                        <div class="text-right">
+                                            <a href="#" class="your-ring-size">Select your ring size</a>
+                                        </div>
 
-                                        <div class="col-md-6 col-sm-6">
-                                            <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
-                                            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-                                            <div class="price-product">
-                                                <span><?php echo $price; ?></span> <span class="h5">(Setting price only)</span>
-                                            </div>
-                                            <div class="line-price-product clearfix">
-                                                <div>
-                                                    <?if ($path == 69): //weding rings?>
-                                                        <button type="button" id="button-cart" class="btn w-btn-orange btn-lg" data-loading-text="<?php echo $text_loading; ?>"> <i class="bold-angle-right"></i> <?php echo $button_cart; ?></button>
-                                                    <?else:?>
-                                                        <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart"> <i class="bold-angle-right"></i> Select this setting</button>
-                                                    <?endif?>
-                                                </div>
-                                            </div>
+                                    </div>
+                                    <div class="right">
+                                        <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
+                                        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
+                                        <div class="price-product">
+                                            <span><?php echo $price; ?></span> <span class="h5">(Setting price)</span>
+                                        </div>
+                                        <div class="line-price-product clearfix">
+                                            <?if ($path == 69): //weding rings?>
+                                            <button type="button" id="button-cart" class="btn w-btn-orange btn-lg" data-loading-text="<?php echo $text_loading; ?>"> <i class="bold-angle-right"></i> <?php echo $button_cart; ?></button>
+                                            <?else:?>
+                                            <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart"> <i class="bold-angle-right"></i> Select this setting</button>
+                                            <?endif?>
                                         </div>
                                     </div>
                                 </div>
@@ -238,82 +245,104 @@
 
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div class="text-center">
-                                <span class="h3">Best quality and service</span>
+                    <div class="product-advantages">
+                        <div class="product-advantages-header">
+                            <span class="h3 product-advantages-title">Best quality and service</span>
+                            <div class="icons-quality_service_icon"></div>
+                        </div>
+                        <div class="product-advantages-list clearfix">
+                            <div class="product-advantages-col">
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-1.png" alt=""></div>
+                                    <div class="product-advantages-item-text">Free and fast Shipping</div>
+                                </div>
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-3.png" alt=""></div>
+                                    <div class="product-advantages-item-text">100% Money Back
+                                        Guarantee</div>
+                                </div>
+                            </div>
+                            <div class="product-advantages-col">
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-2.png" alt=""></div>
+                                    <div class="product-advantages-item-text">No Hassle Returns</div>
+                                </div>
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-4.png" alt=""></div>
+                                    <div class="product-advantages-item-text">Helping Others</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row margin-top-10">
-                        <div class="col-md-6 col-sm-6">
-                            <div>
-                                <a href="#">
-                                    <div class="alert alert-info">
-                                        <div class="media">
+                        <!--
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div>
+                                    <a href="#">
+                                        <div class="alert alert-info">
+                                            <div class="media">
                                         <span class="pull-left">
                                             <i class="truck-ico"></i>
                                         </span>
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><b>Free and Fast Shipping</b></h4>
-                                                <small>Fully Insured Overnight <br> Shipping</small>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><b>Free and Fast Shipping</b></h4>
+                                                    <small>Fully Insured Overnight <br> Shipping</small>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <div class="alert alert-info">
-                                        <div class="media">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <div class="alert alert-info">
+                                            <div class="media">
                                         <span class="pull-left">
                                             <i class="risk-free-ico"></i>
                                         </span>
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><b>Risk-free Retail</b></h4>
-                                                <small>100% Money Back <br> Guarantee</small>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><b>Risk-free Retail</b></h4>
+                                                    <small>100% Money Back <br> Guarantee</small>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div>
-                                <a href="#">
-                                    <div class="alert alert-info">
-                                        <div class="media">
+                            <div class="col-md-6 col-sm-6">
+                                <div>
+                                    <a href="#">
+                                        <div class="alert alert-info">
+                                            <div class="media">
                                         <span class="pull-left">
                                             <i class="glyphicon glyphicon-compressed" style="color: #fac652;font-size: 25px;"></i>
                                         </span>
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><b>Free Resizing and Engraving</b></h4>
-                                                On All Bridal <br> Jewerly
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><b>Free Resizing and Engraving</b></h4>
+                                                    On All Bridal <br> Jewerly
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#">
-                                    <div class="alert alert-info">
-                                        <div class="media">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <div class="alert alert-info">
+                                            <div class="media">
                                         <span class="pull-left">
                                             <i class="glyphicon glyphicon-map-marker" style="color: #fac652;font-size: 25px;"></i>
                                         </span>
 
-                                            <div class="media-body">
-                                                <h4 class="media-heading"><b>Helping Others</b></h4>
-                                                A Partion of Your Purchase Goest <br> to Charity
+                                                <div class="media-body">
+                                                    <h4 class="media-heading"><b>Helping Others</b></h4>
+                                                    A Partion of Your Purchase Goest <br> to Charity
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </a>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                        -->
                     </div>
-
 
                 </div>
             </div>
@@ -321,9 +350,9 @@
             <div class="alert alert-warning product-need-help">
                 <span class="h4">Need Help?</span>
                 <ul class="list-inline w-help-ned">
-                    <li><a href="#"><span class="glyphicon glyphicon-comment"></span> <span class="help-text">Online Chat now</span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> <span class="help-text">Email</span></a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-phone-alt"></span> <span class="help-text"><?=$telephone?> | 24/7</span></a></li>
+                    <li><a href="#"><span class="help-ico help-ico-chat"></span> <span class="help-text">Online Chat now</span></a></li>
+                    <li><a href="#"><span class="help-ico help-ico-mail"></span> <span class="help-text">Email</span></a></li>
+                    <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text"><?=$telephone?> | 24/7</span></a></li>
                 </ul>
             </div>
 

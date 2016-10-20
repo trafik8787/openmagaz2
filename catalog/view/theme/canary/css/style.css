@@ -5405,8 +5405,8 @@ display: block;
 
 
 .one-product-slider {
-  width: 45%;
-  margin-bottom: 90px;
+  width: calc(48% - 18px);
+  margin-bottom: 40px;
   float: left; }
   .one-product-slider .slider-pro {
     max-width: 100% !important; }
@@ -5514,7 +5514,7 @@ display: block;
   text-align: center; }
 
 .one-product-info {
-  width: 50%;
+  width: calc(52% - 18px);
   float: right;
   font-size: 14px;
   color: #2f2e2d;
@@ -5595,6 +5595,11 @@ display: block;
   border: 1px solid #d3d2d2;
   position: relative;
 }
+
+.slider-for video {
+  vertical-align: top;
+}
+
 .slider-for:after {
   content: "";
   position: absolute;
@@ -5640,7 +5645,7 @@ display: block;
     font-weight: normal;
     line-height: 1;
     margin-bottom: 10px;
-    padding: 11px 0;
+    padding: 17px 0 5px;
   }
   .price-product span {
     display: inline-block;
