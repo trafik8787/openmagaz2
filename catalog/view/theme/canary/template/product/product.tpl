@@ -23,11 +23,7 @@
 
             <?php echo $content_top; ?>
 
-
         </div>
-
-
-
         <div class="center-bl">
             <div class="one-product clearfix">
                 <div class="one-product-slider">
@@ -355,69 +351,64 @@
                     <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text"><?=$telephone?> | 24/7</span></a></li>
                 </ul>
             </div>
-
-            <div class="row">
-
-                <div class="col-md-3 col-sm-3">
-                    <a href="">
-                        <div class="thumbnail">
-                            <div class="text-center">
-                                <p><span class="h3">Beautiful</span></p>
-                                <p><span class="h3">packaging</span></p>
-                            </div>
-
-                            <img src="/catalog/view/theme/canary/img/demo_new_template/beautiful-gift-box-icon-69188.png" width="96px" alt="">
-                        </div>
+        </div>
+        <div class="include-section">
+            <div class="center-bl">
+                <div class="product-section-header">
+                    <div class="product-section-title">YOUR ORDER INCLUDES</div>
+                    <div class="icons-quality_service_icon"></div>
+                </div>
+                <div class="p-include-list clearfix">
+                    <a href="#" class="p-include-item">
+                        <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-1.jpg" alt=""></span>
+                        <span class="p-include-title">Beautiful Packaging</span>
+                        <span class="p-include-dot"></span>
+                        <span class="p-include-text">
+                            Stylish Jewelry Box<br>
+                            and Gift Wrapping
+                        </span>
+                    </a>
+                    <a href="#" class="p-include-item">
+                        <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-2.jpg" alt=""></span>
+                        <span class="p-include-title">Lifetime Warranty</span>
+                        <span class="p-include-dot"></span>
+                        <span class="p-include-text">
+                            We Stand Behind<br>
+                            Our Jewelry
+                        </span>
+                    </a>
+                    <a href="#" class="p-include-item">
+                        <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-3.jpg" alt=""></span>
+                        <span class="p-include-title">Free Engraving</span>
+                        <span class="p-include-dot"></span>
+                        <span class="p-include-text">
+                            Add Personal Touch<br>
+                            To Your Ring
+                        </span>
+                    </a>
+                    <a href="#" class="p-include-item">
+                        <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-4.jpg" alt=""></span>
+                        <span class="p-include-title">Diamond Certificate</span>
+                        <span class="p-include-dot"></span>
+                        <span class="p-include-text">
+                            Original GIA Grading<br>
+                            Report
+                        </span>
                     </a>
                 </div>
-                <div class="col-md-3 col-sm-3">
-                    <a href="">
-                        <div class="thumbnail">
-                            <div class="text-center">
-                                <p><span class="h3">Lifetime</span></p>
-                                <p><span class="h3">Warranty</span></p>
-                            </div>
-                            <img src="/catalog/view/theme/canary/img/demo_new_template/Lifetime-Warranty.png" width="130px" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-3">
-                    <a href="">
-                        <div class="thumbnail">
-                            <div class="text-center">
-                                <p><span class="h3">No Hassle</span></p>
-                                <p><span class="h3">Returns</span></p>
-                            </div>
-                            <img src="/catalog/view/theme/canary/img/demo_new_template/Easy_Returns-128.png" alt="">
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-3">
-                    <a href="">
-                        <div class="thumbnail">
-                            <div class="text-center">
-                                <p><span class="h3">Diamond</span></p>
-                                <p><span class="h3">Certificate</span></p>
-                            </div>
-                            <img src="/catalog/view/theme/canary/img/demo_new_template/diamond_certifikate.png" width="127px" alt="">
-                        </div>
-                    </a>
-                </div>
-
             </div>
-
         </div>
     </section>
 
 
     <?php if ($products):?>
 
-    <section class="single-product">
+    <!-- hiden TODO: delete this-->
+    <section class="single-product hide">
         <div class="title-for-product"><?php echo $text_related; ?></div>
         <div class="owl-carousel owl-product">
 
             <?foreach ($products as $row):?>
-
 
             <div class="item">
                 <div class="box-img"><a href="<?=$row['href']?>"><img src="<?=$row['img']?>" alt="<?=$row['name']?>"></a></div>
@@ -429,6 +420,46 @@
         </div>
     </section>
     <?endif?>
+
+    <div class="similar-section">
+        <div class="center-bl clearfix">
+            <div class="left">
+                <div class="similar-header">
+                    <div class="linebg-title">
+                        <div class="linebg-line"></div>
+                        <span>SIMILAR SETTINGS</span>
+                    </div>
+                </div>
+                <div class="similar-list similar-list-3"></div>
+            </div>
+            <div class="right">
+                <div class="similar-header">
+                    <div class="linebg-title">
+                        <div class="linebg-line"></div>
+                        <span>MATCHING WEDDING RINGS</span>
+                    </div>
+                </div>
+                <div class="similar-list similar-list-1">
+                    <div class="product-item">
+                        <div class="box-img">
+                            <a href="http://canary2.webremote.net/engagement-rings/solitaire/14k-white-gold-classic-solitaire-engagement-ring-50817-EW14-441" class="w-product-ajax"><img src="http://canary2.webremote.net/image/cache/catalog/galery_rings/50817-E-228x228.jpg" alt="14k White Gold Classic Solitaire Engagement Ring " title="14k White Gold Classic Solitaire Engagement Ring "></a>
+                        </div>
+                        <div class="btn-box">
+                            <a href="#" type="button" onclick="cart.add('441', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
+                            <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('441'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
+                            <a href="http://canary2.webremote.net/engagement-rings/solitaire/14k-white-gold-classic-solitaire-engagement-ring-50817-EW14-441" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
+                            <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('441'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
+                        </div>
+                        <div class="box-tovar-th">
+                            <div class="name">14k White Gold Classic Solitaire Engagement Ring </div>
+
+                            <span class="price">$550.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <section class="center-bl comment-brand clearfix thumbnail">
@@ -522,17 +553,9 @@
 
 
 
-
-
         </div>
-
         <?endif?>
-
-
-
     </section>
-
-
 
     <div class="modal fade styled-modal" id="w-modal-cart" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
         <div class="modal-dialog">
