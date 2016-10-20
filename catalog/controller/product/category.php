@@ -86,6 +86,7 @@ class ControllerProductCategory extends Controller {
 			$limit = $this->config->get('config_product_limit');
 		}
 
+
 		$data['breadcrumbs'] = array();
 
 		$data['breadcrumbs'][] = array(
@@ -521,7 +522,6 @@ class ControllerProductCategory extends Controller {
 
 
                 if (empty($_POST['general_category'])) {
-
                     echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax.tpl', $data);
                 } else {
 

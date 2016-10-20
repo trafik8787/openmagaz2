@@ -1,8 +1,5 @@
 
-
-
 <div class="filter-product-line">
-    <input type="hidden" class="w-action_page" value="<?php echo $action_page?>">
     <div class="center-bl clearfix">
         <div class="pull-left left-drop-f">
             <span>Sort By:</span>
@@ -21,8 +18,8 @@
         </div>
 
         <div class="view-product">
-            <button class="list-btn btn-view" data-toggle="tooltip" data-placement="top" title="list"><i class="fa fa-list"></i></button>
-            <button class="th-btn btn-view active" data-toggle="tooltip" data-placement="top" title="block"><i class="fa fa-th"></i></button>
+            <button class="list-btn btn-view" data-toggle="tooltip" data-placement="top" title="list"><i class="list-ico"></i></button>
+            <button class="th-btn btn-view active" data-toggle="tooltip" data-placement="top" title="block"><i class="block-ico"></i></button>
         </div>
         <div class="show-b">
             <span>Show:</span>
@@ -63,19 +60,19 @@
                         <a href="<?php echo $product['href']; ?>" class="w-product-ajax"><img src="<?php echo $product['thumb']; ?>"  alt="<?php echo $product['name']; ?>"
                                                                                               title="<?php echo $product['name']; ?>"></a>
                     </div>
-                    <?php if ($product['rating']):?>
+                    <!--*<?php if ($product['rating']):?>*-->
 
-                    <div class="rating">
-                        <?php for ($i = 1; $i <= 5; $i++) { ?>
-                        <?php if ($product['rating'] < $i):?>
-                        <i class="star"></i>
-                        <?else:?>
-                        <i class="star active"></i>
-                        <?endif?>
-                        <?}?>
+                    <!--*<div class="rating">*-->
+                    <!--*<?php for ($i = 1; $i <= 5; $i++) { ?>*-->
+                    <!--*<?php if ($product['rating'] < $i):?>*-->
+                    <!--*<i class="star"></i>*-->
+                    <!--*<?else:?>*-->
+                    <!--*<i class="star active"></i>*-->
+                    <!--*<?endif?>*-->
+                    <!--*<?}?>*-->
 
-                    </div>
-                    <?endif?>
+                    <!--*</div>*-->
+                    <!--*<?endif?>*-->
                     <div class="btn-box">
                         <a href="#" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_cart; ?>"></a>
                         <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;" data-placement="top" title="<?php echo $button_compare; ?>"></a>
@@ -96,7 +93,7 @@
                     </div>
                 </div>
             </td>
-            <td data-th="Stock Number">Oval</td>
+            <td data-th="Stock Number"><?=$product['sku']?></td>
             <td data-th="Price"><div class="price"><?php echo $product['price']; ?></div></td>
             <td><a href="#" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-exchange"></i></a></td>
             <td><a href="#" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-heart"></i></a></td>
@@ -104,12 +101,17 @@
         <?endforeach?>
 
 
-
         </tbody>
     </table>
 
 </div>
-
 <div class="center-bl clearfix">
     <div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>
+</div>
+
+<div class="box-stat-text center-bl">
+    <div class="h2">
+        TEXT ABOUT <?=$heading_title?>
+    </div>
+    <?php echo $description; ?>
 </div>

@@ -72,7 +72,7 @@ class ControllerModuleFilter extends Controller {
                                 'filter_filter' => $filter['filter_id']
                             );
 
-                            //PRECIOUS METAL
+                            //todo PRECIOUS METAL разделяем название от пробы
                             if ($filter_group['filter_group_id'] == 3) {
 
                                 $explod = explode(' ', $filter['name']);
