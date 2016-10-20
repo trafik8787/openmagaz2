@@ -32,7 +32,7 @@ class ControllerProductProduct extends Controller {
 
 				if ($category_info) {
 					$data['breadcrumbs'][] = array(
-						'text' => $category_info['name'],
+						'text' => ucfirst(strtolower($category_info['name'])),
 						'href' => $this->url->link('product/category', 'path=' . $path)
 					);
 				}
@@ -61,7 +61,7 @@ class ControllerProductProduct extends Controller {
 				}
 
 				$data['breadcrumbs'][] = array(
-					'text' => $category_info['name'],
+					'text' => ucfirst(strtolower($category_info['name'])),
 					'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url)
 				);
 			}
