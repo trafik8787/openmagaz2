@@ -146,7 +146,6 @@
                 </table>
 
             </div>
-            <hr>
             <div class="center-bl clearfix">
                 <div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>
             </div>
