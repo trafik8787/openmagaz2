@@ -60,6 +60,11 @@
                         <?endforeach?>
 
                     </div>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="heart-ico"></i> Wish It</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="one-product-info" id="product">
 
@@ -97,34 +102,34 @@
                     <div class="row">
 
                         <div class="col-md-12 col-sm-12">
-                            <div class="thumbnail">
-
+                            <div class="product-details">
 
                                 <div class="h3 text-center margin-top-0">Setting details</div>
+                                <div class="icons-quality_service_icon"></div>
 
                                 <div class="table-responsive table table-condensed margin-buttom-0">
                                     <table class="table">
                                         <tr>
-                                            <td>METAL: <?=list_metal($metal)?></td>
-                                            <td>WEIGHT: <?=$weight?> g.</td>
+                                            <td><span>METAL: <?=list_metal($metal)?></span></td>
+                                            <td><span>WEIGHT: <?=$weight?> g.</span></td>
                                         </tr>
                                         <?if (!empty($attribute_groups)):?>
                                         <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
 
                                         <tr>
-                                            <td><?=$row[0]['name']?>: <?=$row[0]['text']?></td>
-                                            <td><?=$row[1]['name']?>: <?=$row[1]['text']?></td>
+                                            <td><span><?=$row[0]['name']?>: <?=$row[0]['text']?></span></td>
+                                            <td><span><?=$row[1]['name']?>: <?=$row[1]['text']?></span></td>
                                         </tr>
                                         <?endforeach?>
                                         <?endif?>
                                         <?if (!empty($tags)):?>
                                         <tr>
                                             <td colspan="2">
-                                                <ul class="list-inline">
-                                                    <li>Tags:</li>
+                                                <div class="product-tags-divider"></div>
+                                                <ul class="list-inline product-tags">
                                                     <?foreach ($tags as $row_tags):?>
                                                     <li>
-                                                        <a href="<?=$row_tags['href']?>"><span class="glyphicon glyphicon-tag"></span> <?=$row_tags['tag']?></a>
+                                                        <a href="<?=$row_tags['href']?>"><span class="tag-name-span"><?=$row_tags['tag']?></span></a>
                                                     </li>
                                                     <?endforeach?>
                                                 </ul>
@@ -134,7 +139,7 @@
                                     </table>
                                 </div>
 
-                                <div class="alert alert-info margin-buttom-0">
+                                <div class="alert alert-info margin-buttom-0 product-buy-details">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6">
 
@@ -218,9 +223,9 @@
                                             <div class="line-price-product clearfix">
                                                 <div>
                                                     <?if ($path == 69): //weding rings?>
-                                                        <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="red-btn"><?php echo $button_cart; ?></button>
+                                                        <button type="button" id="button-cart" class="btn w-btn-orange btn-lg" data-loading-text="<?php echo $text_loading; ?>"> <i class="bold-angle-right"></i> <?php echo $button_cart; ?></button>
                                                     <?else:?>
-                                                        <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="red-btn">Select This Setting</button>
+                                                        <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart"> <i class="bold-angle-right"></i> Select this setting</button>
                                                     <?endif?>
                                                 </div>
                                             </div>
@@ -235,32 +240,6 @@
 
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
-                            <ul class="list-inline">
-                                <li>
-                                    <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="heart-ico"></i> Wish It</a>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-
-                            <div class="alert alert-warning">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-3">
-                                        <span class="h4">Need Help?</span>
-                                    </div>
-                                    <div class="col-md-9 col-sm-9">
-                                        <ul class="list-inline w-help-ned">
-                                            <li><a href="#"><span class="glyphicon glyphicon-comment"></span> Online Chat now</a></li>
-                                            <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Email</a></li>
-                                            <li><a href="#"><span class="glyphicon glyphicon-phone-alt"></span> <?=$telephone?> | 24/7</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="text-center">
                                 <span class="h3">Best quality and service</span>
                             </div>
@@ -337,7 +316,15 @@
 
 
                 </div>
+            </div>
 
+            <div class="alert alert-warning product-need-help">
+                <span class="h4">Need Help?</span>
+                <ul class="list-inline w-help-ned">
+                    <li><a href="#"><span class="glyphicon glyphicon-comment"></span> <span class="help-text">Online Chat now</span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> <span class="help-text">Email</span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-phone-alt"></span> <span class="help-text"><?=$telephone?> | 24/7</span></a></li>
+                </ul>
             </div>
 
             <div class="row">
@@ -518,27 +505,28 @@
 
 
 
-    <div class="modal fade" id="w-modal-cart" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm">
+    <div class="modal fade styled-modal" id="w-modal-cart" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
             <div class="modal-content">
-
-                <div class="modal-body text-center">
-                    <p class="w-modal-button">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <span class="text-centr">What would you like to do?</span>
-                    </p>
-                    <div class="line-price-product clearfix">
-                        <p>
-                            <button type="button" data-dismiss="modal" aria-hidden="true" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="red-btn w-modal-button"><?php echo $button_cart; ?></button>
-                        </p>
-
-                        <p>
-                            <button type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect" class="red-btn w-modal-button">Add a diamond</button>
-                        </p>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+                <div class="modal-body">
+                    <div class="styled-modal-header">
+                        <div class="styled-modal-title">What would you like to do?</div>
+                        <div class="icons-quality_service_icon"></div>
                     </div>
-
+                    <div class="product-modal-buttons">
+                        <div class="row modal-btn-row">
+                            <div class="col-xs-6">
+                                <button class="btn w-btn-orange btn-lg text-center"type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect">Add a diamond</button>
+                            </div>
+                            <div class="col-xs-6">
+                                <!-- DOTO: don't work btn-->
+                                <button class="btn w-btn-orange btn-lg text-center">Add a gemstone</button>
+                            </div>
+                        </div>
+                        <button type="button" data-dismiss="modal" aria-hidden="true" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn w-btn-orange btn-lg text-center"> <span class="add-tocart-ico"></span> <?php echo $button_cart; ?></button>
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>
