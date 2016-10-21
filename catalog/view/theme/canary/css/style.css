@@ -1811,53 +1811,63 @@ display: block;
       content: "";
       margin-left: 100%;
       display: inline-block; }
-    .menu > ul > li {
-      width: 915px;
-      display: inline;
-      }
-      .menu > ul > li > a {
-        padding: 10px 5px 10px 5px;
-        position: relative;
-        z-index: 1;
-        font-family: 'Raleway-Regular', fantasy;
-        font-size: 16.6px;
-        background-color: #ffffff;
-        text-transform: uppercase;
-        color: #000000;
-        display: inline-block;
-        border: 1px solid transparent;
-        }
-      .menu > ul > li.dropdown-b.open .dropdown-inside {
-        display: block; }
-      .menu > ul > li.dropdown-b.open > a {
-        z-index: 71;
-        border: 1px solid #e4e4e4;
-        border-bottom: 1px solid white; }
-      .menu > ul > li .link-drop-menu {
-        padding-top: 50px; }
-        .menu > ul > li .link-drop-menu a {
-          display: inline-block;
-          margin-right: 10px;
-          text-transform: uppercase;
-          font-size: 12px;
-          color: #444444; }
-          .menu > ul > li .link-drop-menu a:last-child {
-            margin-right: 0; }
-      .menu > ul > li .img-under-style {
-        margin-top: 20px; }
-      .menu > ul > li[data-target=menu3] .img-under-style {
-        margin-top: 40px; }
-      .menu > ul > li[data-target=menu4] {
-        position: relative; }
-        .menu > ul > li[data-target=menu4] > .dropdown-inside {
-          width: 800px;
-          left: 50%;
-          top: 30px;
-          margin-left: -420px; }
-          .menu > ul > li[data-target=menu4] > .dropdown-inside .img-under-style {
-            position: absolute;
-            right: 35px;
-            bottom: 35px; }
+.menu > ul > li {
+  width: 915px;
+  display: inline;
+}
+.menu > ul > li > a {
+  padding: 10px 5px 10px 5px;
+  position: relative;
+  z-index: 1;
+  font-family: 'Raleway-Regular', fantasy;
+  font-size: 16.6px;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  color: #000000;
+  display: inline-block;
+  border: 1px solid transparent;
+  }
+.menu > ul > li.dropdown-b.open .dropdown-inside {
+  display: block;
+}
+.menu > ul > li.dropdown-b.open > a {
+  z-index: 71;
+  border: 1px solid #e4e4e4;
+  border-bottom: 1px solid white;
+}
+.menu > ul > li .link-drop-menu {
+  padding-top: 50px;
+}
+.menu > ul > li .link-drop-menu a {
+  display: inline-block;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #444444;
+}
+.menu > ul > li .link-drop-menu a:last-child {
+  margin-right: 0;
+}
+.menu > ul > li .img-under-style {
+  margin-top: 20px;
+}
+.menu > ul > li[data-target=menu3] .img-under-style {
+  margin-top: 40px;
+}
+.menu > ul > li[data-target=menu4] {
+  position: relative;
+}
+.menu > ul > li[data-target=menu4] > .dropdown-inside {
+  width: 800px;
+  left: 50%;
+  top: 29px;
+  margin-left: -420px;
+}
+.menu > ul > li[data-target=menu4] > .dropdown-inside .img-under-style {
+  position: absolute;
+  right: 35px;
+  bottom: 35px;
+}
       .menu > ul > li[data-target=menu5] {
         position: relative; }
         .menu > ul > li[data-target=menu5] > .dropdown-inside {
@@ -2888,10 +2898,9 @@ display: block;
 .faq-row-wrapper {
   position: relative; }
 
-.logo {
-  }
-  .logo img {
-    }
+.logo img {
+  max-width: 100%;
+}
 
 .faq-list li {
   margin-bottom: 10px; }
@@ -6744,45 +6753,33 @@ font-size: 21px;
         height: 50px;
     }
 
-    .icons-diamond_icon {
-    margin-right: 12px!important;
-    }
-    .icons-rings_icon {
-
-margin-right: 12px!important;
-
+.icons-diamond_icon {
+  margin-right: 12px!important;
+}
+.icons-rings_icon {
+  margin-right: 12px!important;
 }
 
-    .w-bloc-search-diamond ul li .w-home-briliant {
-        
-        height: 91px;
 
-        vertical-align: top;
+.top-header-bloc-meny {
+    margin-bottom: 0;
+}
 
-        display: inline-block;
-    }
+.advantages-box {
+  padding: 30px 15px 45px; }
 
-    .top-header-bloc-meny {
-        margin-bottom: 0;
-    }
+.new-products .nav.nav-tabs > li {
+  margin-right: 27px; }
 
+.diamond-spetifications-box .left-ds {
+  width: 100%; }
 
+.line-price-product > div:last-child {
+  display: block; }
 
-  .advantages-box {
-    padding: 30px 15px 45px; }
-
-  .new-products .nav.nav-tabs > li {
-    margin-right: 27px; }
-
-  .diamond-spetifications-box .left-ds {
-    width: 100%; }
-
-  .line-price-product > div:last-child {
-    display: block; }
-
-  .diamond-spetifications-box .center-ds {
-    width: 73%;
-    padding: 0 2% 0 0; }
+.diamond-spetifications-box .center-ds {
+  width: 73%;
+  padding: 0 2% 0 0; }
 
   .diamond-spetifications-box .center-ds ul:nth-child(1) {
     padding-right: 50px; }
