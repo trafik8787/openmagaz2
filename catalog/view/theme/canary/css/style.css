@@ -5801,11 +5801,11 @@ display: block;
   box-shadow: 0 1px 2px rgba(113, 113, 113, 0.85), inset 0 -2px 1px #c38d35;
 }
 
-.comment-head .left .rating {
+.comment-head .rating {
   margin-top: 9px;
 }
 
-.comment-head .right .btn {
+.comment-head .btn {
   margin: 0 0 0 15px;
   font-size: 13px;
 }
@@ -5865,6 +5865,16 @@ display: block;
   background-size: contain;
 }
 
+.comment-item-text:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 25px;
+  width: 18px;
+  height: 18px;
+  background: url("../img/comment-text-angle.png") no-repeat center / contain;
+}
+
 .comment-item-text strong {
   font-family: 'Raleway-Bold', sans-serif;
 }
@@ -5902,7 +5912,7 @@ display: block;
 
 .comment-item-info-list {
   list-style: none;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 60px;
   padding: 0;
   color: #2f2e2d;
   line-height: 1;
@@ -5936,6 +5946,11 @@ display: block;
   margin: 0;
   top: auto;
   bottom: -14px;
+}
+
+.comment-block .control-label {
+  font-family: 'Raleway-Bold', sans-serif;
+  font-weight: normal;
 }
 
 .share-ico {

@@ -1023,6 +1023,9 @@ star-rating
 
 .star-rating {
     font-family: 'FontAwesome';
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
 .star-rating > fieldset {
@@ -1038,11 +1041,11 @@ star-rating
 .star-rating > fieldset:not(:checked) > label {
     float: right;
     width: 1em;
-    padding: 0 .05em;
+    padding: 0;
     overflow: hidden;
     white-space: nowrap;
     cursor: pointer;
-    font-size: 200%;
+    font-size: 24px;
     color: #f9d35a;
 }
 

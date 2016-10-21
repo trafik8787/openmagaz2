@@ -493,7 +493,7 @@
                         <div id="write-review-form" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <form class="form-horizontal" id="form-review">
-                                    <span class="h3"><?php echo $text_write; ?></span>
+                                    <p class="h3 text-center"><?php echo $text_write; ?></p>
                                     <?php if ($review_guest) { ?>
                                     <div class="form-group required">
                                         <div class="col-sm-12">
@@ -512,7 +512,7 @@
                                     <div class="form-group required">
 
                                         <div class="col-sm-5 col-md-5">
-                                            <div><?php echo $entry_rating; ?>:</div>
+                                            <?php echo $entry_rating; ?>:
                                             <div class="star-rating">
 
                                                 <fieldset>
