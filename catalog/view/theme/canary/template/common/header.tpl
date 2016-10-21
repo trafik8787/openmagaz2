@@ -395,13 +395,12 @@
 
         <div class="center-bl">
             <div class="row top-header-bloc-meny">
-                <div class="col-md-3 col-sm-12">
+                <div class="col-md-4 col-sm-12">
                     <a href="/" class="logo">
                         <img src="/catalog/view/theme/canary/img/logo_new_header.png" alt="logo">
-
                     </a>
                 </div>
-                <div class="col-md-9 col-sm-12">
+                <div class="col-md-8 col-sm-12">
                     <div class="menu">
                         <ul>
                             <li class="dropdown-b"><!--*DIAMONDS*-->

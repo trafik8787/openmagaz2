@@ -1,7 +1,102 @@
-.top-main-r, .box-img-main, .new-products, .brand-slider, .user-line, .newsletter-main, .footer-menu, .center-bl, .newsletter-main {
-  min-width: 980px; }
+.top-main-r, header, .box-img-main, .new-products, .brand-slider, .user-line, .newsletter-main, .footer-menu, .center-bl, .newsletter-main {
+  min-width: 300px; }
 
 .filter-advanced-wrapper:hover .dropdown-advanced {
   display: block; }
+
+@media screen and (max-width:1100px){
+  .home-top-baneer{
+    padding: 0 25px;
+  }
+  footer{
+    word-break: break-word;
+  }
+  .top-header-bloc-meny{
+    margin-top: 4px;
+  }
+  .menu > ul > li > a {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+  .logo {
+    width: 93%;
+    display: block;
+  }
+  img{
+    max-width: 100%;
+  }
+
+  .logo {
+    margin-top: 10px;
+  }
+
+  .paging-right-50 {
+    padding-right: 40px;
+  }
+
+  .w-bloc-best-servise .alert.alert-info {
+    height: 155px;
+    padding: 5px 15px;
+    text-align: center;
+  }
+
+  .w-list-link li{
+    padding: 0 2px;
+    font-size: 14px;
+  }
+
+  .w-best-quality .media .pull-left{
+    margin-bottom: 5px;
+    float: none!important;
+    display: block;
+    text-align: center;
+  }
+
+  .w-bloc-search-diamond ul li .w-home-briliant {
+    width: 120px;
+    height: 120px;
+    vertical-align: top;
+    display: inline-block;
+  }
+
+  .clas-raleway-regular14{
+    padding-bottom: 20px;
+  }
+
+  .w-bloc-search-diamond{
+    text-align: center;
+  }
+
+  .w-bloc-search-diamond ul{
+    display: block;
+  }
+
+  .w-diamond-home-sparite .w-diam-row{
+    display: inline-block;
+    margin: 0 15px;
+  }
+  .w-bloc-search-diamond{
+    height: inherit;
+    padding-bottom: 20px;
+  }
+
+  .w-footer-newsletter .w-btn-orange2{
+    width: 120px;
+  }
+  .w-newsletter-form{
+    margin-top: 38px;
+  }
+
+  .w-footer-newsletter{
+    height: 115px;
+  }
+
+  .w-footer-newsletter .newslet-email {
+    width: 330px;
+    height: 43px;
+    margin-right: 0;
+  }
+
+}
 
 /*# sourceMappingURL=desktop.css.map */

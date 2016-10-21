@@ -18,7 +18,7 @@ Math.easeOut = function (val, min, max, strength) {
 $(document).ready(function() {
 
     $('.bxslider').bxSlider({
-        auto: true,
+        //auto: true,
         minSlides: 1,
         maxSlides: 2,
         slideWidth: 230,
@@ -30,6 +30,28 @@ $(document).ready(function() {
         // prevSelector: '.icons-prev_slider_icon'
 
     });
+    //
+    //$('.bxslider').slick({
+    //    infinite: true,
+    //    slidesToShow: 2,
+    //    slidesToScroll: 1,
+    //    responsive: [
+    //        {
+    //            breakpoint: 1024,
+    //            settings: {
+    //                slidesToShow: 1,
+    //                slidesToScroll: 1
+    //            }
+    //        },
+    //        {
+    //            breakpoint: 480,
+    //            settings: {
+    //                slidesToShow: 1,
+    //                slidesToScroll: 1
+    //            }
+    //        }
+    //    ]
+    //});
 
     $('.bxslider-blog').bxSlider({
         auto: true,
