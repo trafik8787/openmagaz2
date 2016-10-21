@@ -4585,9 +4585,13 @@ display: block;
 .filter-box .brilliant-style {
   position: relative;
 }
-  .filter-box .brilliant-style li {
-    display: inline;
-  }
+.filter-box .brilliant-style li {
+  display: inline;
+}
+.w-checed-list .label--checkbox .number-circle{
+  font-family: "Montserrat-Regular", sans-serif;
+}
+
 .w-gems-filtr-cecbox .w-checed-list .list__item {
     display: inline-block;
     width: 150px;
@@ -4596,14 +4600,13 @@ display: block;
     text-align: left;
     padding: 2px 0 2px 0;
 }
-  .filter-box .brilliant-style > a {
-    text-align: center;
-    padding: 4px;
-    display: inline-block;
-    font-size: 12px;
-    color: #444444;
-  }
-
+.filter-box .brilliant-style > a {
+  text-align: center;
+  padding: 4px;
+  display: inline-block;
+  font-size: 12px;
+  color: #444444;
+}
 .filter-box .filter-wrapper .box-color.big-height label {
   height: 95px;
 }
@@ -5159,7 +5162,7 @@ display: block;
   max-width: 100%;
   max-height: 130px; }
 .wrapper-product-table .table tbody tr td .product-item:hover {
-  border: 2px solid #a4c0eb;
+  border: 1px solid #a4c0eb;
   -webkit-box-shadow: 0 0 14px rgba(0,0,0,0.2);
   -moz-box-shadow: 0 0 14px rgba(0,0,0,0.2);
   box-shadow: 0 0 14px rgba(0,0,0,0.2);

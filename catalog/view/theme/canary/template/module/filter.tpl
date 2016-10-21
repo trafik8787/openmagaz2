@@ -15,14 +15,14 @@
                 <li class="list__item btn">
                     <label class="label--checkbox">
                         <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
-                        <span data-text="<?php echo $filter['name']; ?>"><?php echo $filter['name_count']; ?><?php echo $filter['name']; ?></span>
+                        <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
                     </label>
                 </li>
                 <?else:?>
                 <li class="list__item btn">
                     <label class="label--checkbox">
                         <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
-                        <span data-text="<?php echo $filter['name']; ?>"><?php echo $filter['name_count']; ?><?php echo $filter['name']; ?></span>
+                        <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
                     </label>
                 </li>
                 <?endif?>
@@ -41,14 +41,14 @@
                 <li class="list__item btn">
                     <label class="label--checkbox">
                         <input type="checkbox" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
-                        <span data-text="<?php echo $filter['name']; ?>"><?php echo $filter['name_count']; ?><?php echo $filter['name']; ?></span>
+                        <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
                     </label>
                 </li>
                 <?else:?>
                 <li class="list__item btn">
                     <label class="label--checkbox">
                         <input type="checkbox" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
-                        <span data-text="<?php echo $filter['name']; ?>"><?php echo $filter['name_count']; ?><?php echo $filter['name']; ?></span>
+                        <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
                     </label>
                 </li>
                 <?endif?>
