@@ -109,14 +109,14 @@
 
     <div class="center-bl">
         <div class="row top-header-bloc-meny">
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-4 col-sm-4">
                 <a href="/" class="logo">
                     <img src="/catalog/view/theme/canary/img/logo_new_header.png" alt="logo">
                 </a>
             </div>
-            <div class="col-md-8 col-sm-12">
+            <div class="col-md-8 col-sm-8">
                 <div class="menu">
-                    <ul>
+                    <ul id="horizontal">
                         <li class="dropdown-b"><!--*DIAMONDS*-->
                             <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><?php echo $categories[0]['name']?></a>
                             <div class="dropdown-inside">
@@ -174,7 +174,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li><span class="w-top-marcer-menu">.</span></li>
+
                         <li class="dropdown-b"><!--engagement rings-->
                             <a href="<?php echo $categories[1]['href']?>" class="w-general-category"><?php echo $categories[1]['name']?></a>
                             <div class="dropdown-inside">
@@ -213,7 +213,7 @@
 
                             </div>
                         </li>
-                        <li><span class="w-top-marcer-menu">.</span></li>
+
                         <li class="dropdown-b"><!--*WEDDING RINGS*-->
                             <a href="<?php echo $categories[2]['href']?>" class="w-general-category"><?php echo $categories[2]['name']?></a>
                             <div class="dropdown-inside">
@@ -274,7 +274,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li><span class="w-top-marcer-menu">.</span></li>
+
 
                         <li class="dropdown-b">
                             <a href="<?php echo $categories[3]['href']?>" class="w-general-category"><?php echo $categories[3]['name']?></a>
@@ -339,7 +339,7 @@
 
                             </div>
                         </li>
-                        <li><span class="w-top-marcer-menu">.</span></li>
+
 
                         <li class="dropdown-b" data-target="menu4">
                             <a href="/gemstones" class="w-general-category"><?php echo $categories[4]['name']?></a>
@@ -389,7 +389,7 @@
                             </div>
                         </li>
 
-                        <li class="bord-l"></li>
+                        <!--*<li class="bord-l"></li>*-->
                         <li>
                             <a href="/education"  class="w-general-category">INFO</a>
                         </li>
@@ -401,3 +401,61 @@
         </div>
     </div>
 </header>
+<style>
+    .w-top-children-menu {
+        position: absolute;
+        z-index: 200;
+        background-color: #fff;
+        right: 10px;
+        padding: 10px;
+        box-shadow: 1px 1px 1px #ccc;
+        display:none;
+    }
+
+    ul.w-top-children-menu .dropdown-inside {
+        display: none;
+    }
+</style>
+<script>
+    $(function() {
+        alignMenu();
+
+        $(window).resize(function() {
+            $("#horizontal").append($("#horizontal li.hideshow ul").html());
+            $("#horizontal li.hideshow").remove();
+            alignMenu();
+        });
+
+        function alignMenu() {
+            var w = 0;
+            var mw = $("#horizontal").width() - 60;
+            var i = -1;
+            var menuhtml = '';
+            var flag_more = false;
+            jQuery.each($("#horizontal").children('li'), function() {
+                i++;
+                w += $(this).outerWidth(true);
+                if (mw < w) {
+                    menuhtml += $('<div>').append($(this).clone()).html();
+                    $(this).remove();
+                    flag_more = true;
+                } else {
+                    flag_more = false;
+                }
+                console.log(mw+' '+w);
+            });
+            if (flag_more == true) {
+                $("#horizontal").append(
+                        '<li href="#" class="hideshow">'
+                        + '<a href="#">more '
+                        + '<span style="font-size:13px">&#8595;</span>'
+                        + '</a><ul class="w-top-children-menu">' + menuhtml + '</ul></li>');
+                $("#horizontal li.hideshow ul").css("top", "40px");
+                $("#horizontal li.hideshow").click(function () {
+                    $(this).children("ul.w-top-children-menu").toggle();
+                });
+            }
+
+        }
+    });
+</script>
