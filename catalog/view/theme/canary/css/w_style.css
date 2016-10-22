@@ -1659,6 +1659,7 @@ star-rating
 .product-advantages-header {
     text-align: center;
     margin: 0 0 12px;
+    position: relative;
 }
 
 .product-advantages-header .icons-quality_service_icon {
@@ -1981,8 +1982,32 @@ star-rating
 }
 
 .similar-header {
-    margin-bottom: 30px;
+    margin-bottom: 22px;
 }
+
+.similar-list .wrapper-product-table.th-view {
+    padding: 0;
+}
+
+.similar-list .wrapper-product-table.th-view .table {
+    margin: 0;
+}
+
+.similar-list-1 .wrapper-product-table.th-view tbody tr {
+    width: 100%;
+    margin: 0;
+}
+
+.similar-list-3 .wrapper-product-table.th-view tbody tr {
+    width: 33.3333333333333%;
+    margin: 0;
+}
+
+.similar-list-3 .wrapper-product-table.th-view tbody tr td:nth-child(1) {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
 
 .linebg-title {
     position: relative;
@@ -2024,6 +2049,64 @@ star-rating
 .linebg-line:after {
     right: -7px;
 }
+
+
+.rating.stars-blue .star {
+    background-image: url("../img/star-blue.png");
+    opacity: 0.4;
+}
+.rating.stars-blue .star.active {
+    opacity: 1;
+}
+
+.rating.stars-w-blue .star {
+    background-image: url("../img/star-w-blue.png");
+    opacity: 0.4;
+}
+
+.rating.stars-w-blue .star.active {
+    opacity: 1;
+}
+
+.small-controls {
+    position: absolute;
+    right: 0;
+    top: -4px;
+}
+
+.small-controls-left,
+.small-controls-right {
+    width: 11px;
+    height: 24px;
+    display: inline-block;
+    margin: 0 2px;
+    position: relative;
+}
+
+.small-controls-left:before,
+.small-controls-right:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/small-controls.png") no-repeat center / contain;
+}
+
+.small-controls-left:hover:before,
+.small-controls-right:hover:before {
+    background-image: url("../img/small-controls-active.png");
+}
+
+.small-controls-right:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 
 
 

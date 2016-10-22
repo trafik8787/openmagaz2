@@ -5787,6 +5787,35 @@ display: block;
   border-left: none;
   width: 32%;
   vertical-align: top;
+  padding: 43px 42px;
+  text-align: center;
+}
+
+.comment-right img {
+  max-width: 100%;
+}
+
+.comment-company-img {
+  margin: 0 0 50px;
+}
+
+.comment-company-item {
+  margin-bottom: 50px;
+}
+
+.comment-company-item .rating {
+  margin-bottom: 15px;
+}
+
+.comment-company-name {
+  font-size: 21px;
+  line-height: 1;
+  margin: 0 0 5px;
+}
+.comment-company-text {
+  color: #5b5b5b;
+  font-size: 14px;
+  line-height: 1;
 }
 
 .comment-head .left {
@@ -5870,7 +5899,7 @@ display: block;
   left: 0;
   width: 100%;
   height: 7px;
-  background: url(../img/comments-shadow.png) no-repeat top;
+  background: url("../img/comments-shadow.png") no-repeat top;
   background-size: contain;
 }
 
