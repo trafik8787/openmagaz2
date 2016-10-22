@@ -947,19 +947,15 @@ border-radius: 0 0 5px 5px;
 }
 
 .w-blog-section .thumbnail a.btn.btn-default {
-
-position: absolute;
-
-bottom: 66px;
-
-box-shadow: 1px 1px 1px #cccccc, -1px 0 1px #cccccc;
-
-left: 38px;
+  position: absolute;
+  bottom: 30px;
+  box-shadow: 1px 1px 1px #cccccc, -1px 0 1px #cccccc;
+  left: 38px;
 }
 
 .w-blog-section .thumbnail a.btn.btn-default:hover {
-    background-color: #576A99;
-    color: #ffffff;
+  background-color: #576A99;
+  color: #ffffff;
 }
 
 .w-blog-section .thumbnail h3 {
@@ -1605,43 +1601,39 @@ color: #c2c1c1;
 }
 
 .search-top-f .input-group-addon:last-child {
-    background-color: #1c3061;
-    cursor: pointer;
+  background-color: #1c3061;
+  cursor: pointer;
 }
 
-
 .search-top-f .input-group-addon .glyphicon-search {
-    color: #fefefe;
-    font-size: 11px;
+  color: #fefefe;
+  font-size: 11px;
 }
 
 .blog-control-next {
-    position: absolute;
-    display: inline-block;
-    top: 63px;
-    right: 41px;
+  position: absolute;
+  display: inline-block;
+  top: -75px;
+  right: 41px;
+  z-index: 10;
 }
 
 .blog-control-prev {
-    display: inline-block;
-    position: absolute;
-    top: 63px;
-    right: 78px;
+  display: inline-block;
+  position: absolute;
+  top: -75px;
+  right: 78px;
+  z-index: 10;
 }
 
 .w-row-footer-menu ul {
-    
-padding-top: 17px;
-    
-padding-bottom: 17px;
-    
-width: 100%;
-    
-display: table;
+  width: 100%;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  display: table;
 }
 
 .w-row-footer-menu ul li {
-    /* padding: 0 2.3% 0 2.3%; */
     display: table-cell;
     text-align: center;
 }
@@ -6759,7 +6751,6 @@ font-size: 21px;
 .icons-rings_icon {
   margin-right: 12px!important;
 }
-
 
 .top-header-bloc-meny {
     margin-bottom: 0;

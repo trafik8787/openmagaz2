@@ -22,6 +22,7 @@
 
 
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/font-awesome.min.css">
+    <link href="/catalog/view/theme/canary/vendor/slickslider/slick.css" rel="stylesheet">
     <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/normalize.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>

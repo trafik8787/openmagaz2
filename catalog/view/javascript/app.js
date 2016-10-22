@@ -17,57 +17,90 @@ Math.easeOut = function (val, min, max, strength) {
 
 $(document).ready(function() {
 
-    $('.bxslider').bxSlider({
-        //auto: true,
-        minSlides: 1,
-        maxSlides: 2,
-        slideWidth: 230,
-        slideMargin: 10,
-        responsive: true,
-        pager: false,
-        adaptiveHeight: true
-        // nextSelector: '.icons-next_slider_icon',
-        // prevSelector: '.icons-prev_slider_icon'
-
-    });
+    //$('.bxslider').bxSlider({
+    //    //auto: true,
+    //    minSlides: 1,
+    //    maxSlides: 2,
+    //    slideWidth: 230,
+    //    slideMargin: 10,
+    //    responsive: true,
+    //    pager: false,
+    //    adaptiveHeight: true
+    //    // nextSelector: '.icons-next_slider_icon',
+    //    // prevSelector: '.icons-prev_slider_icon'
     //
-    //$('.bxslider').slick({
-    //    infinite: true,
-    //    slidesToShow: 2,
-    //    slidesToScroll: 1,
-    //    responsive: [
-    //        {
-    //            breakpoint: 1024,
-    //            settings: {
-    //                slidesToShow: 1,
-    //                slidesToScroll: 1
-    //            }
-    //        },
-    //        {
-    //            breakpoint: 480,
-    //            settings: {
-    //                slidesToShow: 1,
-    //                slidesToScroll: 1
-    //            }
-    //        }
-    //    ]
     //});
 
-    $('.bxslider-blog').bxSlider({
-        auto: true,
-        minSlides: 1,
-        maxSlides: 4,
-        slideWidth: 287,
-        slideMargin: 30,
-        moveSlides: 1,
-        infiniteLoop: true,
-        responsive: true,
-        pager: false,
-        adaptiveHeight: true,
-         nextSelector: '.blog-control-next',
-         prevSelector: '.blog-control-prev'
-
+    $('.bxslider').slick({
+        infinite: true,
+        prevArrow: '<a href="#" class="bx-prev"></a>',
+        nextArrow: '<a href="#" class="bx-next"></a>',
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
+
+    $('.bxslider-blog').slick({
+        infinite: true,
+        prevArrow: '<div class="blog-control-prev"><a class="bx-prev" href="">Prev</a></div>',
+        nextArrow: '<div class="blog-control-next"><a class="bx-next" href="">Next</a></div>',
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    //$('.bxslider-blog').bxSlider({
+    //    auto: true,
+    //    minSlides: 1,
+    //    maxSlides: 4,
+    //    slideWidth: 287,
+    //    slideMargin: 30,
+    //    moveSlides: 1,
+    //    infiniteLoop: true,
+    //    responsive: true,
+    //    pager: false,
+    //    adaptiveHeight: true,
+    //     nextSelector: '.blog-control-next',
+    //     prevSelector: '.blog-control-prev'
+    //
+    //});
 
 
     $('.w-more-info').on('click', function () {

@@ -1,17 +1,13 @@
 <div class="row w-blog-section">
     <div class="center-bl">
-
         <div class="row">
             <div class="col-md-12 col-sm-12">
-
                 <span class="h3">Stories from the Blog</span>
                 <div class="blog-control-prev"></div>
                 <div class="blog-control-next"></div>
                 <div class="icons-search_diamond_icon"></div>
-
             </div>
         </div>
-
         <div class="margin-top-30 margin-buttom-30 bxslider-blog">
             <div class="slide">
                 <div class="thumbnail">
@@ -29,7 +25,6 @@
                 </div>
                 <div class="w-shadow-slider"></div>
             </div>
-
             <div class="slide">
                 <div class="thumbnail">
                     <div class="marc-date">
@@ -46,7 +41,6 @@
                 </div>
                 <div class="w-shadow-slider"></div>
             </div>
-
             <div class="slide">
                 <div class="thumbnail">
                     <div class="marc-date">
@@ -63,7 +57,6 @@
                 </div>
                 <div class="w-shadow-slider"></div>
             </div>
-
             <div class="slide">
                 <div class="thumbnail">
                     <div class="marc-date">
@@ -80,7 +73,6 @@
                 </div>
                 <div class="w-shadow-slider"></div>
             </div>
-
             <div class="slide">
                 <div class="thumbnail">
                     <div class="marc-date">
@@ -97,8 +89,6 @@
                 </div>
                 <div class="w-shadow-slider"></div>
             </div>
-
-
             <div class="slide">
                 <div class="thumbnail">
                     <div class="marc-date">
@@ -115,7 +105,6 @@
                 </div>
                 <div class="w-shadow-slider"></div>
             </div>
-
         </div>
     </div>
 </div>
