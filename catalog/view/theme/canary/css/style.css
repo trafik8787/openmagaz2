@@ -5661,12 +5661,11 @@ display: block;
     font-size: 15px;
   }
 
-
-
-  .line-price-product .setting-price {
-    padding: 9px;
-    font-size: 12px;
-    color: #444444; }
+.line-price-product .setting-price {
+  padding: 9px;
+  font-size: 12px;
+  color: #444444;
+}
 
 .diamond-spetifications-box {
   margin-bottom: 50px;
@@ -5677,14 +5676,16 @@ display: block;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  align-items: center; }
-  .diamond-spetifications-box .left-ds {
-    width: 27%;
-    float: left;
-    padding-right: 20px;
-    margin-bottom: 35px;
-    font-size: 17px;
-    line-height: 22px; }
+  align-items: center;
+}
+.diamond-spetifications-box .left-ds {
+  width: 27%;
+  float: left;
+  padding-right: 20px;
+  margin-bottom: 35px;
+  font-size: 17px;
+  line-height: 22px;
+}
     .diamond-spetifications-box .left-ds .title {
       margin-bottom: 30px; }
   .diamond-spetifications-box .center-ds {
