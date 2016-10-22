@@ -245,6 +245,10 @@
                         <div class="product-advantages-header">
                             <span class="h3 product-advantages-title">Best quality and service</span>
                             <div class="icons-quality_service_icon"></div>
+                            <div class="small-controls">
+                                <a href="#" class="small-controls-left"></a>
+                                <a href="#" class="small-controls-right"></a>
+                            </div>
                         </div>
                         <div class="product-advantages-list clearfix">
                             <div class="product-advantages-col">
@@ -430,7 +434,97 @@
                         <span>SIMILAR SETTINGS</span>
                     </div>
                 </div>
-                <div class="similar-list similar-list-3"></div>
+                <div class="similar-list">
+                    <div class="similar-list similar-list-3">
+                        <div class="wrapper-product-table th-view">
+                            <table class="table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="product-item">
+                                            <div class="box-img">
+                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="w-product-ajax"><img src="http://canary3.webremote.net/image/cache/catalog/galery_rings/50804-E-228x228.jpg" alt="14k White Gold Petite Pave Diamond Engagement Ring" title="14k White Gold Petite Pave Diamond Engagement Ring"></a>
+                                            </div>
+                                            <!--**-->
+                                            <div class="btn-box">
+                                                <a href="#" type="button" onclick="cart.add('1569', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
+                                                <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1569'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
+                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
+                                                <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1569'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
+                                            </div>
+                                            <div class="box-tovar-th">
+                                                <div class="name">14k White Gold Petite Pave Diamond Engagement Ring</div>
+
+                                                <span class="price">$650.00</span>
+
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td data-th="Stock Number">50804-EW14</td>
+                                    <td data-th="Price"><div class="price">$650.00</div></td>
+                                    <td><a href="#" onclick="compare.add('1569'); return false;"><i class="fa fa-exchange"></i></a></td>
+                                    <td><a href="#" onclick="wishlist.add('1569'); return false;"><i class="fa fa-heart"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-item">
+                                            <div class="box-img">
+                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="w-product-ajax"><img src="http://canary3.webremote.net/image/cache/catalog/galery_rings/50804-E-228x228.jpg" alt="14k White Gold Petite Pave Diamond Engagement Ring" title="14k White Gold Petite Pave Diamond Engagement Ring"></a>
+                                            </div>
+                                            <!--**-->
+                                            <div class="btn-box">
+                                                <a href="#" type="button" onclick="cart.add('1569', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
+                                                <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1569'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
+                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
+                                                <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1569'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
+                                            </div>
+                                            <div class="box-tovar-th">
+                                                <div class="name">14k White Gold Petite Pave Diamond Engagement Ring</div>
+
+                                                <span class="price">$650.00</span>
+
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td data-th="Stock Number">50804-EW14</td>
+                                    <td data-th="Price"><div class="price">$650.00</div></td>
+                                    <td><a href="#" onclick="compare.add('1569'); return false;"><i class="fa fa-exchange"></i></a></td>
+                                    <td><a href="#" onclick="wishlist.add('1569'); return false;"><i class="fa fa-heart"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="product-item">
+                                            <div class="box-img">
+                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="w-product-ajax"><img src="http://canary3.webremote.net/image/cache/catalog/galery_rings/50804-E-228x228.jpg" alt="14k White Gold Petite Pave Diamond Engagement Ring" title="14k White Gold Petite Pave Diamond Engagement Ring"></a>
+                                            </div>
+                                            <!--**-->
+                                            <div class="btn-box">
+                                                <a href="#" type="button" onclick="cart.add('1569', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
+                                                <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1569'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
+                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
+                                                <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1569'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
+                                            </div>
+                                            <div class="box-tovar-th">
+                                                <div class="name">14k White Gold Petite Pave Diamond Engagement Ring</div>
+
+                                                <span class="price">$650.00</span>
+
+
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td data-th="Stock Number">50804-EW14</td>
+                                    <td data-th="Price"><div class="price">$650.00</div></td>
+                                    <td><a href="#" onclick="compare.add('1569'); return false;"><i class="fa fa-exchange"></i></a></td>
+                                    <td><a href="#" onclick="wishlist.add('1569'); return false;"><i class="fa fa-heart"></i></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="right">
                 <div class="similar-header">
@@ -440,21 +534,38 @@
                     </div>
                 </div>
                 <div class="similar-list similar-list-1">
-                    <div class="product-item">
-                        <div class="box-img">
-                            <a href="http://canary2.webremote.net/engagement-rings/solitaire/14k-white-gold-classic-solitaire-engagement-ring-50817-EW14-441" class="w-product-ajax"><img src="http://canary2.webremote.net/image/cache/catalog/galery_rings/50817-E-228x228.jpg" alt="14k White Gold Classic Solitaire Engagement Ring " title="14k White Gold Classic Solitaire Engagement Ring "></a>
-                        </div>
-                        <div class="btn-box">
-                            <a href="#" type="button" onclick="cart.add('441', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                            <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('441'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                            <a href="http://canary2.webremote.net/engagement-rings/solitaire/14k-white-gold-classic-solitaire-engagement-ring-50817-EW14-441" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                            <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('441'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                        </div>
-                        <div class="box-tovar-th">
-                            <div class="name">14k White Gold Classic Solitaire Engagement Ring </div>
+                    <div class="wrapper-product-table th-view">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                <td>
+                                    <div class="product-item">
+                                        <div class="box-img">
+                                            <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="w-product-ajax"><img src="http://canary3.webremote.net/image/cache/catalog/galery_rings/50804-E-228x228.jpg" alt="14k White Gold Petite Pave Diamond Engagement Ring" title="14k White Gold Petite Pave Diamond Engagement Ring"></a>
+                                        </div>
+                                        <!--**-->
+                                        <div class="btn-box">
+                                            <a href="#" type="button" onclick="cart.add('1569', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
+                                            <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1569'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
+                                            <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
+                                            <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1569'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
+                                        </div>
+                                        <div class="box-tovar-th">
+                                            <div class="name">14k White Gold Petite Pave Diamond Engagement Ring</div>
 
-                            <span class="price">$550.00</span>
-                        </div>
+                                            <span class="price">$650.00</span>
+
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-th="Stock Number">50804-EW14</td>
+                                <td data-th="Price"><div class="price">$650.00</div></td>
+                                <td><a href="#" onclick="compare.add('1569'); return false;"><i class="fa fa-exchange"></i></a></td>
+                                <td><a href="#" onclick="wishlist.add('1569'); return false;"><i class="fa fa-heart"></i></a></td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -477,12 +588,14 @@
                         <div class="clearfix">
                             <div class="left">
                                 <div class="rating">
-                                    <i class="star active"></i>
-                                    <i class="star active"></i>
-                                    <i class="star active"></i>
+                                    <?php for ($i = 1; $i <= 5; $i++) { ?>
+                                    <?php if ($rating < $i) { ?>
                                     <i class="star"></i>
-                                    <i class="star"></i>
-                                    <span><a href="" onclick="return false;">(3 customer ratings)</a></span>
+                                    <?php } else { ?>
+                                    <i class="star active"></i>
+                                    <?php } ?>
+                                    <?php } ?>
+                                    <span><a href="" onclick="return false;"><?php echo $reviews; ?></a></span>
                                 </div>
                             </div>
                             <div class="right">
@@ -567,7 +680,36 @@
                     <div class="w-button-colaps"><span>Load more</span></div>
 
                 </div>
-                <div class="comment-right">2</div>
+                <div class="comment-right">
+                    <div class="comment-company-img"><img src="/catalog/view/theme/canary/img/comments-company.jpg" alt=""></div>
+                    <div class="comment-company-item">
+                        <div class="comment-company-name">Ivouch</div>
+                        <div class="rating stars-blue">
+                            <i class="star active"></i>
+                            <i class="star active"></i>
+                            <i class="star active"></i>
+                            <i class="star active"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="comment-company-text">6419 Reviews | 5618 Vouches</div>
+                    </div>
+                    <div class="comment-company-item">
+                        <div class="comment-company-name">Google Trusted Stores</div>
+                        <div class="rating stars-w-blue">
+                            <i class="star active"></i>
+                            <i class="star active"></i>
+                            <i class="star active"></i>
+                            <i class="star active"></i>
+                            <i class="star"></i>
+                        </div>
+                        <div class="comment-company-text">2,849 Reviews | 4.9 Rating</div>
+                    </div>
+                    <div class="comment-company-item">
+                        <div class="comment-company-name">BizRate</div>
+                        <div class="comment-company-text">9.2/10</div>
+                        <div class="comment-company-text">388 Reviews | 90 Days</div>
+                    </div>
+                </div>
             </div>
 
             <?endif?>
