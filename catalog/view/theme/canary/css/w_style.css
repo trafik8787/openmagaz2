@@ -48,14 +48,13 @@
 }
 
 .bx-wrapper {
-    margin-top: 15px!important;
-    margin-bottom: 40px!important;
-    padding: 0 40px!important;
     -moz-box-shadow: none!important;
     -webkit-box-shadow: none!important;
     box-shadow: none!important;
     border: none!important;
     background-color: inherit!important;
+    margin-bottom: 46px!important;
+    margin-top: 20px!important;
 }
 
 .bxslider .wrapper-selling .text-center:hover {
@@ -1686,7 +1685,6 @@ star-rating
 .product-advantages-header {
     text-align: center;
     margin: 0 0 12px;
-    position: relative;
 }
 
 .product-advantages-header .icons-quality_service_icon {
@@ -2009,7 +2007,7 @@ star-rating
 }
 
 .similar-header {
-    margin-bottom: 22px;
+    margin-bottom: 30px;
 }
 
 .similar-list .wrapper-product-table.th-view {
