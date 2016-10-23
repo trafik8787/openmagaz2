@@ -887,6 +887,11 @@ section.containaer-home > .row {margin-left: 0;margin-right: 0;}
       opacity: 0.4;
     }
 
+    .basket-is-empty {
+      padding: 18px 0 0;
+      color: #a0a0a0;
+    }
+
     .head-basket-item-price {
       color: #39487d;
       font-family: "Montserrat-Regular", fantasy;

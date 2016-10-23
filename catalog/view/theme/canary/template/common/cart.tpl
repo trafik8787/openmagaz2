@@ -96,7 +96,7 @@
         </div>
 
         <?else:?>
-        <div class="product-box">
+        <div class="basket-is-empty">
             <p class="text-center"><?php echo $text_empty; ?></p>
         </div>
         <?endif?>
