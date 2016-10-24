@@ -99,9 +99,37 @@
 
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .scheckout-page .col-xs-3, .scheckout-page .col-xs-6 {
     width: 100%;
+  }
+
+  .top-menu-b > li > a > i {
+    margin-right: 2px;
+  }
+
+  .bx-wrapper {
+    padding: 0 30px !important;
+  }
+
+  .search-top-f input {
+    padding-right: 5px;
+  }
+
+  .w-row-footer-menu ul li{
+    font-size: 14px;
+  }
+
+  .w-blog-section .thumbnail a.btn.btn-default{
+    bottom: 15px;
+  }
+
+  .w-button-in-baner a{
+    margin-bottom: 20px;
+  }
+
+  .top-menu-b li {
+    padding: 6px 7px 0 7px;
   }
 
   .title-follow{
@@ -185,6 +213,122 @@
   .w-right-home-top-slider{
     width: 380px;
     float: right;
+  }
+
+}
+
+@media  (max-width: 768px){
+  .w-copirait{
+    padding-top: 20px;
+    padding-right: 0;
+    text-align: center;
+    border-top: 1px solid #536899;
+  }
+
+  .w-footer-down {
+    padding: 20px 0;
+  }
+
+  .top-header{
+    position: relative;
+  }
+
+  .top-header .span1{
+    display: none!important;
+  }
+
+  .search-top-f:hover{
+    width: inherit;
+  }
+
+  .search-top-f {
+    width: 35px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: -44px;
+    margin-right: -14px;
+    margin-left: -14px;
+    background-color: #2f4680;
+  }
+
+  .search-top-f:hover input {
+    display: table-cell!important;
+  }
+
+  .search-top-f input {
+    height: 40px;
+    display: none!important;
+    border: 0;
+  }
+
+  .input-group-addon{
+    padding: 14px 12px;
+    border: 0;
+  }
+
+  .w-content-baner{
+    height: 300px;
+  }
+
+  .block-phone-header{
+    top: 0;
+    left: 15px;
+    position: absolute;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  .top-header-bloc-meny{
+    height: 100px;
+  }
+
+  .top-menu-b > li .span2 {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 19px;
+    color: white;
+    font-family: "Raleway-Regular", fantasy;
+  }
+
+  #w-but-cart span{
+    display: none;
+  }
+
+  .home-top-baneer .w-button-in-baner {
+    position: absolute;
+    top: 235px;
+    margin-left: inherit;
+    left: -15px;
+    right: -25px;
+  }
+  .paging-top-40 {
+    padding-top: 10px;
+  }
+  .paging-bottom-40 {
+    padding-bottom: 20px;
+  }
+
+  .w-button-in-baner a div{
+    display: none!important;
+  }
+
+  .w-button-in-baner a {
+    width: 47%;
+    margin: 0 1%!important;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .home-top-baneer .w-button-in-baner {
+    position: absolute;
+    top: 235px;
+    margin-left: inherit;
+    left: -5px;
+    right: -5px;
   }
 
 }

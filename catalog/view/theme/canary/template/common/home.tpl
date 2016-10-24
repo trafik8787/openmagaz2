@@ -4,22 +4,22 @@
 <!--*center-bl*-->
 <main class="w-general-container">
     <section class="containaer-home">
+        <div class="visible-xs">
+            <?=$home_banner?>
+        </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 padding-0">
                 <div class="home-top-baneer">
-
                     <div class="row">
-                        <div class="center-bl w-content-baner">
-
+                        <div class="center-bl w-content-baner clearfix">
                             <div class="col-md-6 col-sm-5">
                                 <div class="w-button-in-baner">
                                     <a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
                                     <a href="/engagement-rings" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-7">
+                            <div class="col-md-6 col-sm-7 hidden-xs">
                                 <?=$home_top_slider?>
-
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,9 @@
             </div>
         </div>
 
-        <?=$home_banner?>
+        <div class="hidden-xs">
+            <?=$home_banner?>
+        </div>
 
         <?=$home_best_quality_and_service?>
 
@@ -36,7 +38,9 @@
 
         <?=$home_bloc_category?>
 
-
+        <div class="visible-xs">
+            <?=$home_top_slider?>
+        </div>
 
 
 

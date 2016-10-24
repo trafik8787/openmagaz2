@@ -6,6 +6,12 @@
   .breadcrumbs, .static-page footer, .list-product .filter-product-line .view-product, .single-product {
     display: none; }
 
+  .w-copirait{
+    padding-right: 0;
+    text-align: center;
+    border-top: 1px solid #536899;
+  }
+
   .filter-box .left-f, .filter-box .right-f {
     float: none; }
 
