@@ -1,6 +1,4 @@
-@media (max-width: 991px) {
-  .scheckout-page .col-xs-3, .scheckout-page .col-xs-6 {
-    width: 100%; } }
+
 @media (max-width: 767px) {
   .privilege, .box-img-main, .new-products, .top-main-r, .new-products,
   .newsletter-main .bg-right, .brand-slider, .footer-menu .wrapper-footer, .menu,

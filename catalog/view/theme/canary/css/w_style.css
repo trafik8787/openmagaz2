@@ -48,6 +48,7 @@
 }
 
 .bx-wrapper {
+    padding: 0 40px!important;
     -moz-box-shadow: none!important;
     -webkit-box-shadow: none!important;
     box-shadow: none!important;
@@ -78,7 +79,7 @@
 }
 
 .wrapper-selling{
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 .bx-wrapper .bx-controls-direction a {
