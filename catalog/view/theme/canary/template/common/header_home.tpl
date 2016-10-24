@@ -57,42 +57,45 @@
 <header>
 
     <div class="user-line index-page">
-        <div class="center-bl top-header">
-            <div class="col-md-4 col-sm-3">
+        <div class="center-bl top-header clearfix">
+            <div class="col-md-4 col-sm-3 block-phone-header">
                 <a href="/" class="logo w-general-category">
                     <img src="/catalog/view/theme/canary/img/logo.png" alt="briliantcanary">
                 </a>
                 <div class="telephone font-montserrat-regular">
-
                     <span><?php echo $telephone; ?> | 24/7</span>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-6 col-sm-7">
                 <ul class="top-menu-b main-page">
                     <li>
                         <?php if ($logged) { ?>
                         <a href="<?php echo $account; ?>" class="w-general-category">
                             <i class="icons-login_icon"></i>
-                            <span><?php echo $text_account; ?></span>
+                            <span class="span1"><?php echo $text_account; ?></span>
                         </a>
                         <?php } else { ?>
                         <a href="<?php echo $login; ?>"  class="w-general-category">
                             <i class="icons-login_icon"></i>
-                            <span><?php echo $text_login; ?></span>
+                            <span class="span1"><?php echo $text_login; ?></span>
                         </a>
                         <?php } ?>
                     </li>
                     <li>
                         <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="w-general-category" title="<?php echo $text_wishlist; ?>">
                             <i class="icons-wishlist_icon"></i>
-                            <span>Wish List</span>
+                            <span class="span1">Wish List</span>
+                            <span class="span2">(0)</span>
                         </a>
                     </li>
                     <li><a href="/compare"><i class="icons-compare_icon"></i>
-                            <span>Compare</span></a>
+                            <span class="span1">Compare</span>
+                        <span class="span2">(2)</span>
+                        </a>
                     </li>
                     <li class="cart-bl">
                         <?php echo $cart; ?>
+                        <span class="span2">(1)</span>
                     </li>
                 </ul>
             </div>

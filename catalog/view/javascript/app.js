@@ -30,7 +30,6 @@ $(document).ready(function() {
     //    // prevSelector: '.icons-prev_slider_icon'
     //
     //});
-
     $('.bxslider').slick({
         infinite: true,
         prevArrow: '<a href="#" class="bx-prev"></a>',
