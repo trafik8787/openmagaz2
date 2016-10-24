@@ -5337,6 +5337,91 @@ display: block;
   height: 35px;
   display: inline-block;
   border-radius: 50%; }
+
+
+.wrapper-product-table.list-view .table tbody tr td .product-item {
+  background: none;
+  border: none;
+}
+
+.wrapper-product-table.list-view .table tbody tr td .product-item:hover {
+  box-shadow: none;
+}
+
+.wrapper-product-table.list-view .table tbody tr td .product-item:after {
+  display: none;
+}
+
+.wrapper-product-table.list-view .table {
+  margin-top: 40px;
+}
+
+.wrapper-product-table.list-view .table,
+.wrapper-product-table.list-view .table tbody {
+  display: block;
+}
+
+.wrapper-product-table.list-view .table thead {
+  display: none;
+}
+
+.wrapper-product-table.list-view .table tbody tr {
+  display: table;
+  margin: 15px 0;
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid #cfcfcf;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 10px;
+  background: -moz-linear-gradient(top, #ffffff 66%, #ededed 100%);
+  background: -webkit-linear-gradient(top, #ffffff 66%, #ededed 100%);
+  background: -o-linear-gradient(top, #ffffff 66%, #ededed 100%);
+  background: -ms-linear-gradient(top, #ffffff 66%, #ededed 100%);
+  background: linear-gradient(top, #ffffff 66%, #ededed 100%);
+  cursor: pointer;
+}
+
+.wrapper-product-table.list-view .table tbody tr:before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background: url("../img/comments-shadow.png") no-repeat top;
+  background-size: contain;
+}
+.wrapper-product-table.list-view .table tbody tr .stnumber-td {
+  color: #9c9a9a;
+}
+
+
+.wrapper-product-table.list-view .table tbody tr:hover {
+  border: 1px solid #a4c0eb !important;
+  -webkit-box-shadow: 0 0 14px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 0 14px rgba(0,0,0,0.2);
+  box-shadow: 0 0 14px rgba(0,0,0,0.2);
+}
+
+.wrapper-product-table.list-view .table > tbody > tr > td {
+  border: none;
+}
+
+.wrapper-product-table.list-view .table tbody tr td:nth-child(1) {
+  width: 15%;
+}
+
+.wrapper-product-table.list-view .table tbody tr td:nth-child(2) {
+  width: 50%;
+  text-align: left;
+}
+
+
+
+
+
 .wrapper-product-table .table tbody tr td .btn-box .cart-btn-item {
   background: url("../img/cart_default.png") no-repeat center/contain; }
 .wrapper-product-table .table tbody tr td .btn-box .cart-btn-item:hover {

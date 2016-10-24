@@ -246,11 +246,32 @@
                             <span class="h3 product-advantages-title">Best quality and service</span>
                             <div class="icons-quality_service_icon"></div>
                             <div class="small-controls">
-                                <a href="#" class="small-controls-left"></a>
-                                <a href="#" class="small-controls-right"></a>
+                                <div id="product-advantages-prev" class="small-controls-left"></div>
+                                <div id="product-advantages-next" class="small-controls-right"></div>
                             </div>
                         </div>
                         <div class="product-advantages-list clearfix">
+                            <div class="product-advantages-col">
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-1.png" alt=""></div>
+                                    <div class="product-advantages-item-text">Free and fast Shipping</div>
+                                </div>
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-3.png" alt=""></div>
+                                    <div class="product-advantages-item-text">100% Money Back
+                                        Guarantee</div>
+                                </div>
+                            </div>
+                            <div class="product-advantages-col">
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-2.png" alt=""></div>
+                                    <div class="product-advantages-item-text">No Hassle Returns</div>
+                                </div>
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-4.png" alt=""></div>
+                                    <div class="product-advantages-item-text">Helping Others</div>
+                                </div>
+                            </div>
                             <div class="product-advantages-col">
                                 <div class="product-advantages-item">
                                     <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-1.png" alt=""></div>
@@ -405,26 +426,6 @@
     </section>
 
 
-    <?php if ($products):?>
-
-    <!-- hiden TODO: delete this-->
-    <section class="single-product hide">
-        <div class="title-for-product"><?php echo $text_related; ?></div>
-        <div class="owl-carousel owl-product">
-
-            <?foreach ($products as $row):?>
-
-            <div class="item">
-                <div class="box-img"><a href="<?=$row['href']?>"><img src="<?=$row['img']?>" alt="<?=$row['name']?>"></a></div>
-                <div class="article"><a href="<?=$row['href']?>"><?=$row['name']?></a></div>
-            </div>
-
-            <?endforeach?>
-
-        </div>
-    </section>
-    <?endif?>
-
     <div class="similar-section">
         <div class="center-bl clearfix">
             <div class="left">
@@ -439,87 +440,35 @@
                         <div class="wrapper-product-table th-view">
                             <table class="table">
                                 <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="product-item">
-                                            <div class="box-img">
-                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="w-product-ajax"><img src="http://canary3.webremote.net/image/cache/catalog/galery_rings/50804-E-228x228.jpg" alt="14k White Gold Petite Pave Diamond Engagement Ring" title="14k White Gold Petite Pave Diamond Engagement Ring"></a>
-                                            </div>
-                                            <!--**-->
-                                            <div class="btn-box">
-                                                <a href="#" type="button" onclick="cart.add('1569', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                                <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1569'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                                <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1569'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                            </div>
-                                            <div class="box-tovar-th">
-                                                <div class="name">14k White Gold Petite Pave Diamond Engagement Ring</div>
+                                    <?foreach ($products as $row):?>
+                                        <tr>
+                                            <td>
+                                                <div class="product-item">
+                                                    <div class="box-img">
+                                                        <a href="<?=$row['href']?>" class="w-product-ajax"><img src="<?=$row['img']?>" alt="<?=$row['name']?>" title="<?=$row['name']?>"></a>
+                                                    </div>
+                                                    <!--**-->
+                                                    <div class="btn-box">
+                                                        <a href="#" type="button" onclick="cart.add('<?=$row['product_id']?>', '<?php echo $row['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
+                                                        <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
+                                                        <a href="<?=$row['href']?>" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
+                                                        <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
+                                                    </div>
+                                                    <div class="box-tovar-th">
+                                                        <div class="name"><?=$row['name']?></div>
 
-                                                <span class="price">$650.00</span>
-
-
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td data-th="Stock Number">50804-EW14</td>
-                                    <td data-th="Price"><div class="price">$650.00</div></td>
-                                    <td><a href="#" onclick="compare.add('1569'); return false;"><i class="fa fa-exchange"></i></a></td>
-                                    <td><a href="#" onclick="wishlist.add('1569'); return false;"><i class="fa fa-heart"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="product-item">
-                                            <div class="box-img">
-                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="w-product-ajax"><img src="http://canary3.webremote.net/image/cache/catalog/galery_rings/50804-E-228x228.jpg" alt="14k White Gold Petite Pave Diamond Engagement Ring" title="14k White Gold Petite Pave Diamond Engagement Ring"></a>
-                                            </div>
-                                            <!--**-->
-                                            <div class="btn-box">
-                                                <a href="#" type="button" onclick="cart.add('1569', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                                <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1569'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                                <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1569'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                            </div>
-                                            <div class="box-tovar-th">
-                                                <div class="name">14k White Gold Petite Pave Diamond Engagement Ring</div>
-
-                                                <span class="price">$650.00</span>
+                                                        <span class="price"><?=$row['price']?></span>
 
 
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td data-th="Stock Number">50804-EW14</td>
-                                    <td data-th="Price"><div class="price">$650.00</div></td>
-                                    <td><a href="#" onclick="compare.add('1569'); return false;"><i class="fa fa-exchange"></i></a></td>
-                                    <td><a href="#" onclick="wishlist.add('1569'); return false;"><i class="fa fa-heart"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="product-item">
-                                            <div class="box-img">
-                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="w-product-ajax"><img src="http://canary3.webremote.net/image/cache/catalog/galery_rings/50804-E-228x228.jpg" alt="14k White Gold Petite Pave Diamond Engagement Ring" title="14k White Gold Petite Pave Diamond Engagement Ring"></a>
-                                            </div>
-                                            <!--**-->
-                                            <div class="btn-box">
-                                                <a href="#" type="button" onclick="cart.add('1569', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                                <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1569'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                                <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                                <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1569'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                            </div>
-                                            <div class="box-tovar-th">
-                                                <div class="name">14k White Gold Petite Pave Diamond Engagement Ring</div>
-
-                                                <span class="price">$650.00</span>
-
-
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td data-th="Stock Number">50804-EW14</td>
-                                    <td data-th="Price"><div class="price">$650.00</div></td>
-                                    <td><a href="#" onclick="compare.add('1569'); return false;"><i class="fa fa-exchange"></i></a></td>
-                                    <td><a href="#" onclick="wishlist.add('1569'); return false;"><i class="fa fa-heart"></i></a></td>
-                                </tr>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td data-th="Stock Number"><?=$row['sku']?></td>
+                                            <td data-th="Price"><div class="price"><?=$row['price']?></div></td>
+                                            <td><a href="#" onclick="compare.add('<?=$row['product_id']?>'); return false;"><i class="fa fa-exchange"></i></a></td>
+                                            <td><a href="#" onclick="wishlist.add('<?=$row['product_id']?>'); return false;"><i class="fa fa-heart"></i></a></td>
+                                        </tr>
+                                    <?endforeach?>
                                 </tbody>
                             </table>
                         </div>

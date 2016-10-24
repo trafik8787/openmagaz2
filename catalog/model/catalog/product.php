@@ -434,7 +434,7 @@ class ModelCatalogProduct extends Model {
 
             $sql = array();
             //количество похожих продуктов 5
-            while (count($sql) < 5) {
+            while (count($sql) < 3) {
                 $sql[] = "(SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN "
                     . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN ". DB_PREFIX ."product_to_category ptc ON (p.product_id = ptc.product_id)
                 WHERE  p.status = '1' AND p.date_available <= NOW() 

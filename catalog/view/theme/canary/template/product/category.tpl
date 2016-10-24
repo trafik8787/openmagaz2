@@ -19,7 +19,7 @@
                     </ul>
                 </div>
                 <div class="col-md-7 col-sm-7 col-xs-12 padding-0">
-                    <img src="/catalog/view/theme/canary/img/breadcrumb-img.png" class="bread-baner">
+                    <a href=""><img src="<?=get_baners_top_random()?>" class="bread-baner" ></a>
                 </div>
             </div>
             <div class="row margin-buttom-20">
@@ -133,10 +133,14 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td data-th="Stock Number"><?=$product['sku']?></td>
+                                <td data-th="Name"><?php echo $product['name']; ?></td>
+                                <td data-th="Stock Number" class="stnumber-td"><?=$product['sku']?></td>
                                 <td data-th="Price"><div class="price"><?php echo $product['price']; ?></div></td>
-                                <td><a href="#" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-exchange"></i></a></td>
-                                <td><a href="#" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-heart"></i></a></td>
+                                <td></td>
+                                <td>
+                                    <a href="#" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-exchange"></i></a>
+                                    <a href="#" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-heart"></i></a>
+                                </td>
                             </tr>
                         <?endforeach?>
 

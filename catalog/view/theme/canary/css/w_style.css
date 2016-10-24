@@ -287,7 +287,7 @@ ul.w-top-children-menu .dropdown-inside {
     height: 100%;
 }
 .bread-baner{
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;
 }
@@ -1750,6 +1750,10 @@ star-rating
     margin: 0 -4px;
 }
 
+.product-advantages-list img {
+    display: inline-block;
+}
+
 .product-advantages-col {
     width: calc(50% - 8px);
     float: left;
@@ -2151,6 +2155,14 @@ star-rating
     display: inline-block;
     margin: 0 2px;
     position: relative;
+    cursor: pointer;
+}
+
+.small-controls-left:focus,
+.small-controls-left:active,
+.small-controls-right:focus,
+.small-controls-right:active {
+    cursor: pointer;
 }
 
 .small-controls-left:before,
