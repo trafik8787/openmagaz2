@@ -1448,10 +1448,10 @@ star-rating
 
 .product-details .table .prod-more-spec {
     color: #2f2e2d;
-    text-decoration: none;
+    text-decoration: underline;
 }
 .product-details .table .prod-more-spec:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .product-tags {
@@ -1529,6 +1529,57 @@ star-rating
     text-decoration: none;
     color: #2f2e2d
 }
+
+.product-buy-diamant {
+    padding: 35px 28px;
+}
+
+.product-buy-diamant .price-product {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.product-buy-sertificate {
+    display: inline-block;
+    margin-right: 30px;
+    vertical-align: middle;
+}
+
+.product-buy-sertificate img {
+    vertical-align: middle;
+}
+
+.product-buy-sertificate span{
+    display: inline-block;
+    width: calc(100% - 80px);
+    margin-left: 10px;
+    text-decoration: underline;
+    color: #2f2e2d;
+    vertical-align: middle;
+    line-height: 1.4;
+}
+
+.product-buy-sertificate:hover span{
+    text-decoration: none;
+}
+
+.product-buy-diamant .btn {
+    float: right;
+    margin: -4px 0;
+    width: 205px;
+    padding: 13px 0;
+    font-size: 15px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.product-buy-diamant .w-btn-orange .bold-angle-right {
+    margin-right: 15px;
+}
+
+
 
 .bold-angle-right {
     display: inline-block;
@@ -2052,6 +2103,26 @@ star-rating
 .similar-list-3 .wrapper-product-table.th-view tbody tr td:nth-child(1) {
     margin: 0 auto;
     max-width: 100%;
+}
+
+.similar-stones {
+    margin-bottom: 100px;
+}
+
+.similar-stones .product-section-header {
+    margin-bottom: 22px;
+}
+.similar-stones .wrapper-product-table.th-view tbody tr {
+    margin-right: 3.7%;
+}
+
+.similar-stones  .wrapper-product-table.th-view tbody tr:nth-child(4n) {
+    margin-right: 0;
+}
+
+
+.similar-stones .wrapper-product-table.th-view {
+    padding-top: 0;
 }
 
 
