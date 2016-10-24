@@ -129,6 +129,7 @@ $(document).ready(function() {
 	});
 });
 
+
 // Cart add remove functions
 var cart = {
 	'add': function(product_id, quantity) {
@@ -155,7 +156,7 @@ var cart = {
 
 					// Need to set timeout otherwise it wont update the total
 					setTimeout(function () {
-                        $('#w-but-cart').html('<span>cart ('+json['count']+')</span>');
+                        $('#w-but-cart').html('<span class="w-count-circle">'+json['count']+'</span><span>cart</span>');
 					}, 100);
 
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
@@ -214,7 +215,11 @@ var cart = {
 				// Need to set timeout otherwise it wont update the total
                 console.log(json);
 				setTimeout(function () {
-					$('#w-but-cart').html('<span>cart ('+json['count']+')</span>');
+				    if (json['count'] == 0) {
+                        $('#w-but-cart').html('<i class="icons-cart_icon"></i><span>cart</span>');
+                    } else {
+                        $('#w-but-cart').html('<i class="icons-cart_icon"></i><span class="w-count-circle">' + json['count'] + '</span><span>cart</span>');
+                    }
 				}, 100);
 
                 //console.log(json);

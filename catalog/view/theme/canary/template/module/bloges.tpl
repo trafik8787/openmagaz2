@@ -8,7 +8,7 @@
                 <div class="icons-search_diamond_icon"></div>
             </div>
         </div>
-        <div class="margin-top-30 margin-buttom-30 bxslider-blog">
+        <div class="margin-top-47 margin-buttom-30 bxslider-blog">
             <?foreach ($bloges as $row):?>
 
                 <div class="slide">

@@ -737,7 +737,7 @@
                 if (json['success']) {
                     $('.breadcrumb').after('<div class="alert alert-success">' + json['success'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 
-                    $('#w-but-cart').html('<span>cart ('+json['count']+')</span>');
+                    $('#w-but-cart').html('<i class="icons-cart_icon"></i><span class="w-count-circle">'+json['count']+'</span><span>cart</span>');
 
                     $('html, body').animate({ scrollTop: 0 }, 'slow');
 

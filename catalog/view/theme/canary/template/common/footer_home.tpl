@@ -136,18 +136,25 @@
 
 <img src="/catalog/view/theme/canary/img/preloader.png" class="container-loader" alt="" style="display: none">
 
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/select2/dist/js/select2.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/vendor/slickslider/slick.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery.sliderPro/jquery.sliderPro.min.js"></script>
-
 <script type="text/javascript" src="/catalog/view/theme/canary/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/script.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/device.min.js"></script>
 <script type="text/javascript" src="/catalog/view/javascript/app.js" ></script>
 <script type="text/javascript" src="/catalog/view/javascript/common.js" ></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.easydropdown.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
+
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.bxslider.min.js" ></script>
 
 </head>

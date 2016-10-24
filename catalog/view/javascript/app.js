@@ -32,6 +32,7 @@ $(document).ready(function() {
     //});
     $('.bxslider').slick({
         infinite: true,
+        autoplay: true,
         prevArrow: '<a href="#" class="bx-prev"></a>',
         nextArrow: '<a href="#" class="bx-next"></a>',
         slidesToShow: 2,
@@ -195,7 +196,7 @@ $(document).ready(function() {
     $(document).on('click', '.w-product-ajax' ,function(){
 
 
-        //console.log(this.href);
+
 
         history.pushState('', '', this.href);
 
@@ -345,7 +346,7 @@ $(document).on('click', '.w-remowe-diamond-complect', function(){
         success: function(json) {
             $('.w-blocs-complects').empty();
             $('.w-blocs-complects').html(json);
-            // console.log(json);
+
         },
         error: function(xhr, ajaxOptions, thrownError) {
 
@@ -455,50 +456,51 @@ function input_sort (value) {
 
 $(document).ready(function() {
 
+    if ($(window).width() >= '1090') {
+        $(".w-diam-row").hover(function () {
 
-    $(".w-diam-row").hover(function() {
+            $(this).css({
+                'width': "150px",
+                'top': '-16px',
+                'z-index': 2
+            });
 
-        $(this).css({
-            'width': "150px",
-            'top': '-16px',
-            'z-index': 2
+            $(this).find('a > img').css({'height': '102px'});
+
+            $(this).parent().find('li').not($(this)).css({'top': '-27px'});
+            $(this).find('.w-home-briliant').css({
+                'box-shadow': '-1px 0 3px #ccc, 1px 0 3px #ccc',
+                'border': '1px solid #cfdae6'
+            });
+            $(this).find('.w-diamond-name-sparite a').css({
+                'text-decoration': 'underline'
+            });
+
+            $(this).prevAll().css({'left': '15px'});
+            $(this).nextAll().css({'left': '-15px'});
+
+
+        }, function () {
+            $(this).css({
+                'width': "120px",
+                'top': '0',
+                'z-index': 1
+            });
+            $(this).find('a > img').css({'height': '76px'});
+
+            $(this).find('.w-home-briliant').css({
+                'box-shadow': '0 0 1px #265293, 11px 15px 22px #144082',
+                'border': 'none'
+            });
+
+            $(this).find('.w-diamond-name-sparite a').css({
+                'text-decoration': 'none'
+            });
+            $(this).parent().find('li').not($(this)).css({'top': '0'});
+            $(this).prevAll().css({'left': '0'});
+            $(this).nextAll().css({'left': '0'});
         });
-
-        $(this).find('a > img').css({'height': '102px'});
-
-        $(this).parent().find('li').not($(this)).css({'top': '-27px'});
-        $(this).find('.w-home-briliant').css({
-            'box-shadow': '-1px 0 3px #ccc, 1px 0 3px #ccc',
-            'border': '1px solid #cfdae6'
-        });
-        $(this).find('.w-diamond-name-sparite a').css({
-            'text-decoration': 'underline'
-        });
-
-         $(this).prevAll().css({'left': '15px'});
-         $(this).nextAll().css({'left': '-15px'});
-
-
-    }, function() {
-        $(this).css({
-            'width': "120px",
-            'top': '0',
-            'z-index': 1
-        });
-        $(this).find('a > img').css({'height': '76px'});
-
-        $(this).find('.w-home-briliant').css({
-            'box-shadow': '0 0 1px #265293, 11px 15px 22px #144082',
-            'border': 'none'
-        });
-
-        $(this).find('.w-diamond-name-sparite a').css({
-            'text-decoration': 'none'
-        });
-        $(this).parent().find('li').not($(this)).css({'top': '0'});
-        $(this).prevAll().css({'left': '0'});
-        $(this).nextAll().css({'left': '0'});
-    });
+    }
 
 });
 
@@ -528,7 +530,7 @@ $(function() {
             } else {
                 flag_more = false;
             }
-            console.log(mw+' '+w);
+
         });
         if (flag_more == true) {
             $("#horizontal").append(
