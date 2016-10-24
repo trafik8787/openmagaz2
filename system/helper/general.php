@@ -287,4 +287,20 @@ function arr_primary_color ($value = null) {
 }
 
 
+//генерация случайного вывода банеров
+function get_baners_top_random () {
+
+    $arr = array(
+        '/image/baners-top/baner1.jpg',
+        '/image/baners-top/baner2.jpg',
+        '/image/baners-top/baner3.jpg',
+        '/image/baners-top/baner4.jpg',
+        '/image/baners-top/baner5.jpg'
+    );
+    $key = array_rand($arr, 1);
+
+    return $arr[$key];
+}
+
+
 

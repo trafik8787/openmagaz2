@@ -19,7 +19,7 @@
                     </ul>
                 </div>
                 <div class="col-md-7 col-sm-7 col-xs-12 padding-0">
-                    <img src="/catalog/view/theme/canary/img/breadcrumb-img.png" class="bread-baner">
+                    <a href=""><img src="<?=get_baners_top_random()?>" class="bread-baner" ></a>
                 </div>
             </div>
             <div class="row margin-buttom-20">

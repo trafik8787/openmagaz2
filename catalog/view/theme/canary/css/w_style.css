@@ -259,7 +259,7 @@ ul.w-top-children-menu .dropdown-inside {
     height: 100%;
 }
 .bread-baner{
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;
 }
