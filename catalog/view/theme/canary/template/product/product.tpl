@@ -11,18 +11,18 @@
 <main class="w-general-container">
 
     <section class="static-page">
-        <div class="center-bl ">
+        <div class="center-bl">
             <div class="row margin-buttom-30 w-bredcrum-border">
-                <ul class="breadcrumbs">
-                    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-                    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-                    <li> >> </li>
-                    <?php } ?>
-                </ul>
+                <div class="col-xs-12">
+                    <ul class="breadcrumbs">
+                        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                        <li> » </li>
+                        <?php } ?>
+                    </ul>
+                </div>
             </div>
-
             <?php echo $content_top; ?>
-
         </div>
         <div class="center-bl">
             <div class="one-product clearfix">
@@ -82,7 +82,6 @@
                                 <i class="star active"></i>
                                 <?php } ?>
                                 <?php } ?>
-
                                 <span><a href="" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: 1500}, 'slow'); return false;"><?php echo $reviews; ?></a></span>
                             </div>
                         </div>
@@ -294,75 +293,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div>
-                                    <a href="#">
-                                        <div class="alert alert-info">
-                                            <div class="media">
-                                        <span class="pull-left">
-                                            <i class="truck-ico"></i>
-                                        </span>
-                                                <div class="media-body">
-                                                    <h4 class="media-heading"><b>Free and Fast Shipping</b></h4>
-                                                    <small>Fully Insured Overnight <br> Shipping</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <div class="alert alert-info">
-                                            <div class="media">
-                                        <span class="pull-left">
-                                            <i class="risk-free-ico"></i>
-                                        </span>
-                                                <div class="media-body">
-                                                    <h4 class="media-heading"><b>Risk-free Retail</b></h4>
-                                                    <small>100% Money Back <br> Guarantee</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div>
-                                    <a href="#">
-                                        <div class="alert alert-info">
-                                            <div class="media">
-                                        <span class="pull-left">
-                                            <i class="glyphicon glyphicon-compressed" style="color: #fac652;font-size: 25px;"></i>
-                                        </span>
-                                                <div class="media-body">
-                                                    <h4 class="media-heading"><b>Free Resizing and Engraving</b></h4>
-                                                    On All Bridal <br> Jewerly
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="#">
-                                        <div class="alert alert-info">
-                                            <div class="media">
-                                        <span class="pull-left">
-                                            <i class="glyphicon glyphicon-map-marker" style="color: #fac652;font-size: 25px;"></i>
-                                        </span>
-
-                                                <div class="media-body">
-                                                    <h4 class="media-heading"><b>Helping Others</b></h4>
-                                                    A Partion of Your Purchase Goest <br> to Charity
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        -->
                     </div>
 
                 </div>
