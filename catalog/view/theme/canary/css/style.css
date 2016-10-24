@@ -1142,6 +1142,7 @@ padding: 0;
 }
 
 .w-blog-section .h3,
+.search-diamond-mobile .h3,
 .w-bloc-search-diamond .h3,
 .w-bloc-best-servise .h3 {
     font-family: "Felix Titling";
@@ -6944,6 +6945,26 @@ display: block;
     vertical-align: middle; }
     .account-col .wishlist-action.wa-cart {
       background-size: 100%; }
+
+.mobile-menu .dropdown-menu-mobile{
+  display: none;
+}
+
+.mobile-menu-btn{
+  padding: 5px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.dropdown-menu-mobile{
+  width: 180px;
+  background-color: white;
+}
+
+.mobile-menu.open .dropdown-menu-mobile{
+  display: block;
+
+}
 
 @media (max-width: 1700px) {
   .menu {

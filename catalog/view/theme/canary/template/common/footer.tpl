@@ -1,10 +1,6 @@
-
 <footer>
-
     <section>
-
         <div class="row w-footer-newsletter">
-
             <div class="center-bl">
                 <div class="col-md-4 col-sm-3">
                     <div class="h3">
@@ -12,7 +8,6 @@
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-9">
-
                     <form class="form-inline w-newsletter-form" role="form">
                         <div class="form-group">
                             <input type="email" class="form-control newslet-email"  placeholder="Enter e-mail">
@@ -21,7 +16,6 @@
                         <button value="1" class="w-newsletter-button btn w-btn-orange2" type="submit">Woman</button>
                         <button value="2" class="w-newsletter-button btn w-btn-orange2" type="submit">Man</button>
                     </form>
-
                 </div>
             </div>
         </div>
@@ -44,19 +38,13 @@
                 </div>
             </div>
         </div>
-
     </section>
-
-
-
-
-
     <div class="row w-footer-down">
         <section class="footer-menu">
 
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="paging-right-50">
-                    <a href="/"><img src="/catalog/view/theme/canary/img/logo_new_footer.png" width="auto" class="logo-futer" alt="briliantcanary"></a>
+                    <a href="/" class="footer-logo"><img src="/catalog/view/theme/canary/img/logo_new_footer.png" width="auto" class="logo-futer" alt="briliantcanary"></a>
                     <ul class="list-inline text-right">
                         <li><a href="https://www.facebook.com/BrilliantCanaryRings" class="icon-facebook"></a></li>
                         <li><a href="https://twitter.com/TheBrilliantC" class="icon-twitter"></a></li>
@@ -75,7 +63,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-8 col-sm-8 col-xs-12">
                 <div class="row content-footer">
                     <div class="col-md-3 col-sm-3 col-xs-6">
@@ -120,13 +107,9 @@
                     </div>
                 </div>
             </div>
-
         </section>
-
     </div>
-
 </footer>
-
 <img src="/catalog/view/theme/canary/img/preloader.png" class="container-loader" alt="" style="display: none">
 
 <script type="text/javascript" src="/catalog/view/theme/canary/vendor/select2/dist/js/select2.min.js"></script>
@@ -149,8 +132,6 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
 
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.bxslider.min.js" ></script>
-
-
 
 </body>
 </html>

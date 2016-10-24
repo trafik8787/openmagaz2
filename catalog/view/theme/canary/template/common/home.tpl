@@ -1,4 +1,3 @@
-
 <?php echo $header; ?>
 <?//dd($categories)?>
 <!--*center-bl*-->
@@ -28,34 +27,66 @@
             </div>
         </div>
 
+        <div class="visible-xs">
+            <?=$home_bloc_category?>
+        </div>
         <div class="hidden-xs">
             <?=$home_banner?>
         </div>
+        <div class="visible-xs search-diamond-mobile">
+            <div class="h3 text-center margin-top-10">SEARCH FOR DIAMONDS</div>
+            <div class="icons-quality_service_icon"></div>
+            <ul class="brilliant-style clearfix">
+                <li>
+                    <a href="/diamonds?&amp;shape=Round" class="w-general-category"><i class="brilliant-ico2 brilliant-s1"></i><br>Round</a>
+                </li>
+                <li>
+                    <a href="/diamonds?&amp;shape=Princess" class="w-general-category"><i class="brilliant-ico2 brilliant-s2"></i><br>Princess</a>
+                </li>
+                <li>
+                    <a href="/diamonds?&amp;shape=Asscher" class="w-general-category"><i class="brilliant-ico2 brilliant-s3"></i><br>Asscher</a>
+                </li>
+                <li>
+                    <a href="/diamonds?&amp;shape=Cushion" class="w-general-category"><i class="brilliant-ico2 brilliant-s4"></i><br>Cushion</a>
+                </li>
+                <li>
+                    <a href="/diamonds?&amp;shape=Marquise" class="w-general-category"><i class="brilliant-ico2 brilliant-s5"></i><br>Marquise</a>
+                </li>
+                <li>
+                    <a href="/diamonds?&amp;shape=Oval" class="w-general-category"><i class="brilliant-ico2 brilliant-s6"></i><br>Oval</a>
+                </li>
+                <li>
+                    <a href="/diamonds?&amp;shape=Radiant" class="w-general-category"><i class="brilliant-ico2 brilliant-s7"></i><br>Radiant</a>
+                </li>
+                <li>
+                    <a href="/diamonds?&amp;shape=Pear" class="w-general-category"><i class="brilliant-ico2 brilliant-s8"></i><br>Pear</a>
+                </li>
+                <li>
+                    <a href="/diamonds?&amp;shape=Heart" class="w-general-category"><i class="brilliant-ico2 brilliant-s9"></i><br>Heart</a>
+                </li>
+                <li>
+                    <a href="/diamonds?&amp;shape=Emerald" class="w-general-category"><i class="brilliant-ico2 brilliant-s10"></i><br>Emerald</a>
+                </li>
+            </ul>
+        </div>
+        <div class="visible-xs">
+            <?=$home_best_quality_and_service?>
+        </div>
 
-        <?=$home_best_quality_and_service?>
-
-
-
-        <?=$home_bloc_category?>
-
+        <div class="hidden-xs">
+            <?=$home_bloc_category?>
+        </div>
         <div class="visible-xs">
             <?=$home_top_slider?>
         </div>
 
-
-
-        <?=$home_search_for_diamond?>
-
-
+        <div class="hidden-xs">
+            <?=$home_search_for_diamond?>
+        </div>
 
         <?php echo $content_bottom; ?>
 
     </section>
-
-
-
-
-
 
     <div class="panel-group brilliant-panel-main" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
