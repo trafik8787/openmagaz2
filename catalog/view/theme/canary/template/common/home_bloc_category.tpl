@@ -1,6 +1,6 @@
 <div class="row margin-top-40 w-bloc-best-category">
     <div class="center-bl">
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-6">
             <div class="w-bloc-home-category">
                 <div class="thumbnail">
                     <div class="w-category-gradient"></div>
@@ -20,7 +20,7 @@
             </div>
             <div class="w-shadow-slider"></div>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-6">
             <div class="w-bloc-home-category">
                 <div class="thumbnail">
                     <div class="w-category-gradient"></div>
@@ -40,7 +40,7 @@
             </div>
             <div class="w-shadow-slider"></div>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-4 col-sm-4 col-xs-6">
             <div class="w-bloc-home-category">
                 <div class="thumbnail">
                     <div class="w-category-gradient"></div>

@@ -30,6 +30,9 @@ $(document).ready(function() {
     //    // prevSelector: '.icons-prev_slider_icon'
     //
     //});
+    $(".mobile-menu-btn").click(function(){
+        $(".mobile-menu").toggleClass("open");
+    });
     $('.bxslider').slick({
         infinite: true,
         autoplay: true,
@@ -42,6 +45,13 @@ $(document).ready(function() {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             },
