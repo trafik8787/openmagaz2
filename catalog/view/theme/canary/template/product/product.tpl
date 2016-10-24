@@ -246,11 +246,32 @@
                             <span class="h3 product-advantages-title">Best quality and service</span>
                             <div class="icons-quality_service_icon"></div>
                             <div class="small-controls">
-                                <a href="#" class="small-controls-left"></a>
-                                <a href="#" class="small-controls-right"></a>
+                                <div id="product-advantages-prev" class="small-controls-left"></div>
+                                <div id="product-advantages-next" class="small-controls-right"></div>
                             </div>
                         </div>
                         <div class="product-advantages-list clearfix">
+                            <div class="product-advantages-col">
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-1.png" alt=""></div>
+                                    <div class="product-advantages-item-text">Free and fast Shipping</div>
+                                </div>
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-3.png" alt=""></div>
+                                    <div class="product-advantages-item-text">100% Money Back
+                                        Guarantee</div>
+                                </div>
+                            </div>
+                            <div class="product-advantages-col">
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-2.png" alt=""></div>
+                                    <div class="product-advantages-item-text">No Hassle Returns</div>
+                                </div>
+                                <div class="product-advantages-item">
+                                    <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-4.png" alt=""></div>
+                                    <div class="product-advantages-item-text">Helping Others</div>
+                                </div>
+                            </div>
                             <div class="product-advantages-col">
                                 <div class="product-advantages-item">
                                     <div class="product-advantages-item-img"><img src="/catalog/view/theme/canary/img/p-advantage-1.png" alt=""></div>

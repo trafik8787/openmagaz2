@@ -133,10 +133,14 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td data-th="Stock Number"><?=$product['sku']?></td>
+                                <td data-th="Name"><?php echo $product['name']; ?></td>
+                                <td data-th="Stock Number" class="stnumber-td"><?=$product['sku']?></td>
                                 <td data-th="Price"><div class="price"><?php echo $product['price']; ?></div></td>
-                                <td><a href="#" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-exchange"></i></a></td>
-                                <td><a href="#" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-heart"></i></a></td>
+                                <td></td>
+                                <td>
+                                    <a href="#" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-exchange"></i></a>
+                                    <a href="#" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-heart"></i></a>
+                                </td>
                             </tr>
                         <?endforeach?>
 

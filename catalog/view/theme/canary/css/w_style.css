@@ -1722,6 +1722,10 @@ star-rating
     margin: 0 -4px;
 }
 
+.product-advantages-list img {
+    display: inline-block;
+}
+
 .product-advantages-col {
     width: calc(50% - 8px);
     float: left;
@@ -2123,6 +2127,14 @@ star-rating
     display: inline-block;
     margin: 0 2px;
     position: relative;
+    cursor: pointer;
+}
+
+.small-controls-left:focus,
+.small-controls-left:active,
+.small-controls-right:focus,
+.small-controls-right:active {
+    cursor: pointer;
 }
 
 .small-controls-left:before,

@@ -1,4 +1,3 @@
-
 $(window).load(function(){
     if (device.mobile()===true){
         $("head").append('<link rel="stylesheet" href="/catalog/view/theme/canary/css/mobile.css"/>');
@@ -209,11 +208,6 @@ $( document ).ready(function( $ ) {
     });
 
 
-
-
-
-
-
 });
 
 //$('.slider-for').on('init', function(event, slick){
@@ -296,6 +290,15 @@ function Productslider () {
         }
     });
 
+    $('.product-advantages-list').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: true,
+        draggable: false,
+        prevArrow: $('#product-advantages-prev'),
+        nextArrow: $('#product-advantages-next')
+    });
+
 }
 
 Productslider ();
@@ -359,4 +362,14 @@ $(document).on('click', '.mobile-login-tab-btn', function(e) {
         if (!itemLinkAllow) e.preventDefault();
     });
 })();
+
+
+$('body').delegate('.list-view tr', 'click', function(event){
+    var self = $(this),
+        itemHref;
+    if (!$(event.target).is('i') && !$(event.target).is('a')) {
+        itemHref = self.find('.box-img a').attr('href');
+        window.location.assign(itemHref);
+    }
+});
 
