@@ -504,7 +504,47 @@ $(document).ready(function() {
 });
 
 
+$(function() {
+    alignMenu();
 
+    $(window).resize(function() {
+        $("#horizontal").append($("#horizontal li.hideshow ul").html());
+        $("#horizontal li.hideshow").remove();
+        alignMenu();
+    });
+
+    function alignMenu() {
+        var w = 0;
+        var mw = $("#horizontal").width() - 60;
+        var i = -1;
+        var menuhtml = '';
+        var flag_more = false;
+        jQuery.each($("#horizontal").children('li'), function() {
+            i++;
+            w += $(this).outerWidth(true);
+            if (mw < w) {
+                menuhtml += $('<div>').append($(this).clone()).html();
+                $(this).remove();
+                flag_more = true;
+            } else {
+                flag_more = false;
+            }
+            console.log(mw+' '+w);
+        });
+        if (flag_more == true) {
+            $("#horizontal").append(
+                '<li href="#" class="hideshow">'
+                + '<a href="#">more '
+                + '<span style="font-size:13px">&#8595;</span>'
+                + '</a><ul class="w-top-children-menu">' + menuhtml + '</ul></li>');
+            $("#horizontal li.hideshow ul").css("top", "40px");
+            $("#horizontal li.hideshow").click(function () {
+                $(this).children("ul.w-top-children-menu").toggle();
+            });
+        }
+
+    }
+});
 
 
 

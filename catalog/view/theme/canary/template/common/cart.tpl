@@ -10,35 +10,45 @@
 </a>
 <div class="cart-basket">
     <div class="w-cart-basket">
-        <button class="close-cart-main"></button>
+        <!-- <button class="close-cart-main"></button> -->
+
         <?php if ($products || $vouchers) : ?>
         <div class="product-box">
             <div class="table-responsive">
-                <table class="table table-hover table-condensed">
+                <table class="table table-condensed">
                     <tbody>
                         <?php foreach ($products as $product) : ?>
                             <tr>
                                 <td>
                                     <div class="box-img">
                                         <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>"></a>
+                                        <button type="button" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="btn btn-xs head-basket-remove"><i class="fa fa-times"></i></button>
                                     </div>
+
                                 </td>
                                 <td>
                                     <div class="title"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
                                     <?php if ($product['option']):?>
-                                        <?php foreach ($product['option'] as $option):?>
-                                        <br />
-                                        <small><?php echo $option['name']; ?> <?php echo $option['value']; ?></small>
-                                        <?endforeach?>
+                                        <!-- todo remove hide if you need this -->
+                                        <div class="head-basket-options hide">
+                                            <?php foreach ($product['option'] as $option):?>
+                                            <span><?php echo $option['name']; ?> <?php echo $option['value']; ?></span>
+                                            <span><?php echo $option['name']; ?> <?php echo $option['value']; ?></span>
+                                            <span><?php echo $option['name']; ?> <?php echo $option['value']; ?></span>
+                                            <span><?php echo $option['name']; ?> <?php echo $option['value']; ?></span>
+                                            <?endforeach?>
+                                        </div>
                                     <?endif?>
                                     <?php if ($product['recurring']):?>
-                                        <br />
-                                        <small><?php echo $text_recurring; ?> <?php echo $product['recurring']; ?> </small>
+                                        <!-- todo remove hide if you need this -->
+                                        <div class="head-basket-options hide">
+                                            <span><?php echo $text_recurring; ?> <?php echo $product['recurring']; ?> </span>
+                                        </div>
                                     <?endif?>
-                                    X<?php echo $product['quantity']; ?>: <span class="red-text"><?php echo $product['total']; ?></span>
-                                </td>
-                                <td style="vertical-align: middle;">
-                                    <button type="button" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>
+                                    <!-- todo remove hide if you need this -->
+                                    <div class="head-basket-item-qty hide"><small>x</small><?php echo $product['quantity']; ?></div>
+
+                                    <div class="head-basket-item-price"><?php echo $product['total']; ?></div>
                                 </td>
                             </tr>
                         <?endforeach?>
@@ -80,13 +90,13 @@
                 <p><?php echo $total['title']; ?>: <?php echo $total['text']; ?></p>
             <?endforeach?>
             <div class="box-btn clearfix">
-                <a href="<?php echo $cart; ?>" class="red-btn pull-left w-general-category"><i class="cart-white-ico"></i><?php echo $text_cart; ?></a>
-                <a href="<?php echo $checkout; ?>" class="red-btn pull-right w-general-category"><?php echo $text_checkout; ?></a>
+                <a href="<?php echo $cart; ?>" class="btn w-btn-orange btn-lg"><?php echo $text_cart; ?></a>
+                <a href="<?php echo $checkout; ?>" class="btn w-btn-orange btn-lg"><?php echo $text_checkout; ?></a>
             </div>
         </div>
 
         <?else:?>
-        <div class="product-box">
+        <div class="basket-is-empty">
             <p class="text-center"><?php echo $text_empty; ?></p>
         </div>
         <?endif?>

@@ -9,102 +9,27 @@
             </div>
         </div>
         <div class="margin-top-30 margin-buttom-30 bxslider-blog">
-            <div class="slide">
-                <div class="thumbnail">
-                    <div class="marc-date">
-                        <strong>Sep</strong>
-                        <div>27</div>
-                    </div>
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/blog1.jpg" alt="">
-                    <div class="caption">
-                        <h3>Ancient India and the Origins of Diamond Investing</h3>
-                        <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
+            <?foreach ($bloges as $row):?>
 
-                    </div>
-                    <a href="#" class="btn btn-default" role="button">Read more</a>
-                </div>
-                <div class="w-shadow-slider"></div>
-            </div>
-            <div class="slide">
-                <div class="thumbnail">
-                    <div class="marc-date">
-                        <strong>Sep</strong>
-                        <div>27</div>
-                    </div>
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/blog2.jpg" alt="">
-                    <div class="caption">
-                        <h3>Ancient India and the Origins of Diamond Investing</h3>
-                        <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
+                <div class="slide">
+                    <div class="thumbnail">
+                        <div class="marc-date">
+                            <strong><?=$row['date_m']?></strong>
+                            <div><?=$row['date_d']?></div>
+                        </div>
+                        <img src="<?=$row['img']?>" style="height: 170px;" alt="">
+                        <div class="caption">
+                            <h3><?=$row['title']?></h3>
+                            <p><?=$row['desk']?></p>
 
+                        </div>
+                        <a href="<?=$row['link']?>" class="btn btn-default" role="button">Read more</a>
                     </div>
-                    <a href="#" class="btn btn-default" role="button">Read more</a>
+                    <div class="w-shadow-slider"></div>
                 </div>
-                <div class="w-shadow-slider"></div>
-            </div>
-            <div class="slide">
-                <div class="thumbnail">
-                    <div class="marc-date">
-                        <strong>Sep</strong>
-                        <div>27</div>
-                    </div>
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/blog3.jpg" alt="">
-                    <div class="caption">
-                        <h3>Ancient India and the Origins of Diamond Investing</h3>
-                        <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
 
-                    </div>
-                    <a href="#" class="btn btn-default" role="button">Read more</a>
-                </div>
-                <div class="w-shadow-slider"></div>
-            </div>
-            <div class="slide">
-                <div class="thumbnail">
-                    <div class="marc-date">
-                        <strong>Sep</strong>
-                        <div>27</div>
-                    </div>
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/blog4.jpg" alt="">
-                    <div class="caption">
-                        <h3>Ancient India and the Origins of Diamond Investing</h3>
-                        <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
+            <?endforeach?>
 
-                    </div>
-                    <a href="#" class="btn btn-default" role="button">Read more</a>
-                </div>
-                <div class="w-shadow-slider"></div>
-            </div>
-            <div class="slide">
-                <div class="thumbnail">
-                    <div class="marc-date">
-                        <strong>Sep</strong>
-                        <div>27</div>
-                    </div>
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/blog1.jpg" alt="">
-                    <div class="caption">
-                        <h3>Ancient India and the Origins of Diamond Investing</h3>
-                        <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
-
-                    </div>
-                    <a href="#" class="btn btn-default" role="button">Read more</a>
-                </div>
-                <div class="w-shadow-slider"></div>
-            </div>
-            <div class="slide">
-                <div class="thumbnail">
-                    <div class="marc-date">
-                        <strong>Sep</strong>
-                        <div>27</div>
-                    </div>
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/blog3.jpg" alt="">
-                    <div class="caption">
-                        <h3>Ancient India and the Origins of Diamond Investing</h3>
-                        <p>When Pliny the Elder — the famous solider, writer and philosopher of the ancient Roman Empire — wrote “The diamond is the most valuable thing on earth” he did so over 1000 years...</p>
-
-                    </div>
-                    <a href="#" class="btn btn-default" role="button">Read more</a>
-                </div>
-                <div class="w-shadow-slider"></div>
-            </div>
         </div>
     </div>
 </div>

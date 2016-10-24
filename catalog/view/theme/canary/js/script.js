@@ -101,7 +101,7 @@ $( document ).ready(function( $ ) {
     });
 
     $(".cart-bl > a").click(function() {
-        $(".cart-bl").addClass("open");
+        $(".cart-bl").toggleClass("open");
     });
 
     $(".fancy-btn").click(function() {
