@@ -477,6 +477,7 @@ class ControllerProductProduct extends Controller {
 
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
+                    'sku'         => $result['sku'],
 					'thumb'       => $image,
                     'img'         => $this->url->urlLink('image/'. $result['image']),
 					'name'        => $result['name'],
