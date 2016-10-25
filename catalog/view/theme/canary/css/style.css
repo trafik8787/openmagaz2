@@ -1933,7 +1933,7 @@ footer > section .row {
   color: #5c6f9c;
 }
 .menu > ul > li > a {
-  padding: 10px 8px 13px;
+  padding: 10px 5px 13px;
   position: relative;
   z-index: 1;
   font-family: 'Raleway-Regular', fantasy;
@@ -7282,7 +7282,18 @@ footer > section .row {
   padding-bottom: 100px;
 }
 
-
+.menu > ul > li.dropdown-b > a >span{
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 17px;
+  right: -6px;
+  display: block;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  background-color: #c2c1c1;
+}
 
 
 
@@ -7410,6 +7421,10 @@ footer > section .row {
 @media (max-width: 1200px) {
   .filter-box .left-f, .filter-box .right-f {
     width: 48%; }
+
+  .menu > ul > li > a{
+    padding:10px 8px 13px;
+  }
 
   .slider-lables li {
     font-size: 14px; }

@@ -22,6 +22,7 @@
 
         <div class="about-page">
             <div class="center-bl">
+                .static
                 <div class="about-page-title"><?php echo $heading_title; ?></div>
                 <div class="row">
                     <div class="col-lg-12">
