@@ -1602,6 +1602,207 @@ star-rating
     vertical-align: middle;
 }
 
+.diamant-more-spec {
+    display: table;
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.diamant-more-spec .price-product {
+    margin-left: 30px;
+}
+
+.diamant-more-spec .product-details {
+    margin: 0;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.diamant-more-spec .product-details:after {
+    display: none;
+}
+
+.diamant-more-left {
+    display: table-cell;
+    width: 66%;
+    border: 1px solid #d3d2d2;
+    border-right: none;
+    padding: 25px 30px 28px;
+    vertical-align: top;
+}
+
+.diamant-more-right {
+    display: table-cell;
+    width: 34%;
+    border: 1px solid #d3d2d2;
+    vertical-align: top;
+    background: #ebf4ff;
+}
+
+.diamant-size-block {
+    border-radius: 3px;
+    border: 1px solid #5c6e9c;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    float: right;
+    max-width: 169px;
+    width: 100%;
+}
+
+.diamant-size-inner:hover {
+    background: #fff;
+}
+.diamant-size-inner:hover .diamant-size-text {
+    text-decoration: none;
+}
+
+.diamant-size-inner {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background: linear-gradient(#fff, #f2f6ff);
+    cursor: pointer;
+}
+
+.diamant-size-inner.active + .diamant-size-detail {
+    display: block;
+}
+
+.diamant-size-img {
+    transform-origin: top;
+}
+
+.diamant-size-ruler {
+    top: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.diamant-size-text {
+    color: #39487d;
+    line-height: 17px;
+    text-decoration: underline;
+    font-family: 'Raleway-Bold', sans-serif;
+    margin-top: -6px;
+}
+
+.diamant-size-detail {
+    position: absolute;
+    top: calc(100% + 16px);
+    right: -1px;
+    border-radius: 3px;
+    border: 1px solid #5c6e9c;
+    background: linear-gradient(#fff, #f2f6ff);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    width: 288px;
+    padding: 15px 15px 15px 5px;
+    z-index: 1;
+    display: none;
+    text-align: center;
+    color: #717170;
+    font-family: 'Montserrat-Regular', fantasy;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.diamant-size-detail:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 74px;
+    width: 20px;
+    height: 8px;
+    background: url("../img/diamant-size-detail-angle.png") no-repeat center / contain;
+}
+
+.diamant-size-detail-img {
+    width: 86px;
+    height: 87px;
+    margin-bottom: 3px;
+}
+
+.diamant-size-photo {
+    background: url("../img/diamant-size.png") no-repeat center / contain;
+    float: left;
+    position: relative;
+    text-align: center;
+    line-height: 111px;
+}
+
+.diamant-size-photo img {
+
+}
+
+.diamant-size-coin-img {
+    background: url("../img/coin-size.png") no-repeat center / contain;
+}
+
+.diamant-size-it {
+    float: left;
+}
+
+.diamant-size-coin {
+    float: right;
+}
+
+.diamant-size-left-text {
+    float: left;
+    width: 75px;
+    padding-top: 30px;
+}
+
+.diamant-size-bottom-text {
+    padding-left: 75px;
+}
+
+
+
+.product-diamond-help {
+    height: 340px;
+    overflow: auto;
+    padding: 20px 40px;
+}
+
+.product-diamond-help .h3 {
+    font-family: "Felix Titling", sans-serif;
+    color: #39487d;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: normal;
+    position: relative;
+    margin: 0 0 20px;
+}
+
+.product-diamond-help .format {
+    line-height: 1.5;
+}
+
+.product-diamond-help .format h5 {
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    border-bottom: 1px solid #c7d9ee;
+    font-family: 'Raleway-Bold', sans-serif;
+    font-weight: normal;
+}
+
+.product-diamond-help .format h5:first-child {
+    margin-top: 0;
+}
+
+.product-diamond-help .format p {
+    margin-bottom: 10px;
+}
+
 .product-buy-sertificate {
     display: inline-block;
     margin-right: 30px;
