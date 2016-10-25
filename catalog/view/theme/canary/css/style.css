@@ -205,7 +205,6 @@ input {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 50px;
-  padding-right: 30px;
   text-align: center;
   font-size: 12px;
 }
@@ -5558,7 +5557,6 @@ display: block;
 }
 
 .filter-box .filter-wrapper .box-color label {
-  margin: 0 10px;
   padding: 11px 7px;
   display: inline-block;
   vertical-align: middle;
