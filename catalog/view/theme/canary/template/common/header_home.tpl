@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/style.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/jquery.bxslider.min.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop.css"/>
 
     <script src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>

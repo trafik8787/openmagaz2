@@ -81,7 +81,7 @@
 
 <?//dd($show)?>
 
-<div class="my-div <?= !empty($show) ? 'active-circle' : '' ?> <?php if (!empty($CanaryDiamontCom)):?> w-opacity<?endif?>" data-trigger='hover' data-toggle="popover" data-placement="top" data-html='true' data-content='Briliant is selected it will be built into your ring. To vybratkoltso this Briliant go to the next step.' >
+<div class="my-div <?= !empty($show) ? 'active-circle' : '' ?> <?php if (!empty($CanaryDiamontCom)):?> w-opacity<?endif?>">
 <a href="<?= !empty($show) ? '/diamonds' : $CanaryDiamontCom['href']?>"  class="w-one-block  <?= !empty($show) ? 'w-general-category' : '' ?>">
 <span class="number-step"><?=$index?></span>
 <span class="title hidden-xs">
@@ -105,7 +105,7 @@ Select from thousands of GIA certified diamonds.
 <? function show_product_complect_bloc ($index, $CanaryProductCom = null, $show = null) {?>
 
 
-<div class="my-div <?= !empty($show) ? 'active-circle' : '' ?> <?php if (!empty($CanaryProductCom)):?> w-opacity<?endif?>" data-toggle="popover" data-placement="top" data-html='true' data-content='You have chosen a ring, please go to the next step.'>
+<div class="my-div <?= !empty($show) ? 'active-circle' : '' ?> <?php if (!empty($CanaryProductCom)):?> w-opacity<?endif?>">
 
 <a href="<?= !empty($show) ? '/engagement-rings' : $CanaryProductCom['href']?>" class="w-one-block <?= !empty($show) ? 'w-general-category' : '' ?>">
 <span class="number-step"><?=$index?></span>
