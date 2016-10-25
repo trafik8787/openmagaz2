@@ -42,7 +42,7 @@
     <?php echo $analytic; ?>
     <?php } ?>
 
-<?//dd($categories)?>
+    <?//dd($categories)?>
 
 <body>
 <!-- Google Tag Manager -->
@@ -90,7 +90,7 @@
                     </li>
                     <li><a href="/compare"><i class="icons-compare_icon"></i>
                             <span class="span1">Compare</span>
-                        <span class="span2">(2)</span>
+                            <span class="span2">(2)</span>
                         </a>
                     </li>
                     <li class="cart-bl">
@@ -119,23 +119,23 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile1" class="collapsed">
+                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile1">
                                         DIAMONDS
                                     </a>
                                 </h4>
                             </div>
-                            <div id="MenuMobile1" class="panel-collapse collapse">
+                            <div id="MenuMobile1" class="panel-collapse collapse in">
                                 <div class="panel-body">
                                     <div class="panel-group" id="rubricMenu">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu1" class="collapsed">
+                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu1">
                                                         Subcategory First
                                                     </a>
                                                 </h4>
                                             </div>
-                                            <div id="rubricMenu1" class="panel-collapse collapse">
+                                            <div id="rubricMenu1" class="panel-collapse collapse in">
                                                 <div class="panel-body">
                                                     <ul class="main-rubric">
                                                         <li><a href="#">Round Cut</a></li>
@@ -149,7 +149,7 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu2" class="collapsed">
+                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu2">
                                                         Second Subcategory
                                                     </a>
                                                 </h4>
@@ -168,7 +168,7 @@
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu3" class="collapsed">
+                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu3">
                                                         Subcategory three
                                                     </a>
                                                 </h4>
@@ -191,7 +191,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile2" class="collapsed">
+                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile2">
                                         ENGAGEMENT RINGS
                                     </a>
                                 </h4>
@@ -210,7 +210,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile3"  class="collapsed">
+                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile3">
                                         WEDDING RINGS
                                     </a>
                                 </h4>
