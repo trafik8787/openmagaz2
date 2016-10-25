@@ -4,24 +4,26 @@
 <main class="w-general-container">
     <!--*<hr class="fade-2">*-->
     <input type="hidden" class="w-action_page" value="<?php echo $action_page?>">
+    <div class="margin-buttom-30 w-bredcrum-border">
+       <div class="center-bl">
+           <div class="row">
+               <div class="col-md-5 col-sm-5 hidden-xs ">
+                   <ul class="breadcrumbs">
+                       <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                       <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                       <li> » </li>
+                       <?php } ?>
+                   </ul>
+               </div>
+               <div class="col-md-7 col-sm-7 col-xs-12 padding-0">
+                   <a href=""><img src="<?=get_baners_top_random()?>" class="bread-baner" ></a>
+               </div>
+           </div>
+       </div>
+    </div>
     <section class="static-page">
-
-
         <div class="center-bl">
 
-            <div class="row margin-buttom-30 w-bredcrum-border">
-                <div class="col-md-5 col-sm-5 hidden-xs ">
-                    <ul class="breadcrumbs">
-                        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-                        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-                        <li> » </li>
-                        <?php } ?>
-                    </ul>
-                </div>
-                <div class="col-md-7 col-sm-7 col-xs-12 padding-0">
-                    <a href=""><img src="<?=get_baners_top_random()?>" class="bread-baner" ></a>
-                </div>
-            </div>
             <div class="row margin-buttom-20">
                 <div class="col-md-12 col-sm-12 text-center">
                     <span class="h1"><?=$heading_title?></span>

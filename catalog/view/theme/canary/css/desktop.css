@@ -4,6 +4,15 @@
 .filter-advanced-wrapper:hover .dropdown-advanced {
   display: block; }
 
+@media screen and (max-width:1440px){
+  .menu > ul > li > .dropdown-inside {
+    width: 100%;
+  }
+  .menu > ul > li > .dropdown-inside .brilliant-style {
+    text-align: left;
+  }
+}
+
 @media screen and (max-width:1100px){
   .home-top-baneer{
     padding: 0 25px;
@@ -99,6 +108,11 @@
 
 }
 
+@media screen and (max-width: 1024px) {
+  .menu {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 992px) {
   .scheckout-page .col-xs-3, .scheckout-page .col-xs-6 {
     width: 100%;
@@ -738,7 +752,6 @@
 
 }
 
-
 @media  (max-width: 640px){
   .form-group {
     width: 41%;
@@ -884,7 +897,6 @@
   }
 
 }
-
 
 @media  (max-width: 640px){
   .form-group {

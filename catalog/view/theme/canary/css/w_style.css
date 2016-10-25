@@ -1079,8 +1079,11 @@ home hover efect
 }
 
 
+.w-navigate-circle .w-opacity:nth-child(2){
+    z-index: 24;
+}
 .w-navigate-circle .w-opacity {
-    opacity: 0.5;
+    z-index: 25;
 }
 
 .size-product .popover-content,
@@ -1368,14 +1371,17 @@ star-rating
     left: 45px;
 }
 
-.w-navigate-circle .active-circle .w-one-block{
+.w-navigate-circle .active-circle .w-one-block,
+.w-navigate-circle .w-opacity .w-one-block{
     color: #39487d;
 }
 
+.w-opacity .number-step,
 .active-circle .number-step{
    background-color: #2f4680;
 }
 
+.w-opacity .number-step:before,
 .active-circle .number-step:before{
     border-color: transparent transparent transparent #2f4680;
 }
@@ -1424,12 +1430,14 @@ star-rating
     display: none;
 }
 
-.w-navigate-circle .my-div.active-circle{
+.w-navigate-circle .my-div.active-circle,
+.w-navigate-circle .my-div.w-opacity{
     background: #cfdfef url("../img/bg-step.png") no-repeat bottom left;
 }
 
+.w-navigate-circle .my-div.w-opacity:after,
 .w-navigate-circle .my-div.active-circle:after{
-    border-color: transparent transparent transparent #cfdfef;
+    border-color: transparent transparent transparent #c5def0;
 }
 
 .w-navigate-circle .my-div:after{

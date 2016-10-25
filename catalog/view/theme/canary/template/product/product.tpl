@@ -9,19 +9,21 @@
 
 
 <main class="w-general-container">
-
+    <div class="row margin-buttom-30 w-bredcrum-border">
+        <div class="center-bl">
+            <div class="col-xs-12">
+                <ul class="breadcrumbs">
+                    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                    <li> » </li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+    </div>
     <section class="static-page">
         <div class="center-bl">
-            <div class="row margin-buttom-30 w-bredcrum-border">
-                <div class="col-xs-12">
-                    <ul class="breadcrumbs">
-                        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-                        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-                        <li> » </li>
-                        <?php } ?>
-                    </ul>
-                </div>
-            </div>
+
             <?php echo $content_top; ?>
         </div>
         <div class="center-bl">
