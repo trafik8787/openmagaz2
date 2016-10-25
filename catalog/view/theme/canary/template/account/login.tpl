@@ -3,16 +3,25 @@
 
 
 <main class="w-general-container">
-    <hr class="fade-2">
-    <section class="static-page">
+    <div class="margin-buttom-30 w-bredcrum-border">
         <div class="center-bl">
-            <ul class="breadcrumbs">
-                <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-                <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-                <li>></li>
-                <?php } ?>
-            </ul>
+            <div class="row">
+                <div class="col-md-5 col-sm-5 hidden-xs ">
+                    <ul class="breadcrumbs">
+                        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                        <li> » </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-12 padding-0">
+                    <a href=""><img src="<?=get_baners_top_random()?>" class="bread-baner" ></a>
+                </div>
+            </div>
         </div>
+    </div>
+    <section class="static-page">
+
 
 
 
