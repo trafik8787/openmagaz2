@@ -1928,13 +1928,17 @@ footer > section .row {
   width: 915px;
   display: inline;
 }
+.menu > ul > li.open > a,
+.menu > ul > li > a:hover{
+  color: #5c6f9c;
+}
 .menu > ul > li > a {
-  padding: 10px 5px 10px 5px;
+  padding: 10px 8px 13px;
   position: relative;
   z-index: 1;
   font-family: 'Raleway-Regular', fantasy;
   font-size: 16.6px;
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
   text-transform: uppercase;
   color: #000000;
   display: inline-block;
@@ -1977,7 +1981,7 @@ footer > section .row {
 .menu > ul > li[data-target=menu4] > .dropdown-inside .img-under-style {
   position: absolute;
   right: 35px;
-  bottom: 35px;
+  bottom: 0;
 }
 .menu > ul > li[data-target=menu5] {
   position: relative; }
@@ -2006,11 +2010,12 @@ footer > section .row {
   -moz-box-shadow:0 0 3px rgba(0,0,0,0.3);
   box-shadow:0 0 3px rgba(0,0,0,0.3);
 }
+
 .menu > ul > li.dropdown-b.open > a:before {
   width: 0;
   height: 0;
   position: absolute;
-  bottom: -3px;
+  bottom: -1px;
   left: 49%;
   content: "";
   border-style: solid;
@@ -2021,7 +2026,7 @@ footer > section .row {
   width: 0;
   height: 0;
   position: absolute;
-  bottom: -5px;
+  bottom: -2px;
   left: 49%;
   content: "";
   border-style: solid;
@@ -2034,18 +2039,22 @@ footer > section .row {
   margin-bottom: 10px;
   font-size: 14px;
   text-align: left;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: relative;
+  z-index: 5;
+}
 .menu > ul > li > .dropdown-inside .brilliant-style {
-  margin-bottom: 25px;
   text-align: justify;
-  position: relative; }
+  z-index: 5;
+  position: relative;
+}
 .menu > ul > li > .dropdown-inside .brilliant-style > li {
   display: inline; }
 .menu > ul > li > .dropdown-inside .brilliant-style > li > a {
   text-align: center;
   padding: 4px;
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
   color: #444444; }
 
 .menu > ul > li > .dropdown-inside .brilliant-style > li > a:hover {
@@ -2053,10 +2062,8 @@ footer > section .row {
 }
 
 .menu > ul > li > .dropdown-inside .brilliant-style > li > a:hover::after {
-  width: 100%;
-  transition: width .2s;
-
-
+  /*width: 100%;*/
+  /*transition: width .2s;*/
 }
 
 .menu > ul > li > .dropdown-inside .brilliant-style > li > a::after {
@@ -2067,7 +2074,6 @@ footer > section .row {
   background: #444444;
   transition: width .2s;
 }
-
 
 .menu > ul > li > .dropdown-inside .brilliant-style:after {
   content: "";
@@ -2081,7 +2087,7 @@ footer > section .row {
   display: block; }
 
 .menu > ul > li > .dropdown-inside .style-br-long.w-margin-li>li {
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   display: block;
 }
 .menu > ul > li > .dropdown-inside .style-br-long li a {
@@ -2371,25 +2377,30 @@ footer > section .row {
 
 
 .ul-first-drop {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+}
 
 .menu > ul > li > .dropdown-inside .style-br-long .wrap-ico2 {
-  width: 46px;
-  height: 24px;
+  width: 52px;
+  height: 39px;
+  padding-top: 4px;
   text-align: center;
-  margin-right: 7px; }
+  margin-right: 7px;
+}
 
 .menu > ul > li > .dropdown-inside .style-br-long .wrap-ico3 {
-  width: 25px;
-  margin-right: 25px;
-  text-align: center; }
+  width: 53px;
+  margin-right: 5px;
+  text-align: center;
+}
 
 .ring-size-list .size-radio .btn {
   width: 22px;
   height: 27px;
   margin-bottom: 5px;
   margin-right: 2px;
-  line-height: 22px; }
+  line-height: 22px;
+}
 
 .logo {
   position: relative;
@@ -2398,7 +2409,8 @@ footer > section .row {
 }
 .logo:hover {
   color: #fac652;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .ico-telephone {
   width: 40px;
@@ -7099,13 +7111,188 @@ footer > section .row {
   position: relative;
 }
 
+.engagement-img-menu{
+  margin:0 -28px -20px 0;
+  text-align: right;
+}
+
+.all-menu-i{
+  width: 25px;
+  height: 27px;
+  display: inline-block;
+  background: url("../img/all-menu-i.png") no-repeat center top/ contain;
+}
+
+.engagement-list-colorfull.w-checed-list .all-label span{
+  padding: 0 5px!important;
+}
+.engagement-list-colorfull.w-checed-list .all-menu-i {
+  height: 23px;
+}
+
+.engagement-list-colorfull.w-checed-list .label--checkbox > span {
+  padding: 6px 4px;
+}
+
+.engagement-list-colorfull.w-checed-list .checkbox + span {
+  border: 1px solid #ffffff;
+}
+
+.engagement-list-colorfull.w-checed-list .checkbox:checked + span {
+  border: 1px solid #c4d5eb;
+}
+
+.engagement-list-colorfull.w-checed-list:after {
+  content: "";
+  margin-left: 100%;
+  display: inline-block;
+}
+.engagement-list-colorfull.w-checed-list{
+  text-align: justify;
+  width: 100%;
+}
+
+.engagement-list-colorfull.w-checed-list .list__item {
+  display: inline;
+}
+
+.engagement-list-colorfull.w-checed-list .label--checkbox .number-circle{
+  border: 2px solid #838281!important;
+}
+
+.engagement-list-colorfull.w-checed-list .label--checkbox .yellow-g .number-circle{
+  border: 2px solid #d1ab45!important;
+}
+
+.engagement-list-colorfull.w-checed-list .label--checkbox .rose-g .number-circle{
+  border: 2px solid #ef9ba0!important;
+}
+
+.set-for-him:hover span{
+  text-decoration: none;
+}
+
+.set-for-him .icons-rings_icon{
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: sub;
+}
+
+.set-for-him span{
+  text-decoration: underline;
+  color: black;
+}
+
+.set-for-him{
+  display: inline-block;
+  font-size: 13px;
+  font-family:"Raleway-Bold";
+}
+
+.ul-first-drop {
+  margin-bottom: 0;
+}
+
+.jewelry-style1 li .w-general-category > span i{
+  vertical-align: middle;
+}
+.jewelry-style1 li .w-general-category > span{
+  height: 52px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.jewelry-style1 li:nth-child(1) span{
+  padding-top: 8px;
+}
+.jewelry-style1 li:nth-child(2) span{
+  padding-top: 11px;
+}
+.jewelry-style1 li{
+  display: inline-block!important;
+  vertical-align: top;
+  line-height: 14px;
+}
+
+.jewelry-img{
+  position: absolute;
+  right: 27px;
+  bottom: 14px;
+}
+
+.jewelry-wrapper{
+  width: 300px;
+}
+
+.color-menu-block li{
+  margin-bottom: 13px;
+  font-size: 13px;
+}
+
+.color-menu-block li span{
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  display: inline-block;
+  border: 3px solid;
+  vertical-align: middle;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+}
+
+.color-menu-block li.blue span{
+  border-color: #0093dd;
+}
+
+.color-menu-block li.green span{
+  border-color: #66b82e;
+}
+
+.color-menu-block li.blue-green span{
+  border-color: #3bb3c2;
+}
+
+.color-menu-block li.pink span{
+  border-color: #e97695;
+}
+
+.color-menu-block li.red span{
+  border-color: #da251d;
+}
+
+.color-menu-block{
+  padding-top: 5px;
+}
+
+.color-menu-block li a i{
+  vertical-align: middle;
+  margin-right: 14px;
+}
+.color-menu-block li a{
+  color: black;
+  display: inline-block;
+}
+
+.menu > ul > li > .dropdown-inside .brilliant-style.gemstones-box > li i{
+  margin-right: 12px;
+}
+
+.menu > ul > li > .dropdown-inside .brilliant-style.brilliant-style-f4{
+  width: 220px;
+  padding-bottom: 100px;
+}
+
+
+
+
+
+
 @media (max-width: 1700px) {
   .menu {
     /* padding: 55px 0 0 365px; */
   }
 
   .menu > ul > li > a {
-    padding: 10px;
     font-size: 15px; }
 
   .logo {
