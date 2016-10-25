@@ -1,6 +1,5 @@
 $(window).load(function(){
     if (device.mobile()===true){
-        $("head").append('<link rel="stylesheet" href="/catalog/view/theme/canary/css/mobile.css"/>');
         $(".faq-list li").click(function(e){
             e.preventDefault();
             if ($(this).hasClass('active')){
@@ -10,8 +9,6 @@ $(window).load(function(){
                 $(this).addClass("active");
             }
         });
-    } else{
-        $("head").append('<meta name="viewport" content="width=980"><link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop.css"/>');
     }
 });
 

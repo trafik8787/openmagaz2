@@ -6873,6 +6873,13 @@ footer > section .row {
   background: url("../img/menu-button.png") no-repeat center / contain;
 }
 
+.menu-button{
+  width: 37px;
+  height: 32px;
+  display: block;
+  background: url("../img/menu-button.png") no-repeat center / contain;
+}
+
 .account-col {
   display: inline-block;
   vertical-align: top;
