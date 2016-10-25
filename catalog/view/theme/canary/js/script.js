@@ -108,7 +108,6 @@ $( document ).ready(function( $ ) {
     });
 
 
-
     $(".menu-l-open").click(function() {
         $(".static-page").toggleClass("open");
     });
