@@ -43,77 +43,82 @@
         </div>
     </div>
 
-    <div class="wrapper-product-table th-view">
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Actual photo</th>
-                <th>Shape</th>
-                <th>Carat</th>
-                <th>Color</th>
-                <th>Clarity</th>
-                <th>Cut</th>
-                <th>Depth</th>
-                <th>Table</th>
-                <th>Lab</th>
-                <th>Price</th>
-                <th>Compare</th>
-                <th>Wishlist</th>
-            </tr>
-            </thead>
-            <tbody>
-
-                <?php foreach ($data as $row):?>
+    <div class="diamond-catalog">
+        <div class="diamond-catalog-left">
+            <table class="diamond-catalog-table">
+                <thead>
+                    <tr>
+                        <td>Compare</td>
+                        <td>Shape</td>
+                        <td>Color</td>
+                        <td>Clarity</td>
+                        <td>Cut</td>
+                        <td>Carat</td>
+                        <td>Popularity</td>
+                        <td>Price</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($data as $row):?>
 
                     <tr>
                         <td>
-                            <div class="product-item">
-                                <input type="hidden" class="w-diamond-id-category" value="<?=$row->diamond_id?>">
-                                <div class="box-img">
-                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="w-product-diamonts"><img src="<?=imageDiamont($row->shape)?>" alt="<?=$row->shape?>"></a>
-                                </div>
-                                <!--*<div class="rating">*-->
-                                    <!--*<i class="star active"></i>*-->
-                                    <!--*<i class="star active"></i>*-->
-                                    <!--*<i class="star active"></i>*-->
-                                    <!--*<i class="star active"></i>*-->
-                                    <!--*<i class="star"></i>*-->
-                                <!--*</div>*-->
-                                <div class="btn-box">
-                                    <a href="#" class="cart-btn-item w-diamont-button-cart-category" data-toggle="tooltip" data-placement="top" title="<?php echo $button_cart; ?>"></a>
-                                    <a href="#" class="compare-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_compare; ?>"></a>
-                                    <a href="/diamond_page?diamond_id=<?=$row->diamond_id?>" data-id="<?=$row->diamond_id?>" class="search-btn-item w-product-diamonts" data-toggle="tooltip" data-placement="top" title="Views"></a>
-                                    <a href="#" class="wishlist-btn-item" onclick="wishlist.addDiamond(<?=$row->diamond_id?>); return false;" data-toggle="tooltip" data-placement="top" title="<?php echo $button_wishlist; ?>"></a>
-                                </div>
-                                <div class="box-tovar-th">
-                                    <div class="name"><?=$row->shape?> <?=$row->size?> CARAT <?=$row->color?> <?=$row->clarity?></div>
-                                    <span class="price">$<?=$row->total_sales_price?>.00</span>
-                                    <!--*<span class="discount"><?=$row->total_sales_price?>.00$</span>*-->
-                                </div>
+                            <input id="diamond<?=$row->diamond_id?>" type="checkbox" class="diamond-compare-checkbox">
+                            <label for="diamond<?=$row->diamond_id?>" class="diamond-catalog-label"></label>
+                        </td>
+                        <td>
+                            <img src="/catalog/view/theme/canary/img/diamant-4.png" alt="" class="diamond-table-shapeimg">
+                            <?=$row->shape?>
+                        </td>
+                        <td><?=$row->color?></td>
+                        <td><?=$row->clarity?></td>
+                        <td><?=$row->cut?></td>
+                        <td><?=$row->size?> <i class="fa fa-exclamation-triangle"></i></td>
+                        <td>
+                            <div class="rating">
+                                <i class="star active"></i>
+                                <i class="star active"></i>
+                                <i class="star active"></i>
+                                <i class="star active"></i>
+                                <i class="star"></i>
                             </div>
                         </td>
-                        <td data-th="Shape"><?=$row->shape?></td>
-                        <td data-th="Carat"><?=$row->size?></td>
-                        <td data-th="Carat"><?=$row->color?></td>
-                        <td data-th="Clatity"><?=$row->clarity?></td>
-                        <td data-th="Cut"><?=$row->cut?></td>
-                        <td data-th="Depth"><?=$row->depth_percent?></td>
-                        <td data-th="Table"><?=$row->table_percent?></td>
-                        <td data-th="Lab"><?=$row->lab?></td>
-                        <td data-th="Price"><div class="price">$<?=$row->total_sales_price?>.00</div></td>
-                        <td><i class="fa fa-exchange"></i></td>
-                        <td><i class="fa fa-heart"></i></td>
+                        <td>$<?=$row->total_sales_price?>.00</td>
                     </tr>
 
-                <?endforeach?>
+                    <?endforeach?>
 
-            </tbody>
-        </table>
+                    <tr class="pagination-tr">
+                        <td colspan="8">
+                            <div class="w-pagination-diamonts text-center"><?=isset($pagination)? $pagination : ''?></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="diamond-catalog-right">
+
+        </div>
     </div>
-    <div class="center-bl clearfix">
 
-        <div class="w-pagination-diamonts text-center"><?=isset($pagination)? $pagination : ''?></div>
+    <div class="alert alert-warning product-need-help diamonds-catalog-help">
+        <span class="h4">Need Help?</span>
+        <ul class="list-inline w-help-ned">
+            <li><a href="#"><span class="help-ico help-ico-chat"></span> <span class="help-text">Online Chat now</span></a></li>
+            <li><a href="#"><span class="help-ico help-ico-mail"></span> <span class="help-text">Email</span></a></li>
+            <!-- todo phone-->
+            <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text">800-214-6550 | 24/7</span></a></li>
+        </ul>
+    </div>
+    <p class="diamonds-catalog-star-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, repellendus.</p>
 
+    <div class="box-stat-text center-bl">
+        <div class="h2">
+            TEXT ABOUT DIAMONDS
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea eos illo in praesentium rerum tempore voluptatum. Culpa dolorem error inventore nobis repudiandae. Ad amet animi asperiores assumenda autem beatae, dolorem dolorum eos eum expedita, facilis ipsa ipsum iste laudantium minus nihil porro quae quia quidem quis recusandae, rem suscipit tempora voluptatem voluptatibus! Aliquam blanditiis consequatur deleniti doloribus ducimus, ea enim esse est harum incidunt, laborum magni nesciunt, nobis recusandae rerum veniam voluptas? At atque eos esse eum harum molestias necessitatibus nemo provident quaerat quas sed, soluta vel voluptas. Cumque earum eum exercitationem! Ab culpa enim fuga laborum natus optio possimus sapiente, velit vero. A alias assumenda consequatur culpa dignissimos harum hic laudantium qui. Consectetur consequatur eaque enim itaque minus nesciunt officia porro, quas saepe sunt unde vero voluptate! Ad adipisci, corporis cupiditate ducimus earum eligendi facilis ipsam itaque nam placeat, porro quasi, quo quos saepe suscipit unde veniam voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium culpa cumque delectus deleniti doloribus, earum error eveniet fuga, harum in incidunt ipsa mollitia nam natus nemo, officiis optio perferendis porro quaerat quas quisquam quod quos rerum saepe tempora velit voluptatum! Doloribus exercitationem facilis molestiae nam, nesciunt officia reiciendis sit sunt suscipit. Aliquam animi aspernatur consectetur deleniti dignissimos, distinctio expedita facilis fuga nulla, pariatur quae quis tempore veritatis vero voluptate. Dolores earum et fuga quas recusandae tempora vel? Asperiores autem corporis eligendi, et exercitationem illo illum iusto maiores molestias necessitatibus optio pariatur praesentium provident, quas recusandae sint tempora ullam vel.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea eos illo in praesentium rerum tempore voluptatum. Culpa dolorem error inventore nobis repudiandae. Ad amet animi asperiores assumenda autem beatae, dolorem dolorum eos eum expedita, facilis ipsa ipsum iste laudantium minus nihil porro quae quia quidem quis recusandae, rem suscipit tempora voluptatem voluptatibus! Aliquam blanditiis consequatur deleniti doloribus ducimus, ea enim esse est harum incidunt, laborum magni nesciunt, nobis recusandae rerum veniam voluptas? At atque eos esse eum harum molestias necessitatibus nemo provident quaerat quas sed, soluta vel voluptas. Cumque earum eum exercitationem! Ab culpa enim fuga laborum natus optio possimus sapiente, velit vero. A alias assumenda consequatur culpa dignissimos harum hic laudantium qui. Consectetur consequatur eaque enim itaque minus nesciunt officia porro, quas saepe sunt unde vero voluptate! Ad adipisci, corporis cupiditate ducimus earum eligendi facilis ipsam itaque nam placeat, porro quasi, quo quos saepe suscipit unde veniam voluptatum!</p>
     </div>
 <?endif?>
 
