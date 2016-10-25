@@ -1,6 +1,9 @@
 <footer>
+
     <section>
+
         <div class="row w-footer-newsletter">
+
             <div class="center-bl">
                 <div class="col-md-4 col-sm-4">
                     <div class="h3">

@@ -113,61 +113,116 @@
     <div class="center-bl">
         <div class="row top-header-bloc-meny">
             <div class="mobile-menu visible-xs">
-                <div class="mobile-menu-btn">Dropdown trigger</div>
+                <div class="mobile-menu-btn"><i class="menu-button"></i></div>
                 <ul class="dropdown-menu-mobile">
                     <div class="panel-group" id="MenuMobile">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile1">
+                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile1" class="collapsed">
                                         DIAMONDS
                                     </a>
                                 </h4>
                             </div>
-                            <div id="MenuMobile1" class="panel-collapse collapse in">
+                            <div id="MenuMobile1" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    <ul class="main-rubric">
-                                        <li><a href="#"></a></li>
-                                    </ul>
-
-                                    Round Cut
-                                    Princess Cut
-                                    Emerald Cut
-                                    Asscher Cut
-                                    Oval Cut
-                                    Radiant Cut
-                                    Pear Shaped
-                                    Heart Shaped
-                                    Marquise Cut
-                                    Cushion Cut
+                                    <div class="panel-group" id="rubricMenu">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu1" class="collapsed">
+                                                        Subcategory First
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="rubricMenu1" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="main-rubric">
+                                                        <li><a href="#">Round Cut</a></li>
+                                                        <li><a href="#">Princess Cut</a></li>
+                                                        <li><a href="#">Emerald Cut</a></li>
+                                                        <li><a href="#">Asscher Cut</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu2" class="collapsed">
+                                                        Second Subcategory
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="rubricMenu2" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="main-rubric">
+                                                        <li><a href="#">Round Cut</a></li>
+                                                        <li><a href="#">Princess Cut</a></li>
+                                                        <li><a href="#">Emerald Cut</a></li>
+                                                        <li><a href="#">Asscher Cut</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu3" class="collapsed">
+                                                        Subcategory three
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="rubricMenu3" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="main-rubric">
+                                                        <li><a href="#">Round Cut</a></li>
+                                                        <li><a href="#">Princess Cut</a></li>
+                                                        <li><a href="#">Emerald Cut</a></li>
+                                                        <li><a href="#">Asscher Cut</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile2">
+                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile2" class="collapsed">
                                         ENGAGEMENT RINGS
                                     </a>
                                 </h4>
                             </div>
                             <div id="MenuMobile2" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    <ul class="main-rubric">
+                                        <li><a href="#">Round Cut</a></li>
+                                        <li><a href="#">Princess Cut</a></li>
+                                        <li><a href="#">Emerald Cut</a></li>
+                                        <li><a href="#">Asscher Cut</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile3">
+                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile3"  class="collapsed">
                                         WEDDING RINGS
                                     </a>
                                 </h4>
                             </div>
                             <div id="MenuMobile3" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                    <ul class="main-rubric">
+                                        <li><a href="#">Round Cut</a></li>
+                                        <li><a href="#">Princess Cut</a></li>
+                                        <li><a href="#">Emerald Cut</a></li>
+                                        <li><a href="#">Asscher Cut</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
