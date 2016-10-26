@@ -5026,7 +5026,7 @@ footer > section .row {
   pointer-events: none; }
 
 .list-product {
-  min-width: 980px;
+  /*min-width: 980px;*/
   padding-bottom: 60px;
 }
 .list-product .filter-product-line {

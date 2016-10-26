@@ -4,64 +4,56 @@
     <p class="text-center"><b><?=$data_error?></b></p>
 <?else:?>
 <?//dd($sortby)?>
-    <div class="filter-product-line">
-        <div class="center-bl clearfix">
-            <div class="pull-left left-drop-f">
-                <span>Sort By:</span>
-                <div class="dropdown">
-                    <select name="sortby" class="form-control" id="w-product-sortby">
-                        <option value="size_Asc" <?if ($sortby == 'size_Asc' and !empty($sortby)):?> selected <?endif?>>Carat: low to high</option>
-                        <option value="size_Desc" <?if ($sortby == 'size_Desc' and !empty($sortby)):?> selected <?endif?>>Carat: high to low</option>
-                        <option value="Color_Asc" <?if ($sortby == 'Color_Asc' and !empty($sortby)):?> selected <?endif?>>Color: high to low</option>
-                        <option value="Color_Desc" <?if ($sortby == 'Color_Desc' and !empty($sortby)):?> selected <?endif?>>Color: low to high</option>
-                        <option value="Clarity_Asc" <?if ($sortby == 'Clarity_Asc' and !empty($sortby)):?> selected <?endif?>>Clarity: high to low</option>
-                        <option value="Clarity_Desc" <?if ($sortby == 'Clarity_Desc' and !empty($sortby)):?> selected <?endif?>>Clarity: low to high</option>
-                        <option value="Cut_Asc" <?if ($sortby == 'Cut_Asc' and !empty($sortby)):?> selected <?endif?>>Cut: low to high</option>
-                        <option value="Cut_Desc" <?if ($sortby == 'Cut_Desc' and !empty($sortby)):?> selected <?endif?>>Cut: high to low</option>
-                        <option value="Price_Asc" <?if ($sortby == 'Price_Asc' and !empty($sortby)):?> selected <?endif?>>Price: low to high</option>
-                        <option value="Price_Desc" <?if ($sortby == 'Price_Desc' and !empty($sortby)):?> selected <?endif?>>Price: high to low</option>
-                    </select>
+
+    <div class="diamond-catalog-top clearfix">
+            <div class="left">
+                <div class="total-items">Total 999 items</div>
+                <div class="diamond-catalog-tocompare"><a href="#">Product compare (0)</a></div>
+            </div>
+            <div class="center">
+                <div class="diamond-catalog-top-pages">
+                    <a href="#" class="diamond-catalog-top-pages-link prev"></a>
+                    <span>Page</span>
+                    <input type="text" class="form-control" value="1">
+                    <span>of 3</span>
+                    <a href="#" class="diamond-catalog-top-pages-link next"></a>
                 </div>
-
             </div>
+            <div class="right">
+                <div class="show-b">
+                    <span>Show:</span>
 
-            <div class="view-product">
-                <button class="list-btn btn-view" data-toggle="tooltip" data-placement="top" title="list"><i class="fa fa-list"></i></button>
-                <button class="th-btn btn-view active" data-toggle="tooltip" data-placement="top" title="block"><i class="fa fa-th"></i></button>
-            </div>
-            <div class="show-b">
-                <span>Show:</span>
-
-                <div class="dropdown">
-                    <select name="show" class="form-control" id="w-product-show">
-                        <option value="15">15</option>
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                    </select>
+                    <div class="dropdown">
+                        <select name="show" class="form-control" id="w-product-show">
+                            <option value="15">15</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     <div class="diamond-catalog">
         <div class="diamond-catalog-left">
             <table class="diamond-catalog-table">
                 <thead>
                     <tr>
-                        <td>Compare</td>
-                        <td>Shape</td>
-                        <td>Color</td>
-                        <td>Clarity</td>
-                        <td>Cut</td>
-                        <td>Carat</td>
-                        <td>Popularity</td>
-                        <td>Price</td>
+                        <td><span>Compare</span></td>
+                        <td><span>Shape</span></td>
+                        <td><span>Color</span></td>
+                        <td><span>Clarity</span></td>
+                        <td><span>Cut</span></td>
+                        <td><span>Carat</span></td>
+                        <!-- sort-col-up -->
+                        <td class="sort-col sort-col-down"><span>Popularity</span></td>
+                        <td><span>Price</span></td>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($data as $row):?>
 
-                    <tr>
+                    <tr class="diamond-tr" data-diamond-id="<?=$row->diamond_id?>">
                         <td>
                             <input id="diamond<?=$row->diamond_id?>" type="checkbox" class="diamond-compare-checkbox">
                             <label for="diamond<?=$row->diamond_id?>" class="diamond-catalog-label"></label>
@@ -74,7 +66,7 @@
                         <td><?=$row->clarity?></td>
                         <td><?=$row->cut?></td>
                         <td><?=$row->size?> <i class="fa fa-exclamation-triangle"></i></td>
-                        <td>
+                        <td class="sort-col">
                             <div class="rating">
                                 <i class="star active"></i>
                                 <i class="star active"></i>
@@ -97,7 +89,51 @@
             </table>
         </div>
         <div class="diamond-catalog-right">
+            <div class="diamond-catalog-right-inner">
 
+                <div class="diamond-right-controls clearfix">
+                    <a href="#" class="diamond-right-btn diamond-right-close"> <i class="fa fa-angle-left"></i> Close Details</a>
+                    <a href="/diamond_page?diamond_id=71995555" class="diamond-right-btn diamond-right-detail">More Details <i class="fa fa-angle-right"></i></a>
+                </div>
+                <div class="diamond-catalog-right-container">
+                    <div class="text-center">
+                        <div class="rating">
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <i class="star"></i>
+                            <span><a href="" onclick="return false;">(0 customer ratings)</a></span>
+                        </div>
+                    </div>
+                    <div class="diamond-catalog-right-img"><img src="/image/shapes/round.jpg" alt=""></div>
+                    <div class="diamond-catalog-right-name">14k White Gold Twisted Band</div>
+                    <div class="diamond-catalog-right-price">$220.00</div>
+                    <div class="diamond-catalog-right-message">
+                        <div><img src="/catalog/view/theme/canary/img/diamond-catalog-message.jpg" alt=""></div>
+                        <p>Order loos diamond now for free<br>
+                            5 days delivery. Add to jewerly<br>
+                            for 2 weeks delivery
+                        </p>
+
+                    </div>
+                    <div class="text-center">
+                        <button type="button" data-toggle="modal" data-target="#w-modal-cart" class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select This Diamond</button>
+                    </div>
+                    <div class="text-center">
+                        <a href="#">View Certificate</a>
+                    </div>
+                    <div class="right-stone-details">
+                        <p><strong>STONE DETAILS</strong></p>
+                        <p>POLISH: good</p>
+                        <p>SYMMETRY: good</p>
+                        <p>FLUORESCENCE: None</p>
+                        <p>L/W/D (MM) 4.32 *4.23 *3.3</p>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </div>
 
@@ -112,7 +148,7 @@
     </div>
     <p class="diamonds-catalog-star-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, repellendus.</p>
 
-    <div class="box-stat-text center-bl">
+    <div class="box-stat-text">
         <div class="h2">
             TEXT ABOUT DIAMONDS
         </div>
@@ -151,5 +187,36 @@
 
         return false;
     });
+
+    $('.diamond-tr').on('click', function(event) {
+
+        var self = $(this),
+            diamondId = $(this).attr('data-diamond-id'), // <-- diamond id
+            catalogClass = $('.diamond-catalog');
+
+        if (!$(event.target).is('.diamond-compare-checkbox') && !$(event.target).is('.diamond-catalog-label')) {
+            if (self.hasClass('active')) {
+                catalogClass.removeClass('show-detail');
+                self.removeClass('active');
+            } else {
+                catalogClass.addClass('show-detail');
+                $('.diamond-tr').removeClass('active');
+                self.addClass('active');
+
+                // ajax here
+
+            }
+        }
+
+
+    });
+
+    $('.diamond-right-close').on('click', function(event) {
+        event.preventDefault();
+        $('.diamond-catalog').removeClass('show-detail');
+        $('.diamond-tr').removeClass('active');
+    });
+
+
 
 </script>
