@@ -86,17 +86,16 @@
                         <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="w-general-category" title="<?php echo $text_wishlist; ?>">
                             <i class="icons-wishlist_icon"></i>
                             <span class="span1">Wish List</span>
-                            <span class="span2">(0)</span>
+                            <span class="span2">(<?=$text_wishlist_count?>)</span>
                         </a>
                     </li>
                     <li><a href="/compare"><i class="icons-compare_icon"></i>
                             <span class="span1">Compare</span>
-                            <span class="span2">(2)</span>
+                            <span class="span2">(0)</span>
                         </a>
                     </li>
                     <li class="cart-bl">
                         <?php echo $cart; ?>
-                        <span class="span2">(1)</span>
                     </li>
                 </ul>
             </div>
@@ -121,71 +120,22 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile1">
-                                        DIAMONDS
+                                        <?php echo $categories[1]['name']?>
                                     </a>
                                 </h4>
                             </div>
-                            <div id="MenuMobile1" class="panel-collapse collapse in">
+                            <div id="MenuMobile1" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    <div class="panel-group" id="rubricMenu">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu1">
-                                                        Subcategory First
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="rubricMenu1" class="panel-collapse collapse in">
-                                                <div class="panel-body">
-                                                    <ul class="main-rubric">
-                                                        <li><a href="#">Round Cut</a></li>
-                                                        <li><a href="#">Princess Cut</a></li>
-                                                        <li><a href="#">Emerald Cut</a></li>
-                                                        <li><a href="#">Asscher Cut</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu2">
-                                                        Second Subcategory
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="rubricMenu2" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                    <ul class="main-rubric">
-                                                        <li><a href="#">Round Cut</a></li>
-                                                        <li><a href="#">Princess Cut</a></li>
-                                                        <li><a href="#">Emerald Cut</a></li>
-                                                        <li><a href="#">Asscher Cut</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu3">
-                                                        Subcategory three
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="rubricMenu3" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                    <ul class="main-rubric">
-                                                        <li><a href="#">Round Cut</a></li>
-                                                        <li><a href="#">Princess Cut</a></li>
-                                                        <li><a href="#">Emerald Cut</a></li>
-                                                        <li><a href="#">Asscher Cut</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
+                                    <ul class="main-rubric">
+                                        <li><a href="<?php echo $categories[1]['children'][0]['href']?>"><?php echo $categories[1]['children'][0]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[1]['children'][1]['href']?>"><?php echo $categories[1]['children'][1]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[1]['children'][2]['href']?>"><?php echo $categories[1]['children'][2]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[1]['children'][3]['href']?>"><?php echo $categories[1]['children'][3]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[1]['children'][4]['href']?>"><?php echo $categories[1]['children'][4]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[1]['children'][5]['href']?>"><?php echo $categories[1]['children'][5]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[1]['children'][6]['href']?>"><?php echo $categories[1]['children'][6]['name']?></a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -193,18 +143,56 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile2">
-                                        ENGAGEMENT RINGS
+                                        <?php echo $categories[2]['name']?>
                                     </a>
                                 </h4>
                             </div>
                             <div id="MenuMobile2" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                    <ul class="main-rubric">
-                                        <li><a href="#">Round Cut</a></li>
-                                        <li><a href="#">Princess Cut</a></li>
-                                        <li><a href="#">Emerald Cut</a></li>
-                                        <li><a href="#">Asscher Cut</a></li>
-                                    </ul>
+
+                                    <div class="panel-group" id="rubricMenu">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu1">
+                                                        WEDDING RINGS FOR MAN
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="rubricMenu1" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="main-rubric">
+                                                        <li><a href="<?php echo $categories[2]['children'][4]['href']?>"><?php echo $categories[2]['children'][4]['name']?></a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][5]['href']?>"><?php echo $categories[2]['children'][5]['name']?></a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][6]['href']?>"><?php echo $categories[2]['children'][6]['name']?></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel-group" id="rubricMenu">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#rubricMenu" href="#rubricMenu2">
+                                                        WEDDING RINGS FOR WOMAN
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="rubricMenu2" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="main-rubric">
+                                                        <li><a href="<?php echo $categories[2]['children'][0]['href']?>"><?php echo $categories[2]['children'][0]['name']?></a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][1]['href']?>"><?php echo $categories[2]['children'][1]['name']?></a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][2]['href']?>"><?php echo $categories[2]['children'][2]['name']?></a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][3]['href']?>"><?php echo $categories[2]['children'][3]['name']?></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -212,21 +200,65 @@
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile3">
-                                        WEDDING RINGS
+                                        <?php echo $categories[0]['name']?>
                                     </a>
                                 </h4>
                             </div>
                             <div id="MenuMobile3" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul class="main-rubric">
-                                        <li><a href="#">Round Cut</a></li>
-                                        <li><a href="#">Princess Cut</a></li>
-                                        <li><a href="#">Emerald Cut</a></li>
-                                        <li><a href="#">Asscher Cut</a></li>
+                                        <li><a href="/diamonds?&shape=Round">Round Cut</a></li>
+                                        <li><a href="/diamonds?&shape=Princess">Princess Cut</a></li>
+                                        <li><a href="/diamonds?&shape=Emerald">Emerald Cut</a></li>
+                                        <li><a href="/diamonds?&shape=Asscher">Asscher Cut</a></li>
+                                        <li><a href="/diamonds?&shape=Oval">Oval Cut</a></li>
+                                        <li><a href="/diamonds?&shape=Radiant">Radiant Cut</a></li>
+                                        <li><a href="/diamonds?&shape=Pear">Pear Shaped</a></li>
+                                        <li><a href="/diamonds?&shape=Heart">Heart Shaped</a></li>
+                                        <li><a href="/diamonds?&shape=Marquise">Marquise Cut</a></li>
+                                        <li><a href="/diamonds?&shape=Cushion">Cushion Cut</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a href="<?php echo $categories[4]['href']?>">
+                                        <?php echo $categories[4]['name']?>
+                                    </a>
+                                </h4>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#MenuMobile" href="#MenuMobile4">
+                                        <?php echo $categories[3]['name']?>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="MenuMobile4" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="main-rubric">
+                                        <li><a href="<?php echo $categories[3]['children'][6]['href']?>&filter=7"><?php echo $categories[3]['children'][6]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][4]['href']?>&filter=7"><?php echo $categories[3]['children'][4]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][2]['href']?>&filter=7"><?php echo $categories[3]['children'][2]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][9]['href']?>&filter=7"><?php echo $categories[3]['children'][9]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][7]['href']?>"><?php echo $categories[3]['children'][7]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][3]['href']?>"><?php echo $categories[3]['children'][3]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][0]['href']?>"><?php echo $categories[3]['children'][0]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][1]['href']?>"><?php echo $categories[3]['children'][1]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][8]['href']?>"><?php echo $categories[3]['children'][8]['name']?></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </ul>
             </div>

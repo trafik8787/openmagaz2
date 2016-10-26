@@ -27,53 +27,53 @@
                         <a href="<?php echo $categories[1]['children'][6]['href']?>" class="w-general-category"><i class="brilliant-ico brilliant-s6"></i><br/><?php echo $categories[1]['children'][6]['name']?></a>
                     </li>
                     <li>
-                        <a href="#" class="w-general-category"><i class="all-menu-i"></i><br/>All</a>
+                        <a href="<?php echo $categories[1]['href']?>" class="w-general-category"><i class="all-menu-i"></i><br/>All</a>
                     </li>
                 </ul>
                 <div class="title">browse settings by metal</div>
                 <ul class="w-checed-list engagement-list-colorfull">
                     <li class="list__item btn">
-                        <a href="#" class="label--checkbox">
+                        <a href="/engagement-rings&filter=13" class="label--checkbox">
                             <span><span class="number-circle"></span>Platinum</span>
                         </a>
                     </li>
                     <li class="list__item btn">
-                        <a href="#" class="label--checkbox">
+                        <a href="/engagement-rings&filter=11" class="label--checkbox">
                             <span class="yellow-g"><span class="number-circle">14</span>Yellow Gold</span>
                         </a>
                     </li>
                     <li class="list__item btn">
-                        <a href="#" class="label--checkbox">
+                        <a href="/engagement-rings&filter=12" class="label--checkbox">
                             <span class="yellow-g"><span class="number-circle">18</span>Yellow Gold</span>
                         </a>
                     </li>
                     <li class="list__item btn">
-                        <a href="#" class="label--checkbox">
+                        <a href="/engagement-rings&filter=6" class="label--checkbox">
                             <span><span class="number-circle">14</span>White Gold</span>
                         </a>
                     </li>
                     <li class="list__item btn">
-                        <a href="#" class="label--checkbox">
+                        <a href="/engagement-rings&filter=5" class="label--checkbox">
                             <span><span class="number-circle">18</span>White Gold</span>
                         </a>
                     </li>
                     <li class="list__item btn">
-                        <a href="#" class="label--checkbox">
+                        <a href="/engagement-rings&filter=14" class="label--checkbox">
                             <span class="rose-g"><span class="number-circle">14</span>Rose Gold</span>
                         </a>
                     </li>
                     <li class="list__item btn">
-                        <a href="#" class="label--checkbox">
+                        <a href="/engagement-rings&filter=15" class="label--checkbox">
                             <span class="rose-g"><span class="number-circle">18</span>Rose Gold</span>
                         </a>
                     </li>
                     <li class="list__item btn">
-                        <a href="#" class="label--checkbox">
+                        <a href="/engagement-rings&filter=16" class="label--checkbox">
                             <span><span class="number-circle"></span>Palladium</span>
                         </a>
                     </li>
                     <li class="list__item btn all-label">
-                        <a href="#" class="label--checkbox">
+                        <a href="/engagement-rings&filter=7" class="label--checkbox">
                             <i class="all-menu-i"></i>
                             <span>All</span>
                         </a>
@@ -176,7 +176,7 @@
                         <a href="/diamonds?&shape=Cushion" class="w-general-category"><i class="brilliant-ico2 brilliant-s4"></i><br/>Cushion Cut</a>
                     </li>
                     <li>
-                        <a href="#" class="w-general-category"><i class="all-menu-i"></i><br>All</a>
+                        <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><i class="all-menu-i"></i><br>All</a>
                     </li>
                 </ul>
                 <div class="row clearfix">
@@ -201,29 +201,29 @@
             </div>
         </li>
         <li class="dropdown-b" data-target="menu4">
-            <a href="/gemstones" class="w-general-category"><span></span><?php echo $categories[4]['name']?></a>
+            <a href="<?php echo $categories[4]['href']?>" class="w-general-category"><span></span><?php echo $categories[4]['name']?></a>
             <div class="dropdown-inside">
                 <div class="row clearfix">
                     <div class="col-md-4 col-sm-4 col-xs-4">
                         <div class="title">Browse settings by stone</div>
                         <ul class="brilliant-style gemstones-box">
                             <li>
-                                <a href="/gemstones&stone_type=1"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a>
+                                <a href="<?php echo $categories[4]['href']?>&stone_type=1"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a>
                             </li>
                             <li>
-                                <a href="/gemstones&stone_type=5"><i class="gemstones gemstones2"></i><span>pink sapphire</span></a>
+                                <a href="<?php echo $categories[4]['href']?>&stone_type=5"><i class="gemstones gemstones2"></i><span>pink sapphire</span></a>
                             </li>
                             <li>
-                                <a href="/gemstones&stone_type=4"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a>
+                                <a href="<?php echo $categories[4]['href']?>&stone_type=4"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a>
                             </li>
                             <li>
-                                <a href="/gemstones&stone_type=2"><i class="gemstones gemstones4"></i><span>red ruby</span></a>
+                                <a href="<?php echo $categories[4]['href']?>&stone_type=2"><i class="gemstones gemstones4"></i><span>red ruby</span></a>
                             </li>
                             <li>
-                                <a href="/gemstones&stone_type=3"><i class="gemstones gemstones5"></i><span>green emerald</span></a>
+                                <a href="<?php echo $categories[4]['href']?>&stone_type=3"><i class="gemstones gemstones5"></i><span>green emerald</span></a>
                             </li>
                             <li>
-                                <a href="#"><i class="all-menu-i"></i><span>All</span></a>
+                                <a href="<?php echo $categories[4]['href']?>"><i class="all-menu-i"></i><span>All</span></a>
                             </li>
                         </ul>
                     </div>
@@ -318,23 +318,24 @@
                         <div class="title">Browse popular jewelry</div>
                         <ul class="style-br-long w-margin-li">
                             <li>
+                                <a href="<?php echo $categories[3]['children'][1]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-9" style="background-position-y: 1px;"></i></span> <span><?php echo $categories[3]['children'][1]['name']?></span></a>
+                            </li>
+                            <li>
                                 <a href="<?php echo $categories[3]['children'][7]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-12" style="background-position-y: -7px;"></i></span> <span><?php echo $categories[3]['children'][7]['name']?></span></a>
                             </li>
                             <li>
                                 <a href="<?php echo $categories[3]['children'][3]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-13" style="background-position-y: 10px;"></i></span> <span><?php echo $categories[3]['children'][3]['name']?></span></a>
                             </li>
                             <li>
-                                <a href="<?php echo $categories[3]['children'][4]['href']?>&filter=7"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-15" style="background-position-y: 5px; background-position-x: -4px;"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a>
-                            </li>
-                            <li>
                                 <a href="<?php echo $categories[3]['children'][0]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-16" style="background-position-y: 0;" ></i></span> <span><?php echo $categories[3]['children'][0]['name']?></span></a>
                             </li>
 
                             <li>
-                                <a href="<?php echo $categories[3]['children'][6]['href']?>&filter=7" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-fashion-necklace" style="background-position-y: -8px;"></i></span> <span><?php echo $categories[3]['children'][6]['name']?></span></a>
+                                <a href="<?php echo $categories[3]['children'][8]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-diamond-bracelet"></i></span> <span><?php echo $categories[3]['children'][8]['name']?></span></a>
                             </li>
+
                             <li>
-                                <a href="#" class="w-general-category"><span class="wrap-ico2"><i class="all-menu-i"></i></span> <span>All</span></a>
+                                <a href="<?php echo $categories[3]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="all-menu-i"></i></span> <span>All</span></a>
                             </li>
                         </ul>
                     </div>
@@ -351,3 +352,4 @@
         </li>
     </ul>
 </div>
+<?//dd($categories[3])?>

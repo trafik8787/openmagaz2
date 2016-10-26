@@ -52,6 +52,7 @@ class ControllerCommonHeaderHome extends Controller {
 			$this->load->model('account/wishlist');
 
 			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
+            $data['text_wishlist_count'] = $this->model_account_wishlist->getTotalWishlist();
 		} else {
 
             if (!empty($this->session->data['wishlist']) AND empty($this->session->data['wishlist_diamond'])) {
@@ -65,6 +66,7 @@ class ControllerCommonHeaderHome extends Controller {
             }
 
             $data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), ($coun_wishlist));
+            $data['text_wishlist_count'] = $coun_wishlist;
 
 		}
 

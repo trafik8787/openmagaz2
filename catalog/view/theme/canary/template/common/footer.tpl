@@ -49,17 +49,16 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4" class="collapsed">
-                                            Engagement Rings
+                                            <?php echo $categories[1]['name']?>
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="collapse4" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul>
-                                            <li><a href="#">About Us</a></li>
-                                            <li><a href="#">Delivery Information</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
-                                            <li><a href="#">Terms & Conditions</a></li>
+                                            <?foreach ($categories[1]['children'] as $row):?>
+                                                <li><a href="<?=$row['href']?>"><?=$row['name']?></a></li>
+                                            <?endforeach?>
                                         </ul>
                                     </div>
                                 </div>
@@ -68,18 +67,22 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion2" href="#collapse5" class="collapsed">
-                                            Wedding Rings
+                                            <?php echo $categories[2]['name']?>
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="collapse5" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul>
-                                            <li><a href="#"></a></li>
-                                            <li><a href="#">Free and Insured Shipping</a></li>
-                                            <li><a href="#">Free Sizing</a></li>
-                                            <li><a href="#">Free Engraving</a></li>
-                                            <li><a href="#">100% Money Back</a></li>
+                                            <li><b>WEDDING RINGS FOR WOMAN</b></li>
+                                            <li><a href="<?php echo $categories[2]['children'][0]['href']?>"><?php echo $categories[2]['children'][0]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[2]['children'][1]['href']?>"><?php echo $categories[2]['children'][1]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[2]['children'][2]['href']?>"><?php echo $categories[2]['children'][2]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[2]['children'][3]['href']?>"><?php echo $categories[2]['children'][3]['name']?></a></li>
+                                            <li><b>WEDDING RINGS FOR MAN</b></li>
+                                            <li><a href="<?php echo $categories[2]['children'][4]['href']?>"><?php echo $categories[2]['children'][4]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[2]['children'][5]['href']?>"><?php echo $categories[2]['children'][5]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[2]['children'][6]['href']?>"><?php echo $categories[2]['children'][6]['name']?></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -88,19 +91,23 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion2" href="#collapse6" class="collapsed">
-                                            Diamonds
+                                            <?php echo $categories[0]['name']?>
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="collapse6" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul>
-                                            <li><a href="#">Made in USA!</a></li>
-                                            <li><a href="#">Product and delivery</a></li>
-                                            <li><a href="#">In less than 2 weeks</a></li>
-                                            <li><a href="#">GIA certified doaminds</a></li>
-                                            <li><a href="#">Higher quality</a></li>
-                                            <li><a href="#">Helping others</a></li>
+                                            <li><a href="/diamonds?&shape=Round">Round Cut</a></li>
+                                            <li><a href="/diamonds?&shape=Princess">Princess Cut</a></li>
+                                            <li><a href="/diamonds?&shape=Emerald">Emerald Cut</a></li>
+                                            <li><a href="/diamonds?&shape=Asscher">Asscher Cut</a></li>
+                                            <li><a href="/diamonds?&shape=Oval">Oval Cut</a></li>
+                                            <li><a href="/diamonds?&shape=Radiant">Radiant Cut</a></li>
+                                            <li><a href="/diamonds?&shape=Pear">Pear Shaped</a></li>
+                                            <li><a href="/diamonds?&shape=Heart">Heart Shaped</a></li>
+                                            <li><a href="/diamonds?&shape=Marquise">Marquise Cut</a></li>
+                                            <li><a href="/diamonds?&shape=Cushion">Cushion Cut</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -108,41 +115,32 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse7" class="collapsed">
-                                            Gemstones
+                                        <a href="<?php echo $categories[4]['href']?>" class="collapsed">
+                                            <?php echo $categories[4]['name']?>
                                         </a>
                                     </h4>
-                                </div>
-                                <div id="collapse7" class="panel-collapse collapse">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li><a href="#">Made in USA!</a></li>
-                                            <li><a href="#">Product and delivery</a></li>
-                                            <li><a href="#">In less than 2 weeks</a></li>
-                                            <li><a href="#">GIA certified doaminds</a></li>
-                                            <li><a href="#">Higher quality</a></li>
-                                            <li><a href="#">Helping others</a></li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion2" href="#collapse8" class="collapsed">
-                                            Jewelry & Gifts
+                                            <?php echo $categories[3]['name']?>
                                         </a>
                                     </h4>
                                 </div>
                                 <div id="collapse8" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul>
-                                            <li><a href="#">Made in USA!</a></li>
-                                            <li><a href="#">Product and delivery</a></li>
-                                            <li><a href="#">In less than 2 weeks</a></li>
-                                            <li><a href="#">GIA certified doaminds</a></li>
-                                            <li><a href="#">Higher quality</a></li>
-                                            <li><a href="#">Helping others</a></li>
+                                            <li><a href="<?php echo $categories[3]['children'][6]['href']?>&filter=7"><?php echo $categories[3]['children'][6]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[3]['children'][4]['href']?>&filter=7"><?php echo $categories[3]['children'][4]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[3]['children'][2]['href']?>&filter=7"><?php echo $categories[3]['children'][2]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[3]['children'][9]['href']?>&filter=7"><?php echo $categories[3]['children'][9]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[3]['children'][7]['href']?>"><?php echo $categories[3]['children'][7]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[3]['children'][3]['href']?>"><?php echo $categories[3]['children'][3]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[3]['children'][0]['href']?>"><?php echo $categories[3]['children'][0]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[3]['children'][1]['href']?>"><?php echo $categories[3]['children'][1]['name']?></a></li>
+                                            <li><a href="<?php echo $categories[3]['children'][8]['href']?>"><?php echo $categories[3]['children'][8]['name']?></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -305,7 +303,7 @@
 
         </script>
 
-        <div class="modal fade" id="ModalHomeSubskribe" tabindex="-1" role="dialog" aria-labelledby="ModalHomeSubskribeLabel" aria-hidden="true">
+        <div class="modal fade hidden-xs" id="ModalHomeSubskribe" tabindex="-1" role="dialog" aria-labelledby="ModalHomeSubskribeLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
