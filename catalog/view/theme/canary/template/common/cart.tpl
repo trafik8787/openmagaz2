@@ -8,6 +8,7 @@
 
     <span>cart</span>
 </a>
+<span class="span2">(<?php echo $count; ?>)</span>
 <div class="cart-basket">
     <div class="w-cart-basket">
         <!-- <button class="close-cart-main"></button> -->
