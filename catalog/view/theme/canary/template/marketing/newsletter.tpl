@@ -4,8 +4,8 @@
         <input type="email" required="required" name="email" class="form-control newslet-email"  placeholder="Enter e-mail">
     </div>
 
-    <button value="1" name="sex" class="w-newsletter-button btn w-btn-orange2" type="submit">Woman</button>
-    <button value="2"  name="sex" class="w-newsletter-button btn w-btn-orange2" type="submit">Man</button>
+    <button value="1" name="sex" class="w-newsletter-button btn w-btn-orange2"  type="submit">Woman</button>
+    <button value="2"  name="sex" class="w-newsletter-button btn w-btn-orange2"  type="submit">Man</button>
 </form>
 
 
@@ -58,6 +58,7 @@
                     } else if (json.error) {
                         $('#w-modal-newslrtter .w-modal-button .text-centr').text(json.error);
                     }
+                    $('#ModalHomeSubskribe').modal('hide');
                     $('#w-modal-newslrtter').modal('show');
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
