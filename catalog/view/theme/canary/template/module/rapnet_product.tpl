@@ -106,7 +106,7 @@
                                 <div class="h3 text-center margin-top-0">DIAMOND DETAILS:</div>
                                 <div class="icons-quality_service_icon"></div>
                                 <input type="hidden" id="w-diamond_id" value="<?php echo $product->response->body->diamond->diamond_id?>">
-                                <div class="table-responsive table table-condensed margin-buttom-0">
+                                <div class="table-condensed margin-buttom-0">
                                     <table class="table">
                                         <tr>
                                             <td><span>SHAPE: <?=$product->response->body->diamond->shape?></span></td>
@@ -226,7 +226,7 @@
                 <div class="diamant-more-left">
                     <div class="product-details">
                         <div class="h3 margin-top-0">Diamond Specifications</div>
-                        <div class="table-responsive table table-condensed margin-buttom-0">
+                        <div class="table-condensed margin-buttom-0">
                             <table class="table">
                                 <tr>
                                     <td><span>SHAPE: <?=$product->response->body->diamond->shape?></span></td>

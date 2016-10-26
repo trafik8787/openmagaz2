@@ -60,7 +60,7 @@
                         </td>
                         <td>
                             <img src="/catalog/view/theme/canary/img/diamant-4.png" alt="" class="diamond-table-shapeimg">
-                            <?=$row->shape?>
+                            <span class="hide-shapename"><?=$row->shape?></span>
                         </td>
                         <td><?=$row->color?></td>
                         <td><?=$row->clarity?></td>
@@ -111,8 +111,8 @@
                     <div class="diamond-catalog-right-price">$220.00</div>
                     <div class="diamond-catalog-right-message">
                         <div><img src="/catalog/view/theme/canary/img/diamond-catalog-message.jpg" alt=""></div>
-                        <p>Order loos diamond now for free<br>
-                            5 days delivery. Add to jewerly<br>
+                        <p>Order loos diamond now for free
+                            5 days delivery. Add to jewerly
                             for 2 weeks delivery
                         </p>
 
