@@ -1612,34 +1612,34 @@ footer > section .row {
   margin-right: 11px;
 }
 
-.w-btn-orange {
-
-  background: #fbbd35; /* Old browsers */
-
-  background: -moz-linear-gradient(top,  #fbbd35 0%, #fbbd35 35%, #efac4a 100%); /* FF3.6-15 */
-
-  background: -webkit-linear-gradient(top,  #fbbd35 0%,#fbbd35 35%,#efac4a 100%); /* Chrome10-25,Safari5.1-6 */
-
-  background: linear-gradient(to bottom,  #fbbd35 0%,#fbbd35 35%,#efac4a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-  font-family: Raleway-Bold,fantasy;
-
+.w-btn-white {
+  background: #e8e8e7;
+  font-family: "Raleway-Bold",fantasy;
   font-size: 14px;
-
   border: 0;
-
   color: #000000;
-
-  box-shadow: -1px 1px 4px rgba(113, 113, 113, 0.85), inset 0 -3px 1px #c38d35;
-
-  margin-right: 20px;
-
+  box-shadow: -1px 1px 4px rgba(113, 113, 113, 0.85);
+  margin-right: 30px;
   border-radius: 3px;
-
   text-align: left;
-
   padding: 15px 0 16px 23px;
+  width: 240px;
+}
 
+.w-btn-orange {
+  background: #fbbd35; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fbbd35 0%, #fbbd35 35%, #efac4a 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #fbbd35 0%,#fbbd35 35%,#efac4a 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #fbbd35 0%,#fbbd35 35%,#efac4a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  font-family: Raleway-Bold,fantasy;
+  font-size: 14px;
+  border: 0;
+  color: #000000;
+  box-shadow: -1px 1px 4px rgba(113, 113, 113, 0.85), inset 0 -3px 1px #c38d35;
+  margin-right: 20px;
+  border-radius: 3px;
+  text-align: left;
+  padding: 15px 0 16px 23px;
   width: 240px;
 }
 
@@ -7750,7 +7750,7 @@ footer > section .row {
 }
 .top-cart .blue-block ul li{
   margin-bottom: 10px;
-}
+} 
 
 .top-cart .blue-block ul li a:hover{
   text-decoration: none;
@@ -7934,6 +7934,10 @@ footer > section .row {
   border-right: 1px solid #cdcbcb;
 }
 
+.wrapper-cart-box .one-line2 .text-box{
+  padding-top: 10px;
+}
+
 .wrapper-cart-box .text-box .type{
   margin-bottom: 10px;
 }
@@ -7988,11 +7992,23 @@ footer > section .row {
   position: relative;
 }
 
+.wrapper-cart-box .number-block .price span{
+  position: absolute;
+  top: -25px;
+  right: 0;
+  text-decoration: line-through;
+  color: #9d9e9e;
+  font-family: "Montserrat-Regular";
+  font-size: 21px;
+  line-height: 21px;
+}
+
 .wrapper-cart-box .number-block .price{
   padding: 0 0 2px 30px;
   color: #2b2a29;
   font-family: "Montserrat-Regular";
   font-size: 29px;
+  position: relative;
   line-height: 29px;
 }
 .wrapper-cart-box .number-block .quantity{
@@ -8016,6 +8032,161 @@ footer > section .row {
   right: 40px;
   top: 41px;
 }
+
+.total-cart-pay .form-wrapper a:hover{
+  text-decoration: none;
+}
+
+.total-cart-pay .form-wrapper a{
+  display: inline-block;
+  margin: 10px 0;
+  color: #2b2a29;
+  font-size: 15px;
+  line-height: 15px;
+  text-decoration: underline;
+}
+
+.total-cart-pay .form-wrapper input{
+  width: 280px;
+  height: 40px;
+  margin-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #d5d5d5;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  font-size: 15px;
+  color: #2b2a29;
+  display: inline-block;
+}
+
+.total-cart-pay .form-wrapper{
+  width: 360px;
+  padding-top: 35px;
+  float: left;
+}
+
+.total-cart-pay .all-numbers table td:nth-child(2){
+  padding: 5px 0 5px 20px;
+  font-size: 17px;
+  font-family: "Montserrat-Regular";
+}
+.total-cart-pay .all-numbers table td .all-price{
+  font-size: 29px;
+}
+.total-cart-pay .all-numbers table td .total{
+  font-size: 21px;
+  font-family: "Raleway-Bold", sans-serif;
+}
+.total-cart-pay .all-numbers table td{
+  padding: 5px 0;
+  color: #2b2a29;
+  font-size: 15px;
+}
+
+.total-cart-pay .all-numbers table{
+  width: 100%;
+}
+.total-cart-pay .all-numbers{
+  width: 250px;
+  float: right;
+}
+
+.total-cart-pay .form-wrapper .title{
+  margin-bottom: 10px;
+  color: #2b2a29;
+  font-family: "Raleway-Bold", sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.total-cart-pay{
+  margin-bottom: 40px;
+  position: relative;
+  padding: 25px 35px 25px 45px;
+  background: #fbfbfb url("../img/bg-cart-grey.png") no-repeat center bottom;
+}
+
+.cart-ico1{
+  width: 72px;
+  height: 42px;
+  margin: 50px 40px 0 0;
+  display: block;
+  float: left;
+  background: url("../img/cart-ico1.png") no-repeat center / contain;
+}
+
+.cards-box{
+  margin-bottom: 30px;
+  padding: 40px 20px 40px 45px;
+  background-color: #f9f9f9;
+}
+
+.cards-box .text sup{
+  font-size: 12px;
+}
+
+.cards-box .text{
+  width: 280px;
+  margin-right: 20px;
+  float: left;
+  color: #2b2a29;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.cart-page-info b{
+  font-weight: normal;
+  font-family: "Raleway-Bold", sans-serif;
+
+}
+.cart-page-info{
+  padding: 0 50px 50px;
+  color: #2b2a29;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.cards-box .text .title {
+  margin-bottom: 5px;
+  font-family: "Raleway-Bold", sans-serif;
+}
+
+.all-cards{
+  width: 160px;
+  float: left;
+}
+
+.all-cards .one-card img{
+  max-width: 100%;
+}
+.all-cards .one-card:nth-child(3n){
+  margin-right: 0;
+}
+.all-cards .one-card{
+  margin-right: 5px;
+  float: left;
+  display: block;
+}
+
+.cards-box .w-btn-white i{
+  margin-right: 20px;
+  font-size: 12px;
+  display: inline-block;
+}
+.cards-box .btn-lg{
+  width: 220px;
+  margin-top: 12px;
+  padding: 15px 22px 16px 22px!important;
+  text-align: center;
+  float: right;
+  -webkit-box-shadow: 0 1px 4px rgba(113, 113, 113, 0.45);
+  -moz-box-shadow: 0 1px 4px rgba(113, 113, 113, 0.45);
+  box-shadow: 0 1px 4px rgba(113, 113, 113, 0.45);
+}
+
+
 
 
 @media (max-width: 1700px) {

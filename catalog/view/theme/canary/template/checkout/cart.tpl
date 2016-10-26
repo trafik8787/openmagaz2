@@ -170,6 +170,80 @@
                         </div>
                     </div>
                 </div>
+                <div class="total-cart-pay clearfix">
+                    <i class="cart-ico1"></i>
+                    <div class="form-wrapper">
+                        <div class="title">Do you have an offer code?</div>
+                        <form action="#">
+                            <input type="text" placeholder="Enter a code">
+                            <a href="#">Validate</a>
+                        </form>
+                    </div>
+                    <div class="all-numbers">
+                        <table>
+                            <tr>
+                                <td>Subtotal:</td>
+                                <td>$ 5,929</td>
+                            </tr>
+                            <tr>
+                                <td>Fedex Shipping:</td>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <td>Sales TAX:</td>
+                                <td>$ 0</td>
+                            </tr>
+                            <tr>
+                                <td><span class="total">TOTAL:</span></td>
+                                <td><span class="all-price">$ 5,929</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="cart-header">LIMITED TIME OFFER JUST YOU</div>
+                <div class="wrapper-cart-box">
+                    <div class="one-line one-line2">
+                        <div class="box-img">
+                            <img src="/catalog/view/theme/canary/img/img271.png" alt="img">
+                        </div>
+                        <div class="text-box">
+                            <div class="type">Diamond</div>
+                            <div class="name"><span>14K WHITE PETITE DIAMOND STAR EARRINGS</span></div>
+                        </div>
+                        <div class="number-block">
+                            <div class="quantity">Quantity</div>
+                            <div class="box-number-switch">
+                                <a href="#" class="arrow-btn-number arrow-t" data-action="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                                <input type="text" value="1">
+                            </div>
+                            <div class="price">
+                                <span>$ 775</span>
+                                $ 690
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-box clearfix">
+                    <div class="text">
+                        <div class="title">Shipping Information</div>
+                        Receive on: Tuesday, September, 27<br/>
+                        Via FedEx Priority Overnight <sup>®</sup>
+                    </div>
+                    <div class="all-cards clearfix">
+                        <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card1.png" alt="card"></a>
+                        <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card2.png" alt="card"></a>
+                        <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card3.png" alt="card"></a>
+                        <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card4.png" alt="card"></a>
+                        <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card5.png" alt="card"></a>
+                        <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card6.png" alt="card"></a>
+                    </div>
+                    <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
+                    <a href="#" class="btn w-btn-white btn-lg" role="button"><i class="fa fa-chevron-right" aria-hidden="true"></i>Continue shopping</a>
+                </div>
+                <div class="cart-page-info">
+                    For Saturday delivery, contact customer service at <b>800-214-6550  |  24/7</b><br/>
+                    View our shipping policy
+                </div>
                 <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
                     <table class="wishlist-table">
                         <thead>
