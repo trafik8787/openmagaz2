@@ -84,7 +84,7 @@
                                 <i class="star active"></i>
                                 <?php } ?>
                                 <?php } ?>
-                                <span><a href="" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: 1500}, 'slow'); return false;"><?php echo $reviews; ?></a></span>
+                                <span><a href="" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('.comment-block').offset().top - 20}, 'slow'); return false;"><?php echo $reviews; ?></a></span>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 text-right">
@@ -109,8 +109,8 @@
                                 <div class="h3 text-center margin-top-0">Setting details</div>
                                 <div class="icons-quality_service_icon"></div>
 
-                                <div class="table-responsive table table-condensed margin-buttom-0">
-                                    <table class="table">
+                                <div class="margin-buttom-0">
+                                    <table class="table table-condensed">
                                         <tr>
                                             <td><span>METAL: <?=list_metal($metal)?></span></td>
                                             <td><span>WEIGHT: <?=$weight?> g.</span></td>
@@ -570,7 +570,8 @@
 
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs comment-nav-tabs">
-                        <li class="active"><a href="#reviews" data-toggle="tab">Reviews <?php echo $reviews; ?></a></li>
+                        <!-- todo fix review number/ make short -->
+                        <li class="active"><a href="#reviews" data-toggle="tab">Reviews (19)</a></li>
                         <li><a href="#questions" data-toggle="tab">Questions</a></li>
                     </ul>
                     <!-- Tab panes -->
