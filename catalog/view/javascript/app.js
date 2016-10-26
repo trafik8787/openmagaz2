@@ -30,6 +30,19 @@ $(document).ready(function() {
     //    // prevSelector: '.icons-prev_slider_icon'
     //
     //});
+
+    $(".arrow-btn-number").click(function(e){
+        e.preventDefault();
+        if ($(this).attr('data-action')=='plus'){
+            $(this).parent().find('input').val(Number($(this).parent().find('input').val())+1);
+        }
+        else{
+            if (Number($(this).parent().find('input').val())>1){
+                $(this).parent().find('input').val(Number($(this).parent().find('input').val())-1);
+            }
+        }
+    });
+
     $(".mobile-menu-btn").click(function(){
         $(".mobile-menu").toggleClass("open");
     });

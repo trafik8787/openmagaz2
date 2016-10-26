@@ -1223,7 +1223,9 @@ star-rating
 .w-checed-list .label--checkbox {
     position: relative;
     cursor: pointer;
-
+    display: inline-block;
+    max-width: 100%;
+    color: black;
 }
 
 .w-checed-list .label--checkbox span {

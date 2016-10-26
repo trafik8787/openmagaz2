@@ -51,6 +51,125 @@
         <div class="cart-page">
             <div class="center-bl">
                 <div class="cart-header">Shopping Cart</div>
+                <div class="top-cart row">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <div class="blue-block">
+                            <div class="title">NEED HELP?</div>
+                            <ul>
+                                <li><i class="help-ico1"></i><a href="#">00-214-6550 | 24/7</a></li>
+                                <li><i class="help-ico2"></i><a href="#">Online Chat now</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                        <div class="yellow-block">
+                            <div class="title">WE STAND BEHALF LOW-PRICE GUARANTEE AND AN EASY RETURN POLICY</div>
+                            <div class="row">
+                                <div class="col-md-8 col-sm-8 col-xs-8">
+                                    <div class="clearfix">
+                                        <div class="one-block">
+                                            <i class="cart-awords1"></i>
+                                            <span>Lowest Prices<br/>Guaranteed</span>
+                                        </div>
+                                        <div class="one-block">
+                                            <i class="cart-awords2"></i>
+                                            <span>Money Back<br/>Guarantee</span>
+                                        </div>
+                                        <div class="one-block">
+                                            <i class="cart-awords3"></i>
+                                            <span>Secure</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4 clearfix">
+                                    <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper-cart-box">
+                    <div class="one-line">
+                        <div class="box-img">
+                            <img src="/catalog/view/theme/canary/img/img-268.png" alt="img">
+                        </div>
+                        <div class="text-box">
+                            <div class="type">Diamond</div>
+                            <div class="name"><span>PRINCESS 0.53 CARAT M SI1</span> <a href="#" class="remove-ico"></a></div>
+                            SKU: 50901-EW14
+                        </div>
+                        <div class="number-block">
+                            <div class="quantity">Quantity</div>
+                            <div class="box-number-switch">
+                                <a href="#" class="arrow-btn-number arrow-t" data-action="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                                <input type="text" value="1">
+                                <a href="#" class="arrow-btn-number arrow-b" data-action="minus"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="price">$ 1,995</div>
+                        </div>
+                    </div>
+                    <div class="one-line">
+                        <div class="box-img">
+                            <img src="/catalog/view/theme/canary/img/img-269.png" alt="img">
+                        </div>
+                        <div class="text-box">
+                            <div class="type">Diamond</div>
+                            <div class="name"><span>14k white gold modern solitaire engagement ring</span> <a href="#" class="remove-ico"></a></div>
+                            SKU: 34256-34H23M   |   Size 6.5
+                            <label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>
+                        </div>
+                        <div class="number-block">
+                            <div class="quantity">Quantity</div>
+                            <div class="box-number-switch">
+                                <a href="#" class="arrow-btn-number arrow-t" data-action="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                                <input type="text" value="1">
+                                <a href="#" class="arrow-btn-number arrow-b" data-action="minus"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="price">$ 3,934</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-header">MATCHING ITEMS</div>
+                <div class="matching-cart">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-4 clearfix">
+                            <div class="box-img">
+                                <img src="/catalog/view/theme/canary/img/img264.png" alt="img">
+                            </div>
+                            <div class="text-box">
+                                <div class="article">
+                                    <a href="#">14k Yellow Gold Round Halo Diamond Engagement Ring</a>
+                                </div>
+                                <div class="price">$1,595.00</div>
+                                <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 clearfix">
+                            <div class="box-img">
+                                <img src="/catalog/view/theme/canary/img/img265.png" alt="img">
+                            </div>
+                            <div class="text-box">
+                                <div class="article">
+                                    <a href="#">14k Yellow Gold Round Halo Diamond Engagement Ring</a>
+                                </div>
+                                <div class="price">$790.00</div>
+                                <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4 clearfix">
+                            <div class="box-img">
+                                <img src="/catalog/view/theme/canary/img/img267.png" alt="img">
+                            </div>
+                            <div class="text-box">
+                                <div class="article">
+                                    <a href="#">14k Yellow Gold Round Halo Diamond Engagement Ring</a>
+                                </div>
+                                <div class="price">$2,795.00</div>
+                                <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
                     <table class="wishlist-table">
                         <thead>
