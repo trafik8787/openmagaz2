@@ -2377,6 +2377,12 @@ width: 98px;
     border-radius: 2px;
 }
 
+#ModalHomeSubskribe .modal-content > p {
+    color: #d4dbed;
+    text-align: center;
+    padding: 27px 0 27px 0;
+}
+
 #ModalHomeSubskribe .modal-body .modal-body-img {
     background: url("../img/demo_new_template/modal-email-subskrib.png") 100% 100% no-repeat;
     background-size: cover;

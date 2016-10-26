@@ -49,10 +49,17 @@ class ControllerCommonFooter extends Controller {
 
         $data['newsletter'] = $this->load->controller('marketing/newsletter');
 
+        if (empty(Cookie::get('NewsletModal'))) {
+            $data['newsletter_cookie'] = 1;
+            Cookie::set('NewsletModal', 1);
+        }
+
         $this->load->model('catalog/category');
 
         $categories2 = $this->model_catalog_category->getCategoriesNew(true);
         $data['categories'] = $categories2;
+
+
 
 		// Whos Online
 		if ($this->config->get('config_customer_online')) {
