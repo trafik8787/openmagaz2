@@ -2290,17 +2290,28 @@ star-rating
 }
 
 #ModalHomeSubskribe .modal-header .close {
-   width: 30px;
-   height: 30px;
-   border: 2px solid #d5dced;
-   opacity: 1;
-   color: #d2daeb;
-   border-radius: 50%;
-   position: absolute;
-   font-size: 25px;
-   display: block;
-   right: 12px;
-   font-weight: inherit;
+   
+width: 30px;
+   
+height: 30px;
+   
+border: 2px solid #d5dced;
+   
+opacity: 1;
+   
+color: #d2daeb;
+   
+border-radius: 50%;
+   
+position: absolute;
+   
+font-size: 25px;
+   
+display: block;
+   
+right: 12px;
+   
+font-weight: inherit;
 }
 
 #ModalHomeSubskribe .modal-header .close > span {
@@ -2340,7 +2351,8 @@ font-size: 60px;
 font-weight: bold;
 }
 #ModalHomeSubskribe .modal-body .top-body-text-3 {
-padding-top: 23px;
+
+padding-top: 23px;
 }
 #ModalHomeSubskribe .modal-body .text-centr-img {
 
@@ -2363,6 +2375,12 @@ width: 98px;
     width: 258px;
     height: 44px;
     border-radius: 2px;
+}
+
+#ModalHomeSubskribe .modal-content > p {
+    color: #d4dbed;
+    text-align: center;
+    padding: 27px 0 27px 0;
 }
 
 #ModalHomeSubskribe .modal-body .modal-body-img {
@@ -2488,6 +2506,34 @@ width: 98px;
     padding-top: 0;
 }
 
+
+#w-modal-newslrtter .w-modal-button {
+    padding-bottom: 20px;
+}
+
+
+#w-modal-newslrtter .modal-content {
+    background-color: #2f4680;
+    border-radius: inherit;
+}
+
+#w-modal-newslrtter .modal-dialog {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#w-modal-newslrtter.modal {
+    text-align: center;
+    padding: 0!important;
+}
+
+#w-modal-newslrtter.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
 
 .linebg-title {
     position: relative;

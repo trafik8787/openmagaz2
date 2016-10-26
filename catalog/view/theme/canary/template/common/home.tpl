@@ -337,52 +337,7 @@
         <li><a href="/faq">FAQ</a></li>
         <li><a href="/about_us">ABOUT</a></li>
     </ul>
-    <!--*<script>*-->
-        <!--*$(function () {*-->
-            <!--*$('#ModalHomeSubskribe').modal('show');*-->
-        <!--*});*-->
 
-    <!--*</script>*-->
-
-    <div class="modal fade" id="ModalHomeSubskribe" tabindex="-1" role="dialog" aria-labelledby="ModalHomeSubskribeLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">JOIN OUR MAILING LIST</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="modal-body-img">
-                        <div>
-                            <div class="top-body-text">
-                                <p class="top-body-text-1">SIGN UP NOW TO GET</p>
-                                <p class="top-body-text-2">$100 OFF &#42;</p>
-                                <p class="top-body-text-3">YOUR FIRST PURCHASE!</p>
-                            </div>
-                            <div class="text-center">
-                                <span class="text-centr-img">
-                                    Be the first to hear <br>
-                                    about exclusive offers <br>
-                                    jewelry trends and brilliant updates.
-                                </span>
-                            </div>
-                            <form class="form-inline w-newsletter-form" role="form">
-                                <div class="form-group">
-                                    <input type="email" class="form-control newslet-email" placeholder="Enter e-mail">
-                                </div>
-
-                                <button value="1" class="w-newsletter-button btn w-btn-orange2" type="submit">Woman</button>
-                                <button value="2" class="w-newsletter-button btn w-btn-orange2" type="submit">Man</button>
-                            </form>
-                        </div>
-                    </div>
-                    <p>
-                        &#42; Offer is valid for orders of $1000 or more. Offer cannot be combined with any other offer.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </main>
 <?php echo $footer; ?>
