@@ -69,10 +69,7 @@
                 </li>
             </ul>
         </div>
-        <div class="visible-xs">
-            <?=$home_best_quality_and_service?>
-        </div>
-
+        <?=$home_best_quality_and_service?>
         <div class="hidden-xs">
             <?=$home_bloc_category?>
         </div>

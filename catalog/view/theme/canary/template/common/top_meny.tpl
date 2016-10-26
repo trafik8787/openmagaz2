@@ -33,59 +33,50 @@
                 <div class="title">browse settings by metal</div>
                 <ul class="w-checed-list engagement-list-colorfull">
                     <li class="list__item btn">
-                        <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="13" class="checkbox">
+                        <a href="#" class="label--checkbox">
                             <span><span class="number-circle"></span>Platinum</span>
-                        </label>
+                        </a>
                     </li>
                     <li class="list__item btn">
-                        <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="11" class="checkbox">
+                        <a href="#" class="label--checkbox">
                             <span class="yellow-g"><span class="number-circle">14</span>Yellow Gold</span>
-                        </label>
+                        </a>
                     </li>
                     <li class="list__item btn">
-                        <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="12" class="checkbox">
+                        <a href="#" class="label--checkbox">
                             <span class="yellow-g"><span class="number-circle">18</span>Yellow Gold</span>
-                        </label>
+                        </a>
                     </li>
                     <li class="list__item btn">
-                        <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="6" class="checkbox">
+                        <a href="#" class="label--checkbox">
                             <span><span class="number-circle">14</span>White Gold</span>
-                        </label>
+                        </a>
                     </li>
                     <li class="list__item btn">
-                        <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="5" class="checkbox">
+                        <a href="#" class="label--checkbox">
                             <span><span class="number-circle">18</span>White Gold</span>
-                        </label>
+                        </a>
                     </li>
                     <li class="list__item btn">
-                        <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="14" class="checkbox">
+                        <a href="#" class="label--checkbox">
                             <span class="rose-g"><span class="number-circle">14</span>Rose Gold</span>
-                        </label>
+                        </a>
                     </li>
                     <li class="list__item btn">
-                        <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="14" class="checkbox">
+                        <a href="#" class="label--checkbox">
                             <span class="rose-g"><span class="number-circle">18</span>Rose Gold</span>
-                        </label>
+                        </a>
                     </li>
                     <li class="list__item btn">
-                        <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="16" class="checkbox">
+                        <a href="#" class="label--checkbox">
                             <span><span class="number-circle"></span>Palladium</span>
-                        </label>
+                        </a>
                     </li>
                     <li class="list__item btn all-label">
-                        <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="16" class="checkbox">
+                        <a href="#" class="label--checkbox">
                             <i class="all-menu-i"></i>
                             <span>All</span>
-                        </label>
+                        </a>
                     </li>
                 </ul>
                 <div class="engagement-img-menu clearfix">
