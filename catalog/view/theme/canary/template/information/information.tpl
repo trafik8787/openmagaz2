@@ -67,7 +67,7 @@
                     <div class="right-q">
                         <h1>DELIVERY INFORMATION H1</h1>
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
                                 <h2>CREDIT CARD H2</h2>
                                 <p>
                                     You can delete or manage cookies. The “help” feature on most browsers will tell you how to turn cookie storage on or off, how to remove cookies that have already been stored, and how to block certain sites from storing cookies. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed.
@@ -76,7 +76,7 @@
                                     If you do this, however, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work. You can easily accept or reject the cookies on this site by choosing one of the following links.
                                 </p>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="box-img-wrapper">
                                     <img src="/catalog/view/theme/canary/img/img261.png" alt="img">
                                 </div>
@@ -103,7 +103,7 @@
                             There grass Behold behold under without divide dry. Void doesn't, form be likeness gathering place waters were which. Over behold, dry rule him wherein tree seed fruit tree Fruit him thing have was lesser fruit under.
                         </p>
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="title-stat">TABLE</div>
                                 <div class="wrapper-table-stat">
                                     <table class="table table-bordered table-striped table-stat-page">
@@ -149,7 +149,7 @@
                                     </table>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
+                            <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="title-stat">FAQ LISTING</div>
                                 <div class="wrapper-collapse-stat">
                                     <div class="panel-group collapse-static" id="faq">
@@ -218,16 +218,16 @@
                             <form action="">
                                 <textarea placeholder="Enter your text here"></textarea>
                                 <div class="row">
-                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <div class="col-md-3 col-sm-3 col-xs-4">
                                         <input type="text" placeholder="Enter First Name">
                                     </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <div class="col-md-3 col-sm-3 col-xs-4">
                                         <input type="text" placeholder="Enter Second Name">
                                     </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <div class="col-md-3 col-sm-3 col-xs-4">
                                         <input type="text" placeholder="Enter Email">
                                     </div>
-                                    <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <div class="col-md-3 col-sm-3 col-xs-12">
                                         <button class="btn w-btn-orange btn-lg"><div class="icons-rings_icon"></div>SEND</button>
                                     </div>
                                 </div>

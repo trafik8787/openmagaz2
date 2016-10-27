@@ -52,7 +52,7 @@
             <div class="center-bl">
                 <div class="cart-header">Shopping Cart</div>
                 <div class="top-cart row">
-                    <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
                         <div class="blue-block">
                             <div class="title">NEED HELP?</div>
                             <ul>
@@ -61,11 +61,11 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-9 col-sm-9 col-xs-9">
+                    <div class="col-md-9 col-sm-12 col-xs-12">
                         <div class="yellow-block">
                             <div class="title">WE STAND BEHALF LOW-PRICE GUARANTEE AND AN EASY RETURN POLICY</div>
-                            <div class="row">
-                                <div class="col-md-8 col-sm-8 col-xs-8">
+                            <div class="row line-cart-low-price">
+                                <div class="col-md-8 col-sm-8 col-xs-12">
                                     <div class="clearfix">
                                         <div class="one-block">
                                             <i class="cart-awords1"></i>
@@ -132,7 +132,7 @@
                 <div class="cart-header">MATCHING ITEMS</div>
                 <div class="matching-cart">
                     <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-4 clearfix">
+                        <div class="col-md-4 col-sm-6 col-xs-12 clearfix">
                             <div class="box-img">
                                 <img src="/catalog/view/theme/canary/img/img264.png" alt="img">
                             </div>
@@ -144,7 +144,7 @@
                                 <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-xs-4 clearfix">
+                        <div class="col-md-4 col-sm-6 col-xs-12 clearfix">
                             <div class="box-img">
                                 <img src="/catalog/view/theme/canary/img/img265.png" alt="img">
                             </div>
@@ -156,7 +156,7 @@
                                 <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-4 col-xs-4 clearfix">
+                        <div class="col-md-4 col-sm-6 col-xs-12 clearfix">
                             <div class="box-img">
                                 <img src="/catalog/view/theme/canary/img/img267.png" alt="img">
                             </div>
