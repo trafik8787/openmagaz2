@@ -82,52 +82,45 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 clearfix">
-                                    <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
+                                    <a href="<?php echo $checkout; ?>" class="btn w-btn-orange btn-lg w-general-category" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="wrapper-cart-box">
-                    <div class="one-line">
-                        <div class="box-img">
-                            <img src="/catalog/view/theme/canary/img/img-268.png" alt="img">
-                        </div>
-                        <div class="text-box">
-                            <div class="type">Diamond</div>
-                            <div class="name"><span>PRINCESS 0.53 CARAT M SI1</span> <a href="#" class="remove-ico"></a></div>
-                            SKU: 50901-EW14
-                        </div>
-                        <div class="number-block">
-                            <div class="quantity">Quantity</div>
-                            <div class="box-number-switch">
-                                <a href="#" class="arrow-btn-number arrow-t" data-action="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                <input type="text" value="1">
-                                <a href="#" class="arrow-btn-number arrow-b" data-action="minus"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+
+                    <?//dd($products)?>
+                    <form action="<?php echo $action; ?>" method="post" class="w-form-cart-sub" enctype="multipart/form-data">
+
+                        <?php foreach ($products as $product) :?>
+                            <div class="one-line">
+                                <div class="box-img">
+                                    <img src="<?=$product['thumb']?>" width="100%" alt="img">
+                                </div>
+                                <div class="text-box">
+                                    <div class="type"><?if ($product['diamond'] == 1):?>Diamond<?else:?>Rings<?endif?></div>
+                                    <div class="name"><span><?=$product['name']?></span> <a href="#" data-toggle="tooltip" title="<?php echo $button_remove; ?>" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" class="remove-ico"></a></div>
+                                    SKU: <?=$product['sku']?>
+                                    <?foreach ($product['option'] as $row):?>
+                                        | <?=$row['name']?> <?=$row['value']?>
+                                    <?endforeach?>
+                                    <label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>
+                                </div>
+                                <div class="number-block">
+                                    <div class="quantity">Quantity</div>
+                                    <div class="box-number-switch">
+                                        <a href="#" class="arrow-btn-number arrow-t" data-action="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                                        <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" class="quantity-input" >
+                                        <a href="#" class="arrow-btn-number arrow-b" data-action="minus"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    </div>
+                                    <div class="price"><?=$product['total']?></div>
+                                </div>
                             </div>
-                            <div class="price">$ 1,995</div>
-                        </div>
-                    </div>
-                    <div class="one-line">
-                        <div class="box-img">
-                            <img src="/catalog/view/theme/canary/img/img-269.png" alt="img">
-                        </div>
-                        <div class="text-box">
-                            <div class="type">Diamond</div>
-                            <div class="name"><span>14k white gold modern solitaire engagement ring</span> <a href="#" class="remove-ico"></a></div>
-                            SKU: 34256-34H23M   |   Size 6.5
-                            <label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>
-                        </div>
-                        <div class="number-block">
-                            <div class="quantity">Quantity</div>
-                            <div class="box-number-switch">
-                                <a href="#" class="arrow-btn-number arrow-t" data-action="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                <input type="text" value="1">
-                                <a href="#" class="arrow-btn-number arrow-b" data-action="minus"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            </div>
-                            <div class="price">$ 3,934</div>
-                        </div>
-                    </div>
+                        <?endforeach?>
+
+                    </form>
+
                 </div>
                 <div class="cart-header">MATCHING ITEMS</div>
                 <div class="matching-cart">
@@ -183,7 +176,7 @@
                         <table>
                             <tr>
                                 <td>Subtotal:</td>
-                                <td>$ 5,929</td>
+                                <td><?=$totals[0]['text']?></td>
                             </tr>
                             <tr>
                                 <td>Fedex Shipping:</td>
@@ -195,7 +188,7 @@
                             </tr>
                             <tr>
                                 <td><span class="total">TOTAL:</span></td>
-                                <td><span class="all-price">$ 5,929</span></td>
+                                <td><span class="all-price"><?=$totals[1]['text']?></span></td>
                             </tr>
                         </table>
                     </div>
@@ -237,7 +230,7 @@
                         <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card5.png" alt="card"></a>
                         <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card6.png" alt="card"></a>
                     </div>
-                    <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
+                    <a href="<?php echo $checkout; ?>" class="btn w-btn-orange btn-lg w-general-category"  role="button"><div class="icons-checkout"></div>CHECKOUT</a>
                     <a href="#" class="btn w-btn-white btn-lg" role="button"><i class="fa fa-chevron-right" aria-hidden="true"></i>Continue shopping</a>
                 </div>
                 <div class="cart-page-info">
@@ -452,8 +445,19 @@
     </section>
 </main>
 
+<script>
+    $(document).ready(function () {
+       $(document).on('click', '.arrow-btn-number', function () {
+            $('.w-form-cart-sub').submit();
+       });
 
+        $(document).on('click', '.remove-ico', function () {
+            $(this).closest('.one-line').detach();
+            return false;
 
+       });
+    });
+</script>
 
 
 

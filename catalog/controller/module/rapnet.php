@@ -414,18 +414,30 @@ class ControllerModuleRapnet extends Controller {
         $data = array();
 
         $data['breadcrumbs'][] = array(
-            'text' => 'HOME',
+            'text' => 'Home',
             'href' => '/'
         );
-
+        $data['breadcrumbs'][] = array(
+            'text' => 'Diamonds',
+            'href' => '/diamonds'
+        );
 
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['column_right'] = $this->load->controller('common/column_right');
         $data['content_top'] = $this->load->controller('common/content_top');
         $data['content_bottom'] = $this->load->controller('common/content_bottom');
 
+        $diamond = json_decode($this->getDaimondsId());
+        $data['product'] = $diamond;
+//        dd($diamond);
 
-        $data['product'] = json_decode($this->getDaimondsId());
+        $diamond_name = $diamond->response->body->diamond->shape.' '.$diamond->response->body->diamond->size .' CARAT '.$diamond->response->body->diamond->color .' '. $diamond->response->body->diamond->clarity;
+        $data['diamond_name'] = $diamond_name;
+
+        $data['breadcrumbs'][] = array(
+            'text' => $diamond_name,
+            'href' => ''
+        );
 
         if (in_ajax()) {
             $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_product.tpl', $data));

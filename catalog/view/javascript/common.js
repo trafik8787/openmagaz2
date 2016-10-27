@@ -213,7 +213,7 @@ var cart = {
 			},
 			success: function(json) {
 				// Need to set timeout otherwise it wont update the total
-                console.log(json);
+
 				setTimeout(function () {
 				    if (json['count'] == 0) {
                         $('#w-but-cart').html('<i class="icons-cart_icon"></i><span>cart</span>');

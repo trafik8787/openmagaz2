@@ -53,7 +53,7 @@
                 <div class="one-product-info" id="product">
                     <div class="row">
                         <div class="col-md-8 col-sm-8">
-                            <h1 class="w-product-name-h1"><?=$product->response->body->diamond->shape?> <?=$product->response->body->diamond->size?> CARAT <?=$product->response->body->diamond->color?> <?=$product->response->body->diamond->clarity?></h1>
+                            <h1 class="w-product-name-h1"><?=$diamond_name?></h1>
                         </div>
                         <div class="col-md-4 col-sm-4 text-right">
                             <strong>SKU:<?=$product->response->body->diamond->diamond_id?></strong>
@@ -77,7 +77,7 @@
                                     -o-transform: scale(0.5);
                                     transform: scale(0.5);
                                     "></i>
-                                    <div class="diamant-size-text">Real 0.53 Carat Size</div>
+                                    <div class="diamant-size-text">Real <?=$product->response->body->diamond->size?> Carat Size</div>
                                 </div>
                                 <div class="diamant-size-detail clearfix">
                                     <div class="diamant-size-it clearfix">

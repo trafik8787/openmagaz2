@@ -251,6 +251,7 @@ class Cart {
 
                 $this->product_data[] = array(
                     'cart_id' => $cart['cart_id'],
+                    'sku'     => $product_query->row['sku'],
                     'product_id' => $product_query->row['product_id'],
                     'name' => $product_query->row['name'],
                     'model' => $product_query->row['model'],
@@ -318,6 +319,7 @@ class Cart {
 
                         $this->product_data[] = array(
                             'cart_id' => $row['cart_id'],
+                            'sku'     => $data_arr_diamond->diamond_id,
                             'product_id' => $row['product_id'],
                             'diamond' => 1, //флаг означает что это брилиант
                             'name' => $data_arr_diamond->shape.' '.$data_arr_diamond->size .' CARAT ' .$data_arr_diamond->color.' '.$data_arr_diamond->clarity,

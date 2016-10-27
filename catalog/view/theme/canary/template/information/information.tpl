@@ -65,154 +65,14 @@
                         </div>
                     </div>
                     <div class="right-q">
-                        <h1>DELIVERY INFORMATION H1</h1>
+                        <h1><?php echo $heading_title; ?></h1>
                         <div class="row">
-                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                <h2>CREDIT CARD H2</h2>
-                                <p>
-                                    You can delete or manage cookies. The “help” feature on most browsers will tell you how to turn cookie storage on or off, how to remove cookies that have already been stored, and how to block certain sites from storing cookies. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed.
-                                </p>
-                                <p>
-                                    If you do this, however, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work. You can easily accept or reject the cookies on this site by choosing one of the following links.
-                                </p>
-                            </div>
-                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                <div class="box-img-wrapper">
-                                    <img src="/catalog/view/theme/canary/img/img261.png" alt="img">
-                                </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <?php echo $description; ?>
                             </div>
                         </div>
-                        <h2 class="custom-h2">MONEY WIRE H2</h2>
-                        <p>
-                            Moved thing evening Give good. Deep. Two evening doesn't replenish open creepeth signs spirit. Unto fill let. Created. Void can't spirit behold own days for behold one above waters. Subdue given from bring gathered he there moveth. Bring dry. Creature which you'll sea rule called fruit their you're kind you're, that all doesn't female creature signs fourth itself him great moveth There grass Behold behold under without divide dry. Void doesn't, form be likeness gathering place waters were which. Over behold, dry rule him wherein tree seed fruit tree Fruit him thing have was lesser fruit under. Lights image whales night heaven unto.
-                        </p>
-                        <div class="background-blue">
-                            All our diamonds are GIA certified, and of the highest quality. Every single diamond is hand selected and examined for exceptional quality by our diamond experts. With our extensive quality control process, you can rest assured that your engagement ring will be fully examined and checked for accuracy prior to shipment. We NEVER drop ship, unlike some of our competitors.
-                        </div>
-                        <h3>MONEY WIRE HEADING H3</h3>
-                        <p>
-                            We transfer cookies to your computer or other device so that we can recognize your device and deliver certain features, including:
-                        </p>
-                        <ul class="ul-custom">
-                            <li>Identifying you when you log in to the Site;</li>
-                            <li>Tracking your preferences so that we may comply with them;</li>
-                            <li>Delivering content, including interest-based or behavioral advertisements on the</li>
-                            <li>Storing of items in your online shopping basket;</li>
-                        </ul>
-                        <p>
-                            There grass Behold behold under without divide dry. Void doesn't, form be likeness gathering place waters were which. Over behold, dry rule him wherein tree seed fruit tree Fruit him thing have was lesser fruit under.
-                        </p>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                <div class="title-stat">TABLE</div>
-                                <div class="wrapper-table-stat">
-                                    <table class="table table-bordered table-striped table-stat-page">
-                                        <thead>
-                                        <tr>
-                                            <th>Column A</th>
-                                            <th>Column B</th>
-                                            <th>Column C</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Column A</td>
-                                            <td>Column B</td>
-                                            <td>Data for this block</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Column A</td>
-                                            <td>Column B</td>
-                                            <td>Column C</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Column A</td>
-                                            <td>Column B</td>
-                                            <td>Column C</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Column A</td>
-                                            <td>Column B</td>
-                                            <td>Column C</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Column A</td>
-                                            <td>Column B</td>
-                                            <td>Column C</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Column A</td>
-                                            <td>Column B</td>
-                                            <td>Column C</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                <div class="title-stat">FAQ LISTING</div>
-                                <div class="wrapper-collapse-stat">
-                                    <div class="panel-group collapse-static" id="faq">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#faq" href="#faq1">
-                                                        <i></i>International customers will be responsible?
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="faq1" class="panel-collapse collapse in">
-                                                <div class="panel-body">
-                                                    Taxes or any other charges by their country. Please make sure to check this information with your local authorities prior to placing your order.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#faq2">
-                                                        <i></i>Please make sure to check this information with?
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="faq2" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                    Taxes or any other charges by their country. Please make sure to check this information with your local authorities prior to placing your order.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#faq3">
-                                                        <i></i>International customers will be responsible?
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="faq3" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                    Taxes or any other charges by their country. Please make sure to check this information with your local authorities prior to placing your order.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#faq4">
-                                                        <i></i>Local authorities prior to placing your order?
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="faq4" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                    Taxes or any other charges by their country. Please make sure to check this information with your local authorities prior to placing your order.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+
                         <div class="title-stat">FORM IN THE TEXT</div>
                         <div class="form-static">
                             <form action="">
@@ -235,51 +95,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-page-title"><?php echo $heading_title; ?></div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <?php echo $description; ?>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="about-infoblock">
-                                    <div class="about-infoimg">
-                                        <i class="shipping-ico"></i>
-                                    </div>
-                                    <div class="about-infotitle">
-                                        FREE SHIPPING
-                                    </div>
-                                    <div class="about-infodesc">
-                                        Donec at mattis purus, ut accumsan nisl. Lorem ipsum dolor sit amet.
-                                    </div>
-                                </div>
-                                <div class="about-infoblock">
-                                    <div class="about-infoimg">
-                                        <i class="money-ico"></i>
-                                    </div>
-                                    <div class="about-infotitle">
-                                        100% MONEY BACK
-                                    </div>
-                                    <div class="about-infodesc">
-                                        Donec at mattis purus, ut accumsan nisl. Lorem ipsum dolor sit amet, consectetur
-                                    </div>
-                                </div>
-                                <div class="about-infoblock">
-                                    <div class="about-infoimg">
-                                        <i class="support-ico"></i>
-                                    </div>
-                                    <div class="about-infotitle">
-                                        ONLINE SUPPORT 24/7
-                                    </div>
-                                    <div class="about-infodesc">
-                                        Donec at mattis purus, ut accumsan nisl. Lorem ipsum dolor sit amet
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
