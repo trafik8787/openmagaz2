@@ -150,6 +150,36 @@ function rapnet2() {
  }
 
 
+function imageDiamontIcon ($shapes) {
+
+    if ($shapes == 'Round') {
+        return '/catalog/view/theme/canary/img/diamant-1.png';
+    } elseif ($shapes == 'Pear') {
+        return '/catalog/view/theme/canary/img/diamant-8.png';
+    } elseif ($shapes == 'Princess') {
+        return '/catalog/view/theme/canary/img/diamant-2.png';
+    } elseif ($shapes == 'Marquise') {
+        return '/catalog/view/theme/canary/img/diamant-5.png';
+    } elseif ($shapes == 'Oval') {
+        return '/catalog/view/theme/canary/img/diamant-6.png';
+    } elseif ($shapes == 'Radiant') {
+        return '/catalog/view/theme/canary/img/diamant-7.png';
+    } elseif ($shapes == 'Emerald') {
+        return '/catalog/view/theme/canary/img/diamant-10.png';
+    } elseif ($shapes == 'Heart') {
+        return '/catalog/view/theme/canary/img/diamant-9.png';
+    } elseif ($shapes == 'Cushion Modified') {
+        return '/catalog/view/theme/canary/img/diamant-4.png';
+    } elseif ($shapes == 'Cushion') {
+        return '/catalog/view/theme/canary/img/diamant-4.png';
+    } elseif ($shapes == 'Asscher') {
+        return '/catalog/view/theme/canary/img/diamant-3.png';
+    }
+
+
+}
+
+
 function rating($id) {
     $rend = '';
     for ($i = 1; $i <= 5; $i++) {

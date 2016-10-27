@@ -157,6 +157,34 @@ $(document).ready(function() {
 
 
 
+    //add complect diamond
+    $(document).on('click', '#w-diamont-button-cart', function(){
+
+
+        $.ajax({
+            url: 'index.php?route=checkout/cart/add_diamond',
+            type: 'POST',
+            data: 'diamond_id='+$('#w-diamond_id').val(),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#w-diamont-button-cart').button('loading');
+            },
+            complete: function() {
+                $('#w-diamont-button-cart').button('reset');
+            },
+            success: function(json) {
+                $('#w-but-cart').html('<i class="icons-cart_icon"></i><span class="w-count-circle">'+json['count']+'</span><span>cart</span>');
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
+                $('.cart-basket').load('index.php?route=common/cart/info .w-cart-basket');
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert('ошибочка вышла');
+            }
+        });
+
+        return false;
+
+    });
 
 
     //загрузка товаров из подкатегории

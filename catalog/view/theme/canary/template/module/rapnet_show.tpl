@@ -46,35 +46,35 @@
                         <td><span>Cut</span></td>
                         <td><span>Carat</span></td>
                         <!-- sort-col-up -->
-                        <td class="sort-col sort-col-down"><span>Popularity</span></td>
+                        <!--*<td class="sort-col sort-col-down"><span>Popularity</span></td>*-->
                         <td><span>Price</span></td>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($data as $row):?>
-
+                    <?//dd($row)?>
                     <tr class="diamond-tr" data-diamond-id="<?=$row->diamond_id?>">
                         <td>
                             <input id="diamond<?=$row->diamond_id?>" type="checkbox" class="diamond-compare-checkbox">
                             <label for="diamond<?=$row->diamond_id?>" class="diamond-catalog-label"></label>
                         </td>
                         <td>
-                            <img src="/catalog/view/theme/canary/img/diamant-4.png" alt="" class="diamond-table-shapeimg">
+                            <img src="<?=imageDiamontIcon($row->shape)?>" alt="" class="diamond-table-shapeimg">
                             <span class="hide-shapename"><?=$row->shape?></span>
                         </td>
                         <td><?=$row->color?></td>
                         <td><?=$row->clarity?></td>
                         <td><?=$row->cut?></td>
                         <td><?=$row->size?> <i class="fa fa-exclamation-triangle"></i></td>
-                        <td class="sort-col">
-                            <div class="rating">
-                                <i class="star active"></i>
-                                <i class="star active"></i>
-                                <i class="star active"></i>
-                                <i class="star active"></i>
-                                <i class="star"></i>
-                            </div>
-                        </td>
+                        <!--*<td class="sort-col">*-->
+                            <!--*<div class="rating">*-->
+                                <!--*<i class="star active"></i>*-->
+                                <!--*<i class="star active"></i>*-->
+                                <!--*<i class="star active"></i>*-->
+                                <!--*<i class="star active"></i>*-->
+                                <!--*<i class="star"></i>*-->
+                            <!--*</div>*-->
+                        <!--*</td>*-->
                         <td>$<?=$row->total_sales_price?>.00</td>
                     </tr>
 
@@ -89,51 +89,7 @@
             </table>
         </div>
         <div class="diamond-catalog-right">
-            <div class="diamond-catalog-right-inner">
 
-                <div class="diamond-right-controls clearfix">
-                    <a href="#" class="diamond-right-btn diamond-right-close"> <i class="fa fa-angle-left"></i> Close Details</a>
-                    <a href="/diamond_page?diamond_id=71995555" class="diamond-right-btn diamond-right-detail">More Details <i class="fa fa-angle-right"></i></a>
-                </div>
-                <div class="diamond-catalog-right-container">
-                    <div class="text-center">
-                        <div class="rating">
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <i class="star"></i>
-                            <span><a href="" onclick="return false;">(0 customer ratings)</a></span>
-                        </div>
-                    </div>
-                    <div class="diamond-catalog-right-img"><img src="/image/shapes/round.jpg" alt=""></div>
-                    <div class="diamond-catalog-right-name">14k White Gold Twisted Band</div>
-                    <div class="diamond-catalog-right-price">$220.00</div>
-                    <div class="diamond-catalog-right-message">
-                        <div><img src="/catalog/view/theme/canary/img/diamond-catalog-message.jpg" alt=""></div>
-                        <p>Order loos diamond now for free
-                            5 days delivery. Add to jewerly
-                            for 2 weeks delivery
-                        </p>
-
-                    </div>
-                    <div class="text-center">
-                        <button type="button" data-toggle="modal" data-target="#w-modal-cart" class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select This Diamond</button>
-                    </div>
-                    <div class="text-center">
-                        <a href="#">View Certificate</a>
-                    </div>
-                    <div class="right-stone-details">
-                        <p><strong>STONE DETAILS</strong></p>
-                        <p>POLISH: good</p>
-                        <p>SYMMETRY: good</p>
-                        <p>FLUORESCENCE: None</p>
-                        <p>L/W/D (MM) 4.32 *4.23 *3.3</p>
-                    </div>
-                </div>
-
-
-            </div>
         </div>
     </div>
 
@@ -194,6 +150,29 @@
             diamondId = $(this).attr('data-diamond-id'), // <-- diamond id
             catalogClass = $('.diamond-catalog');
 
+       // console.log(diamondId);
+
+        $.ajax({
+            url: 'index.php?route=module/rapnet/getproductListAjax',
+            type: 'POST',
+            data: 'diamond_id='+diamondId,
+            dataType: 'HTML',
+            beforeSend: function() {
+                //$('#w-diamont-button-cart').button('loading');
+            },
+            complete: function() {
+                //$('#w-diamont-button-cart').button('reset');
+            },
+            success: function(json) {
+                $('.diamond-catalog-right').html(json);
+
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert('ошибочка вышла');
+            }
+        });
+
+
         if (!$(event.target).is('.diamond-compare-checkbox') && !$(event.target).is('.diamond-catalog-label')) {
             if (self.hasClass('active')) {
                 catalogClass.removeClass('show-detail');
@@ -211,7 +190,7 @@
 
     });
 
-    $('.diamond-right-close').on('click', function(event) {
+    $(document).on('click', '.diamond-right-close', function(event) {
         event.preventDefault();
         $('.diamond-catalog').removeClass('show-detail');
         $('.diamond-tr').removeClass('active');
