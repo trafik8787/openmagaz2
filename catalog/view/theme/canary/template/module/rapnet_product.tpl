@@ -626,6 +626,37 @@
         nextArrow: $('#product-advantages-next')
     });
 
+
+    var similarStoneslider = $('.similar-stones .wrapper-product-table .table tbody');
+    var $settings = {
+        dots: false,
+        infinite: true,
+        arrows: true,
+        draggable: false,
+        speed: 500,
+        slidesToShow: 1,
+        prevArrow: '<div class="slick-prev"></div>',
+        nextArrow: '<div class="slick-next"></div>'
+    };
+    if ($(window).width() < 481) {
+        similarStoneslider.slick($settings);
+    }
+    $(window).on('resize', function() {
+        if ($(window).width() > 480) {
+            if (similarStoneslider.hasClass('slick-initialized')) {
+                similarStoneslider.slick('unslick');
+            }
+            return
+        }
+        if (!similarStoneslider.hasClass('slick-initialized')) {
+            return similarStoneslider.slick($settings);
+        }
+        setTimeout(function(){
+            similarStoneslider.slick('setPosition');
+        }, 500);
+
+    });
+
 </script>
 
 <?php echo isset($footer) ? $footer : ''; ?>
