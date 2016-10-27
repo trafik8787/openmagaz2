@@ -156,6 +156,13 @@
     margin-right: 0;
   }
 
+  .form-side:nth-child(2){
+    float: right;
+  }
+  .form-side{
+    width: 48%;
+  }
+
 }
 
 @media screen and (max-width: 1024px) {
@@ -163,7 +170,13 @@
     width: 100%;
   }
 }
+
 @media screen and (max-width: 992px) {
+
+  .title-follow{
+    display: block;
+  }
+
   .scheckout-page .col-xs-3, .scheckout-page .col-xs-6 {
     width: 100%;
   }
@@ -592,10 +605,18 @@
     text-align: center;
   }
 
+  .form-static .w-btn-orange {
+    text-align: center;
+  }
+
 
 }
 
 @media  (max-width: 768px){
+
+  .contacts-top-block {
+    margin-bottom: 40px;
+  }
 
   .total-cart-pay .all-numbers {
     width: 100%;
@@ -948,6 +969,10 @@
   }
 
 
+  .wish-list-title, .wish-login-text{
+    font-size: 20px;
+  }
+
 }
 
 @media  (max-width: 640px){
@@ -961,9 +986,20 @@
     font-size: 27px;
   }
 
+  .form-side:nth-child(1){
+    margin-bottom: 30px;
+  }
+  .form-side{
+    width: 100%;
+  }
+
+  .login-form-wrapper .form-title{
+    font-size: 18px;
+  }
 
 
 }
+
 
 @media  (max-width: 480px){
 
@@ -1180,150 +1216,12 @@
     padding-bottom: 0;
   }
 
-}
-
-@media  (max-width: 640px){
-  .form-group {
-    width: 41%;
-  }
-  .w-blog-section .thumbnail .caption p {
-    font-size: 13px;
-  }
-  .w-blog-section .h3, .w-bloc-search-diamond .h3, .w-bloc-best-servise .h3, .search-diamond-mobile .h3 {
-    font-size: 27px;
+  .wish-list-page .wrapper-cart-box .number-block .price {
+    padding-left: 10px;
   }
 
-
-}
-
-@media  (max-width: 480px){
-  .form-group {
-    width: 45%;
-  }
-  .form-group {
-    width: 100%;
-    float: none;
-  }
-  .w-footer-newsletter .w-btn-orange2 {
-    width: 47%;
-    margin: 0 1%;
-  }
-  .w-newsletter-form {
-    height: inherit;
-    padding-bottom: 20px;
-  }
-
-  .logo {
-    width: 215px;
-    display: block;
-  }
-  .mobile-menu {
-    right: -8px;
-    top: 8px;
-  }
-
-  .menu-button {
-    width: 30px;
-    height: 27px;
-  }
-
-  .mobile-menu-btn {
-    width: 50px;
-    padding: 10px;
-  }
-  .mobile-menu.open .dropdown-menu-mobile {
-    margin-top: 44px;
-  }
-
-  .mobile-menu.open .dropdown-menu-mobile:before {
-    width: 50px;
-  }
-  .top-header-bloc-meny {
-    height: 55px;
-  }
-
-  .w-content-baner {
-    height: 200px;
-  }
-
-  .home-top-baneer .w-button-in-baner {
-    top: 135px;
-  }
-  .w-bloc-best-category > .center-bl > div{
-    width: 100% !important;
-  }
-  .top-menu-b li {
-    padding: 6px 12px 0 12px;
-  }
-  .w-content-baner {
-    min-width: 10px;
-  }
-  .block-phone-header{
-    display: none;
-  }
-  .w-button-in-baner a {
-    width: 47%;
-    margin: 0 1%!important;
-    font-size: 11px;
-    text-align: center;
-    padding: 19px 10px;
-  }
-
-  .w-blog-section .h3, .w-bloc-search-diamond .h3, .w-bloc-best-servise .h3, .search-diamond-mobile .h3 {
-    font-size: 16px;
-  }
-
-  .icons-quality_service_icon {
-    margin-bottom: 25px;
-  }
-
-  .search-diamond-mobile .brilliant-style li {
-    width: 33%;
-    height: 82px;
-  }
-
-  .w-best-quality > div{
-    width: 100%;
-    padding-right: 0!important;
-  }
-
-  .clas-raleway-regular14 {
-    font-size: 12px;
-    padding-bottom: 10px;
-    line-height: 18px;
-  }
-  .w-more-info {
-    left: 50%;
-    margin-left: -70px;
-  }
-
-  .w-right-home-top-slider .panel.panel-default .panel-body .h1 {
-    font-size: 20px;
-  }
-
-  .box-right-footer {
-    float: none;
-    text-align: left;
-  }
-
-  .w-right-home-top-slider .icons-selling_engagement_icon {
-    margin: 0 auto 20px;
-  }
-
-  .bx-wrapper {
-    padding: 0 25px !important;
-  }
-
-  .title-follow {
-    padding-top: 8px;
-  }
-
-  .footer-menu .contact-mobile {
-    padding-top: 10px;
-  }
-
-  .w-bloc-best-category{
-    padding-bottom: 0;
+  .wish-list-title, .wish-login-text{
+    font-size: 18px;
   }
 
 }
