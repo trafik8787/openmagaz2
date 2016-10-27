@@ -12,7 +12,7 @@ class ControllerModuleRapnet extends Controller {
     private $url_paginate;
 
 
-    function __construct($registry) {
+    public function __construct($registry) {
         parent::__construct($registry);
 
         $this->shapes_arr = array(
