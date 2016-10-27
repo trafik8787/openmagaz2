@@ -2044,6 +2044,10 @@ star-rating
     margin: 0 -4px;
 }
 
+.product-advantages-list *:focus {
+    outline: none;
+}
+
 .product-advantages-list img {
     display: inline-block;
 }
@@ -3205,6 +3209,32 @@ width: 98px;
     .diamond-catalog-table td:nth-child(3) {
         width: 6%;
     }
+
+    .p-include-img {
+        height: 100px;
+    }
+
+    .p-include-item {
+        font-size: 12px;
+    }
+
+    .p-include-title {
+        font-size: 15px;
+    }
+
+    .p-include-list {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+
+    .p-include-list .p-include-item {
+        width: calc(50% - 10px);
+        margin: 0 5px 12px;
+    }
+
+    .w-btn-orange .bold-angle-right {
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 900px) {
@@ -3213,6 +3243,33 @@ width: 98px;
     }
     .diamond-catalog-table td:nth-child(8) {
         width: 18%;
+    }
+
+    .product-buy-details .left {
+        float: none;
+        width: 100%;
+        max-width: initial;
+    }
+
+    .product-buy-details .right {
+        float: none;
+        width: 100%;
+        max-width: initial;
+    }
+
+    .product-details .table,
+    .product-details .table tbody,
+    .product-details .table tr,
+    .product-details .table td {
+        display: block;
+    }
+
+    .product-details .table td {
+        border-bottom: 1px solid #e1e8ef;
+    }
+
+    .product-advantages-item-text {
+        font-size: 13px;
     }
 }
 
@@ -3288,6 +3345,10 @@ width: 98px;
         margin-bottom: 24px;
     }
 
+    .product-need-help {
+        margin: 0 -15px 20px;
+    }
+
     .product-need-help .h4 {
         display: block;
         margin: 0 0 5px;
@@ -3346,6 +3407,150 @@ width: 98px;
     .comment-company-item {
         margin-bottom: 20px;
     }
+
+    .product-section-header {
+        margin-bottom: 15px;
+    }
+
+    .one-product-slider {
+        float: none;
+        width: 100%;
+    }
+
+    .one-product-info {
+        float: none;
+        width: 100%;
+    }
+
+    .it-list {
+        margin: 0;
+        text-align: center;
+        font-size: 12px;
+
+    }
+
+    .it-list li {
+        margin: 0 5px 5px;
+    }
+
+    .product-advantages-title {
+        font-size: 15px;
+    }
+
+    .product-advantages {
+        margin: 15px -10px 20px;
+    }
+
+    .product-advantages-item-img {
+        width: 60px;
+    }
+
+    .product-advantages-item {
+        border: 1px solid #b8ccda;
+        background: linear-gradient(#f9fbfd, #d9e7f4);
+    }
+
+    .product-advantages-item-text {
+        width: calc(100% - 68px);
+    }
+
+    .product-details {
+        padding: 0 15px 10px;
+        border: none;
+        margin: 20px -15px 0;
+    }
+
+    .product-details:after:after {
+        display: none;
+    }
+
+    .product-details .table > tbody > tr > td {
+        border-bottom: 1px solid #e1e8ef;
+        padding: 5px 0;
+    }
+
+
+    .product-tags-divider {
+        border: none;
+    }
+
+    .product-details .table > tbody > tr:last-child td {
+        border-bottom: none;
+    }
+
+    .product-buy-details {
+        margin: 0 -15px 20px;
+        padding: 20px 12px;
+    }
+
+    .size-product .form-group,
+    .size-product .cc-shipping-row {
+        display: inline-block;
+        width: calc(50% - 2px);
+        vertical-align: top;
+    }
+
+    .size-product .shipping-input {
+        height: 39px;
+    }
+
+    .size-product .shipping-label {
+        height: 37px;
+        line-height: 37px;
+    }
+
+    .size-product {
+        padding-top: 0;
+    }
+
+    .price-product {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 15px 25px 0;
+    }
+
+    .line-price-product {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .price-product .h5 {
+        display: block;
+        text-align: center;
+        margin-top: 4px;
+    }
+
+    .diamond-catalog {
+        margin-bottom: 25px;
+    }
+
+    .w-product-name-h1 {
+        font-size: 17px;
+        margin-bottom: 0;
+    }
+
+    .w-product-desc {
+        font-size: 13px;
+    }
+
+    .slider-for {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .product-buy-details .right {
+        text-align: center;
+    }
+
+    .one-product-info .rating span {
+        font-size: 12px;
+    }
+
+    .one-product-slider .slick-slider {
+
+    }
+
 
 
 }
@@ -3427,6 +3632,43 @@ width: 98px;
     .product-section-title {
         font-size: 20px;
         line-height: 1;
+    }
+
+    .p-include-list {
+        margin: 0 -10px;
+    }
+
+    .p-include-item {
+        height: 195px;
+    }
+
+    .p-include-title {
+        font-size: 13px;
+    }
+
+    .p-include-img {
+        height: 80px;
+    }
+
+    .include-section {
+        padding: 20px 0;
+    }
+
+    .product-need-help {
+        font-size: 12px;
+        margin: 0 -15px 20px;
+    }
+
+    .product-need-help .h4 {
+        font-size: 14px;
+    }
+    .w-help-ned li {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .product-advantages-item-text {
+        font-size: 12px;
     }
 }
 

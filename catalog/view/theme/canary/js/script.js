@@ -236,7 +236,15 @@ function Productslider () {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider-nav',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: true
+                }
+            }
+        ]
 
     });
 
