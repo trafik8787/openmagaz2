@@ -841,6 +841,7 @@ section.containaer-home > .row {margin-left: 0;margin-right: 0;}
   padding: 10px 10px 11px;
   margin: 0 5px;
   width: calc(50% - 15px);
+  height: auto;
 }
 
 .cart-basket .product-box .box-img {

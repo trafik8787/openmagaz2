@@ -28,7 +28,7 @@
         </div>
         <div class="center-bl">
             <div class="one-product clearfix">
-                <div class="one-product-slider">
+                <div class="one-product-slider hidden-xs">
                     <div class="slider-for">
                         <?php foreach ($images as $image):?>
 
@@ -58,7 +58,7 @@
                         <?endforeach?>
 
                     </div>
-                    <ul class="list-inline it-list">
+                    <ul class="list-inline it-list hidden-xs">
                         <li>
                             <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                         </li>
@@ -75,7 +75,7 @@
                 <div class="one-product-info" id="product">
 
                     <div class="row">
-                        <div class="col-md-6 col-sm-6">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
                             <div class="rating">
                                 <?php for ($i = 1; $i <= 5; $i++) { ?>
                                 <?php if ($rating < $i) { ?>
@@ -87,7 +87,7 @@
                                 <span><a href="" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('.comment-block').offset().top - 20}, 'slow'); return false;"><?php echo $reviews; ?></a></span>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 text-right">
+                        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
                             <strong>SKU:<?=$sku?></strong>
                         </div>
                     </div>
@@ -101,52 +101,80 @@
                             <h3 class="w-product-desc"><?=$description?></h3>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="one-product-slider visible-xs">
+                        <div class="slider-for">
+                            <?php foreach ($images as $image):?>
 
+                            <?if (!empty($image['video'])):?>
+                            <div>
+                                <video autoplay loop class="myVideo" src="<?=$image['video']?>" onclick="this.play();" style="margin-left: auto; margin-right: auto; width: 100%;"></video>
+                            </div>
+                            <?else:?>
+                            <div><img src="<?php echo $image['popup']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" style="margin-left: auto; margin-right: auto; width: 100%;"></div>
+                            <?endif?>
+                            <?endforeach?>
+
+                        </div>
+                        <ul class="list-inline it-list hidden-xs">
+                            <li>
+                                <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
+                            </li>
+                            <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
+                            <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
+                            <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
+                            <li>
+                                <!-- space for chare -->
+                                <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <div class="product-details">
 
-                                <div class="h3 text-center margin-top-0">Setting details</div>
-                                <div class="icons-quality_service_icon"></div>
+                                <div class="hidden-xs">
+                                    <div class="h3 text-center margin-top-0">Setting details</div>
+                                    <div class="icons-quality_service_icon"></div>
+                                    <div class="margin-buttom-0">
+                                        <table class="table table-condensed">
+                                            <tr>
+                                                <td><span>METAL: <?=list_metal($metal)?></span></td>
+                                                <td><span>WEIGHT: <?=$weight?> g.</span></td>
+                                            </tr>
+                                            <?if (!empty($attribute_groups)):?>
+                                            <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
 
-                                <div class="margin-buttom-0">
-                                    <table class="table table-condensed">
-                                        <tr>
-                                            <td><span>METAL: <?=list_metal($metal)?></span></td>
-                                            <td><span>WEIGHT: <?=$weight?> g.</span></td>
-                                        </tr>
-                                        <?if (!empty($attribute_groups)):?>
-                                        <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
+                                            <tr>
+                                                <td><span><?=$row[0]['name']?>: <?=$row[0]['text']?></span></td>
+                                                <td><span><?=$row[1]['name']?>: <?=$row[1]['text']?></span></td>
+                                            </tr>
+                                            <?endforeach?>
+                                            <?endif?>
 
-                                        <tr>
-                                            <td><span><?=$row[0]['name']?>: <?=$row[0]['text']?></span></td>
-                                            <td><span><?=$row[1]['name']?>: <?=$row[1]['text']?></span></td>
-                                        </tr>
-                                        <?endforeach?>
-                                        <?endif?>
+                                            <!-- TODO: More specifications btn
+                                            <tr>
+                                                <td></td>
+                                                <td><span><a href="#" class="prod-more-spec">More specifications »</a></span></td>
+                                            </tr>
+                                            -->
 
-                                        <!-- TODO: More specifications btn
-                                        <tr>
-                                            <td></td>
-                                            <td><span><a href="#" class="prod-more-spec">More specifications »</a></span></td>
-                                        </tr>
-                                        -->
-
-                                        <?if (!empty($tags)):?>
-                                        <tr>
-                                            <td colspan="2">
-                                                <div class="product-tags-divider"></div>
-                                                <ul class="list-inline product-tags">
-                                                    <?foreach ($tags as $row_tags):?>
-                                                    <li>
-                                                        <a href="<?=$row_tags['href']?>"><span class="tag-name-span"><?=$row_tags['tag']?></span></a>
-                                                    </li>
-                                                    <?endforeach?>
-                                                </ul>
-                                            </td>
-                                        </tr>
-                                        <?endif?>
-                                    </table>
+                                            <?if (!empty($tags)):?>
+                                            <tr>
+                                                <td colspan="2" class="tags-td">
+                                                    <div class="product-tags-divider"></div>
+                                                    <ul class="list-inline product-tags">
+                                                        <?foreach ($tags as $row_tags):?>
+                                                        <li>
+                                                            <a href="<?=$row_tags['href']?>"><span class="tag-name-span"><?=$row_tags['tag']?></span></a>
+                                                        </li>
+                                                        <?endforeach?>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <?endif?>
+                                        </table>
+                                    </div>
                                 </div>
 
                                 <div class="alert alert-info margin-buttom-0 product-buy-details clearfix">
@@ -237,10 +265,75 @@
                                     </div>
                                 </div>
 
+                                <div class="visible-xs">
+                                    <div class="h3 text-center margin-top-0">Setting details</div>
+                                    <div class="icons-quality_service_icon"></div>
+                                    <div class="margin-buttom-0">
+                                        <table class="table table-condensed">
+                                            <tr>
+                                                <td><span>METAL: <?=list_metal($metal)?></span></td>
+                                                <td><span>WEIGHT: <?=$weight?> g.</span></td>
+                                            </tr>
+                                            <?if (!empty($attribute_groups)):?>
+                                            <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
+
+                                            <tr>
+                                                <td><span><?=$row[0]['name']?>: <?=$row[0]['text']?></span></td>
+                                                <td><span><?=$row[1]['name']?>: <?=$row[1]['text']?></span></td>
+                                            </tr>
+                                            <?endforeach?>
+                                            <?endif?>
+
+                                            <!-- TODO: More specifications btn
+                                            <tr>
+                                                <td></td>
+                                                <td><span><a href="#" class="prod-more-spec">More specifications »</a></span></td>
+                                            </tr>
+                                            -->
+
+                                            <?if (!empty($tags)):?>
+                                            <tr>
+                                                <td colspan="2" class="tags-td">
+                                                    <div class="product-tags-divider"></div>
+                                                    <ul class="list-inline product-tags">
+                                                        <?foreach ($tags as $row_tags):?>
+                                                        <li>
+                                                            <a href="<?=$row_tags['href']?>"><span class="tag-name-span"><?=$row_tags['tag']?></span></a>
+                                                        </li>
+                                                        <?endforeach?>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <?endif?>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
+
+                    <div class="alert alert-warning product-need-help visible-xs">
+                        <span class="h4">Need Help?</span>
+                        <ul class="list-inline w-help-ned">
+                            <li><a href="#"><span class="help-ico help-ico-chat"></span> <span class="help-text">Online Chat now</span></a></li>
+                            <li><a href="#"><span class="help-ico help-ico-mail"></span> <span class="help-text">Email</span></a></li>
+                            <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text"><?=$telephone?> | 24/7</span></a></li>
+                        </ul>
+                    </div>
+                    <ul class="list-inline it-list visible-xs">
+                        <li>
+                            <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
+                        </li>
+                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
+                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
+                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
+                        <li>
+                            <!-- space for chare -->
+                            <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
+                        </li>
+
+                    </ul>
+
 
                     <div class="product-advantages">
                         <div class="product-advantages-header">
@@ -324,7 +417,7 @@
                 </div>
             </div>
 
-            <div class="alert alert-warning product-need-help">
+            <div class="alert alert-warning product-need-help hidden-xs">
                 <span class="h4">Need Help?</span>
                 <ul class="list-inline w-help-ned">
                     <li><a href="#"><span class="help-ico help-ico-chat"></span> <span class="help-text">Online Chat now</span></a></li>
@@ -332,6 +425,7 @@
                     <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text"><?=$telephone?> | 24/7</span></a></li>
                 </ul>
             </div>
+
         </div>
         <div class="include-section">
             <div class="center-bl">

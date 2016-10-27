@@ -185,7 +185,7 @@ var cart = {
 			success: function(json) {
 				// Need to set timeout otherwise it wont update the total
 				setTimeout(function () {
-                    $('#w-but-cart').html('<span>cart ('+json['count']+')</span>');
+                    $('#w-but-cart').html('<span class="w-count-circle">'+json['count']+'</span><span>cart</span>');
 				}, 100);
 
 				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
