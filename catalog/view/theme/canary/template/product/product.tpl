@@ -130,7 +130,6 @@
                         </ul>
                     </div>
                     <div class="row">
-
                         <div class="col-md-12 col-sm-12">
                             <div class="product-details">
 
@@ -311,7 +310,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="alert alert-warning product-need-help visible-xs">

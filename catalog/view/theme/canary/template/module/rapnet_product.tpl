@@ -99,29 +99,35 @@
                             </div>
                         </div>
                     </div>
+                    <div class="one-product-slider visible-xs">
+                        <div class="slider-for">
+                            <div><img src="<?=imageDiamont($product->response->body->diamond->shape)?>" style="margin-left: auto; margin-right: auto; width: 100%;"></div>
+                        </div>
+                    </div>
                     <div class="row">
-
                         <div class="col-md-12 col-sm-12">
                             <div class="product-details">
-                                <div class="h3 text-center margin-top-0">DIAMOND DETAILS:</div>
-                                <div class="icons-quality_service_icon"></div>
-                                <input type="hidden" id="w-diamond_id" value="<?php echo $product->response->body->diamond->diamond_id?>">
-                                <div class="table-condensed margin-buttom-0">
-                                    <table class="table">
-                                        <tr>
-                                            <td><span>SHAPE: <?=$product->response->body->diamond->shape?></span></td>
-                                            <td><span>CLARITY: <?=$product->response->body->diamond->clarity?></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span>CARAT WEIGHT: <?=$product->response->body->diamond->size?></span></td>
-                                            <td><span>POLISH: <?=$product->response->body->diamond->polish?></span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><span>COLOR: <?=$product->response->body->diamond->color?></span></td>
-                                            <td><span><a href="#" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('#diamant-more-spec').offset().top - 20}, 'slow'); return false;" class="prod-more-spec">More specifications »</a></span></td>
-                                        </tr>
-                                    </table>
+                                <div class="hidden-xs">
+                                    <div class="h3 text-center margin-top-0">DIAMOND DETAILS:</div>
+                                    <div class="icons-quality_service_icon"></div>
+                                    <div class="table-condensed margin-buttom-0">
+                                        <table class="table">
+                                            <tr>
+                                                <td><span>SHAPE: <?=$product->response->body->diamond->shape?></span></td>
+                                                <td><span>CLARITY: <?=$product->response->body->diamond->clarity?></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>CARAT WEIGHT: <?=$product->response->body->diamond->size?></span></td>
+                                                <td><span>POLISH: <?=$product->response->body->diamond->polish?></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>COLOR: <?=$product->response->body->diamond->color?></span></td>
+                                                <td><span><a href="#" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('#diamant-more-spec').offset().top - 20}, 'slow'); return false;" class="prod-more-spec">More specifications »</a></span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
+                                <input type="hidden" id="w-diamond_id" value="<?php echo $product->response->body->diamond->diamond_id?>">
                                 <div class="alert alert-info margin-buttom-0 product-buy-details product-buy-diamant clearfix">
                                     <div class="price-product">
                                         <span>$<?=$product->response->body->diamond->total_sales_price?></span>
@@ -129,9 +135,52 @@
                                     <a class="product-buy-sertificate" href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$product->response->body->diamond->diamond_id?>"><img src="/catalog/view/theme/canary/img/icon_lab/<?=strtolower($product->response->body->diamond->lab)?>.jpg" alt="" style="width: 65px"> <span>View<br>Certificate</span></a>
                                     <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select This Diamond</button>
                                 </div>
+                                <div class="visible-xs">
+                                    <div class="h3 text-center margin-top-0">DIAMOND DETAILS:</div>
+                                    <div class="icons-quality_service_icon"></div>
+                                    <div class="table-condensed margin-buttom-0">
+                                        <table class="table">
+                                            <tr>
+                                                <td><span>SHAPE: <?=$product->response->body->diamond->shape?></span></td>
+                                                <td><span>CLARITY: <?=$product->response->body->diamond->clarity?></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>CARAT WEIGHT: <?=$product->response->body->diamond->size?></span></td>
+                                                <td><span>POLISH: <?=$product->response->body->diamond->polish?></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>COLOR: <?=$product->response->body->diamond->color?></span></td>
+                                                <td><span><a href="#" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('#diamant-more-spec').offset().top - 20}, 'slow'); return false;" class="prod-more-spec">More specifications »</a></span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="alert alert-warning product-need-help visible-xs">
+                        <span class="h4">Need Help?</span>
+                        <ul class="list-inline w-help-ned">
+                            <li><a href="#"><span class="help-ico help-ico-chat"></span> <span class="help-text">Online Chat now</span></a></li>
+                            <li><a href="#"><span class="help-ico help-ico-mail"></span> <span class="help-text">Email</span></a></li>
+                            <!-- todo phone-->
+                            <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text">800-214-6550 | 24/7</span></a></li>
+                        </ul>
+                    </div>
+                    <ul class="list-inline it-list visible-xs">
+                        <li>
+                            <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
+                        </li>
+                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
+                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
+                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
+                        <li>
+                            <!-- space for chare -->
+                            <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
+                        </li>
+
+                    </ul>
+
                     <div class="product-advantages">
                         <div class="product-advantages-header">
                             <span class="h3 product-advantages-title">Best quality and service</span>
@@ -212,7 +261,7 @@
                     </div>
                 </div>
             </div>
-            <div class="alert alert-warning product-need-help">
+            <div class="alert alert-warning product-need-help hidden-xs">
                 <span class="h4">Need Help?</span>
                 <ul class="list-inline w-help-ned">
                     <li><a href="#"><span class="help-ico help-ico-chat"></span> <span class="help-text">Online Chat now</span></a></li>
@@ -221,7 +270,6 @@
                     <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text">800-214-6550 | 24/7</span></a></li>
                 </ul>
             </div>
-
             <div id="diamant-more-spec" class="diamant-more-spec clearfix">
                 <div class="diamant-more-left">
                     <div class="product-details">

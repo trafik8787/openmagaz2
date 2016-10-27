@@ -83,10 +83,10 @@
 <div class="my-div <?= !empty($show) ? 'active-circle' : '' ?> <?php if (!empty($CanaryDiamontCom)):?> w-opacity<?endif?>">
 <a href="<?= !empty($show) ? '/diamonds' : $CanaryDiamontCom['href']?>"  class="w-one-block  <?= !empty($show) ? 'w-general-category' : '' ?>">
 <span class="number-step"><?=$index?></span>
-<span class="title hidden-xs">
+<span class="title">
 <span>SELECT YOUR DIAMOND</span>
 </span>
-<span class="text hidden-xs">
+<span class="text">
 Select from thousands of GIA certified diamonds.
 </span>
 <!--*<?php if (!empty($CanaryDiamontCom)):?>*-->
@@ -108,10 +108,10 @@ Select from thousands of GIA certified diamonds.
 
 <a href="<?= !empty($show) ? '/engagement-rings' : $CanaryProductCom['href']?>" class="w-one-block <?= !empty($show) ? 'w-general-category' : '' ?>">
 <span class="number-step"><?=$index?></span>
-<span class="title hidden-xs">
+<span class="title">
 <span>SELECT YOUR SETTING </span>
 </span>
-<span class="text hidden-xs">
+<span class="text">
 Pick the perfect setting from our large collection
 </span>
 <!--*<?php if (!empty($CanaryProductCom)):?>*-->
@@ -137,10 +137,10 @@ Pick the perfect setting from our large collection
 <div class="my-div <?= !empty($show) ? 'active-circle' : '' ?>" >
 <a <?=!empty($show) ? 'href="/complete_diamond" id="w-complide-view"' : 'href="#"'?> class="w-one-block">
 <span class="number-step">3</span>
-<span class="title hidden-xs">
+<span class="title">
 <span>COMPLETE YOUR RING</span>
 </span>
-<span class="text hidden-xs">
+<span class="text">
 Free shipping via FedEx® on every order.
 </span>
 </a>
