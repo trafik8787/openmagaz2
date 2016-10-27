@@ -30,10 +30,26 @@
                     <div class="wish-login-text">To save your wish list, create an account or log in</div>
                     <?php if ($logged == null):?>
                         <div class="wish-login-block">
-                            <a href="/index.php?route=account/login" class="wish-list-login-btn">Login in</a>
-                            <a href="/index.php?route=account/login" class="wish-list-login-btn">Sign up</a>
+                            <a href="/index.php?route=account/login" class="btn w-btn-orange btn-lg">Login in</a>
+                            <a href="/index.php?route=account/login" class="btn w-btn-orange btn-lg">Sign up</a>
                         </div>
                     <?endif?>
+                </div>
+
+                <div class="wrapper-cart-box">
+                    <div class="one-line">
+                        <div class="box-img">
+                            <img src="/catalog/view/theme/canary/img/img-268.png" alt="img">
+                        </div>
+                        <div class="text-box">
+                            <div class="type">Diamond</div>
+                            <div class="name"><span>14k White Gold Classic Six Prong Solitaire</span> <a href="#" class="remove-ico"></a></div>
+                            8140309L-W14
+                        </div>
+                        <div class="number-block">
+                            <div class="price">$ 1,995</div>
+                        </div>
+                    </div>
                 </div>
 
                 <?php if ($products):?>

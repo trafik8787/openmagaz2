@@ -210,7 +210,7 @@
                         </div>
                         <div class="clearfix">
                             <div class="box-right-footer">
-                                <div class="title-follow">Follow us</div>
+                                <div class="title-follow ">Follow us</div>
                                 <ul class="list-inline text-right">
                                     <li><a href="https://www.facebook.com/BrilliantCanaryRings" class="icon-facebook"></a></li>
                                     <li><a href="https://twitter.com/TheBrilliantC" class="icon-twitter"></a></li>

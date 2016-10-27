@@ -2610,46 +2610,63 @@ footer > section .row {
 .gender-radio {
   display: none; }
 .gender-radio + label {
-  color: #808080;
-  border-radius: 1px;
   font-size: 14px;
   text-transform: uppercase;
-  border: 1px solid #828282;
   cursor: pointer;
   text-align: center;
   float: left;
-  width: 49%;
+  width: 48%;
   display: block;
   padding: 13px 0;
   font-weight: normal;
-  font-family: 'SegoeUI', sans-serif; }
+  background: #e8e8e7;
+  font-family: "Raleway-Bold",fantasy;
+  border: 0;
+  color: #000000;
+  box-shadow: -1px 1px 4px rgba(113, 113, 113, 0.85);
+  border-radius: 3px;
+}
+
+.title-follow{
+  display: none;
+}
 .gender-radio + label:last-of-type {
   float: right; }
 .gender-radio:checked + label {
-  color: #fff;
-  border-color: #ff5c5c;
-  background-color: #ff5c5c; }
+  color: #000000;
+  background: -moz-linear-gradient(top, #fbbd35 0%, #fbbd35 35%, #efac4a 100%);
+  background: -webkit-linear-gradient(top, #fbbd35 0%,#fbbd35 35%,#efac4a 100%);
+  background: linear-gradient(to bottom, #fbbd35 0%,#fbbd35 35%,#efac4a 100%);
+  font-family: Raleway-Bold,fantasy;
+}
 
 .login-form-btn {
-  margin: 20px 0;
-  color: #ff5c5c;
-  border-radius: 1px;
-  font-size: 14px;
-  text-transform: uppercase;
-  border: 1px solid #828282;
-  text-align: center;
   width: 100%;
   display: block;
-  padding: 15px 0;
-  background-color: #fff;
-  font-family: 'SegoeUI', sans-serif; }
+  margin: 10px 0;
+  padding: 15px 20px 16px;
+  background: #fbbd35;
+  text-align: center;
+  background: -moz-linear-gradient(top, #fbbd35 0%, #fbbd35 35%, #efac4a 100%);
+  background: -webkit-linear-gradient(top, #fbbd35 0%,#fbbd35 35%,#efac4a 100%);
+  background: linear-gradient(to bottom, #fbbd35 0%,#fbbd35 35%,#efac4a 100%);
+  font-family: Raleway-Bold,fantasy;
+  font-size: 14px;
+  border: 0;
+  color: #000000;
+  box-shadow: -1px 1px 4px rgba(113, 113, 113, 0.85), inset 0 -3px 1px #c38d35;
+  border-radius: 3px;
+}
 .login-form-btn:hover {
-  color: #fff;
-  border-color: #ff5c5c;
-  background-color: #ff5c5c; }
+  background: rgb(241,165,67);
+  background: -moz-linear-gradient(top, rgba(241,165,67,1) 0%, rgba(255,201,43,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(241,165,67,1) 0%,rgba(255,201,43,1) 100%);
+  background: linear-gradient(to bottom, rgba(241,165,67,1) 0%,rgba(255,201,43,1) 100%);
+}
 
 .login-continue {
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 .styled-checkbox {
   display: none; }
@@ -7306,6 +7323,11 @@ footer > section .row {
   float: right;
 }
 
+.static-text-page .right-q{
+  width: 72%;
+  float: right;
+}
+
 .static-text-page{
   min-height: 600px;
   position: relative;
@@ -8191,6 +8213,26 @@ footer > section .row {
   box-shadow: 0 1px 4px rgba(113, 113, 113, 0.45);
 }
 
+.wish-list-page .wish-login-block{
+  text-align: right;
+  max-width: 400px;
+}
+.wish-list-page .wrapper-cart-box{
+  margin-top: 20px;
+}
+
+.wish-list-page .wrapper-cart-box .number-block .price {
+  padding: 7px 0 2px;
+}
+
+.wish-list-page .w-btn-orange {
+  width: 150px;
+  margin-left: 20px;
+  margin-right: 0;
+  padding: 15px 20px 16px;
+  border-radius: 3px;
+  text-align: center;
+}
 
 
 
