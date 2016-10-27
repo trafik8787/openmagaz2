@@ -162,7 +162,7 @@
 
                                             <?if (!empty($tags)):?>
                                             <tr>
-                                                <td colspan="2">
+                                                <td colspan="2" class="tags-td">
                                                     <div class="product-tags-divider"></div>
                                                     <ul class="list-inline product-tags">
                                                         <?foreach ($tags as $row_tags):?>
@@ -294,7 +294,7 @@
 
                                             <?if (!empty($tags)):?>
                                             <tr>
-                                                <td colspan="2">
+                                                <td colspan="2" class="tags-td">
                                                     <div class="product-tags-divider"></div>
                                                     <ul class="list-inline product-tags">
                                                         <?foreach ($tags as $row_tags):?>

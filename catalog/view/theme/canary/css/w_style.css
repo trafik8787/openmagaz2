@@ -3474,7 +3474,7 @@ width: 98px;
         border: none;
     }
 
-    .product-details .table > tbody > tr:last-child td {
+    .product-details .table > tbody > tr td.tags-td {
         border-bottom: none;
     }
 

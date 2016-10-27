@@ -29,7 +29,7 @@
         </div>
         <div class="center-bl">
             <div class="one-product clearfix">
-                <div class="one-product-slider">
+                <div class="one-product-slider hidden-xs">
                     <div class="slider-for">
                         <div><img src="<?=imageDiamont($product->response->body->diamond->shape)?>" style="margin-left: auto; margin-right: auto; width: 100%;"></div>
                     </div>
@@ -532,7 +532,15 @@
         slidesToScroll: 1,
         arrows: false,
         fade: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider-nav',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: true
+                }
+            }
+        ]
 
     });
 
