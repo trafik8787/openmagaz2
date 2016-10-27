@@ -15,8 +15,7 @@
 
         <?php if ($products || $vouchers) : ?>
         <div class="product-box">
-            <div class="table-responsive">
-                <table class="table table-condensed">
+            <table class="table table-condensed">
                     <tbody>
                         <?php foreach ($products as $product) : ?>
                             <tr>
@@ -55,7 +54,6 @@
                         <?endforeach?>
                     </tbody>
                 </table>
-            </div>
 
             <!--*<?php foreach ($products as $product) : ?>*-->
 
