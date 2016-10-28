@@ -5610,7 +5610,7 @@ footer > section .row {
 }
 
 .filter-box .filter-wrapper .box-color label {
-  padding: 11px 7px;
+  padding: 11px 5px;
   display: inline-block;
   vertical-align: middle;
   position: relative;
@@ -5619,7 +5619,7 @@ footer > section .row {
 .filter-box .filter-wrapper .box-color label.btn-filter.active{
   margin-top: 6px;
   margin-bottom: 6px;
-  padding: 5px 10px;
+  padding: 5px 5px;
   -webkit-border-radius:3px;
   -moz-border-radius:3px;
   border-radius:3px;

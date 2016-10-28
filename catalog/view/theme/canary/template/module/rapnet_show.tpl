@@ -5,7 +5,8 @@
 <?else:?>
 <?//dd($sortby)?>
 
-    <div class="diamond-catalog-top clearfix">
+    <div class="center-bl">
+        <div class="diamond-catalog-top clearfix">
             <div class="left">
                 <div class="total-items">Total 999 items</div>
                 <div class="diamond-catalog-tocompare"><a href="#">Product compare (0)</a></div>
@@ -34,10 +35,10 @@
             </div>
         </div>
 
-    <div class="diamond-catalog">
-        <div class="diamond-catalog-left">
-            <table class="diamond-catalog-table">
-                <thead>
+        <div class="diamond-catalog">
+            <div class="diamond-catalog-left">
+                <table class="diamond-catalog-table">
+                    <thead>
                     <tr>
                         <td><span>Compare</span></td>
                         <td><span>Shape</span></td>
@@ -49,8 +50,8 @@
                         <!--*<td class="sort-col sort-col-down"><span>Popularity</span></td>*-->
                         <td><span>Price</span></td>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     <?php foreach ($data as $row):?>
                     <?//dd($row)?>
                     <tr class="diamond-tr" data-diamond-id="<?=$row->diamond_id?>">
@@ -67,13 +68,13 @@
                         <td><?=$row->cut?></td>
                         <td><?=$row->size?> <i class="fa fa-exclamation-triangle"></i></td>
                         <!--*<td class="sort-col">*-->
-                            <!--*<div class="rating">*-->
-                                <!--*<i class="star active"></i>*-->
-                                <!--*<i class="star active"></i>*-->
-                                <!--*<i class="star active"></i>*-->
-                                <!--*<i class="star active"></i>*-->
-                                <!--*<i class="star"></i>*-->
-                            <!--*</div>*-->
+                        <!--*<div class="rating">*-->
+                        <!--*<i class="star active"></i>*-->
+                        <!--*<i class="star active"></i>*-->
+                        <!--*<i class="star active"></i>*-->
+                        <!--*<i class="star active"></i>*-->
+                        <!--*<i class="star"></i>*-->
+                        <!--*</div>*-->
                         <!--*</td>*-->
                         <td>$<?=$row->total_sales_price?>.00</td>
                     </tr>
@@ -85,33 +86,35 @@
                             <div class="w-pagination-diamonts text-center"><?=isset($pagination)? $pagination : ''?></div>
                         </td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="diamond-catalog-right">
+                    </tbody>
+                </table>
+            </div>
+            <div class="diamond-catalog-right">
 
+            </div>
+        </div>
+
+        <div class="alert alert-warning product-need-help diamonds-catalog-help">
+            <span class="h4">Need Help?</span>
+            <ul class="list-inline w-help-ned">
+                <li><a href="#"><span class="help-ico help-ico-chat"></span> <span class="help-text">Online Chat now</span></a></li>
+                <li><a href="#"><span class="help-ico help-ico-mail"></span> <span class="help-text">Email</span></a></li>
+                <!-- todo phone-->
+                <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text">800-214-6550 | 24/7</span></a></li>
+            </ul>
+        </div>
+        <p class="diamonds-catalog-star-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, repellendus.</p>
+
+        <div class="box-stat-text">
+            <div class="h2">
+                TEXT ABOUT DIAMONDS
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea eos illo in praesentium rerum tempore voluptatum. Culpa dolorem error inventore nobis repudiandae. Ad amet animi asperiores assumenda autem beatae, dolorem dolorum eos eum expedita, facilis ipsa ipsum iste laudantium minus nihil porro quae quia quidem quis recusandae, rem suscipit tempora voluptatem voluptatibus! Aliquam blanditiis consequatur deleniti doloribus ducimus, ea enim esse est harum incidunt, laborum magni nesciunt, nobis recusandae rerum veniam voluptas? At atque eos esse eum harum molestias necessitatibus nemo provident quaerat quas sed, soluta vel voluptas. Cumque earum eum exercitationem! Ab culpa enim fuga laborum natus optio possimus sapiente, velit vero. A alias assumenda consequatur culpa dignissimos harum hic laudantium qui. Consectetur consequatur eaque enim itaque minus nesciunt officia porro, quas saepe sunt unde vero voluptate! Ad adipisci, corporis cupiditate ducimus earum eligendi facilis ipsam itaque nam placeat, porro quasi, quo quos saepe suscipit unde veniam voluptatum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium culpa cumque delectus deleniti doloribus, earum error eveniet fuga, harum in incidunt ipsa mollitia nam natus nemo, officiis optio perferendis porro quaerat quas quisquam quod quos rerum saepe tempora velit voluptatum! Doloribus exercitationem facilis molestiae nam, nesciunt officia reiciendis sit sunt suscipit. Aliquam animi aspernatur consectetur deleniti dignissimos, distinctio expedita facilis fuga nulla, pariatur quae quis tempore veritatis vero voluptate. Dolores earum et fuga quas recusandae tempora vel? Asperiores autem corporis eligendi, et exercitationem illo illum iusto maiores molestias necessitatibus optio pariatur praesentium provident, quas recusandae sint tempora ullam vel.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea eos illo in praesentium rerum tempore voluptatum. Culpa dolorem error inventore nobis repudiandae. Ad amet animi asperiores assumenda autem beatae, dolorem dolorum eos eum expedita, facilis ipsa ipsum iste laudantium minus nihil porro quae quia quidem quis recusandae, rem suscipit tempora voluptatem voluptatibus! Aliquam blanditiis consequatur deleniti doloribus ducimus, ea enim esse est harum incidunt, laborum magni nesciunt, nobis recusandae rerum veniam voluptas? At atque eos esse eum harum molestias necessitatibus nemo provident quaerat quas sed, soluta vel voluptas. Cumque earum eum exercitationem! Ab culpa enim fuga laborum natus optio possimus sapiente, velit vero. A alias assumenda consequatur culpa dignissimos harum hic laudantium qui. Consectetur consequatur eaque enim itaque minus nesciunt officia porro, quas saepe sunt unde vero voluptate! Ad adipisci, corporis cupiditate ducimus earum eligendi facilis ipsam itaque nam placeat, porro quasi, quo quos saepe suscipit unde veniam voluptatum!</p>
         </div>
     </div>
 
-    <div class="alert alert-warning product-need-help diamonds-catalog-help">
-        <span class="h4">Need Help?</span>
-        <ul class="list-inline w-help-ned">
-            <li><a href="#"><span class="help-ico help-ico-chat"></span> <span class="help-text">Online Chat now</span></a></li>
-            <li><a href="#"><span class="help-ico help-ico-mail"></span> <span class="help-text">Email</span></a></li>
-            <!-- todo phone-->
-            <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text">800-214-6550 | 24/7</span></a></li>
-        </ul>
-    </div>
-    <p class="diamonds-catalog-star-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, repellendus.</p>
-
-    <div class="box-stat-text">
-        <div class="h2">
-            TEXT ABOUT DIAMONDS
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea eos illo in praesentium rerum tempore voluptatum. Culpa dolorem error inventore nobis repudiandae. Ad amet animi asperiores assumenda autem beatae, dolorem dolorum eos eum expedita, facilis ipsa ipsum iste laudantium minus nihil porro quae quia quidem quis recusandae, rem suscipit tempora voluptatem voluptatibus! Aliquam blanditiis consequatur deleniti doloribus ducimus, ea enim esse est harum incidunt, laborum magni nesciunt, nobis recusandae rerum veniam voluptas? At atque eos esse eum harum molestias necessitatibus nemo provident quaerat quas sed, soluta vel voluptas. Cumque earum eum exercitationem! Ab culpa enim fuga laborum natus optio possimus sapiente, velit vero. A alias assumenda consequatur culpa dignissimos harum hic laudantium qui. Consectetur consequatur eaque enim itaque minus nesciunt officia porro, quas saepe sunt unde vero voluptate! Ad adipisci, corporis cupiditate ducimus earum eligendi facilis ipsam itaque nam placeat, porro quasi, quo quos saepe suscipit unde veniam voluptatum!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium culpa cumque delectus deleniti doloribus, earum error eveniet fuga, harum in incidunt ipsa mollitia nam natus nemo, officiis optio perferendis porro quaerat quas quisquam quod quos rerum saepe tempora velit voluptatum! Doloribus exercitationem facilis molestiae nam, nesciunt officia reiciendis sit sunt suscipit. Aliquam animi aspernatur consectetur deleniti dignissimos, distinctio expedita facilis fuga nulla, pariatur quae quis tempore veritatis vero voluptate. Dolores earum et fuga quas recusandae tempora vel? Asperiores autem corporis eligendi, et exercitationem illo illum iusto maiores molestias necessitatibus optio pariatur praesentium provident, quas recusandae sint tempora ullam vel.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea eos illo in praesentium rerum tempore voluptatum. Culpa dolorem error inventore nobis repudiandae. Ad amet animi asperiores assumenda autem beatae, dolorem dolorum eos eum expedita, facilis ipsa ipsum iste laudantium minus nihil porro quae quia quidem quis recusandae, rem suscipit tempora voluptatem voluptatibus! Aliquam blanditiis consequatur deleniti doloribus ducimus, ea enim esse est harum incidunt, laborum magni nesciunt, nobis recusandae rerum veniam voluptas? At atque eos esse eum harum molestias necessitatibus nemo provident quaerat quas sed, soluta vel voluptas. Cumque earum eum exercitationem! Ab culpa enim fuga laborum natus optio possimus sapiente, velit vero. A alias assumenda consequatur culpa dignissimos harum hic laudantium qui. Consectetur consequatur eaque enim itaque minus nesciunt officia porro, quas saepe sunt unde vero voluptate! Ad adipisci, corporis cupiditate ducimus earum eligendi facilis ipsam itaque nam placeat, porro quasi, quo quos saepe suscipit unde veniam voluptatum!</p>
-    </div>
 <?endif?>
 
 <script>

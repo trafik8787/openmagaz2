@@ -38,7 +38,6 @@
 
         </div>
 
-        <div class="center-bl">
             <div class="list-product w-category-ajax">
 
 
@@ -165,7 +164,6 @@
                 </div>
 
             </div>
-        </div>
 
     </section>
 </main>

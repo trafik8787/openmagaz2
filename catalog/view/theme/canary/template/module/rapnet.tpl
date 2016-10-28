@@ -1,268 +1,286 @@
-
 <div class="filter-box clearfix">
-    <div class="filter-wrapper filter-wrapper-pn clearfix">
-        <div class="left-f">
-            <div class="one-line height-inherit">
-                <div class="title">shape
-                    <button type="button" class="question-filter-btn" data-container="body" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Select the diamond shape that best suits the recipients style, along with what looks best in the ring setting you choose.">
-                        <span class="question-filter"><i class="fa fa-question-circle"></i></span>
-                    </button>
+    <div class="filter-wrapper clearfix thumbnail">
+        <div class="wrapper-filter-close">
+            <div class="filter-row">
+                <div class="filter-col filter-diamond-left">
+                    <div class="filter-col-title">shape</div>
+                    <div class="filter-col-options">
+                        <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
+
+                            <div class="all-line-filter">
+                                <a href="#" class="active">All</a>
+                            </div>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked>
+                                <i class="brilliant-ico2 brilliant-s1"></i>
+                                <span>Round<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Princess" name="shape" id="option2" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s2"></i>
+                                <span>Princess<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Asscher"  name="shape" id="option3" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s3"></i>
+                                <span>Asscher<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Cushion"  name="shape" id="option4" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s4"></i>
+                                <span>Cushion<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Marquise" name="shape" id="option5" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s5"></i>
+                                <span>Marquise<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Oval"  name="shape" id="option6" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s6"></i>
+                                <span>Oval<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Radiant" name="shape" id="option7" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s7"></i>
+                                <span>Radiant<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Pear"  name="shape" id="option8" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s8"></i>
+                                <span>Pear<br><span>Shaped</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Heart"  name="shape" id="option9" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s9"></i>
+                                <span>Heart<br><span>Shaped</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Emerald"  name="shape" id="option10" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s10"></i>
+                                <span>Emerald<br><span>Cut</span></span>
+                            </label>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="btn-group btn-group-justified btn-group-filter w-group-shape" data-toggle="buttons">
-                    <label class="btn btn-filter brackets">
-                        <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked> <i class="brilliant-ico2 brilliant-s1" data-toggle="tooltip" data-placement="top" title="Round Cut"></i>
-                    </label>
-                    <label class="btn btn-filter brackets">
-                        <input type="radio" value="Princess" name="shape" id="option2" autocomplete="off"> <i class="brilliant-ico2 brilliant-s2" data-toggle="tooltip" data-placement="top" title="Princess Cut"></i>
-                    </label>
-                    <label class="btn btn-filter brackets">
-                        <input type="radio" value="Asscher"  name="shape" id="option3" autocomplete="off"> <i class="brilliant-ico2 brilliant-s3" data-toggle="tooltip" data-placement="top" title="Asscher Cut"></i>
-                    </label>
-                    <label class="btn btn-filter brackets">
-                        <input type="radio" value="Cushion"  name="shape" id="option4" autocomplete="off"> <i class="brilliant-ico2 brilliant-s4" data-toggle="tooltip" data-placement="top" title="Cushion Cut"></i>
-                    </label>
-                    <label class="btn btn-filter brackets">
-                        <input type="radio" value="Marquise" name="shape" id="option5" autocomplete="off"> <i class="brilliant-ico2 brilliant-s5" data-toggle="tooltip" data-placement="top" title="Marquise Cut"></i>
-                    </label>
-                    <label class="btn btn-filter brackets">
-                        <input type="radio" value="Oval"  name="shape" id="option6" autocomplete="off"> <i class="brilliant-ico2 brilliant-s6" data-toggle="tooltip" data-placement="top" title="Oval Cut"></i>
-                    </label>
-                    <label class="btn btn-filter brackets">
-                        <input type="radio" value="Radiant" name="shape" id="option7" autocomplete="off"> <i class="brilliant-ico2 brilliant-s7" data-toggle="tooltip" data-placement="top" title="Radiant Cut"></i>
-                    </label>
-                    <label class="btn btn-filter brackets">
-                        <input type="radio" value="Pear"  name="shape" id="option8" autocomplete="off"> <i class="brilliant-ico2 brilliant-s8" data-toggle="tooltip" data-placement="top" title="Pear Shaped"></i>
-                    </label>
-                    <label class="btn btn-filter brackets">
-                        <input type="radio" value="Heart"  name="shape" id="option9" autocomplete="off"> <i class="brilliant-ico2 brilliant-s9" data-toggle="tooltip" data-placement="top" title="Heart Shaped"></i>
-                    </label>
-                    <label class="btn btn-filter brackets">
-                        <input type="radio" value="Emerald"  name="shape" id="option10" autocomplete="off"> <i class="brilliant-ico2 brilliant-s10" data-toggle="tooltip" data-placement="top" title="Emerald Cut"></i>
-                    </label>
+                <div class="filter-col filter-diamond-right">
+                    <div class="filter-col-title">cut</div>
+                    <div class="filter-col-options">
+                        <div class="filter-block filter1">
+                            <div id="w-slider-cut"></div>
+                            <div class="wrapper-table">
+                                <ul class="slider-lables">
+                                    <li title="slightly colored">Fair</li>
+                                    <li title="near colorless">Good</li>
+                                    <li title="near colorless">Very Good</li>
+                                    <li title="near colorless">Excellent</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="box-line-l">
-                <div class="one-line">
-                    <div class="title">color
-                        <button type="button" class="question-filter-btn" id="help-color" data-toggle="popover">
-                            <span class="question-filter"><i class="fa fa-question-circle"></i></span>
-                        </button>
-                    </div>
-                    <div class="filter-block filter1">
-                        <div id="w-slider-color"></div>
-                        <div class="wrapper-table">
-                            <ul class="slider-lables">
-                                <li title="slightly colored">M</li>
-                                <li title="near colorless">L</li>
+            <div class="filter-row">
+                <div class="filter-col filter-diamond-left">
+                    <div class="filter-col-title">color</div>
+                    <div class="filter-col-options">
+                        <div class="filter-block filter1">
+                            <div id="w-slider-color"></div>
+                            <div class="wrapper-table">
+                                <ul class="slider-lables">
+                                    <li title="slightly colored">M</li>
+                                    <li title="near colorless">L</li>
 
-                                <li title="near colorless">K</li>
-                                <li title="near colorless">J</li>
-                                <li title="near colorless">I</li>
-                                <li title="near colorless">H</li>
-                                <li title="near colorless">G</li>
-                                <li title="colorless">F</li>
-                                <li title="colorless">E</li>
-                                <li title="colorless">D</li>
-                            </ul>
+                                    <li title="near colorless">K</li>
+                                    <li title="near colorless">J</li>
+                                    <li title="near colorless">I</li>
+                                    <li title="near colorless">H</li>
+                                    <li title="near colorless">G</li>
+                                    <li title="colorless">F</li>
+                                    <li title="colorless">E</li>
+                                    <li title="colorless">D</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="one-line">
-                    <div class="title">clarity
-                        <button type="button" class="question-filter-btn" id="help-clarity">
-                            <span class="question-filter"><i class="fa fa-question-circle"></i></span>
-                        </button>
-                    </div>
-                    <div class="filter-block filter1">
-                        <div id="w-slider-clarity"></div>
-                        <div class="wrapper-table">
-                            <ul class="slider-lables">
-                                <li title="slightly colored">I1</li>
-                                <li title="near colorless">SI2</li>
-                                <li title="near colorless">SI1</li>
-                                <li title="near colorless">VS2</li>
-                                <li title="near colorless">VS1</li>
-                                <li title="colorless">VVS2</li>
-                                <li title="colorless">VVS1</li>
-                                <li title="colorless">IF</li>
-                            </ul>
+                <div class="filter-col filter-diamond-right">
+                    <div class="filter-col-title">carat</div>
+                    <div class="filter-col-options">
+                        <div class="filter-block filter1">
+                            <div class="clearfix">
+                                <input type="text" id="amountCarat1" class="input-slider-p pull-left w-input-carat-from">
+                                <input type="text" id="amountCarat2" class="input-slider-p pull-right w-input-carat-to">
+                            </div>
+                            <div id="w-slider-carat"></div>
                         </div>
                     </div>
                 </div>
-
-
-                <!-- fancy box -->
-
+            </div>
+            <div class="filter-row">
+                <div class="filter-col filter-diamond-left">
+                    <div class="filter-col-title">clarity</div>
+                    <div class="filter-col-options">
+                        <div class="filter-block filter1">
+                            <div id="w-slider-clarity"></div>
+                            <div class="wrapper-table">
+                                <ul class="slider-lables">
+                                    <li title="slightly colored">I1</li>
+                                    <li title="near colorless">SI2</li>
+                                    <li title="near colorless">SI1</li>
+                                    <li title="near colorless">VS2</li>
+                                    <li title="near colorless">VS1</li>
+                                    <li title="colorless">VVS2</li>
+                                    <li title="colorless">VVS1</li>
+                                    <li title="colorless">IF</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-col filter-diamond-right">
+                    <div class="filter-col-title">price</div>
+                    <div class="filter-col-options">
+                        <div class="filter-block filter1">
+                            <div class="clearfix">
+                                <input type="text" id="amountPrice1" class="input-slider-p pull-left w-input-price-from">
+                                <input type="text" id="amountPrice2" class="input-slider-p pull-right w-input-price-to">
+                            </div>
+                            <div id="w-slider-price"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="right-f">
-            <div class="one-line">
-                <div class="title">cut
-                    <button type="button" class="question-filter-btn" id="help-cut" data-toggle="popover" data-trigger="click" data-placement="bottom">
-                        <span class="question-filter"><i class="fa fa-question-circle"></i></span>
-                    </button>
-                </div>
-                <div class="filter-block filter1">
-                    <div id="w-slider-cut"></div>
-                    <div class="wrapper-table">
-                        <ul class="slider-lables">
-                            <li title="slightly colored">Fair</li>
-                            <li title="near colorless">Good</li>
-                            <li title="near colorless">Very Good</li>
-                            <li title="near colorless">Excellent</li>
+        <div class="functional-filter filter-buttons clearix">
+
+            <ul class="hidden-xs filter-options-type">
+                <li><a href="#" class="active">Main Options</a></li>
+                <li><a href="#">Anvanced options</a></li>
+                <li><a href="#">Other Options</a></li>
+            </ul>
+
+            <div class="clearfix hide">
+                <div class="filter-advanced-wrapper pull-left">
+                    <button class="filter-advanced">advanced options</button>
+                    <div class="dropdown-advanced">
+                        <ul>
+                            <li data-target="polish-slider" data-toggle="tooltip" data-placement="left" title="Polish refers to the degree of smoothness of each facet of a diamond as measured by a gemologist.">
+                                polish
+                                <div class="filter-block filter1 filter-drop-drop">
+                                    <div class="wrapper-filter-drop">
+                                        <div id="w-slider-polish"></div>
+                                        <div class="wrapper-table">
+                                            <ul class="slider-lables">
+                                                <li title="colorless">Fair</li>
+                                                <li title="colored">Good</li>
+                                                <li title="colorless">Very Good</li>
+                                                <li title="colorless">Excellent</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-target="symmetry-slider" data-toggle="tooltip" data-placement="left" title="Symmetry refers to how precisely the various facets of a diamond align and intersect.">
+                                symmetry
+                                <div class="filter-block filter1 filter-drop-drop">
+                                    <div class="wrapper-filter-drop">
+                                        <div id="w-slider-symmetry"></div>
+                                        <div class="wrapper-table">
+                                            <ul class="slider-lables">
+                                                <li title="colorless">Fair</li>
+                                                <li title="colored">Good</li>
+                                                <li title="colorless">Very Good</li>
+                                                <li title="colorless">Excellent</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--*<li data-toggle="tooltip" data-placement="left" title="Laboratory diamond">*-->
+                            <!--*lab*-->
+                            <!--*<div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-labs"  data-toggle="buttons">*-->
+                            <!--*<div class="btn btn-filter">*-->
+                            <!--*<input type="checkbox" name="labs" value="GIA"> GIA*-->
+                            <!--*</div>*-->
+                            <!--*<div class="btn btn-filter">*-->
+                            <!--*<input type="checkbox" name="labs" value="IGI"> IGI*-->
+                            <!--*</div>*-->
+                            <!--*<div class="btn btn-filter">*-->
+                            <!--*<input type="checkbox" name="labs" value="AGS"> AGS*-->
+                            <!--*</div>*-->
+                            <!--*<div class="btn btn-filter">*-->
+                            <!--*<input type="checkbox" name="labs" value="HRD"> HRD*-->
+                            <!--*</div>*-->
+                            <!--*<div class="btn btn-filter">*-->
+                            <!--*<input type="checkbox" name="labs" value="EGL_USA"> EGL_USA*-->
+                            <!--*</div>*-->
+                            <!--*</div>*-->
+                            <!--*</li>*-->
+                            <li data-target="depth-slider" data-toggle="tooltip" data-placement="left" title="Depth refers to the distance between the culet and the table when the diamond is viewed from the side.">
+                                depth
+                                <div class="filter-block filter1 filter-drop-drop">
+                                    <div class="wrapper-filter-drop">
+                                        <div id="w-slider-depth"></div>
+                                        <div class="clearfix">
+                                            <input type="text" id="depth1" class="input-slider-p pull-left w-input-depth-from">
+                                            <input type="text" id="depth2" class="input-slider-p pull-right w-input-depth-to">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-target="table-slider" data-toggle="tooltip" data-placement="left" title="The table is the uppermost, flat surface of a diamond which runs parallel to the plane of the girdle.">
+                                table
+                                <div class="filter-block filter1 filter-drop-drop">
+                                    <div class="wrapper-filter-drop">
+                                        <div id="w-slider-table"></div>
+                                        <div class="clearfix">
+                                            <input type="text" id="table1" class="input-slider-p pull-left w-input-table-from">
+                                            <input type="text" id="table2" class="input-slider-p pull-right w-input-table-to">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-toggle="tooltip" data-placement="left" title="Fluorescence refers to a diamond's tendency to emit a soft colored glow when subjected to ultraviolet light (such as a `black light`).">
+                                Fluorescence
+                                <div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-fluorescence-intensities" data-toggle="buttons">
+                                    <div class="btn btn-filter">
+                                        <input type="checkbox" name="fluorescence_intensities" value="Very Strong"> Very strong
+                                    </div>
+                                    <div class="btn btn-filter">
+                                        <input type="checkbox" name="fluorescence_intensities" value="Strong"> Strong
+                                    </div>
+                                    <div class="btn btn-filter">
+                                        <input type="checkbox" name="fluorescence_intensities" value="Slight"> Slight
+                                    </div>
+                                    <div class="btn btn-filter">
+                                        <input type="checkbox" name="fluorescence_intensities" value="Medium"> Medium
+                                    </div>
+                                    <div class="btn btn-filter">
+                                        <input type="checkbox" name="fluorescence_intensities" value="Faint"> Faint
+                                    </div>
+                                    <div class="btn btn-filter">
+                                        <input type="checkbox" name="fluorescence_intensities" value="Very Slight"> Very slight
+                                    </div>
+                                    <div class="btn btn-filter">
+                                        <input type="checkbox" name="fluorescence_intensities" value="None"> None
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="one-line">
-                <div class="title">carat
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Carat refers to the weight of a diamond, which is directly proportional to its size. Use the sliders or enter a value to find the range you are interested in browsing.">
-                        <span class="question-filter"><i class="fa fa-question-circle"></i></span>
-                    </button>
-                </div>
-                <div class="filter-block filter1">
-                    <div id="w-slider-carat"></div>
-                    <div class="clearfix">
-                        <input type="text" id="amountCarat1" class="input-slider-p pull-left w-input-carat-from">
-                        <input type="text" id="amountCarat2" class="input-slider-p pull-right w-input-carat-to">
-                    </div>
-                </div>
-            </div>
-            <div class="one-line">
-                <div class="title">price
-                    <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="The price slider is for the DIAMOND only.">
-                        <span class="question-filter"><i class="fa fa-question-circle"></i></span>
-                    </button>
-                </div>
-                <div class="filter-block filter1">
-                    <div id="w-slider-price"></div>
-                    <div class="clearfix">
-                        <input type="text" id="amountPrice1" class="input-slider-p pull-left w-input-price-from">
-                        <input type="text" id="amountPrice2" class="input-slider-p pull-right w-input-price-to">
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="filter-advanced-wrapper pull-left">
-            <button class="filter-advanced">advanced options</button>
-            <div class="dropdown-advanced">
-                <ul>
-                    <li data-target="polish-slider" data-toggle="tooltip" data-placement="left" title="Polish refers to the degree of smoothness of each facet of a diamond as measured by a gemologist.">
-                        polish
-                        <div class="filter-block filter1 filter-drop-drop">
-                            <div class="wrapper-filter-drop">
-                                <div id="w-slider-polish"></div>
-                                <div class="wrapper-table">
-                                    <ul class="slider-lables">
-                                        <li title="colorless">Fair</li>
-                                        <li title="colored">Good</li>
-                                        <li title="colorless">Very Good</li>
-                                        <li title="colorless">Excellent</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li data-target="symmetry-slider" data-toggle="tooltip" data-placement="left" title="Symmetry refers to how precisely the various facets of a diamond align and intersect.">
-                        symmetry
-                        <div class="filter-block filter1 filter-drop-drop">
-                            <div class="wrapper-filter-drop">
-                                <div id="w-slider-symmetry"></div>
-                                <div class="wrapper-table">
-                                    <ul class="slider-lables">
-                                        <li title="colorless">Fair</li>
-                                        <li title="colored">Good</li>
-                                        <li title="colorless">Very Good</li>
-                                        <li title="colorless">Excellent</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <!--*<li data-toggle="tooltip" data-placement="left" title="Laboratory diamond">*-->
-                        <!--*lab*-->
-                        <!--*<div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-labs"  data-toggle="buttons">*-->
-                            <!--*<div class="btn btn-filter">*-->
-                                <!--*<input type="checkbox" name="labs" value="GIA"> GIA*-->
-                            <!--*</div>*-->
-                            <!--*<div class="btn btn-filter">*-->
-                                <!--*<input type="checkbox" name="labs" value="IGI"> IGI*-->
-                            <!--*</div>*-->
-                            <!--*<div class="btn btn-filter">*-->
-                                <!--*<input type="checkbox" name="labs" value="AGS"> AGS*-->
-                            <!--*</div>*-->
-                            <!--*<div class="btn btn-filter">*-->
-                                <!--*<input type="checkbox" name="labs" value="HRD"> HRD*-->
-                            <!--*</div>*-->
-                            <!--*<div class="btn btn-filter">*-->
-                                <!--*<input type="checkbox" name="labs" value="EGL_USA"> EGL_USA*-->
-                            <!--*</div>*-->
-                        <!--*</div>*-->
-                    <!--*</li>*-->
-                    <li data-target="depth-slider" data-toggle="tooltip" data-placement="left" title="Depth refers to the distance between the culet and the table when the diamond is viewed from the side.">
-                        depth
-                        <div class="filter-block filter1 filter-drop-drop">
-                            <div class="wrapper-filter-drop">
-                                <div id="w-slider-depth"></div>
-                                <div class="clearfix">
-                                    <input type="text" id="depth1" class="input-slider-p pull-left w-input-depth-from">
-                                    <input type="text" id="depth2" class="input-slider-p pull-right w-input-depth-to">
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                    <li data-target="table-slider" data-toggle="tooltip" data-placement="left" title="The table is the uppermost, flat surface of a diamond which runs parallel to the plane of the girdle.">
-                        table
-                        <div class="filter-block filter1 filter-drop-drop">
-                            <div class="wrapper-filter-drop">
-                                <div id="w-slider-table"></div>
-                                <div class="clearfix">
-                                    <input type="text" id="table1" class="input-slider-p pull-left w-input-table-from">
-                                    <input type="text" id="table2" class="input-slider-p pull-right w-input-table-to">
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                    <li data-toggle="tooltip" data-placement="left" title="Fluorescence refers to a diamond's tendency to emit a soft colored glow when subjected to ultraviolet light (such as a `black light`).">
-                        Fluorescence
-                        <div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-fluorescence-intensities" data-toggle="buttons">
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="fluorescence_intensities" value="Very Strong"> Very strong
-                            </div>
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="fluorescence_intensities" value="Strong"> Strong
-                            </div>
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="fluorescence_intensities" value="Slight"> Slight
-                            </div>
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="fluorescence_intensities" value="Medium"> Medium
-                            </div>
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="fluorescence_intensities" value="Faint"> Faint
-                            </div>
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="fluorescence_intensities" value="Very Slight"> Very slight
-                            </div>
-                            <div class="btn btn-filter">
-                                <input type="checkbox" name="fluorescence_intensities" value="None"> None
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <button class="filter-default-result w-clear-filtr-product">Clear filter</button>
+            <button class="hidden-xs filter-change"><span>Hide filter’s block</span></button>
+            <button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>
         </div>
     </div>
-    <div class="functional-filter clearfix">
-        <button class="filter-default-result pull-right">clear filter</button>
-        <button class="filter-change pull-right">close filter</button>
-    </div>
-
 </div>
-
 
 <?=$popap?>
 
