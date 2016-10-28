@@ -8,16 +8,16 @@
     <div class="center-bl">
         <div class="diamond-catalog-top clearfix">
             <div class="left">
-                <div class="total-items">Total 999 items</div>
+                <div class="total-items">Total <?=$total_diamonds?> items</div>
                 <div class="diamond-catalog-tocompare"><a href="#">Product compare (0)</a></div>
             </div>
             <div class="center">
                 <div class="diamond-catalog-top-pages">
-                    <a href="#" class="diamond-catalog-top-pages-link prev"></a>
+                    <a href="#" class="diamond-catalog-top-pages-link arrow-btn-number prev" data-action="minus"> </a>
                     <span>Page</span>
                     <input type="text" class="form-control" value="1">
                     <span>of 3</span>
-                    <a href="#" class="diamond-catalog-top-pages-link next"></a>
+                    <a href="#" class="diamond-catalog-top-pages-link arrow-btn-number next" data-action="plus"> </a>
                 </div>
             </div>
             <div class="right">
