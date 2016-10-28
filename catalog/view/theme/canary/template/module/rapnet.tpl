@@ -276,7 +276,7 @@
             </div>
 
             <button class="filter-default-result w-clear-filtr-product">Clear filter</button>
-            <button class="hidden-xs filter-change"><span>Hide filter’s block</span></button>
+            <button class="filter-change"><span>Hide filter’s block</span></button>
             <button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>
         </div>
     </div>

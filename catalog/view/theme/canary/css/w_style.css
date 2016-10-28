@@ -3322,6 +3322,27 @@ width: 98px;
     color: #666;
 }
 
+.filter-line-col {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.wide-title .filter-col-title {
+    width: 100px;
+}
+
+.wide-title .filter-col-options {
+    width: calc(100% - 120px);
+}
+
+.width30 {
+    width: 30%;
+}
+
+.wide-title .filter-col-options .btn-filter {
+    width: 77px;
+}
+
 
 @media (max-width: 1200px) {
     .diamond-catalog-right-inner {
@@ -3519,6 +3540,10 @@ width: 98px;
 
     .list-product .filter-product-line .show-b {
         margin: 10px 0 0 15px;
+    }
+
+    .width30 {
+        width: 50%;
     }
 
 }
@@ -4013,6 +4038,21 @@ width: 98px;
         margin-left: 0;
     }
 
+    .wide-title .filter-col-options,
+    .wide-title .filter-col-title {
+        width: 100%;
+    }
+
+    .filter-line-col .all-line-filter {
+        position: relative;
+        margin-top: 0;
+        text-align: center;
+    }
+    .filter-line-col .all-line-filter a {
+        margin: 0 5px 5px;
+    }
+
+
 }
 
 @media (max-width: 640px) {
@@ -4053,6 +4093,60 @@ width: 98px;
     .w-pagination-product {
         margin-bottom: 30px;
     }
+
+
+    .filter-buttons .filter-change:after {
+        display: none;
+    }
+
+    .filter-buttons .apply-btn i {
+        margin-right: 10px;
+    }
+
+    .filter-box .filter-buttons .filter-change {
+        margin: 0;
+    }
+
+    .filter-buttons .filter-change {
+        position: absolute;
+        left: 50%;
+        bottom: -15px;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        padding: 0;
+        width: 150px;
+        text-align: center;
+        margin: 0;
+        height: 26px;
+        color: #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #a5bed1;
+        text-decoration: none;
+    }
+
+    .filter-buttons {
+        padding-bottom: 40px;
+    }
+
+    .filter-buttons .filter-change:before {
+        content: "";
+        position: absolute;
+        top: -84px;
+        width: 100%;
+        left: 0;
+        border: 70px solid transparent;
+        border-bottom: 14px solid #a5bed1;
+    }
+
+    .filter-buttons .filter-change span {
+        text-decoration: none;
+    }
+
+
 
 
 }

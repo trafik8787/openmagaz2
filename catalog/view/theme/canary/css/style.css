@@ -4597,7 +4597,7 @@ footer > section .row {
 .step-product > *:nth-child(3) .one-block.active {
   margin-left: -60px; }
 
-.filter-box.open .filter-wrapper {
+.filter-box.open .wrapper-filter-close {
   overflow: hidden;
 }
 
