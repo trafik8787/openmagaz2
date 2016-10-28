@@ -3371,6 +3371,11 @@ width: 98px;
         padding-right: 5%;
     }
 
+    .main-catalog-container.wrapper-product-table .table tbody tr td:nth-child(1) {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
 }
 
 @media (max-width: 1024px) {
@@ -3444,6 +3449,12 @@ width: 98px;
         margin: 0;
         line-height: 1.2;
     }
+
+    .main-catalog-container.wrapper-product-table.th-view .product-item .name {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -3492,6 +3503,22 @@ width: 98px;
 
     .filter-diamond-left {
         width: 50%;
+    }
+
+    .list-product .filter-product-line .center-bl > * {
+        float: none;
+    }
+
+    .list-product .filter-product-line .center-bl {
+        text-align: center;
+    }
+
+    .list-product .filter-product-line .left-drop-f {
+        margin-bottom: 10px;
+    }
+
+    .list-product .filter-product-line .show-b {
+        margin: 10px 0 0 15px;
     }
 
 }
@@ -3972,6 +3999,60 @@ width: 98px;
         text-align: center;
     }
 
+    .col-md-12 > .h1 {
+        margin: 0;
+        font-size: 25px;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view tbody tr {
+        margin: 0;
+        width: 33.3333333333333333%;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view .table {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .main-catalog-container.wrapper-product-table.th-view tbody tr {
+        width: 50%;
+        height: 260px;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view .product-item .name {
+        font-size: 12px;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view .product-item .box-img {
+        height: 100px;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view .box-tovar-th {
+        top: 100px;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view .price {
+        position: relative;
+        top: -20px;
+    }
+
+    .wrapper-product-table.list-view .table tbody tr td:nth-child(1) {
+        display: none;
+    }
+
+    .wrapper-product-table.list-view .table tbody tr td {
+        font-size: 11px;
+    }
+
+    .pagination {
+        padding-top: 10px;
+    }
+
+    .w-pagination-product {
+        margin-bottom: 30px;
+    }
 
 
 }

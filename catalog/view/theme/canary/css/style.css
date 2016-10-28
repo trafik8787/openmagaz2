@@ -5461,6 +5461,10 @@ footer > section .row {
   box-shadow: 0 0 14px rgba(0,0,0,0.2);
 }
 
+.wrapper-product-table.list-view .btn-box {
+  display: none;
+}
+
 .wrapper-product-table.list-view .table > tbody > tr > td {
   border: none;
 }
