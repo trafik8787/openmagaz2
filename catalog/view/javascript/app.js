@@ -31,7 +31,7 @@ $(document).ready(function() {
     //
     //});
 
-    $(".arrow-btn-number").click(function(e){
+    $(document).on('click',".arrow-btn-number", function(e){
         e.preventDefault();
         if ($(this).attr('data-action')=='plus'){
             $(this).parent().find('input').val(Number($(this).parent().find('input').val())+1);

@@ -2651,6 +2651,10 @@ width: 98px;
 }
 
 
+.filter-advanced-wrapper ul {
+text-align: left;
+}
+
 .diamond-catalog {
     display: table;
     width: 100%;

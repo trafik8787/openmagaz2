@@ -155,6 +155,8 @@ class ControllerModuleRapnet extends Controller {
 
                  $data['pagination'] = $pagination->render();
 
+
+                 $data['total_diamonds'] = $decod_json->response->body->search_results->total_diamonds_found;
                  $data['data'] = $data_diamonds;
 
              } elseif ($decod_json->response->header->error_code == 4001) {
