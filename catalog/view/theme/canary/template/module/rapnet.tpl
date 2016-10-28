@@ -157,7 +157,123 @@
 
             <ul class="hidden-xs filter-options-type">
                 <li><a href="#" class="active">Main Options</a></li>
-                <li><a href="#">Anvanced options</a></li>
+                <li>
+
+
+                    <div class="filter-advanced-wrapper">
+                        <button class="filter-advanced">Advanced options</button>
+                        <div class="dropdown-advanced">
+                            <ul>
+                                <li data-target="polish-slider" data-toggle="tooltip" data-placement="left" title="Polish refers to the degree of smoothness of each facet of a diamond as measured by a gemologist.">
+                                    Polish
+                                    <div class="filter-block filter1 filter-drop-drop">
+                                        <div class="wrapper-filter-drop">
+                                            <div id="w-slider-polish"></div>
+                                            <div class="wrapper-table">
+                                                <ul class="slider-lables">
+                                                    <li title="colorless">Fair</li>
+                                                    <li title="colored">Good</li>
+                                                    <li title="colorless">Very Good</li>
+                                                    <li title="colorless">Excellent</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-target="symmetry-slider" data-toggle="tooltip" data-placement="left" title="Symmetry refers to how precisely the various facets of a diamond align and intersect.">
+                                    Symmetry
+                                    <div class="filter-block filter1 filter-drop-drop">
+                                        <div class="wrapper-filter-drop">
+                                            <div id="w-slider-symmetry"></div>
+                                            <div class="wrapper-table">
+                                                <ul class="slider-lables">
+                                                    <li title="colorless">Fair</li>
+                                                    <li title="colored">Good</li>
+                                                    <li title="colorless">Very Good</li>
+                                                    <li title="colorless">Excellent</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--*<li data-toggle="tooltip" data-placement="left" title="Laboratory diamond">*-->
+                                <!--*lab*-->
+                                <!--*<div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-labs"  data-toggle="buttons">*-->
+                                <!--*<div class="btn btn-filter">*-->
+                                <!--*<input type="checkbox" name="labs" value="GIA"> GIA*-->
+                                <!--*</div>*-->
+                                <!--*<div class="btn btn-filter">*-->
+                                <!--*<input type="checkbox" name="labs" value="IGI"> IGI*-->
+                                <!--*</div>*-->
+                                <!--*<div class="btn btn-filter">*-->
+                                <!--*<input type="checkbox" name="labs" value="AGS"> AGS*-->
+                                <!--*</div>*-->
+                                <!--*<div class="btn btn-filter">*-->
+                                <!--*<input type="checkbox" name="labs" value="HRD"> HRD*-->
+                                <!--*</div>*-->
+                                <!--*<div class="btn btn-filter">*-->
+                                <!--*<input type="checkbox" name="labs" value="EGL_USA"> EGL_USA*-->
+                                <!--*</div>*-->
+                                <!--*</div>*-->
+                                <!--*</li>*-->
+                                <li data-target="depth-slider" data-toggle="tooltip" data-placement="left" title="Depth refers to the distance between the culet and the table when the diamond is viewed from the side.">
+                                    Depth
+                                    <div class="filter-block filter1 filter-drop-drop">
+                                        <div class="wrapper-filter-drop">
+                                            <div id="w-slider-depth"></div>
+                                            <div class="clearfix">
+                                                <input type="text" id="depth1" class="input-slider-p pull-left w-input-depth-from">
+                                                <input type="text" id="depth2" class="input-slider-p pull-right w-input-depth-to">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-target="table-slider" data-toggle="tooltip" data-placement="left" title="The table is the uppermost, flat surface of a diamond which runs parallel to the plane of the girdle.">
+                                    Table
+                                    <div class="filter-block filter1 filter-drop-drop">
+                                        <div class="wrapper-filter-drop">
+                                            <div id="w-slider-table"></div>
+                                            <div class="clearfix">
+                                                <input type="text" id="table1" class="input-slider-p pull-left w-input-table-from">
+                                                <input type="text" id="table2" class="input-slider-p pull-right w-input-table-to">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li data-toggle="tooltip" data-placement="left" title="Fluorescence refers to a diamond's tendency to emit a soft colored glow when subjected to ultraviolet light (such as a `black light`).">
+                                    Fluorescence
+                                    <div class="btn-group btn-group-justified btn-group-filter filter-drop-drop w-group-fluorescence-intensities" data-toggle="buttons">
+                                        <div class="btn btn-filter">
+                                            <input type="checkbox" name="fluorescence_intensities" value="Very Strong"> Very strong
+                                        </div>
+                                        <div class="btn btn-filter">
+                                            <input type="checkbox" name="fluorescence_intensities" value="Strong"> Strong
+                                        </div>
+                                        <div class="btn btn-filter">
+                                            <input type="checkbox" name="fluorescence_intensities" value="Slight"> Slight
+                                        </div>
+                                        <div class="btn btn-filter">
+                                            <input type="checkbox" name="fluorescence_intensities" value="Medium"> Medium
+                                        </div>
+                                        <div class="btn btn-filter">
+                                            <input type="checkbox" name="fluorescence_intensities" value="Faint"> Faint
+                                        </div>
+                                        <div class="btn btn-filter">
+                                            <input type="checkbox" name="fluorescence_intensities" value="Very Slight"> Very slight
+                                        </div>
+                                        <div class="btn btn-filter">
+                                            <input type="checkbox" name="fluorescence_intensities" value="None"> None
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </li>
                 <li><a href="#">Other Options</a></li>
             </ul>
 
