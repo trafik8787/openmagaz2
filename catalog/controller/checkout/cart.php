@@ -208,6 +208,7 @@ class ControllerCheckoutCart extends Controller {
                             $tmp_complect[] = array(
                                 'cart_id' => $product_rows['cart_id'],
                                 'diamond' => isset($product_rows['diamond']) ? $product_rows['diamond'] : 0, //добавлен флаг
+                                'sku'   => $product_rows['sku'],
                                 'thumb' => $image,
                                 'name' => $product_rows['name'],
                                 'model' => $product_rows['model'],
