@@ -1,60 +1,62 @@
 
-    <div class="box-metal one-line-new clearfix">
-        <div class="article">Metal</div>
+    <div class="filter-row">
+
         <?//dd($filter_groups)?>
         <?php foreach ($filter_groups as $filter_group):?>
 
         <?php if (!empty($filter_group['filter'])):?>
         <?php if ($filter_group['type_control'] == 'checkbox'):?>
 
-        <div class="left-f3">
-
-            <ul class="w-checed-list" id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
-                <?php foreach ($filter_group['filter'] as $filter) :?>
-                <?php if (in_array($filter['filter_id'], $filter_category)): ?>
-                <li class="list__item btn">
-                    <label class="label--checkbox">
-                        <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
-                        <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
-                    </label>
-                </li>
-                <?else:?>
-                <li class="list__item btn">
-                    <label class="label--checkbox">
-                        <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
-                        <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
-                    </label>
-                </li>
-                <?endif?>
-                <?endforeach?>
-            </ul>
-
+        <div class="filter-col wide-title">
+            <div class="filter-col-title">Metal</div>
+            <div class="filter-col-options">
+                <ul class="w-checed-list" id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
+                    <?php foreach ($filter_group['filter'] as $filter) :?>
+                    <?php if (in_array($filter['filter_id'], $filter_category)): ?>
+                    <li class="list__item btn">
+                        <label class="label--checkbox">
+                            <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
+                            <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
+                        </label>
+                    </li>
+                    <?else:?>
+                    <li class="list__item btn">
+                        <label class="label--checkbox">
+                            <input type="checkbox" name="filter[]" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
+                            <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
+                        </label>
+                    </li>
+                    <?endif?>
+                    <?endforeach?>
+                </ul>
+            </div>
         </div>
 
         <?elseif($filter_group['type_control'] == 'radio'):?>
 
-        <div class="left-f3">
-
-            <ul class="w-checed-list" id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
-                <?php foreach ($filter_group['filter'] as $filter) :?>
-                <?php if (in_array($filter['filter_id'], $filter_category)): ?>
-                <li class="list__item btn">
-                    <label class="label--checkbox">
-                        <input type="checkbox" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
-                        <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
-                    </label>
-                </li>
-                <?else:?>
-                <li class="list__item btn">
-                    <label class="label--checkbox">
-                        <input type="checkbox" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
-                        <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
-                    </label>
-                </li>
-                <?endif?>
-                <?endforeach?>
-            </ul>
-
+        <div class="filter-col wide-title">
+            <div class="filter-col-title">Metal</div>
+            <div class="filter-col-options">
+                <ul class="w-checed-list" id="filter-group<?php echo $filter_group['filter_group_id']; ?>">
+                    <?php foreach ($filter_group['filter'] as $filter) :?>
+                    <?php if (in_array($filter['filter_id'], $filter_category)): ?>
+                    <li class="list__item btn">
+                        <label class="label--checkbox">
+                            <input type="checkbox" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
+                            <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
+                        </label>
+                    </li>
+                    <?else:?>
+                    <li class="list__item btn">
+                        <label class="label--checkbox">
+                            <input type="checkbox" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
+                            <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
+                        </label>
+                    </li>
+                    <?endif?>
+                    <?endforeach?>
+                </ul>
+            </div>
         </div>
 
         <?endif?>
@@ -67,9 +69,10 @@
                         $min_price = !empty($filter_group['dop_filter']['min']) ? $filter_group['dop_filter']['min'] : 0;
                         $max_price = !empty($filter_group['dop_filter']['max']) ? $filter_group['dop_filter']['max'] : 0;
                     ?>
-        <div class="right-f3">
-            <div class="title">Price</div>
-            <div class="one-line">
+
+        <div class="filter-col width30">
+            <div class="filter-col-title">Price</div>
+            <div class="filter-col-options">
                 <div class="filter-block filter1">
                     <div class="clearfix">
                         <input type="text" value="$<?php if (!empty($PriceFrom)) { echo $PriceFrom; } else { echo number_format($filter_group['dop_filter']['min']); }?>" id="amountPrice1" class="dop-filtr-price-min input-slider-p pull-left" name="min_price">
@@ -86,11 +89,10 @@
                         $min_weight = !empty($filter_group['dop_filter']['min']) ? round($filter_group['dop_filter']['min'], 2) : 0;
                         $max_weight = !empty($filter_group['dop_filter']['max']) ? round($filter_group['dop_filter']['max'], 2) : 0;
                     ?>
-        <div class="right-f3">
-            <div class="one-line">
-                <div class="title">Carat
 
-                </div>
+        <div class="filter-col width30">
+            <div class="filter-col-title">Carat</div>
+            <div class="filter-col-options">
                 <div class="filter-block filter1">
                     <div class="clearfix">
                         <input type="text" value="<?php if (!empty($WeightFrom)) { echo $WeightFrom; } else { echo round($filter_group['dop_filter']['min'], 2); }?>" id="amountWeight1" class="dop-filtr-weight-min input-slider-p pull-left" name="min_weight">
@@ -107,7 +109,7 @@
         <?endforeach?>
     </div>
     </div>
-    <div class="functional-filter clearfix">
+    <div class="functional-filter filter-buttons clearfix">
         <button class="filter-default-result w-clear-filtr-product">Clear filter</button>
         <button class="filter-change"><span>Hide filter’s block</span></button>
         <button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>

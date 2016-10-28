@@ -5,27 +5,30 @@
         <?if (!empty($wsubcategory)):?>
             <?if ($category_id == 20): //ENGAGEMENT RINGS?>
             <div class="wrapper-filter-close">
-                <div class="anyone-box">
-                    <div class="one-line-new">
-                        <div class="article">For anyone</div>
-                        <div class=" btn-group-filter box-color gemstones-box rings-box">
-                            <div class="all-line-filter">
-                                <a href="#" class="active">All</a>
-                                <a href="#">Women</a>
-                                <a href="#">Sets for him and her</a>
+                <div class="filter-row">
+                    <div class="filter-col filter-line-col wide-title">
+                        <div class="filter-col-title">For anyone</div>
+                        <div class="filter-col-options">
+                            <div class=" btn-group-filter box-color gemstones-box rings-box">
+                                <div class="all-line-filter">
+                                    <a href="#" class="active">All</a>
+                                    <a href="#">Women</a>
+                                    <a href="#">Sets for him and her</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="one-line brilliant-style height-inherit w-group-wsubcat">
-                    <div class="one-line-new">
-                        <div class="article">Style</div>
-                        <div class=" btn-group-filter box-color gemstones-box rings-box" >
-                            <div class="all-line-filter">
-                                <a href="#" class="active">All</a>
-                            </div>
-                            <?php foreach ($wsubcategory as $key => $row):?>
-                            <?php
+                <div class="filter-row">
+                    <div class="filter-col wide-title">
+                        <div class="filter-col-title">Style</div>
+                        <div class="filter-col-options">
+                            <div class=" btn-group-filter box-color gemstones-box rings-box" >
+                                <div class="all-line-filter">
+                                    <a href="#" class="active">All</a>
+                                </div>
+                                <?php foreach ($wsubcategory as $key => $row):?>
+                                <?php
 
                                     switch ($key) {
                                         case 0:
@@ -51,17 +54,18 @@
                                             break;
                                     }
                                 ?>
-                            <label class="btn btn-filter <?php if ($child_id == $row['cat_id']):?> active <?endif?> brackets">
-                                <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i></a>
+                                <label class="btn btn-filter <?php if ($child_id == $row['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i></a>
 
-                                <!--*<input type="radio" class="w-wsubcat" data-href="<?php echo $row['href']?>"> <i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i>*-->
-                                <br>
-                                <a href="<?php echo $row['href']?>"><?php echo $row['name']?></a>
-                            </label>
+                                    <!--*<input type="radio" class="w-wsubcat" data-href="<?php echo $row['href']?>"> <i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i>*-->
+                                    <br>
+                                    <a href="<?php echo $row['href']?>"><?php echo $row['name']?></a>
+                                </label>
 
 
 
-                            <?endforeach?>
+                                <?endforeach?>
+                            </div>
                         </div>
                     </div>
                 </div>

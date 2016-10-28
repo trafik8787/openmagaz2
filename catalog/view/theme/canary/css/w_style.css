@@ -3322,6 +3322,27 @@ width: 98px;
     color: #666;
 }
 
+.filter-line-col {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.wide-title .filter-col-title {
+    width: 100px;
+}
+
+.wide-title .filter-col-options {
+    width: calc(100% - 120px);
+}
+
+.width30 {
+    width: 30%;
+}
+
+.wide-title .filter-col-options .btn-filter {
+    width: 77px;
+}
+
 
 @media (max-width: 1200px) {
     .diamond-catalog-right-inner {
@@ -3369,6 +3390,11 @@ width: 98px;
     .similar-stones .wrapper-product-table.th-view .product-item .name {
         padding-left: 5%;
         padding-right: 5%;
+    }
+
+    .main-catalog-container.wrapper-product-table .table tbody tr td:nth-child(1) {
+        max-width: 100%;
+        margin: 0 auto;
     }
 
 }
@@ -3444,6 +3470,12 @@ width: 98px;
         margin: 0;
         line-height: 1.2;
     }
+
+    .main-catalog-container.wrapper-product-table.th-view .product-item .name {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -3491,6 +3523,26 @@ width: 98px;
     }
 
     .filter-diamond-left {
+        width: 50%;
+    }
+
+    .list-product .filter-product-line .center-bl > * {
+        float: none;
+    }
+
+    .list-product .filter-product-line .center-bl {
+        text-align: center;
+    }
+
+    .list-product .filter-product-line .left-drop-f {
+        margin-bottom: 10px;
+    }
+
+    .list-product .filter-product-line .show-b {
+        margin: 10px 0 0 15px;
+    }
+
+    .width30 {
         width: 50%;
     }
 
@@ -3971,6 +4023,129 @@ width: 98px;
     .filter-col-options {
         text-align: center;
     }
+
+    .col-md-12 > .h1 {
+        margin: 0;
+        font-size: 25px;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view tbody tr {
+        margin: 0;
+        width: 33.3333333333333333%;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view .table {
+        margin-left: 0;
+    }
+
+    .wide-title .filter-col-options,
+    .wide-title .filter-col-title {
+        width: 100%;
+    }
+
+    .filter-line-col .all-line-filter {
+        position: relative;
+        margin-top: 0;
+        text-align: center;
+    }
+    .filter-line-col .all-line-filter a {
+        margin: 0 5px 5px;
+    }
+
+
+}
+
+@media (max-width: 640px) {
+    .main-catalog-container.wrapper-product-table.th-view tbody tr {
+        width: 50%;
+        height: 260px;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view .product-item .name {
+        font-size: 12px;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view .product-item .box-img {
+        height: 100px;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view .box-tovar-th {
+        top: 100px;
+    }
+
+    .main-catalog-container.wrapper-product-table.th-view .price {
+        position: relative;
+        top: -20px;
+    }
+
+    .wrapper-product-table.list-view .table tbody tr td:nth-child(1) {
+        display: none;
+    }
+
+    .wrapper-product-table.list-view .table tbody tr td {
+        font-size: 11px;
+    }
+
+    .pagination {
+        padding-top: 10px;
+    }
+
+    .w-pagination-product {
+        margin-bottom: 30px;
+    }
+
+
+    .filter-buttons .filter-change:after {
+        display: none;
+    }
+
+    .filter-buttons .apply-btn i {
+        margin-right: 10px;
+    }
+
+    .filter-box .filter-buttons .filter-change {
+        margin: 0;
+    }
+
+    .filter-buttons .filter-change {
+        position: absolute;
+        left: 50%;
+        bottom: -15px;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+        padding: 0;
+        width: 150px;
+        text-align: center;
+        margin: 0;
+        height: 26px;
+        color: #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #a5bed1;
+        text-decoration: none;
+    }
+
+    .filter-buttons {
+        padding-bottom: 40px;
+    }
+
+    .filter-buttons .filter-change:before {
+        content: "";
+        position: absolute;
+        top: -84px;
+        width: 100%;
+        left: 0;
+        border: 70px solid transparent;
+        border-bottom: 14px solid #a5bed1;
+    }
+
+    .filter-buttons .filter-change span {
+        text-decoration: none;
+    }
+
 
 
 

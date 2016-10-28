@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="wrapper-product-table th-view">
+                <div class="wrapper-product-table th-view main-catalog-container">
                     <table class="table">
                         <thead>
                         <tr>
