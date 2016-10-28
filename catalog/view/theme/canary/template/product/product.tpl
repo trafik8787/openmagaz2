@@ -132,7 +132,6 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <div class="product-details">
-
                                 <div class="hidden-xs">
                                     <div class="h3 text-center margin-top-0">Setting details</div>
                                     <div class="icons-quality_service_icon"></div>

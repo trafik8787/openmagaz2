@@ -357,6 +357,10 @@
     border-top: 1px solid #536899;
   }
 
+  .complet-yellow{
+    text-align: center;
+  }
+
   .static-text-page .title-stat {
     margin-bottom: 14px;
     font-size: 18px;

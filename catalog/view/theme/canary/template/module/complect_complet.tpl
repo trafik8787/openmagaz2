@@ -38,50 +38,39 @@
         </div>
         <div class="center-bl">
             <div class="one-product clearfix">
-
                 <input type="hidden" id="w-product-com-id" value="<?php echo $CanaryProductCom['product_id']?>">
                 <input type="hidden" id="w-diamond-com-id" value="<?php echo $CanaryDiamontCom->diamond_id?>">
                 <input type="hidden" id="w-product-option" value="<?=!empty($CanaryProductCom['option']) ? $CanaryProductCom['option'] : ''?>">
-
                 <div class="one-product-slider hidden-xs">
                     <div class="slider-for">
-
-
                         <div><img src="<?=imageDiamont($CanaryDiamontCom->shape)?>" width="auto" title="" alt=""></div>
                         <div><img src="/image/<?php echo $CanaryProductCom['image'] ?>" width="auto" title="<?php echo $CanaryProductCom['name'] ?>" alt="<?php echo $CanaryProductCom['name'] ?>"></div>
-
-
                     </div>
                     <div class="slider-nav">
-
                         <div class="wrapper-img-slider"><img src="<?=imageDiamont($CanaryDiamontCom->shape)?>" title="" alt=""></div>
                         <div class="wrapper-img-slider"><img src="/image/<?php echo $CanaryProductCom['image'] ?>" title="" alt=""></div>
-
                     </div>
                     <ul class="list-inline it-list hidden-xs">
-
                         <li>
                             <!-- space for chare -->
                             <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
                         </li>
-
                     </ul>
                 </div>
                 <div class="one-product-info" id="product">
-
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-md-8 col-sm-8 col-xs-8">
                             <h1 class="w-product-name-h1"> <?php echo $CanaryProductCom['name'] ?></h1>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
                             <strong>SKU: <?php echo $CanaryProductCom['sku'] ?></strong>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-6">
+                        <div class="col-md-8 col-sm-8 col-xs-8">
                             <h1 class="w-product-name-h1"> <?=$CanaryDiamontCom->shape?> <?=$CanaryDiamontCom->size?> CARAT <?=$CanaryDiamontCom->color?> <?=$CanaryDiamontCom->clarity?></h1>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
                             <strong>SKU: <?=$CanaryDiamontCom->diamond_id?></strong>
                         </div>
                     </div>
@@ -92,55 +81,50 @@
                     </div>
                     <div class="one-product-slider visible-xs">
                         <div class="slider-for">
-
                             <div><img src="<?=imageDiamont($CanaryDiamontCom->shape)?>" width="auto" title="" alt=""></div>
                             <div><img src="/image/<?php echo $CanaryProductCom['image'] ?>" width="auto" title="<?php echo $CanaryProductCom['name'] ?>" alt="<?php echo $CanaryProductCom['name'] ?>"></div>
-
                         </div>
                         <ul class="list-inline it-list hidden-xs">
-
                             <li>
                                 <!-- space for chare -->
                                 <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
                             </li>
-
                         </ul>
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
                             <div class="product-details">
-
                                 <div class="hidden-xs">
                                     <div class="h3 text-center margin-top-0">Setting details</div>
                                     <div class="icons-quality_service_icon"></div>
                                     <div class="margin-buttom-0">
-
                                     </div>
                                 </div>
-
-                                <div class="alert alert-info margin-buttom-0 product-buy-details clearfix">
-                                    <div class="left">
-
-                                        <p><?php echo $CanaryProductCom['name'] ?></p>
-                                        <p><?=$CanaryDiamontCom->shape?> <?=$CanaryDiamontCom->size?> CARAT <?=$CanaryDiamontCom->color?> <?=$CanaryDiamontCom->clarity?></p>
-
-
-                                        <div>
-                                            <div class="price-product">$<?php echo $CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price?></div>
+                                <div class="alert alert-info margin-buttom-0 product-buy-details complet-yellow clearfix">
+                                    <div class="clearfix">
+                                        <div class="left">
+                                            <p><?php echo $CanaryProductCom['name'] ?></p>
                                         </div>
-
-                                    </div>
-                                    <div class="right">
-                                        <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
-                                        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-                                        <div class="price-product">
+                                        <div class="right price-product">
+                                            <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
                                             <span>$<?php echo round($CanaryProductCom['price'], 2)?></span>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="left">
+                                            <p><?=$CanaryDiamontCom->shape?> <?=$CanaryDiamontCom->size?> CARAT <?=$CanaryDiamontCom->color?> <?=$CanaryDiamontCom->clarity?></p>
+                                        </div>
+                                        <div class="right price-product">
+                                            <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
                                             <p><span>$<?=$CanaryDiamontCom->total_sales_price?></span></p>
                                         </div>
-                                        <div class="line-price-product clearfix">
-
+                                    </div>
+                                    <div class="clearfix">
+                                        <div class="left">
+                                            <div class="price-product total-price"><span class="total-complet">Total:</span>$<?php echo $CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price?></div>
+                                        </div>
+                                        <div class="right">
                                             <button class="btn w-btn-orange btn-lg" id="w-complect-button-cart" data-loading-text="Loading..." role="button" type="button" > <i class="bold-angle-right"></i> Add to cart</button>
-
                                         </div>
                                     </div>
                                 </div>
