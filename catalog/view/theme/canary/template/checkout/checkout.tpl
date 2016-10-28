@@ -22,9 +22,213 @@
         </div>
     </div>
     <section class="static-page">
-
         <div class="scheckout-page">
             <div class="center-bl">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <span class="h1">CHECKOUT & SUBMIT ORDER</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="box-order">
+                            <div class="title">Review Order</div>
+                            <div class="summary-item-list">
+                                <?foreach ($cart['products'] as $row_cart):?>
+                                <div class="summary-item">
+                                    <div class="summary-item-img">
+                                        <img src="<?=$row_cart['thumb']?>" alt="">
+                                    </div>
+                                    <div class="wrapper-text-checkout">
+                                        <a href="<?=$row_cart['href']?>" class="summary-item-title"><?=$row_cart['name']?> :X <?=$row_cart['quantity']?></a>
+                                        <p class="summary-item-desc">
+                                            <?=$row_cart['model']?>
+                                            <?if (!empty($row_cart['option'])):?> &nbsp;&nbsp;
+                                            <?foreach ($row_cart['option'] as $rows):?>
+                                            <span><?=$rows['name']?>: <?=$rows['value']?></span><br>
+
+                                            <?endforeach?>
+                                        </p>
+                                        <?endif?>
+                                        <div class="summary-item-price"><?=$row_cart['price']?></div>
+                                    </div>
+                                </div>
+                                <?endforeach?>
+                            </div>
+                            <div class="edit-shopping-cart">
+                                <a href="#">Edit Shopping Cart</a>
+                            </div>
+                        </div>
+                        <div class="box-order">
+                            <div class="title">ORDER TOTAL</div>
+                            <div class="wrapper-t">
+                                <table>
+                                    <tbody><tr>
+                                        <td>Subtotal:</td>
+                                        <td>$1,037.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fedex Shipping:</td>
+                                        <td>Free</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sales TAX:</td>
+                                        <td>$ 0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="total">TOTAL:</span></td>
+                                        <td><span class="all-price">$1,037.00</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <form action="">
+                            <div class="right-checkout">
+                                    <div class="line-with-input">
+                                        <div class="title-c">CUSTOMER INFORMATION</div>
+                                        <div class="clearfix">
+                                            <div class="bl-input must">
+                                                <input type="text" placeholder="Enter Email">
+                                            </div>
+                                            <div class="text-right-input">
+                                                or <a href="#">login</a> with an existing account and return to checkout
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="line-with-input">
+                                        <div class="title-c">DELIVERY  INFORMATION</div>
+                                        <div class="clearfix">
+                                            <div class="bl-input must">
+                                                <input type="text" placeholder="First name">
+                                            </div>
+                                            <div class="bl-input">
+                                                <input type="text" placeholder="Last name">
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="bl-input must">
+                                                <input type="text" placeholder="Address">
+                                            </div>
+                                            <div class="bl-input must">
+                                                <input type="text" placeholder="Address (cont.)">
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="bl-input must">
+                                                <input type="text" placeholder="City">
+                                            </div>
+                                            <div class="bl-input clearfix">
+                                                <div class="bl-input must">
+                                                    <select>
+                                                        <option value="">State/Province</option>
+                                                    </select>
+                                                </div>
+                                                <div class="bl-input must">
+                                                    <select>
+                                                        <option value="">USA</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="bl-input must">
+                                                <input type="text" placeholder="Postal code">
+                                            </div>
+                                            <div class="bl-input must">
+                                                <input type="text" placeholder="Phone number">
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Orders cannot be shipped to a P.O. Box<br/>
+                                            Please make sure to provide a street address where a signature can be obtained for receipt
+                                        </p>
+                                    </div>
+                                    <div class="check-bl">
+                                        <div class="title-c">BILLING INFORMATION</div>
+                                        <input type="checkbox" id="billing"><label for="billing">My billing information is the same as my delivery information</label>
+                                    </div>
+                                    <div class="airplane-block">
+                                        <div class="check-bl radio-bl">
+                                            <div class="title-c">CALCULATE SHIPPING COST</div>
+                                            <div>
+                                                <input type="radio" id="cost1" name="cost"><label for="cost1">FedEx Priority Overnight®: $0,00</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="cost2" name="cost"><label for="cost2">Saturday Delivery (Priority): $35,00</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="cost3" name="cost"><label for="cost3">Hold at Location (FedEx): $0,00</label>
+                                            </div>
+                                        </div>
+                                        <img src="/catalog/view/theme/canary/img/airplane.png" alt="airplane" class="airplane-img">
+                                    </div>
+                                    <div class="check-bl radio-bl">
+                                        <div class="title-c">PAYMENT METHOD</div>
+                                        <div>
+                                            <input type="radio" id="payment1" name="cost"><label for="payment1">Credit card
+                                                <img src="/catalog/view/theme/canary/img/visa.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/mastercard.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/discover.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/americanexpress.png" alt="img">
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="payment2" name="cost"><label for="payment2">PayPal Credit
+                                                <img src="/catalog/view/theme/canary/img/credit8.png" alt="img">
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="payment3" name="cost"><label for="payment3">Bank Transfer (2% Discount)</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="payment4" name="cost"><label for="payment4">Phone Order</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="payment5" name="cost"><label for="payment5">PayPal
+                                                <img src="/catalog/view/theme/canary/img/paypal.png" alt="img">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="blue-check">
+                                        <div class="mark-line">
+                                            <i class="mark-check1"></i>
+                                            Your billing information must match the billing address for the credit card entered below
+                                            or we will be unable to process your payment
+                                        </div>
+                                        <div class="clearfix box-card-l">
+                                            <div class="long-input">
+                                                <input type="text" placeholder="Card Number">
+                                            </div>
+                                            <div class="select-t">
+                                                <select>
+                                                    <option value="">Expiration Month</option>
+                                                </select>
+                                            </div>
+                                            <div class="select-t">
+                                                <select>
+                                                    <option value="">Expiration Year</option>
+                                                </select>
+                                            </div>
+                                            <div class="small-input">
+                                                <input type="text" placeholder="CVV">
+                                            </div>
+                                            <a href="#" class="mark-check2"></a>
+                                        </div>
+
+                                    </div>
+                            </div>
+                            <div class="agree-checkout-box">
+                                <input type="checkbox" id="agreeCheckout"><label for="agreeCheckout">I've read and agree to Brilliant Canary's Terms & Conditions and Privacy Policy</label>
+                            </div>
+                            <div class="box-btn-checkout">
+                                <button class="btn login-form-btn btn-lg active-c"> <i class="submit-order-ico"></i> SUBMIT ORDER</button>
+                                <br/>
+                                <button class="btn login-form-btn btn-lg"> <i class="submit-order-ico"></i> SUBMIT ORDER</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <div class="scheckout-page-title">Secure Checkout</div>
                 <div class="row">
                     <div class="col-md-3 col-xs-3 col-sm-3">
@@ -298,12 +502,7 @@
                 </div>
             </div>
         </div>
-
     </section>
-
-
-
-
     <!-- Modal -->
     <div id="forgotModal" class="forgot-modal modal fade" role="dialog">
         <div class="modal-dialog">
