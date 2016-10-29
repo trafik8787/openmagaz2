@@ -107,13 +107,13 @@
                                         <div class="name"><span><?=$product[0]['name']?></span> <a href="#" data-toggle="tooltip" title="<?php echo $button_remove; ?>" onclick="cart.remove('<?php echo $product[0]['cart_id']; ?>'); cart.remove('<?php echo $product[1]['cart_id']; ?>');" class="remove-ico"></a></div>
                                         <div class="name"><i class="fa fa-diamond" aria-hidden="true"></i><span><?=$product[1]['name']?></span></div>
 
-                                        SKU: <?=$product[0]['sku']?>
-                                        <p>SKU: <?=$product[1]['sku']?></p>
-
-                                        <?foreach ($product[0]['option'] as $row):?>
+                                        SKU: <?=$product[0]['sku']?> <?foreach ($product[0]['option'] as $row):?>
                                         | <?=$row['name']?> <?=$row['value']?>
                                         <?endforeach?>
                                         <label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>
+                                        <p>SKU: <?=$product[1]['sku']?></p>
+
+
                                     </div>
                                     <div class="number-block">
                                         <div class="price"><?=$product[0]['total']?></div><br/>

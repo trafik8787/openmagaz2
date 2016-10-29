@@ -50,12 +50,7 @@
                         <div class="wrapper-img-slider"><img src="<?=imageDiamont($CanaryDiamontCom->shape)?>" title="" alt=""></div>
                         <div class="wrapper-img-slider"><img src="/image/<?php echo $CanaryProductCom['image'] ?>" title="" alt=""></div>
                     </div>
-                    <ul class="list-inline it-list hidden-xs">
-                        <li>
-                            <!-- space for chare -->
-                            <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
-                        </li>
-                    </ul>
+
                 </div>
                 <div class="one-product-info" id="product">
                     <div class="row">
@@ -333,6 +328,7 @@
                 $('#w-but-cart').html('<i class="icons-cart_icon"></i><span class="w-count-circle">'+json['count']+'</span><span>cart</span>');
                 $('html, body').animate({ scrollTop: 0 }, 'slow');
                 $('.cart-basket').load('index.php?route=common/cart/info .w-cart-basket');
+                $(".cart-bl").addClass("open");
             },
             error: function(xhr, ajaxOptions, thrownError) {
                 alert('ошибочка вышла');

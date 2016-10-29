@@ -236,6 +236,7 @@
                         </div>
                     </div>
                 </div>
+                <?//dd($informations)?>
                 <div class="col-md-8 col-sm-8 col-xs-12 hidden-xs">
                     <div class="row content-footer">
                         <div class="col-md-3 col-sm-4 col-xs-6">
@@ -243,32 +244,35 @@
                                 <dt>INFORMATION</dt>
                                 <?php foreach ($informations as $information):?>
 
-                                <?if ($information['bottom'] == 1):?>
-                                <dd><a href="<?php echo $information['href']; ?>" class="w-general-category"><?php echo $information['title']; ?></a></dd>
-                                <?endif?>
+                                    <?if ($information['top'] == 1):?>
+                                        <dd><a href="<?php echo $information['href']; ?>" class="w-general-category"><?php echo $information['title']; ?></a></dd>
+                                    <?endif?>
 
                                 <?endforeach?>
+                                <dd><a href="/contact">Contact Us</a></dd>
+                                <dd><a href="http://blog.brilliantcanary.com/">Blog</a></dd>
+                                <dd><a href="/faq">FAQ</a></dd>
                             </dl>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <dl>
                                 <dt>WE OFFER MORE</dt>
-                                <dd><a href="">Free Lifetime Warranty</a></dd>
-                                <dd><a href="">Free and Insured Shipping</a></dd>
-                                <dd><a href="">Free Sizing</a></dd>
-                                <dd><a href="">Free Engraving</a></dd>
-                                <dd><a href="">100% Money Back</a></dd>
+                                    <?php foreach ($informations as $information):?>
+                                        <?if ($information['top'] == 2):?>
+                                            <dd><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></dd>
+                                        <?endif?>
+                                    <?endforeach?>
+
                             </dl>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <dl>
                                 <dt>WHY PICK CANARY?</dt>
-                                <dd><a href="">Made in USA!</a></dd>
-                                <dd><a href="">Product and delivery</a></dd>
-                                <dd><a href="">in less than 2 weeks</a></dd>
-                                <dd><a href="">GIA certified doaminds</a></dd>
-                                <dd><a href="">Higher quality</a></dd>
-                                <dd><a href="">Helping others</a></dd>
+                                <?php foreach ($informations as $information):?>
+                                    <?if ($information['top'] == 3):?>
+                                        <dd><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></dd>
+                                    <?endif?>
+                                <?endforeach?>
                             </dl>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6">

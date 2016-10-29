@@ -1,7 +1,7 @@
 <?php echo isset($header) ? $header : ''; ?>
 
 
-<?//dd($cart)?>
+<?//dd($cart['products'])?>
 
 <main class="w-general-container">
     <div class="margin-buttom-30 w-bredcrum-border">
@@ -33,28 +33,59 @@
                             <div class="title">Review Order</div>
                             <div class="summary-item-list">
                                 <?foreach ($cart['products'] as $row_cart):?>
-                                <div class="summary-item">
-                                    <div class="summary-item-img">
-                                        <img src="<?=$row_cart['thumb']?>" alt="">
-                                    </div>
-                                    <div class="wrapper-text-checkout">
-                                        <a href="<?=$row_cart['href']?>" class="summary-item-title"><?=$row_cart['name']?> :X <?=$row_cart['quantity']?></a>
-                                        <p class="summary-item-desc">
-                                            <?=$row_cart['model']?>
-                                            <?if (!empty($row_cart['option'])):?> &nbsp;&nbsp;
-                                            <?foreach ($row_cart['option'] as $rows):?>
-                                            <span><?=$rows['name']?>: <?=$rows['value']?></span><br>
 
-                                            <?endforeach?>
-                                        </p>
-                                        <?endif?>
-                                        <div class="summary-item-price"><?=$row_cart['price']?></div>
+                                <?if (!empty($row_cart[0])):?>
+
+                                    <div class="summary-item">
+                                        <div class="summary-item-img">
+                                            <img src="<?=$row_cart[0]['thumb']?>" alt="">
+                                            <img src="<?=$row_cart[1]['thumb']?>" alt="">
+                                        </div>
+                                        <div class="wrapper-text-checkout">
+                                            <a href="<?=$row_cart[0]['href']?>" class="summary-item-title"><?=$row_cart[0]['name']?> :X <?=$row_cart[0]['quantity']?></a>
+                                            <a href="<?=$row_cart[1]['href']?>" class="summary-item-title"><?=$row_cart[1]['name']?> :X <?=$row_cart[1]['quantity']?></a>
+                                            <p class="summary-item-desc">
+                                                <?=$row_cart[0]['model']?>
+                                                <?=$row_cart[1]['model']?>
+                                                <?if (!empty($row_cart[0]['option'])):?> &nbsp;&nbsp;
+                                                <?foreach ($row_cart[0]['option'] as $rows):?>
+                                                    <span><?=$rows['name']?>: <?=$rows['value']?></span><br>
+
+                                                <?endforeach?>
+
+                                            </p>
+                                            <?endif?>
+                                            <div class="summary-item-price"><?=$row_cart[0]['price']?></div>
+                                            <div class="summary-item-price" style="margin-top: 20px"><?=$row_cart[1]['price']?></div>
+                                        </div>
                                     </div>
-                                </div>
+
+                                <?else:?>
+
+                                    <div class="summary-item">
+                                        <div class="summary-item-img">
+                                            <img src="<?=$row_cart['thumb']?>" alt="">
+                                        </div>
+                                        <div class="wrapper-text-checkout">
+                                            <a href="<?=$row_cart['href']?>" class="summary-item-title"><?=$row_cart['name']?> :X <?=$row_cart['quantity']?></a>
+                                            <p class="summary-item-desc">
+                                                <?=$row_cart['model']?>
+                                                <?if (!empty($row_cart['option'])):?> &nbsp;&nbsp;
+                                                <?foreach ($row_cart['option'] as $rows):?>
+                                                <span><?=$rows['name']?>: <?=$rows['value']?></span><br>
+
+                                                <?endforeach?>
+                                            </p>
+                                            <?endif?>
+                                            <div class="summary-item-price"><?=$row_cart['price']?></div>
+                                        </div>
+                                    </div>
+
+                                <?endif?>
                                 <?endforeach?>
                             </div>
                             <div class="edit-shopping-cart">
-                                <a href="#">Edit Shopping Cart</a>
+                                <a href="/shop-cart">Edit Shopping Cart</a>
                             </div>
                         </div>
                         <div class="box-order">

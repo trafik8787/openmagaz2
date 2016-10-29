@@ -31,10 +31,10 @@
                                     </td>
                                     <td>
                                         <div class="title"><a href="<?php echo $product[0]['href']; ?>"><?php echo $product[0]['name']; ?></a></div>
-                                        <div class="title"><a href="<?php echo $product[1]['href']; ?>"><i class="fa fa-diamond" aria-hidden="true"></i><?php echo $product[1]['name']; ?></a></div>
-
                                         <div class="head-basket-item-price"><?php echo $product[0]['total']; ?></div>
-                                        <div class="head-basket-item-price"><?php echo $product[1]['total']; ?></div>
+                                        <div class="title" style="margin-top: 16px;"><a href="<?php echo $product[1]['href']; ?>"><i class="fa fa-diamond" aria-hidden="true"></i><?php echo $product[1]['name']; ?></a></div>
+
+                                        <div class="head-basket-item-price" style="margin-top: 0;"><?php echo $product[1]['total']; ?></div>
                                     </td>
                                 </tr>
 

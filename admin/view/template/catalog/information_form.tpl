@@ -124,34 +124,82 @@
                   <?php } ?>
                 </div>
               </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-bottom"><span data-toggle="tooltip" title="<?php echo $help_bottom; ?>"><?php echo $entry_bottom; ?></span></label>
-                <div class="col-sm-10">
-                  <div class="checkbox">
-                    <label>
-                      <?php if ($bottom) { ?>
-                      <input type="checkbox" name="bottom" value="1" checked="checked" id="input-bottom" />
-                      <?php } else { ?>
-                      <input type="checkbox" name="bottom" value="1" id="input-bottom" />
-                      <?php } ?>
-                      &nbsp; </label>
-                  </div>
-                </div>
-              </div>
+              <!--*<div class="form-group">*-->
+                <!--*<label class="col-sm-2 control-label" for="input-bottom"><span data-toggle="tooltip" title="<?php echo $help_bottom; ?>"><?php echo $entry_bottom; ?></span></label>*-->
+                <!--*<div class="col-sm-10">*-->
+                  <!--*<div class="checkbox">*-->
+                    <!--*<label>*-->
+                      <!--*<?php if ($bottom) { ?>*-->
+                      <!--*<input type="checkbox" name="bottom" value="1" checked="checked" id="input-bottom" />*-->
+                      <!--*<?php } else { ?>*-->
+                      <!--*<input type="checkbox" name="bottom" value="1" id="input-bottom" />*-->
+                      <!--*<?php } ?>*-->
+                      <!--*&nbsp; </label>*-->
+                  <!--*</div>*-->
+                <!--*</div>*-->
+              <!--*</div>*-->
+
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>"><?php echo $entry_top; ?></span></label>
+                    <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>">Column INFORMATION</span></label>
                     <div class="col-sm-10">
                         <div class="checkbox">
                             <label>
-                                <?php if ($top) { ?>
-                                <input type="checkbox" name="top" value="1" checked="checked" id="input-top" />
+                                <?php if ($top == 1) { ?>
+                                <input type="radio" name="top" value="1" checked="checked" id="input-top" />
                                 <?php } else { ?>
-                                <input type="checkbox" name="top" value="1" id="input-top" />
+                                <input type="radio" name="top" value="1" id="input-top" />
                                 <?php } ?>
                                 &nbsp; </label>
                         </div>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>">Column WHY PICK CANARY</span></label>
+                    <div class="col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <?php if ($top == 2) { ?>
+                                <input type="radio" name="top" value="2" checked="checked" id="input-top" />
+                                <?php } else { ?>
+                                <input type="radio" name="top" value="2" id="input-top" />
+                                <?php } ?>
+                                &nbsp; </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>">Column WE OFFER MORE</span></label>
+                    <div class="col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <?php if ($top == 3) { ?>
+                                <input type="radio" name="top" value="3" checked="checked" id="input-top" />
+                                <?php } else { ?>
+                                <input type="radio" name="top" value="3" id="input-top" />
+                                <?php } ?>
+                                &nbsp; </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>">NO SHOW</span></label>
+                    <div class="col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <?php if ($top == 4) { ?>
+                                <input type="radio" name="top" value="4" checked="checked" id="input-top" />
+                                <?php } else { ?>
+                                <input type="radio" name="top" value="4" id="input-top" />
+                                <?php } ?>
+                                &nbsp; </label>
+                        </div>
+                    </div>
+                </div>
+
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>
                 <div class="col-sm-10">
