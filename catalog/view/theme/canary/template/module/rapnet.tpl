@@ -220,12 +220,11 @@
                                     Depth
                                     <div class="filter-block filter1 filter-drop-drop">
                                         <div class="wrapper-filter-drop">
-                                            <div id="w-slider-depth"></div>
                                             <div class="clearfix">
                                                 <input type="text" id="depth1" class="input-slider-p pull-left w-input-depth-from">
                                                 <input type="text" id="depth2" class="input-slider-p pull-right w-input-depth-to">
                                             </div>
-
+                                            <div id="w-slider-depth"></div>
                                         </div>
                                     </div>
                                 </li>
@@ -233,12 +232,11 @@
                                     Table
                                     <div class="filter-block filter1 filter-drop-drop">
                                         <div class="wrapper-filter-drop">
-                                            <div id="w-slider-table"></div>
                                             <div class="clearfix">
                                                 <input type="text" id="table1" class="input-slider-p pull-left w-input-table-from">
                                                 <input type="text" id="table2" class="input-slider-p pull-right w-input-table-to">
                                             </div>
-
+                                            <div id="w-slider-table"></div>
                                         </div>
                                     </div>
                                 </li>

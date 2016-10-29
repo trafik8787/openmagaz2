@@ -2652,7 +2652,8 @@ width: 98px;
 
 
 .filter-advanced-wrapper ul {
-text-align: left;
+
+text-align: left;
 }
 
 .diamond-catalog {
@@ -3256,12 +3257,13 @@ width: 98px;
     width: 33%;
 }
 
-.filter-col-options .filter-block {
+.filter-col-options .filter-block{
     padding: 30px 0;
     margin: 0;
 }
 
-.filter-col-options .slider-lables {
+.filter-col-options .slider-lables,
+.filter-options-type .slider-lables {
     top: -5px;
     vertical-align: bottom;
     line-height: 1;
@@ -3269,12 +3271,14 @@ width: 98px;
     text-decoration: underline;
 }
 
-.filter-col-options .slider-lables li {
+.filter-col-options .slider-lables li,
+.filter-options-type .slider-lables li {
     line-height: 1.1;
     padding: 0;
 }
 
-.filter-col-options .slider-lables li:after {
+.filter-col-options .slider-lables li:after,
+.filter-options-type .slider-lables li:after {
     box-shadow: none;
     width: 2px;
     height: 4px;
@@ -3296,18 +3300,18 @@ width: 98px;
     font-family: "Raleway-Bold", fantasy;
 }
 
-.filter-options-type li {
+.filter-options-type > li {
     display: inline-block;
     margin-right: 25px;
 }
 
-.filter-options-type a {
+.filter-options-type > li > a {
     color: #000;
     text-decoration: none;
     position: relative;
 }
 
-.filter-options-type a:before {
+.filter-options-type > li > a:before {
     content: "";
     height: 2px;
     background: #2f4680;
@@ -3325,6 +3329,53 @@ width: 98px;
 .filter-options-type a:hover {
     color: #666;
 }
+
+.filter-options-type .dropdown-advanced {
+    background: #fff;
+    border: 1px solid #d1d0d0;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+    padding: 10px 0;
+}
+
+.filter-options-type .filter-advanced-wrapper .dropdown-advanced > ul > li {
+    display: block;
+    margin: 3px 0;
+}
+
+
+.filter-options-type .filter-advanced-wrapper .dropdown-advanced > ul > li.active,
+.filter-options-type .filter-advanced-wrapper .dropdown-advanced > ul > li:hover {
+    border: none;
+    width: auto;
+    background: #fbfbfb;
+
+}
+
+.filter-options-type .filter-advanced-wrapper .dropdown-advanced > ul > li .filter-drop-drop {
+    left: 100%;
+    top: -1px;
+    border: 1px solid #d1d0d0;
+    box-shadow: 3px 0 10px 0 rgba(0,0,0,0.25);
+    margin: 0;
+}
+
+
+.filter-options-type .filter-advanced-wrapper .dropdown-advanced > ul > li .filter-block  {
+    padding: 30px 15px 25px;
+}
+
+.filter-options-type .filter-advanced-wrapper .dropdown-advanced > ul > li .filter-drop-drop.filter-block .wrapper-filter-drop {
+    position: static;
+}
+
+.filter-options-type .dropdown-advanced .input-slider-p {
+    margin: -12px 0 10px;
+}
+
+.filter-options-type .filter-advanced-wrapper .dropdown-advanced > ul > li .filter-drop-drop.filter-block .wrapper-filter-drop .slider-lables li:after {
+    top: 28px;
+}
+
 
 .filter-line-col {
     padding-top: 30px;
