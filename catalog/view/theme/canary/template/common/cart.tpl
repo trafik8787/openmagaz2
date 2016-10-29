@@ -18,71 +18,47 @@
             <table class="table table-condensed">
                     <tbody>
                         <?php foreach ($products as $product) : ?>
-                            <tr>
-                                <td>
-                                    <div class="box-img">
-                                        <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>"></a>
-                                        <button type="button" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="btn btn-xs head-basket-remove"><i class="fa fa-times"></i></button>
-                                    </div>
 
-                                </td>
-                                <td>
-                                    <div class="title"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
-                                    <?php if ($product['option']):?>
-                                        <!-- todo remove hide if you need this -->
-                                        <div class="head-basket-options hide">
-                                            <?php foreach ($product['option'] as $option):?>
-                                            <span><?php echo $option['name']; ?> <?php echo $option['value']; ?></span>
-                                            <span><?php echo $option['name']; ?> <?php echo $option['value']; ?></span>
-                                            <span><?php echo $option['name']; ?> <?php echo $option['value']; ?></span>
-                                            <span><?php echo $option['name']; ?> <?php echo $option['value']; ?></span>
-                                            <?endforeach?>
-                                        </div>
-                                    <?endif?>
-                                    <?php if ($product['recurring']):?>
-                                        <!-- todo remove hide if you need this -->
-                                        <div class="head-basket-options hide">
-                                            <span><?php echo $text_recurring; ?> <?php echo $product['recurring']; ?> </span>
-                                        </div>
-                                    <?endif?>
-                                    <!-- todo remove hide if you need this -->
-                                    <div class="head-basket-item-qty hide"><small>x</small><?php echo $product['quantity']; ?></div>
+                            <?if (!empty($product[0])):?>
 
-                                    <div class="head-basket-item-price"><?php echo $product['total']; ?></div>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>
+                                        <div class="box-img">
+                                            <a href="<?php echo $product[0]['href']; ?>"><img src="<?php echo $product[0]['thumb']; ?>" alt="<?php echo $product[0]['name']; ?>" title="<?php echo $product[0]['name']; ?>"></a>
+                                            <a href="<?php echo $product[1]['href']; ?>"><img src="<?php echo $product[1]['thumb']; ?>" alt="<?php echo $product[1]['name']; ?>" title="<?php echo $product[1]['name']; ?>"></a>
+                                            <button type="button" onclick="cart.remove('<?php echo $product[0]['cart_id']; ?>'); cart.remove('<?php echo $product[1]['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="btn btn-xs head-basket-remove"><i class="fa fa-times"></i></button>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="title"><a href="<?php echo $product[0]['href']; ?>"><?php echo $product[0]['name']; ?></a></div>
+                                        <div class="title"><a href="<?php echo $product[1]['href']; ?>"><?php echo $product[1]['name']; ?></a></div>
+
+                                        <div class="head-basket-item-price"><?php echo $product[0]['total']; ?></div>
+                                        <div class="head-basket-item-price"><?php echo $product[1]['total']; ?></div>
+                                    </td>
+                                </tr>
+
+                            <?else:?>
+
+                                <tr>
+                                    <td>
+                                        <div class="box-img">
+                                            <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>"></a>
+                                            <button type="button" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="btn btn-xs head-basket-remove"><i class="fa fa-times"></i></button>
+                                        </div>
+
+                                    </td>
+                                    <td>
+                                        <div class="title"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
+                                        <div class="head-basket-item-price"><?php echo $product['total']; ?></div>
+                                    </td>
+                                </tr>
+                            <?endif?>
                         <?endforeach?>
                     </tbody>
                 </table>
 
-            <!--*<?php foreach ($products as $product) : ?>*-->
-
-
-
-                <!--*<div class="one-product clearfix">*-->
-                    <!--*<div class="box-img">*-->
-                        <!--*<a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>"></a>*-->
-                    <!--*</div>*-->
-                    <!--*<div class="text-block">*-->
-                        <!--*<div class="title"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>*-->
-
-                        <!--*<?php if ($product['option']):?>*-->
-                            <!--*<?php foreach ($product['option'] as $option):?>*-->
-                            <!--*<br />*-->
-                            <!--*- <small><?php echo $option['name']; ?> <?php echo $option['value']; ?></small>*-->
-                            <!--*<?endforeach?>*-->
-                        <!--*<?endif?>*-->
-                        <!--*<?php if ($product['recurring']):?>*-->
-                            <!--*<br />*-->
-                            <!--*- <small><?php echo $text_recurring; ?> <?php echo $product['recurring']; ?></small>*-->
-                        <!--*<?endif?>*-->
-
-                        <!--*X <?php echo $product['quantity']; ?>: <span class="red-text"><?php echo $product['total']; ?></span>*-->
-                        <!--*<button type="button" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="btn btn-danger btn-xs"><i class="fa fa-times"></i></button>*-->
-                    <!--*</div>*-->
-                <!--*</div>*-->
-
-            <!--*<?endforeach?>*-->
         </div>
         <div class="wrapper-text">
             <?php foreach ($totals as $total) : ?>

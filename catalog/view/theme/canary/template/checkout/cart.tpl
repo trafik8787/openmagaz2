@@ -106,6 +106,7 @@
                                     <div class="text-box">
 
                                         <div class="name"><span><?=$product[0]['name']?></span> <a href="#" data-toggle="tooltip" title="<?php echo $button_remove; ?>" onclick="cart.remove('<?php echo $product[0]['cart_id']; ?>'); cart.remove('<?php echo $product[1]['cart_id']; ?>');" class="remove-ico"></a></div>
+                                        <div class="name"><span><?=$product[1]['name']?></span></div>
 
                                         SKU: <?=$product[0]['sku']?>
                                         <p>SKU: <?=$product[1]['sku']?></p>

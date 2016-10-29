@@ -105,8 +105,10 @@ class ControllerCommonCart extends Controller {
         $this->load->model('tool/upload');
 
         $this->data['products'] = array();
-
-        foreach ($this->cart->getProducts() as $product) {
+        //dd($this->cart->getProducts());
+        $products = $this->cart->getProducts();
+        $products3_complect = $products;
+        foreach ($products as $product) {
 
             if ($product['image']) {
                 $image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
@@ -159,23 +161,79 @@ class ControllerCommonCart extends Controller {
             } else {
                 $href_product =  $this->url->link('product/product', 'product_id=' . $product['product_id']);
             }
+            //dd($product);
+            if ($product['complect'] != 0) {
+                $tmp_complect = array();
 
-            $this->data['products'][] = array(
-                'cart_id'   => $product['cart_id'],
-                'diamond'   => !empty($product['diamond']) ? 1 : 0,
-                'thumb'     => $image,
-                'name'      => $product['name'],
-                'model'     => $product['model'],
-                'option'    => $option_data,
-                'recurring' => ($product['recurring'] ? $product['recurring']['name'] : ''),
-                'quantity'  => $product['quantity'],
-                'price'     => $price,
-                'total'     => $total,
-                'href'      => $href_product
-            );
+                foreach ($products3_complect as $key =>  $product_rows) {
+                    if ($product['complect'] == $product_rows['complect']) {
+
+                        unset($products3_complect[$key]);
+
+                        if ($product_rows['image']) {
+                            $images = $this->model_tool_image->resize($product_rows['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+                        } else {
+                            $images = '';
+                        }
+
+                        if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                            $prices = $this->currency->format($this->tax->calculate($product_rows['price'], $product_rows['tax_class_id'], $this->config->get('config_tax')));
+                        } else {
+                            $prices = false;
+                        }
+
+
+                        if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                            $totals = $this->currency->format($this->tax->calculate($product_rows['price'], $product_rows['tax_class_id'], $this->config->get('config_tax')) * $product_rows['quantity']);
+                        } else {
+                            $totals = false;
+                        }
+
+                        if (!empty($product_rows['diamond'])) {
+                            $href_products = '/diamond_page?diamond_id='.$product_rows['product_id'];
+                            $images = $product_rows['image'];
+                        } else {
+                            $href_products = $this->url->link('product/product', 'product_id=' . $product_rows['product_id']);
+                        }
+
+                        $tmp_complect[] = array(
+                            'cart_id' => $product_rows['cart_id'],
+                            'diamond' => !empty($product_rows['diamond']) ? 1 : 0,
+                            'thumb' => $images,
+                            'name' => $product_rows['name'],
+                            'model' => $product_rows['model'],
+                            'option' => $option_data,
+                            'recurring' => ($product_rows['recurring'] ? $product_rows['recurring']['name'] : ''),
+                            'quantity' => $product_rows['quantity'],
+                            'price' => $prices,
+                            'total' => $totals,
+                            'href' => $href_products,
+                            'complect' => $product_rows['complect']
+                        );
+                    }
+                }
+                if (!empty($tmp_complect)) {
+                    $this->data['products'][] = $tmp_complect;
+                }
+
+            } else {
+                $this->data['products'][] = array(
+                    'cart_id' => $product['cart_id'],
+                    'diamond' => !empty($product['diamond']) ? 1 : 0,
+                    'thumb' => $image,
+                    'name' => $product['name'],
+                    'model' => $product['model'],
+                    'option' => $option_data,
+                    'recurring' => ($product['recurring'] ? $product['recurring']['name'] : ''),
+                    'quantity' => $product['quantity'],
+                    'price' => $price,
+                    'total' => $total,
+                    'href' => $href_product
+                );
+            }
         }
 
-
+        //dd($this->data);
         return $this->data;
     }
 
