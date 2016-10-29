@@ -865,9 +865,10 @@ section.containaer-home > .row {margin-left: 0;margin-right: 0;}
 }
 
 .cart-basket .product-box .title {
+  margin-bottom: 7px;
   color: #2f2e2d;
   font-size: 15px;
-  line-height: 1.4;
+  line-height: 18px;
 }
 .cart-basket .product-box .title a {
   color: #2f2e2d;
@@ -8004,6 +8005,11 @@ footer > section .row {
   margin-bottom: 10px;
 }
 
+.wrapper-cart-box .text-box .name i{
+  margin-right: 10px;
+  vertical-align: text-top;
+  font-size: 21px;
+}
 .wrapper-cart-box .text-box .name{
   margin-bottom: 10px;
   color: #2b2a29;
@@ -8018,7 +8024,7 @@ footer > section .row {
 .wrapper-cart-box .text-box{
   color: #2b2a29;
   font-size: 15px;
-  line-height: 15px;
+  line-height: 19px;
 }
 
 .remove-ico{
@@ -8484,6 +8490,12 @@ footer > section .row {
 
 .one-product-slider .slick-initialized.slider-for .slick-slide{
   height: 500px;
+}
+
+.cart-basket .product-box .title i{
+  margin-right: 5px;
+  font-size: 14px;
+  vertical-align: text-top;
 }
 
 .airplane-block .airplane-img{

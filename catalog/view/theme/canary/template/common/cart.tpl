@@ -25,14 +25,13 @@
                                     <td>
                                         <div class="box-img">
                                             <a href="<?php echo $product[0]['href']; ?>"><img src="<?php echo $product[0]['thumb']; ?>" alt="<?php echo $product[0]['name']; ?>" title="<?php echo $product[0]['name']; ?>"></a>
-                                            <a href="<?php echo $product[1]['href']; ?>"><img src="<?php echo $product[1]['thumb']; ?>" alt="<?php echo $product[1]['name']; ?>" title="<?php echo $product[1]['name']; ?>"></a>
                                             <button type="button" onclick="cart.remove('<?php echo $product[0]['cart_id']; ?>'); cart.remove('<?php echo $product[1]['cart_id']; ?>');" title="<?php echo $button_remove; ?>" class="btn btn-xs head-basket-remove"><i class="fa fa-times"></i></button>
                                         </div>
 
                                     </td>
                                     <td>
                                         <div class="title"><a href="<?php echo $product[0]['href']; ?>"><?php echo $product[0]['name']; ?></a></div>
-                                        <div class="title"><a href="<?php echo $product[1]['href']; ?>"><?php echo $product[1]['name']; ?></a></div>
+                                        <div class="title"><a href="<?php echo $product[1]['href']; ?>"><i class="fa fa-diamond" aria-hidden="true"></i><?php echo $product[1]['name']; ?></a></div>
 
                                         <div class="head-basket-item-price"><?php echo $product[0]['total']; ?></div>
                                         <div class="head-basket-item-price"><?php echo $product[1]['total']; ?></div>
