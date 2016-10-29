@@ -665,6 +665,10 @@
     margin-bottom: 40px;
   }
 
+  .one-product-slider .slick-initialized.slider-for .slick-slide {
+    height: 300px;
+  }
+
   .total-cart-pay .all-numbers {
     width: 100%;
     padding-top: 15px;
@@ -1046,7 +1050,6 @@
 
 
 }
-
 
 @media  (max-width: 480px){
 

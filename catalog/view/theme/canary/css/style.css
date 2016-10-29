@@ -8482,6 +8482,10 @@ footer > section .row {
   z-index: 1;
 }
 
+.one-product-slider .slick-initialized.slider-for .slick-slide{
+  height: 500px;
+}
+
 .airplane-block .airplane-img{
   position: absolute;
   top: -5px;
