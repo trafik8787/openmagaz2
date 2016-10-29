@@ -8388,7 +8388,7 @@ footer > section .row {
 }
 
 .right-checkout .title-c{
-  margin-bottom: 25px;
+  margin-bottom: 25px!important;
   color: #1e3e7e;
   font-family: "Felix Titling";
   font-size: 21px;
@@ -8478,11 +8478,14 @@ footer > section .row {
 .right-checkout .check-bl{
   margin: 0 30px;
   padding: 25px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .airplane-block .airplane-img{
   position: absolute;
   top: -5px;
+  z-index: 0;
   right: 25px;
 }
 .airplane-block{

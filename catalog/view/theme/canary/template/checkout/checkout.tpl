@@ -28,7 +28,7 @@
                     <span class="h1">CHECKOUT & SUBMIT ORDER</span>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-5">
                         <div class="box-order">
                             <div class="title">Review Order</div>
                             <div class="summary-item-list">
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 col-sm-7">
                         <form action="">
                             <div class="right-checkout">
                                     <div class="line-with-input">
