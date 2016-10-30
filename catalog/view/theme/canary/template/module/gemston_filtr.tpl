@@ -1,101 +1,140 @@
 <div class="filter-box clearfix">
-    <div class="filter-wrapper paging-20 clearfix thumbnail">
-        <div class="one-line brilliant-style height-inherit w-group-wsubcat">
-
-            <div class="row">
-                <div class="col-md-8 col-sm-8 w-gems-filtr-cecbox">
-                    <div class="title">STONE TYPE</div>
-                    <ul class="w-checed-list" id="id-filtr-stone-type">
-                        <li class="list__item btn">
-                            <label class="label--checkbox">
-                                <input type="checkbox" name="stone_type_gem" value="0" class="checkbox" <? if (in_array(0, $stone_type_gem)) :?> checked="checked" <?endif?>>
-                                <span>Show All</span>
-                            </label>
-                        </li>
-                        <?php foreach (arr_filtr_stone_type() as $val => $rows) :?>
-                        <li class="list__item btn">
-                            <label class="label--checkbox">
-                                <input type="checkbox" name="stone_type_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($stone_type_gem) and in_array($val, $stone_type_gem)) :?> checked="checked" <?endif?>>
-                                <span><?php echo $rows; ?></span>
-                            </label>
-                        </li>
-                        <?endforeach?>
-
-                    </ul>
-
-                    <div class="title">SHAPE</div>
-                    <ul class="w-checed-list" id="id-filtr-shape">
-                        <li class="list__item btn">
-                            <label class="label--checkbox">
-                                <input type="checkbox" name="shape_gem" value="0" class="checkbox" <? if (in_array(0, $shape_gem)) :?> checked="checked" <?endif?>>
-                                <span>Show All</span>
-                            </label>
-                        </li>
-                        <?php foreach (arr_filtr_shape() as $val => $rows) :?>
-                        <li class="list__item btn">
-                            <label class="label--checkbox">
-                                <input type="checkbox" name="shape_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($shape_gem) and in_array($val, $shape_gem)) :?> checked="checked" <?endif?>>
-                                <span><?php echo $rows; ?></span>
-                            </label>
-                        </li>
-                        <?endforeach?>
-
-                    </ul>
-
-                    <div class="title">PRIMARY COLOR</div>
-                    <ul class="w-checed-list" id="id-filtr-primary_color">
-                        <li class="list__item btn">
-                            <label class="label--checkbox">
-                                <input type="checkbox" name="primary_color_gem" value="0" class="checkbox" <? if (in_array(0, $primary_color_gem)) :?> checked="checked" <?endif?>>
-                                <span>Show All</span>
-                            </label>
-                        </li>
-                        <?php foreach (arr_primary_color() as $val => $rows) :?>
-                        <li class="list__item btn">
-                            <label class="label--checkbox">
-                                <input type="checkbox" name="primary_color_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($primary_color_gem) and in_array($val, $primary_color_gem)) :?> checked="checked" <?endif?>>
-                                <span><?php echo $rows; ?></span>
-                            </label>
-                        </li>
-                        <?endforeach?>
-
-                    </ul>
-
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="one-line">
-                        <div class="title">Price
-
-                        </div>
-                        <div class="filter-block filter1">
-                            <div id="slider"></div>
-                            <div class="clearfix">
-                                <input type="text" value="$<?=number_format($PriceFrom)?>" id="amountPrice1" class="dop-filtr-price-min input-slider-p pull-left" name="min_price">
-                                <input type="text" value="$<?=number_format($PriceTo)?>" id="amountPrice2" class="dop-filtr-price-max input-slider-p pull-right" name="max_price">
+    <div class="filter-wrapper clearfix thumbnail">
+        <div class="wrapper-filter-close">
+            <div class="filter-row">
+                <div class="filter-col filter-diamond-left wide-title">
+                    <div class="filter-col-title">Gemstone</div>
+                    <div class="filter-col-options">
+                        <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
+                            <div class="all-line-filter">
+                                <a href="#" class="active">All</a>
                             </div>
+                            <?php foreach (arr_filtr_stone_type() as $val => $rows) :?>
+                            <label class="btn btn-filter brackets">
+                                <input type="checkbox" name="stone_type_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($stone_type_gem) and in_array($val, $stone_type_gem)) :?> checked="checked" <?endif?>>
+                                <i class="brilliant-ico2 brilliant-s1"></i>
+                                <span><?php echo $rows; ?></span>
+                            </label>
+                            <?endforeach?>
                         </div>
                     </div>
-
-                    <div class="one-line">
-                        <div class="title">Carat
-
-                        </div>
+                </div>
+                <div class="filter-col filter-diamond-right wide-title">
+                    <div class="filter-col-title">Carat</div>
+                    <div class="filter-col-options">
                         <div class="filter-block filter1">
-                            <div id="slider-weight"></div>
                             <div class="clearfix">
                                 <input type="text" value="<?=round($WeightFrom, 2)?>" id="amountWeight1" class="dop-filtr-weight-min input-slider-p pull-left" name="min_weight">
                                 <input type="text" value="<?=round($WeightTo, 2)?>" id="amountWeight2" class="dop-filtr-weight-max input-slider-p pull-right" name="max_weight">
                             </div>
+                            <div id="slider-weight"></div>
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
+            <div class="filter-row">
+                <div class="filter-col filter-diamond-left wide-title">
+                    <div class="filter-col-title">Color</div>
+                    <div class="filter-col-options">
+                        <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box color-group" data-toggle="buttons">
+                            <div class="all-line-filter">
+                                <a href="#" class="active">All</a>
+                            </div>
+                            <?php foreach (arr_primary_color() as $val => $rows) :?>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked>
+                                <i class="color-circle" style="border-color: red"></i>
+                                <span><?php echo $rows; ?></span>
+                            </label>
+                            <?endforeach?>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-col filter-diamond-right wide-title">
+                    <div class="filter-col-title">Price</div>
+                    <div class="filter-col-options">
+                        <div class="filter-block filter1">
+                            <div class="clearfix">
+                                <input type="text" value="$<?=number_format($PriceFrom)?>" id="amountPrice1" class="dop-filtr-price-min input-slider-p pull-left" name="min_price">
+                                <input type="text" value="$<?=number_format($PriceTo)?>" id="amountPrice2" class="dop-filtr-price-max input-slider-p pull-right" name="max_price">
+                            </div>
+                            <div id="slider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-row">
+                <div class="filter-col wide-title">
+                    <div class="filter-col-title">Shape</div>
+                    <div class="filter-col-options">
+                        <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
 
+                            <div class="all-line-filter">
+                                <a href="#" class="active">All</a>
+                            </div>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked>
+                                <i class="brilliant-ico2 brilliant-s1"></i>
+                                <span>Round<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Princess" name="shape" id="option2" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s2"></i>
+                                <span>Princess<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Asscher"  name="shape" id="option3" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s3"></i>
+                                <span>Asscher<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Cushion"  name="shape" id="option4" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s4"></i>
+                                <span>Cushion<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Marquise" name="shape" id="option5" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s5"></i>
+                                <span>Marquise<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Oval"  name="shape" id="option6" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s6"></i>
+                                <span>Oval<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Radiant" name="shape" id="option7" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s7"></i>
+                                <span>Radiant<br><span>Cut</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Pear"  name="shape" id="option8" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s8"></i>
+                                <span>Pear<br><span>Shaped</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Heart"  name="shape" id="option9" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s9"></i>
+                                <span>Heart<br><span>Shaped</span></span>
+                            </label>
+                            <label class="btn btn-filter brackets">
+                                <input type="radio" value="Emerald"  name="shape" id="option10" autocomplete="off">
+                                <i class="brilliant-ico2 brilliant-s10"></i>
+                                <span>Emerald<br><span>Cut</span></span>
+                            </label>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="functional-filter filter-buttons clearfix">
+            <button class="filter-default-result w-clear-filtr-product">Clear filter</button>
+            <button class="filter-change"><span>Hide filter’s block</span></button>
+            <button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript">
 
