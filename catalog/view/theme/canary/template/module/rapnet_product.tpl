@@ -122,9 +122,35 @@
                                             </tr>
                                             <tr>
                                                 <td><span>COLOR: <?=$product->response->body->diamond->color?></span></td>
-                                                <td><span><a href="#" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('#diamant-more-spec').offset().top - 20}, 'slow'); return false;" class="prod-more-spec">More specifications »</a></span></td>
+                                                <td><span><a href="#" onclick="return false;" class="prod-more-spec" data-toggle="collapse" data-target="#diamondMoreSpec"><span class="text1">More</span><span class="text2">Less</span> specifications »</a></span></td>
                                             </tr>
                                         </table>
+                                        <div id="diamondMoreSpec" class="collapse">
+                                            <table class="table">
+                                                <tr>
+                                                    <td><span>SYMMETRY: <?=$product->response->body->diamond->symmetry?></span></td>
+                                                    <td><span>DEPTH %: <?=$product->response->body->diamond->depth_percent?></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>GIRDLE: <?=$product->response->body->diamond->girdle_max?></span></td>
+                                                    <td><span>FLUORESCENCE: <?=$product->response->body->diamond->fluor_intensity?></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>TABLE %: <?=$product->response->body->diamond->table_percent?></span></td>
+                                                    <td><span>L/W/D (MM) <?=$product->response->body->diamond->meas_length?>
+                                                                        *<?=$product->response->body->diamond->meas_width?>
+                                                                        *<?=$product->response->body->diamond->meas_depth?></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>CULET: <?=$product->response->body->diamond->culet_size?></span></td>
+                                                    <td><span>CUT: <?=$product->response->body->diamond->cut?></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>L/W RATIO: 1.01</span></td>
+                                                    <td><span>Certificate: GIA</span></td>
+                                                </tr>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                                 <input type="hidden" id="w-diamond_id" value="<?php echo $product->response->body->diamond->diamond_id?>">
@@ -150,9 +176,35 @@
                                             </tr>
                                             <tr>
                                                 <td><span>COLOR: <?=$product->response->body->diamond->color?></span></td>
-                                                <td><span><a href="#" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('#diamant-more-spec').offset().top - 20}, 'slow'); return false;" class="prod-more-spec">More specifications »</a></span></td>
+                                                <td><span><a href="#" onclick="return false;" class="prod-more-spec" data-toggle="collapse" data-target="#diamondMoreSpec1"><span class="text1">More</span><span class="text2">Less</span> specifications »</a></span></td>
                                             </tr>
                                         </table>
+                                        <div id="diamondMoreSpec1" class="collapse">
+                                            <table class="table">
+                                                <tr>
+                                                    <td><span>SYMMETRY: <?=$product->response->body->diamond->symmetry?></span></td>
+                                                    <td><span>DEPTH %: <?=$product->response->body->diamond->depth_percent?></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>GIRDLE: <?=$product->response->body->diamond->girdle_max?></span></td>
+                                                    <td><span>FLUORESCENCE: <?=$product->response->body->diamond->fluor_intensity?></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>TABLE %: <?=$product->response->body->diamond->table_percent?></span></td>
+                                                    <td><span>L/W/D (MM) <?=$product->response->body->diamond->meas_length?>
+                                                                        *<?=$product->response->body->diamond->meas_width?>
+                                                                        *<?=$product->response->body->diamond->meas_depth?></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>CULET: <?=$product->response->body->diamond->culet_size?></span></td>
+                                                    <td><span>CUT: <?=$product->response->body->diamond->cut?></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span>L/W RATIO: 1.01</span></td>
+                                                    <td><span>Certificate: GIA</span></td>
+                                                </tr>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

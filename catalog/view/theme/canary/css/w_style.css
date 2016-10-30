@@ -1498,6 +1498,11 @@ star-rating
     border: none;
     padding: 0 8px;
 }
+
+.product-details .table > tbody > tr > td {
+    width: 50%;
+}
+
 .product-details .table > tbody > tr > td > span {
     position: relative;
     padding-left: 35px;
@@ -1524,6 +1529,34 @@ star-rating
 .product-details .table .prod-more-spec:hover {
     text-decoration: none;
 }
+
+.product-details .table .prod-more-spec .text1 {
+    display: inline-block;
+}
+
+.product-details .table .prod-more-spec .text2 {
+    display: none;
+}
+
+.product-details .table .prod-more-spec span {
+    text-decoration: inherit;
+}
+
+.product-details .table .prod-more-spec[aria-expanded="true"] .text1{
+    display: none;
+}
+.product-details .table .prod-more-spec[aria-expanded="true"] .text2{
+    display: inline-block;
+}
+
+#diamondMoreSpec .table {
+    margin: 0;
+}
+
+#diamondMoreSpec {
+    margin: -8px 0 10px;
+}
+
 
 .product-tags {
     margin-left: -13px;
@@ -1644,6 +1677,10 @@ star-rating
     border-right: none;
     padding: 25px 30px 28px;
     vertical-align: top;
+}
+
+.diamant-more-left .product-details .table > tbody > tr > td {
+    width: 33.3333333%;
 }
 
 .diamant-more-right {
@@ -3242,7 +3279,8 @@ text-align: left;
 .filter-col-options .btn-filter span {
     display: block;
     line-height: 1.1;
-    margin: 2px -10px;
+    margin: 2px -9px;
+    white-space: normal;
 }
 
 .filter-col-options .btn-filter {
@@ -3396,6 +3434,21 @@ text-align: left;
 
 .wide-title .filter-col-options .btn-filter {
     width: 77px;
+}
+
+.color-circle {
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: 0 auto 12px;
+    padding: 2px;
+    border: 2px solid #000;
+    font-size: 12px;
+    color: #2f2e2d;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
 }
 
 
@@ -3599,6 +3652,14 @@ text-align: left;
 
     .width30 {
         width: 50%;
+    }
+
+    .product-details .table > tbody > tr > td {
+        width: 100%;
+    }
+
+    .diamant-more-left .product-details .table > tbody > tr > td {
+        width: 100%;
     }
 
 }
