@@ -201,10 +201,10 @@
   </div>
 
 
-    <div class="include-price-row no-bottom-margin">
-      <input type="button"  class="cc-continue-btn" value="<?php echo $button_continue; ?>" id="button-payment-address" data-loading-text="<?php echo $text_loading; ?>"/>
+    <div class="text-right">
+        <input type="button" class="btn login-form-btn btn-lg active-c" id="button-payment-address" value="<?php echo $button_continue; ?>" data-loading-text="<?php echo $text_loading; ?>"
+                style="width: 200px; display: inline-block;" />
     </div>
-
 
 
 </form>

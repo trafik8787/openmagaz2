@@ -42,15 +42,15 @@
     <br>
 
 
-    <p><strong><?php echo $text_comments; ?></strong></p>
+    <p><strong><a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><?php echo $text_comments; ?></a></strong></p>
     <p>
-        <textarea name="comment" rows="8" class="form-control"><?php echo $comment; ?></textarea>
+        <textarea name="comment" rows="8" class="form-control collapse" id="collapseExample"><?php echo $comment; ?></textarea>
     </p>
 
 
     <?php if ($text_agree) { ?>
 
-        <div>
+        <div style="margin-top: 20px;">
             <p>
                 <?php if ($agree) { ?>
                     <input type="checkbox" class="styled-checkbox styled-checkbox-before" id="w-agree" name="agree" value="1" checked="checked"/>
@@ -60,14 +60,20 @@
 
                 <label for="w-agree"><?php echo $text_agree; ?></label>
             </p>
-            <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-method"
-                   data-loading-text="<?php echo $text_loading; ?>" class="cc-continue-btn"/>
+
+            <div class="text-right">
+                <input type="button" class="btn login-form-btn btn-lg active-c" id="button-payment-method" value="<?php echo $button_continue; ?>" data-loading-text="<?php echo $text_loading; ?>"
+                       style="width: 200px; display: inline-block;" />
+            </div>
         </div>
 
     <?php } else { ?>
 
-            <input type="button" value="<?php echo $button_continue; ?>" id="button-payment-method"
-                   data-loading-text="<?php echo $text_loading; ?>" class="cc-continue-btn"/>
+
+            <div class="text-right">
+                <input type="button" class="btn login-form-btn btn-lg active-c" id="button-payment-method" value="<?php echo $button_continue; ?>" data-loading-text="<?php echo $text_loading; ?>"
+                       style="width: 200px; display: inline-block;" />
+            </div>
 
     <?php } ?>
 

@@ -24,5 +24,25 @@
         </div>
         <?=$login_facebook?>
     </div>
-    <input type="radio" name="account" value="register" checked="checked" style="display: none;"/>
+    <div>
+        <label>
+            <?php if ($account == 'register') { ?>
+            <input type="radio" name="account" value="register" checked="checked" />
+            <?php } else { ?>
+            <input type="radio" name="account" value="register" />
+            <?php } ?>
+            <?php echo $text_register; ?></label>
+    </div>
+    <?php if ($checkout_guest) { ?>
+    <div>
+        <label>
+            <?php if ($account == 'guest') { ?>
+            <input type="radio" name="account" value="guest" checked="checked" />
+            <?php } else { ?>
+            <input type="radio" name="account" value="guest" />
+            <?php } ?>
+            <?php echo $text_guest; ?></label>
+    </div>
+    <?php } ?>
+    <p><input type="button" value="<?php echo $button_continue; ?>" id="button-account" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary" /></p>
 </div>

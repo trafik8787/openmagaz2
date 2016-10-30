@@ -1,48 +1,51 @@
 <form id="payment">
-    <fieldset>
-        <div class="shipping-text">
-            <strong><?php echo $text_credit_card; ?></strong>
+    <div class="blue-check">
+        <div class="mark-line">
+            <i class="mark-check1"></i>
+            Your billing information must match the billing address for the credit card entered below
+            or we will be unable to process your payment
         </div>
-        <div class="cc-shipping-row required">
-            <input type="text" name="cc_owner" id="input-cc-owner" class="shipping-input" required/>
-            <label for="input-cc-owner" class="shipping-label"><?php echo $entry_cc_owner; ?></label>
+        <div class="clearfix box-card-l">
+            <div style="margin-bottom: 12px;width: 57%;">
+                <input type="text" name="cc_owner" id="input-cc-owner" placeholder="<?php echo $entry_cc_owner; ?>" required="required">
+            </div>
 
-        </div>
-        <div class="cc-shipping-row required">
-            <input type="text" name="cc_number" id="input-cc-number" class="shipping-input" required/>
-            <label for="input-cc-number" class="shipping-label"><?php echo $entry_cc_number; ?></label>
+            <div class="long-input">
+                <input type="text" name="cc_number" id="input-cc-number" placeholder="<?php echo $entry_cc_number; ?>" required="required">
+            </div>
+            <div class="select-t">
 
-        </div>
-        <div class="cc-shipping-row required">
-            <!--<label for="input-cc-expire-date" class="shipping-label"><?php echo $entry_cc_expire_date; ?></label>-->
-            <div class="col-sm-3">
-                <select name="cc_expire_date_month" id="input-cc-expire-date" class="shipping-input select-simulate-input">
+                <select name="cc_expire_date_month" id="input-cc-expire-date" >
                     <?php foreach ($months as $month) { ?>
                     <option value="<?php echo $month['value']; ?>"><?php echo $month['text']; ?></option>
                     <?php } ?>
                 </select>
+
             </div>
-            <div class="col-sm-3">
-                <select name="cc_expire_date_year" class="shipping-input select-simulate-input">
+            <div class="select-t">
+                <select name="cc_expire_date_year">
                     <?php foreach ($year_expire as $year) { ?>
                     <option value="<?php echo $year['value']; ?>"><?php echo $year['text']; ?></option>
                     <?php } ?>
                 </select>
+
             </div>
+            <div class="small-input">
+                <input type="text" name="cc_cvv2" id="input-cc-cvv2" placeholder="CVV" required="required">
+            </div>
+            <a href="#" class="mark-check2"></a>
         </div>
-        <div class="cc-shipping-row required">
 
-                <input type="text" name="cc_cvv2" id="input-cc-cvv2" class="shipping-input" required/>
-                <label for="input-cc-cvv2" class="shipping-label"><?php echo $entry_cc_cvv2; ?></label>
-
-        </div>
-    </fieldset>
+    </div>
 </form>
 
+<div class="text-center">
+    <div class="box-btn-checkout">
 
-<div class="include-price-row no-bottom-margin">
-    <input type="button" value="<?php echo $button_confirm; ?>" id="button-confirm" class="cc-continue-btn"/>
+        <input type="button" class="btn login-form-btn btn-lg active-c" id="button-confirm" value="<?php echo $button_confirm; ?>" style="width: 200px; display: inline-block;" />
+    </div>
 </div>
+
 
 <script type="text/javascript"><!--
 $('#button-confirm').on('click', function () {

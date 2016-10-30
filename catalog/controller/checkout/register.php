@@ -186,13 +186,19 @@ class ControllerCheckoutRegister extends Controller {
 				$json['error']['zone'] = $this->language->get('error_zone');
 			}
 
-			if ((utf8_strlen($this->request->post['password']) < 4) || (utf8_strlen($this->request->post['password']) > 20)) {
-				$json['error']['password'] = $this->language->get('error_password');
-			}
+//			if ((utf8_strlen($this->request->post['password']) < 4) || (utf8_strlen($this->request->post['password']) > 20)) {
+//				$json['error']['password'] = $this->language->get('error_password');
+//			}
+//
+//			if ($this->request->post['confirm'] != $this->request->post['password']) {
+//				$json['error']['confirm'] = $this->language->get('error_confirm');
+//			}
 
-			if ($this->request->post['confirm'] != $this->request->post['password']) {
-				$json['error']['confirm'] = $this->language->get('error_confirm');
-			}
+            $this->request->post['password'] = uniqid(rand(),1);
+
+
+
+
 
 			if ($this->config->get('config_account_id')) {
 				$this->load->model('catalog/information');

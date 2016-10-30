@@ -3646,8 +3646,9 @@ footer > section .row {
   margin-bottom: 10px; }
 
 .cc-header {
-  background-color: #f1f1f1;
-  padding: 12px 25px; }
+  /* background-color: #f1f1f1; */
+  /* padding: 12px 25px; */
+  }
 .cc-header:after {
   content: "";
   display: block;
@@ -3660,7 +3661,7 @@ footer > section .row {
   float: left; }
 
 .cc-body {
-  padding: 6px 2px 0 2px;
+  /* padding: 6px 2px 0 2px; */
 }
 
 .cc-login-text {
@@ -8394,7 +8395,7 @@ footer > section .row {
 }
 
 .right-checkout .title-c{
-  margin-bottom: 25px!important;
+  /* margin-bottom: 25px!important; */
   color: #1e3e7e;
   font-family: "Felix Titling";
   font-size: 21px;
@@ -8454,24 +8455,29 @@ footer > section .row {
   margin-bottom: 4px;
 }
 .right-checkout label{
-  padding-left: 15px;
+  padding-left: 25px;
   font-weight: normal;
 }
 .right-checkout{
   border: 2px solid #e0e0e0;
+  padding-top: 16px;
 }
 
 .right-checkout .line-with-input > div:last-child{
   margin-bottom: 0;
 }
 .right-checkout .line-with-input > div{
-  margin-bottom: 15px;
+  margin-bottom: 6px;
+}
+
+.right-checkout .line-with-input:first-child {
+    /* padding-top: 18px; */
 }
 
 .right-checkout .line-with-input{
   margin: 0 30px;
-  padding: 25px 0;
-  border-bottom: 2px solid #e0e0e0;
+  padding: 7px 0;
+  /* border-bottom: 2px solid #e0e0e0; */
 }
 
 .right-checkout .check-bl img{

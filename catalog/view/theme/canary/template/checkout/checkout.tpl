@@ -115,422 +115,100 @@
                     </div>
                     <div class="col-md-8 col-sm-7">
                         <form action="">
-                            <div class="right-checkout">
-                                    <div class="line-with-input">
-                                        <div class="title-c">CUSTOMER INFORMATION</div>
-                                        <div class="clearfix">
-                                            <div class="bl-input must">
-                                                <input type="text" placeholder="Enter Email">
+                            <div class="right-checkout panel-group" id="accordion">
+                                    <div class="panel cc-block">
+                                        <div class="cc-header line-with-input">
+                                            <div class="title-c cc-title"><?php echo $text_checkout_option; ?></div>
+                                        </div>
+                                        <div class="panel-collapse collapse " id="collapse-checkout-option">
+
+                                            <div class="cc-body">
+
                                             </div>
-                                            <div class="text-right-input">
-                                                or <a href="#">login</a> with an existing account and return to checkout
-                                            </div>
+
                                         </div>
                                     </div>
-                                    <div class="line-with-input">
-                                        <div class="title-c">DELIVERY  INFORMATION</div>
-                                        <div class="clearfix">
-                                            <div class="bl-input must">
-                                                <input type="text" placeholder="First name">
-                                            </div>
-                                            <div class="bl-input">
-                                                <input type="text" placeholder="Last name">
-                                            </div>
+
+
+
+                                <?php if (!$logged && $account != 'guest') :?>
+
+                                    <div class="line-with-input panel cc-block">
+
+                                        <div class="cc-header line-with-input">
+                                            <div class="title-c cc-title"><?php echo $text_checkout_account; ?></div>
                                         </div>
-                                        <div class="clearfix">
-                                            <div class="bl-input must">
-                                                <input type="text" placeholder="Address">
+                                        <div class="panel-collapse collapse" id="collapse-payment-address">
+                                            <div class="cc-body line-with-input" style="margin-top: 20px; margin-bottom: 20px;">
+
                                             </div>
-                                            <div class="bl-input must">
-                                                <input type="text" placeholder="Address (cont.)">
-                                            </div>
-                                        </div>
-                                        <div class="clearfix">
-                                            <div class="bl-input must">
-                                                <input type="text" placeholder="City">
-                                            </div>
-                                            <div class="bl-input clearfix">
-                                                <div class="bl-input must">
-                                                    <select>
-                                                        <option value="">State/Province</option>
-                                                    </select>
-                                                </div>
-                                                <div class="bl-input must">
-                                                    <select>
-                                                        <option value="">USA</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clearfix">
-                                            <div class="bl-input must">
-                                                <input type="text" placeholder="Postal code">
-                                            </div>
-                                            <div class="bl-input must">
-                                                <input type="text" placeholder="Phone number">
-                                            </div>
-                                        </div>
-                                        <p>
-                                            Orders cannot be shipped to a P.O. Box<br/>
-                                            Please make sure to provide a street address where a signature can be obtained for receipt
-                                        </p>
-                                    </div>
-                                    <div class="check-bl">
-                                        <div class="title-c">BILLING INFORMATION</div>
-                                        <input type="checkbox" id="billing"><label for="billing">My billing information is the same as my delivery information</label>
-                                    </div>
-                                    <div class="airplane-block">
-                                        <div class="check-bl radio-bl">
-                                            <div class="title-c">CALCULATE SHIPPING COST</div>
-                                            <div>
-                                                <input type="radio" id="cost1" name="cost"><label for="cost1">FedEx Priority Overnight®: $0,00</label>
-                                            </div>
-                                            <div>
-                                                <input type="radio" id="cost2" name="cost"><label for="cost2">Saturday Delivery (Priority): $35,00</label>
-                                            </div>
-                                            <div>
-                                                <input type="radio" id="cost3" name="cost"><label for="cost3">Hold at Location (FedEx): $0,00</label>
-                                            </div>
-                                        </div>
-                                        <img src="/catalog/view/theme/canary/img/airplane.png" alt="airplane" class="airplane-img">
-                                    </div>
-                                    <div class="check-bl radio-bl">
-                                        <div class="title-c">PAYMENT METHOD</div>
-                                        <div>
-                                            <input type="radio" id="payment1" name="cost"><label for="payment1">Credit card
-                                                <img src="/catalog/view/theme/canary/img/visa.png" alt="img">
-                                                <img src="/catalog/view/theme/canary/img/mastercard.png" alt="img">
-                                                <img src="/catalog/view/theme/canary/img/discover.png" alt="img">
-                                                <img src="/catalog/view/theme/canary/img/americanexpress.png" alt="img">
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="payment2" name="cost"><label for="payment2">PayPal Credit
-                                                <img src="/catalog/view/theme/canary/img/credit8.png" alt="img">
-                                            </label>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="payment3" name="cost"><label for="payment3">Bank Transfer (2% Discount)</label>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="payment4" name="cost"><label for="payment4">Phone Order</label>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="payment5" name="cost"><label for="payment5">PayPal
-                                                <img src="/catalog/view/theme/canary/img/paypal.png" alt="img">
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="blue-check">
-                                        <div class="mark-line">
-                                            <i class="mark-check1"></i>
-                                            Your billing information must match the billing address for the credit card entered below
-                                            or we will be unable to process your payment
-                                        </div>
-                                        <div class="clearfix box-card-l">
-                                            <div class="long-input">
-                                                <input type="text" placeholder="Card Number">
-                                            </div>
-                                            <div class="select-t">
-                                                <select>
-                                                    <option value="">Expiration Month</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-t">
-                                                <select>
-                                                    <option value="">Expiration Year</option>
-                                                </select>
-                                            </div>
-                                            <div class="small-input">
-                                                <input type="text" placeholder="CVV">
-                                            </div>
-                                            <a href="#" class="mark-check2"></a>
                                         </div>
 
                                     </div>
+
+
+                                <?else:?>
+
+                                    <div class="line-with-input panel cc-block">
+                                        <div class="cc-header">
+                                            <div class="title-c cc-title">DELIVERY  INFORMATION</div>
+                                        </div>
+
+                                        <div id="collapse-payment-address">
+                                            <div class="cc-body">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                <?endif?>
+
+
+
+
+                                    <div class="line-with-input panel cc-block">
+                                        <div class="cc-header">
+                                            <div class="title-c cc-title"><?php echo $text_checkout_payment_method; ?></div>
+                                        </div>
+                                        <div id="collapse-payment-method">
+                                            <div class="cc-body">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="line-with-input panel cc-block">
+                                        <div class="cc-header">
+                                            <div class="title-c cc-title"><?php echo $text_checkout_confirm; ?></div>
+                                        </div>
+
+                                        <div id="collapse-checkout-confirm">
+                                            <div class="cc-body">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
                             </div>
-                            <div class="agree-checkout-box">
-                                <input type="checkbox" id="agreeCheckout"><label for="agreeCheckout">I've read and agree to Brilliant Canary's Terms & Conditions and Privacy Policy</label>
-                            </div>
-                            <div class="box-btn-checkout">
-                                <button class="btn login-form-btn btn-lg active-c"> <i class="submit-order-ico"></i> SUBMIT ORDER</button>
-                                <br/>
-                                <button class="btn login-form-btn btn-lg"> <i class="submit-order-ico"></i> SUBMIT ORDER</button>
-                            </div>
+
                         </form>
                     </div>
                 </div>
-                <div class="scheckout-page-title">Secure Checkout</div>
-                <div class="row">
-                    <div class="col-md-3 col-xs-3 col-sm-3">
-                        <div class="checkout-info-wrap">
-                            <div class="checkout-info-title">ORDER SUMMARY</div>
-                            <div class="summary-item-list">
-
-                                <?foreach ($cart['products'] as $row_cart):?>
-
-                                    <div class="summary-item">
-                                        <div class="summary-item-img">
-                                            <img src="<?=$row_cart['thumb']?>" alt="">
-                                        </div>
-                                        <a href="<?=$row_cart['href']?>" class="summary-item-title"><?=$row_cart['name']?> :X <?=$row_cart['quantity']?></a>
-                                        <p class="summary-item-desc"><?=$row_cart['model']?></p>
-                                        <?if (!empty($row_cart['option'])):?>
-                                            <p class="summary-item-desc">
-                                                <?foreach ($row_cart['option'] as $rows):?>
-                                                   <span><?=$rows['name']?>: <?=$rows['value']?></span><br>
-
-                                                <?endforeach?>
-                                            </p>
-                                        <?endif?>
-                                        <div class="summary-item-price"><?=$row_cart['price']?></div>
-                                    </div>
-                                <?endforeach?>
-
-                            </div>
-
-                            <div class="summary-price">
-                                <div class="sp-text"><?=$cart['totals'][0]['title']?>:</div>
-                                <div class="sp-price"><span class="text-red"><?=$cart['totals'][0]['text']?></span></div>
-                            </div>
-                            <div class="del-price-item"><i class="c-yellow-truck"></i><span class="spi-text">Shipping free</span> free</div>
-                            <div class="del-price-item"><i class="c-yellow-label"></i><span class="spi-text">Mounting free</span> free</div>
-                            <div class="del-price-item taxes-item">Taxes
-                                <button type="button" class="question-filter-btn" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="" aria-describedby="popover658252">
-                                    <span class="question-filter"><i class="fa fa-question-circle"></i></span>
-                                </button>
-                            </div>
-                            <div class="summary-price">
-                                <div class="sp-text"><?=$cart['totals'][1]['title']?>:</div>
-                                <div class="sp-price"><span class="text-red"><?=$cart['totals'][1]['text']?></span><br>
-                                    <!--<span class="sp-price-smaller">Ships by Tuesday, April 12</span>-->
-                                </div>
-                            </div>
-                            <input type="text" class="summary-input" placeholder="Have a diamond ?">
-                            <input type="text" class="summary-input" placeholder="Enter Coupon Code">
-                            <div class="summary-cart-list">
-                                <div class="summary-cart-item"><img src="/catalog/view/theme/canary/img/visa.png" alt=""></div>
-                                <div class="summary-cart-item"><img src="/catalog/view/theme/canary/img/mastercard.png" alt=""></div>
-                                <div class="summary-cart-item"><img src="/catalog/view/theme/canary/img/discover.png" alt=""></div>
-                                <div class="summary-cart-item"><img src="/catalog/view/theme/canary/img/americanexpress.png" alt=""></div>
-                                <div class="summary-cart-item"><img src="/catalog/view/theme/canary/img/paypal.png" alt=""></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-xs-6 col-sm-6">
-
-
-                        <div class="checkout-center panel-group" id="accordion">
-                            <div class="panel cc-block">
-                                <!--*1. SIGN IN TO CHECKOUT*-->
-                                <div class="cc-header">
-                                    <div class="cc-title"><?php echo $text_checkout_option; ?></div>
-                                </div>
-                                <div id="collapse-checkout-option">
-                                    <div class="cc-body">
-
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <?php if (!$logged && $account != 'guest') :?>
-
-                                <div class="panel cc-block">
-                                    <div class="cc-header">
-                                        <div class="cc-title"><?php echo $text_checkout_account; ?></div>
-                                    </div>
-
-                                    <div class="panel-collapse collapse" id="collapse-payment-address">
-                                        <div class="cc-body">
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            <?else:?>
-
-                                <div class="panel cc-block">
-                                    <div class="cc-header">
-                                        <div class="cc-title"><?php echo $text_checkout_payment_address; ?></div>
-                                    </div>
-                                    <div id="collapse-payment-address">
-                                        <div class="cc-body">
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            <?endif?>
-
-
-                            <?php if ($shipping_required) : ?>
-
-                                <div class="panel cc-block">
-                                    <div class="cc-header">
-                                        <div class="cc-title"><?php echo $text_checkout_shipping_address; ?></div>
-                                    </div>
-
-                                    <div id="collapse-shipping-address">
-                                        <div class="cc-body">
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="panel cc-block">
-                                    <div class="cc-header">
-                                        <div class="cc-title"><?php echo $text_checkout_shipping_method; ?></div>
-                                    </div>
-
-                                    <div id="collapse-shipping-method">
-                                        <div class="cc-body">
-
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            <?endif?>
-
-
-
-                            <div class="panel cc-block">
-                                <div class="cc-header">
-                                    <div class="cc-title"><?php echo $text_checkout_payment_method; ?></div>
-                                </div>
-
-                                <div id="collapse-payment-method">
-                                    <div class="cc-body">
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                            <div class="panel cc-block">
-                                <div class="cc-header">
-                                    <div class="cc-title"><?php echo $text_checkout_confirm; ?></div>
-                                </div>
-
-                                <div id="collapse-checkout-confirm">
-                                    <div class="cc-body">
-
-                                    </div>
-                                </div>
-
-                            </div>
 
 
 
 
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-xs-3 col-sm-3">
-                        <div class="checkout-info-wrap">
-                            <div class="checkout-info-title">PURCHASE WITH CONFIDENCE</div>
-                            <ul class="faq-list">
-                                <li>
-                                    <span class="faq-question">Do you have a retail store </span>
-                                    <div class="faq-answer-block">
-                                        <div class="answer-block-question">Do you clean or provide care for jewelry sold on your site?</div>
-                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
-                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
-                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="faq-question">Do you have a retail store</span>
-                                    <div class="faq-answer-block">
-                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
-                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
-                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
-                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="faq-question">Do you have gemologists on staff?</span>
-                                    <div class="faq-answer-block">
-                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
-                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
-                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
-                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="faq-question">Where are the corporate offices</span>
-                                    <div class="faq-answer-block">
-                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
-                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
-                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
-                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="faq-list">
-                                <li>
-                                    <span class="faq-question">Do you have a retail store </span>
-                                    <div class="faq-answer-block">
-                                        <div class="answer-block-question">Do you clean or provide care for jewelry sold on your site?</div>
-                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
-                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
-                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="faq-question">Do you have a retail store</span>
-                                    <div class="faq-answer-block">
-                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
-                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
-                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
-                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="faq-question">Do you have gemologists on staff?</span>
-                                    <div class="faq-answer-block">
-                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
-                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
-                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
-                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="faq-question">Where are the corporate offices</span>
-                                    <div class="faq-answer-block">
-                                        <div class="answer-block-question">Do you have a retail store located in my state?</div>
-                                        <p> does not operate retail locations. This allows us to cut overhead costs and focus exclusively on quality and service - providing you with a high quality product at a much better value than your local jewelry store.</p>
-                                        <p>By the same token, we understand how important it is for our customers to see and feel jewelry - especially a piece of jewelry as personal as an engagement ring. That's why we offer free shipping on all our items, a 30-day money back guarantee, and free ring resizing for 60 days after your purchase.</p>
-                                        <p>That being said, we have offices in both Maryland and New York City, in the heart of the diamond district.</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="checkout-info-inner-wrap checkout-info-actionsblock">
-                                <div class="ci-title">24/7 Customer Service</div>
-                                <div class="ci-phone"><i class="c-yellow-phone"></i>800-214-6550</div>
-                                <div class="ci-actions-list">
-                                    <a href="#" class="ci-action-item">
-                                        <span class="ci-action-ico"><i class="c-yellow-chat"></i></span>
-                                        Chat now
-                                    </a>
-                                    <a href="#" class="ci-action-item">
-                                        <span class="ci-action-ico"><i class="c-yellow-envelope"></i></span>
-                                        Send massage
-                                    </a>
-                                    <a href="#" class="ci-action-item">
-                                        <span class="ci-action-ico"><i class="c-yellow-inphone"></i></span>
-                                        Call back
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="/faq" class="tofaq-link w-general-category">Try FAQ</a>
-                        </div>
-                    </div>
-                </div>
+
+
+
+
+
             </div>
         </div>
     </section>
@@ -740,7 +418,7 @@ $(document).on('click', '#button-register', function() {
                 $('#button-register').button('reset');
 
                 if (json['error']['warning']) {
-                    $('#collapse-payment-address .cc-body').prepend('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+                    $('#collapse-payment-address .cc-body').prepend('<div class="alert alert-danger we"><i class="fa fa-exclamation-circle"></i> ' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
                 }
 
 				for (i in json['error']) {
@@ -1278,7 +956,6 @@ $(document).delegate('#button-shipping-method', 'click', function() {
 
 $(document).delegate('#button-payment-method', 'click', function() {
 
-    $(this).parents('.collapse').collapse('hide');
 
     $.ajax({
         url: 'index.php?route=checkout/payment_method/save',
@@ -1299,6 +976,7 @@ $(document).delegate('#button-payment-method', 'click', function() {
                     $('#button-payment-method').button('reset');
                 }
             } else {
+
                 $.ajax({
                     url: 'index.php?route=checkout/confirm',
                     dataType: 'html',
@@ -1309,13 +987,14 @@ $(document).delegate('#button-payment-method', 'click', function() {
                         $('#collapse-checkout-confirm .cc-body').html(html);
 
 						$('#collapse-checkout-confirm').parent().find('.cc-header .cc-title').html('<a href="#collapse-checkout-confirm" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $text_checkout_confirm; ?> <i class="fa fa-caret-down"></i></a>');
-
+                        $(this).parents('.collapse').collapse('hide');
 						$('a[href=\'#collapse-checkout-confirm\']').trigger('click');
 					},
                     error: function(xhr, ajaxOptions, thrownError) {
                         alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
                     }
                 });
+
             }
         },
         error: function(xhr, ajaxOptions, thrownError) {
