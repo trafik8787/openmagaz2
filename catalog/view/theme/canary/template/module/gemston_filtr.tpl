@@ -19,7 +19,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="filter-col filter-diamond-right wide-title">
+                <div class="filter-col filter-diamond-right">
                     <div class="filter-col-title">Carat</div>
                     <div class="filter-col-options">
                         <div class="filter-block filter1">
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="filter-col filter-diamond-right wide-title">
+                <div class="filter-col filter-diamond-right">
                     <div class="filter-col-title">Price</div>
                     <div class="filter-col-options">
                         <div class="filter-block filter1">
