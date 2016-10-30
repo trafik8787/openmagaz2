@@ -1498,6 +1498,11 @@ star-rating
     border: none;
     padding: 0 8px;
 }
+
+.product-details .table > tbody > tr > td {
+    width: 50%;
+}
+
 .product-details .table > tbody > tr > td > span {
     position: relative;
     padding-left: 35px;
@@ -1524,6 +1529,34 @@ star-rating
 .product-details .table .prod-more-spec:hover {
     text-decoration: none;
 }
+
+.product-details .table .prod-more-spec .text1 {
+    display: inline-block;
+}
+
+.product-details .table .prod-more-spec .text2 {
+    display: none;
+}
+
+.product-details .table .prod-more-spec span {
+    text-decoration: inherit;
+}
+
+.product-details .table .prod-more-spec[aria-expanded="true"] .text1{
+    display: none;
+}
+.product-details .table .prod-more-spec[aria-expanded="true"] .text2{
+    display: inline-block;
+}
+
+#diamondMoreSpec .table {
+    margin: 0;
+}
+
+#diamondMoreSpec {
+    margin: -8px 0 10px;
+}
+
 
 .product-tags {
     margin-left: -13px;
@@ -1644,6 +1677,10 @@ star-rating
     border-right: none;
     padding: 25px 30px 28px;
     vertical-align: top;
+}
+
+.diamant-more-left .product-details .table > tbody > tr > td {
+    width: 33.3333333%;
 }
 
 .diamant-more-right {
@@ -3599,6 +3636,14 @@ text-align: left;
 
     .width30 {
         width: 50%;
+    }
+
+    .product-details .table > tbody > tr > td {
+        width: 100%;
+    }
+
+    .diamant-more-left .product-details .table > tbody > tr > td {
+        width: 100%;
     }
 
 }
