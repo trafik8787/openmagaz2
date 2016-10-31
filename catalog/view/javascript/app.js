@@ -31,6 +31,7 @@ $(document).ready(function() {
     //
     //});
 
+
     $(document).on('click',".arrow-btn-number", function(e){
         e.preventDefault();
         if ($(this).attr('data-action')=='plus'){

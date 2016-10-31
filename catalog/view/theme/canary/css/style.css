@@ -2601,14 +2601,27 @@ footer > section .row {
 .contacts-send-btn:hover {
   background-color: rgba(255, 89, 89, 0.8); }
 
+.form-side:first-child{
+  border-left: 0;
+}
+.form-side:last-child{
+  width: 48%;
+  padding-left: 1%;
+}
 .form-side {
   width: 50%;
-  float: left; }
+  float: left;
+  border-left: 1px solid #ccc;
+}
+
+.login-form-wrapper .right-checkout{
+  padding-top: 0;
+  border: 0;
+}
 
 .login-form-wrapper {
   margin: 0 auto;
   padding: 0 30px 0 30px;
-  border-right: 1px solid #ccc;
   }
 
 .login-form-wrapper .form-title {

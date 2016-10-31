@@ -678,6 +678,7 @@
     margin-bottom: 40px;
   }
 
+
   .one-product-slider .slick-initialized.slider-for .slick-slide {
     height: 300px;
   }
@@ -1042,6 +1043,12 @@
 @media  (max-width: 640px){
   .form-group {
     width: 41%;
+  }
+
+  .form-side:last-child {
+    width: 100%;
+    padding-left: 0;
+    border: 0;
   }
   .w-blog-section .thumbnail .caption p {
     font-size: 13px;
