@@ -94,11 +94,17 @@
                                 <table>
                                     <tbody><tr>
                                         <td>Subtotal:</td>
-                                        <td>$1,037.00</td>
+                                        <td><?=$cart['totals'][0]['text']?></td>
                                     </tr>
                                     <tr>
                                         <td>Fedex Shipping:</td>
-                                        <td>Free</td>
+                                        <td>
+                                            <?if ($cart['totals'][0]['value'] > 500):?>
+                                                FedEx Priority Overnight &reg;
+                                            <?else:?>
+                                                FedEx Ground &reg;
+                                            <?endif?>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Sales TAX:</td>
@@ -106,7 +112,7 @@
                                     </tr>
                                     <tr>
                                         <td><span class="total">TOTAL:</span></td>
-                                        <td><span class="all-price">$1,037.00</span></td>
+                                        <td><span class="all-price"><?=$cart['totals'][1]['text']?></span></td>
                                     </tr>
                                     </tbody>
                                 </table>

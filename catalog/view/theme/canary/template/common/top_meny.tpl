@@ -106,7 +106,7 @@
                                 <a href="<?php echo $categories[2]['children'][3]['href']?>" class="w-general-category"><i class="wedding2"></i><br/><?php echo $categories[2]['children'][3]['name']?></a>
                             </li>
                             <li>
-                                <a href="#" class="w-general-category"><i class="all-menu-i"></i><br>All</a>
+                                <a href="<?=$categories[2]['children'][1]['href']?>" class="w-general-category"><i class="all-menu-i"></i><br>All</a>
                             </li>
                         </ul>
                         <div class="title">BROWSE WEDDING RINGS FOR MAN</div><!--*man*-->
@@ -126,7 +126,7 @@
                                 <a href="<?php echo $categories[2]['children'][6]['href']?>" class="w-general-category"><i class="wedding7"></i><br/><?php echo $categories[2]['children'][6]['name']?></a>
                             </li>
                             <li>
-                                <a href="#" class="w-general-category"><i class="all-menu-i"></i><br>All</a>
+                                <a href="<?=$categories[2]['children'][0]['href']?>" class="w-general-category"><i class="all-menu-i"></i><br>All</a>
                             </li>
                             <?endif?>
                         </ul>
@@ -231,37 +231,37 @@
                         <div class="title">Browse settings by color</div>
                         <ul class="color-menu-block">
                             <li class="blue-green">
-                                <a href="#">
+                                <a href="<?php echo $categories[4]['href']?>&primary_color_gem=0,1">
                                     <span></span>
                                     Blue Green
                                 </a>
                             </li>
                             <li class="blue">
-                                <a href="#">
+                                <a href="<?php echo $categories[4]['href']?>&primary_color_gem=2">
                                     <span></span>
                                     Blue
                                 </a>
                             </li>
                             <li class="green">
-                                <a href="#">
+                                <a href="<?php echo $categories[4]['href']?>&primary_color_gem=3">
                                     <span></span>
                                     Green
                                 </a>
                             </li>
                             <li class="pink">
-                                <a href="#">
+                                <a href="<?php echo $categories[4]['href']?>&primary_color_gem=8">
                                     <span></span>
                                     Pink
                                 </a>
                             </li>
                             <li class="red">
-                                <a href="#">
+                                <a href="<?php echo $categories[4]['href']?>&primary_color_gem=10">
                                     <span></span>
                                     Red
                                 </a>
                             </li>
                             <li>
-                                <a href="#"><i class="all-menu-i"></i>All</a>
+                                <a href="<?php echo $categories[4]['href']?>&primary_color_gem=0"><i class="all-menu-i"></i>All</a>
                             </li>
                         </ul>
                     </div>
@@ -269,22 +269,22 @@
                         <div class="title">Browse settings by shape</div>
                         <ul class="brilliant-style brilliant-style-f4 clearfix">
                             <li>
-                                <a href="/diamonds?&amp;shape=Round" class="w-general-category"><i class="brilliant-ico2 brilliant-s1"></i><br>Round</a>
+                                <a href="<?php echo $categories[4]['href']?>&shape_gem=12" class="w-general-category"><i class="brilliant-ico2 brilliant-s1"></i><br>Round</a>
                             </li>
                             <li>
-                                <a href="/diamonds?&amp;shape=Princess" class="w-general-category"><i class="brilliant-ico2 brilliant-s2"></i><br>Princess</a>
+                                <a href="<?php echo $categories[4]['href']?>&shape_gem=9" class="w-general-category"><i class="brilliant-ico2 brilliant-s2"></i><br>Princess</a>
                             </li>
                             <li>
-                                <a href="/diamonds?&amp;shape=Asscher" class="w-general-category"><i class="brilliant-ico2 brilliant-s3"></i><br>Asscher</a>
+                                <a href="<?php echo $categories[4]['href']?>&shape_gem=10" class="w-general-category"><i class="brilliant-ico2 brilliant-s8"></i><br>Pear Shape</a>
                             </li>
                             <li>
-                                <a href="/diamonds?&amp;shape=Oval" class="w-general-category"><i class="brilliant-ico2 brilliant-s6"></i><br>Oval</a>
+                                <a href="<?php echo $categories[4]['href']?>&shape_gem=8" class="w-general-category"><i class="brilliant-ico2 brilliant-s6"></i><br>Oval</a>
                             </li>
                             <li>
-                                <a href="/diamonds?&amp;shape=Radiant" class="w-general-category"><i class="brilliant-ico2 brilliant-s7"></i><br>Radiant</a>
+                                <a href="<?php echo $categories[4]['href']?>&shape_gem=11" class="w-general-category"><i class="brilliant-ico2 brilliant-s7"></i><br>Radiant</a>
                             </li>
                             <li>
-                                <a href="#" class="w-general-category"><i class="all-menu-i"></i><br>All</a>
+                                <a href="<?php echo $categories[4]['href']?>&shape_gem=0" class="w-general-category"><i class="all-menu-i"></i><br>All</a>
                             </li>
                         </ul>
                     </div>

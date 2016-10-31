@@ -3276,6 +3276,10 @@ text-align: left;
     text-align: center;
 }
 
+.filter-col-options .btn-filter span.color-all {
+    text-align: center;
+}
+
 .filter-col-options .btn-filter span {
     display: block;
     line-height: 1.1;
@@ -3421,11 +3425,11 @@ text-align: left;
 }
 
 .wide-title .filter-col-title {
-    width: 100px;
+    width: 89px;
 }
 
 .wide-title .filter-col-options {
-    width: calc(100% - 120px);
+    width: calc(100% - 100px);
 }
 
 .width30 {

@@ -5,20 +5,20 @@
         <?if (!empty($wsubcategory)):?>
             <?if ($category_id == 20): //ENGAGEMENT RINGS?>
             <div class="wrapper-filter-close">
-                <div class="filter-row">
-                    <div class="filter-col filter-line-col wide-title">
-                        <div class="filter-col-title">For anyone</div>
-                        <div class="filter-col-options">
-                            <div class=" btn-group-filter box-color gemstones-box rings-box">
-                                <div class="all-line-filter">
-                                    <a href="#" class="active">All</a>
-                                    <a href="#">Women</a>
-                                    <a href="#">Sets for him and her</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--*<div class="filter-row">*-->
+                    <!--*<div class="filter-col filter-line-col wide-title">*-->
+                        <!--*<div class="filter-col-title">For anyone</div>*-->
+                        <!--*<div class="filter-col-options">*-->
+                            <!--*<div class=" btn-group-filter box-color gemstones-box rings-box">*-->
+                                <!--*<div class="all-line-filter">*-->
+                                    <!--*<a href="#" class="active">All</a>*-->
+                                    <!--*<a href="#">Women</a>*-->
+                                    <!--*<a href="#">Sets for him and her</a>*-->
+                                <!--*</div>*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
+                <!--*</div>*-->
                 <div class="filter-row">
                     <div class="filter-col wide-title">
                         <div class="filter-col-title">Style</div>
@@ -178,53 +178,55 @@
                         </div>
                     </div>
                 </div>
-                <div class="filter-row">
-                    <div class="filter-col wide-title">
-                        <div class="filter-col-title">Stone</div>
-                        <div class="filter-col-options">
-                            <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
-                                <div class="all-line-filter">
-                                    <a href="#" class="active">All</a>
-                                </div>
-                                <label class="btn btn-filter brackets">
-                                    <input type="checkbox" name="" value="">
-                                    <i class="brilliant-ico2 brilliant-s1"></i>
-                                    <span>Sapphire</span>
-                                </label>
-                                <label class="btn btn-filter brackets">
-                                    <input type="checkbox" name="" value="">
-                                    <i class="brilliant-ico2 brilliant-s1"></i>
-                                    <span>Ruby</span>
-                                </label>
-                                <label class="btn btn-filter brackets">
-                                    <input type="checkbox" name="" value="">
-                                    <i class="brilliant-ico2 brilliant-s1"></i>
-                                    <span>Emerald</span>
-                                </label>
-                                <label class="btn btn-filter brackets">
-                                    <input type="checkbox" name="" value="">
-                                    <i class="brilliant-ico2 brilliant-s1"></i>
-                                    <span>Aquamarine</span>
-                                </label>
-                                <label class="btn btn-filter brackets">
-                                    <input type="checkbox" name="" value="">
-                                    <i class="brilliant-ico2 brilliant-s1"></i>
-                                    <span>Tourmaline</span>
-                                </label>
-                                <label class="btn btn-filter brackets">
-                                    <input type="checkbox" name="" value="">
-                                    <i class="brilliant-ico2 brilliant-s1"></i>
-                                    <span>Tanzanite</span>
-                                </label>
-                                <label class="btn btn-filter brackets">
-                                    <input type="checkbox" name="" value="">
-                                    <i class="brilliant-ico2 brilliant-s1"></i>
-                                    <span>Moissanite</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
+                <!--*<div class="filter-row">*-->
+                    <!--*<div class="filter-col wide-title">*-->
+                        <!--*<div class="filter-col-title">Stone</div>*-->
+                        <!--*<div class="filter-col-options">*-->
+                            <!--*<div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">*-->
+                                <!--*<div class="all-line-filter">*-->
+                                    <!--*<a href="#" class="active">All</a>*-->
+                                <!--*</div>*-->
+                                <!--*<label class="btn btn-filter brackets">*-->
+                                    <!--*<input type="checkbox" name="" value="">*-->
+                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
+                                    <!--*<span>Sapphire</span>*-->
+                                <!--*</label>*-->
+                                <!--*<label class="btn btn-filter brackets">*-->
+                                    <!--*<input type="checkbox" name="" value="">*-->
+                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
+                                    <!--*<span>Ruby</span>*-->
+                                <!--*</label>*-->
+                                <!--*<label class="btn btn-filter brackets">*-->
+                                    <!--*<input type="checkbox" name="" value="">*-->
+                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
+                                    <!--*<span>Emerald</span>*-->
+                                <!--*</label>*-->
+                                <!--*<label class="btn btn-filter brackets">*-->
+                                    <!--*<input type="checkbox" name="" value="">*-->
+                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
+                                    <!--*<span>Aquamarine</span>*-->
+                                <!--*</label>*-->
+                                <!--*<label class="btn btn-filter brackets">*-->
+                                    <!--*<input type="checkbox" name="" value="">*-->
+                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
+                                    <!--*<span>Tourmaline</span>*-->
+                                <!--*</label>*-->
+                                <!--*<label class="btn btn-filter brackets">*-->
+                                    <!--*<input type="checkbox" name="" value="">*-->
+                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
+                                    <!--*<span>Tanzanite</span>*-->
+                                <!--*</label>*-->
+                                <!--*<label class="btn btn-filter brackets">*-->
+                                    <!--*<input type="checkbox" name="" value="">*-->
+                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
+                                    <!--*<span>Moissanite</span>*-->
+                                <!--*</label>*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
+                <!--*</div>*-->
 
 
                 <div class="hide one-line brilliant-style height-inherit product-p-5 clearfix">

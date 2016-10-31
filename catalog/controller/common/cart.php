@@ -76,6 +76,7 @@ class ControllerCommonCart extends Controller {
 			$this->data['totals'][] = array(
 				'title' => $result['title'],
 				'text'  => $this->currency->format($result['value']),
+                'value' => $result['value']
 			);
 		}
 

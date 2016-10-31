@@ -1120,10 +1120,7 @@
                     $('.container-loader').hide();
                 },
                 success: function (response) {
-
-//                    $('#w-show-product').empty();
-//                    $('#w-show-product').html(response);
-
+                    $('html, body').animate({scrollTop: 600}, 'slow');
                     $('.w-category-ajax').empty();
                     $('.w-category-ajax').html(response);
 

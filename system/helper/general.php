@@ -258,19 +258,19 @@ function arr_filtr_stone_type ($value = null) {
 function arr_filtr_shape ($value = null) {
 
     $arr = array(
-        1 => 'Cabochon',
-        2 => 'Cushion Cut',
-        3 => 'Emerald Cut',
-        4 => 'Fancy Cut',
-        5 => 'Heart Shape',
-        6 => 'Marquise',
-        7 => 'Mixed Cut',
-        8 => 'Oval Cut',
-        9 => 'Princess Cut',
-        10 => 'Pear Shape',
-        11 => 'Radiant Cut',
-        12 => 'Round Cut',
-        13 => 'Square Cut'
+        1 => array('Cabochon', 'brilliant-ico2 brilliant-s6'),
+        2 => array('Cushion Cut', 'brilliant-ico2 brilliant-s4'),
+        3 => array('Emerald Cut', 'brilliant-ico2 brilliant-s10'),
+        4 => array('Fancy Cut','brilliant-ico2 brilliant-s7'),
+        5 => array('Heart Shape','brilliant-ico2 brilliant-s9'),
+        6 => array('Marquise','brilliant-ico2 brilliant-s5'),
+        7 => array('Mixed Cut','brilliant-ico2 brilliant-s7'),
+        8 => array('Oval Cut','brilliant-ico2 brilliant-s6'),
+        9 => array('Princess Cut','brilliant-ico2 brilliant-s2'),
+        10 => array('Pear Shape','brilliant-ico2 brilliant-s8'),
+        11 => array('Radiant Cut','brilliant-ico2 brilliant-s7'),
+        12 => array('Round Cut','brilliant-ico2 brilliant-s1'),
+        13 => array('Square Cut','brilliant-ico2 brilliant-s2')
     );
 
     if ($value !== null) {
@@ -289,18 +289,18 @@ function arr_filtr_shape ($value = null) {
 function arr_primary_color ($value = null) {
 
     $arr = array(
-        1 => 'Blue Green',
-        2 => 'Blue',
-        3 => 'Green',
-        4 => 'Greenish Blue',
-        5 => 'Lavender',
-        6 => 'Light Blue',
-        7 => 'Orange',
-        8 => 'Pink',
-        9 => 'Purple',
-        10 => 'Red',
-        11 => 'White',
-        12 => 'Yellow'
+        1 => array('Blue Green', '#3bb3c2'),
+        2 => array('Blue', '#0093dd'),
+        3 => array('Green', '#66b82e'),
+        4 => array('Greenish Blue', '#3CB371'),
+        5 => array('Lavender', '#32CD32'),
+        6 => array('Light Blue', '#87CEEB'),
+        7 => array('Orange', '#FFA500'),
+        8 => array('Pink', '#e97695'),
+        9 => array('Purple', '#800080'),
+        10 => array('Red', '#da251d'),
+        11 => array('White', '#F0FFF0'),
+        12 => array('Yellow', '#FFFF33')
     );
 
     if ($value !== null) {

@@ -5610,17 +5610,17 @@ footer > section .row {
   border-bottom: 1px solid #dddddd;
 }
 
-.all-line-filter a:last-child{
+.all-line-filter:last-child{
   margin-right: 0;
 }
-.all-line-filter a.active{
+.all-line-filter.active{
   background-color: #c4d5eb;
   font-family: "Raleway-Bold", fantasy;
 }
-.all-line-filter a:hover{
+.all-line-filter:hover{
   background-color: #c4d5eb;
 }
-.all-line-filter a{
+.all-line-filter{
   margin-right: 35px;
   padding: 5px 12px 3px;
   color: #2f2e2d;

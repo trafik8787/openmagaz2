@@ -4,10 +4,11 @@
             <div class="filter-row">
                 <div class="filter-col filter-diamond-left wide-title">
                     <div class="filter-col-title">Gemstone</div>
-                    <div class="filter-col-options">
+                    <div class="filter-col-options" id="id-filtr-stone-type">
                         <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
-                            <div class="all-line-filter">
-                                <a href="#" class="active">All</a>
+                            <div class="all-line-filter btn btn-filter brackets" style="width: 35px;position: relative;">
+                                <input type="checkbox" name="stone_type_gem" value="0" class="checkbox" <? if (in_array(0, $stone_type_gem)) :?> checked="checked" <?endif?>>
+                                <span class="color-all">All</span>
                             </div>
                             <?php foreach (arr_filtr_stone_type() as $val => $rows) :?>
                             <label class="btn btn-filter brackets">
@@ -35,16 +36,18 @@
             <div class="filter-row">
                 <div class="filter-col filter-diamond-left wide-title">
                     <div class="filter-col-title">Color</div>
-                    <div class="filter-col-options">
+                    <div class="filter-col-options" id="id-filtr-primary_color">
                         <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box color-group" data-toggle="buttons">
-                            <div class="all-line-filter">
-                                <a href="#" class="active">All</a>
+                            <div class="all-line-filter btn btn-filter brackets" style="width: 35px;position: relative;">
+                                <input type="checkbox" name="primary_color_gem" value="0" class="checkbox" <? if (in_array(0, $primary_color_gem)) :?> checked="checked" <?endif?>>
+                                <span class="color-all">All</span>
+
                             </div>
                             <?php foreach (arr_primary_color() as $val => $rows) :?>
                             <label class="btn btn-filter brackets">
-                                <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked>
-                                <i class="color-circle" style="border-color: red"></i>
-                                <span><?php echo $rows; ?></span>
+                                <input type="checkbox" name="primary_color_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($primary_color_gem) and in_array($val, $primary_color_gem)) :?> checked="checked" <?endif?>>
+                                <i class="color-circle" style="border-color: <?php echo $rows[1]; ?>"></i>
+                                <span><?php echo $rows[0]; ?></span>
                             </label>
                             <?endforeach?>
                         </div>
@@ -66,62 +69,22 @@
             <div class="filter-row">
                 <div class="filter-col wide-title">
                     <div class="filter-col-title">Shape</div>
-                    <div class="filter-col-options">
+                    <div class="filter-col-options" id="id-filtr-shape">
                         <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
 
-                            <div class="all-line-filter">
-                                <a href="#" class="active">All</a>
+                            <div class="all-line-filter btn btn-filter brackets" style="width: 35px;position: relative;">
+                                <input type="checkbox" name="shape_gem" value="0" class="checkbox" <? if (in_array(0, $shape_gem)) :?> checked="checked" <?endif?>>
+                                <span class="color-all">All</span>
                             </div>
-                            <label class="btn btn-filter brackets">
-                                <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked>
-                                <i class="brilliant-ico2 brilliant-s1"></i>
-                                <span>Round<br><span>Cut</span></span>
-                            </label>
-                            <label class="btn btn-filter brackets">
-                                <input type="radio" value="Princess" name="shape" id="option2" autocomplete="off">
-                                <i class="brilliant-ico2 brilliant-s2"></i>
-                                <span>Princess<br><span>Cut</span></span>
-                            </label>
-                            <label class="btn btn-filter brackets">
-                                <input type="radio" value="Asscher"  name="shape" id="option3" autocomplete="off">
-                                <i class="brilliant-ico2 brilliant-s3"></i>
-                                <span>Asscher<br><span>Cut</span></span>
-                            </label>
-                            <label class="btn btn-filter brackets">
-                                <input type="radio" value="Cushion"  name="shape" id="option4" autocomplete="off">
-                                <i class="brilliant-ico2 brilliant-s4"></i>
-                                <span>Cushion<br><span>Cut</span></span>
-                            </label>
-                            <label class="btn btn-filter brackets">
-                                <input type="radio" value="Marquise" name="shape" id="option5" autocomplete="off">
-                                <i class="brilliant-ico2 brilliant-s5"></i>
-                                <span>Marquise<br><span>Cut</span></span>
-                            </label>
-                            <label class="btn btn-filter brackets">
-                                <input type="radio" value="Oval"  name="shape" id="option6" autocomplete="off">
-                                <i class="brilliant-ico2 brilliant-s6"></i>
-                                <span>Oval<br><span>Cut</span></span>
-                            </label>
-                            <label class="btn btn-filter brackets">
-                                <input type="radio" value="Radiant" name="shape" id="option7" autocomplete="off">
-                                <i class="brilliant-ico2 brilliant-s7"></i>
-                                <span>Radiant<br><span>Cut</span></span>
-                            </label>
-                            <label class="btn btn-filter brackets">
-                                <input type="radio" value="Pear"  name="shape" id="option8" autocomplete="off">
-                                <i class="brilliant-ico2 brilliant-s8"></i>
-                                <span>Pear<br><span>Shaped</span></span>
-                            </label>
-                            <label class="btn btn-filter brackets">
-                                <input type="radio" value="Heart"  name="shape" id="option9" autocomplete="off">
-                                <i class="brilliant-ico2 brilliant-s9"></i>
-                                <span>Heart<br><span>Shaped</span></span>
-                            </label>
-                            <label class="btn btn-filter brackets">
-                                <input type="radio" value="Emerald"  name="shape" id="option10" autocomplete="off">
-                                <i class="brilliant-ico2 brilliant-s10"></i>
-                                <span>Emerald<br><span>Cut</span></span>
-                            </label>
+
+                            <?php foreach (arr_filtr_shape() as $val => $rows) :?>
+                                <label class="btn btn-filter brackets <? if (is_array($shape_gem) and in_array($val, $shape_gem)) :?> active <?endif?>">
+                                    <input type="checkbox" name="shape_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($shape_gem) and in_array($val, $shape_gem)) :?> checked="checked" <?endif?>>
+                                    <i class="<?php echo $rows[1]; ?>"></i>
+                                    <span><?php echo $rows[0]; ?></span>
+                                </label>
+                            <?endforeach?>
+
 
                         </div>
                     </div>
@@ -151,7 +114,7 @@
 
 
         $(document).on('change', "#id-filtr-stone-type input[value='0'], #id-filtr-shape input[value='0'], #id-filtr-primary_color input[value='0']", function () {
-            $(this).parents('.w-checed-list').find('input:checkbox:checked').prop("checked", false);
+            $(this).parents('.filter-col-options').find('input:checkbox:checked').prop("checked", false).parent().removeClass('active');
             $(this).prop("checked", true);
         });
         $(document).on('change', "#id-filtr-stone-type input[value!='0']", function () {
@@ -161,12 +124,12 @@
         });
 
         $(document).on('change', "#id-filtr-shape input[value!='0']", function () {
-            $("#id-filtr-shape input[value='0']").prop("checked", false);
+            $("#id-filtr-shape input[value='0']").prop("checked", false).parent().removeClass('active');
 
         });
 
         $(document).on('change', "#id-filtr-primary_color input[value!='0']", function () {
-            $("#id-filtr-primary_color input[value='0']").prop("checked", false);
+            $("#id-filtr-primary_color input[value='0']").prop("checked", false).parent().removeClass('active');
 
         });
 
