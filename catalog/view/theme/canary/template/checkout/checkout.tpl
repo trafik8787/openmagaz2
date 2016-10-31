@@ -135,7 +135,7 @@
 
                                     <div class="line-with-input panel cc-block">
 
-                                        <div class="cc-header line-with-input">
+                                        <div class="cc-header ">
                                             <div class="title-c cc-title"><?php echo $text_checkout_account; ?></div>
                                         </div>
                                         <div class="panel-collapse collapse" id="collapse-payment-address">
@@ -190,11 +190,7 @@
 
                                             </div>
                                         </div>
-
                                     </div>
-
-
-
                             </div>
 
                         </form>
@@ -212,29 +208,6 @@
             </div>
         </div>
     </section>
-    <!-- Modal -->
-    <div id="forgotModal" class="forgot-modal modal fade" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <div class="modal-body">
-                    <div class="text-center">
-                        <div class="remind-modal-title">Forgot Password?</div>
-                        <div class="remind-modal-text">To reset your password, please enter your email address</div>
-                    </div>
-                    <form action="forgot">
-                        <input type="text" class="forgot-input">
-                        <div class="text-center">
-                            <button class="modal-continue" type="button">continue</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-    </div>
 
     <!-- Modal -->
     <div id="forgotModalWrong" class="forgot-modal modal fade" role="dialog">

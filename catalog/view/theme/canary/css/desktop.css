@@ -390,6 +390,19 @@
     float: right;
   }
 
+  .login-form-wrapper{
+    padding: 0 5px 0 30px;
+    border-right: 0;
+  }
+  #collapse-checkout-option .margin-top-30 > div:nth-child(2) {
+    padding: 10px 20px 0 45px;
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+
+
+
 }
 
 @media  (max-width: 768px){
