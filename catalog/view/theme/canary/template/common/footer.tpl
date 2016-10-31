@@ -359,6 +359,7 @@
 <script type="text/javascript" src="/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/script.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/device.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.js" ></script>
 <script type="text/javascript" src="/catalog/view/javascript/app.js" ></script>
 <script type="text/javascript" src="/catalog/view/javascript/common.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.easydropdown.min.js" ></script>

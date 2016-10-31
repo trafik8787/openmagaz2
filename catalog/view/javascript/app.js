@@ -31,6 +31,9 @@ $(document).ready(function() {
     //
     //});
 
+
+    $('.stack-responsive-table').stacktable();
+
     $(document).on('click',".arrow-btn-number", function(e){
         e.preventDefault();
         if ($(this).attr('data-action')=='plus'){
@@ -46,6 +49,8 @@ $(document).ready(function() {
     $(".mobile-menu-btn").click(function(){
         $(".mobile-menu").toggleClass("open");
     });
+
+
     $('.bxslider').slick({
         infinite: true,
         autoplay: true,
