@@ -5301,15 +5301,6 @@ footer > section .row {
 .wrapper-product-table.th-view tbody tr td .product-item img {
   max-height: inherit !important;
 }
-.wrapper-product-table:before {
-  height: 60px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  content: "";
-  background-color: #ececec;
-}
 .wrapper-product-table .table {
   max-width: 1260px;
   margin: 0 auto;
@@ -5436,6 +5427,7 @@ footer > section .row {
 
 .wrapper-product-table.list-view .table {
   margin-top: 40px;
+  border-collapse: inherit;
 }
 
 .wrapper-product-table.list-view .table,
