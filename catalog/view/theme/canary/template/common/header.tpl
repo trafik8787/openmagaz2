@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/easydropdown.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/style.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop.css"/>
 

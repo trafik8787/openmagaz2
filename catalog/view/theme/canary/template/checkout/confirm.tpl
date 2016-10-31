@@ -1,6 +1,6 @@
 <?php if (!isset($redirect)) { ?>
-<div class="table-responsive">
-  <table class="table table-bordered table-hover">
+<div class="">
+  <table class="table table-bordered table-hover stack-responsive">
     <thead>
       <tr>
         <td class="text-left"><?php echo $column_name; ?></td>
@@ -47,6 +47,12 @@
       <?php } ?>
     </tfoot>
   </table>
+  <script>
+    $(document).ready(function() {
+      $('.stack-responsive').stacktable();
+    });
+
+  </script>
 </div>
 <?php echo $payment; ?>
 <?php } else { ?>

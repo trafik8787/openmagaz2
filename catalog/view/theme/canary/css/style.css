@@ -7990,6 +7990,10 @@ footer > section .row {
   border-right: 1px solid #cdcbcb;
 }
 
+.w-cc-payment p{
+  padding: 10px 0;
+}
+
 .wrapper-cart-box .one-line2 .text-box{
   padding-top: 10px;
 }
@@ -8387,7 +8391,7 @@ footer > section .row {
 }
 
 .right-checkout .title-c{
-  /* margin-bottom: 25px!important; */
+  margin-bottom: 15px;
   color: #1e3e7e;
   font-family: "Felix Titling";
   font-size: 21px;
@@ -8646,8 +8650,12 @@ footer > section .row {
     /* top: 10px; */
   }
 
+  .top-menu-b {
+    padding-right: 12px;
+  }
+
   .top-menu-b li {
-    padding: 6px 11px 0 11px;
+    padding: 6px 7px 0 7px;
   }
 }
 @media (max-width: 1024px) {
