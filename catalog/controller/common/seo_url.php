@@ -19,7 +19,8 @@ class ControllerCommonSeoUrl extends Controller {
         'checkout/success' => 'checkout_success',
         'checkout/cart' => 'shop-cart',
         'checkout/checkout' => 'shop-checkout',
-        'product/search' => 'search'
+        'product/search' => 'search',
+        'account/forgotten' => 'account/forgotten'
     );
 
 	public function index() {
