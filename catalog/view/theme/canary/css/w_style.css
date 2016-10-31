@@ -3327,7 +3327,7 @@ text-align: left;
 .filter-buttons {
     padding-left: 35px;
     padding-right: 35px;
-    background: #dbe7f3;
+    background: #dbe7f3 url("../img/filter-buttons-bg.jpg") no-repeat bottom / cover;
 }
 
 .filter-options-type {
