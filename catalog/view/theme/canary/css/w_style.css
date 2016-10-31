@@ -3432,8 +3432,13 @@ text-align: left;
     width: 30%;
 }
 
-.wide-title .filter-col-options .btn-filter {
+.wide-title .filter-col-options .btn-filter,
+.wide-blocks .filter-col-options .btn-filter {
     width: 77px;
+}
+
+.empty-title .filter-col-title {
+    height: 20px;
 }
 
 .color-circle {
@@ -3450,6 +3455,25 @@ text-align: left;
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
+
+.filter-option-img-wrapper {
+    display: block;
+    position: relative;
+    height: 40px;
+}
+.filter-option-img-wrapper i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
 
 
 @media (max-width: 1200px) {
