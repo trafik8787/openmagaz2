@@ -21,7 +21,7 @@
     </div>
     <section class="static-page">
 
-        <div class="wish-list-page">
+        <div class="wish-list-page forgotten-page">
             <div class="center-bl">
                 <?php if ($error_warning) { ?>
                 <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?></div>

@@ -3525,6 +3525,12 @@ text-align: left;
     text-decoration: none;
 }
 
+.forgotten-page .control-label {
+    font-weight: normal;
+    margin-bottom: 5px;
+    font-family: "Raleway-Bold", fantasy;
+}
+
 
 
 @media (max-width: 1200px) {
