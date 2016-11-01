@@ -4,7 +4,7 @@
         Create an account<br>
         Hello, I'm new here.
     </div>
-    <div>
+    <div class="clearfix">
         <div class="contacts-form-row bl-input must">
             <input id="rit1" name="firstname" placeholder="<?php echo $entry_firstname; ?>" value="<?php echo $firstname; ?>"  type="text" class="contacts-input required" required>
             <?php if ($error_firstname) { ?>
@@ -12,22 +12,22 @@
             <?php } ?>
         </div>
     </div>
-    <div>
+    <div class="clearfix">
         <div class="contacts-form-row bl-input must">
             <input id="rit2" name="lastname" placeholder="<?php echo $entry_lastname; ?>" value="<?php echo $lastname; ?>" type="text" class="contacts-input required" required>
         </div>
     </div>
-    <div>
+    <div class="clearfix">
         <div class="contacts-form-row bl-input must">
             <input id="rit3" type="text" name="email" placeholder="<?php echo $entry_email; ?>" value="<?php echo $email; ?>" class="contacts-input required" required>
         </div>
     </div>
-   <div>
+   <div class="clearfix">
        <div class="contacts-form-row bl-input must">
            <input id="rit4" type="password" placeholder="<?php echo $entry_password; ?>" name="password" value="<?php echo $password; ?>" class="contacts-input required" required>
        </div>
    </div>
-    <div>
+    <div class="clearfix">
         <div class="contacts-form-row bl-input must">
             <input id="rit5" type="password" placeholder="<?php echo $entry_confirm; ?>" name="confirm" value="<?php echo $confirm; ?>" class="contacts-input required" required>
         </div>
