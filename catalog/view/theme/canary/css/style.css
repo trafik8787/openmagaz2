@@ -8716,6 +8716,11 @@ footer > section .row {
   text-align: center;
 }
 
+.w-btn-short {
+  width: auto;
+  padding: 15px 23px 16px 23px;
+}
+
 @media (max-width: 1700px) {
   .menu {
     /* padding: 55px 0 0 365px; */
