@@ -5633,14 +5633,25 @@ footer > section .row {
 .all-line-filter:last-child{
   margin-right: 0;
 }
-.all-line-filter.active{
+.all-line-filter a.active{
   background-color: #c4d5eb;
   font-family: "Raleway-Bold", fantasy;
 }
-.all-line-filter:hover{
+
+.all-line-filter-gem .active{
+    background-color: #c4d5eb;
+    font-family: "Raleway-Bold", fantasy;
+}
+
+.all-line-filter a:hover{
   background-color: #c4d5eb;
 }
-.all-line-filter{
+
+.all-line-filter-gem:hover{
+    background-color: #c4d5eb;
+}
+
+.all-line-filter-gem {
   margin-right: 35px;
   padding: 5px 12px 3px;
   color: #2f2e2d;
@@ -5651,6 +5662,18 @@ footer > section .row {
   -moz-border-radius:3px;
   border-radius:3px;
 
+}
+
+.all-line-filter a {
+    margin-right: 24px;
+    padding: 5px 12px 3px;
+    color: #2f2e2d;
+    vertical-align: middle;
+    display: inline-block;
+    /* background-color: #dededd; */
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
 }
 
 .all-line-filter{
@@ -5681,6 +5704,7 @@ footer > section .row {
   -webkit-border-radius:3px;
   -moz-border-radius:3px;
   border-radius:3px;
+  height: 90px;
 }
 
 .filter-box .filter-wrapper .box-color label .gemstones {
@@ -7979,7 +8003,7 @@ footer > section .row {
 }
 
 .wrapper-cart-box{
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .wrapper-cart-box .one-line:last-child{

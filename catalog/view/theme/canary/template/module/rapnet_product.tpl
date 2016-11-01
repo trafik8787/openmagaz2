@@ -38,7 +38,7 @@
                     </div>
                     <ul class="list-inline it-list">
                         <li>
-                            <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
+                            <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.addDiamond('<?=$product->response->body->diamond->diamond_id?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                         </li>
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>

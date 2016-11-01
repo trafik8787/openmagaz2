@@ -6,7 +6,7 @@
                     <div class="filter-col-title">Gemstone</div>
                     <div class="filter-col-options" id="id-filtr-stone-type">
                         <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
-                            <div class="all-line-filter btn btn-filter brackets" style="width: 35px;position: relative;">
+                            <div class="all-line-filter-gem btn btn-filter brackets" style="width: 35px;position: relative;">
                                 <input type="checkbox" name="stone_type_gem" value="0" class="checkbox" <? if (in_array(0, $stone_type_gem)) :?> checked="checked" <?endif?>>
                                 <span class="color-all">All</span>
                             </div>
@@ -38,7 +38,7 @@
                     <div class="filter-col-title">Color</div>
                     <div class="filter-col-options" id="id-filtr-primary_color">
                         <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box color-group" data-toggle="buttons">
-                            <div class="all-line-filter btn btn-filter brackets" style="width: 35px;position: relative;">
+                            <div class="all-line-filter-gem btn btn-filter brackets" style="width: 35px;position: relative;">
                                 <input type="checkbox" name="primary_color_gem" value="0" class="checkbox" <? if (in_array(0, $primary_color_gem)) :?> checked="checked" <?endif?>>
                                 <span class="color-all">All</span>
 
@@ -72,7 +72,7 @@
                     <div class="filter-col-options" id="id-filtr-shape">
                         <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
 
-                            <div class="all-line-filter btn btn-filter brackets" style="width: 35px;position: relative;">
+                            <div class="all-line-filter-gem btn btn-filter brackets" style="width: 35px;margin-right: 0;">
                                 <input type="checkbox" name="shape_gem" value="0" class="checkbox" <? if (in_array(0, $shape_gem)) :?> checked="checked" <?endif?>>
                                 <span class="color-all">All</span>
                             </div>

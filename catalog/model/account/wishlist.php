@@ -17,8 +17,11 @@ class ModelAccountWishlist extends Model {
 
 	public function deleteWishlist($product_id) {
 		$this->event->trigger('pre.wishlist.delete');
-
 		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_wishlist WHERE customer_id = '" . (int)$this->customer->getId() . "' AND product_id = '" . (int)$product_id . "'");
+
+        if ((!empty($this->session->data['wishlist']) OR !empty($this->session->data['wishlist_diamond']))  AND $this->customer->getId() == 0) {
+            unset($this->session->data['wishlist'][$product_id]);
+        }
 
 		$this->event->trigger('post.wishlist.delete');
 	}
@@ -32,7 +35,6 @@ class ModelAccountWishlist extends Model {
 	public function getWishlist() {
 
         if ((!empty($this->session->data['wishlist']) OR !empty($this->session->data['wishlist_diamond']))  AND $this->customer->getId() == 0) {
-
             $result = array();
             if (!empty($this->session->data['wishlist'])) {
                 foreach ($this->session->data['wishlist'] as $item) {
