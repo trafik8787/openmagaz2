@@ -66,8 +66,8 @@
                                     <a href="#" class="show-password-btn"></a>
                                 </div>
                                 <div class="text-right">
-                                    <a href="#" class="forgot-pass" data-toggle="modal" data-target="#forgotModal">Forgot password?</a><br>
-                                    <a href="#" class="forgot-pass" data-toggle="modal" data-target="#forgotModalWrong">ErrorModal</a>
+                                    <a href="/account/forgotten" class="forgot-pass">Forgot password?</a><br>
+                                    <a href="#" class="hide forgot-pass" data-toggle="modal" data-target="#forgotModalWrong">ErrorModal</a>
                                 </div>
                                 <div class="text center">
                                     <button type="submit" class="login-form-btn login-continue"><?php echo $button_login; ?></button>

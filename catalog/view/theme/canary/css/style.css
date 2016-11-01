@@ -2622,6 +2622,7 @@ footer > section .row {
 .login-form-wrapper {
   margin: 0 auto;
   padding: 0 30px 0 30px;
+  max-width: 450px;
   }
 
 .login-form-wrapper .right-checkout .bl-input{
@@ -2675,8 +2676,9 @@ footer > section .row {
 
 .login-form-btn {
   width: 100%;
+  max-width: 210px;
   display: block;
-  margin: 10px 0;
+  margin: 10px auto;
   padding: 15px 20px 16px;
   background: #fbbd35;
   text-align: center;
@@ -2795,7 +2797,9 @@ footer > section .row {
   height: 14px;
   background: url("../img/envelope-ico.png") center/contain no-repeat;
   position: relative;
-  bottom: -1px; }
+  bottom: 6px;
+  left: 10px;
+}
 
 .lock-ico {
   display: inline-block;
@@ -2803,7 +2807,9 @@ footer > section .row {
   height: 27px;
   background: url("../img/lock-ico.png") center/contain no-repeat;
   position: relative;
-  bottom: -2px; }
+  bottom: 0px;
+  left: 10px;
+}
 
 .login-input {
   padding: 0 30px;
@@ -2818,6 +2824,12 @@ footer > section .row {
 .login-input.required:valid + .login-label-placeholder .hide-when-valid,
 .login-input.required:valid + .login-label-placeholder .reqstar {
   display: none; }
+
+
+.login-form-wrapper input[type="password"].login-input,
+.login-form-wrapper input[type="text"].login-input {
+  padding-left: 40px;
+}
 
 .login-label-placeholder i {
   width: 30px;
@@ -2857,6 +2869,9 @@ footer > section .row {
   margin-bottom: 10px;
   display: block;
   width: 100%;
+  max-width: 310px;
+  margin-left: auto;
+  margin-right: auto;
   height: 60px;
   line-height: 60px;
   text-decoration: none;
@@ -2893,10 +2908,10 @@ footer > section .row {
 
 .show-password-btn {
   position: absolute;
-  right: 0;
-  bottom: 5px;
+  right: 6px;
+  bottom: 0px;
   height: 100%;
-  width: 26px;
+  width: 23px;
   background: url("../img/eye-ico.png") center/contain no-repeat; }
 
 .mobile-login-btns {
@@ -8439,7 +8454,9 @@ footer > section .row {
   line-height: 21px;
 }
 .right-checkout input[type="password"],
-.right-checkout input[type="text"]{
+.right-checkout input[type="text"],
+.login-form-wrapper input[type="password"],
+.login-form-wrapper input[type="text"] {
   width: 100%;
   height: 40px;
   padding-left: 20px;
@@ -8493,7 +8510,8 @@ footer > section .row {
   margin-bottom: 4px;
 }
 .right-checkout label{
-  padding-left: 25px;
+  /* no padding for register gender */
+  /*padding-left: 25px;*/
   font-weight: normal;
 }
 .right-checkout{
