@@ -5388,7 +5388,7 @@ footer > section .row {
   background: linear-gradient(top, #ffffff 66%, #ededed 100%);
 }
 .wrapper-product-table .table tbody tr td .product-item img {
-  max-width: 100%;
+  max-width: 70%;
   max-height: 130px; }
 .wrapper-product-table .table tbody tr td .product-item:hover {
   border: 1px solid #a4c0eb;

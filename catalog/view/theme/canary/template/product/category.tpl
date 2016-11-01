@@ -155,13 +155,15 @@
                 <div class="center-bl clearfix">
                     <div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>
                 </div>
+                <?if (!empty(strip_tags($description))):?>
 
-                <div class="box-stat-text center-bl">
-                    <div class="h2">
-                        TEXT ABOUT <?=$heading_title?>
+                    <div class="box-stat-text center-bl">
+                        <div class="h2">
+                            TEXT ABOUT <?=$heading_title?>
+                        </div>
+                        <?php echo $description; ?>
                     </div>
-                    <?php echo $description; ?>
-                </div>
+                <?endif?>
 
             </div>
 
