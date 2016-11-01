@@ -124,6 +124,7 @@ class ControllerAccountWishList extends Controller {
 
 				$data['products'][] = array(
 					'product_id' => $product_info['product_id'],
+                    'sku'       => $product_info['sku'],
 					'thumb'      => $image,
 					'name'       => $product_info['name'],
 					'model'      => $product_info['model'],
@@ -140,6 +141,7 @@ class ControllerAccountWishList extends Controller {
 
                 $data['products'][] = array(
                     'product_id' => $result_obj->diamond_id,
+                    'sku'       => $result_obj->diamond_id,
                     'thumb'      => imageDiamont($result_obj->shape),
                     'name'       => $result_obj->shape.' '.$result_obj->size.' '.$result_obj->color.' '.$result_obj->clarity,
                     'model'      => $result_obj->shape.' '.$result_obj->size.' '.$result_obj->color.' '.$result_obj->clarity,
@@ -199,7 +201,7 @@ class ControllerAccountWishList extends Controller {
 					$this->session->data['wishlist'] = array();
 				}
 
-				$this->session->data['wishlist'][] = $this->request->post['product_id'];
+				$this->session->data['wishlist'][$this->request->post['product_id']] = $this->request->post['product_id'];
 
 				$this->session->data['wishlist'] = array_unique($this->session->data['wishlist']);
 

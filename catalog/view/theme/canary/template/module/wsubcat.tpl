@@ -72,28 +72,29 @@
 
             <?elseif($category_id == 69): //WEDDING RINGS?>
             <div class="wrapper-filter-close">
-                <div class="filter-row">
-                    <div class="filter-col filter-line-col wide-title">
-                        <div class="filter-col-title">
-                            For anyone
-                        </div>
-                        <div class="filter-col-options">
-                            <div class="all-line-filter">
-                                <a href="#" class="active">All</a>
-                                <a href="#">Women</a>
-                                <a href="#" class="visible-xs-inline-block">Sets for him and her</a>
+                <!--*<div class="filter-row">*-->
+                    <!--*<div class="filter-col filter-line-col wide-title">*-->
+                        <!--*<div class="filter-col-title">*-->
+                            <!--*For anyone*-->
+                        <!--*</div>*-->
+                        <!--*<div class="filter-col-options">*-->
+                            <!--*<div class="all-line-filter">*-->
+                                <!--*<a href="#" class="active">All</a>*-->
+                                <!--*<a href="#">Women</a>*-->
+                                <!--*<a href="#" class="visible-xs-inline-block">Sets for him and her</a>*-->
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-col text-right hidden-xs">
-                        <div class="filter-col-options">
-                            <div class="all-line-filter">
-                                <a href="#">Sets for him and her</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
+                    <!--*<div class="filter-col text-right hidden-xs">*-->
+                        <!--*<div class="filter-col-options">*-->
+                            <!--*<div class="all-line-filter">*-->
+                                <!--*<a href="#">Sets for him and her</a>*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
+                <!--*</div>*-->
+
                 <div class="filter-row">
                     <div class="filter-col wide-title">
                         <div class="filter-col-title">
@@ -102,28 +103,23 @@
                         <div class="filter-col-options">
                             <div class=" btn-group-filter box-color gemstones-box rings-box filter-rings">
                                 <div class="all-line-filter">
-                                    <a href="#" class="active">All</a>
+                                    <a href="<?php echo $wsubcategory[1]['href']?>" class="active">All Woman</a>
                                 </div>
-                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[0]['cat_id']):?> active <?endif?> brackets">
-
-                                    <a href="<?php echo $wsubcategory[0]['href']?>" class="filter-option-img-wrapper"><i class="wedding1"></i></a>
-                                    <!--*<input type="radio" name="wedding_rings" class="w-wsubcat" data-href="<?php echo $wsubcategory[0]['href']?>"> <i class="wedding1"></i>*-->
-                                    <span><?php echo $wsubcategory[0]['name']?></span>
-                                </label>
-                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[1]['cat_id']):?> active <?endif?> brackets">
-                                    <a href="<?php echo $wsubcategory[1]['href']?>" class="filter-option-img-wrapper"><i class="wedding3"></i></a>
-                                    <!--*<input type="radio" name="wedding_rings" class="w-wsubcat" data-href="<?php echo $wsubcategory[1]['href']?>"> <i class="wedding3"></i>*-->
-                                    <span><?php echo $wsubcategory[1]['name']?></span>
-                                </label>
                                 <label class="btn btn-filter <?php if ($child_id == $wsubcategory[2]['cat_id']):?> active <?endif?> brackets">
-                                    <a href="<?php echo $wsubcategory[2]['href']?>" class="filter-option-img-wrapper"><i class="wedding5"></i></a>
-                                    <!--*<input type="radio" name="wedding_rings" class="w-wsubcat" data-href="<?php echo $wsubcategory[2]['href']?>"> <i class="wedding5"></i>*-->
+                                    <a href="<?php echo $wsubcategory[2]['href']?>" class="filter-option-img-wrapper"><i class="wedding1"></i></a>
                                     <span><?php echo $wsubcategory[2]['name']?></span>
                                 </label>
                                 <label class="btn btn-filter <?php if ($child_id == $wsubcategory[3]['cat_id']):?> active <?endif?> brackets">
-                                    <a href="<?php echo $wsubcategory[3]['href']?>" class="filter-option-img-wrapper"><i class="wedding2"></i></a>
-                                    <!--*<input type="radio" name="wedding_rings" class="w-wsubcat" data-href="<?php echo $wsubcategory[3]['href']?>"> <i class="wedding2"></i>*-->
+                                    <a href="<?php echo $wsubcategory[3]['href']?>" class="filter-option-img-wrapper"><i class="wedding3"></i></a>
                                     <span><?php echo $wsubcategory[3]['name']?></span>
+                                </label>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[4]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[4]['href']?>" class="filter-option-img-wrapper"><i class="wedding5"></i></a>
+                                    <span><?php echo $wsubcategory[4]['name']?></span>
+                                </label>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[5]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[5]['href']?>" class="filter-option-img-wrapper"><i class="wedding2"></i></a>
+                                    <span><?php echo $wsubcategory[5]['name']?></span>
                                 </label>
                             </div>
                         </div>
@@ -133,22 +129,19 @@
                         <div class="filter-col-options">
                             <div class=" btn-group-filter box-color gemstones-box rings-box filter-rings">
                                 <div class="all-line-filter">
-                                    <a href="#" class="active">All</a>
+                                    <a href="<?php echo $wsubcategory[0]['href']?>" class="active">All Man</a>
                                 </div>
                                 <label class="btn btn-filter<?php if ($child_id == $wsubcategory[6]['cat_id']):?> active <?endif?> brackets">
-                                    <a href="<?php echo $wsubcategory[6]['href']?>" class="filter-option-img-wrapper"><i class="wedding7"></i></a>
-                                    <!--*<input type="radio" name="wedding_rings" class="w-wsubcat" data-href="<?php echo $wsubcategory[6]['href']?>"> <i class="wedding7"></i>*-->
+                                    <a href="<?php echo $wsubcategory[6]['href']?>" class="filter-option-img-wrapper"><i class="wedding1"></i></a>
                                     <span> <?php echo $wsubcategory[6]['name']?></span>
                                 </label>
-                                <label class="btn btn-filter<?php if ($child_id == $wsubcategory[5]['cat_id']):?> active <?endif?> brackets">
-                                    <a href="<?php echo $wsubcategory[5]['href']?>" class="filter-option-img-wrapper"><i class="wedding3"></i></a>
-                                    <!--*<input type="radio" name="wedding_rings" class="w-wsubcat" data-href="<?php echo $wsubcategory[5]['href']?>"> <i class="wedding3"></i>*-->
-                                    <span><?php echo $wsubcategory[5]['name']?></span>
+                                <label class="btn btn-filter<?php if ($child_id == $wsubcategory[7]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[7]['href']?>" class="filter-option-img-wrapper"><i class="wedding3"></i></a>
+                                    <span><?php echo $wsubcategory[7]['name']?></span>
                                 </label>
-                                <label class="btn btn-filter<?php if ($child_id == $wsubcategory[4]['cat_id']):?> active <?endif?> brackets">
-                                    <a href="<?php echo $wsubcategory[4]['href']?>" class="filter-option-img-wrapper"><i class="wedding1"></i></a>
-                                    <!--*<input type="radio" name="wedding_rings" class="w-wsubcat" data-href="<?php echo $wsubcategory[4]['href']?>"> <i class="wedding1"></i>*-->
-                                    <span><?php echo $wsubcategory[4]['name']?></span>
+                                <label class="btn btn-filter<?php if ($child_id == $wsubcategory[8]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[8]['href']?>" class="filter-option-img-wrapper"><i class="wedding7"></i></a>
+                                    <span><?php echo $wsubcategory[8]['name']?></span>
                                 </label>
                             </div>
                         </div>
@@ -163,17 +156,17 @@
                         </div>
                         <div class="filter-col-options">
                             <div class="all-line-filter">
-                                <a href="#" class="active">All</a>
-                                <a href="#"><?php echo $wsubcategory[0]['name']?></a>
-                                <a href="#"><?php echo $wsubcategory[1]['name']?></a>
-                                <a href="#"><?php echo $wsubcategory[2]['name']?></a>
-                                <a href="#"><?php echo $wsubcategory[3]['name']?></a>
-                                <a href="#"><?php echo $wsubcategory[4]['name']?></a>
-                                <a href="#"><?php echo $wsubcategory[5]['name']?></a>
-                                <a href="#"><?php echo $wsubcategory[6]['name']?></a>
-                                <a href="#"><?php echo $wsubcategory[7]['name']?></a>
-                                <a href="#"><?php echo $wsubcategory[8]['name']?></a>
-                                <a href="#"><?php echo $wsubcategory[9]['name']?></a>
+                                <a href="/fine_jeverly" class="active">All</a>
+                                <a href="<?php echo $wsubcategory[0]['href']?>" <?php if ($child_id == $wsubcategory[0]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[0]['name']?></a>
+                                <a href="<?php echo $wsubcategory[1]['href']?>" <?php if ($child_id == $wsubcategory[1]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[1]['name']?></a>
+                                <a href="<?php echo $wsubcategory[2]['href']?>" <?php if ($child_id == $wsubcategory[2]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[2]['name']?></a>
+                                <a href="<?php echo $wsubcategory[3]['href']?>" <?php if ($child_id == $wsubcategory[3]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[3]['name']?></a>
+                                <a href="<?php echo $wsubcategory[4]['href']?>" <?php if ($child_id == $wsubcategory[4]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[4]['name']?></a>
+                                <a href="<?php echo $wsubcategory[5]['href']?>" <?php if ($child_id == $wsubcategory[5]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[5]['name']?></a>
+                                <a href="<?php echo $wsubcategory[6]['href']?>" <?php if ($child_id == $wsubcategory[6]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[6]['name']?></a>
+                                <a href="<?php echo $wsubcategory[7]['href']?>" <?php if ($child_id == $wsubcategory[7]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[7]['name']?></a>
+                                <a href="<?php echo $wsubcategory[8]['href']?>" <?php if ($child_id == $wsubcategory[8]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[8]['name']?></a>
+                                <a href="<?php echo $wsubcategory[9]['href']?>" <?php if ($child_id == $wsubcategory[9]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[9]['name']?></a>
                             </div>
                         </div>
                     </div>

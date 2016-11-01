@@ -10,7 +10,7 @@
                     <input id="lit2" type="password" name="password"  required="required" class="form-control" placeholder="<?php echo $entry_password; ?>">
                 </div>
                 <div class="text-right">
-                    <a href="<?php echo $forgotten; ?>" class="forgot-pass" data-toggle="modal" data-target="#forgotModal"><?php echo $text_forgotten; ?></a><br>
+                    <a href="<?php echo $forgotten; ?>" class="forgot-pass"><?php echo $text_forgotten; ?></a><br>
                 </div>
                 <div class="text center">
                     <button id="button-login" data-loading-text="<?php echo $text_loading; ?>" class="login-form-btn login-continue"><?php echo $button_login; ?></button>
