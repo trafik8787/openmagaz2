@@ -23,7 +23,7 @@
                             <p><?=$row['desk']?></p>
 
                         </div>
-                        <a href="<?=$row['link']?>" class="btn btn-default" role="button">Read more</a>
+                        <a href="<?=$row['link']?>" class="btn btn-default" target="_blank" role="button">Read more</a>
                     </div>
                     <div class="w-shadow-slider"></div>
                 </div>

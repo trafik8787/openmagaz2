@@ -37,6 +37,10 @@ class ModelAccountCustomer extends Model {
 
 		$message .= $this->url->link('account/login', '', 'SSL') . "\n\n";
 		$message .= $this->language->get('text_services') . "\n\n";
+
+        $message .= 'username: ' .$data['email'] . "\n";
+        $message .= 'password: ' .$data['password'] . "\n\n";
+
 		$message .= $this->language->get('text_thanks') . "\n";
 		$message .= html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8');
 

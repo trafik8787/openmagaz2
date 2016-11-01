@@ -390,7 +390,7 @@ $(document).on('click', '#button-register', function() {
         success: function(json) {
             $('.alert, .text-danger').remove();
             $('.cc-shipping-row').removeClass('has-error');
-
+            console.log(json);
             if (json['redirect']) {
                 location = json['redirect'];
             } else if (json['error']) {
@@ -509,6 +509,7 @@ $(document).on('click', '#button-register', function() {
             alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
         }
     });
+    return false;
 });
 
 // Payment Address

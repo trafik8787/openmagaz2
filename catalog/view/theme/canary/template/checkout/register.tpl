@@ -1,14 +1,14 @@
 <div class="clearfix">
     <div class="bl-input must">
-        <input type="text" name="email" id="input-payment-email" placeholder="Enter Email" required="required">
+        <input type="text" name="email" id="input-payment-email" placeholder="Enter Email" >
     </div>
 </div>
 <div class="clearfix">
     <div class="bl-input must">
-        <input type="text" name="firstname" id="input-payment-firstname" placeholder="First name" required="required">
+        <input type="text" name="firstname" id="input-payment-firstname" placeholder="First name">
     </div>
     <div class="bl-input must">
-        <input type="text" name="lastname" id="input-payment-lastname" placeholder="Last name" required="required">
+        <input type="text" name="lastname" id="input-payment-lastname" placeholder="Last name">
     </div>
 </div>
 <div class="clearfix">
@@ -16,13 +16,13 @@
         <input type="text" name="address_1" id="input-payment-address-1" placeholder="Address">
     </div>
     <div class="bl-input">
-        <input type="text" placeholder="Address (cont.)">
+        <input type="text" name="address_2" id="input-payment-address-2" placeholder="Address (cont.)">
     </div>
 </div>
 
 <div class="clearfix">
     <div class="bl-input must">
-        <input type="text" name="city" id="input-payment-city" placeholder="City" required="required">
+        <input type="text" name="city" id="input-payment-city" placeholder="City">
     </div>
     <div class="bl-input clearfix">
         <div class="bl-input must">
@@ -53,7 +53,7 @@
         <input type="text" name="postcode" id="input-payment-postcode" placeholder="Postal code">
     </div>
     <div class="bl-input must">
-        <input type="text" name="telephone" id="input-payment-telephone" placeholder="Phone number" required="required">
+        <input type="text" name="telephone" id="input-payment-telephone" placeholder="Phone number">
     </div>
 </div>
 
