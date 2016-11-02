@@ -367,7 +367,7 @@ class ModelCatalogProduct extends Model {
 	public function getProducts($data = array()) {
 
         $sql_cat = '';
-	    if ($data['filter_category'] != 'all') {
+	    if (!empty($data['filter_category']) and $data['filter_category'] != 'all') {
             $sql_cat = " INNER JOIN ". DB_PREFIX ."product_to_category ptc ON (p.product_id = ptc.product_id) ";
         }
 

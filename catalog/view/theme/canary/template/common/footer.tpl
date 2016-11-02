@@ -368,8 +368,21 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
 
-
-</head>
-
+<script type="text/javascript">
+    var google_tag_params = {
+        ecomm_prodid: 'REPLACE_WITH_VALUE',
+        ecomm_pagetype: 'REPLACE_WITH_VALUE',
+        ecomm_totalvalue: 'REPLACE_WITH_VALUE',
+    };
+</script>
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 878299355;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
 </body>
 </html>

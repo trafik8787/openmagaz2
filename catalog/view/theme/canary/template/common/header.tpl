@@ -48,7 +48,7 @@
     <?php } ?>
 
     <?//dd($categories)?>
-
+</head>
 <body>
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PHJ8N6"
