@@ -27,12 +27,12 @@
                         <div class="wrapper-menu-stat">
                             <div class="title">INFORMATION</div>
                             <ul class="menu-block-stat">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Delivery Information</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Site Map</a></li>
+                                <li><a href="/about_us">About Us</a></li>
+                                <li><a href="/delivery">Delivery Information</a></li>
+                                <li><a href="/contact">Contact Us</a></li>
+                                <li><a href="http://blog.brilliantcanary.com/" target="_blank">Blog</a></li>
+                                <li><a href="/faq">FAQ</a></li>
+                                <!--*<li><a href="#">Site Map</a></li>*-->
                             </ul>
                         </div>
                         <div class="wrapper-static-baner">

@@ -287,11 +287,11 @@
             </div>
             <div class="text-left margin-top-20 w-copirait mobile-block">
                 <p>© 2016. All rights reserved.
-                    <a href="">Privacy Policy</a>
+                    <a href="/privacy">Privacy Policy</a>
                     <span>|</span>
-                    <a href="">Terms & Conditions</a>
+                    <a href="/terms">Terms & Conditions</a>
                     <span>|</span>
-                    <a href="">Cookie Policy</a>
+                    <a href="/cookie_policy">Cookie Policy</a>
                 </p>
             </div>
         </section>

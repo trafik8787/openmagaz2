@@ -155,7 +155,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>">Column WHY PICK CANARY</span></label>
+                    <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>">Column WE OFFER MORE</span></label>
                     <div class="col-sm-10">
                         <div class="checkbox">
                             <label>
@@ -170,7 +170,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>">Column WE OFFER MORE</span></label>
+                    <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>">Column WHY PICK CANARY</span></label>
                     <div class="col-sm-10">
                         <div class="checkbox">
                             <label>
