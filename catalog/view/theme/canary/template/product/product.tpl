@@ -406,49 +406,55 @@
                     </div>
                 </div>
             </div>
-            <div class="right">
-                <div class="similar-header">
-                    <div class="linebg-title">
-                        <div class="linebg-line"></div>
-                        <span>MATCHING WEDDING RINGS</span>
+
+            <?if (!empty($matching)):?>
+
+                <div class="right">
+                    <div class="similar-header">
+                        <div class="linebg-title">
+                            <div class="linebg-line"></div>
+                            <span>MATCHING WEDDING RINGS</span>
+                        </div>
+                    </div>
+                    <div class="similar-list similar-list-1">
+                        <div class="wrapper-product-table th-view">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="product-item">
+                                                <div class="box-img">
+                                                    <a href="<?=$matching['href']?>" class="w-product-ajax"><img src="<?=$matching['img']?>" alt="<?=$matching['name']?>" title="<?=$matching['name']?>"></a>
+                                                </div>
+                                                <!--**-->
+                                                <div class="btn-box">
+                                                    <a href="#" type="button" onclick="cart.add('<?=$matching['product_id']?>', '<?php echo $matching['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
+                                                    <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
+                                                    <a href="<?=$matching['href']?>" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
+                                                    <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?=$matching['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
+                                                </div>
+                                                <div class="box-tovar-th">
+                                                    <div class="name"><?=$matching['name']?></div>
+
+                                                    <span class="price"><?=$matching['price']?></span>
+
+
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-th="Stock Number"><?=$matching['sku']?></td>
+                                        <td data-th="Price"><div class="price"><?=$matching['price']?></div></td>
+                                        <td><a href="#" onclick="compare.add('<?=$matching['product_id']?>'); return false;"><i class="fa fa-exchange"></i></a></td>
+                                        <td><a href="#" onclick="wishlist.add('<?=$matching['product_id']?>'); return false;"><i class="fa fa-heart"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="similar-list similar-list-1">
-                    <div class="wrapper-product-table th-view">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                <td>
-                                    <div class="product-item">
-                                        <div class="box-img">
-                                            <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="w-product-ajax"><img src="http://canary3.webremote.net/image/cache/catalog/galery_rings/50804-E-228x228.jpg" alt="14k White Gold Petite Pave Diamond Engagement Ring" title="14k White Gold Petite Pave Diamond Engagement Ring"></a>
-                                        </div>
-                                        <!--**-->
-                                        <div class="btn-box">
-                                            <a href="#" type="button" onclick="cart.add('1569', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                            <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1569'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                            <a href="http://canary3.webremote.net/engagement-rings/pave/14k-white-gold-petite-pave-diamond-engagement-ring-50804-EW14-1569" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                            <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1569'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                        </div>
-                                        <div class="box-tovar-th">
-                                            <div class="name">14k White Gold Petite Pave Diamond Engagement Ring</div>
 
-                                            <span class="price">$650.00</span>
+            <?endif?>
 
-
-                                        </div>
-                                    </div>
-                                </td>
-                                <td data-th="Stock Number">50804-EW14</td>
-                                <td data-th="Price"><div class="price">$650.00</div></td>
-                                <td><a href="#" onclick="compare.add('1569'); return false;"><i class="fa fa-exchange"></i></a></td>
-                                <td><a href="#" onclick="wishlist.add('1569'); return false;"><i class="fa fa-heart"></i></a></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 

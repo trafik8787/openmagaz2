@@ -1006,7 +1006,29 @@ class ControllerCatalogProduct extends Controller {
             $data['metal'] = null;
         }
 
+        if (isset($this->request->post['matching_id'])) {
+            $data['matching_id'] = $this->request->post['matching_id'];
+        } elseif (!empty($product_info)) {
+            $data['matching_id'] = $product_info['matching_id'];
+        } else {
+            $data['matching_id'] = 0;
+        }
 
+        if (isset($this->request->post['matching'])) {
+            $data['matching'] = $this->request->post['matching'];
+        } elseif (!empty($product_info)) {
+
+            $matching_info = $this->model_catalog_product->getProduct($product_info['matching_id']);
+
+            if ($matching_info) {
+                $data['matching'] = $matching_info['name'] .' - '.$matching_info['product_id'];
+            } else {
+                $data['matching'] = '';
+            }
+
+        } else {
+            $data['matching'] = '';
+        }
 
         if (isset($this->request->post['gemston_filtr_stone_type'])) {
             $data['gemston_filtr_stone_type'] = $this->request->post['gemston_filtr_stone_type'];
@@ -1136,6 +1158,8 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['manufacturer_id'] = 0;
 		}
+
+
 
 		if (isset($this->request->post['manufacturer'])) {
 			$data['manufacturer'] = $this->request->post['manufacturer'];
@@ -1529,7 +1553,7 @@ class ControllerCatalogProduct extends Controller {
 	public function autocomplete() {
 		$json = array();
 
-		if (isset($this->request->get['filter_name']) || isset($this->request->get['filter_model'])) {
+		if (isset($this->request->get['filter_name']) || isset($this->request->get['filter_model']) || isset($this->request->get['filter_product_id'])) {
 			$this->load->model('catalog/product');
 			$this->load->model('catalog/option');
 
@@ -1545,6 +1569,12 @@ class ControllerCatalogProduct extends Controller {
 				$filter_model = '';
 			}
 
+			if (isset($this->request->get['filter_product_id'])) {
+				$filter_product_id = $this->request->get['filter_product_id'];
+			} else {
+				$filter_product_id = '';
+			}
+
 			if (isset($this->request->get['limit'])) {
 				$limit = $this->request->get['limit'];
 			} else {
@@ -1554,6 +1584,7 @@ class ControllerCatalogProduct extends Controller {
 			$filter_data = array(
 				'filter_name'  => $filter_name,
 				'filter_model' => $filter_model,
+                'filter_product_id' => $filter_product_id,
 				'start'        => 0,
 				'limit'        => $limit
 			);

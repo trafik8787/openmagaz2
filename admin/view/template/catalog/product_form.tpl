@@ -360,14 +360,15 @@
                     </div>
                 </div>
 
-
                 <div class="form-group">
-                    <label class="col-sm-2 control-label" for="input-manufacturer"><span data-toggle="tooltip" title="<?php echo $help_manufacturer; ?>"><?php echo $entry_manufacturer; ?></span></label>
+                    <label class="col-sm-2 control-label" for="input-matching"><span data-toggle="tooltip" title="matching">Product matching</span></label>
                     <div class="col-sm-10">
-                        <input type="text" name="manufacturer" value="<?php echo $manufacturer ?>" placeholder="<?php echo $entry_manufacturer; ?>" id="input-manufacturer" class="form-control" />
-                        <input type="hidden" name="manufacturer_id" value="<?php echo $manufacturer_id; ?>" />
+                        <input type="text" name="matching" value="<?php echo $matching ?>" placeholder="Product matching" id="input-matching" class="form-control" />
+                        <input type="hidden" name="matching_id" value="<?php echo $matching_id; ?>" />
                     </div>
                 </div>
+
+
 
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-manufacturer"><span data-toggle="tooltip" title="<?php echo $help_manufacturer; ?>"><?php echo $entry_manufacturer; ?></span></label>
@@ -1051,6 +1052,37 @@ $('input[name=\'manufacturer\']').autocomplete({
 		$('input[name=\'manufacturer_id\']').val(item['value']);
 	}
 });
+
+
+
+$('input[name=\'matching\']').autocomplete({
+  'source': function(request, response) {
+      $.ajax({
+          url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_product_id=' +  encodeURIComponent(request) + '&filter_name=' +  encodeURIComponent(request),
+          dataType: 'json',
+          success: function(json) {
+              json.unshift({
+                  matching_id: 0,
+                  name: '<?php echo $text_none; ?>'
+              });
+
+              response($.map(json, function(item) {
+                  return {
+                      label: item['name'],
+                      value: item['product_id']
+                  }
+              }));
+          }
+      });
+  },
+  'select': function(item) {
+      console.log(item);
+      $('input[name=\'matching\']').val(item['label']);
+      $('input[name=\'matching_id\']').val(item['value']);
+  }
+});
+
+
 
 // Category
 $('input[name=\'category\']').autocomplete({

@@ -34,6 +34,7 @@ class ModelCatalogProduct extends Model {
 				'stock_status'     => $query->row['stock_status'],
 				'image'            => $query->row['image'],
 				'manufacturer_id'  => $query->row['manufacturer_id'],
+				'matching_id'      => $query->row['matching_id'],
 				'manufacturer'     => $query->row['manufacturer'],
 				'price'            => ($query->row['discount'] ? $query->row['discount'] : $query->row['price']),
 				'special'          => $query->row['special'],
@@ -415,7 +416,7 @@ class ModelCatalogProduct extends Model {
 		return $query->rows;
 	}
 
-	public function getProductRelated($product_id) {
+	public function getProductRelated($product_id, $count_product = 3) {
 		$product_data = array();
 
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_related pr LEFT JOIN "
@@ -434,7 +435,7 @@ class ModelCatalogProduct extends Model {
 
             $sql = array();
             //количество похожих продуктов 5
-            while (count($sql) < 3) {
+            while (count($sql) < $count_product) {
                 $sql[] = "(SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN "
                     . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN ". DB_PREFIX ."product_to_category ptc ON (p.product_id = ptc.product_id)
                 WHERE  p.status = '1' AND p.date_available <= NOW() 

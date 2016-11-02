@@ -155,10 +155,19 @@ class ControllerProductProduct extends Controller {
 		}
 
 		$this->load->model('catalog/product');
+        $this->load->model('tool/image');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 
-        //dd((int)$this->request->get['path']);
+        $countRelated = 3;
+        if (!empty($product_info['matching_id'])) {
+            $data['matching'] = $this->getMatchingProduct($product_info['matching_id']);
+        } else {
+            $countRelated = 3;
+        }
+
+        //dd($data['matching']);
+
 		if ($product_info) {
 			$url = '';
 
@@ -292,7 +301,6 @@ class ControllerProductProduct extends Controller {
 				$data['stock'] = $this->language->get('text_instock');
 			}
 
-			$this->load->model('tool/image');
 
 			if ($product_info['image']) {
 				$data['popup'] = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
@@ -442,7 +450,7 @@ class ControllerProductProduct extends Controller {
 
 			$data['products'] = array();
 
-			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id']);
+			$results = $this->model_catalog_product->getProductRelated($this->request->get['product_id'], $countRelated);
 
 			foreach ($results as $result) {
 				if ($result['image']) {
@@ -755,4 +763,69 @@ class ControllerProductProduct extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+
+
+
+
+    public function getMatchingProduct ($product_id) {
+
+
+        $data['products'] = array();
+
+        $matching_info = $this->model_catalog_product->getProduct($product_id);
+
+        if (!empty($matching_info)) {
+            if ($matching_info['image']) {
+                $image = $this->model_tool_image->resize($matching_info['image'], $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
+            } else {
+                $image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_related_width'), $this->config->get('config_image_related_height'));
+            }
+
+            if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                $price = $this->currency->format($this->tax->calculate($matching_info['price'], $matching_info['tax_class_id'], $this->config->get('config_tax')));
+            } else {
+                $price = false;
+            }
+
+            if ((float)$matching_info['special']) {
+                $special = $this->currency->format($this->tax->calculate($matching_info['special'], $matching_info['tax_class_id'], $this->config->get('config_tax')));
+            } else {
+                $special = false;
+            }
+
+            if ($this->config->get('config_tax')) {
+                $tax = $this->currency->format((float)$matching_info['special'] ? $matching_info['special'] : $matching_info['price']);
+            } else {
+                $tax = false;
+            }
+
+            if ($this->config->get('config_review_status')) {
+                $rating = (int)$matching_info['rating'];
+            } else {
+                $rating = false;
+            }
+
+            $data['products'] = array(
+                'product_id' => $matching_info['product_id'],
+                'sku' => $matching_info['sku'],
+                'thumb' => $image,
+                'img' => $this->url->urlLink('image/' . $matching_info['image']),
+                'name' => $matching_info['name'],
+                'description' => utf8_substr(strip_tags(html_entity_decode($matching_info['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
+                'price' => $price,
+                'special' => $special,
+                'tax' => $tax,
+                'minimum' => $matching_info['minimum'] > 0 ? $matching_info['minimum'] : 1,
+                'rating' => $rating,
+                'href' => $this->url->link('product/product', 'product_id=' . $matching_info['product_id'])
+            );
+        }
+        return $data['products'];
+
+	}
+
+
 }
+
+
