@@ -88,12 +88,22 @@ $( document ).ready(function( $ ) {
         $(this).addClass("active");
     });
 
+    if (localStorage.getItem('TableGrid')) {
+        $('.wrapper-product-table').addClass(localStorage.getItem('TableGrid'));
+    } else {
+        $('.wrapper-product-table').addClass("th-view");
+    }
+    console.log(localStorage.getItem('TableGrid'));
+
+
     $(document).on('click', '.list-btn', function() {
         $(".wrapper-product-table").removeClass("th-view").addClass("list-view");
+        localStorage.setItem('TableGrid', 'list-view');
     });
 
     $(document).on('click', '.th-btn', function() {
         $(".wrapper-product-table").removeClass("list-view").addClass("th-view");
+        localStorage.setItem('TableGrid', 'th-view');
     });
 
     $(".cart-bl > a").click(function() {

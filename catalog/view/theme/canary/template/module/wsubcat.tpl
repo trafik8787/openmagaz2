@@ -88,11 +88,11 @@
                         </div>
                     </div>
                     <div class="filter-col text-right hidden-xs">
-                        <div class="filter-col-options">
-                            <div class="all-line-filter">
-                                <a href="#">Sets for him and her</a>
-                            </div>
-                        </div>
+                            <!--*<div class="filter-col-options">*-->
+                                <!--*<div class="all-line-filter">*-->
+                                    <!--*<a href="#">Sets for him and her</a>*-->
+                                <!--*</div>*-->
+                            <!--*</div>*-->
                     </div>
                 </div>
 
