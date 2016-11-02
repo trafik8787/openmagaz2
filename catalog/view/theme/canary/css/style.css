@@ -5114,9 +5114,9 @@ footer > section .row {
 }
 .list-product .filter-product-line {
   padding: 20px 0;
-  font-size: 16px;
+  font-size: 13px;
   color: white;
-  font-family: "Raleway-Bold", fantasy;
+  font-family: "Raleway-Bold";
   background-color: #2f4680;
 }
 .list-product .filter-product-line .center-bl > * {
@@ -5139,6 +5139,8 @@ footer > section .row {
   font-size: 16px;
   border: 0; }
 .list-product .filter-product-line .dropdown select {
+  font-family: "Montserrat-Regular";
+  font-size: 12px;
   border-radius: 0; }
 .list-product .filter-product-line .dropdown .dropdown-menu {
   min-width: 100%;

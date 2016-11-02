@@ -599,7 +599,7 @@ $(function() {
             $("#horizontal").append(
                 '<li href="#" class="hideshow">'
                 + '<a href="#">more '
-                + '<span style="font-size:13px">&#8595;</span>'
+                + '<span style="font-size:13px"><i class="fa fa-angle-down" aria-hidden="true"></i></span>'
                 + '</a><ul class="w-top-children-menu">' + menuhtml + '</ul></li>');
             $("#horizontal li.hideshow ul").css("top", "40px");
             $("#horizontal li.hideshow").click(function () {

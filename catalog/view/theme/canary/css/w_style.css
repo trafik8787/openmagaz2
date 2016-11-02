@@ -3681,6 +3681,7 @@ text-align: left;
     .w-navigate-circle .w-one-block .title {
         margin: 0;
         line-height: 1.2;
+        max-width: 150px;
     }
 
     .main-catalog-container.wrapper-product-table.th-view .product-item .name {
@@ -3773,6 +3774,10 @@ text-align: left;
     .diamond-catalog {
         display: block;
         overflow: hidden;
+    }
+
+    .w-navigate-circle .w-one-block .title{
+        max-width: 100%;
     }
 
     .diamond-catalog-left {
