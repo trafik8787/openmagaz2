@@ -234,8 +234,8 @@
         var max = parseInt("<?= !empty($PriceToStable) ? $PriceToStable : 0?>");
 
 
-        var ValMin = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-min").val()),min,max,4.3));
-        var ValMax = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-max").val()),min,max,4.3));
+        var ValMin = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-min").val()),min,max,6.2));
+        var ValMax = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-max").val()),min,max,6.2));
 
         var val_curent_max;
         var val_curent_min;
@@ -244,12 +244,12 @@
             range: true,
             min: min,
             animate: 'slow',
-            step: 1,
+            step: 100,
             max: max,
             values: [ValMin, ValMax],
             slide: function( event, ui ) {
-                val_curent_max = Math.round(Math.easeIn(ui.values[1], min, max, 4.3));
-                val_curent_min = Math.round(Math.easeIn(ui.values[0], min, max, 4.3));
+                val_curent_max = Math.round(Math.easeIn(ui.values[1], min, max, 6.2));
+                val_curent_min = Math.round(Math.easeIn(ui.values[0], min, max, 6.2));
                 $('.dop-filtr-price-max').val(numeral(val_curent_max).format('$0,0'));
                 $('.dop-filtr-price-min').val(numeral(val_curent_min).format('$0,0'));
             },
