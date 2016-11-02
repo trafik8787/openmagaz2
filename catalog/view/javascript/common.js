@@ -65,7 +65,7 @@ $(document).ready(function() {
 
 	$('#search input[name=\'search\']').on('keydown', function(e) {
 		if (e.keyCode == 13) {
-			$('header input[name=\'search\']').parent().find('button').trigger('click');
+			$('header input[name=\'search\']').parent().find('button, a').trigger('click');
 		}
 	});
 
