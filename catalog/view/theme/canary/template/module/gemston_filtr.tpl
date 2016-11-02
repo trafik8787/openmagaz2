@@ -2,7 +2,7 @@
     <div class="filter-wrapper clearfix thumbnail">
         <div class="wrapper-filter-close">
             <div class="filter-row">
-                <div class="filter-col filter-diamond-left wide-title">
+                <div class="filter-col filter-diamond-left wide-title icon-size-reduce">
                     <div class="filter-col-title">Gemstone</div>
                     <div class="filter-col-options" id="id-filtr-stone-type">
                         <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="filter-row">
-                <div class="filter-col wide-title">
+                <div class="filter-col wide-title icon-size-reduce">
                     <div class="filter-col-title">Shape</div>
                     <div class="filter-col-options" id="id-filtr-shape">
                         <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
