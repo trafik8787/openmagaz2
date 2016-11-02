@@ -139,17 +139,17 @@ $(document).ready(function() {
 
     $('.w-more-info').on('click', function () {
         var $collapse = $('.collapse');
+        $(this).toggleClass('active');
         $collapse.collapse('toggle');
     });
 
-    $('.collapse').on('shown.bs.collapse', function () {
+    $('.collapse').on('show.bs.collapse', function () {
         $('.w-more-info span').text('less info');
 
     });
 
-    $('.collapse').on('hidden.bs.collapse', function () {
+    $('.collapse').on('hide.bs.collapse', function () {
         $('.w-more-info span').text('more info');
-
     });
 
     //пагинация ajax

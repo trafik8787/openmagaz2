@@ -82,13 +82,12 @@
                 <div class="engagement-img-menu clearfix">
                     <img src="/catalog/view/theme/canary/img/img251.png" alt="img" class="img-under-style">
                 </div>
-
             </div>
         </li>
         <li class="dropdown-b"><!--*WEDDING RINGS*-->
             <a href="<?php echo $categories[2]['href']?>" class="w-general-category"><span></span><?php echo $categories[2]['name']?></a>
             <div class="dropdown-inside">
-                <div class="row clearfix">
+                <div class="clearfix">
                     <div class="col-md-8 col-sm-8 col-xs-8">
 
                         <div class="title">BROWSE WEDDING RINGS FOR WOMAN</div><!--*woman*-->
@@ -179,7 +178,7 @@
                         <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><i class="all-menu-i"></i><br>All</a>
                     </li>
                 </ul>
-                <div class="row clearfix">
+                <div class="clearfix">
                     <div class="jewelry-wrapper">
                         <div class="title">Browse diamonds jewelry</div>
                         <ul class="brilliant-style jewelry-style1">
@@ -203,7 +202,7 @@
         <li class="dropdown-b" data-target="menu4">
             <a href="<?php echo $categories[4]['href']?>" class="w-general-category"><span></span><?php echo $categories[4]['name']?></a>
             <div class="dropdown-inside">
-                <div class="row clearfix">
+                <div class="clearfix">
                     <div class="col-md-4 col-sm-4 col-xs-4">
                         <div class="title">Browse settings by stone</div>
                         <ul class="brilliant-style gemstones-box">
@@ -296,7 +295,7 @@
         <li class="dropdown-b">
             <a href="<?php echo $categories[3]['href']?>" class="w-general-category"><span></span><?php echo $categories[3]['name']?></a>
             <div class="dropdown-inside">
-                <div class="row clearfix">
+                <div class="clearfix">
                     <div class="col-md-4 col-sm-4 col-xs-4">
                         <div class="title">Browse jewelry by type</div>
                         <ul class="style-br-long ul-first-drop">

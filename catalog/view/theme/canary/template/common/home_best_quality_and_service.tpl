@@ -85,26 +85,21 @@
 
                     Brilliant Canary was formed with the customer in mind.
                     Through many years of working in the industry, we heard the wants and needs of our customers.
+                    <div class="collapse">
+                        With these in mind, we established a company that puts an emphasis on providing exceptional education,
+                        quality and service at the best price.
+                        We strongly believe in helping others—with every purchase made a portion of the profits goes to the charity of your choice.*
+                        Thank you for choosing Brilliant Canary, where everything is Beyond Brilliant!
+                    </div>
 
                 </div>
                 <div class="col-md-6 col-sm-6">
                     All of our bridal jewelry is designed and crafted in the United States of America.
                     By supporting manufacturers in the United States, we can provide our customers with the highest
+                    <div class="collapse">
+                        quality jewelry at afaster delivery time and an exceptional price.
+                    </div>
 
-                </div>
-            </div>
-            <div class="row collapse clas-raleway-regular14">
-                <div class="col-md-6 col-sm-6">
-
-                    With these in mind, we established a company that puts an emphasis on providing exceptional education,
-                    quality and service at the best price.
-                    We strongly believe in helping others—with every purchase made a portion of the profits goes to the charity of your choice.*
-                    Thank you for choosing Brilliant Canary, where everything is Beyond Brilliant!
-
-                </div>
-                <div class="col-md-6 col-sm-6">
-
-                    quality jewelry at afaster delivery time and an exceptional price.
                 </div>
             </div>
             <div class="w-button-colaps w-more-info"><span>more info</span></div>

@@ -416,7 +416,32 @@ a.w-list-group-item {
 
 .w-bloc-home-category .list-group {font-family: "Raleway-Bold", fantasy;font-size: 15px;}
 
-.w-bloc-home-category .list-group .w-cur-left {right: 25px;position: absolute;font-size: 18px;color: #929394;}
+.w-bloc-home-category .list-group .w-cur-left {
+    top: 15px;
+    right: 25px;
+    position: absolute;
+    font-size: 18px;
+    color: #929394;
+    display: block;
+    width: 7px;
+    height: 12px;
+}
+.w-bloc-home-category .list-group .w-cur-left:before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 2px solid #929394;
+    border-left: none;
+    border-bottom: none;
+    position: absolute;
+    left: -3px;
+    top: 2px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
 
 .w-bloc-home-category .h3 {
     font-family: "Raleway-Bold", fantasy;
@@ -3552,6 +3577,10 @@ text-align: left;
     font-weight: normal;
     margin-bottom: 5px;
     font-family: "Raleway-Bold", fantasy;
+}
+
+.relative-wrapper {
+    position: relative;
 }
 
 
