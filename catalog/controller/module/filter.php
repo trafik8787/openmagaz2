@@ -78,7 +78,7 @@ class ControllerModuleFilter extends Controller {
                                 $explod = explode(' ', $filter['name']);
 
                                 if (count($explod) > 1 AND $explod[0] !== 'All') {
-                                    $name_filtr = $explod[1];
+                                    $name_filtr = $explod[1].' '.$explod[2];
                                     $name_filtr_count = $explod[0];
                                 } else {
                                     $name_filtr = $filter['name'];

@@ -156,7 +156,7 @@
         <div class="functional-filter filter-buttons clearix">
 
             <ul class="hidden-xs filter-options-type">
-                <li><a href="#" class="active">Main Options</a></li>
+                <!--*<li><a href="#" class="active">Main Options</a></li>*-->
                 <li>
 
 
@@ -272,7 +272,7 @@
 
 
                 </li>
-                <li><a href="#">Other Options</a></li>
+                <!--*<li><a href="#">Other Options</a></li>*-->
             </ul>
 
             <div class="clearfix hide">
@@ -391,7 +391,7 @@
 
             <button class="filter-default-result w-clear-filtr-product">Clear filter</button>
             <button class="filter-change"><span>Hide filter’s block</span></button>
-            <button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>
+            <!--*<button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>*-->
         </div>
     </div>
 </div>
@@ -609,7 +609,9 @@
 
         if (queryStr['price'] != undefined) {
             $get_price_from = queryStr['price'].split(',')[0];
+            //$get_price_from = Math.round(Math.easeOut($get_price_from,200,990000,3.9));
             $get_price_to = queryStr['price'].split(',')[1];
+            //$get_price_to = Math.round(Math.easeOut($get_price_to,200,990000,3.9));
             $url_price = '&price='+queryStr['price'].split(',')[0]+','+queryStr['price'].split(',')[1];
         } else {
             $get_price_from = 200;
@@ -854,8 +856,8 @@
             values: [$get_carat_from, $get_carat_to],
             slide: function( event, ui ) {
 
-                $('.w-input-carat-from').val(Math.easeIn(ui.values[0], 0.25, 15, 3.6).toFixed(2));
-                $('.w-input-carat-to').val(Math.easeIn(ui.values[1], 0.25, 15, 3.6).toFixed(2));
+                $('.w-input-carat-from').val(Math.easeIn(ui.values[0], 0.25, 15, 2.2).toFixed(2));
+                $('.w-input-carat-to').val(Math.easeIn(ui.values[1], 0.25, 15, 2.2).toFixed(2));
 
             },
             change: function( event, ui ) {
@@ -885,7 +887,7 @@
 
         var w_slider_price_from;
         var w_slider_price_to;
-
+        //console.log($get_price_from);
         var $w_slider_price = $('#w-slider-price').slider({
             min: 200,
             max: 990000,
@@ -894,10 +896,9 @@
             animate: 'slow',
             values: [$get_price_from, $get_price_to],
             slide: function( event, ui ) {
-                w_slider_price_from = Math.round(Math.easeIn(ui.values[0], 200, 990000, 6.9));
-                w_slider_price_to = Math.round(Math.easeIn(ui.values[1],  200, 990000, 6.9));
-                console.log(w_slider_price_from);
-                console.log(w_slider_price_to);
+                w_slider_price_from = Math.round(Math.easeIn(ui.values[0], 200, 990000, 3.9));
+                w_slider_price_to = Math.round(Math.easeIn(ui.values[1],  200, 990000, 3.9));
+
                 $('.w-input-price-from').val(numeral(w_slider_price_from).format('$0,0'));
                 $('.w-input-price-to').val(numeral(w_slider_price_to).format('$0,0'));
             },
@@ -912,12 +913,15 @@
         });
 
 
+        $w_slider_price.slider("values", 0, Math.round(Math.easeOut(numeral().unformat( $('.w-input-price-from').val()),200,990000,3.9)));
+        $w_slider_price.slider("values", 1, Math.round(Math.easeOut(numeral().unformat( $('.w-input-price-to').val()),200,990000,3.9)));
+
         $('.w-input-price-from').on('change', function(){
-            $w_slider_price.slider("values", 0, numeral().unformat($(this).val()));
+            $w_slider_price.slider("values", 0, Math.round(Math.easeOut(numeral().unformat($(this).val()),200,990000,3.9)));
         });
 
         $('.w-input-price-to').on('change', function(){
-            $w_slider_price.slider("values", 1, numeral().unformat($(this).val()));
+            $w_slider_price.slider("values", 1, Math.round(Math.easeOut(numeral().unformat($(this).val()),200,990000,3.9)));
         });
 
         $('.w-input-price-to, .w-input-price-from').inputmask("numeric", {

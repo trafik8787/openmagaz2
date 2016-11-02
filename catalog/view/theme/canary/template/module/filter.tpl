@@ -42,14 +42,14 @@
                     <?php if (in_array($filter['filter_id'], $filter_category)): ?>
                     <li class="list__item btn">
                         <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
+                            <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
                             <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
                         </label>
                     </li>
                     <?else:?>
                     <li class="list__item btn">
                         <label class="label--checkbox">
-                            <input type="checkbox" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
+                            <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
                             <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
                         </label>
                     </li>
@@ -145,6 +145,8 @@ $(document).ready(function () {
 
         if (min_price_val != '' && min_price_val != undefined) {
             min_price = '&PriceFrom=' + min_price_val;
+        } else {
+            min_price = '&PriceFrom=0';
         }
 
         if (max_price_val != '' && max_price_val != undefined) {
@@ -201,8 +203,8 @@ $(document).ready(function () {
     var min = parseInt("<?php echo $min_price ?>");
     var max = parseInt("<?php echo $max_price ?>");
 
-    var ValMin = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-min").val()),min,max,4.3));
-    var ValMax = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-max").val()),min,max,4.3));
+    var ValMin = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-min").val()),min,max,2.2));
+    var ValMax = Math.round(Math.easeOut(numeral().unformat($(".dop-filtr-price-max").val()),min,max,2.2));
 
 
     var val_curent_max;
@@ -216,8 +218,8 @@ $(document).ready(function () {
         max: max,
         values: [ValMin, ValMax],
         slide: function( event, ui ) {
-            val_curent_max = Math.round(Math.easeIn(ui.values[1], min, max, 4.3));
-            val_curent_min = Math.round(Math.easeIn(ui.values[0], min, max, 4.3));
+            val_curent_max = Math.round(Math.easeIn(ui.values[1], min, max, 2.2));
+            val_curent_min = Math.round(Math.easeIn(ui.values[0], min, max, 2.2));
 
           $('.dop-filtr-price-max').val(numeral(val_curent_max).format('$0,0'));
           $('.dop-filtr-price-min').val(numeral(val_curent_min).format('$0,0'));
@@ -325,11 +327,11 @@ $(document).ready(function () {
 
 
   $('.dop-filtr-price-max').on('change', function(){
-      slider.slider("values", 1, Math.round(Math.easeOut(numeral().unformat($(this).val()),min,max,4.3)));
+      slider.slider("values", 1, Math.round(Math.easeOut(numeral().unformat($(this).val()),min,max,2.2)));
   });
 
   $('.dop-filtr-price-min').on('change', function(){
-    slider.slider("values", 0, Math.round(Math.easeOut(numeral().unformat($(this).val()),min,max,4.3)));
+    slider.slider("values", 0, Math.round(Math.easeOut(numeral().unformat($(this).val()),min,max,2.2)));
   });
 
 

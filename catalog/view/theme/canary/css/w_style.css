@@ -1229,7 +1229,7 @@ star-rating
 }
 
 .w-checed-list .label--checkbox span {
-    padding: 8px 10px;
+    padding: 8px 4px;
     font-size: 14px;
     font-family: "Raleway-Regular", fantasy;
     display: block;

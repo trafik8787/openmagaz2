@@ -327,11 +327,11 @@ class ControllerProductCategory extends Controller {
 
 			$data['sorts'] = array();
 
-			$data['sorts'][] = array(
-				'text'  => $this->language->get('text_default'),
-				'value' => 'p.sort_order-ASC',
-				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.sort_order&order=ASC' . $url)
-			);
+//			$data['sorts'][] = array(
+//				'text'  => $this->language->get('text_default'),
+//				'value' => 'p.sort_order-ASC',
+//				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.sort_order&order=ASC' . $url)
+//			);
 
 			$data['sorts'][] = array(
 				'text'  => $this->language->get('text_name_asc'),

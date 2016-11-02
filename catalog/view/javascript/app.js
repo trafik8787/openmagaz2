@@ -8,6 +8,7 @@ Math.easeIn = function (val, min, max, strength) {
     return (max-1)*Math.pow(val, strength) + min;
 };
 
+
 Math.easeOut = function (val, min, max, strength) {
     var res;
     res = (val-min)/(max-1);
