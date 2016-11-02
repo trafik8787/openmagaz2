@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <div class="wrapper-product-table th-view">
+        <div class="wrapper-product-table">
             <table class="table">
                 <thead>
                 <tr>

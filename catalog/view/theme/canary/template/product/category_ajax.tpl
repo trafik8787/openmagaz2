@@ -19,7 +19,7 @@
 
         <div class="view-product">
             <button class="list-btn btn-view" data-toggle="tooltip" data-placement="top" title="list"><i class="list-ico"></i></button>
-            <button class="th-btn btn-view active" data-toggle="tooltip" data-placement="top" title="block"><i class="block-ico"></i></button>
+            <button class="th-btn btn-view " data-toggle="tooltip" data-placement="top" title="block"><i class="block-ico"></i></button>
         </div>
         <div class="show-b">
             <span>Show:</span>
@@ -37,7 +37,7 @@
         </div>
     </div>
 </div>
-<div class="wrapper-product-table th-view">
+<div class="wrapper-product-table">
     <table class="table">
         <thead>
         <tr>
@@ -115,3 +115,14 @@
     </div>
     <?php echo $description; ?>
 </div>
+
+<script>
+    $(function () {
+        if (localStorage.getItem('TableGrid')) {
+            $('.wrapper-product-table').addClass(localStorage.getItem('TableGrid'));
+        } else {
+            $('.wrapper-product-table').addClass("th-view");
+        }
+    });
+
+</script>

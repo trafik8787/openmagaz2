@@ -154,7 +154,7 @@ $(document).ready(function() {
 
     //пагинация ajax
     $(document).on('click', '.w-pagination-product .pagination a', function(){
-
+        $('html, body').animate({ scrollTop: 700 }, 'slow');
         input_sort (this.href);
         return false;
     });
