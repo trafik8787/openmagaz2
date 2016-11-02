@@ -49,27 +49,24 @@
                             </div>
                         </div>
                         <div class="col-md-5 col-md-offset-2">
-                            <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+                            <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="right-checkout none-border">
                                 <div class="form-title">Send a Message</div>
-                                <div class="contacts-form-row">
-                                    <input id="it1" type="text" name="name" value="<?php echo $name; ?>" class="contacts-input required" required>
-                                    <label for="it1" class="label-placeholder">name<span class="reqstar">*</span></label>
+                                <div class="contacts-form-row bl-input must">
+                                    <input id="it1" type="text" name="name" value="<?php echo $name; ?>" class="contacts-input required" placeholder="Name" required>
                                 </div>
-                                <div class="contacts-form-row">
-                                    <input id="it2" type="email" name="email" value="<?php echo $email; ?>" class="contacts-input required" required>
-                                    <label for="it2" class="label-placeholder">e-mail<span class="reqstar">*</span></label>
+                                <div class="contacts-form-row bl-input must">
+                                    <input id="it2" type="text" name="email" value="<?php echo $email; ?>" class="contacts-input required" placeholder="E-mail" required>
                                 </div>
-                                <div class="contacts-form-row">
-                                    <input id="it3" type="text" class="contacts-input required" required>
-                                    <label for="it3" class="label-placeholder">phone<span class="reqstar">*</span></label>
+                                <div class="contacts-form-row bl-input must">
+                                    <input id="it3" type="text" class="contacts-input required" placeholder="Phone" required>
                                 </div>
-                                <div class="contacts-form-row contacts-form-row-mend">
-                                    <label for="ta1">message<span class="reqstar">*</span></label>
-                                    <textarea id="ta1" cols="30" name="enquiry" rows="5" class="contacts-textarea required" required><?php echo $enquiry; ?></textarea>
+                                <div class="contacts-form-row contacts-form-row-mend bl-input must">
+                                    <textarea id="ta1" cols="30" name="enquiry" rows="5" class="contacts-textarea required" placeholder="Message" required><?php echo $enquiry; ?></textarea>
+
                                 </div>
                                 <?php echo $captcha; ?>
                                 <div class="contacts-form-row text-right">
-                                    <button class="contacts-send-btn"><?php echo $button_submit; ?></button>
+                                    <button class="login-form-btn"><?php echo $button_submit; ?></button>
                                 </div>
 
                             </form>

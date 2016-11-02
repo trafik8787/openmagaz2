@@ -32,6 +32,8 @@ $(document).ready(function() {
     //
     //});
 
+    $('.stack-responsive').stacktable();
+
 
     $(document).on('click',".arrow-btn-number", function(e){
         e.preventDefault();

@@ -41,10 +41,10 @@
         <div class="contacts-page">
             <div class="center-bl">
                 <?php if ($products) { ?>
-                <table class="table table-bordered">
+                <table class="table table-bordered table-striped compare table-stat-page">
                     <thead>
                     <tr>
-                        <td colspan="<?php echo count($products) + 1; ?>"><strong><?php echo $text_product; ?></strong></td>
+                        <th colspan="<?php echo count($products) + 1; ?>"><strong><?php echo $text_product; ?></strong></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -130,7 +130,7 @@
                     <?php foreach ($attribute_groups as $attribute_group) { ?>
                     <thead>
                     <tr>
-                        <td colspan="<?php echo count($products) + 1; ?>"><strong><?php echo $attribute_group['name']; ?></strong></td>
+                        <th colspan="<?php echo count($products) + 1; ?>"><strong><?php echo $attribute_group['name']; ?></strong></th>
                     </tr>
                     </thead>
                     <?php foreach ($attribute_group['attribute'] as $key => $attribute) { ?>
@@ -151,8 +151,8 @@
                     <tr>
                         <td></td>
                         <?php foreach ($products as $product) { ?>
-                        <td><input type="button" value="<?php echo $button_cart; ?>" class="btn btn-primary btn-block" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');" />
-                            <a href="<?php echo $product['remove']; ?>" class="btn btn-danger btn-block"><?php echo $button_remove; ?></a></td>
+                        <td><input type="button" value="<?php echo $button_cart; ?>" class="btn w-btn-white w-btn-short btn-block" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');" />
+                            <a href="<?php echo $product['remove']; ?>" class="btn w-btn-orange w-btn-short btn-block"><?php echo $button_remove; ?></a></td>
                         <?php } ?>
                     </tr>
                 </table>

@@ -793,9 +793,18 @@ section.containaer-home > .row {margin-left: 0;margin-right: 0;}
   border-style: solid;
   border-width: 5px 3.5px 0 3.5px;
   border-color: #00000b transparent transparent transparent; }
+.top-menu-b > li.cart-bl.open{
+  background-color: #576A99;
+}
+.form-control:focus{
+  box-shadow: none;
+  border-color: #d0d5e2;
+}
+input:focus{
+  outline: none!important;
+}
 .top-menu-b > li.cart-bl {
   position: relative;
-  background-color: #576A99;
 }
 .top-menu-b > li.cart-bl > a {
   padding-right: 13px;
@@ -2609,12 +2618,20 @@ footer > section .row {
 
 .contacts-textarea {
   width: 100%;
+  padding: 5px 20px;
   display: block;
   resize: none;
-  border-radius: 1px;
-  border: 1px solid #808080;
-  font-size: 14px;
-  padding: 5px; }
+  border: 1px solid #e0e0e0;
+  font-size: 15px;
+  font-family: 'SegoeUI', sans-serif;
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+}
+
+.right-checkout.none-border .bl-input:nth-child(2){
+  float: none;
+}
 
 .contacts-send-btn {
   border: none;
@@ -3224,12 +3241,21 @@ footer > section .row {
   width: 20px;
   position: relative;
   top: -1px; }
+.right-checkout.none-border{
+  padding-top: 0;
+  border: 0;
+}
 
+.right-checkout.none-border .bl-input {
+  width: 100%;
+  margin-bottom: 20px;
+  float: none;
+}
 .faq-modal-btn {
   width: 240px;
   height: 64px;
   margin-top: 40px;
-  display: inline-block;
+  display: none;
   font-size: 18px;
   color: #ffffff;
   text-decoration: none;
@@ -7422,11 +7448,20 @@ footer > section .row {
   padding-bottom: 100px;
 }
 
+.contacts-page .btn:last-child{
+  margin-bottom: 0;
+}
+.contacts-page .btn{
+  margin-bottom: 10px;
+  margin-right: 0;
+  text-align: center;
+}
+
 .menu > ul > li.dropdown-b > a >span{
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   position: absolute;
-  top: 17px;
+  top: 18px;
   right: -6px;
   display: block;
   -webkit-border-radius:50%;
