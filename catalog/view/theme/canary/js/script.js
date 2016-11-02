@@ -119,6 +119,8 @@ $( document ).ready(function( $ ) {
 
     $(document).on('click', '.filter-change', function() {
 
+        $(this).toggleClass('active');
+
         $(".wrapper-filter-close").slideToggle(500, function(){
             $(".filter-box").toggleClass('open');
         });

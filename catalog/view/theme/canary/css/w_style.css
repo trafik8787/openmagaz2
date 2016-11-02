@@ -3521,8 +3521,31 @@ text-align: left;
     border-bottom: 14px solid #607da3;
 }
 
+.filter-buttons .filter-change.active:before {
+    bottom: -84px;
+    top: auto;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.filter-buttons .filter-change.active {
+    bottom: -10px;
+}
+
 .filter-buttons .filter-change span {
     text-decoration: none;
+}
+
+.filter-buttons .filter-change .text2,
+.filter-buttons .filter-change.active .text1 {
+    display: none;
+}
+
+.filter-buttons .filter-change.active .text2 {
+    display: inline-block;
 }
 
 .forgotten-page .control-label {

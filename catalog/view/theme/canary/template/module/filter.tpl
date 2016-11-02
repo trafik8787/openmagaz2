@@ -111,7 +111,7 @@
     </div>
     <div class="functional-filter filter-buttons clearfix">
         <button class="filter-default-result w-clear-filtr-product">Clear filter</button>
-        <button class="filter-change"><span>Hide filter’s block</span></button>
+        <button class="filter-change"><span><span class="text1">Hide</span><span class="text2">Show</span> filter’s block</span></button>
         <button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>
     </div>
     </div>
