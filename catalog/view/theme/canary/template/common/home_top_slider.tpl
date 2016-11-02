@@ -19,7 +19,7 @@
                     <li><span>.</span></li>
                     <li><a href="/engagement-rings/vintage">Vintage</a></li>
                     <li><span>.</span></li>
-                    <li><a href="/engagement-rings">All Engagement Rings</a></li>
+                    <li><a href="/engagement-rings">All</a></li>
                 </ul>
             </div>
 

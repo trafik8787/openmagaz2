@@ -12,7 +12,7 @@
                     <img src="/catalog/view/theme/canary/img/demo_new_template/wedding_rings.jpg" alt="">
                 </div>
                 <div class="list-group text-center">
-                    <a href="/wedding-rings/classik_woman" class="w-list-group-item">Classical Weddings Ringsspan <span class="w-cur-left"> &#62; </span></a>
+                    <a href="/wedding-rings/classik_woman" class="w-list-group-item">Classical Weddings Ring <span class="w-cur-left"> &#62; </span></a>
                     <a href="/wedding-rings/diamond_woman" class="w-list-group-item">Wedding Rings with Diamonds <span class="w-cur-left"> &#62; </span></a>
                     <a href="/wedding-rings/eternity_woman" class="w-list-group-item">Eternity Wedding Rings <span class="w-cur-left"> &#62; </span></a>
                     <a href="/wedding-rings/classic_man" class="w-list-group-item">Wedding Rings for Men <span class="w-cur-left"> &#62; </span></a>
