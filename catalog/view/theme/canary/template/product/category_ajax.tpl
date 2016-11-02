@@ -119,9 +119,9 @@
 <script>
     $(function () {
         if (localStorage.getItem('TableGrid')) {
-            $('.wrapper-product-table').addClass(localStorage.getItem('TableGrid'));
+            $('.list-product .wrapper-product-table').addClass(localStorage.getItem('TableGrid'));
         } else {
-            $('.wrapper-product-table').addClass("th-view");
+            $('.list-product .wrapper-product-table').addClass("th-view");
         }
     });
 
