@@ -176,6 +176,9 @@ class ControllerModuleComplect extends Controller {
         $data['content_top'] = $this->load->controller('common/content_top');
         $data['content_bottom'] = $this->load->controller('common/content_bottom');
 
+        $data['bloc_product_advantages'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_product_advantages.tpl');
+        $data['blok_your_order_includes'] = $this->load->view($this->config->get('config_template') . '/template/common/blok_your_order_includes.tpl');
+
         if (!in_ajax()) {
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');

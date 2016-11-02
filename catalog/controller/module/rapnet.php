@@ -441,6 +441,9 @@ class ControllerModuleRapnet extends Controller {
             'href' => ''
         );
 
+        $data['bloc_product_advantages'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_product_advantages.tpl');
+        $data['blok_your_order_includes'] = $this->load->view($this->config->get('config_template') . '/template/common/blok_your_order_includes.tpl');
+
         if (in_ajax()) {
             $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_product.tpl', $data));
         } else {

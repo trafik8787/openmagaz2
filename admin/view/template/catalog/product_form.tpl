@@ -420,7 +420,7 @@
                                 <select class="form-control" name="gemston_filtr_shape" id="filtr_stone_type">
                                     <option value="0">Selected Shape</option>
                                     <?foreach (arr_filtr_shape() as $value => $row):?>
-                                        <option value="<?=$value?>" <? if ($value == $gemston_filtr_shape):?> selected="selected" <?endif?>><?=$row?></option>
+                                        <option value="<?=$value?>" <? if ($value == $gemston_filtr_shape):?> selected="selected" <?endif?>><?=$row[0]?></option>
                                     <?endforeach?>
                                 </select>
 
@@ -435,7 +435,7 @@
                                 <select class="form-control" name="gemston_filtr_primary_color" id="filtr_stone_type">
                                     <option value="0">Selected Primary Color</option>
                                     <?foreach (arr_primary_color() as $value => $row):?>
-                                        <option value="<?=$value?>" <? if ($value == $gemston_filtr_primary_color):?> selected="selected" <?endif?>><?=$row?></option>
+                                        <option value="<?=$value?>" <? if ($value == $gemston_filtr_primary_color):?> selected="selected" <?endif?>><?=$row[0]?></option>
                                     <?endforeach?>
                                 </select>
 

@@ -506,6 +506,9 @@ class ControllerProductProduct extends Controller {
 
 			$data['recurrings'] = $this->model_catalog_product->getProfiles($this->request->get['product_id']);
 
+            $data['bloc_product_advantages'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_product_advantages.tpl');
+            $data['blok_your_order_includes'] = $this->load->view($this->config->get('config_template') . '/template/common/blok_your_order_includes.tpl');
+
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
 
            // dd($data);

@@ -12,7 +12,7 @@
             </div>
             <div class="row w-best-quality">
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <a href="#">
+                    <a href="/free-and-insured-shipping">
                         <div class="alert alert-info">
                             <div class="media">
                                         <span class="pull-left">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
 
-                    <a href="#">
+                    <a href="/money_back">
                         <div class="alert alert-info">
                             <div class="media">
                                         <span class="pull-left">
@@ -47,7 +47,7 @@
 
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <a href="#">
+                    <a href="/free_engraving">
                         <div class="alert alert-info">
                             <div class="media">
                                         <span class="pull-left">
@@ -63,7 +63,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <a href="#">
+                    <a href="/helping-others">
                         <div class="alert alert-info">
                             <div class="media">
                                         <span class="pull-left">
