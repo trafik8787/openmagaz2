@@ -3604,9 +3604,24 @@ text-align: left;
 
 
 
+@media (min-width: 768px) and (max-width: 1200px) {
+    .product-buy-diamant .btn {
+        width: 180px;
+        margin: 20px auto 0;
+        display: block;
+        float: none;
+    }
+    .product-buy-diamant{
+        text-align: center;
+    }
+}
+
 @media (max-width: 1200px) {
     .diamond-catalog-right-inner {
         min-width: 275px;
+    }
+    .menu > ul:before {
+        right: 75px;
     }
     .diamond-catalog.show-detail .diamond-catalog-right {
         width: 275px;
@@ -3614,9 +3629,7 @@ text-align: left;
     .product-buy-diamant .w-btn-orange .bold-angle-right {
         margin-right: 0;
     }
-    .product-buy-diamant .btn {
-        width: 180px;
-    }
+
     .product-diamond-help {
         height: 400px;
     }
