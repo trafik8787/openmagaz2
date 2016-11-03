@@ -421,7 +421,7 @@ $(window).on('resize', function() {
 
 });
 
-var similarStoneslider = $('.similar-stones .wrapper-product-table .table tbody');
+var similarStoneslider = $('.similar-list-4 .wrapper-product-table .table tbody');
 if ($(window).width() < 481) {
     similarStoneslider.slick($settings);
 }

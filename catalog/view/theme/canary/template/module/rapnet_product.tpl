@@ -319,7 +319,8 @@
                 <div class="product-section-title">SIMILAR STONES</div>
                 <div class="icons-quality_service_icon"></div>
             </div>
-            <div class="wrapper-product-table th-view">
+            <div class="similar-list similar-list-4">
+                <div class="wrapper-product-table th-view">
                     <table class="table">
                         <tbody>
                         <tr>
@@ -433,6 +434,7 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
         </div>
     </div>
 
@@ -535,7 +537,7 @@
     });
 
 
-    var similarStoneslider = $('.similar-stones .wrapper-product-table .table tbody');
+    var similarStoneslider = $('.similar-list-4 .wrapper-product-table .table tbody');
     var $settings = {
         dots: false,
         infinite: true,
