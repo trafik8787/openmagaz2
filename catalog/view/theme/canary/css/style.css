@@ -167,6 +167,11 @@ span.w-count-circle {
 .breadcrumbs {
   margin: 17px 0;
 }
+
+ul.breadcrumbs > li:last-child {
+    display: none;
+}
+
 .breadcrumbs li {
   display: inline-block;
   margin-right: 0;
@@ -1211,7 +1216,7 @@ input:focus{
   width: 100%;
   left: 0;
   border: 70px solid transparent;
-  border-top: 14px solid #a5bed1;
+  border-top: 14px solid #607da3;
 }
 
 .w-button-colaps.active {
@@ -1250,7 +1255,7 @@ input:focus{
   font-weight: bold;
   cursor: pointer;
   padding-top: 4px;
-  background-color: #a5bed1;
+  background-color: #607da3;
 }
 
 .w-copirait p,
@@ -2377,7 +2382,7 @@ footer > section .row {
 
 @media (min-width: 1300px){
   .one-product-slider .slider-for .slick-track img {
-    width: auto!important;
+    /* width: auto!important; */
     /* width: 348px; */
   }
 }

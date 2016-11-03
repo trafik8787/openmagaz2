@@ -308,6 +308,8 @@ function Productslider () {
 
     $('.product-advantages-list').slick({
         slidesToShow: 2,
+        autoplay: true,
+        autoplaySpeed: 4000,
         slidesToScroll: 2,
         arrows: true,
         draggable: false,
