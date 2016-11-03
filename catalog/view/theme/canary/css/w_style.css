@@ -2277,7 +2277,7 @@ star-rating
 }
 .it-list li {
     padding: 0;
-    margin: 0 12px 5px;
+    margin: 0 11px 5px;
     vertical-align: middle;
 }
 
@@ -2287,35 +2287,55 @@ star-rating
 
 .it-ico {
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: top;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: bottom;
     margin-right: 7px;
 }
 
 .it-ico-heart {
-    width: 18px;
-    height: 16px;
+    width: 19px;
+    height: 17px;
     background-image: url("../img/it-ico-heart.png");
 }
 
 .it-ico-mail {
     width: 17px;
-    height: 12px;
+    height: 13px;
     background-image: url("../img/it-ico-mail.png");
+    position: relative;
+    top: 3px;
 }
 
 .it-ico-star {
-    width: 18px;
-    height: 16px;
+    width: 19px;
+    height: 18px;
     background-image: url("../img/it-ico-star.png");
 }
 
 .it-ico-print {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
     background-image: url("../img/it-ico-print.png");
+}
+
+.it-list a:hover .it-ico-heart {
+    background-image: url("../img/it-ico-heart-h.png");
+    top: 1px;
+    position: relative;
+}
+
+.it-list a:hover .it-ico-mail {
+    background-image: url("../img/it-ico-mail-h.png");
+}
+
+.it-list a:hover .it-ico-star {
+    background-image: url("../img/it-ico-star-h.png");
+}
+
+.it-list a:hover .it-ico-print {
+    background-image: url("../img/it-ico-print-h.png");
 }
 
 .include-section {
@@ -4106,9 +4126,32 @@ text-align: left;
 
     .size-product .form-group,
     .size-product .cc-shipping-row {
-        display: inline-block;
-        width: calc(50% - 2px);
-        vertical-align: top;
+        width: calc(50% - 3px);
+        margin: 0;
+        padding: 0;
+    }
+
+    .size-product .form-group {
+        float: right;
+    }
+
+    .size-product .cc-shipping-row {
+        float: left;
+    }
+
+    .your-ring-size {
+        width: calc(50% - 5px);
+        text-align: left;
+        margin-left: auto;
+        display: block;
+        margin-top: 5px;
+        font-size: 13px;
+    }
+
+    .size-product:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 
     .size-product .shipping-input {
@@ -4139,6 +4182,7 @@ text-align: left;
         display: block;
         text-align: center;
         margin-top: 4px;
+        font-size: 13px;
     }
 
     .diamond-catalog {
@@ -4155,13 +4199,35 @@ text-align: left;
     }
 
     .slider-for {
-        max-width: 300px;
+        /*max-width: 300px;*/
         width: 100%;
         margin: 0 auto;
     }
 
     .product-buy-details .right {
         text-align: center;
+        margin-top: 25px;
+    }
+
+    .product-buy-details .right:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .product-buy-details .right .price-product {
+        display: block;
+        width: 50%;
+        float: left;
+    }
+
+    .product-buy-details .right .btn {
+        width: 100%;
+    }
+
+    .product-buy-details .right .line-price-product {
+        float: right;
+        width: 50%;
     }
 
     .one-product-info .rating span {
@@ -4707,6 +4773,10 @@ text-align: left;
 
     .filter-buttons .filter-default-result {
         margin-right: 16px;
+    }
+
+    .product-buy-details .right .btn {
+        font-size: 12px;
     }
 
 
