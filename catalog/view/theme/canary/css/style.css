@@ -5236,6 +5236,7 @@ footer > section .row {
   border: 1px solid #dbe7f3;
 }
 .list-product .filter-product-line .view-product .btn-view {
+  margin: -3px 0;
   margin-left: 5px;
   padding: 9px 13px;
   color: #b7b7b7;
@@ -5380,7 +5381,7 @@ footer > section .row {
 .wrapper-product-table.th-view tbody tr {
   height: 360px;
   width: 22%;
-  margin-right: 3.8%;
+  margin-right: 3.5%;
   display: block;
   float: left;
 }
@@ -9003,11 +9004,9 @@ footer > section .row {
     font-size: 15px;
     line-height: 18px; }
 
-  .list-product .filter-product-line {
-    font-size: 18px; }
-
   .list-product .filter-product-line .show-b {
-    margin-right: 40px; }
+    margin-right: 0;
+  }
 
   .wrapper-product-table.th-view .table {
     margin-left: 10px; }

@@ -60,7 +60,9 @@
                             <label for="diamond<?=$row->diamond_id?>" class="diamond-catalog-label"></label>
                         </td>
                         <td>
-                            <img src="<?=imageDiamontIcon($row->shape)?>" alt="" class="diamond-table-shapeimg">
+                            <span class="diamond-table-shapeimg">
+                                <img src="<?=imageDiamontIcon($row->shape)?>" alt="">
+                            </span>
                             <span class="hide-shapename"><?=$row->shape?></span>
                         </td>
                         <td><?=$row->color?></td>
