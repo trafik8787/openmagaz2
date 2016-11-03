@@ -2277,7 +2277,7 @@ star-rating
 }
 .it-list li {
     padding: 0;
-    margin: 0 12px 5px;
+    margin: 0 11px 5px;
     vertical-align: middle;
 }
 
@@ -2287,35 +2287,55 @@ star-rating
 
 .it-ico {
     display: inline-block;
-    vertical-align: baseline;
+    vertical-align: top;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: bottom;
     margin-right: 7px;
 }
 
 .it-ico-heart {
-    width: 18px;
-    height: 16px;
+    width: 19px;
+    height: 17px;
     background-image: url("../img/it-ico-heart.png");
 }
 
 .it-ico-mail {
     width: 17px;
-    height: 12px;
+    height: 13px;
     background-image: url("../img/it-ico-mail.png");
+    position: relative;
+    top: 3px;
 }
 
 .it-ico-star {
-    width: 18px;
-    height: 16px;
+    width: 19px;
+    height: 18px;
     background-image: url("../img/it-ico-star.png");
 }
 
 .it-ico-print {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
     background-image: url("../img/it-ico-print.png");
+}
+
+.it-list a:hover .it-ico-heart {
+    background-image: url("../img/it-ico-heart-h.png");
+    top: 1px;
+    position: relative;
+}
+
+.it-list a:hover .it-ico-mail {
+    background-image: url("../img/it-ico-mail-h.png");
+}
+
+.it-list a:hover .it-ico-star {
+    background-image: url("../img/it-ico-star-h.png");
+}
+
+.it-list a:hover .it-ico-print {
+    background-image: url("../img/it-ico-print-h.png");
 }
 
 .include-section {
