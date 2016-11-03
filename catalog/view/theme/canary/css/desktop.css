@@ -194,10 +194,6 @@
     margin-bottom: 10px;
   }
 
-  .title-follow{
-    display: block;
-  }
-
   .airplane-block .airplane-img{
     display: none;
   }
@@ -320,35 +316,6 @@
 
   .top-menu-b li {
     padding: 6px 7px 0 7px;
-  }
-
-  .title-follow{
-    padding-top: 25px;
-  }
-
-  .footer-menu ul{
-    text-align: left!important;
-    margin-top: 5px;
-  }
-
-  .footer-menu .contact-mobile{
-    display: block;
-  }
-
-  .content-footer div:nth-child(4){
-    display: none;
-  }
-
-  .mobile-none{
-    display: none!important;
-  }
-
-  .mobile-block{
-    display: block;
-  }
-  .w-copirait{
-    padding-right: 30px;
-    text-align: right;
   }
 
   .w-footer-down {
@@ -642,6 +609,7 @@
     margin-left: inherit;
     left: -5px;
     right: -20px;
+    text-align: center;
   }
   .paging-top-40 {
     padding-top: 10px;
@@ -1262,11 +1230,11 @@
     display: none;
   }
   .w-button-in-baner a {
-    width: 47%;
+    width: 47% !important;
     margin: 0 1%!important;
+    padding: 19px 10px!important;
     font-size: 11px;
     text-align: center;
-    padding: 19px 10px;
   }
 
   .w-blog-section .h3, .w-bloc-search-diamond .h3, .w-bloc-best-servise .h3, .search-diamond-mobile .h3 {

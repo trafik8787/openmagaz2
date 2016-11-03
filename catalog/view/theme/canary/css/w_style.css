@@ -431,7 +431,7 @@ a.w-list-group-item {
 .w-bloc-home-category .list-group {font-family: "Raleway-Bold", fantasy;font-size: 15px;}
 
 .w-bloc-home-category .list-group .w-cur-left {
-    top: 15px;
+    top: 10px;
     right: 25px;
     position: absolute;
     font-size: 18px;
@@ -440,22 +440,22 @@ a.w-list-group-item {
     width: 7px;
     height: 12px;
 }
-.w-bloc-home-category .list-group .w-cur-left:before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    border: 2px solid #929394;
-    border-left: none;
-    border-bottom: none;
-    position: absolute;
-    left: -3px;
-    top: 2px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
+/*.w-bloc-home-category .list-group .w-cur-left:before {*/
+    /*content: "";*/
+    /*width: 8px;*/
+    /*height: 8px;*/
+    /*border: 2px solid #929394;*/
+    /*border-left: none;*/
+    /*border-bottom: none;*/
+    /*position: absolute;*/
+    /*left: -3px;*/
+    /*top: 2px;*/
+    /*-webkit-transform: rotate(45deg);*/
+    /*-moz-transform: rotate(45deg);*/
+    /*-ms-transform: rotate(45deg);*/
+    /*-o-transform: rotate(45deg);*/
+    /*transform: rotate(45deg);*/
+/*}*/
 
 .w-bloc-home-category .h3 {
     font-family: "Raleway-Bold", fantasy;
@@ -986,6 +986,7 @@ home hover efect
 
 .w-navigate-circle {
     position:relative;
+    z-index: 1;
     border: 1px solid #d2d2d2;
 }
 
@@ -1473,7 +1474,7 @@ star-rating
 
 .w-navigate-circle .my-div.active-circle,
 .w-navigate-circle .my-div.w-opacity{
-    background: #cfdfef url("../img/bg-step.png") no-repeat bottom left;
+    background: #c9def0 url("../img/bg-step.png") no-repeat bottom left;
 }
 
 .w-navigate-circle .my-div.w-opacity:after,
