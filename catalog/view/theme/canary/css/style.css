@@ -6049,11 +6049,27 @@ footer > section .row {
   margin-right: 15px;
 }
 
+.menu > ul:before{
+  content: "";
+  width: 1px;
+  height: 12px;
+  position: absolute;
+  top: 15px;
+  right: 49px;
+  background-color: #c2c1c1;
+}
+
+.menu > ul > li.dropdown-b:nth-last-child(2) > a >span{
+  display: none;
+}
+
 .one-product-slider .slick-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: auto!important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .price-product {
   font-family: "Montserrat-Regular", sans-serif;
