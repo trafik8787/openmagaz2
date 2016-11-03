@@ -163,7 +163,7 @@ class ControllerProductProduct extends Controller {
         if (!empty($product_info['matching_id'])) {
             $data['matching'] = $this->getMatchingProduct($product_info['matching_id']);
         } else {
-            $countRelated = 3;
+            $countRelated = 4;
         }
 
         //dd($data['matching']);

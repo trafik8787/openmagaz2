@@ -358,20 +358,119 @@
 
 
     <div class="similar-section">
+
         <div class="center-bl clearfix">
-            <div class="clearfix">
-                <div class="left">
-                    <div class="similar-header">
-                        <div class="linebg-title">
-                            <div class="linebg-line"></div>
-                            <span>SIMILAR SETTINGS</span>
+
+            <?if (!empty($matching)):?>
+
+                <div class="clearfix">
+                    <div class="left">
+                        <div class="similar-header">
+                            <div class="linebg-title">
+                                <div class="linebg-line"></div>
+                                <span>SIMILAR SETTINGS</span>
+                            </div>
+                        </div>
+                        <div class="similar-list similar-list-3">
+                            <div class="wrapper-product-table th-view">
+                                <table class="table">
+                                    <tbody>
+                                    <?foreach ($products as $row):?>
+                                    <tr>
+                                        <td>
+                                            <div class="product-item">
+                                                <div class="box-img">
+                                                    <a href="<?=$row['href']?>" class="w-product-ajax"><img src="<?=$row['img']?>" alt="<?=$row['name']?>" title="<?=$row['name']?>"></a>
+                                                </div>
+                                                <!--**-->
+                                                <div class="btn-box">
+                                                    <a href="#" type="button" onclick="cart.add('<?=$row['product_id']?>', '<?php echo $row['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
+                                                    <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
+                                                    <a href="<?=$row['href']?>" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
+                                                    <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
+                                                </div>
+                                                <div class="box-tovar-th">
+                                                    <div class="name"><?=$row['name']?></div>
+
+                                                    <span class="price"><?=$row['price']?></span>
+
+
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-th="Stock Number"><?=$row['sku']?></td>
+                                        <td data-th="Price"><div class="price"><?=$row['price']?></div></td>
+                                        <td><a href="#" onclick="compare.add('<?=$row['product_id']?>'); return false;"><i class="fa fa-exchange"></i></a></td>
+                                        <td><a href="#" onclick="wishlist.add('<?=$row['product_id']?>'); return false;"><i class="fa fa-heart"></i></a></td>
+                                    </tr>
+                                    <?endforeach?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    <div class="similar-list similar-list-3">
-                        <div class="wrapper-product-table th-view">
-                            <table class="table">
-                                <tbody>
-                                <?foreach ($products as $row):?>
+
+
+
+                    <div class="right">
+                        <div class="similar-header">
+                            <div class="linebg-title">
+                                <div class="linebg-line"></div>
+                                <span>MATCHING WEDDING RINGS</span>
+                            </div>
+                        </div>
+                        <div class="similar-list similar-list-1">
+                            <div class="wrapper-product-table th-view">
+                                <table class="table">
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="product-item">
+                                                <div class="box-img">
+                                                    <a href="<?=$matching['href']?>" class="w-product-ajax"><img src="<?=$matching['img']?>" alt="<?=$matching['name']?>" title="<?=$matching['name']?>"></a>
+                                                </div>
+                                                <!--**-->
+                                                <div class="btn-box">
+                                                    <a href="#" type="button" onclick="cart.add('<?=$matching['product_id']?>', '<?php echo $matching['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
+                                                    <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
+                                                    <a href="<?=$matching['href']?>" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
+                                                    <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?=$matching['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
+                                                </div>
+                                                <div class="box-tovar-th">
+                                                    <div class="name"><?=$matching['name']?></div>
+
+                                                    <span class="price"><?=$matching['price']?></span>
+
+
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-th="Stock Number"><?=$matching['sku']?></td>
+                                        <td data-th="Price"><div class="price"><?=$matching['price']?></div></td>
+                                        <td><a href="#" onclick="compare.add('<?=$matching['product_id']?>'); return false;"><i class="fa fa-exchange"></i></a></td>
+                                        <td><a href="#" onclick="wishlist.add('<?=$matching['product_id']?>'); return false;"><i class="fa fa-heart"></i></a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            <?endif?>
+
+
+            <?if (empty($matching)):?>
+                <div class="similar-header">
+                    <div class="linebg-title">
+                        <div class="linebg-line"></div>
+                        <span>SIMILAR SETTINGS</span>
+                    </div>
+                </div>
+                <div class="similar-list similar-list-4">
+                    <div class="wrapper-product-table th-view">
+                        <table class="table">
+                            <?foreach ($products as $row):?>
                                 <tr>
                                     <td>
                                         <div class="product-item">
@@ -399,175 +498,14 @@
                                     <td><a href="#" onclick="compare.add('<?=$row['product_id']?>'); return false;"><i class="fa fa-exchange"></i></a></td>
                                     <td><a href="#" onclick="wishlist.add('<?=$row['product_id']?>'); return false;"><i class="fa fa-heart"></i></a></td>
                                 </tr>
-                                <?endforeach?>
-                                </tbody>
-                            </table>
-                        </div>
+                            <?endforeach?>
+
+                        </table>
                     </div>
                 </div>
-
-                <?if (!empty($matching)):?>
-
-                <div class="right">
-                    <div class="similar-header">
-                        <div class="linebg-title">
-                            <div class="linebg-line"></div>
-                            <span>MATCHING WEDDING RINGS</span>
-                        </div>
-                    </div>
-                    <div class="similar-list similar-list-1">
-                        <div class="wrapper-product-table th-view">
-                            <table class="table">
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="product-item">
-                                            <div class="box-img">
-                                                <a href="<?=$matching['href']?>" class="w-product-ajax"><img src="<?=$matching['img']?>" alt="<?=$matching['name']?>" title="<?=$matching['name']?>"></a>
-                                            </div>
-                                            <!--**-->
-                                            <div class="btn-box">
-                                                <a href="#" type="button" onclick="cart.add('<?=$matching['product_id']?>', '<?php echo $matching['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                                <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                                <a href="<?=$matching['href']?>" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                                <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?=$matching['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                            </div>
-                                            <div class="box-tovar-th">
-                                                <div class="name"><?=$matching['name']?></div>
-
-                                                <span class="price"><?=$matching['price']?></span>
+            <?endif?>
 
 
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td data-th="Stock Number"><?=$matching['sku']?></td>
-                                    <td data-th="Price"><div class="price"><?=$matching['price']?></div></td>
-                                    <td><a href="#" onclick="compare.add('<?=$matching['product_id']?>'); return false;"><i class="fa fa-exchange"></i></a></td>
-                                    <td><a href="#" onclick="wishlist.add('<?=$matching['product_id']?>'); return false;"><i class="fa fa-heart"></i></a></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <?endif?>
-            </div>
-            <div class="similar-list similar-list-4">
-                <div class="wrapper-product-table th-view">
-                    <table class="table">
-                        <tr>
-                            <td>
-                                <div class="product-item">
-                                    <div class="box-img">
-                                        <a href="http://canary3.webremote.net/14k-yellow-gold-bezel-set-solitaire-engagement-ring-8122939-Y14-1368" class="w-product-ajax"><img src="http://canary3.webremote.net/image/" alt="14k Yellow Gold Bezel Set Solitaire Engagement Ring " title="14k Yellow Gold Bezel Set Solitaire Engagement Ring "></a>
-                                    </div>
-                                    <!--**-->
-                                    <div class="btn-box">
-                                        <a href="#" type="button" onclick="cart.add('1368', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                        <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1368'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                        <a href="http://canary3.webremote.net/14k-yellow-gold-bezel-set-solitaire-engagement-ring-8122939-Y14-1368" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                        <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1368'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                    </div>
-                                    <div class="box-tovar-th">
-                                        <div class="name">14k Yellow Gold Bezel Set Solitaire Engagement Ring </div>
-
-                                        <span class="price">$395.00</span>
-
-
-                                    </div>
-                                </div>
-                            </td>
-                            <td data-th="Stock Number">8122939-Y14</td>
-                            <td data-th="Price"><div class="price">$395.00</div></td>
-                            <td><a href="#" onclick="compare.add('1368'); return false;"><i class="fa fa-exchange"></i></a></td>
-                            <td><a href="#" onclick="wishlist.add('1368'); return false;"><i class="fa fa-heart"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="product-item">
-                                    <div class="box-img">
-                                        <a href="http://canary3.webremote.net/14k-yellow-gold-bezel-set-solitaire-engagement-ring-8122939-Y14-1368" class="w-product-ajax"><img src="http://canary3.webremote.net/image/" alt="14k Yellow Gold Bezel Set Solitaire Engagement Ring " title="14k Yellow Gold Bezel Set Solitaire Engagement Ring "></a>
-                                    </div>
-                                    <!--**-->
-                                    <div class="btn-box">
-                                        <a href="#" type="button" onclick="cart.add('1368', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                        <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1368'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                        <a href="http://canary3.webremote.net/14k-yellow-gold-bezel-set-solitaire-engagement-ring-8122939-Y14-1368" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                        <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1368'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                    </div>
-                                    <div class="box-tovar-th">
-                                        <div class="name">14k Yellow Gold Bezel Set Solitaire Engagement Ring </div>
-
-                                        <span class="price">$395.00</span>
-
-
-                                    </div>
-                                </div>
-                            </td>
-                            <td data-th="Stock Number">8122939-Y14</td>
-                            <td data-th="Price"><div class="price">$395.00</div></td>
-                            <td><a href="#" onclick="compare.add('1368'); return false;"><i class="fa fa-exchange"></i></a></td>
-                            <td><a href="#" onclick="wishlist.add('1368'); return false;"><i class="fa fa-heart"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="product-item">
-                                    <div class="box-img">
-                                        <a href="http://canary3.webremote.net/14k-yellow-gold-bezel-set-solitaire-engagement-ring-8122939-Y14-1368" class="w-product-ajax"><img src="http://canary3.webremote.net/image/" alt="14k Yellow Gold Bezel Set Solitaire Engagement Ring " title="14k Yellow Gold Bezel Set Solitaire Engagement Ring "></a>
-                                    </div>
-                                    <!--**-->
-                                    <div class="btn-box">
-                                        <a href="#" type="button" onclick="cart.add('1368', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                        <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1368'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                        <a href="http://canary3.webremote.net/14k-yellow-gold-bezel-set-solitaire-engagement-ring-8122939-Y14-1368" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                        <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1368'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                    </div>
-                                    <div class="box-tovar-th">
-                                        <div class="name">14k Yellow Gold Bezel Set Solitaire Engagement Ring </div>
-
-                                        <span class="price">$395.00</span>
-
-
-                                    </div>
-                                </div>
-                            </td>
-                            <td data-th="Stock Number">8122939-Y14</td>
-                            <td data-th="Price"><div class="price">$395.00</div></td>
-                            <td><a href="#" onclick="compare.add('1368'); return false;"><i class="fa fa-exchange"></i></a></td>
-                            <td><a href="#" onclick="wishlist.add('1368'); return false;"><i class="fa fa-heart"></i></a></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="product-item">
-                                    <div class="box-img">
-                                        <a href="http://canary3.webremote.net/14k-yellow-gold-bezel-set-solitaire-engagement-ring-8122939-Y14-1368" class="w-product-ajax"><img src="http://canary3.webremote.net/image/" alt="14k Yellow Gold Bezel Set Solitaire Engagement Ring " title="14k Yellow Gold Bezel Set Solitaire Engagement Ring "></a>
-                                    </div>
-                                    <!--**-->
-                                    <div class="btn-box">
-                                        <a href="#" type="button" onclick="cart.add('1368', '1'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                        <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('1368'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                        <a href="http://canary3.webremote.net/14k-yellow-gold-bezel-set-solitaire-engagement-ring-8122939-Y14-1368" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                        <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('1368'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                    </div>
-                                    <div class="box-tovar-th">
-                                        <div class="name">14k Yellow Gold Bezel Set Solitaire Engagement Ring </div>
-
-                                        <span class="price">$395.00</span>
-
-
-                                    </div>
-                                </div>
-                            </td>
-                            <td data-th="Stock Number">8122939-Y14</td>
-                            <td data-th="Price"><div class="price">$395.00</div></td>
-                            <td><a href="#" onclick="compare.add('1368'); return false;"><i class="fa fa-exchange"></i></a></td>
-                            <td><a href="#" onclick="wishlist.add('1368'); return false;"><i class="fa fa-heart"></i></a></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
         </div>
     </div>
 
