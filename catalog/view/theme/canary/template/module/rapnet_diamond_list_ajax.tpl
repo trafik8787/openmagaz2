@@ -17,10 +17,10 @@
         <!--*</div>*-->
         <div class="diamond-catalog-right-img"><img src="<?=imageDiamont($diamond->shape)?>" alt=""></div>
         <div class="diamond-catalog-right-name"><?=$diamond->shape?> <?=$diamond->size?> CARAT <?=$diamond->color?> <?=$diamond->clarity?></div>
-        <div class="diamond-catalog-right-price">$<?=$diamond->total_sales_price?></div>
+        <div class="diamond-catalog-right-price">$<?=$diamond->total_sales_price?>.00</div>
         <div class="diamond-catalog-right-message">
             <div><img src="/catalog/view/theme/canary/img/diamond-catalog-message.jpg" alt=""></div>
-            <p>Order loos diamond now for free
+            <p>Order loose diamond now for free
                 5 days delivery. Add to jewerly
                 for 2 weeks delivery
             </p>

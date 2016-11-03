@@ -161,9 +161,9 @@
                                 <input type="hidden" id="w-diamond_id" value="<?php echo $product->response->body->diamond->diamond_id?>">
                                 <div class="alert alert-info margin-buttom-0 product-buy-details product-buy-diamant clearfix">
                                     <div class="price-product">
-                                        <span>$<?=$product->response->body->diamond->total_sales_price?></span>
+                                        <span>$<?=$product->response->body->diamond->total_sales_price?>.00</span>
                                     </div>
-                                    <a class="product-buy-sertificate" href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$product->response->body->diamond->diamond_id?>"><img src="/catalog/view/theme/canary/img/icon_lab/<?=strtolower($product->response->body->diamond->lab)?>.jpg" alt="" style="width: 65px"> <span>View<br>Certificate</span></a>
+                                    <a class="product-buy-sertificate" href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$product->response->body->diamond->diamond_id?>" target="_blank"><img src="/catalog/view/theme/canary/img/icon_lab/<?=strtolower($product->response->body->diamond->lab)?>.jpg" alt="" style="width: 65px"> <span>View<br>Certificate</span></a>
                                     <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select This Diamond</button>
                                 </div>
                                 <div class="visible-xs">

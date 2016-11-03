@@ -66,7 +66,9 @@
                         <td><?=$row->color?></td>
                         <td><?=$row->clarity?></td>
                         <td><?=$row->cut?></td>
-                        <td><?=$row->size?> <i class="fa fa-exclamation-triangle"></i></td>
+                        <td><?=$row->size?>
+                            <!--*<i class="fa fa-exclamation-triangle"></i>*-->
+                        </td>
                         <!--*<td class="sort-col">*-->
                         <!--*<div class="rating">*-->
                         <!--*<i class="star active"></i>*-->
