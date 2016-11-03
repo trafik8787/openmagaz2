@@ -4113,9 +4113,32 @@ text-align: left;
 
     .size-product .form-group,
     .size-product .cc-shipping-row {
-        display: inline-block;
-        width: calc(50% - 2px);
-        vertical-align: top;
+        width: calc(50% - 3px);
+        margin: 0;
+        padding: 0;
+    }
+
+    .size-product .form-group {
+        float: right;
+    }
+
+    .size-product .cc-shipping-row {
+        float: left;
+    }
+
+    .your-ring-size {
+        width: calc(50% - 5px);
+        text-align: left;
+        margin-left: auto;
+        display: block;
+        margin-top: 5px;
+        font-size: 13px;
+    }
+
+    .size-product:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 
     .size-product .shipping-input {
@@ -4146,6 +4169,7 @@ text-align: left;
         display: block;
         text-align: center;
         margin-top: 4px;
+        font-size: 13px;
     }
 
     .diamond-catalog {
@@ -4162,13 +4186,35 @@ text-align: left;
     }
 
     .slider-for {
-        max-width: 300px;
+        /*max-width: 300px;*/
         width: 100%;
         margin: 0 auto;
     }
 
     .product-buy-details .right {
         text-align: center;
+        margin-top: 25px;
+    }
+
+    .product-buy-details .right:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .product-buy-details .right .price-product {
+        display: block;
+        width: 50%;
+        float: left;
+    }
+
+    .product-buy-details .right .btn {
+        width: 100%;
+    }
+
+    .product-buy-details .right .line-price-product {
+        float: right;
+        width: 50%;
     }
 
     .one-product-info .rating span {
@@ -4714,6 +4760,10 @@ text-align: left;
 
     .filter-buttons .filter-default-result {
         margin-right: 16px;
+    }
+
+    .product-buy-details .right .btn {
+        font-size: 12px;
     }
 
 
