@@ -5407,7 +5407,7 @@ footer > section .row {
   max-width: 1260px;
   margin: 0 auto;
   position: relative;
-  z-index: 10; }
+}
 .wrapper-product-table .table thead tr th {
   padding: 18px 5px;
   border-bottom: 1px solid #ececec;
