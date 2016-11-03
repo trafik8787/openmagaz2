@@ -8,15 +8,20 @@
 
 
 <main class="w-general-container">
-    <div class="center-bl">
-        <div class="row margin-buttom-30 w-bredcrum-border">
-            <div class="col-xs-12">
-                <ul class="breadcrumbs">
-                    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-                    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-                    <li> » </li>
-                    <?php } ?>
-                </ul>
+    <div class="margin-buttom-30 w-bredcrum-border">
+        <div class="center-bl">
+            <div class="row">
+                <div class="col-md-5 col-sm-5 hidden-xs ">
+                    <ul class="breadcrumbs">
+                        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                        <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                        <li> » </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-12 padding-0">
+                    <a href=""><img src="<?=get_baners_top_random()?>" class="bread-baner" ></a>
+                </div>
             </div>
         </div>
     </div>
@@ -67,36 +72,36 @@
                             </h3>
                         </div>
                         <div class="col-md-4 col-sm-4">
-                            <div class="diamant-size-block">
-                                <div class="diamant-size-inner">
-                                    <img class="diamant-size-ruler" src="/catalog/view/theme/canary/img/diamant-size-ruler.png" alt="">
-                                    <i class="brilliant-ico2 brilliant-s2" style="
-                                    -webkit-transform: scale(0.5);
-                                    -moz-transform: scale(0.5);
-                                    -ms-transform: scale(0.5);
-                                    -o-transform: scale(0.5);
-                                    transform: scale(0.5);
-                                    "></i>
-                                    <div class="diamant-size-text">Real <?=$product->response->body->diamond->size?> Carat Size</div>
-                                </div>
-                                <div class="diamant-size-detail clearfix">
-                                    <div class="diamant-size-it clearfix">
-                                        <div class="clearfix">
-                                            <div class="diamant-size-left-text">1 Ct.<br>
-                                                (6.4 mm)</div>
-                                            <div class="diamant-size-detail-img diamant-size-photo">
-                                                <img src="/image/catalog/shapes/princess.png" alt="" style="width: 30px;">
-                                            </div>
-                                        </div>
-                                        <div class="diamant-size-bottom-text">1 Ct.<br>
-                                        (6.4 mm)</div>
-                                    </div>
-                                    <div class="diamant-size-coin text-center">
-                                        <div class=" diamant-size-detail-img diamant-size-coin-img"></div>
-                                        17.9 mm
-                                    </div>
-                                </div>
-                            </div>
+                            <!--*<div class="diamant-size-block">*-->
+                                <!--*<div class="diamant-size-inner">*-->
+                                    <!--*<img class="diamant-size-ruler" src="/catalog/view/theme/canary/img/diamant-size-ruler.png" alt="">*-->
+                                    <!--*<i class="brilliant-ico2 brilliant-s2" style="*-->
+                                    <!--*-webkit-transform: scale(0.5);*-->
+                                    <!--*-moz-transform: scale(0.5);*-->
+                                    <!--*-ms-transform: scale(0.5);*-->
+                                    <!--*-o-transform: scale(0.5);*-->
+                                    <!--*transform: scale(0.5);*-->
+                                    <!--*"></i>*-->
+                                    <!--*<div class="diamant-size-text">Real <?=$product->response->body->diamond->size?> Carat Size</div>*-->
+                                <!--*</div>*-->
+                                <!--*<div class="diamant-size-detail clearfix">*-->
+                                    <!--*<div class="diamant-size-it clearfix">*-->
+                                        <!--*<div class="clearfix">*-->
+                                            <!--*<div class="diamant-size-left-text">1 Ct.<br>*-->
+                                                <!--*(6.4 mm)</div>*-->
+                                            <!--*<div class="diamant-size-detail-img diamant-size-photo">*-->
+                                                <!--*<img src="/image/catalog/shapes/princess.png" alt="" style="width: 30px;">*-->
+                                            <!--*</div>*-->
+                                        <!--*</div>*-->
+                                        <!--*<div class="diamant-size-bottom-text">1 Ct.<br>*-->
+                                        <!--*(6.4 mm)</div>*-->
+                                    <!--*</div>*-->
+                                    <!--*<div class="diamant-size-coin text-center">*-->
+                                        <!--*<div class=" diamant-size-detail-img diamant-size-coin-img"></div>*-->
+                                        <!--*17.9 mm*-->
+                                    <!--*</div>*-->
+                                <!--*</div>*-->
+                            <!--*</div>*-->
                         </div>
                     </div>
                     <div class="one-product-slider visible-xs">
@@ -527,14 +532,6 @@
         ]
     });
 
-    $('.product-advantages-list').slick({
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        arrows: true,
-        draggable: false,
-        prevArrow: $('#product-advantages-prev'),
-        nextArrow: $('#product-advantages-next')
-    });
 
 
     var similarStoneslider = $('.similar-list-4 .wrapper-product-table .table tbody');
