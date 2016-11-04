@@ -11,6 +11,8 @@ class ControllerModuleRapnet extends Controller {
     private $fluorescence_intensities_arr;
     private $url_paginate;
 
+    private $page;
+
 
     public function __construct($registry) {
         parent::__construct($registry);
@@ -49,6 +51,8 @@ class ControllerModuleRapnet extends Controller {
 
         //sort
         $this->show = 15;
+
+        $this->page = 1;
     }
 
 	public function index($setting) {
@@ -126,6 +130,7 @@ class ControllerModuleRapnet extends Controller {
              $data['button_cart'] = $this->language->get('button_cart');
              $data['button_wishlist'] = $this->language->get('button_wishlist');
              $data['button_compare'] = $this->language->get('button_compare');
+             $data['blok_need_help'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_need_help.tpl', array('telephone' => $this->config->get('config_telephone')));
 
              if (!empty($this->request->get['sortby'])) {
                  $data['sortby'] = $this->request->get['sortby'];
@@ -162,6 +167,7 @@ class ControllerModuleRapnet extends Controller {
              } elseif ($decod_json->response->header->error_code == 4001) {
                  $data['data_error'] = $decod_json->response->header->error_message;
              }
+
              //$this->response->addHeader('Content-Type: application/json');
              $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_show.tpl', $data));
          }
@@ -317,15 +323,13 @@ class ControllerModuleRapnet extends Controller {
         }
 
 
-
-
         if (isset($this->request->get['page'])) {
             $page = $this->request->get['page'];
         } else {
-            $page = 1;
+            $page = $this->page;
         }
 
-        //dd($fluorescence_intensities_arr);
+
         if (empty($this->GetCache($page))) {
 
             $data = array('request' => array('header' => array('username' => $this->config->get('rapnet_name'), 'password' => $this->config->get('rapnet_pass')),
@@ -375,8 +379,7 @@ class ControllerModuleRapnet extends Controller {
         } else {
             $response = $this->GetCache($page);
         }
-
-
+        
 
         return $response;
 
@@ -443,6 +446,8 @@ class ControllerModuleRapnet extends Controller {
 
         $data['bloc_product_advantages'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_product_advantages.tpl');
         $data['blok_your_order_includes'] = $this->load->view($this->config->get('config_template') . '/template/common/blok_your_order_includes.tpl');
+        $data['diamond_similar'] = $this->getSimilarDiamond($diamond);
+        $data['blok_need_help'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_need_help.tpl', array('telephone' => $this->config->get('config_telephone')));
 
         if (in_ajax()) {
             $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_product.tpl', $data));
@@ -508,4 +513,17 @@ class ControllerModuleRapnet extends Controller {
         }
     }
 
+
+    public function getSimilarDiamond ($diamond) {
+
+        $data = array();
+        $this->show = 4;
+        $this->shapes_arr = array($diamond->response->body->diamond->shape);
+        $this->page = 2;
+        $json = $this->parse();
+        $decod_json = json_decode($json);
+        $data['diamond_similar'] = $decod_json->response->body->diamonds;
+
+        return $this->load->view($this->config->get('config_template') . '/template/module/rapnet_similar_diamond.tpl', $data);
+    }
 }

@@ -89,13 +89,21 @@
                     <li>
                         <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="w-general-category" title="<?php echo $text_wishlist; ?>">
                             <i class="icons-wishlist_icon"></i>
+                            <?if (!empty($text_wishlist_count)):?>
+                            <span class="w-count-circle"><?=$text_wishlist_count?></span>
+                            <?endif?>
                             <span class="span1">Wish List</span>
-                            <span class="span2">(<?=$text_wishlist_count?>)</span>
+                            <!--*<span class="span2">(<?=$text_wishlist_count?>)</span>*-->
                         </a>
                     </li>
-                    <li><a href="/compare"><i class="icons-compare_icon"></i>
+                    <li><a href="/compare" id="compare-total">
+                            <i class="icons-compare_icon"></i>
+                                <?if (!empty($count_compare)):?>
+                                    <span class="w-count-circle"><?=$count_compare?></span>
+                                <?endif?>
                             <span class="span1">Compare</span>
-                            <span class="span2">(0)</span>
+
+                            <!--*<span class="span2">(0)</span>*-->
                         </a>
                     </li>
                     <li class="cart-bl">

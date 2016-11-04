@@ -158,10 +158,13 @@
                                 <div id="collapse1" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul>
-                                            <li><a href="#">About Us</a></li>
-                                            <li><a href="#">Delivery Information</a></li>
-                                            <li><a href="#">Privacy Policy</a></li>
-                                            <li><a href="#">Terms & Conditions</a></li>
+                                            <?php foreach ($informations as $information):?>
+
+                                                <?if ($information['top'] == 1):?>
+                                                    <li><a href="<?php echo $information['href']; ?>" class="w-general-category"><?php echo $information['title']; ?></a></li>
+                                                <?endif?>
+
+                                            <?endforeach?>
                                         </ul>
                                     </div>
                                 </div>
@@ -178,10 +181,11 @@
                                     <div class="panel-body">
                                         <ul>
                                             <li><a href="#"></a></li>
-                                            <li><a href="#">Free and Insured Shipping</a></li>
-                                            <li><a href="#">Free Sizing</a></li>
-                                            <li><a href="#">Free Engraving</a></li>
-                                            <li><a href="#">100% Money Back</a></li>
+                                            <?php foreach ($informations as $information):?>
+                                                <?if ($information['top'] == 2):?>
+                                                    <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+                                                <?endif?>
+                                            <?endforeach?>
                                         </ul>
                                     </div>
                                 </div>
@@ -197,12 +201,12 @@
                                 <div id="collapse3" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul>
-                                            <li><a href="#">Made in USA!</a></li>
-                                            <li><a href="#">Product and delivery</a></li>
-                                            <li><a href="#">In less than 2 weeks</a></li>
-                                            <li><a href="#">GIA certified doaminds</a></li>
-                                            <li><a href="#">Higher quality</a></li>
-                                            <li><a href="#">Helping others</a></li>
+
+                                            <?php foreach ($informations as $information):?>
+                                                <?if ($information['top'] == 3):?>
+                                                    <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+                                                <?endif?>
+                                            <?endforeach?>
                                         </ul>
                                     </div>
                                 </div>
@@ -221,7 +225,7 @@
                             <dl class="contact-mobile">
                                 <dt>CONTACT US</dt>
                                 <dd><a  href="mailto:info@brilliantcanary.com"><span class="icon-email"></span>info@brilliantcanary.com</a></dd>
-                                <dd><a href=""><span class="icon-tel"></span>800-214-6550</a></dd>
+                                <dd><a href="tel:800-214-6550"><span class="icon-tel"></span>800-214-6550</a></dd>
                             </dl>
                         </div>
                         <div class="text-left margin-top-20 w-copirait mobile-none">
@@ -278,8 +282,8 @@
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <dl>
                                 <dt>CONTACT US</dt>
-                                <dd><a href=""><span class="icon-email"></span>info@brilliantcanary.com</a></dd>
-                                <dd><a href=""><span class="icon-tel"></span>800-214-6550</a></dd>
+                                <dd><a href="mailto:info@brilliantcanary.com"><span class="icon-email"></span>info@brilliantcanary.com</a></dd>
+                                <dd><a href="tel:800-214-6550"><span class="icon-tel"></span>800-214-6550</a></dd>
                             </dl>
                         </div>
                     </div>

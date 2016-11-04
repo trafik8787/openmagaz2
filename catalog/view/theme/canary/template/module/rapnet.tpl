@@ -13,37 +13,37 @@
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked>
                                 <i class="brilliant-ico2 brilliant-s1"></i>
-                                <span>Round<br><span>Cut</span></span>
+                                <span>Round</span>
                             </label>
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Princess" name="shape" id="option2" autocomplete="off">
                                 <i class="brilliant-ico2 brilliant-s2"></i>
-                                <span>Princess<br><span>Cut</span></span>
+                                <span>Princess</span>
                             </label>
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Asscher"  name="shape" id="option3" autocomplete="off">
                                 <i class="brilliant-ico2 brilliant-s3"></i>
-                                <span>Asscher<br><span>Cut</span></span>
+                                <span>Asscher</span>
                             </label>
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Cushion"  name="shape" id="option4" autocomplete="off">
                                 <i class="brilliant-ico2 brilliant-s4"></i>
-                                <span>Cushion<br><span>Cut</span></span>
+                                <span>Cushion</span>
                             </label>
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Marquise" name="shape" id="option5" autocomplete="off">
                                 <i class="brilliant-ico2 brilliant-s5"></i>
-                                <span>Marquise<br><span>Cut</span></span>
+                                <span>Marquise</span>
                             </label>
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Oval"  name="shape" id="option6" autocomplete="off">
                                 <i class="brilliant-ico2 brilliant-s6"></i>
-                                <span>Oval<br><span>Cut</span></span>
+                                <span>Oval</span>
                             </label>
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Radiant" name="shape" id="option7" autocomplete="off">
                                 <i class="brilliant-ico2 brilliant-s7"></i>
-                                <span>Radiant<br><span>Cut</span></span>
+                                <span>Radiant</span>
                             </label>
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Pear"  name="shape" id="option8" autocomplete="off">
@@ -58,7 +58,7 @@
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Emerald"  name="shape" id="option10" autocomplete="off">
                                 <i class="brilliant-ico2 brilliant-s10"></i>
-                                <span>Emerald<br><span>Cut</span></span>
+                                <span>Emerald</span>
                             </label>
 
                         </div>
