@@ -130,6 +130,7 @@ class ControllerModuleRapnet extends Controller {
              $data['button_cart'] = $this->language->get('button_cart');
              $data['button_wishlist'] = $this->language->get('button_wishlist');
              $data['button_compare'] = $this->language->get('button_compare');
+             $data['blok_need_help'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_need_help.tpl', array('telephone' => $this->config->get('config_telephone')));
 
              if (!empty($this->request->get['sortby'])) {
                  $data['sortby'] = $this->request->get['sortby'];
@@ -166,6 +167,7 @@ class ControllerModuleRapnet extends Controller {
              } elseif ($decod_json->response->header->error_code == 4001) {
                  $data['data_error'] = $decod_json->response->header->error_message;
              }
+
              //$this->response->addHeader('Content-Type: application/json');
              $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_show.tpl', $data));
          }
@@ -445,6 +447,7 @@ class ControllerModuleRapnet extends Controller {
         $data['bloc_product_advantages'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_product_advantages.tpl');
         $data['blok_your_order_includes'] = $this->load->view($this->config->get('config_template') . '/template/common/blok_your_order_includes.tpl');
         $data['diamond_similar'] = $this->getSimilarDiamond($diamond);
+        $data['blok_need_help'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_need_help.tpl', array('telephone' => $this->config->get('config_telephone')));
 
         if (in_ajax()) {
             $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_product.tpl', $data));
