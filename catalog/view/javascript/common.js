@@ -287,10 +287,10 @@ var wishlist = {
 				}
 
 				if (json['success']) {
-					$('#content').parent().before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+					// $('#content').parent().before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 				}
 
-				$('#wishlist-total span').html(json['total']);
+				$('#wishlist-total').html('<i class="icons-wishlist_icon"></i><span class="w-count-circle">'+json['count_wishlist']+'</span><span class="span1">Wish List</span>');
 				$('#wishlist-total').attr('title', json['total']);
 
 				$('html, body').animate({ scrollTop: 0 }, 'slow');
@@ -344,16 +344,16 @@ var compare = {
 				$('.alert').remove();
 
 				if (json['success']) {
-					$('#content').parent().before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
+					// $('#content').parent().before('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div>');
 
-					$('#compare-total').html(json['total']);
+					$('#compare-total').html('<i class="icons-compare_icon"></i><span class="w-count-circle">'+json['count_compare']+'</span><span class="span1">Compare</span>');
 
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
 
                     $('.w-compare-popower').popover('show');
-                    setTimeout(function () {
-                        $('.w-compare-popower').popover('hide');
-                    }, 2000);
+                    // setTimeout(function () {
+                    //     $('.w-compare-popower').popover('hide');
+                    // }, 2000);
 				}
 			},
 	        error: function(xhr, ajaxOptions, thrownError) {
