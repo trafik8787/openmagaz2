@@ -770,6 +770,7 @@ section.containaer-home > .row {margin-left: 0;margin-right: 0;}
   display: table;
 }
 .top-menu-b > li {
+  position: relative;
   display: inline-table;
   padding: 6px 25px 0 23px;
   height: 100%;
@@ -813,7 +814,7 @@ input:focus{
 .top-menu-b > li.cart-bl {
   position: relative;
 }
-.top-menu-b > li.cart-bl > a {
+.top-menu-b > li > a {
   padding-right: 13px;
   display: inline-block;
   position: relative;

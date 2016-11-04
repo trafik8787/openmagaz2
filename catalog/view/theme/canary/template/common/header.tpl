@@ -78,11 +78,13 @@
                         <a href="<?php echo $account; ?>" class="w-general-category">
                             <i class="icons-login_icon"></i>
                             <span class="span1"><?php echo $text_account; ?></span>
+                            <span class="w-count-circle">2</span>
                         </a>
                         <?php } else { ?>
                         <a href="<?php echo $login; ?>"  class="w-general-category">
                             <i class="icons-login_icon"></i>
                             <span class="span1"><?php echo $text_login; ?></span>
+                            <span class="w-count-circle">2</span>
                         </a>
                         <?php } ?>
                     </li>
@@ -90,11 +92,13 @@
                         <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="w-general-category" title="<?php echo $text_wishlist; ?>">
                             <i class="icons-wishlist_icon"></i>
                             <span class="span1">Wish List</span>
+                            <span class="w-count-circle">2</span>
                             <span class="span2">(<?=$text_wishlist_count?>)</span>
                         </a>
                     </li>
                     <li><a href="/compare"><i class="icons-compare_icon"></i>
                             <span class="span1">Compare</span>
+                            <span class="w-count-circle">2</span>
                             <span class="span2">(0)</span>
                         </a>
                     </li>
