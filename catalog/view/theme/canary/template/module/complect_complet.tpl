@@ -140,8 +140,8 @@
                         <ul class="list-inline w-help-ned">
 
                             <li><a href="#"><span class="help-ico help-ico-chat"></span> <span class="help-text">Online Chat now</span></a></li>
-                            <li><a href="#"><span class="help-ico help-ico-mail"></span> <span class="help-text">Email</span></a></li>
-                            <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text">800-214-6550 | 24/7</span></a></li>
+                            <li><a href="mailto:info@brilliantcanary.com"><span class="help-ico help-ico-mail"></span> <span class="help-text">Email</span></a></li>
+                            <li><a href="tel:800-214-6550"><span class="help-ico help-ico-phone"></span> <span class="help-text">800 214 6550 | 24/7</span></a></li>
                         </ul>
                     </div>
                     <ul class="list-inline it-list visible-xs">
@@ -161,14 +161,7 @@
                 </div>
             </div>
 
-            <div class="alert alert-warning product-need-help hidden-xs">
-                <span class="h4">Need Help?</span>
-                <ul class="list-inline w-help-ned">
-                    <li><a href="#"><span class="help-ico help-ico-chat"></span> <span class="help-text">Online Chat now</span></a></li>
-                    <li><a href="#"><span class="help-ico help-ico-mail"></span> <span class="help-text">Email</span></a></li>
-                    <li><a href="#"><span class="help-ico help-ico-phone"></span> <span class="help-text">800-214-6550 | 24/7</span></a></li>
-                </ul>
-            </div>
+            <?=$blok_need_help?>
 
         </div>
 

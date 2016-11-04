@@ -56,7 +56,7 @@
                         <div class="blue-block">
                             <div class="title">NEED HELP?</div>
                             <ul>
-                                <li><i class="help-ico1"></i><a href="#">00-214-6550 | 24/7</a></li>
+                                <li><i class="help-ico1"></i><a href="tel:800 214 6550">800-214-6550 | 24/7</a></li>
                                 <li><i class="help-ico2"></i><a href="#">Online Chat now</a></li>
                             </ul>
                         </div>
