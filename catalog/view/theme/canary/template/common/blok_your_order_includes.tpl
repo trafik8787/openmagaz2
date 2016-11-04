@@ -23,7 +23,7 @@
                             Our Jewelry
                         </span>
             </a>
-            <a href="/about-us#free-appraisal" class="p-include-item">
+            <a href="/about-us#free-engraving" class="p-include-item">
                 <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-3.jpg" alt=""></span>
                 <span class="p-include-title">Free Engraving</span>
                 <span class="p-include-dot"></span>
@@ -32,15 +32,30 @@
                             To Your Ring
                         </span>
             </a>
-            <a href="#" class="p-include-item">
-                <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-4.jpg" alt=""></span>
-                <span class="p-include-title">Diamond Certificate</span>
-                <span class="p-include-dot"></span>
-                <span class="p-include-text">
-                            Original GIA Grading<br>
-                            Report
-                        </span>
-            </a>
+
+            <?if (isset($diamond)):?>
+                <a href="/about-us#free-appraisal" class="p-include-item">
+                    <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-4.jpg" alt=""></span>
+                    <span class="p-include-title">Diamond Certificate</span>
+                    <span class="p-include-dot"></span>
+                    <span class="p-include-text">
+                                Original GIA Grading<br>
+                                Report
+                            </span>
+                </a>
+            <?else:?>
+                <a href="/about-us#free-appraisal" class="p-include-item">
+                    <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-5.png" alt=""></span>
+                    <span class="p-include-title">Free Appraisal</span>
+                    <span class="p-include-dot"></span>
+                    <span class="p-include-text">
+                                    Prepared by GIA Graduate<br>
+                                    Gemologist
+                                </span>
+                </a>
+
+            <?endif?>
+
         </div>
     </div>
 </div>

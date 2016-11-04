@@ -96,21 +96,21 @@
                                 We stand behind all of the jewelry we sell and offer a lifetime warranty with every fine jewelry purchase! Should you experience damage to your jewelry purchase due to manufacturing, please contact us right away
                             </div>
                         </div>
-                        <div class="about-service-item about-service-left">
+                        <div class="about-service-item about-service-left" id="free-and-fast-shipping">
                             <div class="about-service-img"><img src="/catalog/view/theme/canary/img/about-service-2.jpg" alt=""></div>
                             <div class="about-service-desc">
                                 <div class="about-service-desc-title">Free and Fast Shipping</div>
                                 We stand behind all of the jewelry we sell and offer a lifetime warranty with every fine jewelry purchase! Should you experience damage to your jewelry purchase due to manufacturing, please contact us right away
                             </div>
                         </div>
-                        <div class="about-service-item about-service-left">
+                        <div class="about-service-item about-service-left" id="no-hassle-returns">
                             <div class="about-service-img"><img src="/catalog/view/theme/canary/img/about-service-3.jpg" alt=""></div>
                             <div class="about-service-desc">
                                 <div class="about-service-desc-title">100% Money Back Guarantee</div>
                                 Your satisfaction is guaranteed with our products. If you are unhappy for any reason, you may receive a full refund within 30 days of the shipping date. Please see our return policy section for more information.
                             </div>
                         </div>
-                        <div class="about-service-item about-service-left">
+                        <div class="about-service-item about-service-left" id="military-discount">
                             <div class="about-service-img"><img src="/catalog/view/theme/canary/img/about-service-4.jpg" alt=""></div>
                             <div class="about-service-desc">
                                 <div class="about-service-desc-title">Military Discount</div>
@@ -118,7 +118,7 @@
                             </div>
                         </div>
 
-                        <div class="about-service-item about-service-right">
+                        <div class="about-service-item about-service-right" id="free-engraving">
                             <div class="about-service-desc">
                                 <div class="about-service-desc-title">Free Resizing and Engraving</div>
                                 We are happy to offer you a one-time resizing at no extra charge within 90 days of purchase. We also offer free engraving on all of our engagement and wedding rings that allow it.
@@ -140,7 +140,7 @@
                             </div>
                             <div class="about-service-img"><img src="/catalog/view/theme/canary/img/about-service-7.jpg" alt=""></div>
                         </div>
-                        <div class="about-service-item about-service-right">
+                        <div class="about-service-item about-service-right" id="helping-others">
                             <div class="about-service-desc">
                                 <div class="about-service-desc-title">Customer Service</div>
                                 Our certified diamond experts and customer service representatives are here to help you with any inquires you may have. Please Call us at 800-214-6550 or email us with any questions at info@brilliantcanary.com 24/7 and we will respond within 1 business day.

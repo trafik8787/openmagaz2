@@ -445,7 +445,7 @@ class ControllerModuleRapnet extends Controller {
         );
 
         $data['bloc_product_advantages'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_product_advantages.tpl');
-        $data['blok_your_order_includes'] = $this->load->view($this->config->get('config_template') . '/template/common/blok_your_order_includes.tpl');
+        $data['blok_your_order_includes'] = $this->load->view($this->config->get('config_template') . '/template/common/blok_your_order_includes.tpl', array('diamond' => true));
         $data['diamond_similar'] = $this->getSimilarDiamond($diamond);
         $data['blok_need_help'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_need_help.tpl', array('telephone' => $this->config->get('config_telephone')));
 
