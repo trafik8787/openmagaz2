@@ -382,7 +382,7 @@ $(document).on('click', '.mobile-login-tab-btn', function(e) {
 })();
 
 
-$('body').delegate('.list-view tr', 'click', function(event){
+$('body').delegate('.list-view tr, .th-view .product-item', 'click', function(event){
     var self = $(this),
         itemHref;
     if (!$(event.target).is('i') && !$(event.target).is('a')) {
