@@ -3636,6 +3636,188 @@ text-align: left;
     display: inline-block;
 }
 
+.about-wrapper {
+    background: #f5f8fd;
+}
+
+.about-top {
+    margin-top: -30px;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 65px;
+    z-index: 1;
+}
+
+.about-white {
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.about-header {
+    text-align: center;
+    padding: 50px 0 35px;
+}
+
+.about-header .icons-quality_service_icon {
+    margin: 10px auto;
+}
+
+.about-title {
+    color: #1e3e7e;
+    font-size: 38px;
+    line-height: 1;
+    font-weight: normal;
+    margin: 0;
+    font-family: "Felix Titling", sans-serif;
+}
+
+.about-service {
+    background: linear-gradient(rgba(234, 234, 234, 0.51), #fff 250px);
+    padding-bottom: 160px;
+}
+
+.about-service-item {
+    margin-bottom: 6px;
+    background: linear-gradient(#fff, #eff5fa);
+    border: 1px solid #d8ecf3;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.about-service-img {
+    display: inline-block;
+    width: 260px;
+    height: 140px;
+    vertical-align: middle;
+}
+.about-service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-service-desc {
+    vertical-align: middle;
+    display: inline-block;
+    width: calc(90% - 325px);
+
+    color: #1e3e7e;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.about-service-desc-title {
+    font-size: 1.4em;
+    line-height: 1;
+    font-family: "Raleway-Bold", fantasy;
+    margin: 0 0 12px;
+}
+
+.about-service-left .about-service-desc {
+    margin-left: 60px;
+}
+.about-service-right {
+    text-align: right;
+}
+.about-service-right .about-service-desc {
+    margin-right: 60px;
+}
+
+.about-top-container {
+    background: #f2f2f2 url("../img/about-top-logo.png") no-repeat;
+    background-position: calc(100% - 8px) calc(100% - 1px);
+}
+
+.about-top-container .left {
+    display: inline-block;
+    vertical-align: middle;
+    width: 625px;
+}
+
+.about-top-container .left img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.about-top-container .right {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 690px);
+    margin-left: 60px;
+    padding-right: 60px;
+
+    color: #1a1a18;
+    font-size: 15px;
+    line-height: 1.53;
+}
+
+.about-top-container .right .title {
+    font-size: 1.4em;
+    margin: 0 0 30px;
+}
+
+.about-block.about-white {
+    text-align: right
+}
+
+.about-block-title {
+    color: #1e3e7e;
+    font-size: 33px;
+    line-height: 1;
+    margin: 0 0 40px;
+    font-family: "Felix Titling", sans-serif;
+    font-weight: normal;
+}
+
+.about-block-text {
+    color: #1a1a18;
+    font-size: 15px;
+    line-height: 1.53;
+    margin: 0;
+}
+
+.about-block-img {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(55% - 5px);
+    text-align: center;
+}
+
+.about-block-img img {
+    vertical-align: top;
+}
+
+.about-block-img.text-right img {
+    float: right;
+}
+
+.about-block-img.text-right:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about-block-desc {
+    display: inline-block;
+    vertical-align: middle;
+    width: 45%
+}
+
+.about-block {
+    overflow: hidden;
+}
+
+.about-block.padding {
+    padding: 30px 0;
+}
+
+
+
 
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -3702,6 +3884,21 @@ text-align: left;
     .main-catalog-container.wrapper-product-table .table tbody tr td:nth-child(1) {
         max-width: 100%;
         margin: 0 auto;
+    }
+
+    .about-top-container .left {
+        width: 50%;
+    }
+
+    .about-top-container .right {
+        width: calc(50% - 35px);
+        margin-left: 30px;
+        padding-right: 30px;
+    }
+
+    .about-top-container .right .title {
+        margin-bottom: 20px;
+        line-height: 1.2;
     }
 
 }
@@ -3847,6 +4044,34 @@ text-align: left;
     .width30 {
         width: 40%;
     }
+
+    .about-top-container .left {
+        width: 40%;
+    }
+
+    .about-top-container .right {
+        width: calc(60% - 20px);
+        margin-left: 15px;
+        padding-right: 15px;
+        font-size: 11px;
+    }
+
+    .about-top-container .right .title {
+        margin-bottom: 10px;
+    }
+
+    .about-block.padding {
+        padding: 0;
+    }
+
+    .about-block-desc {
+        padding: 20px 0;
+    }
+
+    .about-block-title {
+        margin-bottom: 15px;
+    }
+
 
 }
 
@@ -4476,6 +4701,84 @@ text-align: left;
         margin-left: 25px;
     }
 
+    .about-header {
+        padding: 25px 0 20px;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .about-service {
+        padding-bottom: 40px;
+    }
+
+    .about-service-img {
+        width: 190px;
+    }
+
+    .about-service-desc {
+        width: calc(100% - 215px);
+        font-size: 12px;
+    }
+
+    .about-service-left .about-service-desc {
+        margin-left: 15px;
+    }
+
+    .about-service-right .about-service-desc {
+        margin-right: 15px;
+    }
+
+    .about-service-desc-title {
+        margin-bottom: 5px;
+    }
+
+    .about-top-container .left {
+        width: 100%;
+        display: block;
+    }
+
+    .about-top-container .right {
+        width: 100%;
+        display: block;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .about-top {
+        padding-bottom: 25px;
+    }
+
+    .about-block-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .about-block-text {
+        font-size: 12px;
+    }
+
+    .about-block-img {
+        width: calc(50% - 5px);
+    }
+
+    .about-block-desc {
+        width: 50%;
+    }
+
+    .about-block-img {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .about-block-desc {
+        display: block;
+        width: 100%;
+    }
+
 
 }
 
@@ -4805,7 +5108,30 @@ text-align: left;
         font-size: 12px;
     }
 
+    .about-service-img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
 
+    .about-service-img img {
+        vertical-align: top;
+    }
+
+    .about-service-desc {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .about-service-item {
+        margin-bottom: 20px;
+    }
+
+    .about-service-left .about-service-desc,
+    .about-service-right .about-service-desc {
+        margin: 0;
+    }
 }
 
 
