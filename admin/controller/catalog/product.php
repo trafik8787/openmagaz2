@@ -1553,7 +1553,7 @@ class ControllerCatalogProduct extends Controller {
 	public function autocomplete() {
 		$json = array();
 
-		if (isset($this->request->get['filter_name']) || isset($this->request->get['filter_model']) || isset($this->request->get['filter_product_id'])) {
+		if (isset($this->request->get['filter_name']) || isset($this->request->get['filter_model']) || isset($this->request->get['filter_product_id']) || isset($this->request->get['filter_product_sku'])) {
 			$this->load->model('catalog/product');
 			$this->load->model('catalog/option');
 
@@ -1575,6 +1575,12 @@ class ControllerCatalogProduct extends Controller {
 				$filter_product_id = '';
 			}
 
+			if (isset($this->request->get['filter_product_sku'])) {
+				$filter_product_sku = $this->request->get['filter_product_sku'];
+			} else {
+				$filter_product_sku = '';
+			}
+
 			if (isset($this->request->get['limit'])) {
 				$limit = $this->request->get['limit'];
 			} else {
@@ -1585,6 +1591,7 @@ class ControllerCatalogProduct extends Controller {
 				'filter_name'  => $filter_name,
 				'filter_model' => $filter_model,
                 'filter_product_id' => $filter_product_id,
+                'filter_product_sku' => $filter_product_sku,
 				'start'        => 0,
 				'limit'        => $limit
 			);

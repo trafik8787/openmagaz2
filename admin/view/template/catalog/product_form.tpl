@@ -1058,7 +1058,7 @@ $('input[name=\'manufacturer\']').autocomplete({
 $('input[name=\'matching\']').autocomplete({
   'source': function(request, response) {
       $.ajax({
-          url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_product_id=' +  encodeURIComponent(request) + '&filter_name=' +  encodeURIComponent(request),
+          url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_product_sku=' +  encodeURIComponent(request),
           dataType: 'json',
           success: function(json) {
               json.unshift({

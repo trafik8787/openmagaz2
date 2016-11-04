@@ -380,8 +380,12 @@ class ModelCatalogProduct extends Model {
 			$sql .= " AND pd.name LIKE '" . $this->db->escape($data['filter_name']) . "%'";
 		}
 
+        if (isset($data['filter_product_sku']) && !is_null($data['filter_product_sku'])) {
+            $sql .= " AND p.sku LIKE '%" . $data['filter_product_sku'] . "%'";
+        }
+
         if (isset($data['filter_product_id']) && !is_null($data['filter_product_id'])) {
-            $sql .= " OR p.sku LIKE '%" . $data['filter_product_id'] . "%'";
+            $sql .= " AND p.product_id LIKE '%" . $data['filter_product_id'] . "%'";
         }
 
 		if (!empty($data['filter_model'])) {

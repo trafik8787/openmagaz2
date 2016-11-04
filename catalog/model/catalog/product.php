@@ -428,23 +428,27 @@ class ModelCatalogProduct extends Model {
 
 
         if (empty($query->rows)) {
-            $count = $this->db->query("SELECT COUNT(*) as count FROM " . DB_PREFIX . "product");
+
 
             //к какой категории принадлежит товар
             $cat = $this->db->query("SELECT *  FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_to_category ptc ON (p.product_id = ptc.product_id) WHERE p.product_id = ".(int)$product_id." ORDER BY ptc.category_id DESC LIMIT 1");
 
+            $count = $this->db->query("SELECT COUNT(*) as count FROM " . DB_PREFIX . "product p INNER JOIN " . DB_PREFIX . "product_to_category ptc ON (p.product_id = ptc.product_id) WHERE ptc.category_id = ".$cat->row['category_id']);
+
+            //dd($cat->row['category_id']);
             $sql = array();
-            //количество похожих продуктов 5
+            //количество похожих продуктов
             while (count($sql) < $count_product) {
                 $sql[] = "(SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN "
                     . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN ". DB_PREFIX ."product_to_category ptc ON (p.product_id = ptc.product_id)
-                WHERE  p.status = '1' AND p.date_available <= NOW() 
+                WHERE  p.status = '1' AND p.date_available <= NOW() AND ptc.category_id = ".$cat->row['category_id']."
                 AND p2s.store_id = " . (int)$this->config->get('config_store_id')." LIMIT ".mt_rand(0, $count->rows[0]['count']).", 1)";
             }
 
             $sql = implode(' UNION ', $sql);
 
             $query = $this->db->query($sql);
+            //dd($query->rows);
 
             foreach ($query->rows as $result) {
                 $product_data[$result['product_id']] = $this->getProduct($result['product_id']);
