@@ -158,6 +158,7 @@
                                 <div id="collapse1" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul>
+                                            <li><a href="/about-us">About Us</a></li>
                                             <?php foreach ($informations as $information):?>
 
                                                 <?if ($information['top'] == 1):?>
@@ -246,6 +247,7 @@
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <dl>
                                 <dt>INFORMATION</dt>
+                                <dd><a href="/about-us">About Us</a></dd>
                                 <?php foreach ($informations as $information):?>
 
                                     <?if ($information['top'] == 1):?>
