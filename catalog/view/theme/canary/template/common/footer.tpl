@@ -195,7 +195,7 @@
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">
-                                            Why Pick Canary?
+                                            Why Pick Brilliant Canary?
                                         </a>
                                     </h4>
                                 </div>
@@ -217,10 +217,10 @@
                             <div class="box-right-footer">
                                 <div class="title-follow ">Follow us</div>
                                 <ul class="list-inline text-right">
-                                    <li><a href="https://www.facebook.com/BrilliantCanaryRings" class="icon-facebook"></a></li>
-                                    <li><a href="https://twitter.com/TheBrilliantC" class="icon-twitter"></a></li>
-                                    <li><a href="https://www.instagram.com/brilliantcanaryrings/" class="icon-instagram"></a></li>
-                                    <li><a href="" class="icon-p"></a></li>
+                                    <li><a href="https://www.facebook.com/BrilliantCanaryRings" target="_blank" class="icon-facebook"></a></li>
+                                    <li><a href="https://twitter.com/TheBrilliantC" target="_blank" class="icon-twitter"></a></li>
+                                    <li><a href="https://www.instagram.com/brilliantcanaryrings/" target="_blank" class="icon-instagram"></a></li>
+                                    <li><a href="" target="_blank" class="icon-p"></a></li>
                                 </ul>
                             </div>
                             <dl class="contact-mobile">
@@ -273,7 +273,7 @@
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <dl>
-                                <dt>WHY PICK CANARY?</dt>
+                                <dt>WHY PICK <br>BRILLIANT CANARY?</dt>
                                 <?php foreach ($informations as $information):?>
                                     <?if ($information['top'] == 3):?>
                                         <dd><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></dd>
