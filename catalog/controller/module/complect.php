@@ -12,12 +12,13 @@ class ControllerModuleComplect extends Controller {
 
         $data = array();
 
-        //dd($this->request->get);
 
         $data = $this->getProductsCoolies();
 
         if (isset($this->request->get['path'])) {
             $data['path'] = $this->request->get['path'];
+        } else {
+            $data['path'] = $this->request->get['_route_'];
         }
 
 

@@ -46,7 +46,7 @@
                             <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.addDiamond('<?=$product->response->body->diamond->diamond_id?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                         </li>
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
-                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
+                        <!--*<li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>*-->
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                         <li>
                             <!-- space for chare -->
@@ -64,11 +64,16 @@
                             <strong>SKU:<?=$product->response->body->diamond->diamond_id?></strong>
                         </div>
                     </div>
-                    <div class="row paging-bottom-20">
+                    <div class="row paging-bottom-20"><?//=dd($product->response->body->diamond)?>
                         <div class="col-md-8 col-sm-8">
                             <h3 class="w-product-desc">
                                 <!-- todo desc-->
-                                Has excellent proportions and diamond grading report from GIA. Crafted with pride in USA.
+                                This <?=$product->response->body->diamond->size?> Carat, <?=$product->response->body->diamond->size?>
+                                <?= !empty($product->response->body->diamond->cut) ? $product->response->body->diamond->cut .'Cut,' : ''?>
+                                <?=$product->response->body->diamond->color?> color, and
+                                <?=$product->response->body->diamond->clarity?> clarity
+                                <?=$product->response->body->diamond->shape?>
+                                Shape diamond is accompanied by a GIA grading report.
                             </h3>
                         </div>
                         <div class="col-md-4 col-sm-4">
@@ -229,7 +234,7 @@
                             <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                         </li>
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
-                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
+                        <!--*<li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>*-->
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                         <li>
                             <!-- space for chare -->

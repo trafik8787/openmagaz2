@@ -1,38 +1,39 @@
 <?//dd($CanaryProductCom)?>
 <?//dd($CanaryDiamontCom)?>
+<?//dd($path)?>
 
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="w-navigate-circle clearfix">
-            <?php if (!empty($path) AND $path == 68)://diamonds?>
+            <?php if ((!empty($path) AND $path == 68) OR (!empty($path) AND $path == 'diamond_page'))://diamonds?>
 
 
-            <?php if (!empty($CanaryDiamontCom) AND empty($CanaryProductCom)):?>
+                <?php if (!empty($CanaryDiamontCom) AND empty($CanaryProductCom)):?>
 
-            <?show_diamond_complect_bloc (1, $CanaryDiamontCom)?>
-            <?show_product_complect_bloc (2, null, 1)?>
-            <?show_complite_complect_bloc ()?>
+                    <?show_diamond_complect_bloc (1, $CanaryDiamontCom)?>
+                    <?show_product_complect_bloc (2, null, 1)?>
+                    <?show_complite_complect_bloc ()?>
 
-            <?elseif(!empty($CanaryProductCom) AND empty($CanaryDiamontCom)):?>
+                <?elseif(!empty($CanaryProductCom) AND empty($CanaryDiamontCom)):?>
 
-            <?show_product_complect_bloc (1, $CanaryProductCom)?>
-            <?show_diamond_complect_bloc (2, null, 1)?>
-            <?show_complite_complect_bloc ()?>
+                    <?show_product_complect_bloc (1, $CanaryProductCom)?>
+                    <?show_diamond_complect_bloc (2, null, 1)?>
+                    <?show_complite_complect_bloc ()?>
 
 
-            <?elseif(!empty($CanaryProductCom) AND !empty($CanaryDiamontCom)):?>
+                <?elseif(!empty($CanaryProductCom) AND !empty($CanaryDiamontCom)):?>
 
-            <?show_diamond_complect_bloc (1, $CanaryDiamontCom)?>
-            <?show_product_complect_bloc (2, $CanaryProductCom)?>
-            <?show_complite_complect_bloc (1)?>
+                    <?show_diamond_complect_bloc (1, $CanaryDiamontCom)?>
+                    <?show_product_complect_bloc (2, $CanaryProductCom)?>
+                    <?show_complite_complect_bloc (1)?>
 
-            <?else:?>
+                <?else:?>
 
-            <?show_diamond_complect_bloc (1, null, 1)?>
-            <?show_product_complect_bloc (2)?>
-            <?show_complite_complect_bloc ()?>
+                    <?show_diamond_complect_bloc (1, null, 1)?>
+                    <?show_product_complect_bloc (2)?>
+                    <?show_complite_complect_bloc ()?>
 
-            <?endif?>
+                <?endif?>
 
 
 
@@ -40,33 +41,33 @@
             <?else:// no diamonds?>
 
 
-            <?php if (!empty($CanaryProductCom) AND empty($CanaryDiamontCom)):?>
+                <?php if (!empty($CanaryProductCom) AND empty($CanaryDiamontCom)):?>
 
-            <?show_product_complect_bloc (1, $CanaryProductCom)?>
-            <?show_diamond_complect_bloc (2, null, 1)?>
-            <?show_complite_complect_bloc ()?>
-
-
-            <?elseif(!empty($CanaryDiamontCom) AND empty($CanaryProductCom)):?>
-
-            <?show_diamond_complect_bloc (1, $CanaryDiamontCom)?>
-            <?show_product_complect_bloc (2, null, 1)?>
-            <?show_complite_complect_bloc ()?>
+                    <?show_product_complect_bloc (1, $CanaryProductCom)?>
+                    <?show_diamond_complect_bloc (2, null, 1)?>
+                    <?show_complite_complect_bloc ()?>
 
 
-            <?elseif(!empty($CanaryDiamontCom) AND !empty($CanaryProductCom)):?>
+                <?elseif(!empty($CanaryDiamontCom) AND empty($CanaryProductCom)):?>
 
-            <?show_product_complect_bloc (1, $CanaryProductCom)?>
-            <?show_diamond_complect_bloc (2, $CanaryDiamontCom)?>
-            <?show_complite_complect_bloc (1)?>
+                    <?show_diamond_complect_bloc (1, $CanaryDiamontCom)?>
+                    <?show_product_complect_bloc (2, null, 1)?>
+                    <?show_complite_complect_bloc ()?>
 
-            <?else:?>
 
-            <?show_product_complect_bloc (1, null, 1)?>
-            <?show_diamond_complect_bloc (2)?>
-            <?show_complite_complect_bloc ()?>
+                <?elseif(!empty($CanaryDiamontCom) AND !empty($CanaryProductCom)):?>
 
-            <?endif?>
+                    <?show_product_complect_bloc (1, $CanaryProductCom)?>
+                    <?show_diamond_complect_bloc (2, $CanaryDiamontCom)?>
+                    <?show_complite_complect_bloc (1)?>
+
+                <?else:?>
+
+                    <?show_product_complect_bloc (1, null, 1)?>
+                    <?show_diamond_complect_bloc (2)?>
+                    <?show_complite_complect_bloc ()?>
+
+                <?endif?>
 
             <?endif?>
         </div>
@@ -80,24 +81,24 @@
 
 <?//dd($show)?>
 
-<div class="my-div <?= !empty($show) ? 'active-circle' : '' ?> <?php if (!empty($CanaryDiamontCom)):?> w-opacity<?endif?>">
-<a href="<?= !empty($show) ? '/diamonds' : $CanaryDiamontCom['href']?>"  class="w-one-block  <?= !empty($show) ? 'w-general-category' : '' ?>">
-<span class="number-step"><?=$index?></span>
-<span class="title">
-<span>SELECT YOUR DIAMOND</span>
-</span>
-<span class="text">
-Select from thousands of GIA certified diamonds.
-</span>
-<!--*<?php if (!empty($CanaryDiamontCom)):?>*-->
-<!--*<div>*-->
-<!--*<img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="50" alt="...">*-->
-<!--*<button data-href="<?=$CanaryDiamontCom['href'] ?>" class="step-eyes w-link-complect-bloc"></button>*-->
-<!--*<button class="step-close w-remowe-diamond-complect"></button>*-->
-<!--*</div>*-->
-<!--*<?endif?>*-->
-</a>
-</div>
+    <div class="my-div <?= !empty($show) ? 'active-circle' : '' ?> <?php if (!empty($CanaryDiamontCom)):?> w-opacity<?endif?>">
+        <a href="<?= !empty($show) ? '/diamonds' : $CanaryDiamontCom['href']?>"  class="w-one-block  <?= !empty($show) ? 'w-general-category' : '' ?>">
+            <span class="number-step"><?=$index?></span>
+            <span class="title">
+                <span>SELECT YOUR DIAMOND</span>
+            </span>
+            <span class="text">
+                Select from thousands of GIA certified diamonds.
+            </span>
+            <!--*<?php if (!empty($CanaryDiamontCom)):?>*-->
+            <!--*<div>*-->
+            <!--*<img src="<?=!empty($CanaryDiamontCom) ? $CanaryDiamontCom['img'] : '' ?>" width="50" alt="...">*-->
+            <!--*<button data-href="<?=$CanaryDiamontCom['href'] ?>" class="step-eyes w-link-complect-bloc"></button>*-->
+            <!--*<button class="step-close w-remowe-diamond-complect"></button>*-->
+            <!--*</div>*-->
+            <!--*<?endif?>*-->
+        </a>
+    </div>
 <?}?>
 
 

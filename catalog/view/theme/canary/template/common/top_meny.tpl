@@ -130,7 +130,7 @@
                             <?endif?>
                         </ul>
                         <div class="set-for-him">
-                            <a href="#"><div class="icons-rings_icon"></div><span>Sets for him and her</span></a>
+                            <!--*<a href="#"><div class="icons-rings_icon"></div><span>Sets for him and her</span></a>*-->
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-4 text-right">

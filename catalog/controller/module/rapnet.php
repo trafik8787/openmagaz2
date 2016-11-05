@@ -436,12 +436,32 @@ class ControllerModuleRapnet extends Controller {
         $data['product'] = $diamond;
 //        dd($diamond);
 
-        $diamond_name = $diamond->response->body->diamond->shape.' '.$diamond->response->body->diamond->size .' CARAT '.$diamond->response->body->diamond->color .' '. $diamond->response->body->diamond->clarity;
+        //$diamond_name = $diamond->response->body->diamond->shape.' '.$diamond->response->body->diamond->size .' CARAT '.$diamond->response->body->diamond->color .' '. $diamond->response->body->diamond->clarity;
+        $diamond_name = $diamond->response->body->diamond->size.' CARAT '
+            .$diamond->response->body->diamond->color.'-'.$diamond->response->body->diamond->clarity.' '
+            .$diamond->response->body->diamond->cut.' CUT '.$diamond->response->body->diamond->shape.' LOOSE GIA CERTIFIED DIAMOND';
+
         $data['diamond_name'] = $diamond_name;
 
-        $data['breadcrumbs'][] = array(
-            'text' => $diamond_name,
-            'href' => ''
+//        $data['breadcrumbs'][] = array(
+//            'text' => $diamond_name,
+//            'href' => ''
+//        );
+
+        $this->document->setTitle(
+            $diamond->response->body->diamond->size.' Carat '.$diamond->response->body->diamond->shape.' Diamond: '
+            .$diamond->response->body->diamond->color.', '.$diamond->response->body->diamond->clarity.', '
+            .$diamond->response->body->diamond->cut.' Cut, GIA Certified Loose Diamond'
+        );
+        $this->document->setDescription(
+            'This '.$diamond->response->body->diamond->size.' Carat '.$diamond->response->body->diamond->shape.' Shape, '
+            .$diamond->response->body->diamond->color.' Color, '.$diamond->response->body->diamond->clarity.' Clarity '
+            .$diamond->response->body->diamond->cut.' Cut Loose Diamond is accompanied by GIA Grading Report'
+        );
+        $this->document->setKeywords(
+            'This '.$diamond->response->body->diamond->size.' Carat '.$diamond->response->body->diamond->shape.' Shape, '
+            .$diamond->response->body->diamond->color.' Color, '.$diamond->response->body->diamond->clarity.' Clarity '
+            .$diamond->response->body->diamond->cut.' Cut Loose Diamond is accompanied by GIA Grading Report'
         );
 
         $data['bloc_product_advantages'] = $this->load->view($this->config->get('config_template') . '/template/common/bloc_product_advantages.tpl');
