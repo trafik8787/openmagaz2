@@ -12,8 +12,8 @@
                     <img src="/catalog/view/theme/canary/img/demo_new_template/wedding_rings.jpg" alt="">
                 </div>
                 <div class="list-group text-center">
-                    <a href="/wedding-rings/classik_woman" class="w-list-group-item">Classical Weddings Ring <span class="w-cur-left"></span></a>
-                    <a href="/wedding-rings/diamond_woman" class="w-list-group-item">Wedding Rings with Diamonds <span class="w-cur-left"></span></a>
+                    <a href="/wedding-rings/classic_woman" class="w-list-group-item">Classic Wedding Rings <span class="w-cur-left"></span></a>
+                    <a href="/wedding-rings/diamond_woman" class="w-list-group-item">Diamond Wedding Rings <span class="w-cur-left"></span></a>
                     <a href="/wedding-rings/eternity_woman" class="w-list-group-item">Eternity Wedding Rings <span class="w-cur-left"></span></a>
                     <a href="/wedding-rings/classic_man" class="w-list-group-item">Wedding Rings for Men <span class="w-cur-left"></span></a>
                 </div>
@@ -52,10 +52,10 @@
                     <img src="/catalog/view/theme/canary/img/demo_new_template/gemstones_jewelry.jpg" alt="">
                 </div>
                 <div class="list-group text-center">
-                    <a href="/fine_jeverly/gemstone_earrings&filter=7" class="w-list-group-item">Gemstones Earrings <span class="w-cur-left"></span></a>
-                    <a href="/fine_jeverly/gemstone_pendants&filter=7" class="w-list-group-item">Gemstones Pendants <span class="w-cur-left"></span></a>
-                    <a href="/fine_jeverly/gemstone_rings&filter=7" class="w-list-group-item">Gemstones Rings <span class="w-cur-left"></span></a>
-                    <a href="/fine_jeverly/gemstone_bracelets&filter=7" class="w-list-group-item">Gemstones Bracelets <span class="w-cur-left"></span></a>
+                    <a href="/fine_jeverly/gemstone_earrings&filter=7" class="w-list-group-item">Gemstone Earrings <span class="w-cur-left"></span></a>
+                    <a href="/fine_jeverly/gemstone_pendants&filter=7" class="w-list-group-item">Gemstone Pendants <span class="w-cur-left"></span></a>
+                    <a href="/fine_jeverly/gemstone_rings&filter=7" class="w-list-group-item">Gemstone Rings <span class="w-cur-left"></span></a>
+                    <a href="/fine_jeverly/gemstone_bracelets&filter=7" class="w-list-group-item">Gemstone Bracelets <span class="w-cur-left"></span></a>
                 </div>
             </div>
             <div class="w-shadow-slider"></div>

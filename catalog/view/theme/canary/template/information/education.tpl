@@ -35,7 +35,7 @@
                 </div>
                 <div class="one-block">
                     <div class="box-img">
-                        <a href="/education_find#engagement_rings"><img src="catalog/view/theme/canary/img/engagement rings.jpg" alt="img"></a>
+                        <a href="/education_find#engagement_rings"><img src="catalog/view/theme/canary/img/engagement-rings.jpg" alt="img"></a>
                     </div>
                     <div class="education-block">
                         <div class="title-e"><a href="/education_find#engagement_rings">ENGAGEMENT RINGS</a></div>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="one-block">
                     <div class="box-img">
-                        <a href="/education_find#wedding_rings"><img src="catalog/view/theme/canary/img/wedding bands.jpg" alt="img"></a>
+                        <a href="/education_find#wedding_rings"><img src="catalog/view/theme/canary/img/wedding-bands.jpg" alt="img"></a>
                     </div>
                     <div class="education-block">
                         <div class="title-e"><a href="/education_find#wedding_rings">WEDDING RINGS</a></div>
