@@ -4750,15 +4750,6 @@ text-align: left;
         padding-bottom: 25px;
     }
 
-    .about-block-title {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-
-    .about-block-text {
-        font-size: 12px;
-    }
-
     .about-block-img {
         width: calc(50% - 5px);
     }
@@ -4771,7 +4762,7 @@ text-align: left;
         display: block;
         width: 100%;
         max-width: 300px;
-        margin: 10px auto;
+        margin: 0 auto;
     }
 
     .about-block-desc {

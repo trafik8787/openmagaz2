@@ -853,6 +853,12 @@ input:focus{
   padding: 0;
   text-align: right;
 }
+.box-about1{
+  background: url("../img/the_highest_bg.png") repeat-x bottom;
+}
+.box-about2{
+  background: url("../img/our_jewelry_bg.png") repeat-x bottom;
+}
 .top-menu-b > li.cart-bl .cart-basket .box-btn {
   padding-top: 20px;
   margin: 0 -7px;

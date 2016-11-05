@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-block">
+            <div class="about-block box-about1">
                 <div class="center-bl">
                     <div class="about-block-desc">
                         <div class="about-block-title">The Highest Quality Diamonds</div>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-block">
+            <div class="about-block box-about2">
                 <div class="center-bl">
                     <div class="about-block-desc">
                         <div class="about-block-title">Our Jewelry</div>
