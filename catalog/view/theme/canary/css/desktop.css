@@ -1056,7 +1056,100 @@
 
 @media  (max-width: 480px){
 
-  .static-text-page .ul-custom li {
+    .bxslider-blog .slick-slide {
+        padding: 0 4px;
+    }
+    .w-blog-section .thumbnail {
+        height: 235px;
+    }
+
+    .w-blog-section .thumbnail h3 {
+        margin: 0;
+    }
+
+    .w-blog-section .thumbnail a.btn.btn-default {
+        left: 14px;
+    }
+
+    .w-best-quality .media .pull-left i {
+        zoom: 0.7;
+        margin: 27px 1px 1px 1px;
+    }
+
+    .w-bloc-best-servise .center-bl {
+        padding: 0;
+    }
+
+    .w-best-quality .media-body {
+        padding-top: 9px;
+    }
+
+    .w-best-quality .media-body h4.media-heading > b {
+        font-size: 14px;
+        font-family: "Raleway-Regular", fantasy;
+    }
+
+    .w-best-quality .col-xs-6 a {
+
+    }
+
+    .w-bloc-best-servise .alert.alert-info {
+        margin-bottom: 0;
+        margin-right: 8px;
+    }
+
+    .w-best-quality .col-xs-6:nth-child(2) .media-body {
+        padding-top: 18px;
+    }
+
+    .w-best-quality .col-xs-6:nth-child(4) .media-body {
+        padding-top: 26px;
+    }
+
+    .w-bloc-best-servise .col-xs-6:nth-child(2) .alert.alert-info,
+    .w-bloc-best-servise .col-xs-6:nth-child(4) .alert.alert-info {
+        margin-right: 0;
+    }
+
+    .w-bloc-home-category .thumbnail {
+        height: 160px;
+    }
+
+    .w-bloc-home-category .thumbnail .h3 {
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+    .w-bloc-home-category .thumbnail .h3 a {
+        font-size: 15px;
+        color: #2f2e2d;
+    }
+
+    .w-bloc-home-category .thumbnail img {
+        width: 58%;
+    }
+
+    .w-bloc-best-category .col-xs-6:nth-child(1) .w-bloc-home-category .thumbnail img {
+        width: 84%;
+    }
+
+    .w-bloc-best-category .col-xs-6:nth-child(3) .w-bloc-home-category .thumbnail img {
+        width: 83%;
+    }
+
+    .w-bloc-best-category .col-xs-6:nth-child(4) .w-bloc-home-category .thumbnail img {
+        width: 50%;
+    }
+
+
+    .bxslider .wrapper-selling .text-center {
+        height: 311px;
+    }
+    .bxslider .wrapper-selling {
+        padding: 5px 0;
+    }
+
+    .static-text-page .ul-custom li {
     padding-left: 30px;
     margin-bottom: 18px;
     position: relative;
@@ -1218,7 +1311,7 @@
     top: 135px;
   }
   .w-bloc-best-category > .center-bl > div{
-    width: 100% !important;
+    /*width: 100% !important;*/
   }
   .top-menu-b li {
     padding: 6px 12px 0 12px;
@@ -1246,12 +1339,12 @@
   }
 
   .search-diamond-mobile .brilliant-style li {
-    width: 33%;
+    /*width: 33%;*/
     height: 82px;
   }
 
   .w-best-quality > div{
-    width: 100%;
+    /*width: 100%;*/
     padding-right: 0!important;
   }
 

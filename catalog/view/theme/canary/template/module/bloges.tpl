@@ -13,14 +13,14 @@
 
                 <div class="slide">
                     <div class="thumbnail">
-                        <div class="marc-date">
+                        <div class="marc-date hidden-xs">
                             <strong><?=$row['date_m']?></strong>
                             <div><?=$row['date_d']?></div>
                         </div>
-                        <img src="<?=$row['img']?>" style="height: 170px;" alt="">
+                        <img src="<?=$row['img']?>"  alt="">
                         <div class="caption">
                             <h3><?=$row['title']?></h3>
-                            <p><?=$row['desk']?></p>
+                            <p class="hidden-xs"><?=$row['desk']?></p>
 
                         </div>
                         <a href="<?=$row['link']?>" class="btn btn-default" target="_blank" role="button">Read more</a>

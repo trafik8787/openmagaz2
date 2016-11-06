@@ -1,5 +1,20 @@
 <div class="row margin-top-40 w-bloc-best-category">
     <div class="center-bl">
+
+        <div class="col-md-4 col-sm-4 col-xs-6 visible-xs">
+            <div class="w-bloc-home-category">
+                <div class="thumbnail">
+                    <div class="w-category-gradient"></div>
+                    <div class="h3 text-center">
+                        <div class="icons-marcer_desing_left_icon"></div>
+                        <a href="/wedding-rings">Enagagamet Rings</a>
+                        <div class="icons-marcer_desing_right_icon"></div>
+                    </div>
+                    <img src="/catalog/view/theme/canary/img/bloc-home-category-best-360.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
         <div class="col-md-4 col-sm-4 col-xs-6">
             <div class="w-bloc-home-category">
                 <div class="thumbnail">

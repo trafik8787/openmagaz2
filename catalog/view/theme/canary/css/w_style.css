@@ -1246,6 +1246,10 @@ star-rating
     border: 2px solid #ef9ba0;
 }
 
+.w-checed-list .list__item.btn:nth-child(8) .number-circle{
+    border: 2px solid #ef9ba0;
+}
+
 .btn.btn-filter.brackets a {
     color: inherit;
 }
