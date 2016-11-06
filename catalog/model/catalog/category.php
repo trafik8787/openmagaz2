@@ -70,6 +70,7 @@ class ModelCatalogCategory extends Model {
                             'name' => $cat['name'],
                             'children' => self::build_tree($cats, $cat['category_id'],false, $flag) ? self::build_tree($cats, $cat['category_id'],false, $flag) : array(),
                             'column' => $cat['column'] ? $cat['column'] : 1,
+                            'path' => $cat['category_id'],
                             'href' => $url
                         );
                     }

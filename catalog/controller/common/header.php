@@ -129,7 +129,27 @@ class ControllerCommonHeader extends Controller {
 
         $data['categories'] = $categories2;
 
+        if (!empty($this->request->get['path'])) {
+            $data['path'] = $this->request->get['path'];
+        } else {
+            $data['path'] = null;
+        }
 
+        $ert = array();
+        foreach ($categories2 as $row) {
+
+            if ($this->request->get['path'] == $row['path']) {
+                $row['class_activ'] = 'w-menu-activ';
+            } else {
+                $row['class_activ'] = ' ';
+            }
+
+            $ert[] = $row;
+        }
+
+        $data['categories'] = $ert;
+//        $data['categories'] = $categories2;
+        //dd($this->request->get['path']);
         $data['top_meny'] = $this->load->view($this->config->get('config_template').'/template/common/top_meny.tpl', $data);
 
 

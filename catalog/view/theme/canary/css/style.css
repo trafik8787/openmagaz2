@@ -1982,6 +1982,11 @@ footer > section .row {
 .menu > ul > li > a:hover{
   color: #5c6f9c;
 }
+
+.w-menu-activ {
+    color: #5c6f9c!important;
+}
+
 .menu > ul > li > a {
   padding: 10px 5px 13px;
   position: relative;

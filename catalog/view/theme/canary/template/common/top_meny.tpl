@@ -1,7 +1,8 @@
+<?//dd($categories)?>
 <div class="menu">
     <ul id="horizontal">
         <li class="dropdown-b"><!--engagement rings-->
-            <a href="<?php echo $categories[1]['href']?>" class="w-general-category"><span></span><?php echo $categories[1]['name']?></a>
+            <a href="<?php echo $categories[1]['href']?>" class="w-general-category <?=$categories[1]['class_activ']?>"><span></span><?php echo $categories[1]['name']?></a>
             <div class="dropdown-inside">
                 <div class="title">engagement setting rings</div>
                 <ul class="brilliant-style">
@@ -85,7 +86,7 @@
             </div>
         </li>
         <li class="dropdown-b"><!--*WEDDING RINGS*-->
-            <a href="<?php echo $categories[2]['href']?>" class="w-general-category"><span></span><?php echo $categories[2]['name']?></a>
+            <a href="<?php echo $categories[2]['href']?>" class="w-general-category <?=$categories[2]['class_activ']?>"><span></span><?php echo $categories[2]['name']?></a>
             <div class="dropdown-inside">
                 <div class="clearfix">
                     <div class="col-md-8 col-sm-8 col-xs-8">
@@ -140,7 +141,7 @@
             </div>
         </li>
         <li class="dropdown-b"><!--*DIAMONDS*-->
-            <a href="<?php echo $categories[0]['href']?>" class="w-general-category"><span></span><?php echo $categories[0]['name']?></a>
+            <a href="<?php echo $categories[0]['href']?>" class="w-general-category <?=$categories[0]['class_activ']?>"><span></span><?php echo $categories[0]['name']?></a>
             <div class="dropdown-inside">
                 <div class="title">Browse diamonds by share</div>
                 <ul class="brilliant-style">
@@ -200,7 +201,7 @@
             </div>
         </li>
         <li class="dropdown-b" data-target="menu4">
-            <a href="<?php echo $categories[4]['href']?>" class="w-general-category"><span></span><?php echo $categories[4]['name']?></a>
+            <a href="<?php echo $categories[4]['href']?>" class="w-general-category <?=$categories[4]['class_activ']?>"><span></span><?php echo $categories[4]['name']?></a>
             <div class="dropdown-inside">
                 <div class="clearfix">
                     <div class="col-md-4 col-sm-4 col-xs-4">
@@ -293,7 +294,7 @@
             </div>
         </li>
         <li class="dropdown-b">
-            <a href="<?php echo $categories[3]['href']?>" class="w-general-category"><span></span><?php echo $categories[3]['name']?></a>
+            <a href="<?php echo $categories[3]['href']?>" class="w-general-category <?=$categories[3]['class_activ']?>"><span></span><?php echo $categories[3]['name']?></a>
             <div class="dropdown-inside">
                 <div class="clearfix">
                     <div class="col-md-4 col-sm-4 col-xs-4">

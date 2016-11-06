@@ -95,9 +95,9 @@
                 </div>
                 <div class="col-md-6 col-sm-6">
                     All of our bridal jewelry is designed and crafted in the United States of America.
-                    By supporting manufacturers in the United States, we can provide our customers with the highest
+                    By supporting manufacturers in the United States, we can provide our customers with
                     <div class="collapse">
-                        quality jewelry at afaster delivery time and an exceptional price.
+                        the highest quality jewelry at afaster delivery time and an exceptional price.
                     </div>
 
                 </div>
