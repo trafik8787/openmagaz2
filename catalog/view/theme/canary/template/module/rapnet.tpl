@@ -1153,16 +1153,6 @@
         });
 
 
-        $(document).on('change', '.diamond-page-number-input', function(){
-
-
-            $url_page = '&page='+$(this).val();
-            redirect = generate_url();
-            history.pushState('', '', redirect);
-            ajaxdata (redirect);
-            return false;
-
-        });
 
 
         //alert(location.href);

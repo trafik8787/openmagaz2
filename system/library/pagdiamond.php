@@ -55,7 +55,7 @@ class Pagdiamond {
                     $end = $num_pages;
                 }
             }
-            $output .= '<span>Page</span><input type="text" class="form-control diamond-page-number-input" data-href="' . str_replace('{page}', $page, $this->url) . '" value="'.$page.'"><span>of '.$num_pages.'</span>';
+            $output .= '<span>Page</span><input type="text" class="form-control" disabled data-href="' . str_replace('{page}', $page, $this->url) . '" value="'.$page.'"><span>of '.$num_pages.'</span>';
 //            for ($i = $start; $i <= $end; $i++) {
 //                if ($page == $i) {
 //                    $output .= '<li class="active"><span>' . $i . '</span></li>';

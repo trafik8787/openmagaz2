@@ -28,9 +28,9 @@
 
                     <div class="dropdown">
                         <select name="show" class="form-control" id="w-product-show">
-                            <option value="15">15</option>
-                            <option value="25">25</option>
-                            <option value="50">50</option>
+                            <option value="15" <?if ($search_results->diamonds_returned == 15):?> selected="selected" <?endif?> >15</option>
+                            <option value="25" <?if ($search_results->diamonds_returned == 25):?> selected="selected" <?endif?>>25</option>
+                            <option value="50" <?if ($search_results->diamonds_returned == 50):?> selected="selected" <?endif?> >50</option>
                         </select>
                     </div>
                 </div>
