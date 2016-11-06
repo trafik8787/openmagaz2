@@ -3,7 +3,8 @@
     <hr>
     <p class="text-center"><b><?=$data_error?></b></p>
 <?else:?>
-<?//dd($sortby)?>
+<?//dd($search_results)?>
+
 
     <div class="center-bl">
         <div class="diamond-catalog-top clearfix">
@@ -11,14 +12,15 @@
                 <div class="total-items">Total <?=$total_diamonds?> items</div>
                 <div class="diamond-catalog-tocompare"><a href="#">Product compare (0)</a></div>
             </div>
-            <div class="center">
-                <div class="diamond-catalog-top-pages">
-                    <a href="#" class="diamond-catalog-top-pages-link arrow-btn-number prev" data-action="minus"> </a>
-                    <span>Page</span>
-                    <input type="text" class="form-control" value="1">
-                    <span>of 3</span>
-                    <a href="#" class="diamond-catalog-top-pages-link arrow-btn-number next" data-action="plus"> </a>
-                </div>
+            <div class="center w-pagination-diamonts">
+                <!--*<div class="diamond-catalog-top-pages">*-->
+                    <!--*<a href="#" class="diamond-catalog-top-pages-link arrow-btn-number prev" data-action="minus"> </a>*-->
+                    <!--*<span>Page</span>*-->
+                    <!--*<input type="text" class="form-control" value="1">*-->
+                    <!--*<span>of 3</span>*-->
+                    <!--*<a href="#" class="diamond-catalog-top-pages-link arrow-btn-number next" data-action="plus"> </a>*-->
+                <!--*</div>*-->
+                <?=isset($pagination)? $pagination : ''?>
             </div>
             <div class="right">
                 <div class="show-b">
@@ -39,16 +41,17 @@
             <div class="diamond-catalog-left">
                 <table class="diamond-catalog-table">
                     <thead>
-                    <tr>
+                    <tr id="w-product-sortby">
                         <td><span>Compare</span></td>
-                        <td><span>Shape</span></td>
-                        <td><span>Color</span></td>
-                        <td><span>Clarity</span></td>
-                        <td><span>Cut</span></td>
-                        <td><span>Carat</span></td>
+                        <td data-sortby="<?=$sort_shape['sort']?>" class="w-sort-shape <?=$sort_shape['class']?>"><span>Shape</span></td>
+                        <td data-sortby="<?=$sort_color['sort']?>" class="w-sort-color <?=$sort_color['class']?>"><span>Color</span></td>
+                        <td data-sortby="<?=$sort_clarity['sort']?>" class="w-sort-clarity <?=$sort_clarity['class']?>"><span>Clarity</span></td>
+                        <td data-sortby="<?=$sort_cut['sort']?>" class="w-sort-cut <?=$sort_cut['class']?>"><span>Cut</span></td>
+                        <td data-sortby="<?=$sort_size['sort']?>" class="w-sort-size <?=$sort_size['class']?>"><span>Carat</span></td>
                         <!-- sort-col-up -->
                         <!--*<td class="sort-col sort-col-down"><span>Popularity</span></td>*-->
-                        <td><span>Price</span></td>
+
+                        <td data-sortby="<?=$sort_price['sort']?>" class="w-sort-price <?=$sort_price['class']?>"><span>Price</span></td>
                     </tr>
                     </thead>
                     <tbody>
@@ -85,11 +88,7 @@
 
                     <?endforeach?>
 
-                    <tr class="pagination-tr">
-                        <td colspan="8">
-                            <div class="w-pagination-diamonts text-center"><?=isset($pagination)? $pagination : ''?></div>
-                        </td>
-                    </tr>
+
                     </tbody>
                 </table>
             </div>

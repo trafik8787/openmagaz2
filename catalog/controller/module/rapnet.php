@@ -151,7 +151,7 @@ class ControllerModuleRapnet extends Controller {
                  }
 
 
-                 $pagination = new Pagination();
+                 $pagination = new Pagdiamond();
                  $pagination->total = $decod_json->response->body->search_results->total_diamonds_found;
                  $pagination->page = $page;
                  $pagination->limit = $decod_json->response->body->search_results->diamonds_returned;
@@ -162,6 +162,80 @@ class ControllerModuleRapnet extends Controller {
 
 
                  $data['total_diamonds'] = $decod_json->response->body->search_results->total_diamonds_found;
+                 $search_results =  $decod_json->response->body->search_results;
+                 $data['search_results'] = $search_results;
+
+
+                 //price
+                 if ($search_results->sorted_by == 'PRICE') {
+                     if ($search_results->sort_direction == 'ASC') {
+                         $data['sort_price'] = array('sort' => 'Price_Asc', 'class' => 'sort-col sort-col-down');
+                     } else {
+                         $data['sort_price'] = array('sort' => 'Price_Desc', 'class' => 'sort-col sort-col-up');
+                     }
+                 } else {
+                     $data['sort_price'] = array('sort' => ' ', 'class' => ' ');
+                 }
+
+
+                //SIZE
+                 if ($search_results->sorted_by == 'SIZE') {
+                     if ($search_results->sort_direction == 'ASC') {
+                         $data['sort_size'] = array('sort' => 'size_Asc', 'class' => 'sort-col sort-col-down');
+                     } else {
+                         $data['sort_size'] = array('sort' => 'size_Desc', 'class' => 'sort-col sort-col-up');
+                     }
+                 } else {
+                     $data['sort_size'] = array('sort' => ' ', 'class' => ' ');
+                 }
+
+
+                 //CUT
+                 if ($search_results->sorted_by == 'CUT') {
+                     if ($search_results->sort_direction == 'ASC') {
+                         $data['sort_cut'] = array('sort' => 'Cut_Asc', 'class' => 'sort-col sort-col-down');
+                     } else {
+                         $data['sort_cut'] = array('sort' => 'Cut_Desc', 'class' => 'sort-col sort-col-up');
+                     }
+                 } else {
+                     $data['sort_cut'] = array('sort' => ' ', 'class' => ' ');
+                 }
+
+                 //CUT
+                 if ($search_results->sorted_by == 'CLARITY') {
+                     if ($search_results->sort_direction == 'ASC') {
+                         $data['sort_clarity'] = array('sort' => 'Clarity_Asc', 'class' => 'sort-col sort-col-down');
+                     } else {
+                         $data['sort_clarity'] = array('sort' => 'Clarity_Desc', 'class' => 'sort-col sort-col-up');
+                     }
+                 } else {
+                     $data['sort_clarity'] = array('sort' => ' ', 'class' => ' ');
+                 }
+
+
+                 //COLOR
+                 if ($search_results->sorted_by == 'COLOR') {
+                     if ($search_results->sort_direction == 'ASC') {
+                         $data['sort_color'] = array('sort' => 'Color_Asc', 'class' => 'sort-col sort-col-down');
+                     } else {
+                         $data['sort_color'] = array('sort' => 'Color_Desc', 'class' => 'sort-col sort-col-up');
+                     }
+                 } else {
+                     $data['sort_color'] = array('sort' => ' ', 'class' => ' ');
+                 }
+
+                 //SHAPE
+                 if ($search_results->sorted_by == 'SHAPE') {
+                     if ($search_results->sort_direction == 'ASC') {
+                         $data['sort_shape'] = array('sort' => 'Shape_Asc', 'class' => 'sort-col sort-col-down');
+                     } else {
+                         $data['sort_shape'] = array('sort' => 'Shape_Desc', 'class' => 'sort-col sort-col-up');
+                     }
+                 } else {
+                     $data['sort_shape'] = array('sort' => ' ', 'class' => ' ');
+                 }
+
+
                  $data['data'] = $data_diamonds;
 
              } elseif ($decod_json->response->header->error_code == 4001) {

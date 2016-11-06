@@ -562,7 +562,8 @@
 
         if (queryStr['sortby'] != undefined) {
             $url_sortby = '&sortby='+queryStr['sortby'];
-            $('#w-product-sortby :contains('+queryStr["sortby"]+')').attr("selected", "selected");
+
+            //$('#w-product-sortby :contains('+queryStr["sortby"]+')').attr("selected", "selected");
         }
 
 
@@ -753,12 +754,62 @@
         });
 
 
-        $(document).on('change', '#w-product-sortby', function(){
+        $(document).on('click', '#w-product-sortby td', function(){
 
-            $url_sortby = '&sortby='+this.value;
+            var $this = $(this);
+
+            if ($this.is('.w-sort-price')) {
+
+                if ($this.data('sortby') == 'Price_Desc') {
+                    $url_sortby = '&sortby=Price_Asc';
+                } else  {
+                    $url_sortby = '&sortby=Price_Desc';
+                }
+            }
+
+            if ($this.is('.w-sort-size')) {
+                if ($this.data('sortby') == 'size_Desc') {
+                    $url_sortby = '&sortby=size_Asc';
+                } else {
+                    $url_sortby = '&sortby=size_Desc';
+                }
+            }
+
+            if ($this.is('.w-sort-cut')) {
+                if ($this.data('sortby') == 'Cut_Desc') {
+                    $url_sortby = '&sortby=Cut_Asc';
+                } else {
+                    $url_sortby = '&sortby=Cut_Desc';
+                }
+            }
+
+            if ($this.is('.w-sort-clarity')) {
+                if ($this.data('sortby') == 'Clarity_Desc') {
+                    $url_sortby = '&sortby=Clarity_Asc';
+                } else {
+                    $url_sortby = '&sortby=Clarity_Desc';
+                }
+            }
+
+            if ($this.is('.w-sort-color')) {
+                if ($this.data('sortby') == 'Color_Desc') {
+                    $url_sortby = '&sortby=Color_Asc';
+                } else {
+                    $url_sortby = '&sortby=Color_Desc';
+                }
+            }
+
+            if ($this.is('.w-sort-shape')) {
+                if ($this.data('sortby') == 'Shape_Desc') {
+                    $url_sortby = '&sortby=Shape_Asc';
+                } else {
+                    $url_sortby = '&sortby=Shape_Desc';
+                }
+            }
+
+
             redirect = generate_url();
             history.pushState('', '', redirect);
-
             ajaxdata(redirect);
         });
 
@@ -1090,20 +1141,29 @@
 
 
 
-        $(document).on('click', '.w-pagination-diamonts .pagination li a', function(){
+        $(document).on('click', '.w-pagination-diamonts .arrow-btn-number', function(){
 
-            //alert($(this).href());
-
-            var $gets = parseQueryString ($(this).attr("href"));
-            console.log($gets);
+            var $gets = parseQueryString ($(this).data("href"));
             $url_page = '&page='+$gets['page'];
             redirect = generate_url();
             history.pushState('', '', redirect);
-
             ajaxdata (this.href);
             return false;
 
         });
+
+
+        $(document).on('change', '.diamond-page-number-input', function(){
+
+
+            $url_page = '&page='+$(this).val();
+            redirect = generate_url();
+            history.pushState('', '', redirect);
+            ajaxdata (redirect);
+            return false;
+
+        });
+
 
         //alert(location.href);
         ajaxdata(location.href);

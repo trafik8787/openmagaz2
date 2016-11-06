@@ -30,11 +30,11 @@ class Pagdiamond {
 
         $this->url = str_replace('%7Bpage%7D', '{page}', $this->url);
 
-        $output = '<ul class="pagination">';
+        $output = ' <div class="diamond-catalog-top-pages">';
 
         if ($page > 1) {
-            $output .= '<li><a href="' . str_replace('{page}', 1, $this->url) . '">' . $this->text_first . '</a></li>';
-//            $output .= '<li><a href="' . str_replace('{page}', $page - 1, $this->url) . '">' . $this->text_prev . '</a></li>';
+//            $output .= '<li><a href="' . str_replace('{page}', 1, $this->url) . '">' . $this->text_first . '</a></li>';
+            $output .= '<a href="#" class="diamond-catalog-top-pages-link arrow-btn-number prev" data-href="' . str_replace('{page}', 1, $this->url) . '" data-action="minus"> </a>';
         }
 
         if ($num_pages > 1) {
@@ -55,22 +55,22 @@ class Pagdiamond {
                     $end = $num_pages;
                 }
             }
-
-            for ($i = $start; $i <= $end; $i++) {
-                if ($page == $i) {
-                    $output .= '<li class="active"><span>' . $i . '</span></li>';
-                } else {
-                    $output .= '<li><a href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a></li>';
-                }
-            }
+            $output .= '<span>Page</span><input type="text" class="form-control diamond-page-number-input" data-href="' . str_replace('{page}', $page, $this->url) . '" value="'.$page.'"><span>of '.$num_pages.'</span>';
+//            for ($i = $start; $i <= $end; $i++) {
+//                if ($page == $i) {
+//                    $output .= '<li class="active"><span>' . $i . '</span></li>';
+//                } else {
+//                    $output .= '<li><a href="' . str_replace('{page}', $i, $this->url) . '">' . $i . '</a></li>';
+//                }
+//            }
         }
 
         if ($page < $num_pages) {
-//            $output .= '<li><a href="' . str_replace('{page}', $page + 1, $this->url) . '">' . $this->text_next . '</a></li>';
-            $output .= '<li><a href="' . str_replace('{page}', $num_pages, $this->url) . '">' . $this->text_last . '</a></li>';
+            $output .= '<a href="#" class="diamond-catalog-top-pages-link arrow-btn-number next" data-href="' . str_replace('{page}', $page + 1, $this->url) . '" data-action="plus"> </a>';
+           // $output .= '<li><a href="' . str_replace('{page}', $num_pages, $this->url) . '">' . $this->text_last . '</a></li>';
         }
 
-        $output .= '</ul>';
+        $output .= '</div>';
 
         if ($num_pages > 1) {
             return $output;
