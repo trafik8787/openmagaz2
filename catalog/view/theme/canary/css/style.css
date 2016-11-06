@@ -1618,7 +1618,7 @@ footer > section .row {
   font-family: "Felix Titling", fantasy;
   font-size: 29px;
   margin-top: 36px;
-  text-shadow: 0 0 1px #fff;
+  text-shadow: 1px 0 1px #fff;
 }
 
 .w-row-footer-menu {
