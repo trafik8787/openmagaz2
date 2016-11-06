@@ -138,7 +138,7 @@ class ControllerCommonHeader extends Controller {
         $ert = array();
         foreach ($categories2 as $row) {
 
-            if ($this->request->get['path'] == $row['path']) {
+            if (!empty($this->request->get['path']) and $this->request->get['path'] == $row['path']) {
                 $row['class_activ'] = 'w-menu-activ';
             } else {
                 $row['class_activ'] = ' ';
