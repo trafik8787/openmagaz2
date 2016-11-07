@@ -546,31 +546,31 @@
                             <div class="box-ring-fine box-ring-styles clearfix">
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="/catalog/view/theme/canary/img/fine/img34.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/demo_new_template/plain-2mm-band.jpg" alt="img">
                                     </div>
                                     classic
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="/catalog/view/theme/canary/img/fine/img35.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/demo_new_template/7-stone-band.jpg" alt="img">
                                     </div>
                                     anniversary
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="/catalog/view/theme/canary/img/fine/img36.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/demo_new_template/eternity-band.jpg" alt="img">
                                     </div>
                                     eternity
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="/catalog/view/theme/canary/img/fine/img37.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/demo_new_template/milgrain-wedding-band.jpg" alt="img">
                                     </div>
                                     carved
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
-                                        <img src="/catalog/view/theme/canary/img/fine/img38.png" alt="img">
+                                        <img src="/catalog/view/theme/canary/img/demo_new_template/bezel-set-diamond-band.jpg" alt="img">
                                     </div>
                                     diamond
                                 </div>
@@ -578,17 +578,11 @@
                             <div class="block-p">
                                 <div class="article-p">Classic Wedding Rings</div>
                                 <p>
-                                    Classic wedding rings are the perfect choice for newly engaged couples in the market for traditional, timeless rings. Like most bridal jewelry, classic wedding rings come in yellow gold, white gold and platinum. Rings are sold in a variety of widths, ranging from 2mm to 8mm.  carries slightly domed comfort fit wedding rings, slightly flat comfort fit wedding rings, flat comfort fit wedding rings, high dome comfort fit wedding rings, low dome wedding rings, traditional slightly curved wedding rings and classic comfort fit wedding rings.
+                                    Plain Precious Metal Band: A plain metal wedding band is a classic symbol of our eternal love and devotion. You can choose from a variety of metal options from 14 karat gold, 18 karat gold, platinum or palladium. These timeless bands come in a widths ranging from 2mm to 8mm.
                                 </p>
-                                <p>
-                                    Classic wedding rings are known for their comfort, as opposed to more intricate or carved wedding rings. Unlike engagement rings, both men and women wear wedding rings all the time and therefore it is extremely important that they are comfortable for every day wear.
-                                </p>
-                                <p>
-                                    When selecting classic wedding rings, understanding width is also critical. The width of your wedding ring is entirely a matter of personal style. Some men and women prefer wider bands while others prefer narrower bands. The width of a woman's wedding ring, specifically, depends entirely on the width of the band on her engagement ring. If a woman with small hands already has a large, wide engagement ring, choosing a narrower band for her wedding ring is a better choice for her comfort. A woman with larger hands can handle wider bands on both engagement and wedding rings, but might prefer not to. Women's wedding rings traditionally match their engagement rings in some way, but they can be very different widths and look beautiful together.
-                                </p>
-                                <p>
-                                    offers among the most extensive collection of men's and women's classic wedding rings.  classic wedding rings are of the finest quality and cost significantly less than wedding rings sold in stores. For more information regarding our classic wedding rings, contact 's 24/7 customer service, toll free at (877) 826-9866 or from outside the U.S at +1(301) 631-1414.
-                                </p>
+                               <p>
+                                   Engraved Wedding Band: An engraved metal band is a twist on the classic plain metal band. These delicately engraved bands can feature diamonds or be plain metal. Show your everlasting love with a beautiful engraved wedding band.
+                               </p>
                             </div>
                             <div class="block-p">
                                 <div class="article-p">Carved Wedding Rings</div>
@@ -603,6 +597,13 @@
                                 <div class="article-p">Diamond Wedding Rings</div>
                                 <p>
                                     Women’s diamond wedding rings are a beautiful symbol of a lifelong commitment of two souls coming together. For women who prefer sparkly jewelry, diamond wedding rings are a great choice. Women’s diamond rings come in all shapes and sizes— all metal types and widths. Diamond wedding rings are also a beautiful way to compliment a classic or even carved wedding band. Whether you prefer yellow gold or platinum diamond wedding rings,  has the perfect wedding ring for you special day.
+
+                                </p>
+                                <p>
+                                    Pave Set: Delicate and intricate, pave diamond wedding bands feature small diamonds set closely together as to see minimal metal and more sparkle. Pave diamond wedding bands really sparkle and come in a variety of designs, from halfway around to eternity. With our extensive collection of pave diamond wedding bands, you are sure to find the perfect on to accent your engagement ring beautifully
+                                </p>
+                                <p>
+                                    Channel Set: Channel set wedding bands are elegant and timeless. Small diamonds are set closely together to beautifully decorate the band of your wedding ring. Having side diamonds securely set in the grooves of a channel means you don’t need to worry about your band getting snagged. Choose from our large collection of channel set engagement rings to perfectly compliment your diamond.
                                 </p>
                             </div>
                             <div class="block-p">
@@ -620,11 +621,9 @@
                             <div class="block-p">
                                 <div class="article-p">Eternity Wedding Rings</div>
                                 <p>
-                                    Eternity rings represent eternal, undying love. They are a symbol of a lifelong commitment and union. Women’s eternity rings are the perfect gift for anniversaries, Valentine’s Day and special occasions. Eternity rings are usually encrusted in diamonds and sparkle magnificently when worn alongside your engagement or wedding ring.
+                                    Eternity diamond wedding bands refers to a wedding band with diamonds flowing all the way around. Eternity bands represent your everlasting love, because the diamonds have no end. Eternity bands can come in any style, from prong set to channel set to pave set. This elegant and beautiful wedding band style looks stunning with every engagement ring, or when worn alone. Choose your perfect eternity diamond wedding band from our vast collection.
                                 </p>
-                                <p>
-                                    offers an extensive collection of women’s eternity rings of all prices. Our eternity rings are sold in a variety metal types and widths. From angled common prong eternity rings to channel set diamond eternity rings to shared prong eternity rings,  has a stunning eternity ring just for you. Whether you prefer platinum or white gold, you are sure to find an eternity ring that speaks to you.
-                                </p>
+
                             </div>
                         </div>
                         <div class="tab-pane fade" id="alternativeMetals">

@@ -146,8 +146,8 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Does my purchase come with an appraisal?</div>
-                                        <p>Yes! All diamond jewelry purchases will be accompanied by two copies of an appraisal written by a certified GIA gemologist. One copy is for your personal records and the other for your insurance company.
-                                            You can learn more about insuring your jewelry by visiting our Insurance Education page.
+                                        <p>
+                                            Yes! All diamond jewelry purchases will be accompanied by two copies of an appraisal written by a certified GIA gemologist. One copy is for your personal records and the other for your insurance company.
                                         </p>
                                     </div>
                                 </li>
@@ -156,7 +156,9 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Will my engagement ring be insured by Brilliant Canary?</div>
-                                        <p>Your engagement will be fully insured until it has been delivered and signed for at your requested shipping address. Once the ring is in your possession, we recommend you contact the insurer of your choice to select a coverage policy.  There are many reputable insurance agencies that will protect your valued purchase from various losses. Visit our Insurance education page for more information.</p>
+                                        <p>
+                                            Your engagement will be fully insured until it has been delivered and signed for at your requested shipping address. Once the ring is in your possession, we recommend you contact the insurer of your choice to select a coverage policy.  There are many reputable insurance agencies that will protect your valued purchase from various losses.
+                                        </p>
                                     </div>
                                 </li>
                                 <li>
@@ -164,7 +166,21 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Is all jewelry purchased at Brilliant Canary covered by your lifetime warranty?</div>
-                                        <p>Yes! At Brilliant Canary, we stand behind the quality of every jewelry item we sell. We offer a free lifetime warranty against manufacturing defects on all of our jewelry. Prior to being shipped to you, each jewelry piece is inspected by our Quality Control specialists. In the rare event that you find a problem with your jewelry, please send it back to us for an inspection.  Upon determination of an existing manufacturing defect, the piece will be repaired and if necessary, you will be offered a replacement of equal value to that of the original purchase. </p>
+                                        <p>
+                                            We stand behind all of the jewelry we sell and offer a lifetime warranty with every fine jewelry purchase! Should you experience damage to your jewelry purchase due to manufacturing, please contact us right away at 1-800-214-6550 or email us at info@brilliantcanary.com so that we may evaluate your piece. If a warranty issue is found, we will repair the damage or replace the damaged item at no charge. Please note, our warranty excludes coverage for the center diamond, wear and tear, loss of precious stones and theft. If we find the problem was caused by normal tear and wear, we will be happy to repair your jewelry and charge you only our cost for the materials needed to perform the repair.  In order to maintain your lifetime warranty please make sure no jeweler other than Brilliant Canary performs any repairs or services to your jewelry. We strongly recommend that you purchase separate jewelry insurance coverage for your jewelry to cover theft, significant damage, or loss. For more information or to take advantage of your lifetime warranty, please call us at 1-800-214-6550 or email us at
+                                            <a href="mailto:info@brilliantcanary.com">info@brilliantcanary.com</a>.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <span class="faq-question">How do I care for my jewelry investment?</span>
+                                    <div class="faq-answer-block">
+                                        <div class="faq-answer-block-close">X</div>
+                                        <div class="answer-block-question">How do I care for my jewelry investment?</div>
+                                        <p>
+                                            You can care for your diamond jewelry with a gentle solution of mild soap and warm water. Soak your jewelry in the solution for 15 to 30 minutes and then use a soft toothbrush and gently scrub your jewelry to make it really shine. Do not scrub too hard on your jewelry pieces as this can increase the likelihood of side diamonds coming loose.
+                                        </p>
                                     </div>
                                 </li>
 
@@ -178,7 +194,9 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">How will my jewelry purchase be shipped to me?</div>
-                                        <p>Brilliant Canary offers free fully insured FedEx® shipping on all U.S. orders. US orders over $500 in value are shipped via FedEx Priority Overnight®. International orders over $500 in value are shipped via FedEx International Economy®. U.S. orders under $500 are shipped via FedEx Ground. International orders under $500 in value are shipped via FedEx Economy. To check status of your order or to obtain tracking information please click here.</p>
+                                        <p>
+                                            Brilliant Canary offers free fully insured FedEx® shipping on all U.S. orders. US orders over $500 in value are shipped via FedEx Priority Overnight®. International orders over $500 in value are shipped via FedEx International Economy®. U.S. orders under $500 are shipped via FedEx Ground. International orders under $500 in value are shipped via FedEx Economy.
+                                        </p>
                                         <p>
                                             •	For your protection we do not ship to PO Box addresses
                                             <br>
@@ -195,7 +213,7 @@
                                             International customers will be responsible for any duties, VAT, taxes or any other charges by their country. Please make sure to check this information with your local authorities prior to placing your order.
                                         </p>
                                         <p>
-                                            * Due to unavoidable service delays, FedEx delivery may vary. Check FedEx transit times.
+                                            * Due to unavoidable service delays, FedEx delivery may vary.
                                         </p>
                                     </div>
                                 </li>
@@ -228,7 +246,9 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Am I responsible for Customs fees?</div>
-                                        <p>International customers will be responsible for any duties, VAT, taxes or any other charges by their country. Please make sure to check this information with your local authorities prior to placing your order. </p>
+                                        <p>
+                                            International customers will be responsible for any duties, VAT, taxes or any other charges by their country. Please make sure to check this information with your local authorities prior to placing your order.
+                                        </p>
                                     </div>
                                 </li>
                             </ul>
@@ -241,7 +261,24 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">What is Brilliant Canary’s return policy?</div>
-                                        <p>Brilliant Canary offers a 30-day money back guarantee on all purchases.</p>
+                                        <p>
+                                            We believe in your complete satisfaction and will gladly issue you a full refund or exchange on any unworn jewelry within 30 days of purchase minus shipping fees. Each returned item must be in its original unworn condition. We cannot offer refund on items that have been engraved, sized, or modified in any way since original purchase. Kindly note, any altered or damaged items may not be returned or exchanged. Please allow us up to 3 business days to inspect your item and issue you a refund.
+                                        </p>
+                                        <p><b>To return and item:</b></p>
+                                        <p></p>
+                                        <ol>
+                                            <li>1.	Contact our Customer Care Department at 1-800-214-6550 to obtain your Return Authorization number. Please make sure to write that number on the outside of the package.</li>
+                                            <li>2.	Pack your item securely and include all original documentation. All diamond returns must be accompanied by the original GIA grading report or a $150 charge will be assessed to replace the certificate.</li>
+                                            <li>3.	Ship the package an insure It for full value. Brilliant Canary is not responsible for loss or damage that occurs during shipping. </li>
+                                        </ol>
+                                        <p><b>When Your Item is Received by Brilliant Canary</b></p>
+                                        <p>
+                                            Once Brilliant Canary receives your return, you will receive a confirmation email. Returns are processed Monday through Friday during our normal business hours. Processing time for returns is one business day once the package has been delivered to our facilities. Failure to properly document your return with a return authorization number or proper paperwork may result in processing delays. If you have any questions regarding your return, please contact our customer service at 1-800-214-6550.
+                                        </p>
+                                        <p><b>Non-Refundable Items:</b></p>
+                                        <p>
+                                            Brilliant Canary will not refund any items that are damaged, worn, or not accompanied by original paperwork and documentation. The following items are non-returnable due to the custom nature: special orders; engraved items; items that have been modified; rings that have been sized; items that have been previously exchanged; and custom jewelry.
+                                        </p>
                                     </div>
                                 </li>
                                 <li>
@@ -249,7 +286,8 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">How do I ship back returns?</div>
-                                        <p>Should you need to return an item, please contact us first to obtain a Return Authorization number.  You can call Brilliant Canary at (800)214-6550 or email us at info@brilliantcanary.com</p>
+                                        <p>Should you need to return an item, please contact us first to obtain a Return Authorization number.  You can call Brilliant Canary at (800)214-6550 or email us at
+                                            <a href="mailto:info@brilliantcanary.com">info@brilliantcanary.com</a></p>
                                     </div>
                                 </li>
                                 <li>
@@ -257,7 +295,7 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Do I need to obtain a Return Authorization number?</div>
-                                        <p>Yes. Please call us at (800)214-6550 or email us at info@brilliantcanary.com to obtain a Return Authorization number prior to shipping.</p>
+                                        <p>Yes. Please call us at (800)214-6550 or email us at <a href="mailto:info@brilliantcanary.com">info@brilliantcanary.com</a> to obtain a Return Authorization number prior to shipping.</p>
                                     </div>
                                 </li>
                             </ul>
@@ -270,7 +308,7 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Is my personal information protected?</div>
-                                        <p>Yes!  Please review our privacy policy at <a href="/privacy">link</a></p>
+                                        <p>Yes!  Please review our  <a href="/privacy">Privacy Policy</a></p>
                                     </div>
                                 </li>
                                 <li>
@@ -292,7 +330,9 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">What form of payments does Brilliant Canary accept?</div>
-                                        <p>Brilliant Canary accepts all major credit cards, PayPal and wire transfer. All orders paid via bank wire transfer will receive an additional 1.5% discount!</p>
+                                        <p>
+                                            Brilliant Canary accepts all major credit cards, PayPal and wire transfer. All orders paid via bank wire transfer will receive an additional 1.5% discount!
+                                        </p>
                                     </div>
                                 </li>
                                 <li>
@@ -300,7 +340,7 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Do you offer financing?</div>
-                                        <p>Answer here</p>
+                                        <p>We are pleased to offer you 6 months no interest financing through PayPal Credit. </p>
                                     </div>
                                 </li>
                                 <li>
@@ -345,7 +385,9 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Can I order an engagement ring with a gemstone in the center?</div>
-                                        <p>Yes! If you would like to order a unique engagement ring with a gemstone center stone instead of a diamond, please contact one of our jewelry experts at 800-214-6550 to create the engagement ring of your dreams!</p>
+                                        <p>
+                                            Yes! If you would like to order a unique engagement ring with a gemstone center stone instead of a diamond, please contact one of our jewelry experts at 800-214-6550 to create the engagement ring of your dreams!
+                                        </p>
                                     </div>
                                 </li>
                                 <li>
@@ -361,7 +403,9 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Can I add custom engraving to my engagement ring or wedding band?</div>
-                                        <p>Absolutely!  We are pleased to add a personalized engraving at no additional charge to you. </p>
+                                        <p>
+                                            Absolutely!  We are pleased to add a personalized engraving at no additional charge to you.
+                                        </p>
                                     </div>
                                 </li>
                             </ul>

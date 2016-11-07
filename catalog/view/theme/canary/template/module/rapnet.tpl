@@ -48,12 +48,12 @@
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Pear"  name="shape" id="option8" autocomplete="off">
                                 <i class="brilliant-ico2 brilliant-s8"></i>
-                                <span>Pear<br><span>Shaped</span></span>
+                                <span>Pear</span>
                             </label>
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Heart"  name="shape" id="option9" autocomplete="off">
                                 <i class="brilliant-ico2 brilliant-s9"></i>
-                                <span>Heart<br><span>Shaped</span></span>
+                                <span>Heart</span>
                             </label>
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Emerald"  name="shape" id="option10" autocomplete="off">
@@ -938,7 +938,7 @@
 
         var w_slider_price_from;
         var w_slider_price_to;
-        //console.log($get_price_from);
+
         var $w_slider_price = $('#w-slider-price').slider({
             min: 200,
             max: 990000,
@@ -957,7 +957,6 @@
 
                 $url_price = '&price='+numeral().unformat($('.w-input-price-from').val())+','+numeral().unformat($('.w-input-price-to').val());
                 redirect =  generate_url();
-               console.log(redirect);
                 history.pushState('', '', redirect);
 
                 ajaxdata(redirect);

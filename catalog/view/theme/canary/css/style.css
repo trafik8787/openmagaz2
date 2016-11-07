@@ -3213,7 +3213,8 @@ footer > section .row {
 .faq-answer-block {
   position: absolute;
   width: 75%;
-  left: 0;
+  left: 135px;
+    top:0;
   z-index: 1;
   background-color: #fff;
   border: 1px solid #e4e4e4;
