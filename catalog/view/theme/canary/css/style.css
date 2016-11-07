@@ -314,14 +314,7 @@ input {
   font-style: normal;
 }
 
-@media all and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'Felix Titling';
-    src: url('../fonts/felixti.svg#Felix Titling') format('svg');
-    font-weight: normal;
-    font-style: normal;
-  }
-}
+
 
 
 .font-montserrat-regular {
