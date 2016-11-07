@@ -92,9 +92,9 @@
             </div>
         </div>
         <div class="functional-filter filter-buttons clearfix">
-            <button class="filter-default-result w-clear-filtr-product">Clear filter</button>
+            <a class="filter-default-result w-clear-filtr-product" href="/gemstones&stone_type_gem=0&shape_gem=0&primary_color_gem=0&PriceFrom=204&PriceTo=1383000">Clear filter</a>
             <button class="filter-change"><span><span class="text1">Hide</span><span class="text2">Show</span> Filters</span></button>
-            <button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>
+            <!--*<button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>*-->
         </div>
     </div>
 </div>

@@ -112,7 +112,7 @@
     <div class="functional-filter filter-buttons clearfix">
         <button class="filter-default-result w-clear-filtr-product">Clear filter</button>
         <button class="filter-change"><span><span class="text1">Hide</span><span class="text2">Show</span> Filters</span></button>
-        <button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>
+        <!--*<button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>*-->
     </div>
     </div>
 </div>
@@ -133,6 +133,10 @@
 
 $(document).ready(function () {
 
+
+    $(document).on('click', '.w-clear-filtr-product', function () {
+        $('span[data-text="All metals"]').trigger('click');
+    });
 
     $('input[name^=\'filter\']').on('change', function () {
         history.pushState('', '', '');
