@@ -81,7 +81,7 @@
                     </li>
                 </ul>
                 <div class="engagement-img-menu clearfix">
-                    <img src="/catalog/view/theme/canary/img/img251.jpg" alt="img" class="img-under-style">
+                    <img src="/catalog/view/theme/canary/img/demo_new_template/meny-engagament.jpg" alt="img" class="img-under-style">
                 </div>
             </div>
         </li>
@@ -135,7 +135,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-                        <img src="/catalog/view/theme/canary/img/img17.jpg" alt="img" class="img-under-style">
+                        <img src="/catalog/view/theme/canary/img/demo_new_template/meny-wedingrings.jpg" alt="img" class="img-under-style">
                     </div>
                 </div>
             </div>
@@ -289,7 +289,7 @@
                         </ul>
                     </div>
 
-                    <img src="/catalog/view/theme/canary/img/img18.png" alt="img" class="img-under-style">
+                    <img src="/catalog/view/theme/canary/img/demo_new_template/meny-gemstones.jpg" alt="img" class="img-under-style">
                 </div>
             </div>
         </li>
@@ -340,7 +340,7 @@
                         </ul>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-                        <img src="/catalog/view/theme/canary/img/img16.png" alt="img" class="img-under-style">
+                        <img src="/catalog/view/theme/canary/img/demo_new_template/meny-jewerly.jpg" alt="img" class="img-under-style">
                     </div>
                 </div>
 
