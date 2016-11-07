@@ -3969,44 +3969,58 @@ text-align: left;
         margin: -2px 0 2px;
     }
 
-    .filter-col-options .btn-filter {
-        width: 41px;
+    /*.filter-col-options .btn-filter {*/
+        /*width: 41px;*/
+    /*}*/
+
+    /*.filter-col-options .brilliant-ico2 {*/
+        /*-webkit-transform: scale(0.8);*/
+        /*-moz-transform: scale(0.8);*/
+        /*-ms-transform: scale(0.8);*/
+        /*-o-transform: scale(0.8);*/
+        /*transform: scale(0.8);*/
+        /*position: relative;*/
+        /*left: -6px;*/
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+    /*}*/
+
+    /*.filter-col-options .brilliant-ico2.brilliant-s5 {*/
+        /*left: 0;*/
+    /*}*/
+
+    /*.filter-col-options .brilliant-ico2.brilliant-s4 {*/
+        /*left: -8px;*/
+    /*}*/
+
+    /*.filter-col-options .brilliant-ico2.brilliant-s6 {*/
+        /*left: -2px;*/
+    /*}*/
+
+    /*.filter-col-options .btn-filter span {*/
+        /*margin-left: -6px;*/
+        /*margin-right: -6px;*/
+        /*font-size: 10px;*/
+    /*}*/
+
+    /*.filter-col-options .color-group .btn-filter,*/
+    /*.wide-title.icon-size-reduce .btn-filter,*/
+    /*.icon-size-reduce .btn-filter{*/
+        /*width: 50px;*/
+    /*}*/
+
+    .filter-col {
+        padding: 0 15px;
+        display: block;
+        vertical-align: middle;
     }
 
-    .filter-col-options .brilliant-ico2 {
-        -webkit-transform: scale(0.8);
-        -moz-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        -o-transform: scale(0.8);
-        transform: scale(0.8);
-        position: relative;
-        left: -6px;
-        margin-left: auto;
-        margin-right: auto;
+    .filter-diamond-right {
+        width: 100%;
     }
-
-    .filter-col-options .brilliant-ico2.brilliant-s5 {
-        left: 0;
-    }
-
-    .filter-col-options .brilliant-ico2.brilliant-s4 {
-        left: -8px;
-    }
-
-    .filter-col-options .brilliant-ico2.brilliant-s6 {
-        left: -2px;
-    }
-
-    .filter-col-options .btn-filter span {
-        margin-left: -6px;
-        margin-right: -6px;
-        font-size: 10px;
-    }
-
-    .filter-col-options .color-group .btn-filter,
-    .wide-title.icon-size-reduce .btn-filter,
-    .icon-size-reduce .btn-filter{
-        width: 50px;
+    .filter-diamond-left {
+        width: 100%;
+        display: block;
     }
 
     .wide-title .filter-col-options .brilliant-ico2,
@@ -4124,7 +4138,7 @@ text-align: left;
     }
 
     .filter-diamond-left {
-        width: 50%;
+        /*width: 50%;*/
     }
 
     .product-details .table > tbody > tr > td {
