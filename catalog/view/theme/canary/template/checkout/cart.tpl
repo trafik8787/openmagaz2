@@ -110,7 +110,7 @@
                                         SKU: <?=$product[0]['sku']?> <?foreach ($product[0]['option'] as $row):?>
                                         | <?=$row['name']?> <?=$row['value']?>
                                         <?endforeach?>
-                                        <label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>
+                                        <!--*<label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>*-->
                                         <p>SKU: <?=$product[1]['sku']?></p>
 
 
@@ -135,7 +135,7 @@
                                         <?foreach ($product['option'] as $row):?>
                                             | <?=$row['name']?> <?=$row['value']?>
                                         <?endforeach?>
-                                        <label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>
+                                        <!--*<label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>*-->
                                     </div>
                                     <div class="number-block">
                                         <div class="quantity">Quantity</div>
@@ -154,47 +154,47 @@
                     </form>
 
                 </div>
-                <div class="cart-header">MATCHING ITEMS</div>
-                <div class="matching-cart">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-xs-12 clearfix">
-                            <div class="box-img">
-                                <img src="/catalog/view/theme/canary/img/img264.png" alt="img">
-                            </div>
-                            <div class="text-box">
-                                <div class="article">
-                                    <a href="#">14k Yellow Gold Round Halo Diamond Engagement Ring</a>
-                                </div>
-                                <div class="price">$1,595.00</div>
-                                <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12 clearfix">
-                            <div class="box-img">
-                                <img src="/catalog/view/theme/canary/img/img265.png" alt="img">
-                            </div>
-                            <div class="text-box">
-                                <div class="article">
-                                    <a href="#">14k Yellow Gold Round Halo Diamond Engagement Ring</a>
-                                </div>
-                                <div class="price">$790.00</div>
-                                <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-12 clearfix">
-                            <div class="box-img">
-                                <img src="/catalog/view/theme/canary/img/img267.png" alt="img">
-                            </div>
-                            <div class="text-box">
-                                <div class="article">
-                                    <a href="#">14k Yellow Gold Round Halo Diamond Engagement Ring</a>
-                                </div>
-                                <div class="price">$2,795.00</div>
-                                <a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--*<div class="cart-header">MATCHING ITEMS</div>*-->
+                <!--*<div class="matching-cart">*-->
+                    <!--*<div class="row">*-->
+                        <!--*<div class="col-md-4 col-sm-6 col-xs-12 clearfix">*-->
+                            <!--*<div class="box-img">*-->
+                                <!--*<img src="/catalog/view/theme/canary/img/img264.png" alt="img">*-->
+                            <!--*</div>*-->
+                            <!--*<div class="text-box">*-->
+                                <!--*<div class="article">*-->
+                                    <!--*<a href="#">14k Yellow Gold Round Halo Diamond Engagement Ring</a>*-->
+                                <!--*</div>*-->
+                                <!--*<div class="price">$1,595.00</div>*-->
+                                <!--*<a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                        <!--*<div class="col-md-4 col-sm-6 col-xs-12 clearfix">*-->
+                            <!--*<div class="box-img">*-->
+                                <!--*<img src="/catalog/view/theme/canary/img/img265.png" alt="img">*-->
+                            <!--*</div>*-->
+                            <!--*<div class="text-box">*-->
+                                <!--*<div class="article">*-->
+                                    <!--*<a href="#">14k Yellow Gold Round Halo Diamond Engagement Ring</a>*-->
+                                <!--*</div>*-->
+                                <!--*<div class="price">$790.00</div>*-->
+                                <!--*<a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                        <!--*<div class="col-md-4 col-sm-6 col-xs-12 clearfix">*-->
+                            <!--*<div class="box-img">*-->
+                                <!--*<img src="/catalog/view/theme/canary/img/img267.png" alt="img">*-->
+                            <!--*</div>*-->
+                            <!--*<div class="text-box">*-->
+                                <!--*<div class="article">*-->
+                                    <!--*<a href="#">14k Yellow Gold Round Halo Diamond Engagement Ring</a>*-->
+                                <!--*</div>*-->
+                                <!--*<div class="price">$2,795.00</div>*-->
+                                <!--*<a href="#" class="btn w-btn-orange btn-lg" role="button"><div class="add-tocart-ico"></div>Add this</a>*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
+                <!--*</div>*-->
                 <div class="total-cart-pay clearfix">
                     <i class="cart-ico1"></i>
                     <div class="form-wrapper">
@@ -212,7 +212,13 @@
                             </tr>
                             <tr>
                                 <td>Fedex Shipping:</td>
-                                <td>Free</td>
+                                <td>
+                                    <?if ($totals[0]['text'] > 500):?>
+                                    FedEx Priority Overnight &reg;
+                                    <?else:?>
+                                    FedEx Ground &reg;
+                                    <?endif?>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Sales TAX:</td>
@@ -225,29 +231,29 @@
                         </table>
                     </div>
                 </div>
-                <div class="cart-header">LIMITED TIME OFFER JUST YOU</div>
-                <div class="wrapper-cart-box">
-                    <div class="one-line one-line2">
-                        <div class="box-img">
-                            <img src="/catalog/view/theme/canary/img/img271.png" alt="img">
-                        </div>
-                        <div class="text-box">
-                            <div class="type">Diamond</div>
-                            <div class="name"><span>14K WHITE PETITE DIAMOND STAR EARRINGS</span></div>
-                        </div>
-                        <div class="number-block">
-                            <div class="quantity">Quantity</div>
-                            <div class="box-number-switch">
-                                <a href="#" class="arrow-btn-number arrow-t" data-action="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                <input type="text" value="1">
-                            </div>
-                            <div class="price">
-                                <span>$ 775</span>
-                                $ 690
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!--*<div class="cart-header">LIMITED TIME OFFER JUST YOU</div>*-->
+                <!--*<div class="wrapper-cart-box">*-->
+                    <!--*<div class="one-line one-line2">*-->
+                        <!--*<div class="box-img">*-->
+                            <!--*<img src="/catalog/view/theme/canary/img/img271.png" alt="img">*-->
+                        <!--*</div>*-->
+                        <!--*<div class="text-box">*-->
+                            <!--*<div class="type">Diamond</div>*-->
+                            <!--*<div class="name"><span>14K WHITE PETITE DIAMOND STAR EARRINGS</span></div>*-->
+                        <!--*</div>*-->
+                        <!--*<div class="number-block">*-->
+                            <!--*<div class="quantity">Quantity</div>*-->
+                            <!--*<div class="box-number-switch">*-->
+                                <!--*<a href="#" class="arrow-btn-number arrow-t" data-action="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></a>*-->
+                                <!--*<input type="text" value="1">*-->
+                            <!--*</div>*-->
+                            <!--*<div class="price">*-->
+                                <!--*<span>$ 775</span>*-->
+                                <!--*$ 690*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
+                <!--*</div>*-->
                 <div class="cards-box clearfix">
                     <div class="text">
                         <div class="title">Shipping Information</div>
