@@ -146,11 +146,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="panel-group visible-xs footer-bottom-collapse" id="accordion">
+                        <div class="panel-group visible-xs footer-bottom-collapse" id="accordion3">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="collapsed">
+                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse1" class="collapsed">
                                             Information
                                         </a>
                                     </h4>
@@ -173,7 +173,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="collapsed">
+                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse2" class="collapsed">
                                             We Offer More
                                         </a>
                                     </h4>
@@ -194,7 +194,7 @@
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="collapsed">
+                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse3" class="collapsed">
                                             Why Pick Brilliant Canary?
                                         </a>
                                     </h4>
@@ -358,20 +358,22 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.ui.touch-punch.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.cookie.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/vendor/slickslider/slick.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery.sliderPro/jquery.sliderPro.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
 <script type="text/javascript" src="/catalog/view/javascript/jquery/datetimepicker/moment.js"></script>
 <script type="text/javascript" src="/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/script.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/device.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.js" ></script>
 <script type="text/javascript" src="/catalog/view/javascript/app.js" ></script>
 <script type="text/javascript" src="/catalog/view/javascript/common.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.easydropdown.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
-<script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
-
 
 <script type="text/javascript">
     var google_tag_params = {

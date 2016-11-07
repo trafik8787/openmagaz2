@@ -161,38 +161,38 @@ $( document ).ready(function( $ ) {
 
 
     //close-cart-main
-    // $("#owl-demo").owlCarousel({
-    //     loop:true,
-    //     margin:30,
-    //     autoplay:5000,
-    //     responsive:{
-    //         0:{
-    //             items:4
-    //         },
-    //         1300:{
-    //             items:5
-    //         },
-    //         1600:{
-    //             items:5
-    //         }
-    //     }
-    // });
-    // $("#owl-demo3").owlCarousel({
-    //     loop:true,
-    //     margin:30,
-    //     autoplay:5000,
-    //     responsive:{
-    //         0:{
-    //             items:4
-    //         },
-    //         1300:{
-    //             items:5
-    //         },
-    //         1600:{
-    //             items:5
-    //         }
-    //     }
-    // });
+    $("#owl-demo").owlCarousel({
+        loop:true,
+        margin:30,
+        autoplay:5000,
+        responsive:{
+            0:{
+                items:4
+            },
+            1300:{
+                items:5
+            },
+            1600:{
+                items:5
+            }
+        }
+    });
+    $("#owl-demo3").owlCarousel({
+        loop:true,
+        margin:30,
+        autoplay:5000,
+        responsive:{
+            0:{
+                items:4
+            },
+            1300:{
+                items:5
+            },
+            1600:{
+                items:5
+            }
+        }
+    });
 
 
 

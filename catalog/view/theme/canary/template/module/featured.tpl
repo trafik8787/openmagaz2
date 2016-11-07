@@ -4,7 +4,7 @@
         <div class="wrapper-selling">
             <div class="text-center">
                 <a href="<?=$product['href']?>">
-                    <img src="<?php echo $product['thumb']; ?>" width="70%" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+                    <img src="<?php echo $product['thumb']; ?>" width="147" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" >
                 </a>
                 <div>
                     <a href="<?=$product['href']?>"><span class="h4 w-bx-prod-name"><?=$product['name']?></span></a>
