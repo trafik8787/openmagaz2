@@ -100,7 +100,7 @@
                             <div class="about-service-img"><img src="/catalog/view/theme/canary/img/about-service-2.jpg" alt=""></div>
                             <div class="about-service-desc">
                                 <div class="about-service-desc-title">Free and Fast Shipping</div>
-                                We stand behind all of the jewelry we sell and offer a lifetime warranty with every fine jewelry purchase! Should you experience damage to your jewelry purchase due to manufacturing, please contact us right away
+                                We offers free fully insured FedEx® shipping on all U.S. orders and our in-house jewelers work tirelessly to complete each piece as quickly and beautifully as possible
                             </div>
                         </div>
                         <div class="about-service-item about-service-left" id="no-hassle-returns">

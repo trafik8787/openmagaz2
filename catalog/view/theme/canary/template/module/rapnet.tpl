@@ -668,7 +668,7 @@
 
         function generate_url () {
 
-            return $action+'<?php echo $seo?>'+$url_shape+$url_color+$url_clarity+$url_cut+$url_carat+$url_price+
+            return '/diamonds'+'<?php echo $seo?>'+$url_shape+$url_color+$url_clarity+$url_cut+$url_carat+$url_price+
                     $url_polish+$url_symmetry+$url_labs+$url_depth+$url_table+
                     $url_fluorescence_intensities+$url_show+$url_sortby+$url_page;
 
@@ -957,6 +957,7 @@
 
                 $url_price = '&price='+numeral().unformat($('.w-input-price-from').val())+','+numeral().unformat($('.w-input-price-to').val());
                 redirect =  generate_url();
+               console.log(redirect);
                 history.pushState('', '', redirect);
 
                 ajaxdata(redirect);
