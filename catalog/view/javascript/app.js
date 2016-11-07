@@ -154,12 +154,12 @@ $(document).ready(function() {
         $('.w-more-info span').text('more info');
     });
 
-    //пагинация ajax
-    $(document).on('click', '.w-pagination-product .pagination a', function(){
-        $('html, body').animate({ scrollTop: 700 }, 'slow');
-        input_sort (this.href);
-        return false;
-    });
+    // //пагинация ajax
+    // $(document).on('click', '.w-pagination-product .pagination a', function(){
+    //     $('html, body').animate({ scrollTop: 700 }, 'slow');
+    //     input_sort (this.href);
+    //     return false;
+    // });
 
 
 
@@ -492,10 +492,10 @@ $(document).on('click', '#w-complide-view', function() {
 //     window.location.replace(window.location.href);
 // });
 
-window.onpopstate =  function(event) {
-    // console.log( window.location.href);
-    window.location.replace(window.location.href);
-};
+// window.onpopstate =  function(event) {
+//     // console.log( window.location.href);
+//     window.location.replace(window.location.href);
+// };
 
 
 
