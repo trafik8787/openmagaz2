@@ -26,6 +26,8 @@ class ControllerCheckoutSuccess extends Controller {
 				$this->model_account_activity->addActivity('order_guest', $activity_data);
 			}
 
+			dd($this->session->data, true);
+
 			unset($this->session->data['shipping_method']);
 			unset($this->session->data['shipping_methods']);
 			unset($this->session->data['payment_method']);

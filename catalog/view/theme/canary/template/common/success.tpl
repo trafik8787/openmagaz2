@@ -25,6 +25,38 @@
                 <div class="center-bl">
                     <h1><?php echo $heading_title; ?></h1>
                     <?php echo $text_message; ?>
+
+                    <script>
+                        dataLayer.push({
+                            'event': 'purchase',
+                            'ecommerce': {
+                                'currencyCode': 'EUR',
+                                'purchase': {
+                                    'actionField': {
+                                        'id': 'T12345',
+                                        'revenue': '35.43',
+                                        'Tax': '4.90',
+                                        'shipping': '5.99'
+                                    },
+                                    'products': [{
+                                        'name': 'Triblend Android T-Shirt',
+                                        'id': '12345',
+                                        'price': '15.25',
+                                        'variant': 'Gray',
+                                        'quantity': 1
+                                    }, {
+                                        'name': 'Donut Friday Scented T-Shirt',
+                                        'id': '67890',
+                                        'price': '33.75',
+                                        'variant': 'Black',
+                                        'quantity': 1
+                                    }]
+                                }
+                            }
+                        });
+
+                    </script>
+
                 </div>
             </div>
         </section>

@@ -765,7 +765,7 @@ section.containaer-home > .row {margin-left: 0;margin-right: 0;}
 .top-menu-b > li {
   position: relative;
   display: inline-table;
-  padding: 6px 25px 0 23px;
+    padding: 6px 19px 0 19px;
   height: 100%;
   border-left: 1px solid #4f6394;
 }
