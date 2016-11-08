@@ -25,7 +25,7 @@ class ControllerCheckoutSuccess extends Controller {
             $json_result = array(
                 'event' => 'purchase',
                 'ecommerce' => array(
-                    'currencyCode' =>  'EUR',
+                    'currencyCode' =>  'USD',
                     'purchase' => array(
                         'actionField' => array(
                             'id' => $this->session->data['order_id'],

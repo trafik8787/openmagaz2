@@ -331,9 +331,9 @@ class ControllerProductProduct extends Controller {
                 $thumb = null;
 
                 $ext = pathinfo(basename($result['image']));
-                if ($ext['extension'] == 'mp4') {
+                if (!empty($ext['extension']) and $ext['extension'] == 'mp4') {
                     $video = $this->url->urlLink('image/'.$result['image']);
-                } elseif ($ext['extension'] == 'jpe') {
+                } elseif (!empty($ext['extension']) and $ext['extension'] == 'jpe') {
                     $popup = HostSite('/image/'.$result['image']);
                     $thumb = $popup;
                 } else {
