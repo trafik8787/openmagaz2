@@ -2028,7 +2028,7 @@ footer > section .row {
 }
 .menu > ul > li[data-target=menu4] > .dropdown-inside .img-under-style {
   position: absolute;
-  right: 35px;
+  right: 15px;
   bottom: 0;
 }
 .menu > ul > li[data-target=menu5] {
@@ -2117,7 +2117,7 @@ footer > section .row {
   color: #444444; }
 
 .menu > ul > li > .dropdown-inside .brilliant-style > li > a:hover {
-  font-weight: bold;
+  font-family: "Raleway-Bold",fantasy;
 }
 
 .menu > ul > li > .dropdown-inside .brilliant-style > li > a:hover::after {
@@ -7418,8 +7418,11 @@ footer > section .row {
 }
 
 .engagement-img-menu{
-  margin:0 -28px -20px 0;
+  margin: 0;
   text-align: right;
+  position: absolute;
+  bottom: -5px;
+  right: 0px;
 }
 
 .all-menu-i{
@@ -7454,13 +7457,22 @@ footer > section .row {
   display: inline-block;
 }
 .engagement-list-colorfull.w-checed-list{
-  text-align: justify;
+  /*text-align: justify;*/
   width: 100%;
+  margin: 0 0 30px -8px;
 }
 
 .engagement-list-colorfull.w-checed-list .list__item {
-  display: inline;
+  /*display: inline;*/
+  display: inline-block;
+  width: 85px;
 }
+
+.engagement-list-colorfull.w-checed-list .list__item.all-label {
+  margin-left: -20px;
+}
+
+
 
 .engagement-list-colorfull.w-checed-list .label--checkbox .number-circle{
   border: 2px solid #838281!important;
@@ -7521,8 +7533,14 @@ footer > section .row {
 
 .jewelry-img{
   position: absolute;
-  right: 27px;
-  bottom: 14px;
+  right: -2px;
+  bottom: -6px;
+}
+
+.menu-wedding-img {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
 }
 
 .jewelry-wrapper{

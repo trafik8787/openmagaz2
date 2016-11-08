@@ -32,54 +32,58 @@
                     </li>
                 </ul>
                 <div class="title">browse settings by metal</div>
-                <ul class="w-checed-list engagement-list-colorfull">
-                    <li class="list__item btn">
-                        <a href="/engagement-rings&filter=13" class="label--checkbox">
-                            <span><span class="number-circle"></span>Platinum</span>
-                        </a>
-                    </li>
-                    <li class="list__item btn">
-                        <a href="/engagement-rings&filter=11" class="label--checkbox">
-                            <span class="yellow-g"><span class="number-circle">14</span>Yellow Gold</span>
-                        </a>
-                    </li>
-                    <li class="list__item btn">
-                        <a href="/engagement-rings&filter=12" class="label--checkbox">
-                            <span class="yellow-g"><span class="number-circle">18</span>Yellow Gold</span>
-                        </a>
-                    </li>
-                    <li class="list__item btn">
-                        <a href="/engagement-rings&filter=6" class="label--checkbox">
-                            <span><span class="number-circle">14</span>White Gold</span>
-                        </a>
-                    </li>
-                    <li class="list__item btn">
-                        <a href="/engagement-rings&filter=5" class="label--checkbox">
-                            <span><span class="number-circle">18</span>White Gold</span>
-                        </a>
-                    </li>
-                    <li class="list__item btn">
-                        <a href="/engagement-rings&filter=14" class="label--checkbox">
-                            <span class="rose-g"><span class="number-circle">14</span>Rose Gold</span>
-                        </a>
-                    </li>
-                    <li class="list__item btn">
-                        <a href="/engagement-rings&filter=15" class="label--checkbox">
-                            <span class="rose-g"><span class="number-circle">18</span>Rose Gold</span>
-                        </a>
-                    </li>
-                    <li class="list__item btn">
-                        <a href="/engagement-rings&filter=16" class="label--checkbox">
-                            <span><span class="number-circle"></span>Palladium</span>
-                        </a>
-                    </li>
-                    <li class="list__item btn all-label">
-                        <a href="/engagement-rings&filter=7" class="label--checkbox">
-                            <i class="all-menu-i"></i>
-                            <span>All</span>
-                        </a>
-                    </li>
-                </ul>
+                <div class="clearfix">
+                    <div class="col-xs-7">
+                        <ul class="w-checed-list engagement-list-colorfull">
+                            <li class="list__item btn">
+                                <a href="/engagement-rings&filter=13" class="label--checkbox">
+                                    <span><span class="number-circle"></span>Platinum</span>
+                                </a>
+                            </li>
+                            <li class="list__item btn">
+                                <a href="/engagement-rings&filter=11" class="label--checkbox">
+                                    <span class="yellow-g"><span class="number-circle">14</span>Yellow Gold</span>
+                                </a>
+                            </li>
+                            <li class="list__item btn">
+                                <a href="/engagement-rings&filter=12" class="label--checkbox">
+                                    <span class="yellow-g"><span class="number-circle">18</span>Yellow Gold</span>
+                                </a>
+                            </li>
+                            <li class="list__item btn">
+                                <a href="/engagement-rings&filter=6" class="label--checkbox">
+                                    <span><span class="number-circle">14</span>White Gold</span>
+                                </a>
+                            </li>
+                            <li class="list__item btn">
+                                <a href="/engagement-rings&filter=5" class="label--checkbox">
+                                    <span><span class="number-circle">18</span>White Gold</span>
+                                </a>
+                            </li>
+                            <li class="list__item btn">
+                                <a href="/engagement-rings&filter=14" class="label--checkbox">
+                                    <span class="rose-g"><span class="number-circle">14</span>Rose Gold</span>
+                                </a>
+                            </li>
+                            <li class="list__item btn">
+                                <a href="/engagement-rings&filter=15" class="label--checkbox">
+                                    <span class="rose-g"><span class="number-circle">18</span>Rose Gold</span>
+                                </a>
+                            </li>
+                            <li class="list__item btn">
+                                <a href="/engagement-rings&filter=16" class="label--checkbox">
+                                    <span><span class="number-circle"></span>Palladium</span>
+                                </a>
+                            </li>
+                            <li class="list__item btn all-label">
+                                <a href="/engagement-rings&filter=7" class="label--checkbox">
+                                    <i class="all-menu-i"></i>
+                                    <span>All</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="engagement-img-menu clearfix">
                     <img src="/catalog/view/theme/canary/img/demo_new_template/meny-engagament.jpg" alt="img" class="img-under-style">
                 </div>
@@ -134,9 +138,9 @@
                             <!--*<a href="#"><div class="icons-rings_icon"></div><span>Sets for him and her</span></a>*-->
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-                        <img src="/catalog/view/theme/canary/img/demo_new_template/meny-wedingrings.jpg" alt="img" class="img-under-style">
-                    </div>
+                </div>
+                <div class="menu-wedding-img">
+                    <img src="/catalog/view/theme/canary/img/demo_new_template/meny-wedingrings.jpg" alt="img" class="img-under-style">
                 </div>
             </div>
         </li>
@@ -195,7 +199,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="engagement-img-menu jewelry-img clearfix">
+                <div class="jewelry-img clearfix">
                     <img src="/catalog/view/theme/canary/img/img14.png" alt="img" class="img-under-style">
                 </div>
             </div>
@@ -204,7 +208,7 @@
             <a href="<?php echo $categories[4]['href']?>" class="w-general-category <?=$categories[4]['class_activ']?>"><span></span><?php echo $categories[4]['name']?></a>
             <div class="dropdown-inside">
                 <div class="clearfix">
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-xs-3">
                         <div class="title">Browse settings by stone</div>
                         <ul class="brilliant-style gemstones-box">
                             <li>
@@ -227,7 +231,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-xs-3">
                         <div class="title">Browse settings by color</div>
                         <ul class="color-menu-block">
                             <li class="blue-green">
@@ -265,7 +269,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-xs-4">
                         <div class="title">Browse settings by shape</div>
                         <ul class="brilliant-style brilliant-style-f4 clearfix">
                             <li>
@@ -288,7 +292,6 @@
                             </li>
                         </ul>
                     </div>
-
                     <img src="/catalog/view/theme/canary/img/demo_new_template/meny-gemstones.jpg" alt="img" class="img-under-style">
                 </div>
             </div>
