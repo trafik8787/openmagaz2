@@ -2,8 +2,43 @@
 class ControllerCheckoutSuccess extends Controller {
 	public function index() {
 		$this->load->language('checkout/success');
+        //$this->load->model('checkout/order');
+        //$this->model_checkout_order->getOrder($this->session->data['order_id']);
+        $cart = $this->load->controller('common/cart', array('checkout' => 1));
+
 
 		if (isset($this->session->data['order_id'])) {
+
+            $json_product = array();
+
+            foreach ($cart['products'] as $row) {
+                $json_product[] = array(
+                    'name' => $row['name'],
+                    'id'    => $row['product_id'],
+                    'price' => $row['total_int'],
+                    'variant' => !empty($row['option'][0]['value']) ? $row['option'][0]['value'] : '',
+                    'quantity' => $row['quantity']
+                );
+            }
+
+
+            $json_result = array(
+                'event' => 'purchase',
+                'ecommerce' => array(
+                    'currencyCode' =>  'EUR',
+                    'purchase' => array(
+                        'actionField' => array(
+                            'id' => $this->session->data['order_id'],
+                            'revenue' => $cart['totals'][1]['value'],
+                            'shipping' => '0'
+                        ),
+                        'products' => $json_product
+                    )
+                )
+            );
+
+            $data['tags_marceting'] = json_encode($json_result);
+           // dd($data['tags_marceting'], true);
 			$this->cart->clear();
 
 			// Add to activity log
@@ -39,12 +74,15 @@ class ControllerCheckoutSuccess extends Controller {
 			unset($this->session->data['voucher']);
 			unset($this->session->data['vouchers']);
 			unset($this->session->data['totals']);
-		}
 
-        if (empty(Cookie::get('dataLayerW'))) {
-            $data['dataLayerW'] = 1;
-            Cookie::set('dataLayerW', 1);
+		} else {
+            $this->response->redirect('/');
         }
+
+//        if (empty(Cookie::get('dataLayerW'))) {
+//            $data['dataLayerW'] = 1;
+//            Cookie::set('dataLayerW', 1);
+//        }
 
 		$this->document->setTitle($this->language->get('heading_title'));
 

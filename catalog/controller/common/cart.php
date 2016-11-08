@@ -153,8 +153,10 @@ class ControllerCommonCart extends Controller {
             // Display prices
             if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
                 $total = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')) * $product['quantity']);
+                $total_int = $this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')) * $product['quantity'];
             } else {
                 $total = false;
+                $total_int = false;
             }
 
             if (!empty($product['diamond'])) {
@@ -186,8 +188,10 @@ class ControllerCommonCart extends Controller {
 
                         if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
                             $totals = $this->currency->format($this->tax->calculate($product_rows['price'], $product_rows['tax_class_id'], $this->config->get('config_tax')) * $product_rows['quantity']);
+                            $totals_int = $this->tax->calculate($product_rows['price'], $product_rows['tax_class_id'], $this->config->get('config_tax')) * $product_rows['quantity'];
                         } else {
                             $totals = false;
+                            $totals_int = false;
                         }
 
                         if (!empty($product_rows['diamond'])) {
@@ -198,6 +202,7 @@ class ControllerCommonCart extends Controller {
                         }
 
                         $tmp_complect[] = array(
+                            'product_id' => $product_rows['product_id'],
                             'cart_id' => $product_rows['cart_id'],
                             'diamond' => !empty($product_rows['diamond']) ? 1 : 0,
                             'thumb' => $images,
@@ -208,6 +213,7 @@ class ControllerCommonCart extends Controller {
                             'quantity' => $product_rows['quantity'],
                             'price' => $prices,
                             'total' => $totals,
+                            'total_int' => $totals_int,
                             'href' => $href_products,
                             'complect' => $product_rows['complect']
                         );
@@ -220,6 +226,7 @@ class ControllerCommonCart extends Controller {
             } else {
                 $this->data['products'][] = array(
                     'cart_id' => $product['cart_id'],
+                    'product_id' => $product['product_id'],
                     'diamond' => !empty($product['diamond']) ? 1 : 0,
                     'thumb' => $image,
                     'name' => $product['name'],
@@ -229,6 +236,7 @@ class ControllerCommonCart extends Controller {
                     'quantity' => $product['quantity'],
                     'price' => $price,
                     'total' => $total,
+                    'total_int' => $total_int,
                     'href' => $href_product
                 );
             }

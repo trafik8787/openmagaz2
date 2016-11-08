@@ -88,7 +88,7 @@ class Currency {
 		} else {
 			$thousand_point = '';
 		}
-
+        //dd($string, true);
 		$string .= number_format(round($value, (int)$decimal_place), (int)$decimal_place, $decimal_point, $thousand_point);
 
 		if (($symbol_right) && ($format)) {
@@ -97,6 +97,59 @@ class Currency {
 
 		return $string;
 	}
+
+    public function unFormat($number, $currency = '', $value = '', $format = true) {
+        if ($currency && $this->has($currency)) {
+            $symbol_left   = $this->currencies[$currency]['symbol_left'];
+            $symbol_right  = $this->currencies[$currency]['symbol_right'];
+            $decimal_place = $this->currencies[$currency]['decimal_place'];
+        } else {
+            $symbol_left   = $this->currencies[$this->code]['symbol_left'];
+            $symbol_right  = $this->currencies[$this->code]['symbol_right'];
+            $decimal_place = $this->currencies[$this->code]['decimal_place'];
+
+            $currency = $this->code;
+        }
+
+        if ($value) {
+            $value = $value;
+        } else {
+            $value = $this->currencies[$currency]['value'];
+        }
+
+        if ($value) {
+            $value = (float)$number * $value;
+        } else {
+            $value = $number;
+        }
+
+        $string = '';
+
+        if (($symbol_left) && ($format)) {
+            $string .= $symbol_left;
+        }
+
+        if ($format) {
+            $decimal_point = $this->language->get('decimal_point');
+        } else {
+            $decimal_point = '.';
+        }
+
+        if ($format) {
+            $thousand_point = $this->language->get('thousand_point');
+        } else {
+            $thousand_point = '';
+        }
+
+        $string .= number_format(round($value, (int)$decimal_place), (int)$decimal_place, $decimal_point, $thousand_point);
+
+        if (($symbol_right) && ($format)) {
+            $string .= $symbol_right;
+        }
+
+        return $string;
+    }
+
 
 	public function convert($value, $from, $to) {
 		if (isset($this->currencies[$from])) {
