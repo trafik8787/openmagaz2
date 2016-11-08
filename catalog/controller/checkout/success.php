@@ -26,7 +26,6 @@ class ControllerCheckoutSuccess extends Controller {
 				$this->model_account_activity->addActivity('order_guest', $activity_data);
 			}
 
-			dd($this->session->data, true);
 
 			unset($this->session->data['shipping_method']);
 			unset($this->session->data['shipping_methods']);
@@ -41,6 +40,11 @@ class ControllerCheckoutSuccess extends Controller {
 			unset($this->session->data['vouchers']);
 			unset($this->session->data['totals']);
 		}
+
+        if (empty(Cookie::get('dataLayerW'))) {
+            $data['dataLayerW'] = 1;
+            Cookie::set('dataLayerW', 1);
+        }
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
