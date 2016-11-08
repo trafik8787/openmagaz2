@@ -20,58 +20,73 @@
         </div>
     </div>
     <section class="static-page">
-
-        <div class="contacts-page">
-            <div class="center-bl">
-                <div class="contacts-top-block text-center">
-                    <p class="contacts-block-title">Customer Service</p>
-                    <p>We are available 24 hours a day, 7 days a week.</p>
+        <div class="center-bl">
+            <div class="static-text-page clearfix">
+                <div class="left-q">
+                    <div class="wrapper-menu-stat">
+                        <div class="title">INFORMATION</div>
+                        <ul class="menu-block-stat">
+                            <li><a href="/about_us">About Us</a></li>
+                            <li><a href="/delivery">Delivery Information</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="http://blog.brilliantcanary.com/" target="_blank">Blog</a></li>
+                            <li><a href="/faq">FAQ</a></li>
+                            <!--*<li><a href="#">Site Map</a></li>*-->
+                        </ul>
+                    </div>
+                    <div class="wrapper-static-baner">
+                        <img src="/catalog/view/theme/canary/img/baner-static.png" alt="img">
+                    </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="col-md-5 text-center">
-                            <div class="contacts-info-block">
-                                <p class="contacts-block-title">Chat now</p>
-                                <p>Get the instant answer to your questions..</p>
-                            </div>
-                            <div class="contacts-info-block">
-                                <p class="contacts-block-title">Call Us</p>
-                                <p>USA: <?php echo $telephone; ?></p>
-                                <p>Outside USA: +1 301 631 1414</p>
-                            </div>
-                            <div class="contacts-info-block">
-                                <p class="contacts-block-title">Call Back</p>
-                                <p>Enter your phone number and we will call you right back.</p>
-                            </div>
-                            <div class="contacts-info-block">
-                                <p class="contacts-block-title">Email Us</p>
-                                <p>All questions will be answered within two business days.</p>
+                <div class="right-q">
+                    <h1>24/7 Customer Service</h1>
+                    <p>Our certified diamond experts and customer service representatives are here to help you with any inquires you may have. Please see our customer service hours below.</p>
+
+                    <div class="contacts-info-list">
+                        <div class="contacts-info-block">
+                            <div class="contacts-info-img"><img src="/catalog/view/theme/canary/img/contacts-clock.png" alt=""></div>
+                            <p><strong>Working Hours:</strong></p>
+                            <p>Monday—Friday: 9am to 9pm (CST)</p>
+                            <p>Saturday & Sunday: 10am to 7pm (CST)</p>
+                        </div>
+                        <div class="contacts-info-block">
+                            <div class="contacts-info-img"><img src="/catalog/view/theme/canary/img/contacts-phone.png" alt=""></div>
+                            <p><strong>Call Us:</strong></p>
+                            <p><a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a></p>
+                        </div>
+                        <div class="contacts-info-block">
+                            <div class="contacts-info-img"><img src="/catalog/view/theme/canary/img/contacts-mail.png" alt=""></div>
+                            <p><strong>Email us:</strong></p>
+                            <p>We will respond to all emails within one business day.</p>
+                            <p><a href="mailto:info@brilliantcanary.com">info@brilliantcanary.com</a></p>
+                        </div>
+                        <div class="contacts-info-block">
+                            <div class="contacts-info-img"><img src="/catalog/view/theme/canary/img/contacts-chat.png" alt=""></div>
+                            <p><strong>Chat Now:</strong></p>
+                            <p>Get answers right away to any questions you may have.</p>
+                        </div>
+                        <div class="contacts-info-block">
+                            <div class="contacts-info-img nomiddle"><img src="/catalog/view/theme/canary/img/contacts-message.png" alt=""></div>
+                            <strong>Send us a Message:</strong>
+                            <p>We will reply to all questions within one business day.</p>
+                            <div class="form-static">
+                                <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <input id="it1" type="text" name="name" value="<?php echo $name; ?>" class="required" placeholder="Name" required>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input id="it2" type="text" name="email" value="<?php echo $email; ?>" class="required" placeholder="E-mail" required>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input id="it3" type="text" class="required" placeholder="Phone" required>
+                                        </div>
+                                    </div>
+                                    <textarea id="ta1" cols="30" name="enquiry" rows="5" class="required" placeholder="Message" required><?php echo $enquiry; ?></textarea>
+                                    <button class="btn w-btn-orange btn-lg"><i class="icons-rings_icon"></i>SEND</button>
+                                </form>
                             </div>
                         </div>
-                        <div class="col-md-5 col-md-offset-2">
-                            <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="right-checkout none-border">
-                                <div class="form-title">Send a Message</div>
-                                <div class="contacts-form-row bl-input must">
-                                    <input id="it1" type="text" name="name" value="<?php echo $name; ?>" class="contacts-input required" placeholder="Name" required>
-                                </div>
-                                <div class="contacts-form-row bl-input must">
-                                    <input id="it2" type="text" name="email" value="<?php echo $email; ?>" class="contacts-input required" placeholder="E-mail" required>
-                                </div>
-                                <div class="contacts-form-row bl-input must">
-                                    <input id="it3" type="text" class="contacts-input required" placeholder="Phone" required>
-                                </div>
-                                <div class="contacts-form-row contacts-form-row-mend bl-input must">
-                                    <textarea id="ta1" cols="30" name="enquiry" rows="5" class="contacts-textarea required" placeholder="Message" required><?php echo $enquiry; ?></textarea>
-
-                                </div>
-                                <?php echo $captcha; ?>
-                                <div class="contacts-form-row text-right">
-                                    <button class="login-form-btn"><?php echo $button_submit; ?></button>
-                                </div>
-
-                            </form>
-                        </div>
-
                     </div>
                 </div>
             </div>
