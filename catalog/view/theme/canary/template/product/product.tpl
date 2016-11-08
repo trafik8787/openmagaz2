@@ -178,71 +178,72 @@
 
                                 <div class="alert alert-info margin-buttom-0 product-buy-details clearfix">
                                     <div class="left">
-                                        <?php if ($options) :?>
 
-                                        <div class="size-product">
+                                            <div class="size-product">
 
-                                            <?if (!empty($products_metal)):?>
-                                            <!--*<div class="title">Precious metal</div>*-->
-                                            <div class="cc-shipping-row">
-                                                <input type="text" class="shipping-input select-simulate-input" id="si7" required readonly>
-                                                <label for="si7" class="shipping-label"><?=list_metal($metal)?></label>
-                                                <a href="#" class="select-simulate-btn"></a>
-                                                <ul class="select-simulate-list">
-                                                    <?php foreach ($products_metal as $key => $row_metal): ?>
-                                                    <li><a class="w-product-ajax" href="<?php echo $row_metal['href']; ?>" data-value="<?php echo $row_metal['href']; ?>"><?php echo $row_metal['name']; ?></a></li>
+                                                <?if (!empty($products_metal)):?>
+                                                    <!--*<div class="title">Precious metal</div>*-->
+                                                    <div class="cc-shipping-row">
+                                                        <input type="text" class="shipping-input select-simulate-input" id="si7" required readonly>
+                                                        <label for="si7" class="shipping-label"><?=list_metal($metal)?></label>
+                                                        <a href="#" class="select-simulate-btn"></a>
+                                                        <ul class="select-simulate-list">
+                                                            <?php foreach ($products_metal as $key => $row_metal): ?>
+                                                            <li><a class="w-product-ajax" href="<?php echo $row_metal['href']; ?>" data-value="<?php echo $row_metal['href']; ?>"><?php echo $row_metal['name']; ?></a></li>
+                                                            <?endforeach?>
+
+                                                        </ul>
+                                                    </div>
+
+                                                <?endif?>
+
+                                                <?php if ($options) :?>
+
+                                                    <?php foreach ($options as $option):?>
+
+                                                        <?php if ($option['type'] == 'radio' AND $option['name'] == 'SIZE'):?>
+
+                                                            <!--*<div class="title">Size</div>*-->
+                                                            <div class="one-line size-radio height-inherit" id="input-option<?php echo $option['product_option_id']; ?>" data-toggle="buttons">
+
+                                                                <?php foreach ($option['product_option_value'] as $option_value): ?>
+
+                                                                <label class="btn btn-filter">
+                                                                    <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">  <?php echo $option_value['name']; ?>
+                                                                </label>
+
+                                                                <?endforeach?>
+
+                                                            </div>
+
+                                                        <?endif?>
+
+
+                                                        <?php if ($option['type'] == 'select' AND $option['name'] == 'SIZE'):?>
+
+
+                                                            <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
+                                                                <!--*<div class="title" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></div>*-->
+                                                                <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="dropdown">
+                                                                    <option value=""><?php echo $text_select; ?></option>
+                                                                    <?php foreach ($option['product_option_value'] as $option_value) { ?>
+                                                                    <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                                                                        <?php if ($option_value['price']) { ?>
+                                                                        (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                                                                        <?php } ?>
+                                                                    </option>
+                                                                    <?php } ?>
+                                                                </select>
+                                                            </div>
+
+
+                                                        <?endif?>
+
                                                     <?endforeach?>
-
-                                                </ul>
+                                                <?endif?>
                                             </div>
 
-                                            <?endif?>
 
-                                            <?php foreach ($options as $option):?>
-
-                                                <?php if ($option['type'] == 'radio' AND $option['name'] == 'SIZE'):?>
-
-                                                    <!--*<div class="title">Size</div>*-->
-                                                    <div class="one-line size-radio height-inherit" id="input-option<?php echo $option['product_option_id']; ?>" data-toggle="buttons">
-
-                                                        <?php foreach ($option['product_option_value'] as $option_value): ?>
-
-                                                        <label class="btn btn-filter">
-                                                            <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>">  <?php echo $option_value['name']; ?>
-                                                        </label>
-
-                                                        <?endforeach?>
-
-                                                    </div>
-
-                                                <?endif?>
-
-
-                                                <?php if ($option['type'] == 'select' AND $option['name'] == 'SIZE'):?>
-
-
-                                                    <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
-                                                        <!--*<div class="title" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></div>*-->
-                                                        <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="dropdown">
-                                                            <option value=""><?php echo $text_select; ?></option>
-                                                            <?php foreach ($option['product_option_value'] as $option_value) { ?>
-                                                            <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
-                                                                <?php if ($option_value['price']) { ?>
-                                                                (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
-                                                                <?php } ?>
-                                                            </option>
-                                                            <?php } ?>
-                                                        </select>
-                                                    </div>
-
-
-                                                <?endif?>
-
-                                            <?endforeach?>
-
-                                        </div>
-
-                                        <?endif?>
                                         <div class="text-right">
                                             <a href="#" class="your-ring-size">Select your ring size</a>
                                         </div>
