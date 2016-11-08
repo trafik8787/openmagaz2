@@ -1099,22 +1099,21 @@ input:focus{
   width: 100%;
 }
 
+#id-filtr-stone-type .w-group-shape.box-color.gemstones-box.rings-box .brackets.all-line-filter-gem{
+  margin-top: 30px;
+}
+#id-filtr-stone-type .w-group-shape.box-color.gemstones-box.rings-box .brackets{
+ vertical-align: top;
+}
+
 .w-blog-section .thumbnail .marc-date {
-
   position: absolute;
-
   width: 37px;
-
   height: 52px;
-
   background-color: #2f4680;
-
-  left: 37px;
-
+  left: 15px;
   box-shadow: -1px 1px 1px #2f4680;
-
   color: #ffffff;
-
   font-family: "Montserrat-Regular", fantasy;
 }
 
@@ -5261,12 +5260,15 @@ footer > section .row {
   /*min-width: 980px;*/
   padding-bottom: 60px;
 }
+.list-product .filter-product-line .center-bl{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #2f4680;
+}
 .list-product .filter-product-line {
-  padding: 20px 0;
   font-size: 13px;
   color: white;
   font-family: "Raleway-Bold";
-  background-color: #2f4680;
 }
 .list-product .filter-product-line .center-bl > * {
   vertical-align: middle;
@@ -5394,6 +5396,9 @@ footer > section .row {
 }
 .wrapper-product-table.th-view .product-item .box-img img {
   max-height: 100% !important;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
 }
 .wrapper-product-table.th-view .product-item .box-tovar-th {
   opacity: 1;
@@ -5475,6 +5480,7 @@ footer > section .row {
 .wrapper-product-table.th-view tbody tr {
   height: 360px;
   width: 22%;
+  margin-bottom: 30px;
   margin-right: 3.5%;
   display: block;
   float: left;

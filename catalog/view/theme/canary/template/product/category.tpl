@@ -39,8 +39,6 @@
         </div>
 
             <div class="list-product w-category-ajax">
-
-
                 <div class="filter-product-line">
                     <div class="center-bl clearfix">
                         <div class="pull-left left-drop-f">
@@ -58,7 +56,6 @@
                             </div>
                             <span>Product compare (0)</span>
                         </div>
-
                         <div class="view-product">
                             <button class="list-btn btn-view" data-toggle="tooltip" data-placement="top" title="list"><i class="list-ico"></i></button>
                             <button class="th-btn btn-view active" data-toggle="tooltip" data-placement="top" title="block"><i class="block-ico"></i></button>
