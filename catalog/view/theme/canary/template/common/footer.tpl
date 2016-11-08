@@ -237,6 +237,8 @@
                                 <a href="/terms">Terms & Conditions</a>
                                 <span>|</span>
                                 <a href="/cookie_policy">Cookie Policy</a>
+                                <span>|</span>
+                                <a href="/return_policy">Return Policy</a>
                             </p>
                         </div>
                     </div>
@@ -298,6 +300,8 @@
                     <a href="/terms">Terms & Conditions</a>
                     <span>|</span>
                     <a href="/cookie_policy">Cookie Policy</a>
+                    <span>|</span>
+                    <a href="/return_policy">Return Policy</a>
                 </p>
             </div>
         </section>
