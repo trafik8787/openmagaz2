@@ -243,11 +243,11 @@
                                                 <?endif?>
                                             </div>
 
-
-                                        <div class="text-right">
-                                            <a href="#" class="your-ring-size">Select your ring size</a>
-                                        </div>
-
+                                        <?php if ($options) :?>
+                                            <div class="text-right">
+                                                <a href="#" class="your-ring-size">Select your ring size</a>
+                                            </div>
+                                        <?endif?>
                                     </div>
                                     <div class="right">
                                         <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
