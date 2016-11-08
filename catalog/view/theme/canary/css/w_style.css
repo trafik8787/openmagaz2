@@ -4788,6 +4788,10 @@ text-align: left;
         width: 100%;
     }
 
+    .contacts-info-block .form-static .w-btn-orange {
+        padding-left: 0;
+    }
+
 
 }
 
@@ -5140,6 +5144,15 @@ text-align: left;
     .about-service-left .about-service-desc,
     .about-service-right .about-service-desc {
         margin: 0;
+    }
+
+    .contacts-info-block {
+        padding-left: 65px;
+    }
+
+    .contacts-info-block .form-static {
+        margin-top: 15px;
+        margin-left: -65px;
     }
 }
 
