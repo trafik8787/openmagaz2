@@ -566,7 +566,7 @@
                                     <div class="box-ring">
                                         <img src="/catalog/view/theme/canary/img/demo_new_template/milgrain-wedding-band.jpg" alt="img">
                                     </div>
-                                    carved
+                                    ENGRAVED
                                 </div>
                                 <div class="one-block-r">
                                     <div class="box-ring">
@@ -578,50 +578,29 @@
                             <div class="block-p">
                                 <div class="article-p">Classic Wedding Rings</div>
                                 <p>
-                                    Plain Precious Metal Band: A plain metal wedding band is a classic symbol of our eternal love and devotion. You can choose from a variety of metal options from 14 karat gold, 18 karat gold, platinum or palladium. These timeless bands come in a widths ranging from 2mm to 8mm.
+                                    <b>Plain Precious Metal Wedding Rings:</b> A plain metal wedding ring is a classic symbol of our eternal love and devotion. You can choose from a variety of metal options from 14 karat gold, 18 karat gold, platinum or palladium. These timeless bands come in a widths ranging from 2mm to 8mm.
                                 </p>
                                <p>
-                                   Engraved Wedding Band: An engraved metal band is a twist on the classic plain metal band. These delicately engraved bands can feature diamonds or be plain metal. Show your everlasting love with a beautiful engraved wedding band.
+                                   <b>Engraved Wedding Rings:</b> An engraved metal ring is a twist on the classic plain metal ring. These delicately engraved rings can feature diamonds or be plain metal. Show your everlasting love with a beautiful engraved wedding ring.
                                </p>
-                            </div>
-                            <div class="block-p">
-                                <div class="article-p">Carved Wedding Rings</div>
-                                <p>
-                                    Women’s carved wedding bands are a popular choice for women who prefer a twist on the classic wedding ring. Carved wedding bands have some sort of carving on them, as opposed to classic wedding rings which are plain and do not have any engravings or patterns. Women with simple or understated engagement rings, often choose to wear intricate carved wedding rings. Carved wedding rings, however, also look striking next to flashy or engagement rings.
-                                </p>
-                                <p>
-                                    offers an extensive collection of women’s carved wedding rings of all prices. Our carved wedding rings are sold in all metal types and widths. Whether you are looking for a yellow gold or platinum carved wedding ring,  has the perfect ring for you.
-                                </p>
                             </div>
                             <div class="block-p">
                                 <div class="article-p">Diamond Wedding Rings</div>
                                 <p>
-                                    Women’s diamond wedding rings are a beautiful symbol of a lifelong commitment of two souls coming together. For women who prefer sparkly jewelry, diamond wedding rings are a great choice. Women’s diamond rings come in all shapes and sizes— all metal types and widths. Diamond wedding rings are also a beautiful way to compliment a classic or even carved wedding band. Whether you prefer yellow gold or platinum diamond wedding rings,  has the perfect wedding ring for you special day.
+                                    <b>Prong Set Diamond Wedding Rings:</b> Prong set diamond wedding rings are a stunning and classic wedding band choice. Diamonds are lined up and set closely together with the prongs on either side. This gives your ring a beautiful look, without a lot of metal showing. In our large collection of prong set diamond wedding rings, you will find the band that will make your heart soar.
+                                </p>
+                                <p>
+                                    <b>Pave Set Diamond Wedding Rings:</b> Delicate and intricate, pave diamond wedding rings feature small diamonds set closely together as to see minimal metal and more sparkle. Pave diamond wedding rings really sparkle and come in a variety of designs, from halfway around to eternity. With our extensive collection of pave diamond wedding rings, you are sure to find the perfect on to accent your engagement ring beautifully
+                                </p>
+                                <p>
+                                    <b>Channel Set Diamond Wedding Rings:</b> Channel set wedding rings are elegant and timeless. Small diamonds are set closely together to beautifully decorate the band of your wedding ring. Having side diamonds securely set in the grooves of a channel means you don’t need to worry about your band getting snagged. Choose from our large collection of channel set wedding rings to perfectly compliment your diamond engagement ring.
+                                </p>
+                            </div>
 
-                                </p>
-                                <p>
-                                    Pave Set: Delicate and intricate, pave diamond wedding bands feature small diamonds set closely together as to see minimal metal and more sparkle. Pave diamond wedding bands really sparkle and come in a variety of designs, from halfway around to eternity. With our extensive collection of pave diamond wedding bands, you are sure to find the perfect on to accent your engagement ring beautifully
-                                </p>
-                                <p>
-                                    Channel Set: Channel set wedding bands are elegant and timeless. Small diamonds are set closely together to beautifully decorate the band of your wedding ring. Having side diamonds securely set in the grooves of a channel means you don’t need to worry about your band getting snagged. Choose from our large collection of channel set engagement rings to perfectly compliment your diamond.
-                                </p>
-                            </div>
-                            <div class="block-p">
-                                <div class="article-p">Anniversary Wedding Rings</div>
-                                <p>
-                                    Many couples have the tradition of exchanging anniversary rings on their anniversary. For women who love diamond rings, an anniversary ring is the perfect gift to add to her jewelry collection. Women’s anniversary rings come in a range of styles, widths and metal types. Some women prefer platinum anniversary rings, while others prefer yellow gold anniversary rings.
-                                </p>
-                                <p>
-                                    Most women try to match their anniversary rings to their engagement and wedding rings. This way, they can wear all three rings at the same time.
-                                </p>
-                                <p>
-                                    has a stunning collection of women’s anniversary rings. Each of our anniversary rings is of the finest quality and made especially for your special day.
-                                </p>
-                            </div>
                             <div class="block-p">
                                 <div class="article-p">Eternity Wedding Rings</div>
                                 <p>
-                                    Eternity diamond wedding bands refers to a wedding band with diamonds flowing all the way around. Eternity bands represent your everlasting love, because the diamonds have no end. Eternity bands can come in any style, from prong set to channel set to pave set. This elegant and beautiful wedding band style looks stunning with every engagement ring, or when worn alone. Choose your perfect eternity diamond wedding band from our vast collection.
+                                    Eternity diamond wedding rings refers to a wedding ring with diamonds flowing all the way around. Eternity rings represent your everlasting love, because the diamonds have no end. Eternity rings can come in any style, from prong set to channel set to pave set. This elegant and beautiful wedding ring style looks stunning with every engagement ring, or when worn alone. Choose your perfect eternity diamond wedding ring from our vast collection.
                                 </p>
 
                             </div>
