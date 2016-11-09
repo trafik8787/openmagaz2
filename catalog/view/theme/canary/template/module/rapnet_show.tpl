@@ -66,7 +66,7 @@
                             <span class="diamond-table-shapeimg">
                                 <img src="<?=imageDiamontIcon($row->shape)?>" alt="">
                             </span>
-                            <span class="hide-shapename"><?=$row->shape?></span>
+                            <span class="hide-shapename"><?=mod_shape($row->shape)?></span>
                         </td>
                         <td><?=$row->color?></td>
                         <td><?=$row->clarity?></td>

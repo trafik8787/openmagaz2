@@ -332,5 +332,13 @@ function get_baners_top_random () {
     return $arr[$key];
 }
 
+function mod_shape ($shape) {
+
+    if ($shape == 'Cushion Modified') {
+        return 'Cushion';
+    } else {
+        return $shape;
+    }
+}
 
 

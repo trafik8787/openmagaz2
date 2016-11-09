@@ -12,7 +12,7 @@ class ControllerModuleRapnet extends Controller {
     private $url_paginate;
 
     private $page;
-
+    private $cache_key;
 
     public function __construct($registry) {
         parent::__construct($registry);
@@ -52,7 +52,7 @@ class ControllerModuleRapnet extends Controller {
         //sort
         $this->show = 15;
 
-        $this->page = 1;
+            $this->page = 1;
     }
 
 	public function index($setting) {
@@ -403,8 +403,13 @@ class ControllerModuleRapnet extends Controller {
             $page = $this->page;
         }
 
+        if (empty($this->cache_key)) {
+            $this->cache_key = $page;
+        }
 
-        if (empty($this->GetCache($page))) {
+
+
+        if (empty($this->GetCache($this->cache_key))) {
 
             $data = array('request' => array('header' => array('username' => $this->config->get('rapnet_name'), 'password' => $this->config->get('rapnet_pass')),
                 'body' => array(
@@ -449,9 +454,9 @@ class ControllerModuleRapnet extends Controller {
             curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE); // uncomment this line if you get no gateway res
 
             $response = curl_exec($request);
-            $this->SetCache($page,$response);
+            $this->SetCache($this->cache_key,$response);
         } else {
-            $response = $this->GetCache($page);
+            $response = $this->GetCache($this->cache_key);
         }
         
 
@@ -612,8 +617,9 @@ class ControllerModuleRapnet extends Controller {
 
         $data = array();
         $this->show = 4;
-        $this->shapes_arr = array($diamond->response->body->diamond->shape);
+        $this->shapes_arr = array(mod_shape($diamond->response->body->diamond->shape));
         $this->page = 2;
+        $this->cache_key = 'similar_'.$diamond->response->body->diamond->diamond_id;
         $json = $this->parse();
         $decod_json = json_decode($json);
         $data['diamond_similar'] = $decod_json->response->body->diamonds;
