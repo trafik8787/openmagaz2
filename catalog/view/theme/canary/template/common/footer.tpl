@@ -312,7 +312,7 @@
 
         <script>
             $(function () {
-                $('#ModalHomeSubskribe').modal('show');
+               // $('#ModalHomeSubskribe').modal('show');
             });
 
         </script>

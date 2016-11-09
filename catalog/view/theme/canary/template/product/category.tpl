@@ -1,5 +1,5 @@
 <?php echo isset($header) ? $header : ''; ?>
-<?//dd($products)?>
+<?//dd(get_baners_top_random())?>
 
 <main class="w-general-container">
     <!--*<hr class="fade-2">*-->
@@ -16,7 +16,7 @@
                    </ul>
                </div>
                <div class="col-md-7 col-sm-7 col-xs-12 padding-0">
-                   <a href=""><img src="<?=get_baners_top_random()?>" class="bread-baner" ></a>
+                   <a href="<?=get_baners_top_random()[1]?>"><img src="<?=get_baners_top_random()[0]?>" class="bread-baner" ></a>
                </div>
            </div>
        </div>
