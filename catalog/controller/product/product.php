@@ -247,6 +247,7 @@ class ControllerProductProduct extends Controller {
                 $cate = '';
             }
 
+            $data['category_info'] = !empty($category_info) ? $category_info : array();
             $data['path'] = isset($this->request->get['path']) ? (int)$this->request->get['path'] : $cate;
 
             $data['telephone'] = $this->config->get('config_telephone');

@@ -90,7 +90,7 @@
                         <div class="col-md-12 col-sm-12">
                             <div class="product-details">
                                 <div class="hidden-xs">
-                                    <div class="h3 text-center margin-top-0">Setting details</div>
+                                    <div class="h3 text-center margin-top-0">ITEM DETAILS</div>
                                     <div class="icons-quality_service_icon"></div>
                                     <div class="margin-buttom-0">
                                     </div>
@@ -125,7 +125,7 @@
                                 </div>
 
                                 <div class="visible-xs">
-                                    <div class="h3 text-center margin-top-0">Setting details</div>
+                                    <div class="h3 text-center margin-top-0">ITEM DETAILS</div>
                                     <div class="icons-quality_service_icon"></div>
                                     <div class="margin-buttom-0">
 

@@ -27,7 +27,7 @@
 
         </div>
         <div class="text-center">
-            <button type="button" data-toggle="modal" data-target="#w-modal-cart" class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select This Diamond</button>
+            <button type="button" data-toggle="modal" data-target="#w-modal-cart" class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select this Item</button>
         </div>
         <div class="text-center">
             <a href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$diamond->diamond_id?>">View Certificate</a>

@@ -169,7 +169,7 @@
                                         <span>$<?=$product->response->body->diamond->total_sales_price?>.00</span>
                                     </div>
                                     <a class="product-buy-sertificate" href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$product->response->body->diamond->diamond_id?>" target="_blank"><img src="/catalog/view/theme/canary/img/icon_lab/<?=strtolower($product->response->body->diamond->lab)?>.jpg" alt="" style="width: 65px"> <span>View<br>Certificate</span></a>
-                                    <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select This Diamond</button>
+                                    <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select this Item</button>
                                 </div>
                                 <div class="visible-xs">
                                     <div class="h3 text-center margin-top-0">DIAMOND DETAILS:</div>
@@ -292,7 +292,7 @@
                                 <span>$<?=$product->response->body->diamond->total_sales_price?></span>
                             </div>
                             <a class="product-buy-sertificate" href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$product->response->body->diamond->diamond_id?>"><img src="/catalog/view/theme/canary/img/icon_lab/<?=strtolower($product->response->body->diamond->lab)?>.jpg" alt="" style="width: 65px"> <span>View<br>Certificate</span></a>
-                            <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select This Diamond</button>
+                            <button type="button" data-toggle="modal" data-target="#w-modal-cart"  class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select this Item</button>
                         </div>
                     </div>
                 </div>
@@ -344,12 +344,12 @@
                                     data-dismiss="modal" aria-hidden="true"
                                     data-idproduct="<?php echo $product->response->body->diamond->diamond_id ?>"
                                     data-shape="<?php echo $product->response->body->diamond->shape?>"
-                                    class="btn w-btn-orange btn-lg text-center">Add diamond to a ring</button>
+                                    class="btn w-btn-orange btn-lg text-center">Add Diamond to a Ring</button>
                         </div>
                         <button type="button" data-dismiss="modal" aria-hidden="true"
                                 id="w-diamont-button-cart" data-loading-text="Loading..."
                                 class="btn w-btn-orange btn-lg text-center w-modal-button"
-                                onmouseup="ga('send', 'event', 'button, 'click', 'Add to Cart');"> <span class="add-tocart-ico"></span> Add to cart</button>
+                                onmouseup="ga('send', 'event', 'button, 'click', 'Add to Cart');"> <span class="add-tocart-ico"></span> Add Diamond to Cart</button>
                     </div>
 
                 </div>

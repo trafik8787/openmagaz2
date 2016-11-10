@@ -136,14 +136,11 @@
                         <div class="col-md-12 col-sm-12">
                             <div class="product-details">
                                 <div class="hidden-xs">
-                                    <div class="h3 text-center margin-top-0">Setting details</div>
+                                    <div class="h3 text-center margin-top-0">ITEM DETAILS</div>
                                     <div class="icons-quality_service_icon"></div>
                                     <div class="margin-buttom-0">
                                         <table class="table table-condensed">
-                                            <tr>
-                                                <td><span>METAL: <?=list_metal($metal)?></span></td>
-                                                <td><span>WEIGHT: <?=$weight?> g.</span></td>
-                                            </tr>
+
                                             <?if (!empty($attribute_groups)):?>
                                             <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
 
@@ -153,7 +150,10 @@
                                             </tr>
                                             <?endforeach?>
                                             <?endif?>
-
+                                            <tr>
+                                                <td><span>METAL: <?=list_metal($metal)?></span></td>
+                                                <!--*<td><span>WEIGHT: <?=$weight?> g.</span></td>*-->
+                                            </tr>
                                             <!-- TODO: More specifications btn
                                             <tr>
                                                 <td></td>
@@ -256,20 +256,24 @@
                                         <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
                                         <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
                                         <div class="price-product">
-                                            <span><?php echo $price; ?></span> <span class="h5">(Setting price)</span>
+                                            <span><?php echo $price; ?></span>
+                                            <?if ($path == 20 or (!empty($category_info) and $category_info['category_id'] == 86)):?>
+                                                <span class="h5">(Setting price only)</span>
+                                            <?endif?>
                                         </div>
                                         <div class="line-price-product clearfix">
-                                            <?if ($path == 69): //weding rings?>
-                                            <button type="button" id="button-cart" class="btn w-btn-orange btn-lg" data-loading-text="<?php echo $text_loading; ?>"> <i class="bold-angle-right"></i> <?php echo $button_cart; ?></button>
+                                            <?if ($path == 69 or ($path == 82 and !empty($category_info) and $category_info['category_id'] != 86)): //weding rings?>
+                                                <button type="button" id="button-cart" class="btn w-btn-orange btn-lg" data-loading-text="<?php echo $text_loading; ?>"> <i class="bold-angle-right"></i> <?php echo $button_cart; ?></button>
+
                                             <?else:?>
-                                            <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart"> <i class="bold-angle-right"></i> Select this setting</button>
+                                                <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart"> <i class="bold-angle-right"></i>  Select this Item</button>
                                             <?endif?>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="visible-xs">
-                                    <div class="h3 text-center margin-top-0">Setting details</div>
+                                    <div class="h3 text-center margin-top-0">Select this Item</div>
                                     <div class="icons-quality_service_icon"></div>
                                     <div class="margin-buttom-0">
                                         <table class="table table-condensed">
@@ -649,14 +653,14 @@
                     <div class="product-modal-buttons">
                         <div class="row modal-btn-row">
                             <div class="col-xs-6">
-                                <button class="btn w-btn-orange btn-lg text-center"type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect">Add a diamond</button>
+                                <button class="btn w-btn-orange btn-lg text-center"type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect">Add a Diamond</button>
                             </div>
                             <div class="col-xs-6">
                                 <!-- DOTO: don't work btn-->
-                                <button class="btn w-btn-orange btn-lg text-center">Add a gemstone</button>
+                                <button class="btn w-btn-orange btn-lg text-center">AAdd a Gemstone</button>
                             </div>
                         </div>
-                        <button type="button" data-dismiss="modal" aria-hidden="true" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn w-btn-orange btn-lg text-center"> <span class="add-tocart-ico"></span> <?php echo $button_cart; ?></button>
+                        <button type="button" data-dismiss="modal" aria-hidden="true" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn w-btn-orange btn-lg text-center"> <span class="add-tocart-ico"></span> Add to Cart</button>
                     </div>
                 </div>
             </div>
