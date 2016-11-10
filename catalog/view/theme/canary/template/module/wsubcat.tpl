@@ -25,7 +25,7 @@
                         <div class="filter-col-options">
                             <div class=" btn-group-filter box-color gemstones-box rings-box" >
                                 <div class="all-line-filter">
-                                    <a href="#" class="active">All</a>
+                                    <a href="/engagement-rings" class="active">All</a>
                                 </div>
                                 <?php foreach ($wsubcategory as $key => $row):?>
                                 <?php

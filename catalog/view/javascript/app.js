@@ -356,6 +356,8 @@ $(document).on('click', '#w-button-add-product-complect', function(){
 });
 
 
+
+
 $(document).on('click', '#w-button-add-diamond-complect', function(){
 
     var $this = $(this);

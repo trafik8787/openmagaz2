@@ -653,11 +653,11 @@
                     <div class="product-modal-buttons">
                         <div class="row modal-btn-row">
                             <div class="col-xs-6">
-                                <button class="btn w-btn-orange btn-lg text-center"type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect">Add a Diamond</button>
+                                <button class="btn w-btn-orange btn-lg text-center" type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect">Add a Diamond</button>
                             </div>
                             <div class="col-xs-6">
                                 <!-- DOTO: don't work btn-->
-                                <button class="btn w-btn-orange btn-lg text-center">AAdd a Gemstone</button>
+                                <button class="btn w-btn-orange btn-lg text-center">Add a Gemstone</button>
                             </div>
                         </div>
                         <button type="button" data-dismiss="modal" aria-hidden="true" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn w-btn-orange btn-lg text-center"> <span class="add-tocart-ico"></span> Add to Cart</button>
