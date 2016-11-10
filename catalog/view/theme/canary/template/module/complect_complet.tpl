@@ -119,7 +119,7 @@
                                             <div class="price-product total-price"><span class="total-complet">Total:</span>$<?php echo $CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price?></div>
                                         </div>
                                         <div class="right">
-                                            <button class="btn w-btn-orange btn-lg" id="w-complect-button-cart" data-loading-text="Loading..." role="button" type="button" > <i class="bold-angle-right"></i> Add to cart</button>
+                                            <button class="btn w-btn-orange btn-lg" id="w-complect-button-cart" onmouseup="ga('send', 'event', 'button, 'click', 'Add to Cart');" data-loading-text="Loading..." role="button" type="button" > <i class="bold-angle-right"></i> Add to cart</button>
                                         </div>
                                     </div>
                                 </div>

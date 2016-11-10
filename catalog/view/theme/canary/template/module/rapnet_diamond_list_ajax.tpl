@@ -72,7 +72,8 @@
                     </div>
                     <button type="button" data-dismiss="modal" aria-hidden="true"
                             id="w-diamont-button-cart" data-loading-text="Loading..."
-                            class="btn w-btn-orange btn-lg text-center w-modal-button"> <span class="add-tocart-ico"></span> Add to cart</button>
+                            class="btn w-btn-orange btn-lg text-center w-modal-button"
+                            onmouseup="ga('send', 'event', 'button, 'click', 'Add to Cart');"> <span class="add-tocart-ico"></span> Add to cart</button>
                 </div>
 
             </div>

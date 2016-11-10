@@ -82,7 +82,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-4 clearfix">
-                                    <a href="<?php echo $checkout; ?>" class="btn w-btn-orange btn-lg w-general-category" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
+                                    <a href="<?php echo $checkout; ?>" onmouseup="ga('send', 'event', 'button, 'click', 'Checkout');" class="btn w-btn-orange btn-lg w-general-category" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +268,7 @@
                         <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card5.png" alt="card"></a>
                         <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card6.png" alt="card"></a>
                     </div>
-                    <a href="<?php echo $checkout; ?>" class="btn w-btn-orange btn-lg w-general-category"  role="button"><div class="icons-checkout"></div>CHECKOUT</a>
+                    <a href="<?php echo $checkout; ?>" class="btn w-btn-orange btn-lg w-general-category" onmouseup="ga('send', 'event', 'button, 'click', 'Checkout');" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
                     <a href="#" class="btn w-btn-white btn-lg" role="button"><i class="fa fa-chevron-right" aria-hidden="true"></i>Continue shopping</a>
                 </div>
                 <div class="cart-page-info">

@@ -4,8 +4,8 @@
         <input type="email" required="required" name="email" class="form-control newslet-email"  placeholder="Enter e-mail">
     </div>
 
-    <button value="1" name="sex" class="w-newsletter-button btn w-btn-orange2"  type="submit">Woman</button>
-    <button value="2"  name="sex" class="w-newsletter-button btn w-btn-orange2"  type="submit">Man</button>
+    <button value="1" name="sex" class="w-newsletter-button btn w-btn-orange2" onmouseup="ga('send', 'event', 'button, 'click', 'Email Subscription');" type="submit">Woman</button>
+    <button value="2"  name="sex" class="w-newsletter-button btn w-btn-orange2" onmouseup="ga('send', 'event', 'button, 'click', 'Email Subscription');" type="submit">Man</button>
 </form>
 
 

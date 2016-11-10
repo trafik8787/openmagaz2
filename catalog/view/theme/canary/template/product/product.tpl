@@ -379,13 +379,7 @@
                                                 <div class="box-img">
                                                     <a href="<?=$row['href']?>" class="w-product-ajax"><img src="<?=$row['img']?>" alt="<?=$row['name']?>" title="<?=$row['name']?>"></a>
                                                 </div>
-                                                <!--**-->
-                                                <div class="btn-box">
-                                                    <a href="#" type="button" onclick="cart.add('<?=$row['product_id']?>', '<?php echo $row['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                                    <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                                    <a href="<?=$row['href']?>" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                                    <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                                </div>
+
                                                 <div class="box-tovar-th">
                                                     <div class="name"><?=$row['name']?></div>
 
@@ -426,13 +420,7 @@
                                                 <div class="box-img">
                                                     <a href="<?=$matching['href']?>" class="w-product-ajax"><img src="<?=$matching['img']?>" alt="<?=$matching['name']?>" title="<?=$matching['name']?>"></a>
                                                 </div>
-                                                <!--**-->
-                                                <div class="btn-box">
-                                                    <a href="#" type="button" onclick="cart.add('<?=$matching['product_id']?>', '<?php echo $matching['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                                    <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                                    <a href="<?=$matching['href']?>" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                                    <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?=$matching['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                                </div>
+
                                                 <div class="box-tovar-th">
                                                     <div class="name"><?=$matching['name']?></div>
 
@@ -474,13 +462,7 @@
                                             <div class="box-img">
                                                 <a href="<?=$row['href']?>" class="w-product-ajax"><img src="<?=$row['img']?>" alt="<?=$row['name']?>" title="<?=$row['name']?>"></a>
                                             </div>
-                                            <!--**-->
-                                            <div class="btn-box">
-                                                <a href="#" type="button" onclick="cart.add('<?=$row['product_id']?>', '<?php echo $row['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to Cart"></a>
-                                                <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Compare this Product"></a>
-                                                <a href="<?=$row['href']?>" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="" data-original-title="Views"></a>
-                                                <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?=$row['product_id']?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"></a>
-                                            </div>
+
                                             <div class="box-tovar-th">
                                                 <div class="name"><?=$row['name']?></div>
 

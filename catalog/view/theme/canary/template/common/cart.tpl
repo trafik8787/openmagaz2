@@ -65,7 +65,7 @@
             <?endforeach?>
             <div class="box-btn clearfix">
                 <a href="<?php echo $cart; ?>" class="btn w-btn-orange btn-lg"><?php echo $text_cart; ?></a>
-                <a href="<?php echo $checkout; ?>" class="btn w-btn-orange btn-lg"><?php echo $text_checkout; ?></a>
+                <a href="<?php echo $checkout; ?>" onmouseup="ga('send', 'event', 'button, 'click', 'Checkout');" class="btn w-btn-orange btn-lg"><?php echo $text_checkout; ?></a>
             </div>
         </div>
 
