@@ -1,8 +1,17 @@
-<div class="clearfix">
-    <div class="bl-input must">
-        <input type="text" name="email" id="input-payment-email" placeholder="Enter Email" >
+<div class="line-with-input">
+    <div class="title-c">CUSTOMER INFORMATION</div>
+    <div class="clearfix">
+        <div class="bl-input must">
+            <input type="text" name="email" id="input-payment-email" placeholder="Enter Email" >
+        </div>
+        <div class="text-right-input">
+            or <a href="/login">login</a> with an existing account and return to checkout
+        </div>
     </div>
 </div>
+
+<div class="line-with-input">
+<div class="title-c">DELIVERY  INFORMATION</div>
 <div class="clearfix">
     <div class="bl-input must">
         <input type="text" name="firstname" id="input-payment-firstname" placeholder="First name">
@@ -56,6 +65,7 @@
         <input type="text" name="telephone" id="input-payment-telephone" placeholder="Phone number">
     </div>
 </div>
+
 
 
 <?php foreach ($custom_fields as $custom_field) { ?>
@@ -215,8 +225,8 @@
 
 <?php if ($text_agree) : ?>
 
-<div class="include-price-row no-bottom-margin">
-    <input type="checkbox" class="styled-checkbox styled-checkbox-before" id="pc3" name="agree" value="1">
+<div class="include-price-row no-bottom-margin" style="display: none">
+    <input type="checkbox" class="styled-checkbox styled-checkbox-before" checked="checked" id="pc3" name="agree" value="1">
     <label for="pc3"><?php echo $text_agree; ?></label>
 </div>
 
@@ -239,7 +249,7 @@
     Please make sure to provide a street address where a signature can be obtained for receipt
 </p>
 
-
+</div>
 
 
 <script type="text/javascript"><!--
@@ -351,20 +361,7 @@
         }, 500);
     });
     //--></script>
-<script type="text/javascript"><!--
-    $('.date').datetimepicker({
-        pickTime: false
-    });
 
-    $('.time').datetimepicker({
-        pickDate: false
-    });
-
-    $('.datetime').datetimepicker({
-        pickDate: true,
-        pickTime: true
-    });
-    //--></script>
 <script type="text/javascript"><!--
     $('#collapse-payment-address select[name=\'country_id\']').on('change', function () {
         $.ajax({

@@ -1,6 +1,6 @@
 <?php
 class ControllerCheckoutRegister extends Controller {
-	public function index() {
+	public function index($render = false) {
 		$this->load->language('checkout/checkout');
 
 		$data['text_checkout_payment_address'] = $this->language->get('text_checkout_payment_address');
@@ -97,9 +97,19 @@ class ControllerCheckoutRegister extends Controller {
 		}
 
 		$data['shipping_required'] = $this->cart->hasShipping();
+       // $data['address_id'] = $this->customer->getAddressId();
+
+
+
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/register.tpl')) {
-			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/register.tpl', $data));
+
+            if ($render == false) {
+                $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/register.tpl', $data));
+            } else {
+                return $this->load->view($this->config->get('config_template') . '/template/checkout/register.tpl', $data);
+            }
+
 		} else {
 			$this->response->setOutput($this->load->view('default/template/checkout/register.tpl', $data));
 		}

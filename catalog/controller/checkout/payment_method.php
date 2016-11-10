@@ -1,71 +1,25 @@
 <?php
 class ControllerCheckoutPaymentMethod extends Controller {
-	public function index() {
+	public function index($render = false) {
 		$this->load->language('checkout/checkout');
 
+//        $this->load->model('checkout/order');
+//
+//        dd($this->model_checkout_order->getOrder($this->session->data['order_id']));
+        //ОТКРІВАЕМ ДОСТУП К ВЫБОРУ МЕТОДА КОГДА АДРЕС СУЩЕСТВУЕТ
 		if (isset($this->session->data['payment_address'])) {
-			// Totals
-			$total_data = array();
-			$total = 0;
-			$taxes = $this->cart->getTaxes();
-
-			$this->load->model('extension/extension');
-
-			$sort_order = array();
-
-			$results = $this->model_extension_extension->getExtensions('total');
-
-			foreach ($results as $key => $value) {
-				$sort_order[$key] = $this->config->get($value['code'] . '_sort_order');
-			}
-
-			array_multisort($sort_order, SORT_ASC, $results);
-
-			foreach ($results as $result) {
-				if ($this->config->get($result['code'] . '_status')) {
-					$this->load->model('total/' . $result['code']);
-
-					$this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
-				}
-			}
-
-			// Payment Methods
-			$method_data = array();
-
-			$this->load->model('extension/extension');
-
-			$results = $this->model_extension_extension->getExtensions('payment');
-
-			$recurring = $this->cart->hasRecurringProducts();
-
-			foreach ($results as $result) {
-				if ($this->config->get($result['code'] . '_status')) {
-					$this->load->model('payment/' . $result['code']);
-
-					$method = $this->{'model_payment_' . $result['code']}->getMethod($this->session->data['payment_address'], $total);
-
-					if ($method) {
-						if ($recurring) {
-							if (method_exists($this->{'model_payment_' . $result['code']}, 'recurringPayments') && $this->{'model_payment_' . $result['code']}->recurringPayments()) {
-								$method_data[$result['code']] = $method;
-							}
-						} else {
-							$method_data[$result['code']] = $method;
-						}
-					}
-				}
-			}
-
-			$sort_order = array();
-
-			foreach ($method_data as $key => $value) {
-				$sort_order[$key] = $value['sort_order'];
-			}
-
-			array_multisort($sort_order, SORT_ASC, $method_data);
-
-			$this->session->data['payment_methods'] = $method_data;
+            $this->getMetodsPymant();
 		}
+
+
+//        if (!isset($this->session->data['payment_address']) and $render == true) {
+//            //ЗОНЫ по УМОЛЧАНИЮ для ОТОБРАЖЕНИЯ МЕТОДОВ
+//            $this->session->data['payment_address']['zone_id'] = 0;
+//            $this->session->data['payment_address']['country_id'] = 223;
+//            $this->getMetodsPymant();
+//        }
+
+
 
 		$data['text_payment_method'] = $this->language->get('text_payment_method');
 		$data['text_comments'] = $this->language->get('text_comments');
@@ -120,13 +74,18 @@ class ControllerCheckoutPaymentMethod extends Controller {
 		}
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/payment_method.tpl')) {
-			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/payment_method.tpl', $data));
+            if ($render == false) {
+                $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/payment_method.tpl', $data));
+            } else {
+                return $this->load->view($this->config->get('config_template') . '/template/checkout/payment_method.tpl', $data);
+            }
 		} else {
 			$this->response->setOutput($this->load->view('default/template/checkout/payment_method.tpl', $data));
 		}
 	}
 
 	public function save() {
+
 		$this->load->language('checkout/checkout');
 
 		$json = array();
@@ -179,10 +138,80 @@ class ControllerCheckoutPaymentMethod extends Controller {
 		if (!$json) {
 			$this->session->data['payment_method'] = $this->session->data['payment_methods'][$this->request->post['payment_method']];
 
-			$this->session->data['comment'] = strip_tags($this->request->post['comment']);
+			//$this->session->data['comment'] = strip_tags($this->request->post['comment']);
+            $this->session->data['comment'] = '';
 		}
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+
+	//получаем методы оплаты
+    public function getMetodsPymant() {
+        // Totals
+        $total_data = array();
+        $total = 0;
+        $taxes = $this->cart->getTaxes();
+
+        $this->load->model('extension/extension');
+
+        $sort_order = array();
+
+        $results = $this->model_extension_extension->getExtensions('total');
+
+        foreach ($results as $key => $value) {
+            $sort_order[$key] = $this->config->get($value['code'] . '_sort_order');
+        }
+
+        array_multisort($sort_order, SORT_ASC, $results);
+
+        foreach ($results as $result) {
+            if ($this->config->get($result['code'] . '_status')) {
+                $this->load->model('total/' . $result['code']);
+
+                $this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
+            }
+        }
+
+        // Payment Methods
+        $method_data = array();
+
+        $this->load->model('extension/extension');
+
+        $results = $this->model_extension_extension->getExtensions('payment');
+
+        $recurring = $this->cart->hasRecurringProducts();
+
+        foreach ($results as $result) {
+            if ($this->config->get($result['code'] . '_status')) {
+                $this->load->model('payment/' . $result['code']);
+
+                $method = $this->{'model_payment_' . $result['code']}->getMethod($this->session->data['payment_address'], $total);
+
+                if ($method) {
+                    if ($recurring) {
+                        if (method_exists($this->{'model_payment_' . $result['code']}, 'recurringPayments') && $this->{'model_payment_' . $result['code']}->recurringPayments()) {
+                            $method_data[$result['code']] = $method;
+                        }
+                    } else {
+                        $method_data[$result['code']] = $method;
+                    }
+                }
+            }
+        }
+
+        $sort_order = array();
+
+        foreach ($method_data as $key => $value) {
+            $sort_order[$key] = $value['sort_order'];
+        }
+
+        array_multisort($sort_order, SORT_ASC, $method_data);
+
+        $this->session->data['payment_methods'] = $method_data;
+    }
+
+
+
 }

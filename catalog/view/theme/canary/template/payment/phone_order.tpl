@@ -1,21 +1,19 @@
-<div class="h3 text-center"><?php echo $text_instruction; ?></div>
-<p class="text-center"><b><?php echo $text_description; ?></b></p>
-<div class="well well-sm">
-  <p><?php echo $bank; ?></p>
-  <p><?php echo $text_payment; ?></p>
+<div class="mark-line">
+    <i class="mark-check1"></i>
+    <?php echo $text_instruction; ?><br>
+    <!--*<?php echo $text_description; ?>*-->
+    <?php echo $text_payment; ?>
+</div>
+
+<div class="clearfix box-card-l" style="color: #fff">
+    <?php echo $bank; ?>
 </div>
 
 
-<div class="text-center">
-    <div class="box-btn-checkout">
-
-        <input type="button" class="btn login-form-btn btn-lg active-c" id="button-confirm" value="<?php echo $button_confirm; ?>" data-loading-text="<?php echo $text_loading; ?>"
-               style="width: 200px; display: inline-block;" />
-    </div>
-</div>
 
 <script type="text/javascript"><!--
-$('#button-confirm').on('click', function() {
+$('.box-btn-checkout').html('<button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-confirm" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>');
+$(document).on('click', '#button-confirm',   function() {
 	$.ajax({
 		type: 'get',
 		url: 'index.php?route=payment/phone_order/confirm',

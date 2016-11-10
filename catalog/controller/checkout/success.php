@@ -8,7 +8,7 @@ class ControllerCheckoutSuccess extends Controller {
 
 
 		if (isset($this->session->data['order_id'])) {
-
+            $data['dataLayerW'] = 1;
             $json_product = array();
 
             foreach ($cart['products'] as $row) {
@@ -76,7 +76,8 @@ class ControllerCheckoutSuccess extends Controller {
 			unset($this->session->data['totals']);
 
 		} else {
-            $this->response->redirect('/');
+            $data['dataLayerW'] = null;
+            //$this->response->redirect('/');
         }
 
 //        if (empty(Cookie::get('dataLayerW'))) {

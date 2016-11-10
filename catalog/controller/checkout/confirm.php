@@ -3,6 +3,9 @@ class ControllerCheckoutConfirm extends Controller {
 	public function index() {
 		$redirect = '';
 
+        $this->load->model('account/address');
+        $this->session->data['payment_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
+
 		if ($this->cart->hasShipping()) {
 			// Validate if shipping address has been set.
 			if (!isset($this->session->data['shipping_address'])) {
@@ -53,7 +56,20 @@ class ControllerCheckoutConfirm extends Controller {
 			}
 		}
 
-		if (!$redirect) {
+
+
+        if (!empty($this->request->post['cost'])) {
+            //dd($this->session->data);
+        }
+
+		//dd($this->request->post, true);
+		if (!empty($this->request->post['flag_load_paymants_form']) AND $this->request->post['flag_load_paymants_form'] == 1) {
+            $data['payment'] = $this->load->controller('payment/' . $this->session->data['payment_method']['code']);
+        }
+
+        //и если идет оплата то сохраняем ордер в базу
+		if (!$redirect and !empty($this->request->post['flag_load_paymants_form']) AND $this->request->post['flag_load_paymants_form'] == 2) {
+
 			$order_data = array();
 
 			$order_data['totals'] = array();
@@ -311,7 +327,9 @@ class ControllerCheckoutConfirm extends Controller {
 
 			$this->load->model('checkout/order');
 
-			$this->session->data['order_id'] = $this->model_checkout_order->addOrder($order_data);
+
+            $this->session->data['order_id'] = $this->model_checkout_order->addOrder($order_data);
+
 
 			$data['text_recurring_item'] = $this->language->get('text_recurring_item');
 			$data['text_payment_recurring'] = $this->language->get('text_payment_recurring');
@@ -406,9 +424,12 @@ class ControllerCheckoutConfirm extends Controller {
 				);
 			}
             //dd($this->session->data['payment_method']['code']);
-			$data['payment'] = $this->load->controller('payment/' . $this->session->data['payment_method']['code']);
+
+            $data['payment'] = $this->load->controller('payment/' . $this->session->data['payment_method']['code']);
+
+			//$data['payment'] = '';
 		} else {
-			$data['redirect'] = $redirect;
+			//$data['redirect'] = $redirect;
 		}
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/confirm.tpl')) {
