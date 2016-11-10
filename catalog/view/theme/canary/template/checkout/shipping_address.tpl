@@ -201,7 +201,7 @@
   </div>
 
     <div class="include-price-row no-bottom-margin">
-      <input type="button" value="<?php echo $button_continue; ?>" id="button-shipping-address" data-loading-text="<?php echo $text_loading; ?>" class="cc-continue-btn" />
+      <input type="button" value="<?php echo $button_continue; ?>" id="button-shipping-address" data-loading-text="<?php echo $text_loading; ?>" class="btn w-btn-orange2" />
     </div>
 
 

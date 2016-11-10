@@ -46,7 +46,7 @@
                                 <?php foreach ($addresses as $result):?>
                                     <tr>
                                         <td class="text-left"><?php echo $result['address']; ?></td>
-                                        <td class="text-right"><a href="<?php echo $result['update']; ?>" class="account-col-view-link w-general-category"><?php echo $button_edit; ?></a> &nbsp; <a href="<?php echo $result['delete']; ?>" class="account-col-view-link"><?php echo $button_delete; ?></a></td>
+                                        <td class="text-right"><a href="<?php echo $result['update']; ?>" class="btn w-btn-orange2 w-general-category"><?php echo $button_edit; ?></a> &nbsp; <a href="<?php echo $result['delete']; ?>" class="btn w-btn-orange2"><?php echo $button_delete; ?></a></td>
                                     </tr>
                                 <?endforeach?>
                             </table>
@@ -54,7 +54,7 @@
                             <p><?php echo $text_empty; ?></p>
                         <?endif?>
                         <div class="buttons clearfix">
-                            <div class="pull-right"><a href="<?php echo $add; ?>" class="account-col-view-link"><?php echo $button_new_address; ?></a></div>
+                            <div class="pull-right"><a href="<?php echo $add; ?>" class="btn w-btn-orange2"><?php echo $button_new_address; ?></a></div>
                         </div>
 
                     </div>

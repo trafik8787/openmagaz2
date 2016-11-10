@@ -36,6 +36,6 @@
 
 
     <div class="include-price-row no-bottom-margin">
-        <input type="submit" value="<?php echo $button_confirm; ?>" id="button-confirm" class="cc-continue-btn"/>
+        <input type="submit" value="<?php echo $button_confirm; ?>" id="button-confirm" class="btn w-btn-orange2"/>
     </div>
 </form>

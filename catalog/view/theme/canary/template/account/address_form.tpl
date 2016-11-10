@@ -301,8 +301,8 @@
 
                             <?php } ?>
                             <div class="include-price-row no-bottom-margin">
-                                <button type="submit" name="accaut_edit_submit" value="1" style="width: 50%"
-                                        class="cc-continue-btn"><?php echo $button_continue; ?></button>
+                                <button type="submit" name="accaut_edit_submit" value="1"
+                                        class="btn w-btn-orange2"><?php echo $button_continue; ?></button>
                             </div>
 
                         </form>

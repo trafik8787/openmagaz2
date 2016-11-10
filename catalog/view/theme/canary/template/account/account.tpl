@@ -50,10 +50,8 @@
                             <span class="account-col-prop">Number</span>
                             <span class="account-col-value"><?=$customer->getTelephone()?></span>
                         </div>
-                        <div class="account-col-row">
-                            <span class="account-col-prop">Delivery address</span>
-                            <span class="account-col-value">srteet.Odesskaya</span>
-                        </div>
+
+
                     </div>
                     <div class="account-col">
                         <div class="account-col-title">My orders</div>
@@ -65,7 +63,7 @@
                                     <span class="account-col-item">№<?php echo $row['order_id']; ?></span>
                                     <span class="account-col-item"><?php echo $row['total']; ?></span>
                                     <span class="account-col-item"><?php echo $row['status']; ?></span>
-                                    <span class="account-col-item"><a href="<?php echo $row['href']; ?>" data-toggle="tooltip" title="Views" class="account-col-view-link w-general-category"><i class="fa fa-eye"></i></a></span>
+                                    <span class="account-col-item"><a href="<?php echo $row['href']; ?>" data-toggle="tooltip" title="Views" class="btn w-btn-orange2 w-general-category"><i class="fa fa-eye"></i></a></span>
                                 </div>
                             </div>
                         <?endforeach?>

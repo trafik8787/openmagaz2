@@ -237,7 +237,7 @@
 </div>
 <?php else : ?>
 <div class="include-price-row no-bottom-margin">
-    <button class="cc-continue-btn" id="button-register"
+    <button class="btn w-btn-orange2" id="button-register"
             data-loading-text="<?php echo $text_loading; ?>"><?php echo $button_continue; ?></button>
 </div>
 
