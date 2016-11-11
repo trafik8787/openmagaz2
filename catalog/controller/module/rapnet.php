@@ -297,7 +297,7 @@ class ControllerModuleRapnet extends Controller {
             $carat_from = $carat_ex[0];
             $carat_to = $carat_ex[1];
         } else {
-            $carat_from = 0.5;
+            $carat_from = 0.25;
             $carat_to = 15;
         }
 
