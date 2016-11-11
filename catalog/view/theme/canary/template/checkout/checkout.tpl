@@ -292,7 +292,7 @@
                     $('.alert, .text-danger').remove();
 
                     if (json['redirect']) {
-                        location = json['redirect'];
+                        //location = json['redirect'];
                     } else if (json['error']) {
                         if (json['error']['warning']) {
                             $('#collapse-payment-method').prepend('<div class="alert alert-warning">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');

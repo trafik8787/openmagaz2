@@ -32,38 +32,48 @@ class ControllerCheckoutPaymentAddress extends Controller {
 
 		$data['addresses'] = $this->model_account_address->getAddresses();
 
-		if (isset($this->session->data['payment_address']['country_id'])) {
-			$data['country_id'] = $this->session->data['payment_address']['country_id'];
-		} else {
-			$data['country_id'] = $this->config->get('config_country_id');
-		}
+        //dd($data['addresses'], true);
 
-		if (isset($this->session->data['payment_address']['zone_id'])) {
-			$data['zone_id'] = $this->session->data['payment_address']['zone_id'];
-		} else {
-			$data['zone_id'] = '';
-		}
+        //если адрес существует
+        if (!empty($data['addresses'])) {
 
-		$this->load->model('localisation/country');
 
-		$data['countries'] = $this->model_localisation_country->getCountries();
+            if (isset($this->session->data['payment_address']['country_id'])) {
+                $data['country_id'] = $this->session->data['payment_address']['country_id'];
+            } else {
+                $data['country_id'] = $this->config->get('config_country_id');
+            }
 
-		// Custom Fields
-		$this->load->model('account/custom_field');
+            if (isset($this->session->data['payment_address']['zone_id'])) {
+                $data['zone_id'] = $this->session->data['payment_address']['zone_id'];
+            } else {
+                $data['zone_id'] = '';
+            }
 
-		$data['custom_fields'] = $this->model_account_custom_field->getCustomFields($this->config->get('config_customer_group_id'));
+            $this->load->model('localisation/country');
 
-		if (isset($this->session->data['payment_address']['custom_field'])) {
-			$data['payment_address_custom_field'] = $this->session->data['payment_address']['custom_field'];
-		} else {
-			$data['payment_address_custom_field'] = array();
-		}
+            $data['countries'] = $this->model_localisation_country->getCountries();
 
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/payment_address.tpl')) {
-			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/payment_address.tpl', $data));
-		} else {
-			$this->response->setOutput($this->load->view('default/template/checkout/payment_address.tpl', $data));
-		}
+            // Custom Fields
+            $this->load->model('account/custom_field');
+
+            $data['custom_fields'] = $this->model_account_custom_field->getCustomFields($this->config->get('config_customer_group_id'));
+
+            if (isset($this->session->data['payment_address']['custom_field'])) {
+                $data['payment_address_custom_field'] = $this->session->data['payment_address']['custom_field'];
+            } else {
+                $data['payment_address_custom_field'] = array();
+            }
+
+
+            if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/payment_address.tpl')) {
+                $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/payment_address.tpl', $data));
+            } else {
+                $this->response->setOutput($this->load->view('default/template/checkout/payment_address.tpl', $data));
+            }
+        } else {
+            $this->response->setOutput($this->load->controller('checkout/register', true));
+        }
 	}
 
 	public function save() {

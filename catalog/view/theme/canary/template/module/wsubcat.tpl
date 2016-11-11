@@ -107,19 +107,19 @@
 
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[2]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[2]['href']?>" class="filter-option-img-wrapper"><i class="wedding1"></i></a>
-                                        <span><?php echo $wsubcategory[2]['name']?></span>
+                                        <span>Classik</span>
                                     </label>
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[3]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[3]['href']?>" class="filter-option-img-wrapper"><i class="wedding3"></i></a>
-                                        <span><?php echo $wsubcategory[3]['name']?></span>
+                                        <span>Diamond</span>
                                     </label>
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[4]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[4]['href']?>" class="filter-option-img-wrapper"><i class="wedding5"></i></a>
-                                        <span><?php echo $wsubcategory[4]['name']?></span>
+                                        <span>Eternity</span>
                                     </label>
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[5]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[5]['href']?>" class="filter-option-img-wrapper"><i class="wedding2"></i></a>
-                                        <span><?php echo $wsubcategory[5]['name']?></span>
+                                        <span>Stackable</span>
                                     </label>
                                 </div>
                             </div>
@@ -131,15 +131,15 @@
 
                                     <label class="btn btn-filter<?php if ($child_id == $wsubcategory[6]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[6]['href']?>" class="filter-option-img-wrapper"><i class="wedding1"></i></a>
-                                        <span> <?php echo $wsubcategory[6]['name']?></span>
+                                        <span>Classic</span>
                                     </label>
                                     <label class="btn btn-filter<?php if ($child_id == $wsubcategory[7]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[7]['href']?>" class="filter-option-img-wrapper"><i class="wedding3"></i></a>
-                                        <span><?php echo $wsubcategory[7]['name']?></span>
+                                        <span>Diamond</span>
                                     </label>
                                     <label class="btn btn-filter<?php if ($child_id == $wsubcategory[8]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[8]['href']?>" class="filter-option-img-wrapper"><i class="wedding7"></i></a>
-                                        <span><?php echo $wsubcategory[8]['name']?></span>
+                                        <span>Modern</span>
                                     </label>
                                 </div>
                             </div>
@@ -158,15 +158,15 @@
 
                                     <label class="btn btn-filter<?php if ($child_id == $wsubcategory[6]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[6]['href']?>" class="filter-option-img-wrapper"><i class="wedding1"></i></a>
-                                        <span> <?php echo $wsubcategory[6]['name']?></span>
+                                        <span>Classic</span>
                                     </label>
                                     <label class="btn btn-filter<?php if ($child_id == $wsubcategory[7]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[7]['href']?>" class="filter-option-img-wrapper"><i class="wedding3"></i></a>
-                                        <span><?php echo $wsubcategory[7]['name']?></span>
+                                        <span>Diamond</span>
                                     </label>
                                     <label class="btn btn-filter<?php if ($child_id == $wsubcategory[8]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[8]['href']?>" class="filter-option-img-wrapper"><i class="wedding7"></i></a>
-                                        <span><?php echo $wsubcategory[8]['name']?></span>
+                                        <span>Modern</span>
                                     </label>
                                 </div>
                             </div>
@@ -187,19 +187,19 @@
 
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[2]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[2]['href']?>" class="filter-option-img-wrapper"><i class="wedding1"></i></a>
-                                        <span><?php echo $wsubcategory[2]['name']?></span>
+                                        <span>Classik</span>
                                     </label>
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[3]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[3]['href']?>" class="filter-option-img-wrapper"><i class="wedding3"></i></a>
-                                        <span><?php echo $wsubcategory[3]['name']?></span>
+                                        <span>Diamond</span>
                                     </label>
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[4]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[4]['href']?>" class="filter-option-img-wrapper"><i class="wedding5"></i></a>
-                                        <span><?php echo $wsubcategory[4]['name']?></span>
+                                        <span>Eternity</span>
                                     </label>
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[5]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[5]['href']?>" class="filter-option-img-wrapper"><i class="wedding2"></i></a>
-                                        <span><?php echo $wsubcategory[5]['name']?></span>
+                                        <span>Stackable</span>
                                     </label>
                                 </div>
                             </div>

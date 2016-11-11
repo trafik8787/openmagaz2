@@ -48,6 +48,18 @@ class ControllerCheckoutRegister extends Controller {
 
 		$data['customer_group_id'] = $this->config->get('config_customer_group_id');
 
+        //dd($this->customer->getEmail());
+
+        if ($this->customer->isLogged()) {
+            $data['v_email'] = $this->customer->getEmail();
+            $data['v_firstname'] = $this->customer->getFirstName();
+            $data['v_lastname'] = $this->customer->getLastName();
+        } else {
+            $data['v_email'] = '';
+            $data['v_firstname'] = '';
+            $data['v_lastname'] = '';
+        }
+
 		if (isset($this->session->data['shipping_address']['postcode'])) {
 			$data['postcode'] = $this->session->data['shipping_address']['postcode'];
 		} else {
@@ -121,9 +133,9 @@ class ControllerCheckoutRegister extends Controller {
 		$json = array();
 
 		// Validate if customer is already logged out.
-		if ($this->customer->isLogged()) {
-			$json['redirect'] = $this->url->link('checkout/checkout', '', 'SSL');
-		}
+//		if ($this->customer->isLogged()) {
+//			$json['redirect'] = $this->url->link('checkout/checkout', '', 'SSL');
+//		}
 
 		// Validate cart has products and has stock.
 		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
@@ -163,11 +175,11 @@ class ControllerCheckoutRegister extends Controller {
 			if ((utf8_strlen($this->request->post['email']) > 96) || !preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $this->request->post['email'])) {
 				$json['error']['email'] = $this->language->get('error_email');
 			}
-
-			if ($this->model_account_customer->getTotalCustomersByEmail($this->request->post['email'])) {
-				$json['error']['warning'] = $this->language->get('error_exists');
-			}
-
+            if (!$this->customer->isLogged()) {
+                if ($this->model_account_customer->getTotalCustomersByEmail($this->request->post['email'])) {
+                    $json['error']['warning'] = $this->language->get('error_exists');
+                }
+            }
 			if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
 				$json['error']['telephone'] = $this->language->get('error_telephone');
 			}

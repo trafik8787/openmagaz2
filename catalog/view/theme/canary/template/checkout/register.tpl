@@ -2,7 +2,7 @@
     <div class="title-c">CUSTOMER INFORMATION</div>
     <div class="clearfix">
         <div class="bl-input must">
-            <input type="text" name="email" id="input-payment-email" placeholder="Enter Email" >
+            <input type="text" name="email" id="input-payment-email" value="<?=$v_email?>" placeholder="Enter Email" >
         </div>
         <div class="text-right-input">
             or <a href="/login">login</a> with an existing account and return to checkout
@@ -14,10 +14,10 @@
 <div class="title-c">DELIVERY  INFORMATION</div>
 <div class="clearfix">
     <div class="bl-input must">
-        <input type="text" name="firstname" id="input-payment-firstname" placeholder="First name">
+        <input type="text" name="firstname" value="<?=$v_firstname?>" id="input-payment-firstname" placeholder="First name">
     </div>
     <div class="bl-input must">
-        <input type="text" name="lastname" id="input-payment-lastname" placeholder="Last name">
+        <input type="text" name="lastname"  value="<?=$v_lastname?>" id="input-payment-lastname" placeholder="Last name">
     </div>
 </div>
 <div class="clearfix">
