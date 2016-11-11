@@ -171,27 +171,6 @@
                             <div id="MenuMobile2" class="panel-collapse collapse">
                                 <div class="panel-body">
 
-                                    <div class="panel-group" id="rubricMenu-man">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#rubricMenu-man" href="#rubricMenu1">
-                                                        WEDDING RINGS FOR MAN
-                                                    </a>
-                                                </h4>
-                                            </div>
-                                            <div id="rubricMenu1" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                    <ul class="main-rubric">
-                                                        <li><a href="<?php echo $categories[2]['children'][4]['href']?>"><?php echo $categories[2]['children'][4]['name']?></a></li>
-                                                        <li><a href="<?php echo $categories[2]['children'][5]['href']?>"><?php echo $categories[2]['children'][5]['name']?></a></li>
-                                                        <li><a href="<?php echo $categories[2]['children'][6]['href']?>"><?php echo $categories[2]['children'][6]['name']?></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="panel-group" id="rubricMenu-woman">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
@@ -204,15 +183,37 @@
                                             <div id="rubricMenu2" class="panel-collapse collapse">
                                                 <div class="panel-body">
                                                     <ul class="main-rubric">
-                                                        <li><a href="<?php echo $categories[2]['children'][0]['href']?>"><?php echo $categories[2]['children'][0]['name']?></a></li>
-                                                        <li><a href="<?php echo $categories[2]['children'][1]['href']?>"><?php echo $categories[2]['children'][1]['name']?></a></li>
-                                                        <li><a href="<?php echo $categories[2]['children'][2]['href']?>"><?php echo $categories[2]['children'][2]['name']?></a></li>
-                                                        <li><a href="<?php echo $categories[2]['children'][3]['href']?>"><?php echo $categories[2]['children'][3]['name']?></a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][2]['href']?>">CLASSIK</a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][3]['href']?>">DIAMOND</a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][4]['href']?>">ETERNITY</a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][5]['href']?>">STACKABLE</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="panel-group" id="rubricMenu-man">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#rubricMenu-man" href="#rubricMenu1">
+                                                        WEDDING RINGS FOR MAN
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="rubricMenu1" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="main-rubric">
+                                                        <li><a href="<?php echo $categories[2]['children'][6]['href']?>">CLASSIC</a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][7]['href']?>">DIAMOND</a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][8]['href']?>">MODERN</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                 </div>
                             </div>
