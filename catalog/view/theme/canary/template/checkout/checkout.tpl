@@ -39,7 +39,7 @@
                                     <div class="summary-item">
                                         <div class="summary-item-img">
                                             <img src="<?=$row_cart[0]['thumb']?>" alt="">
-                                            <img src="<?=$row_cart[1]['thumb']?>" alt="">
+                                            <!--*<img src="<?=$row_cart[1]['thumb']?>" alt="">*-->
                                         </div>
                                         <div class="wrapper-text-checkout">
                                             <a href="<?=$row_cart[0]['href']?>" class="summary-item-title"><?=$row_cart[0]['name']?> :X <?=$row_cart[0]['quantity']?></a>

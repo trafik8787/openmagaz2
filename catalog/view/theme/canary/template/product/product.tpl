@@ -265,6 +265,8 @@
                                             <?if ($path == 69 or ($path == 82 and !empty($category_info) and $category_info['category_id'] != 86)): //weding rings?>
                                                 <button type="button" id="button-cart" class="btn w-btn-orange btn-lg" data-loading-text="<?php echo $text_loading; ?>"> <i class="bold-angle-right"></i> <?php echo $button_cart; ?></button>
 
+                                            <?elseif ($path == 94): //GEMSTONES?>
+                                                <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart-gemstones"> <i class="bold-angle-right"></i>  Select this Item</button>
                                             <?else:?>
                                                 <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart"> <i class="bold-angle-right"></i>  Select this Item</button>
                                             <?endif?>
@@ -332,7 +334,7 @@
                             <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                         </li>
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
-                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
+                        <!--*<li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>*-->
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                         <li>
                             <!-- space for chare -->
@@ -667,6 +669,34 @@
         </div>
     </div>
 
+
+    <div class="modal fade styled-modal" id="w-modal-cart-gemstones" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+                <div class="modal-body">
+                    <div class="styled-modal-header">
+                        <div class="styled-modal-title">What would you like to do?</div>
+                        <div class="icons-quality_service_icon"></div>
+                    </div>
+                    <div class="product-modal-buttons">
+                        <div class="row modal-btn-row">
+                            <div class="col-xs-6">
+                                <button class="btn w-btn-orange btn-lg text-center" type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect">Add Gemstone to a Ring</button>
+                            </div>
+                            <div class="col-xs-6">
+                                <!-- DOTO: don't work btn-->
+                                <button class="btn w-btn-orange btn-lg text-center">Add Gemstone to a Pendant</button>
+                            </div>
+                        </div>
+                        <button type="button" data-dismiss="modal" aria-hidden="true" id="button-cart-gemstones" data-loading-text="<?php echo $text_loading; ?>" class="btn w-btn-orange btn-lg text-center"> <span class="add-tocart-ico"></span> Add Gemstone to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </main>
 
 
@@ -707,7 +737,7 @@
 
 
     //add product to cart
-    $('#button-cart').on('click', function() {
+    $('#button-cart, #button-cart-gemstones').on('click', function() {
         $.ajax({
             url: '/index.php?route=checkout/cart/add',
             type: 'post',

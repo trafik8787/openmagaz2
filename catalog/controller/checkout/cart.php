@@ -81,7 +81,7 @@ class ControllerCheckoutCart extends Controller {
 
             //получаем продукры которые были добавлены в корзину
 			$products = $this->cart->getProducts();
-
+            //dd($products);
             $products3_complect = $products;
             //dd($products);
 			foreach ($products as $product) {
@@ -237,6 +237,7 @@ class ControllerCheckoutCart extends Controller {
 
                     $data['products'][] = array(
                         'cart_id' => $product['cart_id'],
+                        'category_id' => !empty($product['category_id']) ? $product['category_id'] : '',
                         'diamond' => isset($product['diamond']) ? $product['diamond'] : 0, //добавлен флаг
                         'sku'     => $product['sku'],
                         'thumb' => $image,

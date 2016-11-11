@@ -90,7 +90,7 @@
                 </div>
                 <div class="wrapper-cart-box">
 
-                    <?//dd($products)?>
+
                     <form action="<?php echo $action; ?>" method="post" class="w-form-cart-sub" enctype="multipart/form-data">
 
                         <?php foreach ($products as $product) :?>
@@ -112,8 +112,7 @@
                                         <?endforeach?>
                                         <!--*<label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>*-->
                                         <p>SKU: <?=$product[1]['sku']?></p>
-
-
+                                        
                                     </div>
                                     <div class="number-block">
                                         <div class="price"><?=$product[0]['total']?></div><br/>
@@ -138,12 +137,14 @@
                                         <!--*<label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>*-->
                                     </div>
                                     <div class="number-block">
-                                        <div class="quantity">Quantity</div>
-                                        <div class="box-number-switch">
-                                            <a href="#" class="arrow-btn-number arrow-t" data-action="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-                                            <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" class="quantity-input" >
-                                            <a href="#" class="arrow-btn-number arrow-b" data-action="minus"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                        </div>
+                                        <?if($product['category_id'] != 94 AND $product['category_id'] != 68 AND $product['category_id'] != ''):?>
+                                            <div class="quantity">Quantity</div>
+                                            <div class="box-number-switch">
+                                                <a href="#" class="arrow-btn-number arrow-t" data-action="plus"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                                                <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" class="quantity-input" >
+                                                <a href="#" class="arrow-btn-number arrow-b" data-action="minus"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                            </div>
+                                        <?endif?>
                                         <div class="price"><?=$product['total']?></div>
                                     </div>
                                 </div>

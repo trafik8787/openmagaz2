@@ -42,9 +42,9 @@ class Cart {
 		$this->product_data = array();
 
         //add  AND diamond <> 0
-		$cart_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND diamond = 0");
-
-
+		$cart_query = $this->db->query("SELECT DISTINCT  * FROM " . DB_PREFIX . "cart cr LEFT JOIN ". DB_PREFIX ."product_to_category ptc ON (cr.product_id = ptc.product_id) INNER JOIN ".DB_PREFIX."category cat ON (ptc.category_id = cat.category_id) WHERE cr.customer_id = '" . (int)$this->customer->getId() . "' AND cr.session_id = '" . $this->db->escape($this->session->getId()) . "' AND cr.diamond = 0 AND cat.parent_id = 0");
+        //$cart_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND diamond = 0");
+       // dd($cart_query->rows, true);
 
 
         foreach ($cart_query->rows as $cart) {
@@ -251,6 +251,7 @@ class Cart {
 
                 $this->product_data[] = array(
                     'cart_id' => $cart['cart_id'],
+                    'category_id' => !empty($cart['category_id']) ? $cart['category_id'] : '',
                     'sku'     => $product_query->row['sku'],
                     'product_id' => $product_query->row['product_id'],
                     'name' => $product_query->row['name'],
