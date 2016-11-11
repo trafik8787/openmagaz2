@@ -605,7 +605,10 @@ button:hover, button:focus {
 .user-line .telephone i {
   margin-right: 5px; }
 .user-line .telephone span {
-  display: inline-block; }
+  display: inline-block;
+  font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
+}
 .user-line .logo {
   display: none; }
 
@@ -834,7 +837,8 @@ input:focus{
   margin: 0;
   padding: 0 0 5px;
   color: #39487d;
-  font-family: "Montserrat-Regular", fantasy;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
   font-size: 17px;
   line-height: 1;
 }
@@ -920,7 +924,8 @@ input:focus{
 
 .head-basket-item-price {
   color: #39487d;
-  font-family: "Montserrat-Regular", fantasy;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
   font-size: 17px;
   line-height: 1;
   margin: 10px 0 0;
@@ -929,7 +934,8 @@ input:focus{
 .head-basket-options {
   margin: 7px -4px 0;
   color: #a0a0a0;
-  font-family: "Montserrat-Regular", fantasy;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
   font-size: 12px;
   line-height: 1.1;
 }
@@ -941,7 +947,8 @@ input:focus{
 
 .head-basket-item-qty {
   color: #39487d;
-  font-family: "Montserrat-Regular", fantasy;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
   font-size: 15px;
   line-height: 1;
   margin: 7px 0 0;
@@ -1114,7 +1121,8 @@ input:focus{
   left: 15px;
   box-shadow: -1px 1px 1px #2f4680;
   color: #ffffff;
-  font-family: "Montserrat-Regular", fantasy;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
 }
 
 .w-blog-section .thumbnail .marc-date strong {
@@ -4974,7 +4982,8 @@ footer > section .row {
   display: inline;
 }
 .w-checed-list .label--checkbox .number-circle{
-  font-family: "Montserrat-Regular", sans-serif;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
 }
 
 .w-gems-filtr-cecbox .w-checed-list .list__item {
@@ -5290,7 +5299,8 @@ footer > section .row {
   font-size: 16px;
   border: 0; }
 .list-product .filter-product-line .dropdown select {
-  font-family: "Montserrat-Regular";
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
   font-size: 12px;
   border-radius: 0; }
 .list-product .filter-product-line .dropdown .dropdown-menu {
@@ -8020,7 +8030,8 @@ footer > section .row {
   font-size: 29px;
   box-shadow: -1px 1px 1px #2f4680;
   color: #ffffff;
-  font-family: "Montserrat-Regular", fantasy;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
 }
 
 .wrapper-post-stat .thumbnail img{
@@ -8205,7 +8216,8 @@ footer > section .row {
 .matching-cart .price{
   margin-bottom: 20px;
   color: #2b2a29;
-  font-family: "Montserrat-Regular";
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
   font-size: 15px;
   line-height: 15px;
 }
@@ -8361,7 +8373,8 @@ footer > section .row {
   border-radius:3px;
   border: 1px solid #d3d3d3;
   color: #9d9e9e;
-  font-family: "Montserrat-Regular";
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
   font-size: 12px;
   line-height: 12px;
 }
@@ -8377,7 +8390,8 @@ footer > section .row {
   right: 0;
   text-decoration: line-through;
   color: #9d9e9e;
-  font-family: "Montserrat-Regular";
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
   font-size: 21px;
   line-height: 21px;
 }

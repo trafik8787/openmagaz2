@@ -2227,13 +2227,15 @@ star-rating
     height: 37px;
     padding: 0 14px;
     color: #9b9c9c;
-    font-family: 'Montserrat-Regular', fantasy;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
     font-size: 12px;
 }
 
 .size-product .dropdown li {
     color: #333;
-    font-family: 'Montserrat-Regular', fantasy;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
     font-size: 12px;
 }
 
@@ -2268,7 +2270,8 @@ star-rating
 .size-product .shipping-label {
     height: 37px;
     color: #9b9c9c;
-    font-family: 'Montserrat-Regular', fantasy;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
     font-size: 12px;
     cursor: pointer;
 }
@@ -2297,7 +2300,8 @@ star-rating
 
 .size-product .select-simulate-list a {
     color: #333;
-    font-family: 'Montserrat-Regular', fantasy;
+    font-family: 'Raleway-Regular', fantasy;
+    font-weight: bold;
     font-size: 12px;
 }
 
