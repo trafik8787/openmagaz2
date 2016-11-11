@@ -213,7 +213,7 @@
                             <tr>
                                 <td>Fedex Shipping:</td>
                                 <td>
-                                    <?if ($totals[0]['text'] > 500):?>
+                                    <?if ($totals[0]['value'] > 500):?>
                                     FedEx Priority Overnight &reg;
                                     <?else:?>
                                     FedEx Ground &reg;
@@ -269,7 +269,7 @@
                         <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card6.png" alt="card"></a>
                     </div>
                     <a href="<?php echo $checkout; ?>" class="btn w-btn-orange btn-lg w-general-category" onmouseup="ga('send', 'event', 'button, 'click', 'Checkout');" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
-                    <a href="#" class="btn w-btn-white btn-lg" role="button"><i class="fa fa-chevron-right" aria-hidden="true"></i>Continue shopping</a>
+                    <a href="<?=$continue_shoping?>" class="btn w-btn-white btn-lg" role="button"><i class="fa fa-chevron-right" aria-hidden="true"></i>Continue shopping</a>
                 </div>
                 <div class="cart-page-info">
                     For Saturday delivery, contact customer service at <b>800-214-6550  |  24/7</b><br/>

@@ -8447,7 +8447,7 @@ footer > section .row {
 }
 
 .total-cart-pay .all-numbers table td:nth-child(2){
-  padding: 5px 0 5px 20px;
+  padding: 5px 0 5px 3px;
   font-size: 17px;
   font-family: "Montserrat-Regular";
 }
@@ -8468,7 +8468,7 @@ footer > section .row {
   width: 100%;
 }
 .total-cart-pay .all-numbers{
-  width: 250px;
+  width: 340px;
   float: right;
 }
 

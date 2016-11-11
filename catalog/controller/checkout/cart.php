@@ -277,6 +277,8 @@ class ControllerCheckoutCart extends Controller {
 			$total = 0;
 			$taxes = $this->cart->getTaxes();
 
+            $data['continue_shoping'] = !empty($this->request->server['HTTP_REFERER']) ? $this->request->server['HTTP_REFERER'] : '/';
+
 			// Display prices
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 				$sort_order = array();
@@ -311,7 +313,8 @@ class ControllerCheckoutCart extends Controller {
 			foreach ($total_data as $total) {
 				$data['totals'][] = array(
 					'title' => $total['title'],
-					'text'  => $this->currency->format($total['value'])
+					'text'  => $this->currency->format($total['value']),
+                    'value' => $total['value']
 				);
 			}
 
