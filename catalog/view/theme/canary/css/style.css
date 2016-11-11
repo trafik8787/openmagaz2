@@ -607,7 +607,6 @@ button:hover, button:focus {
 .user-line .telephone span {
   display: inline-block;
   font-family: 'Raleway-Regular', fantasy;
-    font-weight: bold;
 }
 .user-line .logo {
   display: none; }
