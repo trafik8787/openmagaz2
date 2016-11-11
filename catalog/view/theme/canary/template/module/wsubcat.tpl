@@ -107,7 +107,7 @@
 
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[2]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[2]['href']?>" class="filter-option-img-wrapper"><i class="wedding1"></i></a>
-                                        <span>Classik</span>
+                                        <span>Classic</span>
                                     </label>
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[3]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[3]['href']?>" class="filter-option-img-wrapper"><i class="wedding3"></i></a>
@@ -187,7 +187,7 @@
 
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[2]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[2]['href']?>" class="filter-option-img-wrapper"><i class="wedding1"></i></a>
-                                        <span>Classik</span>
+                                        <span>Classic</span>
                                     </label>
                                     <label class="btn btn-filter <?php if ($child_id == $wsubcategory[3]['cat_id']):?> active <?endif?> brackets">
                                         <a href="<?php echo $wsubcategory[3]['href']?>" class="filter-option-img-wrapper"><i class="wedding3"></i></a>

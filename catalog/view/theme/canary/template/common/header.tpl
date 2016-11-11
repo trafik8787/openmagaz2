@@ -183,7 +183,7 @@
                                             <div id="rubricMenu2" class="panel-collapse collapse">
                                                 <div class="panel-body">
                                                     <ul class="main-rubric">
-                                                        <li><a href="<?php echo $categories[2]['children'][2]['href']?>">CLASSIK</a></li>
+                                                        <li><a href="<?php echo $categories[2]['children'][2]['href']?>">CLASSIC</a></li>
                                                         <li><a href="<?php echo $categories[2]['children'][3]['href']?>">DIAMOND</a></li>
                                                         <li><a href="<?php echo $categories[2]['children'][4]['href']?>">ETERNITY</a></li>
                                                         <li><a href="<?php echo $categories[2]['children'][5]['href']?>">STACKABLE</a></li>
