@@ -7,10 +7,10 @@
                     <div class="w-category-gradient"></div>
                     <div class="h3 text-center">
                         <div class="icons-marcer_desing_left_icon"></div>
-                        <a href="/wedding-rings">Enagagamet Rings</a>
+                        <a href="/engagement-rings">Enagagamet Rings</a>
                         <div class="icons-marcer_desing_right_icon"></div>
                     </div>
-                    <img src="/catalog/view/theme/canary/img/bloc-home-category-best-360.jpg" alt="">
+                    <a href="/engagement-rings"><img src="/catalog/view/theme/canary/img/bloc-home-category-best-360.jpg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                         <a href="/wedding-rings">Wedding Rings</a>
                         <div class="icons-marcer_desing_right_icon"></div>
                     </div>
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/wedding_rings.jpg" alt="">
+                    <a href="/wedding-rings"><img src="/catalog/view/theme/canary/img/demo_new_template/wedding_rings.jpg" alt=""></a>
                 </div>
                 <div class="list-group text-center">
                     <a href="/wedding-rings/classic_woman" class="w-list-group-item">Classic Wedding Rings <span class="w-cur-left"></span></a>
@@ -41,10 +41,10 @@
                     <div class="w-category-gradient"></div>
                     <div class="h3 text-center">
                         <div class="icons-marcer_desing_left_icon"></div>
-                        <a href="/fine_jeverly">Diamond Jewelry</a>
+                        <a href="/fine_jeverly/diamond_studs">Diamond Jewelry</a>
                         <div class="icons-marcer_desing_right_icon"></div>
                     </div>
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/diamons_jewelry.jpg" alt="">
+                    <a href="/fine_jeverly/diamond_studs"><img src="/catalog/view/theme/canary/img/demo_new_template/diamons_jewelry.jpg" alt=""></a>
                 </div>
                 <div class="list-group text-center">
                     <a href="/fine_jeverly/diamond_studs" class="w-list-group-item">Diamond Studs <span class="w-cur-left"></span></a>
@@ -61,10 +61,10 @@
                     <div class="w-category-gradient"></div>
                     <div class="h3 text-center">
                         <div class="icons-marcer_desing_left_icon"></div>
-                        <a href="#">Gemstones Jewelry</a>
+                        <a href="/fine_jeverly/gemstone_rings&filter=7">Gemstones Jewelry</a>
                         <div class="icons-marcer_desing_right_icon"></div>
                     </div>
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/gemstones_jewelry.jpg" alt="">
+                    <a href="/fine_jeverly/gemstone_rings&filter=7"><img src="/catalog/view/theme/canary/img/demo_new_template/gemstones_jewelry.jpg" alt=""></a>
                 </div>
                 <div class="list-group text-center">
                     <a href="/fine_jeverly/gemstone_earrings&filter=7" class="w-list-group-item">Gemstone Earrings <span class="w-cur-left"></span></a>
