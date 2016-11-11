@@ -93,7 +93,7 @@
 $('input[name=\'product\']').autocomplete({
 	source: function(request, response) {
 		$.ajax({
-			url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_name=' +  encodeURIComponent(request),
+			url: 'index.php?route=catalog/product/autocomplete&token=<?php echo $token; ?>&filter_product_sku=' +  encodeURIComponent(request),
 			dataType: 'json',
 			success: function(json) {
 				response($.map(json, function(item) {

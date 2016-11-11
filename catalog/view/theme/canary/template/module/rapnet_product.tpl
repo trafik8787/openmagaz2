@@ -36,7 +36,10 @@
             <div class="one-product clearfix">
                 <div class="one-product-slider hidden-xs">
                     <div class="slider-for">
-                        <div><img src="<?=imageDiamont($product->response->body->diamond->shape)?>" style="margin-left: auto; margin-right: auto; width: 100%;"></div>
+                        <div>
+                            <img src="<?=imageDiamont($product->response->body->diamond->shape)?>" style="margin-left: auto; margin-right: auto; width: 100%;">
+
+                        </div>
                     </div>
                     <div class="slider-nav">
                         <div class="wrapper-img-slider"><img src="<?=imageDiamont($product->response->body->diamond->shape)?>"></div>
