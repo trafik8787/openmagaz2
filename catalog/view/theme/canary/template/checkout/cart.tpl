@@ -301,9 +301,9 @@
 
 <script>
     $(document).ready(function () {
-       $(document).on('click', '.arrow-btn-number', function () {
-            $('.w-form-cart-sub').submit();
-       });
+//       $(document).on('click', '.arrow-btn-number', function () {
+//            $('.w-form-cart-sub').submit();
+//       });
 
         $(document).on('click', '.remove-ico', function () {
             $(this).closest('.one-line').detach();

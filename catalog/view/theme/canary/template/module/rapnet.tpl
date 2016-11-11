@@ -1141,7 +1141,17 @@
 
 
 
-        $(document).on('click', '.w-pagination-diamonts .arrow-btn-number', function(){
+        $(document).on('click', '.w-pagination-diamonts .arrow-btn-number-diamond', function(){
+
+
+             if ($(this).attr('data-action')=='plus'){
+                 $(this).parent().find('input').val(Number($(this).parent().find('input').val())+1);
+             }
+             else{
+                 if (Number($(this).parent().find('input').val())>1){
+                     $(this).parent().find('input').val(Number($(this).parent().find('input').val())-1);
+                 }
+             }
 
             var $gets = parseQueryString ($(this).data("href"));
             $url_page = '&page='+$gets['page'];

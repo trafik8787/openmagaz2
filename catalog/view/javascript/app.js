@@ -45,6 +45,10 @@ $(document).ready(function() {
                 $(this).parent().find('input').val(Number($(this).parent().find('input').val())-1);
             }
         }
+
+
+        $('.w-form-cart-sub').submit();
+
     });
 
     $(".mobile-menu-btn").click(function(){

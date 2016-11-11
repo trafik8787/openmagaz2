@@ -34,7 +34,7 @@ class Pagdiamond {
 
         if ($page > 1) {
 //            $output .= '<li><a href="' . str_replace('{page}', 1, $this->url) . '">' . $this->text_first . '</a></li>';
-            $output .= '<a href="#" class="diamond-catalog-top-pages-link arrow-btn-number prev" data-href="' . str_replace('{page}', 1, $this->url) . '" data-action="minus"> </a>';
+            $output .= '<a href="#" class="diamond-catalog-top-pages-link arrow-btn-number-diamond prev" data-href="' . str_replace('{page}', $page - 1, $this->url) . '" data-action="minus"> </a>';
         }
 
         if ($num_pages > 1) {
@@ -66,7 +66,7 @@ class Pagdiamond {
         }
 
         if ($page < $num_pages) {
-            $output .= '<a href="#" class="diamond-catalog-top-pages-link arrow-btn-number next" data-href="' . str_replace('{page}', $page + 1, $this->url) . '" data-action="plus"> </a>';
+            $output .= '<a href="#" class="diamond-catalog-top-pages-link arrow-btn-number-diamond next" data-href="' . str_replace('{page}', $page + 1, $this->url) . '" data-action="plus"> </a>';
            // $output .= '<li><a href="' . str_replace('{page}', $num_pages, $this->url) . '">' . $this->text_last . '</a></li>';
         }
 
