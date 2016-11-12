@@ -150,6 +150,36 @@ function rapnet2() {
  }
 
 
+function imageDiamontMin ($shapes) {
+
+    if ($shapes == 'Round') {
+        return '/image/shapes/min_25_25/round.jpg';
+    } elseif ($shapes == 'Pear') {
+        return '/image/shapes/min_25_25/pear.jpg';
+    } elseif ($shapes == 'Princess') {
+        return '/image/shapes/min_25_25/princess.jpg';
+    } elseif ($shapes == 'Marquise') {
+        return '/image/shapes/min_25_25/marquise.jpg';
+    } elseif ($shapes == 'Oval') {
+        return '/image/shapes/min_25_25/oval.jpg';
+    } elseif ($shapes == 'Radiant') {
+        return '/image/shapes/min_25_25/radiant.jpg';
+    } elseif ($shapes == 'Emerald') {
+        return '/image/shapes/min_25_25/merald.jpg';
+    } elseif ($shapes == 'Heart') {
+        return '/image/shapes/min_25_25/heart.jpg';
+    } elseif ($shapes == 'Cushion Modified') {
+        return '/image/shapes/min_25_25/cushion.jpg';
+    } elseif ($shapes == 'Cushion') {
+        return '/image/shapes/min_25_25/cushion.jpg';
+    } elseif ($shapes == 'Asscher') {
+        return '/image/shapes/min_25_25/asscher.jpg';
+    }
+
+
+}
+
+
 function imageDiamontIcon ($shapes) {
 
     if ($shapes == 'Round') {

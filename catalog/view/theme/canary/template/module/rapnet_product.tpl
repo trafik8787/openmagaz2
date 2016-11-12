@@ -38,7 +38,10 @@
                     <div class="slider-for">
                         <div>
                             <img src="<?=imageDiamont($product->response->body->diamond->shape)?>" style="margin-left: auto; margin-right: auto; width: 100%;">
-
+                            <div style="position: absolute;height: 25px;bottom: 20px;right: 78px;" >
+                                <img src="<?=imageDiamontMin($product->response->body->diamond->shape)?>" width="100%">
+                                <span style="left: 70px;position: relative;top: 4px;">Sample Image</span>
+                            </div>
                         </div>
                     </div>
                     <div class="slider-nav">
