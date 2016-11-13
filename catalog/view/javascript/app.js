@@ -323,7 +323,45 @@ $(document).on('click', '#w-button-add-product-complect', function(){
     var $select = $('#product select');
     var data = $('#product select, #product input[name=\'product_id\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select');
     $('.text-danger').detach();
-    if ($("select option:selected").val()) {
+
+    if ($(document).is("select option:selected")) {
+
+        if ($("select option:selected").val()) {
+
+            $.ajax({
+                url: '/index.php?route=module/complect/add_product_complect',
+                type: 'post',
+                data: data,
+                dataType: 'html',
+                beforeSend: function () {
+                    $this.button('loading');
+                },
+                complete: function () {
+                    $this.button('reset');
+                },
+                success: function (json) {
+                    $('.w-blocs-complects').empty();
+                    $('.w-blocs-complects').html(json);
+                    $('html, body').animate({scrollTop: 0}, 'slow');
+
+                    if ($.cookie('CanaryDiamontCom') != null) {
+                        window.location.href = '/complete_diamond';
+                    } else {
+                        window.location.href = '/diamonds';
+                    }
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+
+                }
+            });
+
+        } else {
+
+            $('.dropdown').after('<div class="text-danger">SIZE required!</div>');
+        }
+
+    } else {
 
         $.ajax({
             url: '/index.php?route=module/complect/add_product_complect',
@@ -341,7 +379,7 @@ $(document).on('click', '#w-button-add-product-complect', function(){
                 $('.w-blocs-complects').html(json);
                 $('html, body').animate({scrollTop: 0}, 'slow');
 
-                if ($.cookie('CanaryDiamontCom') != null) {
+                if ($.cookie('CanaryDiamontCom') != null || $.cookie('CanaryProductComGemstonToRing')) {
                     window.location.href = '/complete_diamond';
                 } else {
                     window.location.href = '/diamonds';
@@ -352,16 +390,129 @@ $(document).on('click', '#w-button-add-product-complect', function(){
 
             }
         });
-
-    } else {
-
-        $('.dropdown').after('<div class="text-danger">SIZE required!</div>');
     }
+
+
+});
+
+
+//добавить в complect Add a Gemstone
+$(document).on('click', '#w-button-add-product-complect-add-gemstones', function(){
+
+    var $this = $(this);
+
+    var $select = $('#product select');
+    var data = $('#product select, #product input[name=\'product_id\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select');
+    $('.text-danger').detach();
+
+    $.ajax({
+        url: '/index.php?route=module/complect/add_product_complect',
+        type: 'post',
+        data: data,
+        dataType: 'html',
+        beforeSend: function () {
+            $this.button('loading');
+        },
+        complete: function () {
+            $this.button('reset');
+        },
+        success: function (json) {
+            $('.w-blocs-complects').empty();
+            $('.w-blocs-complects').html(json);
+            $('html, body').animate({scrollTop: 0}, 'slow');
+
+            if ($.cookie('CanaryDiamontCom') != null) {
+                window.location.href = '/complete_diamond';
+            } else {
+                window.location.href = '/gemstones';
+            }
+
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+
+        }
+    });
+
+});
+
+
+//добавить в complect gemstones
+$(document).on('click', '#w-button-add-product-complect-gemstone-to-ring', function(){
+
+    var $this = $(this);
+
+    $.ajax({
+        url: '/index.php?route=module/complect/add_product_complect',
+        type: 'post',
+        data: {gemston_to_ring: 1, product_id: $('#product input[name=\'product_id\']').val()},
+        dataType: 'html',
+        beforeSend: function () {
+            $this.button('loading');
+        },
+        complete: function () {
+            $this.button('reset');
+        },
+        success: function (json) {
+            $('.w-blocs-complects').empty();
+            $('.w-blocs-complects').html(json);
+            $('html, body').animate({scrollTop: 0}, 'slow');
+
+
+            if ($.cookie('CanaryProductCom') != null) {
+                window.location.href = '/complete_diamond';
+            } else {
+                window.location.href = '/engagement-rings';
+            }
+
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+
+        }
+    });
+
+
+});
+
+
+$(document).on('click', '#w-button-add-product-complect-gemstone-to-pendant', function(){
+
+    var $this = $(this);
+
+    $.ajax({
+        url: '/index.php?route=module/complect/add_product_complect',
+        type: 'post',
+        data: {gemston_to_ring: 1, product_id: $('#product input[name=\'product_id\']').val()},
+        dataType: 'html',
+        beforeSend: function () {
+            $this.button('loading');
+        },
+        complete: function () {
+            $this.button('reset');
+        },
+        success: function (json) {
+            $('.w-blocs-complects').empty();
+            $('.w-blocs-complects').html(json);
+            $('html, body').animate({scrollTop: 0}, 'slow');
+
+
+            if ($.cookie('CanaryProductCom') != null) {
+                window.location.href = '/complete_diamond';
+            } else {
+                window.location.href = '/fine_jeverly/diamond_pendants';
+            }
+
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+
+        }
+    });
+
+
 });
 
 
 
-
+//to a rings
 $(document).on('click', '#w-button-add-diamond-complect', function(){
 
     var $this = $(this);
@@ -399,6 +550,43 @@ $(document).on('click', '#w-button-add-diamond-complect', function(){
 
 });
 
+//to a pendant
+$(document).on('click', '#w-button-add-diamond-complect-to-pendant', function(){
+
+    var $this = $(this);
+
+
+    $.ajax({
+        url: '/index.php?route=module/complect/add_product_complect',
+        type: 'post',
+        data: 'complect_id_diamond='+$this.data('idproduct')+'&shape='+$this.data('shape'),
+        dataType: 'html',
+        beforeSend: function() {
+            $this.button('loading');
+        },
+        complete: function() {
+            $this.button('reset');
+        },
+        success: function(json) {
+            $('.w-blocs-complects').empty();
+            $('.w-blocs-complects').html(json);
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+
+            if ($.cookie('CanaryProductCom') != null) {
+                window.location.href = '/complete_diamond';
+            } else {
+                window.location.href = '/fine_jeverly/diamond_pendants';
+            }
+
+
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+
+        }
+    });
+
+
+});
 
 
 $(document).on('click', '.w-remowe-diamond-complect', function(){

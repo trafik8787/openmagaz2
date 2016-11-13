@@ -592,7 +592,6 @@ class ControllerModuleRapnet extends Controller {
             $this->cache->set($diamond_id, $response);
 
         } else {
-
             $response = $this->cache->get($diamond_id);
         }
 

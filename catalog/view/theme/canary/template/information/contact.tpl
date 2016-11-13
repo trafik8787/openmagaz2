@@ -61,8 +61,8 @@
                             <p><a href="mailto:info@brilliantcanary.com">info@brilliantcanary.com</a></p>
                         </div>
                         <div class="contacts-info-block">
-                            <div class="contacts-info-img"><img src="/catalog/view/theme/canary/img/contacts-chat.png" alt=""></div>
-                            <p><strong>Chat Now:</strong></p>
+                            <div class="contacts-info-img"><a href="javascript:$zopim.livechat.window.show()"><img src="/catalog/view/theme/canary/img/contacts-chat.png" alt=""></a></div>
+                            <p><a href="javascript:$zopim.livechat.window.show()"><strong>Chat Online now:</strong></a></p>
                             <p>Get answers right away to any questions you may have.</p>
                         </div>
                         <div class="contacts-info-block">

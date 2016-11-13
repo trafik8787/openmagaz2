@@ -393,16 +393,21 @@ class ControllerCheckoutCart extends Controller {
 
 
     //доюавление продукта в корзину
-	public function add() {
+	public function add($product_Id = null) {
+
 		$this->load->language('checkout/cart');
 
 		$json = array();
 
-		if (isset($this->request->post['product_id'])) {
-			$product_id = (int)$this->request->post['product_id'];
-		} else {
-			$product_id = 0;
-		}
+        if ($product_Id != null) {
+            $product_id = $product_Id;
+        } else {
+            if (isset($this->request->post['product_id'])) {
+                $product_id = (int)$this->request->post['product_id'];
+            } else {
+                $product_id = 0;
+            }
+        }
 
 		$this->load->model('catalog/product');
 
@@ -421,7 +426,7 @@ class ControllerCheckoutCart extends Controller {
 				$option = array();
 			}
 
-			$product_options = $this->model_catalog_product->getProductOptions($this->request->post['product_id']);
+			$product_options = $this->model_catalog_product->getProductOptions($product_id);
 
 			foreach ($product_options as $product_option) {
 				if ($product_option['required'] && empty($option[$product_option['product_option_id']])) {
@@ -450,9 +455,9 @@ class ControllerCheckoutCart extends Controller {
 			}
 
 			if (!$json) {
-				$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id, 0, $this->uid);
+				$this->cart->add($product_id, $quantity, $option, $recurring_id, 0, $this->uid);
 
-				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
+				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $product_id), $product_info['name'], $this->url->link('checkout/cart'));
 
 				// Unset all shipping and payment methods
 				unset($this->session->data['shipping_method']);
@@ -505,7 +510,7 @@ class ControllerCheckoutCart extends Controller {
 
 
 			} else {
-				$json['redirect'] = str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']));
+				$json['redirect'] = str_replace('&amp;', '&', $this->url->link('product/product', 'product_id=' . $product_id));
 			}
 		}
 
@@ -694,14 +699,19 @@ class ControllerCheckoutCart extends Controller {
 
         $this->uid = uniqid(rand(),1);
 
+        if (!empty($this->request->post['gemston_id'])) {
+            $this->add($this->request->post['gemston_id']);
+        }
+
         if (!empty($this->request->post['diamond_id'])) {
             $this->add_diamond();
         }
 
         if (!empty($this->request->post['product_id'])) {
-            $this->add();
+            $this->add($this->request->post['product_id']);
         }
 
+        Cookie::delete('CanaryProductComGemstonToRing');
         Cookie::delete('CanaryProductCom');
         Cookie::delete('CanaryDiamontCom');
     }

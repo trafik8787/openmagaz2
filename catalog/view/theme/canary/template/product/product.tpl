@@ -266,9 +266,21 @@
                                                 <button type="button" id="button-cart" class="btn w-btn-orange btn-lg" data-loading-text="<?php echo $text_loading; ?>"> <i class="bold-angle-right"></i> <?php echo $button_cart; ?></button>
 
                                             <?elseif ($path == 94): //GEMSTONES?>
-                                                <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart-gemstones"> <i class="bold-angle-right"></i>  Select this Item</button>
+
+                                                <?if (!empty(Cookie::get('CanaryProductCom')) OR !empty(Cookie::get('CanaryDiamontCom')) OR !empty(Cookie::get('CanaryProductComGemstonToRing'))):?>
+                                                    <button class="btn w-btn-orange btn-lg text-center" type="button"  id="w-button-add-product-complect-gemstone-to-ring"><i class="bold-angle-right"></i>  Select this Item</button>
+                                                <?else:?>
+                                                    <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart-gemstones"> <i class="bold-angle-right"></i>  Select this Item</button>
+                                                <?endif?>
+
                                             <?else:?>
-                                                <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart"> <i class="bold-angle-right"></i>  Select this Item</button>
+
+                                                <?if (!empty(Cookie::get('CanaryProductCom')) OR !empty(Cookie::get('CanaryDiamontCom')) OR !empty(Cookie::get('CanaryProductComGemstonToRing'))):?>
+                                                    <button class="btn w-btn-orange btn-lg text-center" type="button" data-flag="pendant" id="w-button-add-product-complect"><i class="bold-angle-right"></i>  Select this Item</button>
+                                                <?else:?>
+                                                    <button class="btn w-btn-orange btn-lg" role="button" type="button" data-toggle="modal" data-target="#w-modal-cart"> <i class="bold-angle-right"></i>  Select this Item</button>
+                                                <?endif?>
+
                                             <?endif?>
                                         </div>
                                     </div>
@@ -655,11 +667,11 @@
                     <div class="product-modal-buttons">
                         <div class="row modal-btn-row">
                             <div class="col-xs-6">
-                                <button class="btn w-btn-orange btn-lg text-center" type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect">Add a Diamond</button>
+                                <button class="btn w-btn-orange btn-lg text-center" type="button" data-dismiss="modal" aria-hidden="true" data-flag="pendant" id="w-button-add-product-complect">Add a Diamond</button>
                             </div>
                             <div class="col-xs-6">
                                 <!-- DOTO: don't work btn-->
-                                <button class="btn w-btn-orange btn-lg text-center">Add a Gemstone</button>
+                                <button class="btn w-btn-orange btn-lg text-center" type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect-add-gemstones">Add a Gemstone</button>
                             </div>
                         </div>
                         <button type="button" data-dismiss="modal" aria-hidden="true" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn w-btn-orange btn-lg text-center"> <span class="add-tocart-ico"></span> Add to Cart</button>
@@ -682,11 +694,11 @@
                     <div class="product-modal-buttons">
                         <div class="row modal-btn-row">
                             <div class="col-xs-6">
-                                <button class="btn w-btn-orange btn-lg text-center" type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect">Add Gemstone to a Ring</button>
+                                <button class="btn w-btn-orange btn-lg text-center" type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect-gemstone-to-ring">Add Gemstone to a Ring</button>
                             </div>
                             <div class="col-xs-6">
                                 <!-- DOTO: don't work btn-->
-                                <button class="btn w-btn-orange btn-lg text-center">Add Gemstone to a Pendant</button>
+                                <button class="btn w-btn-orange btn-lg text-center" type="button" data-dismiss="modal" aria-hidden="true" id="w-button-add-product-complect-gemstone-to-pendant">Add Gemstone to a Pendant</button>
                             </div>
                         </div>
                         <button type="button" data-dismiss="modal" aria-hidden="true" id="button-cart-gemstones" data-loading-text="<?php echo $text_loading; ?>" class="btn w-btn-orange btn-lg text-center"> <span class="add-tocart-ico"></span> Add Gemstone to Cart</button>

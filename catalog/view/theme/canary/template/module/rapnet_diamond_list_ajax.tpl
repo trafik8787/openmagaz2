@@ -27,7 +27,16 @@
 
         </div>
         <div class="text-center">
-            <button type="button" data-toggle="modal" data-target="#w-modal-cart" class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select this Item</button>
+            <?if (!empty(Cookie::get('CanaryProductCom')) OR !empty(Cookie::get('CanaryDiamontCom')) OR !empty(Cookie::get('CanaryProductComGemstonToRing'))):?>
+                <button type="button" id="w-button-add-diamond-complect" data-loading-text="Loading..."
+                        data-dismiss="modal" aria-hidden="true"
+                        data-idproduct="<?php echo $diamond->diamond_id ?>"
+                        data-shape="<?php echo $diamond->shape?>"
+                        class="btn w-btn-orange btn-lg text-center"><i class="bold-angle-right"></i> Select this Item</button>
+            <?else:?>
+                <button type="button" data-toggle="modal" data-target="#w-modal-cart" class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select this Item</button>
+            <?endif?>
+
         </div>
         <div class="text-center">
             <a href="http://www.diamondselections.com/GetCertificate.aspx?diamondid=<?=$diamond->diamond_id?>">View Certificate</a>
@@ -49,26 +58,26 @@
         <div class="modal-content">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
             <div class="modal-body">
-                <div class="line-price-product clearfix">
-                    <p>
-
-                    </p>
-
-
-                    <p></p>
-                </div>
-
                 <div class="styled-modal-header">
                     <div class="styled-modal-title">What would you like to do?</div>
                     <div class="icons-quality_service_icon"></div>
                 </div>
                 <div class="product-modal-buttons">
-                    <div class="modal-btn-row">
-                        <button type="button" id="w-button-add-diamond-complect" data-loading-text="Loading..."
-                                data-dismiss="modal" aria-hidden="true"
-                                data-idproduct="<?php echo $diamond->diamond_id ?>"
-                                data-shape="<?php echo $diamond->shape?>"
-                                class="btn w-btn-orange btn-lg text-center">Add diamond to a ring</button>
+                    <div class="row modal-btn-row">
+                        <div class="col-xs-6">
+                            <button type="button" id="w-button-add-diamond-complect" data-loading-text="Loading..."
+                                    data-dismiss="modal" aria-hidden="true"
+                                    data-idproduct="<?php echo $diamond->diamond_id ?>"
+                                    data-shape="<?php echo $diamond->shape?>"
+                                    class="btn w-btn-orange btn-lg text-center">Add diamond to a ring</button>
+                        </div>
+                        <div class="col-xs-6">
+                            <button type="button" id="w-button-add-diamond-complect-to-pendant" data-loading-text="Loading..."
+                                    data-dismiss="modal" aria-hidden="true"
+                                    data-idproduct="<?php echo $diamond->diamond_id ?>"
+                                    data-shape="<?php echo $diamond->shape?>"
+                                    class="btn w-btn-orange btn-lg text-center">Add Diamond to a Pendant</button>
+                        </div>
                     </div>
                     <button type="button" data-dismiss="modal" aria-hidden="true"
                             id="w-diamont-button-cart" data-loading-text="Loading..."

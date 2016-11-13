@@ -11,14 +11,19 @@ class ControllerModuleComplect extends Controller {
     public function index(){
 
         $data = array();
-
+        //dd($this->request->get);
 
         $data = $this->getProductsCoolies();
 
         if (isset($this->request->get['path'])) {
             $data['path'] = $this->request->get['path'];
         } else {
-            $data['path'] = $this->request->get['_route_'];
+            if (!empty($this->request->get['cat_arr_bloc_complect'])) {
+                $data['path'] = $this->request->get['cat_arr_bloc_complect'];
+            } else {
+                $data['path'] = $this->request->get['_route_'];
+            }
+
         }
 
 
@@ -41,9 +46,10 @@ class ControllerModuleComplect extends Controller {
         $option = array();
         $CanaryDiamontCom = array();
         $CanaryProductCom = array();
+        $CanaryProductComGemstonToRing = array();
 
 
-       // dd($this->request->post, true);
+        //dd($this->request->post, true);
 
         $data = $this->getProductsCoolies();
 
@@ -52,25 +58,49 @@ class ControllerModuleComplect extends Controller {
             $product_info = $this->model_catalog_product->getProduct($this->request->post['product_id']);
             $data['product_info'] = $product_info;
 
-            if (!empty($this->request->post['option'])) {
-                $option = array('option' => $this->request->post['option']);
-                $option = http_build_query($option);
+            if (!empty($this->request->post['gemston_to_ring'])) {
+
+                //если добавлен брилиант и человек добавляет цветной камень то удаляем куки брилианта и создаем цветной камень
+                if (!empty(Cookie::get('CanaryDiamontCom'))) {
+                    Cookie::delete('CanaryDiamontCom');
+                }
+
+                $CanaryProductComGemstonToRing = array('id_product' => $product_info['product_id'],
+                    'name' => $product_info['name'],
+                    'img' => '/image/' . $product_info['image'],
+                    'href' => $this->url->link('product/product', 'product_id=' . $product_info['product_id']));
+
+                    Cookie::set('CanaryProductComGemstonToRing', json_encode($CanaryProductComGemstonToRing));
+
+                    $data['CanaryProductComGemstonToRing'] = $CanaryProductComGemstonToRing;
+
+            } else {
+
+                if (!empty($this->request->post['option'])) {
+                    $option = array('option' => $this->request->post['option']);
+                    $option = http_build_query($option);
+                }
+
+
+                $CanaryProductCom = array('id_product' => $product_info['product_id'],
+                    'name' => $product_info['name'],
+                    'img' => '/image/' . $product_info['image'],
+                    'option' => $option,
+                    'href' => $this->url->link('product/product', 'product_id=' . $product_info['product_id']));
+
+
+                Cookie::set('CanaryProductCom', json_encode($CanaryProductCom));
+
+                $data['CanaryProductCom'] = $CanaryProductCom;
             }
-
-
-            $CanaryProductCom = array('id_product' => $product_info['product_id'],
-                'name' => $product_info['name'],
-                'img' => '/image/'.$product_info['image'],
-                'option' => $option,
-                'href' => $this->url->link('product/product',  'product_id=' . $product_info['product_id']));
-
-
-            Cookie::set('CanaryProductCom', json_encode($CanaryProductCom));
-
-            $data['CanaryProductCom'] = $CanaryProductCom;
         }
 
         if (!empty($this->request->post['complect_id_diamond'])) {
+
+            //если добавлен цветной камень и человек добавляет брилиант то удаляем куки гемстона и создаем брилиант
+            if (!empty(Cookie::get('CanaryProductComGemstonToRing'))) {
+                Cookie::delete('CanaryProductComGemstonToRing');
+            }
 
             $CanaryDiamontCom = array('id_product' => $this->request->post['complect_id_diamond'],
                 'img' =>  imageDiamont($this->request->post['shape']),
@@ -108,6 +138,15 @@ class ControllerModuleComplect extends Controller {
 
         }
 
+        if (!empty(Cookie::get('CanaryProductComGemstonToRing'))) {
+
+            $CanaryProductComGemstonToRing = json_decode(Cookie::get('CanaryProductComGemstonToRing'), true);
+
+            if (!empty($CanaryProductComGemstonToRing)) {
+                $data['CanaryProductComGemstonToRing'] = $CanaryProductComGemstonToRing;
+            }
+        }
+
         return $data;
     }
 
@@ -126,6 +165,10 @@ class ControllerModuleComplect extends Controller {
             Cookie::delete('CanaryDiamontCom');
         }
 
+        if (!empty($this->request->post['complect_id_gemston_to_ring'])) {
+            Cookie::delete('CanaryProductComGemstonToRing');
+        }
+
 
         $data = $this->getProductsCoolies();
 
@@ -139,6 +182,7 @@ class ControllerModuleComplect extends Controller {
     public function complete_diamond(){
 
         $data = array();
+        $this->load->model('catalog/product');
         $data_cookie = array();
 
         $data_cookie = $this->getProductsCoolies();
@@ -147,12 +191,20 @@ class ControllerModuleComplect extends Controller {
             $this->response->redirect('/');
         }
 
-        $rapnet_controller = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $data_cookie['CanaryDiamontCom']['id_product']));
+        //брилиант
+        if (!empty($data_cookie['CanaryDiamontCom'])) {
+            $rapnet_controller = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $data_cookie['CanaryDiamontCom']['id_product']));
 
-        $rapnet_controller = json_decode($rapnet_controller);
-        $data['CanaryDiamontCom'] = $rapnet_controller->response->body->diamond;
+            $rapnet_controller = json_decode($rapnet_controller);
+            $data['CanaryDiamontCom'] = $rapnet_controller->response->body->diamond;
+        }
 
-        $this->load->model('catalog/product');
+        //цветной камень
+        if (!empty($data_cookie['CanaryProductComGemstonToRing'])) {
+            $data['CanaryProductComGemstonToRing'] = $this->model_catalog_product->getProduct($data_cookie['CanaryProductComGemstonToRing']['id_product']);
+        }
+
+
 
         //$this->load->model('tool/image');
         //$results_img = $this->model_catalog_product->getProductImages($data['CanaryProductCom']['id_product']);
