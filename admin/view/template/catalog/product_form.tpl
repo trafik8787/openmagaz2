@@ -326,6 +326,14 @@
                   <input type="text" name="sort_order" value="<?php echo $sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
                 </div>
               </div>
+
+                <div class="form-group">
+                    <label class="col-sm-2 control-label" for="input-price">Best Sellers Sort</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="best_sellers_sort" value="<?php echo $best_sellers_sort; ?>" placeholder="Index Sort" id="input-price" class="form-control" />
+                    </div>
+                </div>
+
             </div>
             <div class="tab-pane" id="tab-links">
 

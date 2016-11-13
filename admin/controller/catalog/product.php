@@ -939,6 +939,14 @@ class ControllerCatalogProduct extends Controller {
 			$data['price'] = '';
 		}
 
+        if (isset($this->request->post['best_sellers_sort'])) {
+            $data['best_sellers_sort'] = $this->request->post['best_sellers_sort'];
+        } elseif (!empty($product_info)) {
+            $data['best_sellers_sort'] = $product_info['best_order'];
+        } else {
+            $data['best_sellers_sort'] = '';
+        }
+
 		$this->load->model('catalog/recurring');
 
 		$data['recurrings'] = $this->model_catalog_recurring->getRecurrings();

@@ -66,12 +66,14 @@ class ControllerProductCategory extends Controller {
 			$sort = $this->request->get['sort'];
 		} else {
 			$sort = 'p.price';
+			//$sort = 'p.best_order';
 		}
 
 		if (isset($this->request->get['order'])) {
 			$order = $this->request->get['order'];
 		} else {
-			$order = 'ASC';
+            $order = 'ASC';
+			//$order = 'DESC';
 		}
 
 		if (isset($this->request->get['page'])) {
