@@ -324,7 +324,7 @@ $(document).on('click', '#w-button-add-product-complect', function(){
     var data = $('#product select, #product input[name=\'product_id\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select');
     $('.text-danger').detach();
 
-    if ($(document).is("select option:selected")) {
+    if ($('*').is(".w-option-size")) {
 
         if ($("select option:selected").val()) {
 

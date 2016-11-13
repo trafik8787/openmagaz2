@@ -237,7 +237,7 @@ class ControllerProductProduct extends Controller {
             $category_product = $this->model_catalog_category->getCategoryProductId($product_info['product_id']);
 
             //добавляем информацию про категорию товара для блока комплекта чтоб знать где его выводить
-            $this->request->get['cat_arr_bloc_complect'] = $category_product['category_id'];
+            $this->request->get['cat_arr_bloc_complect'] = !empty($category_product['category_id']) ? $category_product['category_id'] : array();
 
 			$data['heading_title'] = $product_info['name'];
             $data['name'] = $product_info['name'];
