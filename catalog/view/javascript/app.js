@@ -344,7 +344,7 @@ $(document).on('click', '#w-button-add-product-complect', function(){
                     $('.w-blocs-complects').html(json);
                     $('html, body').animate({scrollTop: 0}, 'slow');
 
-                    if ($.cookie('CanaryDiamontCom') != null) {
+                    if ($.cookie('CanaryDiamontCom') != null || $.cookie('CanaryProductComGemstonToRing')) {
                         window.location.href = '/complete_diamond';
                     } else {
                         window.location.href = '/diamonds';
@@ -405,33 +405,73 @@ $(document).on('click', '#w-button-add-product-complect-add-gemstones', function
     var data = $('#product select, #product input[name=\'product_id\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select');
     $('.text-danger').detach();
 
-    $.ajax({
-        url: '/index.php?route=module/complect/add_product_complect',
-        type: 'post',
-        data: data,
-        dataType: 'html',
-        beforeSend: function () {
-            $this.button('loading');
-        },
-        complete: function () {
-            $this.button('reset');
-        },
-        success: function (json) {
-            $('.w-blocs-complects').empty();
-            $('.w-blocs-complects').html(json);
-            $('html, body').animate({scrollTop: 0}, 'slow');
+    if ($('*').is(".w-option-size")) {
 
-            if ($.cookie('CanaryDiamontCom') != null) {
-                window.location.href = '/complete_diamond';
-            } else {
-                window.location.href = '/gemstones';
-            }
+        if ($("select option:selected").val()) {
 
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
+            $.ajax({
+                url: '/index.php?route=module/complect/add_product_complect',
+                type: 'post',
+                data: data,
+                dataType: 'html',
+                beforeSend: function () {
+                    $this.button('loading');
+                },
+                complete: function () {
+                    $this.button('reset');
+                },
+                success: function (json) {
+                    $('.w-blocs-complects').empty();
+                    $('.w-blocs-complects').html(json);
+                    $('html, body').animate({scrollTop: 0}, 'slow');
 
+                    if ($.cookie('CanaryDiamontCom') != null) {
+                        window.location.href = '/complete_diamond';
+                    } else {
+                        window.location.href = '/gemstones';
+                    }
+
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+
+                }
+            });
+
+        } else {
+
+            $('.dropdown').after('<div class="text-danger">SIZE required!</div>');
         }
-    });
+
+    } else {
+        $.ajax({
+            url: '/index.php?route=module/complect/add_product_complect',
+            type: 'post',
+            data: data,
+            dataType: 'html',
+            beforeSend: function () {
+                $this.button('loading');
+            },
+            complete: function () {
+                $this.button('reset');
+            },
+            success: function (json) {
+                $('.w-blocs-complects').empty();
+                $('.w-blocs-complects').html(json);
+                $('html, body').animate({scrollTop: 0}, 'slow');
+
+                if ($.cookie('CanaryDiamontCom') != null) {
+                    window.location.href = '/complete_diamond';
+                } else {
+                    window.location.href = '/gemstones';
+                }
+
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+
+            }
+        });
+    }
+
 
 });
 
