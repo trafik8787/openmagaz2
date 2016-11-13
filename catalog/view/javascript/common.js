@@ -222,10 +222,13 @@ var cart = {
                     }
 				}, 100);
 
-                //console.log(json);
 
-				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
-					location = '/index.php?route=checkout/cart';
+                var segment_str = window.location.pathname; // return segment1/segment2/segment3/segment4
+                var segment_array = segment_str.split( '/' );
+                var last_segment = segment_array[segment_array.length - 1];
+
+				if (last_segment == 'shop-cart' || getURLVar('route') == 'checkout/checkout') {
+					location = '/shop-cart';
 				} else {
 					$('.cart-basket').load('/index.php?route=common/cart/info .w-cart-basket');
 				}

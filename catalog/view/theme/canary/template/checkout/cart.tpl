@@ -129,7 +129,7 @@
                                     </div>
                                     <div class="text-box">
                                         <div class="type"><?if ($product['diamond'] == 1):?>Diamond<?else:?>Rings<?endif?></div>
-                                        <div class="name"><span><?=$product['name']?></span> <a href="#" data-toggle="tooltip" title="<?php echo $button_remove; ?>" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" class="remove-ico"></a></div>
+                                        <div class="name"><span><?=$product['name']?></span> <a href="#" data-toggle="tooltip" onclick="cart.remove('<?php echo $product['cart_id']; ?>');" class="remove-ico"></a></div>
                                         SKU: <?=$product['sku']?>
                                         <?foreach ($product['option'] as $row):?>
                                             | <?=$row['name']?> <?=$row['value']?>
@@ -302,15 +302,15 @@
 
 <script>
     $(document).ready(function () {
-//       $(document).on('click', '.arrow-btn-number', function () {
-//            $('.w-form-cart-sub').submit();
-//       });
-
-        $(document).on('click', '.remove-ico', function () {
-            $(this).closest('.one-line').detach();
-            return false;
-
+       $(document).on('change', '.quantity-input', function () {
+            $('.w-form-cart-sub').submit();
        });
+
+//        $(document).on('click', '.remove-ico', function () {
+//            $(this).closest('.one-line').detach();
+//            return false;
+//
+//       });
     });
 </script>
 

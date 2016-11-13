@@ -197,7 +197,7 @@
                         </li>
 
                     </ul>
-                    <div class="title">man</div>
+                    <div class="title">men</div>
                     <ul class="brilliant-style brilliant-style-long ul-first-drop clearfix">
                         <li>
                             <a href="<?php echo $categories[2]['children'][4]['href']?>" class="w-general-category"><i class="wedding1"></i><?php echo $categories[2]['children'][4]['name']?></a>

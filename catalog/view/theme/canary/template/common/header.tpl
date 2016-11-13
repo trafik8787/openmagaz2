@@ -198,7 +198,7 @@
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">
                                                     <a data-toggle="collapse" data-parent="#rubricMenu-man" href="#rubricMenu1">
-                                                        WEDDING RINGS FOR MAN
+                                                        WEDDING RINGS FOR MEN
                                                     </a>
                                                 </h4>
                                             </div>

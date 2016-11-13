@@ -80,7 +80,7 @@
                         <div class="filter-col-options">
                             <div class="all-line-filter">
                                 <a href="/wedding-rings"  <?php if ($child_id == 0):?> class="active" <?endif?>>All</a>
-                                <a href="<?php echo $wsubcategory[0]['href']?>" <?php if ($child_id == $wsubcategory[0]['cat_id'] or $child_id == 72 or $child_id == 74 or $child_id == 75):?> class="active" <?endif?>>Man</a>
+                                <a href="<?php echo $wsubcategory[0]['href']?>" <?php if ($child_id == $wsubcategory[0]['cat_id'] or $child_id == 72 or $child_id == 74 or $child_id == 75):?> class="active" <?endif?>>Men</a>
                                 <a href="<?php echo $wsubcategory[1]['href']?>" <?php if ($child_id == $wsubcategory[1]['cat_id'] or $child_id == 77 or $child_id == 79 or $child_id == 81 or $child_id == 78):?> class="active" <?endif?>>Women</a>
                                 <!--*<a href="#" class="visible-xs-inline-block">Sets for him and her</a>*-->
 

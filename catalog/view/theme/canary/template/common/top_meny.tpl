@@ -113,7 +113,7 @@
                                 <a href="<?=$categories[2]['children'][1]['href']?>" class="w-general-category"><i class="all-menu-i"></i><br>All</a>
                             </li>
                         </ul>
-                        <div class="title">BROWSE WEDDING RINGS FOR MAN</div><!--*man*-->
+                        <div class="title">BROWSE WEDDING RINGS FOR MEN</div><!--*men*-->
                         <ul class="brilliant-style brilliant-style-long ul-first-drop" style="width: 73%">
                             <?if (!empty($categories[2]['children'][4])):?>
                             <li>

@@ -79,7 +79,7 @@
                                             <li><a href="<?php echo $categories[2]['children'][1]['href']?>"><?php echo $categories[2]['children'][1]['name']?></a></li>
                                             <li><a href="<?php echo $categories[2]['children'][2]['href']?>"><?php echo $categories[2]['children'][2]['name']?></a></li>
                                             <li><a href="<?php echo $categories[2]['children'][3]['href']?>"><?php echo $categories[2]['children'][3]['name']?></a></li>
-                                            <li><b>WEDDING RINGS FOR MAN</b></li>
+                                            <li><b>WEDDING RINGS FOR MEN</b></li>
                                             <li><a href="<?php echo $categories[2]['children'][4]['href']?>"><?php echo $categories[2]['children'][4]['name']?></a></li>
                                             <li><a href="<?php echo $categories[2]['children'][5]['href']?>"><?php echo $categories[2]['children'][5]['name']?></a></li>
                                             <li><a href="<?php echo $categories[2]['children'][6]['href']?>"><?php echo $categories[2]['children'][6]['name']?></a></li>

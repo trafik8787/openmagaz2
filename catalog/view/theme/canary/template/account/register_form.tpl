@@ -39,7 +39,7 @@
         <input class="gender-radio" type="radio" name="genderradio" id="gr1" checked>
         <label for="gr1">Woman</label>
         <input class="gender-radio" type="radio" name="genderradio" id="gr2">
-        <label for="gr2">man</label>
+        <label for="gr2">Men</label>
     </div>
 
     <?php if ($text_agree): ?>
