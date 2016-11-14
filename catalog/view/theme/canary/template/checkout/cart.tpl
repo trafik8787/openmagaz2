@@ -63,7 +63,7 @@
                     </div>
                     <div class="col-md-9 col-sm-12 col-xs-12">
                         <div class="yellow-block">
-                            <div class="title">WE STAND BEHALF LOW-PRICE GUARANTEE AND AN EASY RETURN POLICY</div>
+                            <div class="title">WE STAND BEHIND OUR LOW-PRICE GUARANTEE AND EASY RETURN POLICY</div>
                             <div class="row line-cart-low-price">
                                 <div class="col-md-8 col-sm-8 col-xs-12">
                                     <div class="clearfix">
