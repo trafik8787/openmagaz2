@@ -320,12 +320,12 @@
                   </select>
                 </div>
               </div>
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
-                <div class="col-sm-10">
-                  <input type="text" name="sort_order" value="<?php echo $sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
-                </div>
-              </div>
+              <!--*<div class="form-group">*-->
+                <!--*<label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>*-->
+                <!--*<div class="col-sm-10">*-->
+                  <!--*<input type="text" name="sort_order" value="<?php echo $sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />*-->
+                <!--*</div>*-->
+              <!--*</div>*-->
 
                 <div class="form-group">
                     <label class="col-sm-2 control-label" for="input-price">Best Sellers Sort</label>
