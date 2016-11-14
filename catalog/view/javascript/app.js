@@ -720,6 +720,17 @@ $(document).on('click', '#w-complide-view', function() {
 });
 
 
+
+    $(document).mouseup(function (e) {
+        if ($('.cart-basket').is(":visible")) {
+            var container = $("#w-but-cart, .cart-basket");
+            if (container.has(e.target).length === 0) {
+                //container.hide();
+                container.trigger('click');
+            }
+        }
+    });
+
 // $(window).on('popstate', function(event) {
 //     console.log( window.location.href);
 //     // history.replaceState({ path: window.location.href }, '');
