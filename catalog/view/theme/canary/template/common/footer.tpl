@@ -220,7 +220,7 @@
                                     <li><a href="https://www.facebook.com/BrilliantCanaryRings" target="_blank" class="icon-facebook"></a></li>
                                     <li><a href="https://twitter.com/TheBrilliantC" target="_blank" class="icon-twitter"></a></li>
                                     <li><a href="https://www.instagram.com/brilliantcanaryrings/" target="_blank" class="icon-instagram"></a></li>
-                                    <li><a href="" target="_blank" class="icon-p"></a></li>
+                                    <li><a href="https://www.pinterest.com/brilliantcanary/" target="_blank" class="icon-p"></a></li>
                                 </ul>
                             </div>
                             <dl class="contact-mobile">
