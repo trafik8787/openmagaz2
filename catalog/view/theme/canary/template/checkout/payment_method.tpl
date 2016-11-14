@@ -16,7 +16,7 @@
             <?php $code = $payment_method['code']; ?>
 
 
-                <?if ($payment_method['code'] == 'pp_pro'):?>
+                <?if ($payment_method['code'] == 'pp_pro' OR $payment_method['code'] == 'pp_payflow'):?>
                     <div>
                         <input type="radio" name="payment_method" id="<?php echo $payment_method['code']; ?>" value="<?php echo $payment_method['code']; ?>" checked="checked"><label for="<?php echo $payment_method['code']; ?>"><?php echo $payment_method['title']; ?>
                             <img src="/catalog/view/theme/canary/img/visa.png" alt="img">
@@ -34,7 +34,7 @@
                         </label>
                     </div>
                 <?endif?>
-                <?if ($payment_method['code'] != 'pp_express' AND $payment_method['code'] != 'pp_pro'):?>
+                <?if ($payment_method['code'] != 'pp_express' AND $payment_method['code'] != 'pp_pro' AND $payment_method['code'] != 'pp_payflow'):?>
                     <div>
                         <input type="radio" name="payment_method" id="<?php echo $payment_method['code']; ?>" value="<?php echo $payment_method['code']; ?>" checked="checked"><label for="<?php echo $payment_method['code']; ?>"><?php echo $payment_method['title']; ?></label>
                     </div>
@@ -42,7 +42,7 @@
         <?php } else { ?>
 
 
-            <?if ($payment_method['code'] == 'pp_pro'):?>
+            <?if ($payment_method['code'] == 'pp_pro' OR $payment_method['code'] == 'pp_payflow'):?>
                 <div>
                     <input type="radio" name="payment_method" id="<?php echo $payment_method['code']; ?>" value="<?php echo $payment_method['code']; ?>" ><label for="<?php echo $payment_method['code']; ?>"><?php echo $payment_method['title']; ?>
                         <img src="/catalog/view/theme/canary/img/visa.png" alt="img">
@@ -59,7 +59,7 @@
                     </label>
                 </div>
             <?endif?>
-            <?if ($payment_method['code'] != 'pp_express' AND $payment_method['code'] != 'pp_pro'):?>
+            <?if ($payment_method['code'] != 'pp_express' AND $payment_method['code'] != 'pp_pro' AND $payment_method['code'] != 'pp_payflow'):?>
                 <div>
                     <input type="radio" name="payment_method" id="<?php echo $payment_method['code']; ?>" value="<?php echo $payment_method['code']; ?>"><label for="<?php echo $payment_method['code']; ?>"><?php echo $payment_method['title']; ?></label>
                 </div>

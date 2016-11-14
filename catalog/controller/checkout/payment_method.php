@@ -12,12 +12,12 @@ class ControllerCheckoutPaymentMethod extends Controller {
 		}
 
 
-//        if (!isset($this->session->data['payment_address']) and $render == true) {
-//            //ЗОНЫ по УМОЛЧАНИЮ для ОТОБРАЖЕНИЯ МЕТОДОВ
-//            $this->session->data['payment_address']['zone_id'] = 0;
-//            $this->session->data['payment_address']['country_id'] = 223;
-//            $this->getMetodsPymant();
-//        }
+        if (!isset($this->session->data['payment_address']) and $render == true) {
+            //ЗОНЫ по УМОЛЧАНИЮ для ОТОБРАЖЕНИЯ МЕТОДОВ
+            $this->session->data['payment_address']['zone_id'] = 0;
+            $this->session->data['payment_address']['country_id'] = 223;
+            $this->getMetodsPymant();
+        }
 
 
 

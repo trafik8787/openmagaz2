@@ -361,7 +361,7 @@ $(document).on('change', '#collapse-payment-method input[type=\'radio\']', funct
                     url: 'index.php?route=checkout/confirm',
                     type: 'post',
                     dataType: 'html',
-                    data: '&flag_load_paymants_form=1',
+                    data: '&flag_load_paymants_form=2',
                     complete: function() {
 
                     },
@@ -385,28 +385,28 @@ $(document).on('change', '#collapse-payment-method input[type=\'radio\']', funct
 });
 
 
-$(document).on('click', '.w-submit-order-checout', function () {
-
-
-    $.ajax({
-        url: 'index.php?route=checkout/confirm',
-        type: 'post',
-        dataType: 'html',
-        data: '&flag_load_paymants_form=2',
-        complete: function() {
-
-        },
-        success: function(html) {
-
-            //$('.blue-check').html(html);
-
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    });
-
-});
+//$(document).on('click', '.w-submit-order-checout', function () {
+//
+//
+//    $.ajax({
+//        url: 'index.php?route=checkout/confirm',
+//        type: 'post',
+//        dataType: 'html',
+//        data: '&flag_load_paymants_form=2',
+//        complete: function() {
+//
+//        },
+//        success: function(html) {
+//
+//            //$('.blue-check').html(html);
+//
+//        },
+//        error: function(xhr, ajaxOptions, thrownError) {
+//            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+//        }
+//    });
+//
+//});
 
 
 
