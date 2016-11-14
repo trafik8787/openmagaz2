@@ -80,31 +80,31 @@
   <!--*</div>*-->
 <!--*</div>*-->
 <script type="text/javascript"><!--
-//$(document).on('click', '#button-confirm', function() {
+    $('.box-btn-checkout').html('<button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-confirm" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>');
     $('#button-confirm').bind('click', function() {
-	$.ajax({
-		url: 'index.php?route=payment/pp_pro/send',
-		type: 'post',
-		data: $('#payment :input'),
-		dataType: 'json',
-		beforeSend: function() {
-			$('#button-confirm').attr('disabled', true);
-			$('#payment').before('<div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_wait; ?></div>');
-		},
-		complete: function() {
-			$('.alert').remove();
-			$('#button-confirm').attr('disabled', false);
-		},
-		success: function(json) {
-			if (json['error']) {
-				alert(json['error']);
-			}
+        $.ajax({
+            url: 'index.php?route=payment/pp_pro/send',
+            type: 'post',
+            data: $('#payment :input'),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#button-confirm').attr('disabled', true);
+                $('#payment').before('<div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $text_wait; ?></div>');
+            },
+            complete: function() {
+                $('.alert').remove();
+                $('#button-confirm').attr('disabled', false);
+            },
+            success: function(json) {
+                if (json['error']) {
+                    alert(json['error']);
+                }
 
-			if (json['success']) {
-				location = json['success'];
-			}
-		}
-	});
+                if (json['success']) {
+                    location = json['success'];
+                }
+            }
+        });
 
-});
+    });
 //--></script>
