@@ -1676,40 +1676,7 @@
                                 </div>
                                 <div id="choosePerfectTab2" class="one-choose-perfect">
                                     <div class="one-line">
-                                        <div class="box-img3 text-center">
-                                            <img src="/catalog/view/theme/canary/img/fine/img79.png" alt="img">
-                                            <div class="choose-color">Choose a Color Grade:</div>
-                                            <div class="btn-group btn-group-justified btn-group-filter" data-toggle="buttons">
-                                                <label class="btn btn-filter active">
-                                                    <input type="radio" name="color-l" autocomplete="off" checked="">k
-                                                </label>
-                                                <label class="btn btn-filter">
-                                                    <input type="radio" name="color-l"  autocomplete="off"> j
-                                                </label>
-                                                <label class="btn btn-filter">
-                                                    <input type="radio" name="color-l"  autocomplete="off"> i
-                                                </label>
-                                                <label class="btn btn-filter">
-                                                    <input type="radio" name="color-l"  autocomplete="off"> h
-                                                </label>
-                                                <label class="btn btn-filter">
-                                                    <input type="radio" name="color-l"  autocomplete="off"> g
-                                                </label>
-                                                <label class="btn btn-filter">
-                                                    <input type="radio" name="color-l"  autocomplete="off"> f
-                                                </label>
-                                                <label class="btn btn-filter">
-                                                    <input type="radio" name="color-l"  autocomplete="off"> e
-                                                </label>
-                                                <label class="btn btn-filter">
-                                                    <input type="radio" name="color-l"  autocomplete="off"> d
-                                                </label>
-                                            </div>
-                                            <div class="box-btn-s">
-                                                <a href="#" class="grey-btn-f">fancy yellow</a>
-                                                <a href="#" class="white-btn-f">search</a>
-                                            </div>
-                                        </div>
+
                                         <div>
                                             
                                             <div class="block-p">
@@ -1803,9 +1770,9 @@
                                         </div>
                                     </div>
                                     <div class="one-line text-left">
-                                        <div class="box-img3">
-                                            <img src="/catalog/view/theme/canary/img/fine/img68.png" alt="img">
-                                        </div>
+                                        <!--*<div class="box-img3">*-->
+                                            <!--*<img src="/catalog/view/theme/canary/img/fine/img68.png" alt="img">*-->
+                                        <!--*</div>*-->
                                         <div class="block-p">
                                             <div class="article-p">Flawless, Internally Flawless (FL & IF)</div>
                                             <p class="text-left">
@@ -1817,9 +1784,9 @@
                                         </div>
                                     </div>
                                     <div class="one-line text-left">
-                                        <div class="box-img3">
-                                            <img src="/catalog/view/theme/canary/img/fine/img69.png" alt="img">
-                                        </div>
+                                        <!--*<div class="box-img3">*-->
+                                            <!--*<img src="/catalog/view/theme/canary/img/fine/img69.png" alt="img">*-->
+                                        <!--*</div>*-->
                                         <div class="block-p">
                                             <div class="article-p">Very Very Slightly Included (VVS1 & VVS2)</div>
                                             <p class="text-left">
@@ -1828,9 +1795,9 @@
                                         </div>
                                     </div>
                                     <div class="one-line text-left">
-                                        <div class="box-img3">
-                                            <img src="/catalog/view/theme/canary/img/fine/img70.png" alt="img">
-                                        </div>
+                                        <!--*<div class="box-img3">*-->
+                                            <!--*<img src="/catalog/view/theme/canary/img/fine/img70.png" alt="img">*-->
+                                        <!--*</div>*-->
                                         <div class="block-p">
                                             <div class="article-p">Very Slightly Included (VS1 & VS2)</div>
                                             <p class="text-left">
@@ -1839,9 +1806,9 @@
                                         </div>
                                     </div>
                                     <div class="one-line text-left">
-                                        <div class="box-img3">
-                                            <img src="/catalog/view/theme/canary/img/fine/img71.png" alt="img">
-                                        </div>
+                                        <!--*<div class="box-img3">*-->
+                                            <!--*<img src="/catalog/view/theme/canary/img/fine/img71.png" alt="img">*-->
+                                        <!--*</div>*-->
                                         <div class="block-p">
                                             <div class="article-p">Slightly Included (SI1, SI2)</div>
                                             <p class="text-left">
@@ -1850,9 +1817,9 @@
                                         </div>
                                     </div>
                                     <div class="one-line text-left">
-                                        <div class="box-img3">
-                                            <img src="catalog/view/theme/canary/img/fine/img72.png" alt="img">
-                                        </div>
+                                        <!--*<div class="box-img3">*-->
+                                            <!--*<img src="catalog/view/theme/canary/img/fine/img72.png" alt="img">*-->
+                                        <!--*</div>*-->
                                         <div class="block-p">
                                             <div class="article-p">Included (I1, I2, I3)</div>
                                             <p class="text-left">
