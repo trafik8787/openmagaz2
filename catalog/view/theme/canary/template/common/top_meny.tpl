@@ -351,7 +351,8 @@
         </li>
         <!--*<li class="bord-l"></li>*-->
         <li>
-            <a href="/education"  class="w-general-category">INFO</a>
+            <!--*<a href="/education"  class="w-general-category">INFO</a>*-->
+            <a href="#"  class="w-general-category"></a>
         </li>
     </ul>
 </div>
