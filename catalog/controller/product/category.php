@@ -359,14 +359,9 @@ class ControllerProductCategory extends Controller {
 				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.price&order=DESC' . $url)
 			);
 
-            $data['sorts'][] = array(
-                'text'  => 'Best Sellers (Low > High)',
-                'value' => 'p.best_order-ASC',
-                'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.best_order&order=ASC' . $url)
-            );
 
             $data['sorts'][] = array(
-                'text'  => 'Best Sellers (High > Low)',
+                'text'  => 'Best Sellers',
                 'value' => 'p.best_order-DESC',
                 'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.best_order&order=DESC' . $url)
             );
