@@ -236,16 +236,6 @@
                                     </p>
                                 </div>
 
-                                <div class="one-line-s">
-                                    <div class="box-ws">
-                                        <img src="/catalog/view/theme/canary/img/ring_types_enducation/modern.jpg" alt="img">
-
-                                    </div>
-                                    <div class="title-ws">Modern</div>
-                                    <p>
-                                        Modern
-                                    </p>
-                                </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="settingTypes">

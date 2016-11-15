@@ -41,7 +41,7 @@ class ControllerInformationEducation extends Controller {
         );
         $data['breadcrumbs'][] = array(
             'text' => 'Education',
-            'href' => $this->url->link('information/education/education_find')
+            'href' => '/education'
         );
 
         $this->document->setTitle('education');
