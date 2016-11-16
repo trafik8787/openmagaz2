@@ -32,7 +32,7 @@
 
                 <?else: //все остальные?>
 
-                    <?show_product_complect_bloc (2, null, 1)?>
+                    <?show_product_complect_bloc (1, null, 1)?>
                     <?show_diamond_complect_bloc (2)?>
                     <?show_complite_complect_bloc ()?>
 
