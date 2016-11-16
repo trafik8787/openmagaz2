@@ -135,17 +135,19 @@ class ControllerModuleParseGemstons extends Controller {
 
         $this->filter_color = array(
             'BG' => 1,
-            'BLU' => 2,
-            'Blue' => 3,
-            'Green' => 4,
-            'GRN' => 5,
-            'LAV' => 6,
-            'LBL' => 7,
-            'Pink' => 8,
-            'PNK' => 9,
-            'RED' => 10,
-            'White' => 11,
-            'Yellow' => 12
+            'BLU' => 2, //Blue
+            'Blue' => 2, //Blue
+            'Green' => 3, //Green
+            'GRN' => 3, //Green
+            'Greenish Blue' => 4,
+            'LAV' => 5, //Lavender
+            'LBL' => 6, //Light Blue
+            'Orange' => 7, //Orange
+            'Pink' => 8, //Pink
+            'PNK' => 8,  //Pink
+            'RED' => 10, //Red
+            'White' => 11, //White
+            'Yellow' => 12 //Yellow
         );
 
         $this->color = array(
