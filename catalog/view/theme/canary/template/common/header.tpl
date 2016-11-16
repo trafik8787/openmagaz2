@@ -81,6 +81,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-7">
+                <a class="w-tel-xs" href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?> | 24/7</a>
                 <ul class="top-menu-b main-page">
                     <li>
                         <?php if ($logged) { ?>
