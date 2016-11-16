@@ -128,7 +128,7 @@
                                 <tbody>
                                 <tr>
                                     <td valign="middle" width="600" style="padding: 14px 10px 30px; text-align: center">
-                                        <a href="#"><img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/logo.png')?>" alt="logo" border="0" style="display:inline-block; border:none; outline:none; text-decoration:none;" st-image="edit"></a>
+                                        <a href="<?=HostSite()?>"><img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/logo.png')?>" alt="logo" border="0" style="display:inline-block; border:none; outline:none; text-decoration:none;" st-image="edit"></a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -183,23 +183,24 @@
                                 <tbody>
                                 <tr>
                                     <td valign="middle" width="600" style="padding: 35px 0 20px;">
-                                        <div style="padding-bottom: 95px; color: #575656; font-size: 12px; line-height: 17px;">
-                                            <p>
-                                                <?=$message?>
-                                            </p>
-                                            <p style="padding: 0 30px;">If you have any questions, please <a href="<?=HostSite('/contact')?>">contact us</a><br/>or info@brilliantcanary.com. We are available to assist you 24/7.</p>
+                                        <div style="padding: 0 25px 95px 25px; color: #575656; font-size: 12px; line-height: 17px;">
+
+                                            <?=$message?>
+
+                                            <p style="padding: 0 30px;">If you have any questions, please <a href="<?=HostSite('/contact')?>">contact us</a><br/>or
+                                                info@brilliantcanary.com . We are available to assist you 24/7.</p>
                                         </div>
                                         <p style="padding: 0 30px 30px;">
-                                            <a href="#"><img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/img1.png')?>" alt="logo" border="0" style="display:inline-block; border:none; outline:none; text-decoration:none;" st-image="edit"></a>
+                                            <a href="<?=HostSite(get_baners_top_random ()[1])?>"><img src="<?=HostSite(get_baners_top_random ()[0])?>" alt="logo" border="0" style="display:inline-block; border:none; outline:none; text-decoration:none;" st-image="edit"></a>
                                         </p>
                                         <p style="background: #f2f2f2; padding: 13px; text-align:center; font-size: 12px; color: #868685; line-height: 12px;">
-                                            DIAMONDS
+                                            <a href="<?=HostSite('/diamonds')?>">DIAMONDS</a>
                                             <img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/diamond-img.png')?>" alt="img" style="margin: 0 15px; display: inline-block; ">
-                                            ENGAGEMENT RINGS
+                                            <a href="<?=HostSite('/engagement-rings')?>">ENGAGEMENT RINGS</a>
                                             <img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/diamond-img.png')?>" alt="img" style="margin: 0 15px; display: inline-block; ">
-                                            WEDDING RINGS
+                                            <a href="<?=HostSite('/wedding-rings')?>">WEDDING RINGS</a>
                                             <img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/diamond-img.png')?>" alt="img" style="margin: 0 15px; display: inline-block; ">
-                                            FINE JEWELRY
+                                            <a href="<?=HostSite('/fine_jeverly')?>">FINE JEWELRY</a>
                                         </p>
                                     </td>
                                 </tr>
@@ -255,7 +256,7 @@
                                 <tbody>
                                 <tr>
                                     <td valign="middle" width="600" style="padding: 30px; text-align: center; color: #868685; font-size: 12px; line-height: 19px;">
-                                        <p style="padding-bottom: 25px;">This email was sent to alexgaran@gmail.com<br/>If you would like to unsubscribe from our mailing list please click here.</p>
+                                        <p style="padding-bottom: 25px;">This email was sent to <?=$email_to?><br/>If you would like to unsubscribe from our mailing list please click here.</p>
                                         <img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/border-footer.png')?>" alt="img" style="display: inline-block; margin-bottom: 15px;">
                                         <p>Phone: 800-214-6550<br/>Email: info@brilliantcanary.com</p>
                                     </td>
