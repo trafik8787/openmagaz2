@@ -53,11 +53,13 @@ class ModelAccountCustomer extends Model {
 		$mail->smtp_port = $this->config->get('config_mail_smtp_port');
 		$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
 
+        $data_email['message'] = $message;
+
 		$mail->setTo($data['email']);
 		$mail->setFrom($this->config->get('config_email'));
 		$mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
 		$mail->setSubject($subject);
-		$mail->setText($message);
+        $mail->setHtml($this->load->view($this->config->get('config_template') . '/template/mail/email_technik.tpl', $data_email));
 		$mail->send();
 
 		// Send to main admin email if new account email is enabled
@@ -70,6 +72,7 @@ class ModelAccountCustomer extends Model {
 			$message .= $this->language->get('text_email') . ' '  .  $data['email'] . "\n";
 			$message .= $this->language->get('text_telephone') . ' ' . $data['telephone'] . "\n";
 
+            $data_email['message'] = $message;
 			$mail = new Mail();
 			$mail->protocol = $this->config->get('config_mail_protocol');
 			$mail->parameter = $this->config->get('config_mail_parameter');
@@ -83,7 +86,8 @@ class ModelAccountCustomer extends Model {
 			$mail->setFrom($this->config->get('config_email'));
 			$mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
 			$mail->setSubject(html_entity_decode($this->language->get('text_new_customer'), ENT_QUOTES, 'UTF-8'));
-			$mail->setText($message);
+			//$mail->setText($message);
+            $mail->setHtml($this->load->view($this->config->get('config_template') . '/template/mail/email_technik.tpl', $data_email));
 			$mail->send();
 
 			// Send to additional alert emails if new account email is enabled

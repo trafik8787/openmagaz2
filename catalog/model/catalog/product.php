@@ -535,9 +535,9 @@ class ModelCatalogProduct extends Model {
 			}
             else { //добавлено условие для вывода только колец из белого золота если фильтр не используется
                 //условие для категории GEMSTONS правило не работает
-                if ($data['filter_category_id'] !== 94) {
-                    $sql .= " AND p.metal = 'white_gold_14' ";
-                }
+//                if ($data['filter_category_id'] !== 94) {
+//                    $sql .= " AND p.metal = 'white_gold_14' ";
+//                }
             }
 
 		}

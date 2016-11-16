@@ -101,28 +101,28 @@
                             </thead>
                             <tbody>
                             <?php if ($affiliates) { ?>
-                            <?php foreach ($affiliates as $affiliate) { ?>
-                            <tr>
-                                <td class="text-center"><?php if (in_array($affiliate['id'], $selected)) { ?>
-                                    <input type="checkbox" name="selected[]" value="<?php echo $affiliate['id']; ?>" checked="checked" />
-                                    <?php } else { ?>
-                                    <input type="checkbox" name="selected[]" value="<?php echo $affiliate['id']; ?>" />
-                                    <?php } ?></td>
+                                <?php foreach ($affiliates as $affiliate) { ?>
+                                    <tr>
+                                        <td class="text-center"><?php if (in_array($affiliate['id'], $selected)) { ?>
+                                            <input type="checkbox" name="selected[]" value="<?php echo $affiliate['id']; ?>" checked="checked" />
+                                            <?php } else { ?>
+                                            <input type="checkbox" name="selected[]" value="<?php echo $affiliate['id']; ?>" />
+                                            <?php } ?></td>
 
-                                <td class="text-left"><?php echo $affiliate['email']; ?></td>
-                                <td class="text-left"><?php echo $affiliate['status']; ?></td>
-                                <td class="text-left"><?php echo $affiliate['create_date']; ?></td>
-                                <td class="text-left"><?php echo $affiliate['ip']; ?></td>
-                                <td class="text-right">
-                                    <!--*<?php if ($affiliate['unlock']) { ; ?>*-->
-                                    <!--*<a href="<?php echo $affiliate['unlock']; ?>" data-toggle="tooltip" title="<?php echo $button_unlock; ?>" class="btn btn-warning"><i class="fa fa-unlock"></i></a>*-->
-                                    <!--*<?php } else { ?>*-->
-                                    <!--*<button type="button" class="btn btn-warning" disabled><i class="fa fa-unlock"></i></button>*-->
-                                    <!--*<?php } ?>*-->
+                                        <td class="text-left email" data-email="<?php echo $affiliate['email']; ?>"><?php echo $affiliate['email']; ?></td>
+                                        <td class="text-left"><?php echo $affiliate['status']; ?></td>
+                                        <td class="text-left"><?php echo $affiliate['create_date']; ?></td>
+                                        <td class="text-left"><?php echo $affiliate['ip']; ?></td>
+                                        <td class="text-right"> <button type="button" class="btn btn-warning" name="send_newsletter" value="1"><i class="glyphicon glyphicon-envelope"></i></button>
+                                            <!--*<?php if ($affiliate['unlock']) { ; ?>*-->
+                                            <!--*<a href="<?php echo $affiliate['unlock']; ?>" data-toggle="tooltip" title="<?php echo $button_unlock; ?>" class="btn btn-warning"><i class="fa fa-unlock"></i></a>*-->
+                                            <!--*<?php } else { ?>*-->
+                                            <!--*<button type="button" class="btn btn-warning" disabled><i class="fa fa-unlock"></i></button>*-->
+                                            <!--*<?php } ?>*-->
 
-                                </td>
-                            </tr>
-                            <?php } ?>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
                             <?php } else { ?>
                             <tr>
                                 <td class="text-center" colspan="7"><?php echo $text_no_results; ?></td>
@@ -140,30 +140,28 @@
         </div>
     </div>
     <script type="text/javascript"><!--
-        $('#button-filter').on('click', function() {
-            url = 'index.php?route=marketing/affiliate&token=<?php echo $token; ?>';
 
 
-            var filter_email = $('input[name=\'filter_email\']').val();
+        $('button[name="send_newsletter"]').on('click', function() {
 
-            if (filter_email) {
-                url += '&filter_email=' + encodeURIComponent(filter_email);
-            }
+            $.ajax({
+                url: 'index.php?route=marketing/newsletter&token=<?php echo $token; ?>',
+                type: 'post',
+                //dataType: 'html',
+                data: '&email='+ $(this).parent().parent().find('.email').data('email'),
+                complete: function() {
+                    alert('Ok!');
+                },
+                success: function(html) {
 
-            var filter_status = $('select[name=\'filter_status\']').val();
 
-            if (filter_status != '*') {
-                url += '&filter_status=' + encodeURIComponent(filter_status);
-            }
-
-            var filter_create_date = $('input[name=\'filter_create_date\']').val();
-
-            if (filter_create_date) {
-                url += '&filter_create_date=' + encodeURIComponent(filter_create_date);
-            }
-
-            location = url;
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                }
+            });
         });
+
         //--></script>
 
     <script type="text/javascript"><!--
