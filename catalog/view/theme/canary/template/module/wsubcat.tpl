@@ -174,127 +174,66 @@
                         <div class="filter-col-options">
                             <div class="all-line-filter">
                                 <a href="/fine_jeverly" class="active">All</a>
-                                <a href="<?php echo $wsubcategory[0]['href']?>" <?php if ($child_id == $wsubcategory[0]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[0]['name']?></a>
-                                <a href="<?php echo $wsubcategory[1]['href']?>" <?php if ($child_id == $wsubcategory[1]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[1]['name']?></a>
-                                <a href="<?php echo $wsubcategory[2]['href']?>" <?php if ($child_id == $wsubcategory[2]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[2]['name']?></a>
-                                <a href="<?php echo $wsubcategory[3]['href']?>" <?php if ($child_id == $wsubcategory[3]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[3]['name']?></a>
-                                <a href="<?php echo $wsubcategory[4]['href']?>" <?php if ($child_id == $wsubcategory[4]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[4]['name']?></a>
-                                <a href="<?php echo $wsubcategory[5]['href']?>" <?php if ($child_id == $wsubcategory[5]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[5]['name']?></a>
-                                <a href="<?php echo $wsubcategory[6]['href']?>" <?php if ($child_id == $wsubcategory[6]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[6]['name']?></a>
-                                <a href="<?php echo $wsubcategory[7]['href']?>" <?php if ($child_id == $wsubcategory[7]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[7]['name']?></a>
-                                <a href="<?php echo $wsubcategory[8]['href']?>" <?php if ($child_id == $wsubcategory[8]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[8]['name']?></a>
-                                <a href="<?php echo $wsubcategory[9]['href']?>" <?php if ($child_id == $wsubcategory[9]['cat_id']):?> class="active" <?endif?>><?php echo $wsubcategory[9]['name']?></a>
                             </div>
+
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[0]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[0]['href']?>"><i class="own-b own-b-16"></i></a>
+                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[0]['href']?>"><i class="own-b own-b-16"></i>*-->
+                                    <br>Diamond <br>studs
+                                </label>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[1]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[1]['href']?>"><i class="own-b own-b-9"></i></a>
+                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[1]['href']?>"><i class="own-b own-b-9"></i>*-->
+                                    <br>Diamond <br>earrings
+                                </label>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[2]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[2]['href']?>&filter=7"><i class="own-b own-b-gemstone-earring"></i></a>
+                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[2]['href']?>&filter=7"><i class="own-b own-b-gemstone-earring"></i>*-->
+                                    <br>Gemstone <br>earrings
+                                </label>
+
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[3]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[3]['href']?>"><i class="own-b own-b-13"></i></a>
+                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[3]['href']?>"> <i class="own-b own-b-13"></i>*-->
+                                    <br>Diamond <br>rings
+                                </label>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[4]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[4]['href']?>&filter=7"><i class="own-b own-b-15"></i></a>
+                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[4]['href']?>&filter=7"> <i class="own-b own-b-15"></i>*-->
+                                    <br>Gemstone <br>rings
+                                </label>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[5]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[5]['href']?>"><i class="own-b own-b-14"></i></a>
+                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[5]['href']?>"> <i class="own-b own-b-14"></i>*-->
+                                    <br>Diamond <br>pendants
+                                </label>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[6]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[6]['href']?>&filter=7"><i class="own-b own-b-gemstone-fashion-necklace"></i></a>
+                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[6]['href']?>&filter=7"> <i class="own-b own-b-gemstone-fashion-necklace"></i>*-->
+                                    <br>Gemstone <br>pendants
+                                </label>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[7]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[7]['href']?>"><i class="own-b own-b-12"></i></a>
+                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[7]['href']?>"> <i class="own-b own-b-12"></i>*-->
+                                    <br>Fashion <br>necklaces
+                                </label>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[8]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[8]['href']?>"><i class="own-b own-b-diamond-bracelet"></i></a>
+                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[8]['href']?>"> <i class="own-b own-b-diamond-bracelet"></i>*-->
+                                    <br>Diamond <br>bracelets
+                                </label>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[9]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[9]['href']?>"><i class="own-b own-b-gemstone-bracelet"></i></a>
+                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[9]['href']?>"> <i class="own-b own-b-gemstone-bracelet"></i>*-->
+                                    <br>Gemstone <br>bracelets
+                                </label>
+
                         </div>
                     </div>
                 </div>
 
 
-                <!--*<div class="filter-row">*-->
-                    <!--*<div class="filter-col wide-title">*-->
-                        <!--*<div class="filter-col-title">Stone</div>*-->
-                        <!--*<div class="filter-col-options">*-->
-                            <!--*<div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">*-->
-                                <!--*<div class="all-line-filter">*-->
-                                    <!--*<a href="#" class="active">All</a>*-->
-                                <!--*</div>*-->
-                                <!--*<label class="btn btn-filter brackets">*-->
-                                    <!--*<input type="checkbox" name="" value="">*-->
-                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
-                                    <!--*<span>Sapphire</span>*-->
-                                <!--*</label>*-->
-                                <!--*<label class="btn btn-filter brackets">*-->
-                                    <!--*<input type="checkbox" name="" value="">*-->
-                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
-                                    <!--*<span>Ruby</span>*-->
-                                <!--*</label>*-->
-                                <!--*<label class="btn btn-filter brackets">*-->
-                                    <!--*<input type="checkbox" name="" value="">*-->
-                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
-                                    <!--*<span>Emerald</span>*-->
-                                <!--*</label>*-->
-                                <!--*<label class="btn btn-filter brackets">*-->
-                                    <!--*<input type="checkbox" name="" value="">*-->
-                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
-                                    <!--*<span>Aquamarine</span>*-->
-                                <!--*</label>*-->
-                                <!--*<label class="btn btn-filter brackets">*-->
-                                    <!--*<input type="checkbox" name="" value="">*-->
-                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
-                                    <!--*<span>Tourmaline</span>*-->
-                                <!--*</label>*-->
-                                <!--*<label class="btn btn-filter brackets">*-->
-                                    <!--*<input type="checkbox" name="" value="">*-->
-                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
-                                    <!--*<span>Tanzanite</span>*-->
-                                <!--*</label>*-->
-                                <!--*<label class="btn btn-filter brackets">*-->
-                                    <!--*<input type="checkbox" name="" value="">*-->
-                                    <!--*<i class="brilliant-ico2 brilliant-s1"></i>*-->
-                                    <!--*<span>Moissanite</span>*-->
-                                <!--*</label>*-->
-                            <!--*</div>*-->
-                        <!--*</div>*-->
-                    <!--*</div>*-->
-                <!--*</div>*-->
 
-
-                <div class="hide one-line brilliant-style height-inherit product-p-5 clearfix">
-                    <div class=" btn-group-filter box-color gemstones-box rings-box">
-                        <label class="btn btn-filter <?php if ($child_id == $wsubcategory[0]['cat_id']):?> active <?endif?> brackets">
-                            <a href="<?php echo $wsubcategory[0]['href']?>"><i class="own-b own-b-16"></i></a>
-                            <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[0]['href']?>"><i class="own-b own-b-16"></i>*-->
-                            <br><?php echo $wsubcategory[0]['name']?>
-                        </label>
-                        <label class="btn btn-filter <?php if ($child_id == $wsubcategory[1]['cat_id']):?> active <?endif?> brackets">
-                            <a href="<?php echo $wsubcategory[1]['href']?>"><i class="own-b own-b-9"></i></a>
-                            <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[1]['href']?>"><i class="own-b own-b-9"></i>*-->
-                            <br><?php echo $wsubcategory[1]['name']?>
-                        </label>
-                        <label class="btn btn-filter <?php if ($child_id == $wsubcategory[2]['cat_id']):?> active <?endif?> brackets">
-                            <a href="<?php echo $wsubcategory[2]['href']?>&filter=7"><i class="own-b own-b-gemstone-earring"></i></a>
-                            <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[2]['href']?>&filter=7"><i class="own-b own-b-gemstone-earring"></i>*-->
-                            <br><?php echo $wsubcategory[2]['name']?>
-                        </label>
-
-                        <label class="btn btn-filter <?php if ($child_id == $wsubcategory[3]['cat_id']):?> active <?endif?> brackets">
-                            <a href="<?php echo $wsubcategory[3]['href']?>"><i class="own-b own-b-13"></i></a>
-                            <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[3]['href']?>"> <i class="own-b own-b-13"></i>*-->
-                            <br><?php echo $wsubcategory[3]['name']?>
-                        </label>
-                        <label class="btn btn-filter <?php if ($child_id == $wsubcategory[4]['cat_id']):?> active <?endif?> brackets">
-                            <a href="<?php echo $wsubcategory[4]['href']?>&filter=7"><i class="own-b own-b-15"></i></a>
-                            <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[4]['href']?>&filter=7"> <i class="own-b own-b-15"></i>*-->
-                            <br><?php echo $wsubcategory[4]['name']?>
-                        </label>
-                        <label class="btn btn-filter <?php if ($child_id == $wsubcategory[5]['cat_id']):?> active <?endif?> brackets">
-                            <a href="<?php echo $wsubcategory[5]['href']?>"><i class="own-b own-b-14"></i></a>
-                            <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[5]['href']?>"> <i class="own-b own-b-14"></i>*-->
-                            <br><?php echo $wsubcategory[5]['name']?>
-                        </label>
-                        <label class="btn btn-filter <?php if ($child_id == $wsubcategory[6]['cat_id']):?> active <?endif?> brackets">
-                            <a href="<?php echo $wsubcategory[6]['href']?>&filter=7"><i class="own-b own-b-gemstone-fashion-necklace"></i></a>
-                            <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[6]['href']?>&filter=7"> <i class="own-b own-b-gemstone-fashion-necklace"></i>*-->
-                            <br><?php echo $wsubcategory[6]['name']?>
-                        </label>
-                        <label class="btn btn-filter <?php if ($child_id == $wsubcategory[7]['cat_id']):?> active <?endif?> brackets">
-                            <a href="<?php echo $wsubcategory[7]['href']?>"><i class="own-b own-b-12"></i></a>
-                            <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[7]['href']?>"> <i class="own-b own-b-12"></i>*-->
-                            <br><?php echo $wsubcategory[7]['name']?>
-                        </label>
-                        <label class="btn btn-filter <?php if ($child_id == $wsubcategory[8]['cat_id']):?> active <?endif?> brackets">
-                            <a href="<?php echo $wsubcategory[8]['href']?>"><i class="own-b own-b-diamond-bracelet"></i></a>
-                            <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[8]['href']?>"> <i class="own-b own-b-diamond-bracelet"></i>*-->
-                            <br><?php echo $wsubcategory[8]['name']?>
-                        </label>
-                        <label class="btn btn-filter <?php if ($child_id == $wsubcategory[9]['cat_id']):?> active <?endif?> brackets">
-                            <a href="<?php echo $wsubcategory[9]['href']?>"><i class="own-b own-b-gemstone-bracelet"></i></a>
-                            <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[9]['href']?>"> <i class="own-b own-b-gemstone-bracelet"></i>*-->
-                            <br><?php echo $wsubcategory[9]['name']?>
-                        </label>
-                    </div>
-
-                </div>
             <?endif?>
 
 
