@@ -1,4 +1,12 @@
 
-<p style="padding: 0 30px 25px;">Welcome and thank you for registering at Your Store! </p>
-<p style="padding: 0 30px 25px;">Thank you for creating an account at Brilliant Canary. Please confirm your account to get started.</p>
-<p style="padding: 0 30px 30px;"><a href="#" style="color:#1e3e7e;">CONFIRM YOUR ACCOUNT В»</a></p>
+<p>Welcome and thank you for registering at <?=$config_name?>! </p>
+<p> Your account has now been created and you can log in by using your email address and password by visiting our website or at the following URL:
+    <a href="<?=$login?>"><?=$login?></a> Upon logging in, you will be able to access other services including reviewing past orders, printing invoices and editing your account information.
+</p>
+<p>
+    username: <?=$username?><br>
+    password: <?=$password?>
+</p>
+<p>
+    Thanks, <?=$config_name?>
+</p>

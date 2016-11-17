@@ -26,8 +26,10 @@ class ModelAccountCustomer extends Model {
 		$this->load->language('mail/customer');
 
 		$subject = sprintf($this->language->get('text_subject'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
+        $message = '';
+		//$message = sprintf($this->language->get('text_welcome'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8')) . "\n\n";
 
-		$message = sprintf($this->language->get('text_welcome'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8')) . "\n\n";
+        $data_text_email = array();
 
 		if (!$customer_group_info['approval']) {
 			$message .= $this->language->get('text_login') . "\n";
@@ -35,14 +37,14 @@ class ModelAccountCustomer extends Model {
 			$message .= $this->language->get('text_approval') . "\n";
 		}
 
-		$message .= $this->url->link('account/login', '', 'SSL') . "\n\n";
-		$message .= $this->language->get('text_services') . "\n\n";
-
-        $message .= 'username: ' .$data['email'] . "\n";
-        $message .= 'password: ' .$data['password'] . "\n\n";
-
-		$message .= $this->language->get('text_thanks') . "\n";
-		$message .= html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8');
+//		$message .= $this->url->link('account/login', '', 'SSL') . "\n\n";
+//		$message .= $this->language->get('text_serv ices') . "\n\n";
+//
+//        $message .= 'username: ' .$data['email'] . "\n";
+//        $message .= 'password: ' .$data['password'] . "\n\n";
+//
+//		$message .= $this->language->get('text_thanks') . "\n";
+//		$message .= html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8');
 
 		$mail = new Mail();
 		$mail->protocol = $this->config->get('config_mail_protocol');
@@ -53,7 +55,15 @@ class ModelAccountCustomer extends Model {
 		$mail->smtp_port = $this->config->get('config_mail_smtp_port');
 		$mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
 
-        $data_email['message'] = $message;
+
+        $data_text_email['config_name'] = $this->config->get('config_name');
+        $data_text_email['username'] = $data['email'];
+        $data_text_email['password'] = $data['password'];
+        $data_text_email['firstname'] = $data['firstname'];
+        $data_text_email['login'] = $this->url->link('account/login', '', 'SSL');
+
+
+        $data_email['message'] = $this->load->view($this->config->get('config_template') . '/template/mail/text_register_email.tpl', $data_text_email);
         $data_email['email_to'] = $data['email'];
 
 		$mail->setTo($data['email']);
