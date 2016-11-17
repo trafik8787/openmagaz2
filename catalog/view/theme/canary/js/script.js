@@ -88,23 +88,29 @@ $( document ).ready(function( $ ) {
         $(this).addClass("active");
     });
 
-    if (localStorage.getItem('TableGrid')) {
-        $('.list-product .wrapper-product-table').addClass(localStorage.getItem('TableGrid'));
-    } else {
-        $('.list-product .wrapper-product-table').addClass("th-view");
-    }
-    console.log(localStorage.getItem('TableGrid'));
+
+
+
+    // if ($.cookie('TableGrid')) {
+    //     $('.list-product .wrapper-product-table').addClass($.cookie('TableGrid'));
+    // } else {
+    //     $('.list-product .wrapper-product-table').addClass("th-view");
+    // }
+
 
 
     $(document).on('click', '.list-btn', function() {
         $(".list-product .wrapper-product-table").removeClass("th-view").addClass("list-view");
-        localStorage.setItem('TableGrid', 'list-view');
+        $.cookie('TableGrid', 'list-view');
     });
 
     $(document).on('click', '.th-btn', function() {
         $(".list-product .wrapper-product-table").removeClass("list-view").addClass("th-view");
-        localStorage.setItem('TableGrid', 'th-view');
+        $.cookie('TableGrid', 'th-view');
     });
+
+
+
 
     $(".cart-bl > a").click(function() {
         $(".cart-bl").toggleClass("open");

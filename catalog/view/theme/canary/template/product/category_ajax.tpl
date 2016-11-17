@@ -110,8 +110,8 @@
 
 <script>
     $(function () {
-        if (localStorage.getItem('TableGrid')) {
-            $('.list-product .wrapper-product-table').addClass(localStorage.getItem('TableGrid'));
+        if ($.cookie('TableGrid')) {
+            $('.list-product .wrapper-product-table').addClass($.cookie('TableGrid'));
         } else {
             $('.list-product .wrapper-product-table').addClass("th-view");
         }

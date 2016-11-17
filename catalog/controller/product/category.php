@@ -493,6 +493,13 @@ class ControllerProductCategory extends Controller {
 			}
 
 
+
+            if (!empty($this->request->cookie['TableGrid'])) {
+                $data['table_bloc'] = $this->request->cookie['TableGrid'];
+            } else {
+                $data['table_bloc'] = 'th-view';
+            }
+
             //dd($product_total);
 			$pagination = new Pagination();
 			$pagination->total = $product_total;

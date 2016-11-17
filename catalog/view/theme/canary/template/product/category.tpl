@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="wrapper-product-table main-catalog-container">
+                <div class="wrapper-product-table <?=$table_bloc?> main-catalog-container">
                     <table class="table">
                         <thead>
                         <tr>
