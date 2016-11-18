@@ -187,7 +187,7 @@
 
                                             <?=$message?>
 
-                                            <p style="padding: 0 30px;">If you have any questions, please <a href="<?=HostSite('/contact')?>">contact us</a><br/>or
+                                            <p style="padding: 0 30px;">If you have any questions, please <a href="<?=HostSite('/company/contacts')?>">contact us</a><br/>or
                                                 info@brilliantcanary.com . We are available to assist you 24/7.</p>
                                         </div>
                                         <p style="padding: 0 30px 30px;">

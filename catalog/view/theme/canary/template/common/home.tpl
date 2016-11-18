@@ -331,7 +331,7 @@
     </div>
     <ul class="mobile-link-menu">
         <li><a href="/education">EDUCATION</a></li>
-        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/information/faq">FAQ</a></li>
         <li><a href="/about_us">ABOUT</a></li>
     </ul>
 

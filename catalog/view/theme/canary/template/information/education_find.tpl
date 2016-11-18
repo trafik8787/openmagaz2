@@ -51,7 +51,7 @@
             </a>
             <a href="#gamestones" class="fine-link" data-target="#gamestones">
                     <span class="vertical-middle-wrapper">
-                        <span><img src="catalog/view/theme/canary/img/fine/img4.png" alt="img"></span>
+                        <span><img src="/catalog/view/theme/canary/img/fine/img4.png" alt="img"></span>
                     </span>
             </a>
             <a href="#fine_jewerly" class="fine-link" data-target="#fine_jewerly">
@@ -874,7 +874,7 @@
                                     <div class=" box-types-tab clearfix">
                                         <div class="one-line-symmetry">
                                             <!--<div class="box-ws">
-                                                <img src="catalog/view/theme/canary/img/fine/img50.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/fine/img50.png" alt="img">
                                                 <div class="text-center">
                                                     Off-center culet
                                                 </div>
@@ -886,7 +886,7 @@
                                         </div>
                                         <div class="one-line-symmetry">
                                             <!--<div class="box-ws">
-                                                <img src="catalog/view/theme/canary/img/fine/img51.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/fine/img51.png" alt="img">
                                                 <div class="text-center">
                                                     Off-center table
                                                 </div>
@@ -898,7 +898,7 @@
                                         </div>
                                         <div class="one-line-symmetry">
                                             <!--<div class="box-ws">
-                                                <img src="catalog/view/theme/canary/img/fine/img48.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/fine/img48.png" alt="img">
                                                 <div class="text-center">
                                                     Misshapen facets
                                                 </div>
@@ -910,7 +910,7 @@
                                         </div>
                                         <div class="one-line-symmetry">
                                             <!--<div class="box-ws">
-                                                <img src="catalog/view/theme/canary/img/fine/img49.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/fine/img49.png" alt="img">
                                                 <div class="text-center">
                                                     Off girdle
                                                 </div>
@@ -922,7 +922,7 @@
                                         </div>
                                         <div class="one-line-symmetry">
                                             <!--<div class="box-ws">
-                                                <img src="catalog/view/theme/canary/img/fine/img49.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/fine/img49.png" alt="img">
                                                 <div class="text-center">
                                                     Off girdle
                                                 </div>
@@ -934,7 +934,7 @@
                                         </div>
                                         <div class="one-line-symmetry">
                                             <!--<div class="box-ws">
-                                                <img src="catalog/view/theme/canary/img/fine/img49.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/fine/img49.png" alt="img">
                                                 <div class="text-center">
                                                     Off girdle
                                                 </div>
@@ -946,7 +946,7 @@
                                         </div>
                                         <div class="one-line-symmetry">
                                             <!--<div class="box-ws">
-                                                <img src="catalog/view/theme/canary/img/fine/img49.png" alt="img">
+                                                <img src="/catalog/view/theme/canary/img/fine/img49.png" alt="img">
                                                 <div class="text-center">
                                                     Off girdle
                                                 </div>
@@ -1818,7 +1818,7 @@
                                     </div>
                                     <div class="one-line text-left">
                                         <!--*<div class="box-img3">*-->
-                                            <!--*<img src="catalog/view/theme/canary/img/fine/img72.png" alt="img">*-->
+                                            <!--*<img src="/catalog/view/theme/canary/img/fine/img72.png" alt="img">*-->
                                         <!--*</div>*-->
                                         <div class="block-p">
                                             <div class="article-p">Included (I1, I2, I3)</div>

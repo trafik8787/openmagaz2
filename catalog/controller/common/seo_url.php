@@ -4,8 +4,8 @@ class ControllerCommonSeoUrl extends Controller {
     private $url_list = array(
         'module/rapnet/getproduct' => 'diamond_page',
         'module/complect/complete_diamond' => 'complete_diamond',
-        'information/faq' => 'faq',
-        'information/contact' => 'contact',
+        'information/faq' => 'information/faq',
+        'information/contact' => 'company/contacts',
         'information/education' => 'information/education',
         'information/education/page_find' => 'information/education_find',
         'module/login_facebook' => 'loginfacebook',

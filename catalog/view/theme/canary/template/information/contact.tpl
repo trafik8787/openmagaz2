@@ -28,9 +28,8 @@
                         <ul class="menu-block-stat">
                             <li><a href="/about_us">About Us</a></li>
                             <li><a href="/delivery">Delivery Information</a></li>
-                            <li><a href="/contact">Contact Us</a></li>
                             <li><a href="http://blog.brilliantcanary.com/" target="_blank">Blog</a></li>
-                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/information/faq">FAQ</a></li>
                             <!--*<li><a href="#">Site Map</a></li>*-->
                         </ul>
                     </div>
