@@ -87,7 +87,7 @@
                                 <i class="star active"></i>
                                 <?php } ?>
                                 <?php } ?>
-                                <span><a href="" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('.comment-block').offset().top - 20}, 'slow'); return false;"><?php echo $reviews; ?></a></span>
+                                <!--*<span><a href="" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('.comment-block').offset().top - 20}, 'slow'); return false;"><?php echo $reviews; ?></a></span>*-->
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 text-right">
