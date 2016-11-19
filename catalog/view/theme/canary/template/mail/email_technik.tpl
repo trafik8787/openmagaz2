@@ -73,7 +73,7 @@
                                 <tbody>
                                 <tr>
                                     <td valign="middle" style="background-color: #2f4680; width: 100%; color: white; padding: 14px 20px; text-transform: uppercase; text-align: center; font-size: 12px; ">
-                                        100% LIFETIME WARRANTY  В·  30-DAY RETURN POLICY  В·  FREE AND INSURED SHIPPING  В·  MADE IN USA!
+                                        100% LIFETIME WARRANTY  ·  30-DAY RETURN POLICY  ·  FREE AND INSURED SHIPPING  ·  MADE IN USA!
                                     </td>
                                 </tr>
                                 </tbody>
@@ -256,7 +256,8 @@
                                 <tbody>
                                 <tr>
                                     <td valign="middle" width="600" style="padding: 30px; text-align: center; color: #868685; font-size: 12px; line-height: 19px;">
-                                        <p style="padding-bottom: 25px;">This email was sent to <?=$email_to?><br/>If you would like to unsubscribe from our mailing list please click here.</p>
+                                        <p style="padding-bottom: 25px;">This email was sent to <?=$email_to?><br/>If you would like to unsubscribe from our mailing list please
+                                            <a href="<?=HostSite('/unsubscribe')">click here</a>.</p>
                                         <img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/border-footer.png')?>" alt="img" style="display: inline-block; margin-bottom: 15px;">
                                         <p>Phone: 800-214-6550<br/>Email: info@brilliantcanary.com</p>
                                     </td>
