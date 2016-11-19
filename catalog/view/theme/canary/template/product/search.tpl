@@ -91,34 +91,17 @@
                         <tbody>
 
 
-
+                        <?//dd($products)?>
                         <?php foreach ($products as $product):?>
                         <tr>
                             <td>
                                 <div class="product-item">
                                     <div class="box-img">
-                                        <a href="<?php echo $product['href']; ?>" class="w-product-ajax"><img src="<?php echo $product['thumb']; ?>"  alt="<?php echo $product['name']; ?>"
-                                                                                                              title="<?php echo $product['name']; ?>"></a>
+                                        <a href="<?php echo $product['href']; ?>" ><img src="<?php echo $product['thumb']; ?>"  alt="<?php echo $product['name']; ?>"
+                                                                                        title="<?php echo $product['name']; ?>"></a>
                                     </div>
-                                    <?php if ($product['rating']):?>
 
-                                    <div class="rating">
-                                        <?php for ($i = 1; $i <= 5; $i++) { ?>
-                                        <?php if ($product['rating'] < $i):?>
-                                        <i class="star"></i>
-                                        <?else:?>
-                                        <i class="star active"></i>
-                                        <?endif?>
-                                        <?}?>
 
-                                    </div>
-                                    <?endif?>
-                                    <div class="btn-box">
-                                        <a href="#" type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>'); return false;" class="cart-btn-item" data-toggle="tooltip" data-placement="top" title="<?php echo $button_cart; ?>"></a>
-                                        <a href="#" class="compare-btn-item" data-toggle="tooltip" onclick="compare.add('<?php echo $product['product_id']; ?>');" data-placement="top" title="<?php echo $button_compare; ?>"></a>
-                                        <a href="<?php echo $product['href']; ?>" class="search-btn-item w-product-ajax" data-toggle="tooltip" data-placement="top" title="Views"></a>
-                                        <a href="#" class="wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;" data-placement="top" title="<?php echo $button_wishlist; ?>"></a>
-                                    </div>
                                     <div class="box-tovar-th">
                                         <div class="name"><?php echo $product['name']; ?></div>
 
@@ -133,7 +116,6 @@
                                     </div>
                                 </div>
                             </td>
-
                             <td data-th="Name"><?php echo $product['name']; ?></td>
                             <td data-th="Stock Number" class="stnumber-td"><?=$product['sku']?></td>
                             <td data-th="Price"><div class="price"><?php echo $product['price']; ?></div></td>
