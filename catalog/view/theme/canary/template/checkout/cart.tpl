@@ -2,7 +2,7 @@
 
 
 
-<?//dd($products)?>
+<?//dd($totals)?>
 
 
 <main class="w-general-container">
@@ -207,28 +207,29 @@
                     </div>
                     <div class="all-numbers">
                         <table>
-                            <tr>
-                                <td>Subtotal:</td>
-                                <td><?=$totals[0]['text']?></td>
-                            </tr>
-                            <tr>
-                                <td>Fedex Shipping:</td>
-                                <td>
-                                    <?if ($totals[0]['value'] > 500):?>
-                                    FedEx Priority Overnight &reg;
-                                    <?else:?>
-                                    FedEx Ground &reg;
-                                    <?endif?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Sales TAX:</td>
-                                <td>$ 0</td>
-                            </tr>
-                            <tr>
-                                <td><span class="total">TOTAL:</span></td>
-                                <td><span class="all-price"><?=$totals[1]['text']?></span></td>
-                            </tr>
+
+
+                            <?foreach ($totals as $row):?>
+                                <?if ($row['title'] == 'Total'):?>
+                                    <tr>
+                                        <td>Fedex Shipping:</td>
+                                        <td>
+                                            <?if ($row['value'] > 500):?>
+                                            FedEx Priority Overnight &reg;
+                                            <?else:?>
+                                            FedEx Ground &reg;
+                                            <?endif?>
+                                        </td>
+                                    </tr>
+                                <?endif?>
+                                <tr>
+                                    <td><?=$row['title']?>:</td>
+                                    <td><?=$row['text']?></td>
+                                </tr>
+
+                            <?endforeach?>
+
+
                         </table>
                     </div>
                 </div>

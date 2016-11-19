@@ -2,13 +2,14 @@
 class ControllerCheckoutPaymentMethod extends Controller {
 	public function index($render = false) {
 		$this->load->language('checkout/checkout');
-
+        $this->load->model('account/address');
 //        $this->load->model('checkout/order');
 //
 //        dd($this->model_checkout_order->getOrder($this->session->data['order_id']));
         //ОТКРІВАЕМ ДОСТУП К ВЫБОРУ МЕТОДА КОГДА АДРЕС СУЩЕСТВУЕТ
 		if (isset($this->session->data['payment_address'])) {
             $this->getMetodsPymant();
+            $this->session->data['payment_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
 		}
 
 
@@ -16,6 +17,7 @@ class ControllerCheckoutPaymentMethod extends Controller {
             //ЗОНЫ по УМОЛЧАНИЮ для ОТОБРАЖЕНИЯ МЕТОДОВ
             $this->session->data['payment_address']['zone_id'] = 0;
             $this->session->data['payment_address']['country_id'] = 223;
+            $this->session->data['payment_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
             $this->getMetodsPymant();
         }
 
