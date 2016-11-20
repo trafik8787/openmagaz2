@@ -197,14 +197,12 @@
                     <!--*</div>*-->
                 <!--*</div>*-->
                 <div class="total-cart-pay clearfix">
-                    <i class="cart-ico1"></i>
-                    <div class="form-wrapper">
-                        <div class="title">Do you have an offer code?</div>
-                        <form action="#">
-                            <input type="text" placeholder="Enter a code">
-                            <a href="#">Validate</a>
-                        </form>
-                    </div>
+
+                    <?php if ($coupon):?>
+
+                        <?=$coupon?>
+                    <?endif?>
+
                     <div class="all-numbers">
                         <table>
 

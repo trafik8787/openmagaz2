@@ -185,7 +185,7 @@
                                     <td valign="middle" width="600" style="padding: 35px 0 20px;">
                                         <div style="padding: 0 25px 95px 25px; color: #575656; font-size: 12px; line-height: 17px;">
 
-                                            <?=$message?>
+                                            <?=!empty($message) ? $message : ''?>
 
                                             <p style="padding: 0 30px;">If you have any questions, please <a href="<?=HostSite('/company/contacts')?>">contact us</a><br/>or
                                                 info@brilliantcanary.com . We are available to assist you 24/7.</p>
@@ -257,7 +257,7 @@
                                 <tr>
                                     <td valign="middle" width="600" style="padding: 30px; text-align: center; color: #868685; font-size: 12px; line-height: 19px;">
                                         <p style="padding-bottom: 25px;">This email was sent to <?=$email_to?><br/>If you would like to unsubscribe from our mailing list please
-                                            <a href="<?=HostSite('/unsubscribe')">click here</a>.</p>
+                                            <a href="<?=HostSite('/unsubscribe')?>">click here</a>.</p>
                                         <img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/border-footer.png')?>" alt="img" style="display: inline-block; margin-bottom: 15px;">
                                         <p>Phone: 800-214-6550<br/>Email: info@brilliantcanary.com</p>
                                     </td>
