@@ -42,7 +42,7 @@
                 <table class="diamond-catalog-table">
                     <thead>
                     <tr id="w-product-sortby">
-                        <td><span>Compare</span></td>
+                        <!--*<td><span>Compare</span></td>*-->
                         <td data-sortby="<?=$sort_shape['sort']?>" class="w-sort-shape <?=$sort_shape['class']?>"><span>Shape</span></td>
                         <td data-sortby="<?=$sort_color['sort']?>" class="w-sort-color <?=$sort_color['class']?>"><span>Color</span></td>
                         <td data-sortby="<?=$sort_clarity['sort']?>" class="w-sort-clarity <?=$sort_clarity['class']?>"><span>Clarity</span></td>
@@ -58,15 +58,17 @@
                     <?php foreach ($data as $row):?>
                     <?//dd($row)?>
                     <tr class="diamond-tr" data-diamond-id="<?=$row->diamond_id?>">
+                        <!--*<td>*-->
+                            <!--*<input id="diamond<?=$row->diamond_id?>" type="checkbox" class="diamond-compare-checkbox">*-->
+                            <!--*<label for="diamond<?=$row->diamond_id?>" class="diamond-catalog-label"></label>*-->
+                        <!--*</td>*-->
                         <td>
-                            <input id="diamond<?=$row->diamond_id?>" type="checkbox" class="diamond-compare-checkbox">
-                            <label for="diamond<?=$row->diamond_id?>" class="diamond-catalog-label"></label>
-                        </td>
-                        <td>
-                            <span class="diamond-table-shapeimg">
-                                <img src="<?=imageDiamontIcon($row->shape)?>" alt="">
+                            <span style="display: block;width: 35%;margin: 0 auto;text-align: left;">
+                                <span class="diamond-table-shapeimg">
+                                    <img src="<?=imageDiamontIcon($row->shape)?>" alt="">
+                                </span>
+                                <span class="hide-shapename"><?=mod_shape($row->shape)?></span>
                             </span>
-                            <span class="hide-shapename"><?=mod_shape($row->shape)?></span>
                         </td>
                         <td><?=$row->color?></td>
                         <td><?=$row->clarity?></td>
