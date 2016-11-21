@@ -40,7 +40,7 @@ class ControllerTotalCoupon extends Controller {
 		}
 
 		$coupon_info = $this->model_total_coupon->getCoupon($coupon);
-
+        //dd($coupon_info, true);
 		if (empty($this->request->post['coupon'])) {
 			$json['error'] = $this->language->get('error_empty');
 

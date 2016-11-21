@@ -1,5 +1,10 @@
 
 <form class="form-inline w-newsletter-form" method="post" role="form">
+    <?if (!empty($coupon)):?>
+        <input type="hidden" name="coupon" value="1">
+    <?else:?>
+        <input type="hidden" name="coupon" value="0">
+    <?endif?>
     <div class="form-group">
         <input type="email" required="required" name="email" class="form-control newslet-email"  placeholder="Enter e-mail">
     </div>
@@ -40,7 +45,6 @@
         $(".w-newsletter-form").submit(function( event ) {
 
 
-            console.log($sex);
             $.ajax({
                 url: '/newsletter_add',
                 type: 'post',

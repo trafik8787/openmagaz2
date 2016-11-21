@@ -312,7 +312,9 @@
 
         <script>
             $(function () {
-               // $('#ModalHomeSubskribe').modal('show');
+                setTimeout(function(){
+                    $('#ModalHomeSubskribe').modal('show');
+                }, 20000);
             });
 
         </script>
@@ -339,7 +341,7 @@
                                         jewelry trends and brilliant updates.
                                     </span>
                                 </div>
-                                <?=$newsletter?>
+                                <?=$newsletter_coupon?>
                             </div>
                         </div>
 

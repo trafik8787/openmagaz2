@@ -10,8 +10,13 @@
                <div class="col-md-5 col-sm-5 hidden-xs ">
                    <ul class="breadcrumbs">
                        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-                       <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-                       <li> » </li>
+                       <?if (!empty($breadcrumb['href'])):?>
+                           <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                           <li> » </li>
+                       <?else:?>
+                           <li><span href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></span></li>
+                           <li> » </li>
+                       <?endif?>
                        <?php } ?>
                    </ul>
                </div>

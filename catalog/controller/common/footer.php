@@ -44,11 +44,13 @@ class ControllerCommonFooter extends Controller {
 		$data['account'] = $this->url->link('account/account', '', 'SSL');
 		$data['order'] = $this->url->link('account/order', '', 'SSL');
 		$data['wishlist'] = $this->url->link('account/wishlist', '', 'SSL');
-		$data['newsletter'] = $this->url->link('account/newsletter', '', 'SSL');
+//		$data['newsletter'] = $this->url->link('account/newsletter', '', 'SSL');
 
 		$data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
 
+        $data['newsletter_coupon'] = $this->load->controller('marketing/newsletter', array('coupon' => true));
         $data['newsletter'] = $this->load->controller('marketing/newsletter');
+
 
         if (empty(Cookie::get('NewsletModal'))) {
             $data['newsletter_cookie'] = 1;

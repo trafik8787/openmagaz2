@@ -16,39 +16,39 @@ class ControllerMarketingNewsletter extends Controller {
 
         $this->load->model('marketing/newsletter');
 
-        if (!empty($this->request->post)) {
-            //dd($this->request->post['email'], true);
-            //$this->request->post['email']
-
-
-
-
-            //dd($this->request->post['email']);
-            $data_email = array();
-
-            $mail = new Mail();
-            $mail->protocol = $this->config->get('config_mail_protocol');
-            $mail->parameter = $this->config->get('config_mail_parameter');
-            $mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
-            $mail->smtp_username = $this->config->get('config_mail_smtp_username');
-            $mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
-            $mail->smtp_port = $this->config->get('config_mail_smtp_port');
-            $mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
-
-            $mail->setTo($this->request->post['email']);
-            $mail->setFrom($this->config->get('config_email'));
-            $mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
-            $mail->setSubject(html_entity_decode('qweqweqweqwe', ENT_QUOTES, 'UTF-8'));
-            //$mail->setText($message);
-            //$mail->setHtml($this->load->view($this->config->get('config_template') . '/template/email/email_technik.tpl', $data_email));
-            $mail->setHtml($this->load->view('mail/email_technik.tpl', $data_email));
-            $mail->send();
-
-
-
-
-
-        }
+//        if (!empty($this->request->post)) {
+//            //dd($this->request->post['email'], true);
+//            //$this->request->post['email']
+//
+//
+//
+//
+//            //dd($this->request->post['email']);
+//            $data_email = array();
+//
+//            $mail = new Mail();
+//            $mail->protocol = $this->config->get('config_mail_protocol');
+//            $mail->parameter = $this->config->get('config_mail_parameter');
+//            $mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
+//            $mail->smtp_username = $this->config->get('config_mail_smtp_username');
+//            $mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
+//            $mail->smtp_port = $this->config->get('config_mail_smtp_port');
+//            $mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
+//
+//            $mail->setTo($this->request->post['email']);
+//            $mail->setFrom($this->config->get('config_email'));
+//            $mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
+//            $mail->setSubject(html_entity_decode('qweqweqweqwe', ENT_QUOTES, 'UTF-8'));
+//            //$mail->setText($message);
+//            //$mail->setHtml($this->load->view($this->config->get('config_template') . '/template/email/email_technik.tpl', $data_email));
+//            $mail->setHtml($this->load->view('mail/email_technik.tpl', $data_email));
+//            $mail->send();
+//
+//
+//
+//
+//
+//        }
 
         if (isset($this->request->get['filter_email'])) {
             $filter_email = $this->request->get['filter_email'];

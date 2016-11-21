@@ -6,7 +6,7 @@ class ModelTotalCoupon extends Model {
 		$coupon_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "coupon` WHERE code = '" . $this->db->escape($code) . "' AND ((date_start = '0000-00-00' OR date_start < NOW()) AND (date_end = '0000-00-00' OR date_end > NOW())) AND status = '1'");
 
 		if ($coupon_query->num_rows) {
-			if ($coupon_query->row['total'] > $this->cart->getSubTotal()) {
+			if ($coupon_query->row['total'] > $this->cart->getSubTotalCouponNotDiamond()) {
 				$status = false;
 			}
 
@@ -105,7 +105,7 @@ class ModelTotalCoupon extends Model {
 				$discount_total = 0;
 
 				if (!$coupon_info['product']) {
-					$sub_total = $this->cart->getSubTotal();
+					$sub_total = $this->cart->getSubTotalCouponNotDiamond();
 				} else {
 					$sub_total = 0;
 

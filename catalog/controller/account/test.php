@@ -12,7 +12,7 @@ class ControllerAccountTest extends Controller {
 
         foreach ($query->rows as $row) {
             $this->db->query("INSERT INTO ". DB_PREFIX ."review (product_id, customer_id, author, text, rating, status, date_added) 
-            VALUES (".$row['product_id'].", 0, '', '', ".random_int(3, 4).", 1, NOW())");
+            VALUES (".$row['product_id'].", 0, '', '', ".random_int(4, 5).", 1, NOW())");
         }
     }
 }

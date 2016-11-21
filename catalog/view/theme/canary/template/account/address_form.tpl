@@ -109,7 +109,7 @@
 
                             <div class="cc-shipping-row">
                                 <label class="col-sm-2 control-label" for="input-zone"><?php echo $entry_zone; ?></label>
-                                <select name="zone_id" id="input-zone" class="shipping-input styled-select">
+                                <select name="zone_id" id="input-zone" class="shipping-input">
                                 </select>
                                 <?php if ($error_zone) { ?>
                                 <div class="text-danger"><?php echo $error_zone; ?></div>

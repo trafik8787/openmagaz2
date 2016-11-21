@@ -429,6 +429,20 @@ class Cart {
 		return $total;
 	}
 
+	//todo подсчет суммы без брилиантов на брилианты купоны действовать не должны
+    public function getSubTotalCouponNotDiamond() {
+        $total = 0;
+
+        foreach ($this->getProducts() as $product) {
+            if (empty($product['diamond'])) {
+                $total += $product['total'];
+            }
+        }
+
+        return $total;
+    }
+
+
 	public function getTaxes() {
 		$tax_data = array();
 
