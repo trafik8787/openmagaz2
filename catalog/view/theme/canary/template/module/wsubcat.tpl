@@ -72,7 +72,7 @@
 
             <?elseif($category_id == 69): //WEDDING RINGS?>
             <div class="wrapper-filter-close">
-                <div class="filter-row">
+                <div class="filter-row stay-table-cell">
                     <div class="filter-col filter-line-col wide-title">
                         <div class="filter-col-title">
                             For anyone
@@ -80,14 +80,10 @@
                         <div class="filter-col-options">
                             <div class="all-line-filter">
 
-                                <div class="visible-xs">
+                                <div class="visible-xs visible-sm">
                                     <a href="/wedding-rings"  <?php if ($child_id == 0):?> class="active" <?endif?>>All</a>
-                                </div>
-
-                                <div class="visible-sm">
-                                    <a href="/wedding-rings"  <?php if ($child_id == 0):?> class="active" <?endif?>>All</a>
-                                    <a href="<?php echo $wsubcategory[0]['href']?>" <?php if ($child_id == $wsubcategory[0]['cat_id'] or $child_id == 72 or $child_id == 74 or $child_id == 75):?> class="active" <?endif?>>Men</a>
-                                    <a href="<?php echo $wsubcategory[1]['href']?>" <?php if ($child_id == $wsubcategory[1]['cat_id'] or $child_id == 77 or $child_id == 79 or $child_id == 81 or $child_id == 78):?> class="active" <?endif?>>Women</a>
+                                    <a class="hidden-xs" href="<?php echo $wsubcategory[0]['href']?>" <?php if ($child_id == $wsubcategory[0]['cat_id'] or $child_id == 72 or $child_id == 74 or $child_id == 75):?> class="active" <?endif?>>Men</a>
+                                    <a class="hidden-xs" href="<?php echo $wsubcategory[1]['href']?>" <?php if ($child_id == $wsubcategory[1]['cat_id'] or $child_id == 77 or $child_id == 79 or $child_id == 81 or $child_id == 78):?> class="active" <?endif?>>Women</a>
                                 </div>
 
                                 <div class="hidden-xs hidden-sm">
@@ -99,12 +95,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="filter-col filter-line-col text-right hidden-xs hidden-sm">
-                            <div class="col-md-2 ">
-                                <div class="filter-col-options">
-                                    <div class="all-line-filter" style="margin-left: 75px;">
-                                        <a href="<?php echo $wsubcategory[0]['href']?>" <?php if ($child_id == $wsubcategory[0]['cat_id'] or $child_id == 72 or $child_id == 74 or $child_id == 75):?> class="active" <?endif?>>Men</a>
-                                    </div>
+                    <div class="filter-col filter-line-col hidden-xs">
+                            <div class="filter-col-options">
+                                <div class="all-line-filter" style="margin-left: 160px;">
+                                    <a href="<?php echo $wsubcategory[0]['href']?>" <?php if ($child_id == $wsubcategory[0]['cat_id'] or $child_id == 72 or $child_id == 74 or $child_id == 75):?> class="active" <?endif?>>Men</a>
                                 </div>
                             </div>
                             <!--*<div class="filter-col-options">*-->
@@ -116,7 +110,7 @@
                 </div>
 
 
-                <div class="filter-row">
+                <div class="filter-row stay-table-cell">
                     <div class="filter-col wide-title">
                         <div class="filter-col-title">
                             <div class="hidden-xs">
