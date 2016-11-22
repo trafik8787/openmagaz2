@@ -2,6 +2,7 @@
 class Currency {
 	private $code;
 	private $currencies = array();
+    private static $ret;
 
 	public function __construct($registry) {
 		$this->config = $registry->get('config');
@@ -32,6 +33,8 @@ class Currency {
 		} else {
 			$this->set($this->config->get('config_currency'));
 		}
+
+		self::$ret = $this;
 	}
 
 	public function set($currency) {
@@ -97,6 +100,60 @@ class Currency {
 
 		return $string;
 	}
+
+
+    public static function formatStat($number, $currency = '', $value = '', $format = true) {
+        if ($currency && self::$ret->has($currency)) {
+            $symbol_left   = self::$ret->currencies[$currency]['symbol_left'];
+            $symbol_right  = self::$ret->currencies[$currency]['symbol_right'];
+            $decimal_place = self::$ret->currencies[$currency]['decimal_place'];
+        } else {
+            $symbol_left   = self::$ret->currencies[self::$ret->code]['symbol_left'];
+            $symbol_right  = self::$ret->currencies[self::$ret->code]['symbol_right'];
+            $decimal_place = self::$ret->currencies[self::$ret->code]['decimal_place'];
+
+            $currency = self::$ret->code;
+        }
+
+        if ($value) {
+            $value = $value;
+        } else {
+            $value = self::$ret->currencies[$currency]['value'];
+        }
+
+        if ($value) {
+            $value = (float)$number * $value;
+        } else {
+            $value = $number;
+        }
+
+        $string = '';
+
+        if (($symbol_left) && ($format)) {
+            $string .= $symbol_left;
+        }
+
+        if ($format) {
+            $decimal_point = self::$ret->language->get('decimal_point');
+        } else {
+            $decimal_point = '.';
+        }
+
+        if ($format) {
+            $thousand_point = self::$ret->language->get('thousand_point');
+        } else {
+            $thousand_point = '';
+        }
+        //dd($string, true);
+        $string .= number_format(round($value, (int)$decimal_place), (int)$decimal_place, $decimal_point, $thousand_point);
+
+        if (($symbol_right) && ($format)) {
+            $string .= $symbol_right;
+        }
+
+        return $string;
+    }
+
 
     public function unFormat($number, $currency = '', $value = '', $format = true) {
         if ($currency && $this->has($currency)) {

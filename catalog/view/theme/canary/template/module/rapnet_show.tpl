@@ -63,7 +63,7 @@
                             <!--*<label for="diamond<?=$row->diamond_id?>" class="diamond-catalog-label"></label>*-->
                         <!--*</td>*-->
                         <td>
-                            <span style="display: block;width: 35%;margin: 0 auto;text-align: left;">
+                            <span style="display: block;width: 40%;margin: 0 auto;text-align: left;">
                                 <span class="diamond-table-shapeimg">
                                     <img src="<?=imageDiamontIcon($row->shape)?>" alt="">
                                 </span>
@@ -85,7 +85,7 @@
                         <!--*<i class="star"></i>*-->
                         <!--*</div>*-->
                         <!--*</td>*-->
-                        <td>$<?=$row->total_sales_price?>.00</td>
+                        <td><?=Currency::formatStat($row->total_sales_price)?></td>
                     </tr>
 
                     <?endforeach?>

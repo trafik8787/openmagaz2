@@ -27,7 +27,7 @@
                                     <div class="box-tovar-th">
                                         <div class="name"><?=$row->shape.' '.$row->size .' CARAT '.$row->color .' '. $row->clarity;?></div>
 
-                                        <span class="price">$<?=$row->total_sales_price?>.00</span>
+                                        <span class="price"><?=Currency::formatStat($row->total_sales_price)?></span>
 
 
                                     </div>

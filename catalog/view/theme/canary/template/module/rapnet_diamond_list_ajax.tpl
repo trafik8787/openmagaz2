@@ -17,7 +17,7 @@
         <!--*</div>*-->
         <div class="diamond-catalog-right-img"><img src="<?=imageDiamont($diamond->shape)?>" alt=""></div>
         <div class="diamond-catalog-right-name"><?=$diamond->shape?> <?=$diamond->size?> CARAT <?=$diamond->color?> <?=$diamond->clarity?></div>
-        <div class="diamond-catalog-right-price">$<?=$diamond->total_sales_price?>.00</div>
+        <div class="diamond-catalog-right-price"><?=Currency::formatStat($diamond->total_sales_price)?></div>
         <div class="diamond-catalog-right-message">
             <div><img src="/catalog/view/theme/canary/img/diamond-catalog-message.jpg" alt=""></div>
             <p>Order loose diamond now for free
