@@ -166,6 +166,13 @@
     color: black;
 }
 
+.w-special-price {
+    text-decoration: line-through;
+    font-size: 13px!important;
+    color: #727271!important;
+    display: block!important;
+}
+
 .w-top-children-menu:before{
     width: 0;
     height: 0;

@@ -1324,6 +1324,10 @@
       padding-top: 9px;
   }
 
+    .w-tel-xs:focus {
+        color: #fff;
+    }
+
   .w-content-baner {
     min-width: 10px;
   }

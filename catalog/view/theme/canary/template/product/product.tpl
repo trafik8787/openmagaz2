@@ -256,7 +256,15 @@
                                         <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
                                         <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
                                         <div class="price-product">
-                                            <span><?php echo $price; ?></span>
+                                            <?php if (!$special):?>
+                                                <span><?php echo $price; ?></span>
+                                            <?else:?>
+
+                                                <span class="w-special-price"><?php echo $price; ?></span>
+                                                <span><?php echo $special; ?></span>
+
+                                            <?endif?>
+
                                             <?if ($path == 20 or (!empty($category_info) and $category_info['category_id'] == 86)):?>
                                                 <span class="h5">(Setting price only)</span>
                                             <?endif?>

@@ -5444,14 +5444,14 @@ footer > section .row {
   width: 34px;
   height: 13px;
   position: absolute;
-  bottom: 15px;
+  bottom: 9px;
   left: 50%;
   margin-left: -17px;
   content: "";
   background: url('../img/icons-s0bc91fa097.png') no-repeat -1224px 0;
 }
 .wrapper-product-table.th-view .product-item .name {
-  padding: 20px 18% 35px;
+  padding: 20px 18% 28px;
   position: relative;
   font-size: 15px;
   -webkit-transition: 0.2s;
