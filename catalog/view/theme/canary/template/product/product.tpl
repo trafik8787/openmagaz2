@@ -1,8 +1,8 @@
 <?php echo isset($header) ? $header : ''; ?>
 
 
-<?//dd($width)?>
-<?//dd($attribute_groups)?>
+<?//dd($path)?>
+<?//dd($category_info['category_id'])?>
 <?//dd($attribute_groups)?>
 <?//dd($products_metal)?>
 
@@ -79,16 +79,19 @@
 
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-6">
-                            <div class="rating">
-                                <?php for ($i = 1; $i <= 5; $i++) { ?>
-                                <?php if ($rating < $i) { ?>
-                                <i class="star"></i>
-                                <?php } else { ?>
-                                <i class="star active"></i>
-                                <?php } ?>
-                                <?php } ?>
-                                <!--*<span><a href="" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('.comment-block').offset().top - 20}, 'slow'); return false;"><?php echo $reviews; ?></a></span>*-->
-                            </div>
+
+                            <?if ($category_info['category_id'] != 87 AND  $category_info['category_id'] != 90  AND $category_info['category_id'] != 91 AND $category_info['category_id'] != 93 AND $category_info['category_id'] != 94):?>
+                                <div class="rating">
+                                    <?php for ($i = 1; $i <= 5; $i++) { ?>
+                                    <?php if ($rating < $i) { ?>
+                                    <i class="star"></i>
+                                    <?php } else { ?>
+                                    <i class="star active"></i>
+                                    <?php } ?>
+                                    <?php } ?>
+                                    <!--*<span><a href="" onclick="$('button#write-review').trigger('click'); $('html, body').animate({scrollTop: $('.comment-block').offset().top - 20}, 'slow'); return false;"><?php echo $reviews; ?></a></span>*-->
+                                </div>
+                            <?endif?>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6 text-right">
                             <strong>SKU:<?=$sku?></strong>
