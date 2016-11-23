@@ -193,7 +193,7 @@
                                             <img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/diamond-img.png')?>" alt="img" style="margin: 0 15px; display: inline-block; ">
                                             <a style="color: #868685;text-decoration: none;" href="<?=HostSite('/wedding-rings')?>">WEDDING RINGS</a>
                                             <img src="<?=HostSite('/catalog/view/theme/canary/img/email_img/diamond-img.png')?>" alt="img" style="margin: 0 15px; display: inline-block; ">
-                                            <a style="color: #868685;text-decoration: none;" href="<?=HostSite('/fine_jeverly')?>">FINE JEWELRY</a>
+                                            <a style="color: #868685;text-decoration: none;" href="<?=HostSite('/fine_jewelry')?>">FINE JEWELRY</a>
                                         </p>
                                     </td>
                                 </tr>

@@ -191,10 +191,10 @@
                                 <a href="/engagement-rings" class="w-general-category"><span><i class="own-b own-b-7"></i></span><br/>Diamond<br/>engagement rings</a>
                             </li>
                             <li>
-                                <a href="/fine_jeverly/diamond_studs" class="w-general-category"><span><i class="own-b own-b-1"></i></span><br/>Diamond<br/>studs</a>
+                                <a href="/fine_jewelry/diamond_studs" class="w-general-category"><span><i class="own-b own-b-1"></i></span><br/>Diamond<br/>studs</a>
                             </li>
                             <li>
-                                <a href="/fine_jeverly/diamond_pendants" class="w-general-category"><span><i class="own-b own-b-4"></i></span><br/>Diamond<br/>pendant</a>
+                                <a href="/fine_jewelry/diamond_pendants" class="w-general-category"><span><i class="own-b own-b-4"></i></span><br/>Diamond<br/>pendant</a>
                             </li>
                         </ul>
                     </div>

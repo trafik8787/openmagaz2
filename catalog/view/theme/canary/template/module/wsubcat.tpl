@@ -180,7 +180,7 @@
                         </div>
                         <div class="filter-col-options">
                             <div class="all-line-filter">
-                                <a href="/fine_jeverly" class="active">All</a>
+                                <a href="/fine_jewelry" class="active">All</a>
                             </div>
 
                                 <label class="btn btn-filter <?php if ($child_id == $wsubcategory[0]['cat_id']):?> active <?endif?> brackets">
