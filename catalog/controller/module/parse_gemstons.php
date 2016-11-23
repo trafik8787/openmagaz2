@@ -305,7 +305,7 @@ class ControllerModuleParseGemstons extends Controller {
 //                    $this->filter[] = $this->filter_color[$curent[4]];
 
 
-                    $this->list_atribute[19] = $this->carat;
+                    $this->list_atribute[19] = $this->carat.'ct';
                     $this->list_atribute[20] = $this->dimensions[0].'X'.$this->dimensions[1].'X'.$this->dimensions[2];
                     $this->list_atribute[22] = $this->color[$curent[4]];
                     $this->list_atribute[21] = $this->stone_type[$curent[1]];
