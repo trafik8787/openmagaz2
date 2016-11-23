@@ -7,7 +7,7 @@
                     <div class="w-category-gradient"></div>
                     <div class="h3 text-center">
                         <div class="icons-marcer_desing_left_icon"></div>
-                        <a href="/engagement-rings">Enagagamet Rings</a>
+                        <a href="/engagement-rings">Engagement Rings</a>
                         <div class="icons-marcer_desing_right_icon"></div>
                     </div>
                     <a href="/engagement-rings"><img src="/catalog/view/theme/canary/img/bloc-home-category-best-360.jpg" alt=""></a>
