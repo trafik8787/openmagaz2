@@ -50,6 +50,7 @@ class ControllerModuleParseGemstons extends Controller {
 
     private $category;
 
+    private $list_atribute;
 
     //gemstone jeverly изделия
     private $category_gemstone_arr;
@@ -250,7 +251,7 @@ class ControllerModuleParseGemstons extends Controller {
         $this->category[] = 94;
 
         $this->deleteProduct();
-       // $filePath = '/home/canary/www/sylviogems.csv';
+        //$filePath = '/home/canary/www/sylviogems.csv';
         $filePath = '/home/brilliantcanary/gems_pars/sylviogems.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
@@ -270,7 +271,7 @@ class ControllerModuleParseGemstons extends Controller {
             $curent = $file->current();
 
             if (!empty($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'RBL' AND $curent[2] !== 'GB' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
-                dd($this->parseDimensions($curent[11]));
+           //dd($curent);
                 if ($this->copyImage($curent[8]) OR true) {
 
 
@@ -304,7 +305,10 @@ class ControllerModuleParseGemstons extends Controller {
 //                    $this->filter[] = $this->filter_color[$curent[4]];
 
 
-
+                    $this->list_atribute[19] = $this->carat;
+                    $this->list_atribute[20] = $this->dimensions[0].'X'.$this->dimensions[1].'X'.$this->dimensions[2];
+                    $this->list_atribute[22] = $this->color[$curent[4]];
+                    $this->list_atribute[21] = $this->stone_type[$curent[1]];
 
                     $this->image_general = 'catalog/img_gemstones/' . $curent[8];
                     $this->image_galery[] = 'catalog/img_gemstones/' . $curent[8];
@@ -317,6 +321,7 @@ class ControllerModuleParseGemstons extends Controller {
                     $this->addStore();
                     $this->addCategory();
                     $this->addGalery();
+                    $this->addAtribute();
 
                     dd($this->product_id_insert);
                 }
@@ -678,6 +683,20 @@ class ControllerModuleParseGemstons extends Controller {
             product_id = '" . (int)$this->product_id_insert . "', 
             image = '" . $this->db->escape($product_image) . "', 
             sort_order = '" . 0 . "'");
+        }
+    }
+
+
+    private function addAtribute () {
+
+        foreach ($this->list_atribute as $key => $product_attribute) {
+
+            $this->db->query("INSERT INTO " . DB_PREFIX . "product_attribute SET 
+            product_id = '" . (int)$this->product_id_insert . "', 
+            attribute_id = '" . (int)$key . "', 
+            language_id = '" . 1 . "', 
+            text = '" .  $this->db->escape($product_attribute) . "'");
+
         }
     }
 

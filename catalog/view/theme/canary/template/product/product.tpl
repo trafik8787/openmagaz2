@@ -145,18 +145,21 @@
                                         <table class="table table-condensed">
 
                                             <?if (!empty($attribute_groups)):?>
-                                            <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
+                                                <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
 
-                                            <tr>
-                                                <td><span><?=$row[0]['name']?>: <?=$row[0]['text']?></span></td>
-                                                <td><span><?=$row[1]['name']?>: <?=$row[1]['text']?></span></td>
-                                            </tr>
-                                            <?endforeach?>
+                                                <tr>
+                                                    <td><span><?=$row[0]['name']?>: <?=$row[0]['text']?></span></td>
+                                                    <td><span><?=$row[1]['name']?>: <?=$row[1]['text']?></span></td>
+                                                </tr>
+                                                <?endforeach?>
                                             <?endif?>
-                                            <tr>
-                                                <td><span>METAL: <?=list_metal($metal)?></span></td>
-                                                <!--*<td><span>WEIGHT: <?=$weight?> g.</span></td>*-->
-                                            </tr>
+
+                                            <?if ($category_info['category_id'] != 94): //в gemstones не отображается?>
+                                                <tr>
+                                                    <td><span>METAL: <?=list_metal($metal)?></span></td>
+                                                    <!--*<td><span>WEIGHT: <?=$weight?> g.</span></td>*-->
+                                                </tr>
+                                            <?endif?>
                                             <!-- TODO: More specifications btn
                                             <tr>
                                                 <td></td>
