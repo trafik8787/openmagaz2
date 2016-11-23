@@ -236,7 +236,7 @@
 
     <div class="my-div <?= !empty($show) ? 'active-circle' : '' ?> <?php if (!empty($CanaryProductCom)):?> w-opacity<?endif?>">
         <?if ($show !== null):?>
-            <a href="<?= !empty($CanaryProductCom['href']) ? $CanaryProductCom['href'] : '/fine_jewelry' ?>" class="w-one-block <?= !empty($show) ? 'w-general-category' : '' ?>">
+            <a href="<?= !empty($CanaryProductCom['href']) ? $CanaryProductCom['href'] : '/fine-jewelry' ?>" class="w-one-block <?= !empty($show) ? 'w-general-category' : '' ?>">
                 <span class="number-step"><?=$index?></span>
                 <span class="title">
                 <span>SELECT YOUR JEWELRY </span>

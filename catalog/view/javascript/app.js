@@ -538,7 +538,7 @@ $(document).on('click', '#w-button-add-product-complect-gemstone-to-pendant', fu
             if ($.cookie('CanaryProductCom') != null) {
                 window.location.href = '/complete_diamond';
             } else {
-                window.location.href = '/fine_jewelry/diamond_pendants';
+                window.location.href = '/fine-jewelry/diamond_pendants';
             }
 
         },
@@ -615,7 +615,7 @@ $(document).on('click', '#w-button-add-diamond-complect-to-pendant', function(){
             if ($.cookie('CanaryProductCom') != null) {
                 window.location.href = '/complete_diamond';
             } else {
-                window.location.href = '/fine_jewelry/diamond_pendants';
+                window.location.href = '/fine-jewelry/diamond_pendants';
             }
 
 
