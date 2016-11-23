@@ -250,7 +250,7 @@ class ControllerModuleParseGemstons extends Controller {
         $this->category[] = 94;
 
         $this->deleteProduct();
-        //$filePath = '/home/canary/www/sylviogems.csv';
+       // $filePath = '/home/canary/www/sylviogems.csv';
         $filePath = '/home/brilliantcanary/gems_pars/sylviogems.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
@@ -270,7 +270,7 @@ class ControllerModuleParseGemstons extends Controller {
             $curent = $file->current();
 
             if (!empty($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'RBL' AND $curent[2] !== 'GB' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
-
+                dd($this->parseDimensions($curent[11]));
                 if ($this->copyImage($curent[8]) OR true) {
 
 
@@ -278,10 +278,17 @@ class ControllerModuleParseGemstons extends Controller {
                     $this->model = $this->sku;
                     $this->carat = $curent[3];
                     $this->price = floor(($this->carat * $curent[5]) * 2);
-                    $this->name = $this->color[$curent[4]] . ' ' . $this->shape[$curent[2]] . ' ' . $this->stone_type[$curent[1]] . ' ' . $curent[3];
 
+                    $this->name = $this->color[$curent[4]] . ' ' . $this->shape[$curent[2]] . ' ' . $this->stone_type[$curent[1]] . ' ' . $curent[3].'ct';
 
-                    $this->description = $this->name;
+                    if ($this->sku{0} == 'x' OR $this->sku{0} == 'X') {
+                        $this->name = 'Matching pair of '.$this->color[$curent[4]]. ' '.$this->shape[$curent[2]]. ' '.$this->stone_type[$curent[1]].' '.$curent[3].'ct';
+                    }
+
+                    //размеры
+                    $this->dimensions = $this->parseDimensions($curent[11]);
+
+                    $this->description = $this->name.' Dimensions '.$this->dimensions[0].'X'.$this->dimensions[1].'X'.$this->dimensions[2];
                     $this->title_seo = $this->name . ' | ' . $this->sku;
                     $this->description_seo = $this->name . ' ' . $this->sku;
                     $this->keywords_seo = $this->color[$curent[4]] . ', ' . $this->shape[$curent[2]] . ', ' . $this->stone_type[$curent[1]] . ', ' . $curent[3] . ', Carat';
@@ -296,8 +303,7 @@ class ControllerModuleParseGemstons extends Controller {
 //                    $this->filter[] = $this->filter_shape[$curent[2]];
 //                    $this->filter[] = $this->filter_color[$curent[4]];
 
-                    //размеры
-                    $this->dimensions = $this->parseDimensions($curent[11]);
+
 
 
                     $this->image_general = 'catalog/img_gemstones/' . $curent[8];
