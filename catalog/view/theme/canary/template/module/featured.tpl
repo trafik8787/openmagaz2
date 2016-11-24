@@ -14,8 +14,8 @@
                 <?php if (!$product['special']):?>
                     <div class="w-price"><?=$product['price']?></div>
                 <?else:?>
-                    <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $product['price']; ?></span>
-                    <b class="w-special-price"><?php echo $product['special']; ?></b>
+                    <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $product['special']; ?></span>
+                    <b class="w-special-price"><?php echo $product['price']; ?></b>
                 <?endif?>
             </div>
         </div>
