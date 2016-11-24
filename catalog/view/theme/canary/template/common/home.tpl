@@ -12,6 +12,17 @@
                     <div class="row">
                         <div class="center-bl w-content-baner clearfix">
                             <div class="col-md-6 col-sm-5">
+
+                                <div class="w-ac-baner-text hidden-xs">
+                                    <div class="w-ac-baner-text1">Cyber Monday</div>
+                                    <div class="w-ac-baner-text2">Enjoy up to 35% OFF All Jewelry*</div>
+                                    <a href="/fine-jewelry" role="button" class="btn btn-primary btn-lg w-btn-wiath">SHOP NOW</a>
+                                    <span class="w-button-btn">
+                                        <p>*Offer does not include loose diamonds</p>
+                                        <p>End November 28 at 11:59pm cst</p>
+                                    </span>
+                                </div>
+
                                 <div class="w-button-in-baner">
                                     <a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
                                     <a href="/engagement-rings" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>

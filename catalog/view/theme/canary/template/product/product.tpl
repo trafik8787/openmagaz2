@@ -23,14 +23,20 @@
                 <a href="<?=get_baners_top_random()[1]?>"><img src="<?=get_baners_top_random()[0]?>" class="bread-baner" ></a>
             </div>
         </div>
+        <!--*<span href="#" class="w-acsia-shild-product" data-toggle="modal" data-target="#ModalAkcia"><img src="/catalog/view/theme/canary/img/demo_new_template/akcia.png" alt="briliantcanary"></span>*-->
     </div>
     <section class="static-page">
         <div class="center-bl">
 
             <?php echo $content_top; ?>
         </div>
+
         <div class="center-bl">
+            <?php if ($special):?>
+            <span class="scale-acsia hidden-xs"></span>
+            <?endif?>
             <div class="one-product clearfix">
+
                 <div class="one-product-slider hidden-xs">
                     <div class="slider-for">
                         <?php foreach ($images as $image):?>

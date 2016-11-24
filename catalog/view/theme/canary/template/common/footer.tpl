@@ -354,6 +354,59 @@
         </div>
     <?endif?>
 
+
+    <div class="modal fade hidden-xs" id="ModalAkcia" tabindex="-1" role="dialog" aria-labelledby="ModalAkciaLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="w-bloc-cat">
+
+                        <table class="w-list-cat">
+                            <tr>
+                                <td>
+                                    <div class="w-item1"><a href="/engagement-rings">ENGAGEMENT RINGS</a></div>
+                                </td>
+                                <td><div class="w-item2"></div></td>
+                                <td>
+                                    <div class="w-item3"><a href="/fine-jewelry">JEWELRY & GIFTS</a></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="w-item1"><a href="/wedding-rings">WEDDING RINGS</a></div>
+                                </td>
+                                <td><div class="w-item2"></div></td>
+                                <td>
+                                    <div class="w-item3"><a href="/gemstones">GEMSTONES</a></div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!--*<div class="w-list-cat">*-->
+                            <!--*<div class="w-item1"><a href="">ENGAGEMENT RINGS</a></div>*-->
+                            <!--*<div class="w-item2"></div>*-->
+                            <!--*<div class="w-item3"><a href="">JEWELRY & GIFTS</a></div>*-->
+                        <!--*</div>*-->
+                        <!--*<div class="w-list-cat">*-->
+                            <!--*<div class="w-item1"><a href="">WEDDING RINGS</a></div>*-->
+                            <!--*<div class="w-item2"></div>*-->
+                            <!--*<div class="w-item3"><a href="">GEMSTONES</a></div>*-->
+                        <!--*</div>*-->
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <p>&#42; Does not include loose diamonds. Cannot be combined with any other offer.</p>
+                    <p>Promotion ends November 30 at 11:59PM CST.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </footer>
 
 
