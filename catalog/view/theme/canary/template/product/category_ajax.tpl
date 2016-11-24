@@ -66,10 +66,10 @@
                             <div class="name"><?php echo $product['name']; ?></div>
 
                             <?php if (!$product['special']):?>
-                            <span class="price"><?php echo $product['price']; ?></span>
+                                <span class="price"><?php echo $product['price']; ?></span>
                             <?else:?>
-                            <span class="price"><?php echo $product['special']; ?></span>
-                            <span class="discount"> <?php echo $product['price']; ?></span>
+                                <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $product['special']; ?></span>
+                                <b class="w-special-price"> <?php echo $product['price']; ?></b>
                             <?endif?>
 
 
@@ -78,7 +78,14 @@
                 </td>
                 <td data-th="Name"><?php echo $product['name']; ?></td>
                 <td data-th="Stock Number" class="stnumber-td"><?=$product['sku']?></td>
-                <td data-th="Price"><div class="price"><?php echo $product['price']; ?></div></td>
+                <td data-th="Price">
+                    <?php if (!$product['special']):?>
+                        <span class="price"><?php echo $product['price']; ?></span>
+                    <?else:?>
+                        <b class="w-special-price"> <?php echo $product['price']; ?></b>
+                        <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $product['special']; ?></span>
+                    <?endif?>
+                </td>
                 <td></td>
                 <td>
                     <a href="#" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-exchange"></i></a>

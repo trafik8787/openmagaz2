@@ -280,7 +280,7 @@ class ControllerModuleParseGemstons extends Controller {
                     $this->carat = $curent[3];
                     $this->price = floor(($this->carat * $curent[5]) * 2);
 
-                    $this->name = $this->color[$curent[4]] . ' ' . $this->shape[$curent[2]] . ' ' . $this->stone_type[$curent[1]] . ' ' . $curent[3].'ct';
+                    $this->name = $this->shape[$curent[2]] . ' ' . $this->stone_type[$curent[1]] . ' ' . $curent[3].'ct';
 
                     if ($this->sku{0} == 'x' OR $this->sku{0} == 'X') {
                         $this->name = 'Matching pair of '.$this->color[$curent[4]]. ' '.$this->shape[$curent[2]]. ' '.$this->stone_type[$curent[1]].' '.$curent[3].'ct';
