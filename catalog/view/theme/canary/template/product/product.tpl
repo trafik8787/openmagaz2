@@ -114,7 +114,11 @@
                         </div>
                     </div>
                     <div class="one-product-slider visible-xs">
+                        <?php if ($special):?>
+                            <span class="scale-acsia-mobile"></span>
+                        <?endif?>
                         <div class="slider-for">
+
                             <?php foreach ($images as $image):?>
 
                             <?if (!empty($image['video'])):?>
@@ -311,10 +315,13 @@
                                     <div class="icons-quality_service_icon"></div>
                                     <div class="margin-buttom-0">
                                         <table class="table table-condensed">
-                                            <tr>
-                                                <td><span>METAL: <?=list_metal($metal)?></span></td>
-                                                <td><span>WEIGHT: <?=$weight?> g.</span></td>
-                                            </tr>
+                                            <?if ($category_info['category_id'] != 94): //в gemstones не отображается?>
+                                                <tr>
+                                                    <td><span>METAL: <?=list_metal($metal)?></span></td>
+                                                    <td><span>WEIGHT: <?=$weight?> g.</span></td>
+                                                </tr>
+                                            <?endif?>
+
                                             <?if (!empty($attribute_groups)):?>
                                             <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
 
