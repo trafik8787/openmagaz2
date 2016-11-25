@@ -325,10 +325,10 @@
                                             <?if (!empty($attribute_groups)):?>
                                             <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
 
-                                            <tr>
-                                                <td><span><?=$row[0]['name']?>: <?=$row[0]['text']?></span></td>
-                                                <td><span><?=$row[1]['name']?>: <?=$row[1]['text']?></span></td>
-                                            </tr>
+                                                <tr>
+                                                    <td><span><?=$row[0]['name']?>: <?=$row[0]['text']?></span></td>
+                                                    <td><span><?=$row[1]['name']?>: <?=$row[1]['text']?></span></td>
+                                                </tr>
                                             <?endforeach?>
                                             <?endif?>
 

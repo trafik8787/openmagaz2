@@ -51,6 +51,7 @@ class ControllerModuleParseGemstons extends Controller {
     private $category;
 
     private $list_atribute;
+    private $list_atribute_gemstone;
 
     //gemstone jeverly изделия
     private $category_gemstone_arr;
@@ -364,7 +365,8 @@ class ControllerModuleParseGemstons extends Controller {
         $this->manufactured = 14;
 
         $this->deleteProduct(true);
-        $filePath = '/home/brilliantcanary/gems_pars/sylviojewelry.csv';
+        //$filePath = '/home/brilliantcanary/gems_pars/sylviojewelry.csv';
+        $filePath = '/home/canary/www/sylviojewelry.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
@@ -381,7 +383,7 @@ class ControllerModuleParseGemstons extends Controller {
             $this->image_galery = array();
 
            if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4]) OR $curent[22] != '') and  !empty($this->category_gemstone_arr[$curent[1]])) {
-
+                dd($curent);
                if ($this->copyImage($curent[22])) {
 
                    $this->sku = $curent[0];
@@ -409,7 +411,8 @@ class ControllerModuleParseGemstons extends Controller {
                    $this->image_general = 'catalog/img_gemstones/' . $curent[22];
                    $this->image_galery[] = 'catalog/img_gemstones/' . $curent[22];
 
-                   $this->name = $curent[2] . ' ' . $curent[3] . ' ' . $curent[4] . ' ' . $this->metal_gemstone[$curent[15]][1];
+                   $this->name = $this->metal_gemstone[$curent[15]][1].' '.$curent[4].' '.$curent[3].' '.$curent[2];
+                   //$this->name = $curent[2] . ' ' . $curent[3] . ' ' . $curent[4] . ' ' . $this->metal_gemstone[$curent[15]][1];
                    $this->description = $this->name;
                    $this->title_seo = $this->name;
                    $this->description_seo = $this->name . ' ' . $curent[23];
@@ -417,6 +420,7 @@ class ControllerModuleParseGemstons extends Controller {
 
                    $this->dimensions = array('', $curent[20], $curent[21]);
 
+                   //$this->list_atribute_gemstone
 
                    $this->product_id_insert = $this->addProduct();
 

@@ -13,7 +13,7 @@
                         <div class="center-bl w-content-baner clearfix">
                             <div class="col-md-6 col-sm-5">
 
-                                <div class="w-ac-baner-text hidden-xs">
+                                <div class="w-ac-baner-text">
                                     <div class="w-ac-baner-text1">Cyber Monday</div>
                                     <div class="w-ac-baner-text2">Enjoy up to 35% OFF All Jewelry*</div>
                                     <a href="/fine-jewelry" role="button" class="btn btn-primary btn-lg w-btn-wiath">SHOP NOW</a>

@@ -1056,6 +1056,31 @@
 
 @media  (max-width: 480px){
 
+
+    .w-ac-baner-text {
+        font-weight: bold;
+        position: relative;
+        top: 5px;
+    }
+
+    .w-ac-baner-text1 {
+font-size: 32px;
+}
+
+    .w-ac-baner-text2 {
+font-size: 12px;
+}
+
+    .w-btn-wiath {
+margin-top: 5px;
+padding: 6px 20px 6px 20px;
+}
+
+    .w-button-btn {
+        margin-top: 7px;
+        font-size: 12px;
+    }
+
      .w-acsia-shild {
          top: 33px;
      }
