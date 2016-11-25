@@ -51,7 +51,6 @@ class ControllerModuleParseGemstons extends Controller {
     private $category;
 
     private $list_atribute;
-    private $list_atribute_gemstone;
 
     //gemstone jeverly изделия
     private $category_gemstone_arr;
@@ -365,8 +364,8 @@ class ControllerModuleParseGemstons extends Controller {
         $this->manufactured = 14;
 
         $this->deleteProduct(true);
-        //$filePath = '/home/brilliantcanary/gems_pars/sylviojewelry.csv';
-        $filePath = '/home/canary/www/sylviojewelry.csv';
+        $filePath = '/home/brilliantcanary/gems_pars/sylviojewelry.csv';
+        //$filePath = '/home/canary/www/sylviojewelry.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
@@ -383,7 +382,7 @@ class ControllerModuleParseGemstons extends Controller {
             $this->image_galery = array();
 
            if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4]) OR $curent[22] != '') and  !empty($this->category_gemstone_arr[$curent[1]])) {
-                dd($curent);
+
                if ($this->copyImage($curent[22])) {
 
                    $this->sku = $curent[0];
@@ -411,7 +410,7 @@ class ControllerModuleParseGemstons extends Controller {
                    $this->image_general = 'catalog/img_gemstones/' . $curent[22];
                    $this->image_galery[] = 'catalog/img_gemstones/' . $curent[22];
 
-                   $this->name = $this->metal_gemstone[$curent[15]][1].' '.$curent[4].' '.$curent[3].' '.$curent[2];
+                   $this->name = $this->metal_gemstone[$curent[15]][1].' '.$curent[4].' '.$curent[3].' '.$curent[2].' '.$curent[7];
                    //$this->name = $curent[2] . ' ' . $curent[3] . ' ' . $curent[4] . ' ' . $this->metal_gemstone[$curent[15]][1];
                    $this->description = $this->name;
                    $this->title_seo = $this->name;
@@ -420,7 +419,30 @@ class ControllerModuleParseGemstons extends Controller {
 
                    $this->dimensions = array('', $curent[20], $curent[21]);
 
-                   //$this->list_atribute_gemstone
+                   if (!empty($curent[5])) {
+                       $this->list_atribute[23] = $curent[5];//# of Center Stones:
+                   }
+                   if (!empty($curent[7])) {
+                       $this->list_atribute[24] = $curent[7];//Carat weight:
+                   }
+                   if (!empty($curent[4])) {
+                       $this->list_atribute[25] = $curent[4];//Center Stone Color:
+                   }
+                   if (!empty($curent[7])) {
+                       $this->list_atribute[26] = $curent[7];//Center Stone Weight:
+                   }
+                   if (!empty($curent[9])) {
+                       $this->list_atribute[27] = $curent[9];//# of Side Diamonds:
+                   }
+                   if (!empty($curent[8])) {
+                       $this->list_atribute[28] = $curent[8];//Total Diamond Weight:
+                   }
+                   if (!empty($curent[10])) {
+                       $this->list_atribute[29] = $curent[10];//Average Diamond Color:
+                   }
+                   if (!empty($curent[11])) {
+                       $this->list_atribute[30] = $curent[11];//Average Diamond Clarity:
+                   }
 
                    $this->product_id_insert = $this->addProduct();
 
@@ -431,6 +453,7 @@ class ControllerModuleParseGemstons extends Controller {
                    $this->addCategory();
                    $this->addGalery();
                    $this->addOption();
+                   $this->addAtribute();
 
                    //dd($curent);
                    dd($this->product_id_insert);
@@ -658,8 +681,7 @@ class ControllerModuleParseGemstons extends Controller {
 
     private function addUrl() {
 
-        $keyword = str_replace(' ', '-', strtolower(trim($this->name))).'-'.$this->sku;
-
+        $keyword = str_replace(array(' ', '/'), '-', strtolower(trim($this->name))).'-'.$this->sku;
         $this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET 
             query = 'product_id=" . (int)$this->product_id_insert . "', 
             keyword = '" . $this->db->escape($keyword) . "'");
