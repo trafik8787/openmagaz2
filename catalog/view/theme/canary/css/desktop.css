@@ -13,8 +13,10 @@
 @media screen and (max-width: 1200px){
 
     .w-ac-baner-text {
-top: 20px;
-}
+
+top: 20px;
+
+}
 
   .line-cart-low-price > div{
     width: 100%;
@@ -1369,6 +1371,7 @@ font-size: 12px;
 
   .home-top-baneer .w-button-in-baner {
     top: 135px;
+    left: 0;
   }
   .w-bloc-best-category > .center-bl > div{
     /*width: 100% !important;*/
