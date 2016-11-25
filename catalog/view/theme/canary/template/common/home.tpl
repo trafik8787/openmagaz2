@@ -19,7 +19,7 @@
                                     <a href="/fine-jewelry" role="button" class="btn btn-primary btn-lg w-btn-wiath">SHOP NOW</a>
                                     <span class="w-button-btn">
                                         <p>*Offer does not include loose diamonds</p>
-                                        <p>End November 28 at 11:59pm cst</p>
+                                        <p>Ends November 28 at 11:59pm CST</p>
                                     </span>
                                 </div>
 
