@@ -1071,12 +1071,30 @@ left: 399px!important;
 }
 }
 
+@media (max-width: 767px) {
+    #ModalAkcia .modal-dialog {
+        width: 644px;
+        margin: 0 auto;
+    }
+    #ModalAkcia .modal-body {
+        padding: 0;
+    }
+    #ModalAkcia .w-list-cat {
+        margin: 0 auto;
+        top: 200px;
+    }
+    #ModalAkcia .modal-content {
+        background: url("../img/demo_new_template/modal-akcia.jpg") no-repeat center/100%;
+        height: 413px;
+    }
+}
 
 @media  (max-width: 480px){
 
 
     #ModalAkcia .modal-dialog {
         width: 356px;
+        margin: 0 auto;
     }
 
     #ModalAkcia .w-list-cat {
