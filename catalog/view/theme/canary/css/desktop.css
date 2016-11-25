@@ -11,6 +11,11 @@
 }
 
 @media screen and (max-width: 1200px){
+
+    .w-ac-baner-text {
+top: 20px;
+}
+
   .line-cart-low-price > div{
     width: 100%;
   }
@@ -789,17 +794,16 @@
 
   .w-button-in-baner a {
     width: 47%;
-    margin: 0 1%!important;
+    margin: 1% 1%!important;
     font-size: 17px;
     text-align: center;
   }
 
   .home-top-baneer .w-button-in-baner {
     position: absolute;
-    top: 235px;
     margin-left: inherit;
-    left: -5px;
-    right: -5px;
+    left: 406px;
+    top: 166px;
   }
 
   .wrapper-selling .text-center{
@@ -1054,6 +1058,18 @@
 
 }
 
+@media  (min-width: 480px) and (max-width: 680px){
+
+    .w-button-in-baner {
+
+top: 168px!important;
+
+left: 399px!important;
+
+}
+}
+
+
 @media  (max-width: 480px){
 
 
@@ -1064,25 +1080,34 @@
     }
 
     .w-ac-baner-text1 {
-font-size: 32px;
-}
+
+font-size: 32px;
+
+}
 
     .w-ac-baner-text2 {
-font-size: 12px;
-}
+
+font-size: 12px;
+
+}
 
     .w-btn-wiath {
-margin-top: 5px;
-padding: 6px 20px 6px 20px;
-}
+
+margin-top: 5px;
+
+padding: 6px 20px 6px 20px;
+
+}
 
     .w-button-btn {
-        margin-top: 7px;
-        font-size: 12px;
+        
+margin-top: 7px;
+        
+font-size: 12px;
     }
 
      .w-acsia-shild {
-         top: 33px;
+         top: 100%;
      }
 
     .w-acsia-shild img {

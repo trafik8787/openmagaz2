@@ -4897,7 +4897,7 @@ text-align: left;
         text-align: center;
     }
     .w-acsia-shild {
-        top: 53px;
+        top: 100%;
     }
     .col-md-12 > .h1 {
         padding-top: 90px;
@@ -5039,7 +5039,12 @@ text-align: left;
 
     .main-catalog-container.wrapper-product-table.th-view .price {
         position: relative;
-        top: -20px;
+        top: -8px;
+    }
+
+    .w-special-price {
+    position: relative;
+    top: -11px;
     }
 
     .wrapper-product-table.list-view .table tbody tr td:nth-child(1) {
