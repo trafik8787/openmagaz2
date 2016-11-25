@@ -355,7 +355,7 @@
     <?endif?>
 
 
-    <div class="modal fade hidden-xs" id="ModalAkcia" tabindex="-1" role="dialog" aria-labelledby="ModalAkciaLabel" aria-hidden="true">
+    <div class="modal fade" id="ModalAkcia" tabindex="-1" role="dialog" aria-labelledby="ModalAkciaLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

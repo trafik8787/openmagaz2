@@ -1075,6 +1075,19 @@ left: 399px!important;
 @media  (max-width: 480px){
 
 
+    #ModalAkcia .modal-dialog {
+        width: 356px;
+    }
+
+    #ModalAkcia .w-list-cat {
+        font-size: 14px;
+        margin: 0 auto;
+    }
+
+    #ModalAkcia .modal-body {
+        padding: 0;
+    }
+
     .w-ac-baner-text {
         font-weight: bold;
         position: relative;
