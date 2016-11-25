@@ -1088,6 +1088,19 @@ left: 399px!important;
         padding: 0;
     }
 
+    #ModalAkcia .modal-footer {
+        font-size: 11.5px;
+    }
+
+    #ModalAkcia .modal-header .close {
+        top: 96px;
+    }
+
+    #ModalAkcia .modal-content {
+        background: url("../img/demo_new_template/modal-akcia.jpg") no-repeat center/100%;
+        height: 436px;
+    }
+
     .w-ac-baner-text {
         font-weight: bold;
         position: relative;
