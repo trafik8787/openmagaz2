@@ -15,61 +15,61 @@
                     <ul class="list-inline w-diamond-home-sparite">
                         <li class="w-diam-row">
                             <div class="w-home-briliant">
-                                <a href="/diamonds?&shape=Round"><img src="/image/shapes/round.jpg" alt=""></a>
+                                <a href="/diamonds?&shape=Round"><img src="/image/shapes/min_78/round.jpg" alt=""></a>
                             </div>
                             <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Round">Round</a></div>
                         </li>
                         <li class="w-diam-row">
                             <div class="w-home-briliant">
-                                <a href="/diamonds?&shape=Princess"><img src="/image/shapes/princess.jpg" alt=""></a>
+                                <a href="/diamonds?&shape=Princess"><img src="/image/shapes/min_78/princess.jpg" alt=""></a>
                             </div>
                             <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Princess">Princess</a></div>
                         </li>
                         <li class="w-diam-row">
                             <div class="w-home-briliant">
-                                <a href="/diamonds?&shape=Asscher"><img src="/image/shapes/asscher.jpg" alt=""></a>
+                                <a href="/diamonds?&shape=Asscher"><img src="/image/shapes/min_78/asscher.jpg" alt=""></a>
                             </div>
                             <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Asscher">Asscher</a></div>
                         </li>
                         <li class="w-diam-row">
                             <div class="w-home-briliant">
-                                <a href="/diamonds?&shape=Cushion"><img src="/image/shapes/cushion.jpg" alt=""></a>
+                                <a href="/diamonds?&shape=Cushion"><img src="/image/shapes/min_78/cushion.jpg" alt=""></a>
                             </div>
                             <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Cushion">Cushion</a></div>
                         </li>
                         <li class="w-diam-row">
                             <div class="w-home-briliant">
-                                <a href="/diamonds?&shape=Marquise"><img src="/image/shapes/marquise.jpg" alt=""></a>
+                                <a href="/diamonds?&shape=Marquise"><img src="/image/shapes/min_78/marquise.jpg" alt=""></a>
                             </div>
                             <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Marquise">Marquise</a></div>
                         </li>
                         <li class="w-diam-row">
                             <div class="w-home-briliant">
-                                <a href="/diamonds?&shape=Oval"><img src="/image/shapes/oval.jpg" alt=""></a>
+                                <a href="/diamonds?&shape=Oval"><img src="/image/shapes/min_78/oval.jpg" alt=""></a>
                             </div>
                             <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Oval">Oval</a></div>
                         </li>
                         <li class="w-diam-row">
                             <div class="w-home-briliant">
-                                <a href="/diamonds?&shape=Radiant"><img src="/image/shapes/radiant.jpg" alt=""></a>
+                                <a href="/diamonds?&shape=Radiant"><img src="/image/shapes/min_78/radiant.jpg" alt=""></a>
                             </div>
                             <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Radiant">Radiant</a></div>
                         </li>
                         <li class="w-diam-row">
                             <div class="w-home-briliant">
-                                <a href="/diamonds?&shape=Pear"><img src="/image/shapes/pear.jpg" alt=""></a>
+                                <a href="/diamonds?&shape=Pear"><img src="/image/shapes/min_78/pear.jpg" alt=""></a>
                             </div>
                             <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Pear">Pear Shaped</a></div>
                         </li>
                         <li class="w-diam-row">
                             <div class="w-home-briliant">
-                                <a href="/diamonds?&shape=Heart"><img src="/image/shapes/heart.jpg" alt=""></a>
+                                <a href="/diamonds?&shape=Heart"><img src="/image/shapes/min_78/heart.jpg" alt=""></a>
                             </div>
                             <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Heart">Heart Shaped</a></div>
                         </li>
                         <li class="w-diam-row">
                             <div class="w-home-briliant">
-                                <a href="/diamonds?&shape=Emerald"><img src="/image/shapes/emerald.jpg" alt=""></a>
+                                <a href="/diamonds?&shape=Emerald"><img src="/image/shapes/min_78/emerald.jpg" alt=""></a>
                             </div>
                             <div class="text-center w-diamond-name-sparite"><a href="/diamonds?&shape=Emerald">Emerald</a></div>
                         </li>

@@ -34,6 +34,8 @@
                     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </script>
 
+    <script async src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <script async type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
 
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/font-awesome.min.css">
     <link href="/catalog/view/theme/canary/vendor/slickslider/slick.css" rel="stylesheet">
@@ -51,8 +53,6 @@
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop.css"/>
 
-    <script src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -64,6 +64,7 @@
     <?//dd($categories)?>
 </head>
 <body>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHJ8N6"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
