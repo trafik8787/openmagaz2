@@ -383,7 +383,7 @@ class ControllerModuleParseGemstons extends Controller {
 
            if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4]) OR $curent[22] != '') and  !empty($this->category_gemstone_arr[$curent[1]])) {
 
-               if ($this->copyImage($curent[22]) or true) {
+               if ($this->copyImage($curent[22])) {
 
                    $this->sku = $curent[0];
                    $this->model = $this->sku;
