@@ -175,7 +175,7 @@
             <a href="<?= !empty($CanaryProductComGemstonToRing['href']) ? $CanaryProductComGemstonToRing['href'] : '/gemstones' ?>" class="w-one-block <?= !empty($show) ? 'w-general-category' : '' ?>">
                 <span class="number-step"><?=$index?></span>
                 <span class="title">
-                    <span>SELECT YOUR GEMSTON</span>
+                    <span>SELECT YOUR GEMSTONE</span>
                 </span>
                 <span class="text">
                    Pick the perfect setting from our large collection
@@ -185,7 +185,7 @@
             <span class="w-one-block">
                 <span class="number-step"><?=$index?></span>
                 <span class="title">
-                    <span>SELECT YOUR GEMSTON</span>
+                    <span>SELECT YOUR GEMSTONE</span>
                 </span>
                 <span class="text">
                    Pick the perfect setting from our large collection

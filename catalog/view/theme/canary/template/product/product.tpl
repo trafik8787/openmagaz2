@@ -320,7 +320,7 @@
                                             <?if ($category_info['category_id'] != 94): //в gemstones не отображается?>
                                                 <tr>
                                                     <td><span>METAL: <?=list_metal($metal)?></span></td>
-                                                    <td><span>WEIGHT: <?=$weight?> g.</span></td>
+                                                    <!--*<td><span>WEIGHT: <?=$weight?> g.</span></td>*-->
                                                 </tr>
                                             <?endif?>
 

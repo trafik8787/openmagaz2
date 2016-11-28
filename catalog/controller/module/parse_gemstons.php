@@ -364,8 +364,8 @@ class ControllerModuleParseGemstons extends Controller {
         $this->manufactured = 14;
 
         $this->deleteProduct(true);
-        $filePath = '/home/brilliantcanary/gems_pars/sylviojewelry.csv';
-        //$filePath = '/home/canary/www/sylviojewelry.csv';
+        //$filePath = '/home/brilliantcanary/gems_pars/sylviojewelry.csv';
+        $filePath = '/home/canary/www/sylviojewelry.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
@@ -383,7 +383,7 @@ class ControllerModuleParseGemstons extends Controller {
 
            if ((!empty($curent[2]) OR !empty($curent[3]) OR !empty($curent[4]) OR $curent[22] != '') and  !empty($this->category_gemstone_arr[$curent[1]])) {
 
-               if ($this->copyImage($curent[22])) {
+               if ($this->copyImage($curent[22]) or true) {
 
                    $this->sku = $curent[0];
                    $this->model = $this->sku;
@@ -431,7 +431,7 @@ class ControllerModuleParseGemstons extends Controller {
                    }
 
 
-                   $this->name = $this->metal_gemstone[$curent[15]][1].' '.$curent[4].' '.$curent[3].' '.$curent[2].' '.$curent[7].$name_type_product;
+                   $this->name = $this->metal_gemstone[$curent[15]][1].' '.$curent[4].' '.$curent[3].' '.$curent[2].' '.$curent[7].'ct'.$name_type_product;
 
                    $this->description = $this->name;
                    $this->title_seo = $this->name;
@@ -450,13 +450,13 @@ class ControllerModuleParseGemstons extends Controller {
                        $this->list_atribute[25] = $curent[4];//Center Stone Color:
                    }
                    if (!empty($curent[7])) {
-                       $this->list_atribute[26] = $curent[7];//Center Stone Weight:
+                       $this->list_atribute[26] = $curent[7].'ct';//Center Stone Weight:
                    }
                    if (!empty($curent[9])) {
                        $this->list_atribute[27] = $curent[9];//# of Side Diamonds:
                    }
                    if (!empty($curent[8])) {
-                       $this->list_atribute[28] = $curent[8];//Total Diamond Weight:
+                       $this->list_atribute[28] = $curent[8].'ct';//Total Diamond Weight:
                    }
 
                    $this->list_atribute[29] = 'G/H';//Average Diamond Color:
