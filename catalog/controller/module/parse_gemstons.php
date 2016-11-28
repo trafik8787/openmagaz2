@@ -364,8 +364,8 @@ class ControllerModuleParseGemstons extends Controller {
         $this->manufactured = 14;
 
         $this->deleteProduct(true);
-        //$filePath = '/home/brilliantcanary/gems_pars/sylviojewelry.csv';
-        $filePath = '/home/canary/www/sylviojewelry.csv';
+        $filePath = '/home/brilliantcanary/gems_pars/sylviojewelry.csv';
+        //$filePath = '/home/canary/www/sylviojewelry.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
@@ -640,7 +640,7 @@ class ControllerModuleParseGemstons extends Controller {
             height = '" . $this->dimensions[2] . "', 
             length_class_id = '" . 2 . "', 
             status = '" . 1 . "', 
-            tax_class_id = '" . 0 . "', 
+            tax_class_id = '" . 9 . "', 
             sort_order = '" . 0 . "', 
             date_added = NOW()");
 

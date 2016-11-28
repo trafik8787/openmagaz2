@@ -1,6 +1,5 @@
 <?php echo isset($header) ? $header : ''; ?>
 <?//dd(get_baners_top_random())?>
-
 <main class="w-general-container">
     <!--*<hr class="fade-2">*-->
     <input type="hidden" class="w-action_page" value="<?php echo $action_page?>">
@@ -35,15 +34,9 @@
                     <span class="h1"><?=$heading_title?></span>
                 </div>
             </div>
-
-
-
             <?php echo $content_top; ?>
             <!--*<h2><?php echo $heading_title; ?></h2>*-->
-
-
         </div>
-
             <div class="list-product w-category-ajax">
                 <div class="filter-product-line">
                     <div class="center-bl clearfix">
@@ -94,9 +87,6 @@
                         </tr>
                         </thead>
                         <tbody>
-
-
-
                             <?php foreach ($products as $product):?>
                                 <tr>
                                     <td>
@@ -105,8 +95,6 @@
                                                 <a href="<?php echo $product['href']; ?>" ><img src="<?php echo $product['thumb']; ?>"  alt="<?php echo $product['name']; ?>"
                                                                  title="<?php echo $product['name']; ?>"></a>
                                             </div>
-
-
                                             <div class="box-tovar-th">
                                                 <div class="name"><?php echo $product['name']; ?></div>
 
@@ -116,7 +104,6 @@
                                                     <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $product['special']; ?></span>
                                                     <b class="w-special-price"> <?php echo $product['price']; ?></b>
                                                 <?endif?>
-
                                             </div>
                                         </div>
                                     </td>
@@ -137,12 +124,8 @@
                                     </td>
                                 </tr>
                             <?endforeach?>
-
-
-
                         </tbody>
                     </table>
-
                 </div>
                 <div class="center-bl clearfix">
                     <div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>
@@ -156,10 +139,7 @@
                         <?php echo $description; ?>
                     </div>
                 <?endif?>
-
             </div>
-
     </section>
 </main>
-
 <?php echo isset($footer) ? $footer : ''; ?>
