@@ -105,7 +105,14 @@
                                             </div>
                                             <div class="right price-product">
                                                 <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
-                                                <span>$<?php echo round($CanaryProductCom['price'], 2)?></span>
+                                                <?if (!empty($CanaryProductCom['special'])):?>
+                                                    <span class="w-special-price"><?=Currency::formatStat($CanaryProductCom['price'])?></span>
+                                                    <span><?=Currency::formatStat($CanaryProductCom['special'])?></span>
+                                                <?else:?>
+                                                    <span><?=Currency::formatStat($CanaryProductCom['price'])?></span>
+                                                <?endif?>
+
+
                                             </div>
                                         </div>
 
