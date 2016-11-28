@@ -128,7 +128,12 @@
                                         </div>
                                         <div class="clearfix">
                                             <div class="left">
-                                                <div class="price-product total-price"><span class="total-complet">Total:</span>$<?php echo $CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price?></div>
+                                                <?if (!empty($CanaryProductCom['special'])):?>
+                                                    <div class="price-product total-price"><span class="total-complet">Total:</span><?=Currency::formatStat($CanaryProductCom['special'] + $CanaryDiamontCom->total_sales_price)?></div>
+                                                <?else:?>
+                                                    <div class="price-product total-price"><span class="total-complet">Total:</span><?=Currency::formatStat($CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price)?></div>
+                                                <?endif?>
+
                                             </div>
                                             <div class="right">
                                                 <button class="btn w-btn-orange btn-lg" id="w-complect-button-cart" onmouseup="ga('send', 'event', 'button, 'click', 'Add to Cart');" data-loading-text="Loading..." role="button" type="button" > <i class="bold-angle-right"></i> Add to cart</button>
