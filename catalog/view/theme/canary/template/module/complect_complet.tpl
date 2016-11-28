@@ -123,7 +123,7 @@
                                             </div>
                                             <div class="right price-product">
                                                 <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-                                                <p><span>$<?=$CanaryDiamontCom->total_sales_price?></span></p>
+                                                <p><span><?=Currency::formatStat($CanaryDiamontCom->total_sales_price)?></span></p>
                                             </div>
                                         </div>
                                         <div class="clearfix">
