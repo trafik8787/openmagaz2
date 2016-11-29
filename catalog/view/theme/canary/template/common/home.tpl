@@ -1,6 +1,5 @@
 <?php echo $header; ?>
 <?//dd($categories)?>
-<!--*center-bl*-->
 <main class="w-general-container">
     <section class="containaer-home">
         <div class="visible-xs">
@@ -12,7 +11,6 @@
                     <div class="row">
                         <div class="center-bl w-content-baner clearfix">
                             <div class="col-md-6 col-sm-5">
-
                                 <div class="w-ac-baner-text">
                                     <div class="w-ac-baner-text1">Cyber Monday</div>
                                     <div class="w-ac-baner-text2">Enjoy up to 35% OFF All Jewelry*</div>
@@ -22,7 +20,6 @@
                                         <p>Ends November 30 at 11:59pm CST</p>
                                     </span>
                                 </div>
-
                                 <div class="w-button-in-baner">
                                     <a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
                                     <a href="/engagement-rings" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
@@ -34,10 +31,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-
         <div class="visible-xs">
             <?=$home_bloc_category?>
         </div>
@@ -91,11 +86,8 @@
         <div class="hidden-xs">
             <?=$home_search_for_diamond?>
         </div>
-
         <?php echo $content_bottom; ?>
-
     </section>
-
     <div class="panel-group brilliant-panel-main" id="accordion" role="tablist" aria-multiselectable="true">
         <div class="panel panel-default">
             <div class="panel-heading collapse-add" role="tab">
@@ -138,7 +130,6 @@
                         <li>
                             <a href="/diamonds?&shape=Cushion" class="w-general-category"><span class="box-ico"><i class="brilliant-ico2 brilliant-s4"></i></span><span>Cushion Cut</span></a>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -176,12 +167,10 @@
                         <li>
                             <a href="<?php echo $categories[1]['children'][6]['href']?>" class="w-general-category"><span class="box-ico"><i class="brilliant-ico brilliant-s6"></i></span><span><?php echo $categories[1]['children'][6]['name']?></span></a>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </div>
-
         <div class="panel panel-default">
             <div class="panel-heading collapse-add" role="tab">
                 <h4 class="panel-title">
@@ -206,7 +195,6 @@
                         <li>
                             <a href="<?php echo $categories[2]['children'][3]['href']?>" class="w-general-category"><i class="wedding2"></i><?php echo $categories[2]['children'][3]['name']?></a>
                         </li>
-
                     </ul>
                     <div class="title">men</div>
                     <ul class="brilliant-style brilliant-style-long ul-first-drop clearfix">
@@ -219,12 +207,10 @@
                         <li>
                             <a href="<?php echo $categories[2]['children'][6]['href']?>" class="w-general-category"><i class="wedding7"></i><?php echo $categories[2]['children'][6]['name']?></a>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </div>
-
         <div class="panel panel-default">
             <div class="panel-heading collapse-add" role="tab">
                 <h4 class="panel-title">
@@ -237,7 +223,6 @@
                 <div class="panel-body">
                     <div class="title">EARRINGS</div>
                     <ul class="style-br-long ul-first-drop fine-jewerly-ul">
-
                         <li>
                             <a href="<?php echo $categories[3]['children'][0]['href']?>"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-15"></i></span> <span><?php echo $categories[3]['children'][0]['name']?></span></a>
                         </li>
@@ -247,11 +232,9 @@
                         <li>
                             <a href="<?php echo $categories[3]['children'][2]['href']?>&filter=7"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-earring"></i></span> <span><?php echo $categories[3]['children'][2]['name']?></span></a>
                         </li>
-
                     </ul>
                     <div class="title">Necklaces</div>
                     <ul class="style-br-long ul-first-drop fine-jewerly-ul">
-
                         <li>
                             <a href="<?php echo $categories[3]['children'][5]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-14" ></i></span> <span><?php echo $categories[3]['children'][5]['name']?></span></a>
                         </li>
@@ -261,35 +244,28 @@
                         <li>
                             <a href="<?php echo $categories[3]['children'][7]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-fashion-necklace" ></i></span> <span><?php echo $categories[3]['children'][7]['name']?></span></a>
                         </li>
-
                     </ul>
-
                     <div class="title">Rings</div>
                     <ul class="style-br-long ul-first-drop fine-jewerly-ul">
-
                         <li>
                             <a href="<?php echo $categories[3]['children'][3]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-13"></i></span> <span><?php echo $categories[3]['children'][3]['name']?></span></a>
                         </li>
                         <li>
                             <a href="<?php echo $categories[3]['children'][4]['href']?>&filter=7"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-gemstone-ring"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a>
                         </li>
-
                     </ul>
                     <div class="title">Bracelets</div>
                     <ul class="style-br-long ul-first-drop fine-jewerly-ul">
-
                         <li>
                             <a href="<?php echo $categories[3]['children'][8]['href']?>"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-diamond-bracelet"></i></span> <span><?php echo $categories[3]['children'][8]['name']?></span></a>
                         </li>
                         <li>
                             <a href="<?php echo $categories[3]['children'][9]['href']?>&filter=7"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-gemstone-bracelet"></i></span> <span><?php echo $categories[3]['children'][9]['name']?></span></a>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </div>
-
         <div class="panel panel-default">
             <div class="panel-heading collapse-add" role="tab">
                 <h4 class="panel-title">
@@ -317,7 +293,6 @@
                         <li>
                             <a href="/gemstones&stone_type=3"><i class="gemstones gemstones5"></i><span>green emerald</span></a>
                         </li>
-
                     </ul>
                     <div class="title">Gemstone Jewelry</div>
                     <ul class="style-br-long ul-first-drop">
@@ -334,18 +309,14 @@
                             <a href="<?php echo $categories[3]['children'][9]['href']?>&filter=7"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-gemstone-bracelet"></i></span> <span><?php echo $categories[3]['children'][9]['name']?></span></a>
                         </li>
                     </ul>
-
                 </div>
             </div>
         </div>
-
     </div>
     <ul class="mobile-link-menu">
         <li><a href="/education">EDUCATION</a></li>
         <li><a href="/information/faq">FAQ</a></li>
         <li><a href="/about_us">ABOUT</a></li>
     </ul>
-
-
 </main>
 <?php echo $footer; ?>

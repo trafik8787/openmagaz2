@@ -1,4 +1,3 @@
-
 <div class="list-product w-category-ajax">
     <div class="filter-product-line">
         <div class="center-bl clearfix">
@@ -49,19 +48,13 @@
             </tr>
             </thead>
             <tbody>
-
-
-
             <?php foreach ($products as $product):?>
             <tr>
                 <td>
                     <div class="product-item">
                         <div class="box-img">
-                            <a href="<?php echo $product['href']; ?>" ><img src="<?php echo $product['thumb']; ?>"  alt="<?php echo $product['name']; ?>"
-                                                                            title="<?php echo $product['name']; ?>"></a>
+                            <a href="<?php echo $product['href']; ?>" ><img src="<?php echo $product['thumb']; ?>"  alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>"></a>
                         </div>
-
-
                         <div class="box-tovar-th">
                             <div class="name"><?php echo $product['name']; ?></div>
 
@@ -71,8 +64,6 @@
                                 <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $product['special']; ?></span>
                                 <b class="w-special-price"> <?php echo $product['price']; ?></b>
                             <?endif?>
-
-
                         </div>
                     </div>
                 </td>
@@ -93,18 +84,13 @@
                 </td>
             </tr>
             <?endforeach?>
-
-
-
             </tbody>
         </table>
-
     </div>
     <div class="center-bl clearfix">
         <div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>
     </div>
     <?if (!empty(strip_tags($description))):?>
-
     <div class="box-stat-text center-bl">
         <div class="h2">
             TEXT ABOUT <?=$heading_title?>
@@ -112,9 +98,7 @@
         <?php echo $description; ?>
     </div>
     <?endif?>
-
 </div>
-
 <script>
     $(function () {
         if ($.cookie('TableGrid')) {
@@ -123,5 +107,4 @@
             $('.list-product .wrapper-product-table').addClass("th-view");
         }
     });
-
 </script>

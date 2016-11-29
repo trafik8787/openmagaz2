@@ -1,10 +1,6 @@
 <footer>
-
-
     <section>
-
         <div class="row w-footer-newsletter">
-
             <div class="center-bl">
                 <div class="col-md-4 col-sm-4">
                     <div class="h3">
@@ -12,10 +8,7 @@
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-8">
-
-
                     <?=$newsletter?>
-
                 </div>
             </div>
         </div>
@@ -90,11 +83,7 @@
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse6" class="collapsed">
-                                            <?php echo $categories[0]['name']?>
-                                        </a>
-                                    </h4>
+                                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion2" href="#collapse6" class="collapsed"><?php echo $categories[0]['name']?></a></h4>
                                 </div>
                                 <div id="collapse6" class="panel-collapse collapse">
                                     <div class="panel-body">
@@ -115,11 +104,7 @@
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a href="<?php echo $categories[4]['href']?>" class="collapsed">
-                                            <?php echo $categories[4]['name']?>
-                                        </a>
-                                    </h4>
+                                    <h4 class="panel-title"><a href="<?php echo $categories[4]['href']?>" class="collapsed"><?php echo $categories[4]['name']?></a></h4>
                                 </div>
                             </div>
                             <div class="panel panel-default">
@@ -161,11 +146,9 @@
                                         <ul>
                                             <li><a href="/about-us">About Us</a></li>
                                             <?php foreach ($informations as $information):?>
-
                                                 <?if ($information['top'] == 1):?>
                                                     <li><a href="<?php echo $information['href']; ?>" class="w-general-category"><?php echo $information['title']; ?></a></li>
                                                 <?endif?>
-
                                             <?endforeach?>
                                         </ul>
                                     </div>
@@ -173,11 +156,7 @@
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse2" class="collapsed">
-                                            We Offer More
-                                        </a>
-                                    </h4>
+                                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion3" href="#collapse2" class="collapsed">We Offer More</a></h4>
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse">
                                     <div class="panel-body">
@@ -194,16 +173,11 @@
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapse3" class="collapsed">
-                                            Why Pick Brilliant Canary?
-                                        </a>
-                                    </h4>
+                                    <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion3" href="#collapse3" class="collapsed">Why Pick Brilliant Canary?</a></h4>
                                 </div>
                                 <div id="collapse3" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul>
-
                                             <?php foreach ($informations as $information):?>
                                                 <?if ($information['top'] == 3):?>
                                                     <li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
@@ -233,12 +207,9 @@
                         <div class="text-left margin-top-20 w-copirait mobile-none">
                             <p>© 2016. All rights reserved.</p>
                             <p>
-                                <a href="/privacy">Privacy Policy</a>
-                                <span>|</span>
-                                <a href="/terms">Terms & Conditions</a>
-                                <span>|</span>
-                                <a href="/cookie_policy">Cookie Policy</a>
-                                <span>|</span>
+                                <a href="/privacy">Privacy Policy</a><span>|</span>
+                                <a href="/terms">Terms & Conditions</a><span>|</span>
+                                <a href="/cookie_policy">Cookie Policy</a><span>|</span>
                                 <a href="/return_policy">Return Policy</a>
                             </p>
                         </div>
@@ -271,7 +242,6 @@
                                             <dd><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></dd>
                                         <?endif?>
                                     <?endforeach?>
-
                             </dl>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6">
@@ -296,30 +266,22 @@
             </div>
             <div class="text-left margin-top-20 w-copirait mobile-block">
                 <p>© 2016. All rights reserved.
-                    <a href="/privacy">Privacy Policy</a>
-                    <span>|</span>
-                    <a href="/terms">Terms & Conditions</a>
-                    <span>|</span>
-                    <a href="/cookie_policy">Cookie Policy</a>
-                    <span>|</span>
+                    <a href="/privacy">Privacy Policy</a><span>|</span>
+                    <a href="/terms">Terms & Conditions</a><span>|</span>
+                    <a href="/cookie_policy">Cookie Policy</a><span>|</span>
                     <a href="/return_policy">Return Policy</a>
                 </p>
             </div>
         </section>
     </div>
-
-
     <?if (!empty($newsletter_cookie)):?>
-
         <script>
             $(function () {
                 setTimeout(function(){
                     $('#ModalHomeSubskribe').modal('show');
                 }, 20000);
             });
-
         </script>
-
         <div class="modal fade hidden-xs" id="ModalHomeSubskribe" tabindex="-1" role="dialog" aria-labelledby="ModalHomeSubskribeLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -345,7 +307,6 @@
                                 <?=$newsletter_coupon?>
                             </div>
                         </div>
-
                     </div>
                     <p>
                         &#42; Offer is valid for orders of $1000 or more. Offer cannot be combined with any other offer.
@@ -354,8 +315,6 @@
             </div>
         </div>
     <?endif?>
-
-
     <div class="modal fade" id="ModalAkcia" tabindex="-1" role="dialog" aria-labelledby="ModalAkciaLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -368,37 +327,17 @@
 
                         <table class="w-list-cat">
                             <tr>
-                                <td>
-                                    <div class="w-item1"><a href="/engagement-rings">ENGAGEMENT RINGS</a></div>
-                                </td>
+                                <td><div class="w-item1"><a href="/engagement-rings">ENGAGEMENT RINGS</a></div></td>
                                 <td><div class="w-item2"></div></td>
-                                <td>
-                                    <div class="w-item3"><a href="/fine-jewelry">JEWELRY & GIFTS</a></div>
-                                </td>
+                                <td><div class="w-item3"><a href="/fine-jewelry">JEWELRY & GIFTS</a></div></td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div class="w-item1"><a href="/wedding-rings">WEDDING RINGS</a></div>
-                                </td>
+                                <td><div class="w-item1"><a href="/wedding-rings">WEDDING RINGS</a></div></td>
                                 <td><div class="w-item2"></div></td>
-                                <td>
-                                    <div class="w-item3"><a href="/gemstones">GEMSTONES</a></div>
-                                </td>
+                                <td><div class="w-item3"><a href="/gemstones">GEMSTONES</a></div></td>
                             </tr>
                         </table>
-
-                        <!--*<div class="w-list-cat">*-->
-                            <!--*<div class="w-item1"><a href="">ENGAGEMENT RINGS</a></div>*-->
-                            <!--*<div class="w-item2"></div>*-->
-                            <!--*<div class="w-item3"><a href="">JEWELRY & GIFTS</a></div>*-->
-                        <!--*</div>*-->
-                        <!--*<div class="w-list-cat">*-->
-                            <!--*<div class="w-item1"><a href="">WEDDING RINGS</a></div>*-->
-                            <!--*<div class="w-item2"></div>*-->
-                            <!--*<div class="w-item3"><a href="">GEMSTONES</a></div>*-->
-                        <!--*</div>*-->
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <p>&#42; Does not include loose diamonds. Cannot be combined with any other offer.</p>
@@ -407,15 +346,10 @@
             </div>
         </div>
     </div>
-
 </footer>
-
-
 <img src="/catalog/view/theme/canary/img/preloader.png" class="container-loader" alt="" style="display: none">
-
 <script type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
-
 <script type="text/javascript" src="/catalog/view/theme/canary/vendor/select2/dist/js/select2.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.ui.touch-punch.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.cookie.js"></script>
@@ -436,7 +370,6 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
-
 <script type="text/javascript">
     var google_tag_params = {
         ecomm_prodid: 'REPLACE_WITH_VALUE',

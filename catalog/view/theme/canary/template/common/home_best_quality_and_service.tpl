@@ -1,9 +1,6 @@
 <div class="row w-bloc-best-servise">
-
     <div class="center-bl">
-
         <div class="col-md-12 col-sm-12">
-
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="h3 text-center margin-top-10">Best Quality And Service</div>
@@ -23,13 +20,11 @@
                                     <small>Fully Insured Overnight Shipping</small>
                                 </div>
                             </div>
-
                         </div>
                         <div class="w-shadow-slider"></div>
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-
                     <a href="/about-us#no-hassle-returns">
                         <div class="alert alert-info">
                             <div class="media">
@@ -44,7 +39,6 @@
                         </div>
                         <div class="w-shadow-slider"></div>
                     </a>
-
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
                     <a href="/about-us#free-engraving">
@@ -66,10 +60,9 @@
                     <a href="/about-us#helping-others">
                         <div class="alert alert-info">
                             <div class="media">
-                                        <span class="pull-left">
-                                            <i class="icons-helping_icon"></i>
-                                        </span>
-
+                                <span class="pull-left">
+                                    <i class="icons-helping_icon"></i>
+                                </span>
                                 <div class="media-body">
                                     <h4 class="media-heading"><b>Helping Others</b></h4>
                                     <small>A Partion of Your Purchase Goest to Charity</small>
@@ -82,7 +75,6 @@
             </div>
             <div class="row clas-raleway-regular14">
                 <div class="col-md-6 col-sm-6">
-
                     Brilliant Canary was formed with the customer in mind.
                     Through many years of working in the industry, we heard the wants and needs of our customers.
                     <div class="collapse">
@@ -91,7 +83,6 @@
                         We strongly believe in helping others—with every purchase made a portion of the profits goes to the charity of your choice.*
                         Thank you for choosing Brilliant Canary, where everything is Beyond Brilliant!
                     </div>
-
                 </div>
                 <div class="col-md-6 col-sm-6">
                     All of our bridal jewelry is designed and crafted in the United States of America.
@@ -99,13 +90,10 @@
                     <div class="collapse">
                         the highest quality jewelry at a faster delivery time and an exceptional price.
                     </div>
-
                 </div>
             </div>
             <div class="w-button-colaps w-more-info"><span>more info</span></div>
             <!--*<button type="button" class="btn btn-warning w-more-info">More info <span class="glyphicon glyphicon-chevron-down"></span></button>*-->
-
         </div>
     </div>
-
 </div>

@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en-US">
-
 <head>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -12,20 +11,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-
     <title><?php echo $title; ?></title>
-
-
-
     <?php if ($description) { ?>
-    <meta name="description" content="<?php echo $description; ?>"/>
+        <meta name="description" content="<?php echo $description; ?>"/>
     <?php } ?>
-
     <?php if ($keywords) { ?>
-    <meta name="keywords" content="<?php echo $keywords; ?>"/>
+        <meta name="keywords" content="<?php echo $keywords; ?>"/>
     <?php } ?>
-
-
     <script type="text/javascript">
         window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
                 d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
@@ -33,12 +25,9 @@
             $.src="//v2.zopim.com/?4M8liu0cc8LxpPuHuyEXmPGmiS7VjRPM";z.t=+new Date;$.
                     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </script>
-
-
-    <script type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
-
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/font-awesome.min.css">
+    <script async="async" type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <script async="async" type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/font-awesome.min.css">*-->
     <link href="/catalog/view/theme/canary/vendor/slickslider/slick.css" rel="stylesheet">
     <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/normalize.css"/>
@@ -53,34 +42,24 @@
     <link rel="stylesheet" href="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop.css"/>
-
-
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
     <?php foreach ($analytics as $analytic) { ?>
-    <?php echo $analytic; ?>
+        <?php echo $analytic; ?>
     <?php } ?>
-
     <?//dd($categories)?>
 </head>
 <body>
-
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHJ8N6"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <header>
-
     <div class="user-line index-page">
         <div class="center-bl top-header clearfix">
             <div class="col-md-4 col-sm-3 block-phone-header">
-                <a href="/" class="logo w-general-category">
-                    <img src="/catalog/view/theme/canary/img/logo.png" alt="briliantcanary">
-                </a>
-                <div class="telephone font-montserrat-regular">
-                    <span><?php echo $telephone; ?> | 24/7</span>
-                </div>
+                <a href="/" class="logo w-general-category"><img src="/catalog/view/theme/canary/img/logo.png" alt="briliantcanary"></a>
+                <div class="telephone font-montserrat-regular"><span><?php echo $telephone; ?> | 24/7</span></div>
             </div>
             <div class="col-md-6 col-sm-7">
                 <a class="w-tel-xs" href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?> | 24/7</a>
@@ -105,7 +84,6 @@
                             <span class="w-count-circle"><?=$text_wishlist_count?></span>
                             <?endif?>
                             <span class="span1">Wish List</span>
-                            <!--*<span class="span2">(<?=$text_wishlist_count?>)</span>*-->
                         </a>
                     </li>
                     <li><a href="/compare" id="compare-total">
@@ -114,8 +92,6 @@
                                     <span class="w-count-circle"><?=$count_compare?></span>
                                 <?endif?>
                             <span class="span1">Compare</span>
-
-                            <!--*<span class="span2">(0)</span>*-->
                         </a>
                     </li>
                     <li class="cart-bl">
@@ -124,16 +100,10 @@
                 </ul>
             </div>
             <div class="col-md-2 col-sm-2">
-
-
                 <?php echo $search; ?>
             </div>
-
-
-
         </div>
     </div>
-
     <div class="center-bl">
         <div class="row top-header-bloc-meny">
             <div class="mobile-menu visible-xs">
@@ -150,7 +120,6 @@
                             </div>
                             <div id="MenuMobile1" class="panel-collapse collapse">
                                 <div class="panel-body">
-
                                     <ul class="main-rubric">
                                         <li><a href="<?php echo $categories[1]['children'][0]['href']?>"><?php echo $categories[1]['children'][0]['name']?></a></li>
                                         <li><a href="<?php echo $categories[1]['children'][1]['href']?>"><?php echo $categories[1]['children'][1]['name']?></a></li>
@@ -173,7 +142,6 @@
                             </div>
                             <div id="MenuMobile2" class="panel-collapse collapse">
                                 <div class="panel-body">
-
                                     <div class="panel-group" id="rubricMenu-woman">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
@@ -195,7 +163,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="panel-group" id="rubricMenu-man">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
@@ -216,8 +183,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
@@ -246,7 +211,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -256,7 +220,6 @@
                                 </h4>
                             </div>
                         </div>
-
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
@@ -277,12 +240,10 @@
                                         <li><a href="<?php echo $categories[3]['children'][0]['href']?>"><?php echo $categories[3]['children'][0]['name']?></a></li>
                                         <li><a href="<?php echo $categories[3]['children'][1]['href']?>"><?php echo $categories[3]['children'][1]['name']?></a></li>
                                         <li><a href="<?php echo $categories[3]['children'][8]['href']?>"><?php echo $categories[3]['children'][8]['name']?></a></li>
-
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
                         <!--*<div class="panel panel-default">*-->
                             <!--*<div class="panel-heading">*-->
                                 <!--*<h4 class="panel-title">*-->
@@ -292,22 +253,15 @@
                                 <!--*</h4>*-->
                             <!--*</div>*-->
                         <!--*</div>*-->
-
-
                     </div>
                 </div>
             </div>
             <div class="col-md-4 col-sm-4">
-                <a href="/" class="logo">
-                    <img src="/catalog/view/theme/canary/img/logo_new_header.png" alt="logo">
-                </a>
+                <a href="/" class="logo"><img src="/catalog/view/theme/canary/img/logo_new_header.png" alt="logo"></a>
             </div>
             <div class="col-md-8 col-sm-8">
-
                 <?=$top_meny?>
-
             </div>
-
         </div>
     </div>
 </header>

@@ -1,24 +1,9 @@
-
 <?//dd($wsubcategory)?>
 <div class="filter-box clearfix">
     <div class="filter-wrapper clearfix thumbnail">
         <?if (!empty($wsubcategory)):?>
             <?if ($category_id == 20): //ENGAGEMENT RINGS?>
             <div class="wrapper-filter-close">
-                <!--*<div class="filter-row">*-->
-                    <!--*<div class="filter-col filter-line-col wide-title">*-->
-                        <!--*<div class="filter-col-title">For anyone</div>*-->
-                        <!--*<div class="filter-col-options">*-->
-                            <!--*<div class=" btn-group-filter box-color gemstones-box rings-box">*-->
-                                <!--*<div class="all-line-filter">*-->
-                                    <!--*<a href="#" class="active">All</a>*-->
-                                    <!--*<a href="#">Women</a>*-->
-                                    <!--*<a href="#">Sets for him and her</a>*-->
-                                <!--*</div>*-->
-                            <!--*</div>*-->
-                        <!--*</div>*-->
-                    <!--*</div>*-->
-                <!--*</div>*-->
                 <div class="filter-row">
                     <div class="filter-col wide-title">
                         <div class="filter-col-title">Style</div>
@@ -61,15 +46,11 @@
                                     <br>
                                     <a href="<?php echo $row['href']?>"><?php echo $row['name']?></a>
                                 </label>
-
-
-
                                 <?endforeach?>
                             </div>
                         </div>
                     </div>
                 </div>
-
             <?elseif($category_id == 69): //WEDDING RINGS?>
             <div class="wrapper-filter-close">
                 <div class="filter-row stay-table-cell">
@@ -108,8 +89,6 @@
                             <!--*</div>*-->
                     </div>
                 </div>
-
-
                 <div class="filter-row stay-table-cell">
                     <div class="filter-col wide-title">
                         <div class="filter-col-title">
@@ -167,10 +146,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             <?elseif($category_id == 82): //FINE JEWERLY?>
             <div class="wrapper-filter-close">
                 <div class="filter-row">
@@ -182,7 +157,6 @@
                             <div class="all-line-filter">
                                 <a href="/fine-jewelry" class="active">All</a>
                             </div>
-
                                 <label class="btn btn-filter <?php if ($child_id == $wsubcategory[0]['cat_id']):?> active <?endif?> brackets">
                                     <a href="<?php echo $wsubcategory[0]['href']?>"><i class="own-b own-b-16"></i></a>
                                     <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[0]['href']?>"><i class="own-b own-b-16"></i>*-->
@@ -234,18 +208,8 @@
                                     <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[9]['href']?>"> <i class="own-b own-b-gemstone-bracelet"></i>*-->
                                     <br>Gemstone <br>bracelets
                                 </label>
-
                         </div>
                     </div>
                 </div>
-
-
-
             <?endif?>
-
-
-
         <?endif?>
-
-
-

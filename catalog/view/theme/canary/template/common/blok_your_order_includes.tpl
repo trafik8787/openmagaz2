@@ -32,30 +32,27 @@
                             To Your Ring
                         </span>
             </a>
-
             <?if (isset($diamond)):?>
-                <a href="/about-us#free-appraisal" class="p-include-item">
-                    <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-4.jpg" alt=""></span>
-                    <span class="p-include-title">Diamond Certificate</span>
-                    <span class="p-include-dot"></span>
-                    <span class="p-include-text">
+            <a href="/about-us#free-appraisal" class="p-include-item">
+                <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-4.jpg" alt=""></span>
+                <span class="p-include-title">Diamond Certificate</span>
+                <span class="p-include-dot"></span>
+                <span class="p-include-text">
                                 Original GIA Grading<br>
                                 Report
                             </span>
-                </a>
+            </a>
             <?else:?>
-                <a href="/about-us#free-appraisal" class="p-include-item">
-                    <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-5.png" alt=""></span>
-                    <span class="p-include-title">Free Appraisal</span>
-                    <span class="p-include-dot"></span>
-                    <span class="p-include-text">
+            <a href="/about-us#free-appraisal" class="p-include-item">
+                <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-5.png" alt=""></span>
+                <span class="p-include-title">Free Appraisal</span>
+                <span class="p-include-dot"></span>
+                <span class="p-include-text">
                                     Prepared by GIA Graduate<br>
                                     Gemologist
                                 </span>
-                </a>
-
+            </a>
             <?endif?>
-
         </div>
     </div>
 </div>

@@ -16,16 +16,10 @@
     </div>
 </div>
 <section class="static-page">
-
-
     <div class="center-bl">
-
         <?php echo $content_top; ?>
-
     </div>
-
     <div class="list-product w-category-ajax">
-
         <div class="filter-product-line">
             <input type="hidden" class="w-action_page" value="<?php echo $action_page?>">
             <div class="center-bl clearfix">
@@ -44,7 +38,6 @@
                     </div>
                     <span>Product compare (0)</span>
                 </div>
-
                 <div class="view-product">
                     <button class="list-btn btn-view" data-toggle="tooltip" data-placement="top" title="list"><i class="fa fa-list"></i></button>
                     <button class="th-btn btn-view active" data-toggle="tooltip" data-placement="top" title="block"><i class="fa fa-th"></i></button>
@@ -77,9 +70,6 @@
                 </tr>
                 </thead>
                 <tbody>
-
-
-
                 <?php foreach ($products as $product):?>
                 <tr>
                     <td>
@@ -89,7 +79,6 @@
                                                                                                       title="<?php echo $product['name']; ?>"></a>
                             </div>
                             <?php if ($product['rating']):?>
-
                             <div class="rating">
                                 <?php for ($i = 1; $i <= 5; $i++) { ?>
                                 <?php if ($product['rating'] < $i):?>
@@ -98,7 +87,6 @@
                                 <i class="star active"></i>
                                 <?endif?>
                                 <?}?>
-
                             </div>
                             <?endif?>
                             <div class="btn-box">
@@ -109,15 +97,12 @@
                             </div>
                             <div class="box-tovar-th">
                                 <div class="name"><?php echo $product['name']; ?></div>
-
                                 <?php if (!$product['special']):?>
                                 <span class="price"><?php echo $product['price']; ?></span>
                                 <?else:?>
                                 <span class="price"><?php echo $product['special']; ?></span>
                                 <span class="discount"> <?php echo $product['price']; ?></span>
                                 <?endif?>
-
-
                             </div>
                         </div>
                     </td>
@@ -127,18 +112,11 @@
                     <td><a href="#" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-heart"></i></a></td>
                 </tr>
                 <?endforeach?>
-
-
-
                 </tbody>
             </table>
-
         </div>
-
         <div class="center-bl clearfix">
             <div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>
         </div>
-
     </div>
-
 </section>

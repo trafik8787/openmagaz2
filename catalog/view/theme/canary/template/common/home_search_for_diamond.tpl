@@ -1,9 +1,7 @@
 <div class="row w-bloc-search-diamond">
-
     <div class="center-bl">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-
                 <span class="h3">Search for diamonds</span>
                 <div class="icons-search_diamond_icon"></div>
                 <div class="search-diamond-test">Select a diamond shape to start your search for the perfect diamond</div>
@@ -75,10 +73,7 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
-
     </div>
-
 </div>

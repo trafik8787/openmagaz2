@@ -8,7 +8,6 @@
             <div>
                 <?php echo $content_top; ?>
             </div>
-
             <div class="list-category">
                 <ul class="list-inline w-list-link">
                     <li><a href="/engagement-rings/solitaire">Solitare</a></li>
@@ -22,8 +21,6 @@
                     <li><a href="/engagement-rings">All</a></li>
                 </ul>
             </div>
-
         </div>
-
     </div>
 </div>
