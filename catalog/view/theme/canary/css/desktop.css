@@ -574,7 +574,7 @@ top: 20px;
   .w-bloc-best-servise{
     padding: 0 15px;
     box-shadow: none;
-    background: url("../img/best-service.png") no-repeat center bottom;
+    background: url("/catalog/view/theme/canary/img/best-service.png") no-repeat center bottom;
   }
 
   .w-best-quality .media .pull-left {
@@ -833,7 +833,7 @@ top: 20px;
   .bx-wrapper .bx-prev{
     width:16px!important;
     left: -25px!important;
-    background: url("../img/arrows-dark.png") no-repeat 0 0!important;
+    background: url("/catalog/view/theme/canary/img/arrows-dark.png") no-repeat 0 0!important;
   }
 
   .bxslider .w-bx-prod-name {
@@ -846,7 +846,7 @@ top: 20px;
   .bx-wrapper .bx-next{
     width:16px!important;
     right: -25px!important;
-    background: url("../img/arrows-dark.png") no-repeat -385px 0!important;
+    background: url("/catalog/view/theme/canary/img/arrows-dark.png") no-repeat -385px 0!important;
   }
 
   .w-right-home-top-slider .panel.panel-default .panel-body .h1 {
@@ -894,7 +894,7 @@ top: 20px;
   .w-footer-newsletter{
     height: inherit;
     border-bottom: 2px solid white;
-    background: url("../img/bg-sign-up.png") no-repeat center / cover;
+    background: url("/catalog/view/theme/canary/img/bg-sign-up.png") no-repeat center / cover;
   }
 
   .w-footer-down .paging-right-50{
@@ -911,7 +911,7 @@ top: 20px;
     border-top: 1px solid #7995b0!important;
   }
   .search-diamond-mobile .icons-quality_service_icon{
-    background: url("../img/icons-quality-grey.png") no-repeat center / contain;
+    background: url("/catalog/view/theme/canary/img/icons-quality-grey.png") no-repeat center / contain;
   }
   .search-diamond-mobile .brilliant-style li a{
     color: black;
@@ -972,7 +972,7 @@ top: 20px;
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
-    background: url("../img/arrow-collapse.png") no-repeat center / contain;
+    background: url("/catalog/view/theme/canary/img/arrow-collapse.png") no-repeat center / contain;
   }
   .w-footer-down .panel-default > .panel-heading a{
     padding: 10px 20px;
@@ -1084,7 +1084,7 @@ left: 399px!important;
         top: 200px;
     }
     #ModalAkcia .modal-content {
-        background: url("../img/demo_new_template/modal-akcia.jpg") no-repeat center/100%;
+        background: url("/catalog/view/theme/canary/img/demo_new_template/modal-akcia.jpg") no-repeat center/100%;
         height: 413px;
     }
 }
@@ -1115,7 +1115,7 @@ left: 399px!important;
     }
 
     #ModalAkcia .modal-content {
-        background: url("../img/demo_new_template/modal-akcia.jpg") no-repeat center/100%;
+        background: url("/catalog/view/theme/canary/img/demo_new_template/modal-akcia.jpg") no-repeat center/100%;
         height: 436px;
     }
 

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script async="async" type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -18,28 +18,16 @@
     <?php if ($keywords) { ?>
         <meta name="keywords" content="<?php echo $keywords; ?>"/>
     <?php } ?>
-    <script type="text/javascript">
+    <script async="async" type="text/javascript">
         window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
                 d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
         _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
             $.src="//v2.zopim.com/?4M8liu0cc8LxpPuHuyEXmPGmiS7VjRPM";z.t=+new Date;$.
                     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </script>
-    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/font-awesome.min.css">*-->
-    <link href="/catalog/view/theme/canary/vendor/slickslider/slick.css" rel="stylesheet">
-    <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/normalize.css"/>*-->
-    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
-    <link rel="stylesheet" href="/catalog/view/javascript/jquery/magnific/magnific-popup.css"/>
-    <link rel="stylesheet" href="/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css">
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/easydropdown.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565511.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style-1480414222863.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop-1480446257643.css"/>
+
+    <?=$stylelink?>
+
     <script async="async" type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
     <script async="async" type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
