@@ -26,6 +26,22 @@
                     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </script>
 
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/font-awesome.min.css">*-->
+    <!--*<link href="/catalog/view/theme/canary/vendor/slickslider/slick.css" rel="stylesheet">*-->
+    <!--*<link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/normalize.css"/>*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/javascript/jquery/magnific/magnific-popup.css"/>*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"/>*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css">*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/easydropdown.css"/>*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/style.css"/>*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.css"/>*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style.css"/>*-->
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop.css"/>*-->
+
     <?=$stylelink?>
 
     <script async="async" type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
