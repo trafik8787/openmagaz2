@@ -91,12 +91,6 @@ $( document ).ready(function( $ ) {
 
 
 
-    // if ($.cookie('TableGrid')) {
-    //     $('.list-product .wrapper-product-table').addClass($.cookie('TableGrid'));
-    // } else {
-    //     $('.list-product .wrapper-product-table').addClass("th-view");
-    // }
-
 
 
     $(document).on('click', '.list-btn', function() {
@@ -224,17 +218,11 @@ $( document ).ready(function( $ ) {
 
 });
 
-//$('.slider-for').on('init', function(event, slick){
-//    console.log(slick);
-//    var video = document.getElementsByClassName('myVideo');
-//    video.play();
-//});
 
 
 //slider product
 function Productslider () {
 
-    //var video = document.getElementsByClassName('myVideo');
 
     $('.slider-for').on('init', function(event, slick){
         if ($('video').hasClass('myVideo')) {

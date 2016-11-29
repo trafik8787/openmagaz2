@@ -25,12 +25,10 @@
             $.src="//v2.zopim.com/?4M8liu0cc8LxpPuHuyEXmPGmiS7VjRPM";z.t=+new Date;$.
                     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </script>
-    <script async="async" type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
-    <script async="async" type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
     <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/font-awesome.min.css">*-->
     <link href="/catalog/view/theme/canary/vendor/slickslider/slick.css" rel="stylesheet">
-    <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/normalize.css"/>
+    <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--*<link rel="stylesheet" href="/catalog/view/theme/canary/css/normalize.css"/>*-->
     <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
@@ -38,10 +36,12 @@
     <link rel="stylesheet" href="/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/easydropdown.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565511.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style-1480414222863.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop-1480446257643.css"/>
+    <script async="async" type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <script async="async" type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <?php foreach ($analytics as $analytic) { ?>
