@@ -279,7 +279,7 @@
             $(function () {
                 setTimeout(function(){
                     $('#ModalHomeSubskribe').modal('show');
-                }, 20000);
+                }, 60000);
             });
         </script>
         <div class="modal fade hidden-xs" id="ModalHomeSubskribe" tabindex="-1" role="dialog" aria-labelledby="ModalHomeSubskribeLabel" aria-hidden="true">
@@ -309,7 +309,7 @@
                         </div>
                     </div>
                     <p>
-                        &#42; Offer is valid for orders of $1000 or more. Offer cannot be combined with any other offer.
+                        &#42; Offer is valid for orders of $1000 or more cannot be combined with any other offer.
                     </p>
                 </div>
             </div>
@@ -370,15 +370,15 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
-<script type="text/javascript">
+<script async="async" type="text/javascript">
     var google_tag_params = {
         ecomm_prodid: 'REPLACE_WITH_VALUE',
         ecomm_pagetype: 'REPLACE_WITH_VALUE',
         ecomm_totalvalue: 'REPLACE_WITH_VALUE',
     };
 </script>
-<script type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=10292ae233c1160ee2d7528ed3d12d63" charset="UTF-8"></script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+<script async="async" type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=10292ae233c1160ee2d7528ed3d12d63" charset="UTF-8"></script>
+<script async="async" type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 </body>
 </html>
