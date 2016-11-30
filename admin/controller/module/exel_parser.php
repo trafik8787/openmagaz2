@@ -76,12 +76,16 @@ class ControllerModuleExelParser extends Controller {
 //        );
 
         //WOMAN WEDDING RINGS
-//        $this->category_arr = array(
-//            'Classic' => 77,
-//            'Stackable' => 78,
-//            'Eternity' => 81,
-//            'Diamond' => 79
-//        );
+        $this->category_arr = array(
+            'Classic' => 77,
+            'classic' => 77,
+            'Stackable' => 78,
+            'stackable' => 78,
+            'Eternity' => 81,
+            'eternity' => 81,
+            'Diamond' => 79,
+            'diamond' => 79
+        );
 
         //MAN WEDDING RINGS
 //        $this->category_arr = array(
@@ -93,18 +97,18 @@ class ControllerModuleExelParser extends Controller {
 
 
         //FINE JEWERLY
-        $this->category_arr = array(
-            'Diamond Bracelets' => 85,
-            'Diamond Earrings' => 84,
-            'Diamond Pendant' => 86,
-            'Diamond Rings' => 88,
-            'Diamond Studs' => 83,
-            'Diamond Fashion Necklace' => 92,
-            'Gemstone Bracelets' => 93,
-            'Gemstone Earrings' => 87,
-            'Gemstone Pendants' => 91,
-            'Gemstone Rings' => 90
-        );
+//        $this->category_arr = array(
+//            'Diamond Bracelets' => 85,
+//            'Diamond Earrings' => 84,
+//            'Diamond Pendant' => 86,
+//            'Diamond Rings' => 88,
+//            'Diamond Studs' => 83,
+//            'Diamond Fashion Necklace' => 92,
+//            'Gemstone Bracelets' => 93,
+//            'Gemstone Earrings' => 87,
+//            'Gemstone Pendants' => 91,
+//            'Gemstone Rings' => 90
+//        );
 
 
         $this->list_filtr = array(
@@ -272,8 +276,6 @@ class ControllerModuleExelParser extends Controller {
 
         while (!$file->eof()) {
 
-
-
             $metal = null;
             $this->filter = array();
             $name_file_general_img = null;
@@ -294,57 +296,72 @@ class ControllerModuleExelParser extends Controller {
                     $this->sku = $curent[1] . '-W14';
                     $this->filter[] = $this->list_filtr['14K White Gold'];
 
-                    $name_file_general_img = $sku.'.jpg';
-
+                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
+                        $name_file_general_img = $sku.'_w_1.jpg';
+                    }
 
                 } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
                     $this->metal = $this->list_metal['14K Yellow Gold'];
                     $this->sku = $curent[1] . '-Y14';
                     $this->filter[] = $this->list_filtr['14K Yellow Gold'];
 
-                    $name_file_general_img = $sku.'.alt.jpg';
+                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_y_1.jpg')) {
+                        $name_file_general_img = $sku.'_y_1.jpg';
+                    }
 
                 } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
                     $this->metal = $this->list_metal['14K Rose Gold'];
                     $this->sku = $curent[1] . '-R14';
                     $this->filter[] = $this->list_filtr['14K Rose Gold'];
 
-                    $name_file_general_img = $sku.'.alt1.jpg';
+                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_r_1.jpg')) {
+                        $name_file_general_img = $sku.'_r_1.jpg';
+                    }
 
                 } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
                     $this->metal = $this->list_metal['18K White Gold'];
                     $this->sku = $curent[1] . '-W18';
                     $this->filter[] = $this->list_filtr['18K White Gold'];
 
-                    $name_file_general_img = $sku.'.jpg';
+                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
+                        $name_file_general_img = $sku.'_w_1.jpg';
+                    }
 
                 } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
                     $this->metal = $this->list_metal['18K Yellow Gold'];
                     $this->sku = $curent[1] . '-Y18';
                     $this->filter[] = $this->list_filtr['18K Yellow Gold'];
 
-                    $name_file_general_img = $sku.'.alt.jpg';
+                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_y_1.jpg')) {
+                        $name_file_general_img = $sku.'_y_1.jpg';
+                    }
 
                 } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
                     $this->metal = $this->list_metal['18K Rose Gold'];
                     $this->sku = $curent[1] . '-R18';
                     $this->filter[] = $this->list_filtr['18K Rose Gold'];
 
-                    $name_file_general_img = $sku.'.alt1.jpg';
+                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_r_1.jpg')) {
+                        $name_file_general_img = $sku.'_r_1.jpg';
+                   }
 
                 } elseif ($metal == 'Platinum' OR $metal == 'platinum') {
                     $this->metal = $this->list_metal['Platinum'];
                     $this->sku = $curent[1] . '-PL';
                     $this->filter[] = $this->list_filtr['Platinum'];
 
-                    $name_file_general_img = $sku.'.jpg';
+                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
+                        $name_file_general_img = $sku.'_w_1.jpg';
+                    }
 
                 } elseif ($metal == 'Palladium' or $metal == 'palladium') {
                     $this->metal = $this->list_metal['Palladium'];
                     $this->sku = $curent[1] . '-PA';
                     $this->filter[] = $this->list_filtr['Palladium'];
 
-                    $name_file_general_img = $sku.'.jpg';
+                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
+                        $name_file_general_img = $sku.'_w_1.jpg';
+                    }
 
                 }
 
@@ -355,8 +372,10 @@ class ControllerModuleExelParser extends Controller {
                 //ENGAGEMENT RINGS
                 //$this->category[] = 20;
 
-                //WOMAN WEDDING RINGS
+                //WEDDING RINGS
                 $this->category[] = 69;
+                //WOMAN
+                $this->category[] = 96;
 
                 //FINE JEWERLY
                 //$this->category[] = 82;
@@ -373,7 +392,7 @@ class ControllerModuleExelParser extends Controller {
 
 
                 //image general
-                $this->image_general = 'catalog/galery_rings/'.$name_file_general_img;
+                $this->image_general = 'catalog/galery_rings2/'.$name_file_general_img;
                 //$this->image_general = '';
 
 
@@ -408,8 +427,6 @@ class ControllerModuleExelParser extends Controller {
                 } else {
                     $this->price = (int)substr(str_replace(" ","",$curent[18]), 1);
                 }
-
-
 
 
                 $this->product_id_insert = $this->addProduct();
@@ -613,57 +630,62 @@ class ControllerModuleExelParser extends Controller {
 
         $this->image_galery = array();
 
-        $dir_img = 'catalog/galery_rings/';
+        $dir_img = 'catalog/galery_rings2/';
 
-        if ($metal == '14K White Gold' OR $metal == '14k White Gold') {
+        $i = array(1,2,3,4);
 
-            $this->image_galery[] = $dir_img.$sku.'.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.set.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.side.jpg';
+        foreach ($i as $item) {
+
+            if ($metal == '14K White Gold' OR $metal == '14k White Gold') {
+
+                if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/'. $dir_img . $sku . '_w_'.$item.'.jpg')) {
+                    $this->image_galery[] = $dir_img . $sku . '_w_' . $item . '.jpg';
+                }
+
+            } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
+
+                if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/'. $dir_img . $sku . '_y_'.$item.'.jpg')) {
+                    $this->image_galery[] = $dir_img . $sku . '_y_' . $item . '.jpg';
+                }
 
 
-        } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
+            } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
 
-            $this->image_galery[] = $dir_img.$sku.'.alt.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.set.alt.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.side.alt.jpg';
+                if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/'. $dir_img . $sku . '_r_'.$item.'.jpg')) {
+                    $this->image_galery[] = $dir_img . $sku . '_r_' . $item . '.jpg';
+                }
 
-        } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
+            } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
 
-            $this->image_galery[] = $dir_img.$sku.'.alt1.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.set.alt1.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.side.alt1.jpg';
+                if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/'. $dir_img . $sku . '_w_'.$item.'.jpg')) {
+                    $this->image_galery[] = $dir_img . $sku . '_w_' . $item . '.jpg';
+                }
 
-        } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
+            } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
 
-            $this->image_galery[] = $dir_img.$sku.'.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.set.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.side.jpg';
+                if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/'. $dir_img . $sku . '_y_'.$item.'.jpg')) {
+                    $this->image_galery[] = $dir_img . $sku . '_y_' . $item . '.jpg';
+                }
 
-        } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
+            } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
 
-            $this->image_galery[] = $dir_img.$sku.'.alt.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.set.alt.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.side.alt.jpg';
+                if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/'. $dir_img . $sku . '_r_'.$item.'.jpg')) {
+                    $this->image_galery[] = $dir_img . $sku . '_r_' . $item . '.jpg';
+                }
 
-        } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
+            } elseif ($metal == 'Platinum') {
 
-            $this->image_galery[] = $dir_img.$sku.'.alt1.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.set.alt1.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.side.alt1.jpg';
+                if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/'. $dir_img . $sku . '_w_'.$item.'.jpg')) {
+                    $this->image_galery[] = $dir_img . $sku . '_w_' . $item . '.jpg';
+                }
 
-        } elseif ($metal == 'Platinum') {
+            } elseif ($metal == 'Palladium') {
 
-            $this->image_galery[] = $dir_img.$sku.'.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.set.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.side.jpg';
+                if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/'. $dir_img . $sku . '_w_'.$item.'.jpg')) {
+                    $this->image_galery[] = $dir_img . $sku . '_w_' . $item . '.jpg';
+                }
 
-        } elseif ($metal == 'Palladium') {
-
-            $this->image_galery[] = $dir_img.$sku.'.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.set.jpg';
-            $this->image_galery[] = $dir_img.$sku.'.side.jpg';
-
+            }
         }
 
     }
