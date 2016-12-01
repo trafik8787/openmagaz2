@@ -401,18 +401,42 @@ ul.w-top-children-menu .dropdown-inside {
 
 .w-ac-baner-text1 {
     
-font-size: 65px;
-    
-color: #5fc4f0;
+font-size: 50px;
+font-weight: initial;
+color: #2f4680;
     
 /* line-height: 0.8; */
+}
+
+.w-shop-now-bloc a {
+    margin-left: 0;
+}
+
+.w-shop-now-bloc {
+    
+}
+
+.w-shop-now-bloc .shop-now {
+    
+width: 175px;
+}
+
+.w-shop-now-bloc i {
+    background: url("/catalog/view/theme/canary/img/demo_new_template/sng_button_top.png") 100% 100% no-repeat;
+    width: 175px;
+    height: 27px;
+    display: block;
 }
 
 .w-ac-baner-text2 {
 
 font-size: 24px;
 
-color: #5fc4f0;
+margin-top: 24px;
+
+margin-bottom: 46px;
+
+color: #2f4680;
 
 /* top: 29px; */
 
@@ -452,11 +476,11 @@ padding: 13px 40px 13px 40px;
     
 position: relative;
     
-color: #b7c7e3;
+color: #7887ae;
     
-font-size: 14px;
+font-size: 14.5px;
     
-margin-top: 20px;
+margin-top: 17%;
     
 display: block;
 }
@@ -2504,7 +2528,7 @@ star-rating
     border: none;
     position: absolute;
     bottom: 0;
-    background-color: #283f7a;
+    background-color: #134d87;
     color: #d5dced;
     text-align: center;
     font-size: 14.5px;
@@ -2590,14 +2614,14 @@ left: 7px;
 
 #ModalAkcia .modal-content {
     border-radius: inherit;
-    background: url('/catalog/view/theme/canary/img/demo_new_template/modal-akcia.jpg') no-repeat center/cover;
-    height: 468px;
+    background: url('/catalog/view/theme/canary/img/demo_new_template/modal-akcia2.jpg') no-repeat center/cover;
+    height: 548px;
     box-shadow: none;
     border: none;
 }
 
 #ModalAkcia .w-list-cat {
-    top: 249px;
+    top: 316px;
     position: relative;
     font-size: 24px;
     font-weight: bold;

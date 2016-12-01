@@ -340,8 +340,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    <p>Promotion ends December 24 at 11:59PM CST.</p>
                     <p>&#42; Does not include loose diamonds. Cannot be combined with any other offer.</p>
-                    <p>Promotion ends November 30 at 11:59PM CST.</p>
                 </div>
             </div>
         </div>

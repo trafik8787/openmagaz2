@@ -10,20 +10,23 @@
                 <div class="home-top-baneer">
                     <div class="row">
                         <div class="center-bl w-content-baner clearfix">
-                            <div class="col-md-6 col-sm-5">
+                            <div class="col-md-6 col-sm-5 col-xs-12">
                                 <div class="w-ac-baner-text">
-                                    <div class="w-ac-baner-text1">Cyber Monday</div>
-                                    <div class="w-ac-baner-text2">Enjoy up to 35% OFF All Jewelry*</div>
-                                    <a href="/fine-jewelry" role="button" class="btn btn-primary btn-lg w-btn-wiath">SHOP NOW</a>
+                                    <div class="w-ac-baner-text1">The Perfect Holiday Gift</div>
+                                    <div class="w-ac-baner-text2">Up To 35% OFF All Jewelry + FREE Shipping*</div>
+                                    <div class="w-shop-now-bloc">
+                                        <i></i>
+                                        <a href="/fine-jewelry" role="button" class="btn w-btn-orange2 shop-now">SHOP NOW</a>
+                                    </div>
                                     <span class="w-button-btn">
-                                        <p>*Offer does not include loose diamonds</p>
-                                        <p>Ends November 30 at 11:59pm CST</p>
+                                        <p>*Does not include loose diamonds. Cannot be combined with any other offer.</p>
+                                        <p>Promotion ends December 24 at 11:59PM CST.</p>
                                     </span>
                                 </div>
-                                <div class="w-button-in-baner">
-                                    <a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
-                                    <a href="/engagement-rings" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
-                                </div>
+                                <!--*<div class="w-button-in-baner">*-->
+                                    <!--*<a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>*-->
+                                    <!--*<a href="/engagement-rings" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>*-->
+                                <!--*</div>*-->
                             </div>
                             <div class="col-md-6 col-sm-7 hidden-xs">
                                 <?=$home_top_slider?>
