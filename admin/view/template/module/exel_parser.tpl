@@ -49,7 +49,8 @@
                             <select class="form-control" name="category" required="required">
                                 <option value="20">ENGAGEMENT RINGS</option>
                                 <option value="82">JEWELRY & GIFTS</option>
-                                <option value="69">WEDDING RINGS</option>
+                                <option value="100">WEDDING RINGS WOMAN</option>
+                                <option value="200">WEDDING RINGS MAN</option>
                             </select>
                         </div>
                     </div>

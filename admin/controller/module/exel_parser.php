@@ -34,6 +34,7 @@ class ControllerModuleExelParser extends Controller {
     private $url_seo;
     private $category_arr;
     private $category;
+    private $category_tmp;
     private $filter;
 
     private $width;
@@ -157,6 +158,24 @@ class ControllerModuleExelParser extends Controller {
         if (!empty($this->request->post['parsing_success'])) {
             $data['progres'] = 'Syccess';
             $this->file_path = $this->request->post['path_file'];
+
+            switch ($this->request->post['category']) {
+                case 20: //ENGAGEMENT RINGS
+                    $this->category_tmp[] = 20;
+                    break;
+                case 82: //JEWELRY & GIFTS
+                    $this->category_tmp[] = 20;
+                    break;
+                case 100: //WEDDING RINGS WOMAN
+                    $this->category_tmp[] = 69;
+                    $this->category_tmp[] = 96;
+                    break;
+                case 200;
+                    $this->category_tmp[] = 69;
+                    $this->category_tmp[] = 95;
+                    break;
+            }
+
             $this->fixParse();
         }
 
@@ -279,7 +298,7 @@ class ControllerModuleExelParser extends Controller {
             $metal = null;
             $this->filter = array();
             $name_file_general_img = null;
-            $this->category = array();
+            $this->category = $this->category_tmp;
             $curent = $file->current();
 
             if (!empty($curent[0])) {
@@ -373,9 +392,9 @@ class ControllerModuleExelParser extends Controller {
                 //$this->category[] = 20;
 
                 //WEDDING RINGS
-                $this->category[] = 69;
+                //$this->category[] = 69;
                 //WOMAN
-                $this->category[] = 96;
+                //$this->category[] = 96;
 
                 //FINE JEWERLY
                 //$this->category[] = 82;
