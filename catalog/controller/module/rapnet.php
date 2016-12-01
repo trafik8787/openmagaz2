@@ -151,7 +151,8 @@ class ControllerModuleRapnet extends Controller {
                  }
 
 
-                 $pagination = new Pagdiamond();
+                 //$pagination = new Pagdiamond();
+                 $pagination = new Pagination();
                  $pagination->total = $decod_json->response->body->search_results->total_diamonds_found;
                  $pagination->page = $page;
                  $pagination->limit = $decod_json->response->body->search_results->diamonds_returned;

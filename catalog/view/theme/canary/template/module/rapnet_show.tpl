@@ -13,14 +13,8 @@
                 <div class="diamond-catalog-tocompare"><a href="#">Product compare (0)</a></div>
             </div>
             <div class="center w-pagination-diamonts">
-                <!--*<div class="diamond-catalog-top-pages">*-->
-                    <!--*<a href="#" class="diamond-catalog-top-pages-link arrow-btn-number prev" data-action="minus"> </a>*-->
-                    <!--*<span>Page</span>*-->
-                    <!--*<input type="text" class="form-control" value="1">*-->
-                    <!--*<span>of 3</span>*-->
-                    <!--*<a href="#" class="diamond-catalog-top-pages-link arrow-btn-number next" data-action="plus"> </a>*-->
-                <!--*</div>*-->
-                <?=isset($pagination)? $pagination : ''?>
+
+                <?//=isset($pagination)? $pagination : ''?>
             </div>
             <div class="right">
                 <div class="show-b">
@@ -90,6 +84,11 @@
 
                     <?endforeach?>
 
+                    <tr class="pagination-tr">
+                        <td colspan="8">
+                            <div class="w-pagination-diamonts text-center"><?=isset($pagination)? $pagination : ''?></div>
+                        </td>
+                    </tr>
 
                     </tbody>
                 </table>

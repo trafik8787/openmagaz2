@@ -25,7 +25,7 @@ class ControllerCommonHeader extends Controller {
         }
 
         $data['title'] = $this->document->getTitle();
-        $data['stylelink'] = $this->GetStyle();
+        //$data['stylelink'] = $this->GetStyle();
 
         //$data['base'] = $server;
         $data['description'] = $this->document->getDescription();
@@ -197,6 +197,7 @@ class ControllerCommonHeader extends Controller {
 
     private function GetStyle() {
         $style = array(
+            '/catalog/view/theme/canary/css/font-awesome.min.css',
             '/catalog/view/theme/canary/vendor/slickslider/slick.css',
             '/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.min.css',
             '/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css',

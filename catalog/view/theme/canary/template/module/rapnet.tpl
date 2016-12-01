@@ -1141,28 +1141,40 @@
 
 
 
-        $(document).on('click', '.w-pagination-diamonts .arrow-btn-number-diamond', function(){
+//        //$(document).on('click', '.w-pagination-diamonts .arrow-btn-number-diamond', function(){
+//
+////
+////             if ($(this).attr('data-action')=='plus'){
+////                 $(this).parent().find('input').val(Number($(this).parent().find('input').val())+1);
+////             }
+////             else{
+////                 if (Number($(this).parent().find('input').val())>1){
+////                     $(this).parent().find('input').val(Number($(this).parent().find('input').val())-1);
+////                 }
+////             }
+//
+//            var $gets = parseQueryString ($(this).data("href"));
+//            $url_page = '&page='+$gets['page'];
+//            redirect = generate_url();
+//            history.pushState('', '', redirect);
+//            ajaxdata (this.href);
+//            return false;
+//
+//        });
 
+        $(document).on('click', '.w-pagination-diamonts .pagination li a', function(){
 
-             if ($(this).attr('data-action')=='plus'){
-                 $(this).parent().find('input').val(Number($(this).parent().find('input').val())+1);
-             }
-             else{
-                 if (Number($(this).parent().find('input').val())>1){
-                     $(this).parent().find('input').val(Number($(this).parent().find('input').val())-1);
-                 }
-             }
+            //alert($(this).href());
 
-            var $gets = parseQueryString ($(this).data("href"));
+            var $gets = parseQueryString ($(this).attr("href"));
             $url_page = '&page='+$gets['page'];
             redirect = generate_url();
             history.pushState('', '', redirect);
+
             ajaxdata (this.href);
             return false;
 
         });
-
-
 
 
         //alert(location.href);

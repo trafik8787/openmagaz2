@@ -37,6 +37,24 @@
                     </div>
 
                     <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-progres">List</label>
+                        <div class="col-sm-10">
+                            <textarea cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-progres">Category</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="category" required="required">
+                                <option value="20">ENGAGEMENT RINGS</option>
+                                <option value="82">JEWELRY & GIFTS</option>
+                                <option value="69">WEDDING RINGS</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <label class="col-sm-2 control-label" for="input-progres">Path</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" required="required" name="path_file">
