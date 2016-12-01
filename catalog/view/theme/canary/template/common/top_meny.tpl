@@ -111,11 +111,11 @@
                     <div class="col-xs-3">
                         <div class="title">Browse settings by stone</div>
                         <ul class="brilliant-style gemstones-box">
-                            <li><a href="<?php echo $categories[4]['href']?>&stone_type=1"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a></li>
-                            <li><a href="<?php echo $categories[4]['href']?>&stone_type=5"><i class="gemstones gemstones2"></i><span>pink sapphire</span></a></li>
-                            <li><a href="<?php echo $categories[4]['href']?>&stone_type=4"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a></li>
-                            <li><a href="<?php echo $categories[4]['href']?>&stone_type=2"><i class="gemstones gemstones4"></i><span>red ruby</span></a></li>
-                            <li><a href="<?php echo $categories[4]['href']?>&stone_type=3"><i class="gemstones gemstones5"></i><span>green emerald</span></a></li>
+                            <li><a href="<?php echo $categories[4]['href']?>&stone_type_gem=1"><i class="gemstones gemstones1"></i><span>blue sapphire</span></a></li>
+                            <li><a href="<?php echo $categories[4]['href']?>&stone_type_gem=5"><i class="gemstones gemstones2"></i><span>pink sapphire</span></a></li>
+                            <li><a href="<?php echo $categories[4]['href']?>&stone_type_gem=4"><i class="gemstones gemstones3"></i><span>yellow sapphire</span></a></li>
+                            <li><a href="<?php echo $categories[4]['href']?>&stone_type_gem=2"><i class="gemstones gemstones4"></i><span>red ruby</span></a></li>
+                            <li><a href="<?php echo $categories[4]['href']?>&stone_type_gem=3"><i class="gemstones gemstones5"></i><span>green emerald</span></a></li>
                             <li><a href="<?php echo $categories[4]['href']?>"><i class="all-menu-i"></i><span>All</span></a></li>
                         </ul>
                     </div>
