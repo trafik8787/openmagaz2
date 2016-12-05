@@ -32,6 +32,48 @@ $(document).ready(function() {
     //
     //});
 
+
+    $(document).on('click', '.button-send-hit', function () {
+        $.ajax({
+            url: '/index.php?route=product/product/send_hit',
+            type: 'post',
+            data: $('#form-email-hit').serialize(),
+            dataType: 'json',
+            beforeSend: function () {
+                $('.container-loader').show();
+            },
+            complete: function () {
+                $('.container-loader').hide();
+            },
+            success: function (json) {
+                if (json['error']) {
+                    //$('.body-modal-content').after
+                    if (json['error']['friend_name']) {
+                        $('.body-modal-content input[name=\"friend_name\"]').addClass('red-border').after('<span class="text-danger">'+ json['error']['friend_name'] +'</span>');
+                    }
+
+                    if (json['error']['friend_email']) {
+                        $('.body-modal-content input[name=\"friend_email\"]').addClass('red-border').after('<span class="text-danger">'+ json['error']['friend_email'] +'</span>');
+                    }
+
+                    if (json['error']['your_name']) {
+                        $('.body-modal-content input[name=\"your_name\"]').addClass('red-border').after('<span class="text-danger">'+ json['error']['your_name'] +'</span>');
+                    }
+
+                    if (json['error']['your_email']) {
+                        $('.body-modal-content input[name=\"your_email\"]').addClass('red-border').after('<span class="text-danger">'+ json['error']['your_email'] +'</span>');
+                    }
+                } else {
+                    $('.body-modal-content').html('<div style="text-align: center;font-size: 16px;color: green;">'+json['success']+'</div>');
+                }
+            }
+        });
+        return false;
+    });
+
+
+
+
     $('.stack-responsive').stacktable();
 
 

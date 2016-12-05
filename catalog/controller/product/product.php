@@ -843,9 +843,29 @@ class ControllerProductProduct extends Controller {
                 $data_text_email = array();
 
                 $this->load->model('catalog/product');
-                $product = $this->model_catalog_product->getProduct($this->request->post['product_id']);
+                if (!empty($this->request->post['product_id'])) {
 
-                //dd($product, true);
+                    $product = $this->model_catalog_product->getProduct($this->request->post['product_id']);
+
+                    $data_text_email['image'] = $this->url->urlLink('image/' . $product['image']);
+                    $data_text_email['name'] = $product['name'];
+                    $data_text_email['description'] = $product['description'];
+                    $data_text_email['href'] = $this->url->link('product/product', 'product_id=' . $product['product_id']);
+
+                } elseif($this->request->post['diamond_id']) {
+
+                    $product = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $this->request->post['diamond_id']));
+                    $product = json_decode($product);
+                    $data_text_email['image'] = HostSite(imageDiamont($product->response->body->diamond->shape));
+                    $data_text_email['name'] = $product->response->body->diamond->size.' CARAT '
+                        .$product->response->body->diamond->color.'-'.$product->response->body->diamond->clarity.' '
+                        .$product->response->body->diamond->cut.' CUT '.$product->response->body->diamond->shape.' LOOSE GIA CERTIFIED DIAMOND';
+
+                    $data_text_email['description'] = 'This '.$product->response->body->diamond->size.' Carat, '.$product->response->body->diamond->size.' '.!empty($product->response->body->diamond->cut) ? $product->response->body->diamond->cut.' Cut, ' : '' .$product->response->body->diamond->color.' color, and '.$product->response->body->diamond->clarity.' clarity '.$product->response->body->diamond->shape;
+                    $data_text_email['href'] = HostSite('/diamond_page?diamond_id='.$this->request->post['diamond_id']);
+                }
+                //dd(HostSite(imageDiamont($product->response->body->diamond->shape)), true);
+
 
                 $data_text_email['friend_name'] = $this->request->post['friend_name'];
                 $data_text_email['friend_email'] = $this->request->post['friend_email'];
@@ -853,10 +873,6 @@ class ControllerProductProduct extends Controller {
                 $data_text_email['your_email'] = $this->request->post['your_email'];
                 $data_text_email['another_friend'] = $this->request->post['another_friend'];
 
-                $data_text_email['image'] = $this->url->urlLink('image/' . $product['image']);
-                $data_text_email['name'] = $product['name'];
-                $data_text_email['description'] = $product['description'];
-                $data_text_email['href'] = $this->url->link('product/product', 'product_id=' . $product['product_id']);
 
                 $data_email['message'] = $this->load->view($this->config->get('config_template') . '/template/mail/text_hit_mail.tpl', $data_text_email);
                 $data_email['email_to'] = $this->request->post['friend_email'];

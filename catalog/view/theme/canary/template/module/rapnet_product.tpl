@@ -377,7 +377,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 paging-top-20 text-center">
-                                <input type="hidden" name="product_id" value="<?=$product_id?>">
+                                <input type="hidden" name="diamond_id" value="<?=$product->response->body->diamond->diamond_id?>">
                                 <button value="1" name="submit_hit_email" class="btn w-btn-orange2 button-send-hit" type="submit">SEND</button>
                             </div>
                         </form>
