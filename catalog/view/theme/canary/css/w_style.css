@@ -2535,6 +2535,11 @@ star-rating
     width: 100%;
 }
 
+#ModalMailHit .modal-content {
+    border-radius: inherit;
+}
+
+#ModalMailHit .modal-header,
 #ModalAkcia .modal-header,
 #ModalHomeSubskribe .modal-header {
     border: none;
@@ -2548,6 +2553,7 @@ star-rating
     padding: 10px 0 10px 0;
 }
 
+#ModalMailHit .modal-header .close,
 #ModalAkcia .modal-header .close,
 #ModalHomeSubskribe .modal-header .close {
    
@@ -2564,6 +2570,7 @@ right: 12px;
 font-weight: inherit;
 }
 
+#ModalMailHit .modal-header .close > span,
 #ModalAkcia .modal-header .close > span,
 #ModalHomeSubskribe .modal-header .close > span {
 
@@ -2606,6 +2613,32 @@ left: 7px;
     left: 9px;
     z-index: 2;
     top: -5px;
+}
+
+
+.red-border {
+    border: 1px solid red!important;
+}
+
+
+#ModalMailHit .modal-dialog {
+    width: 445px;
+}
+#ModalMailHit .form-static {
+    padding-bottom: 20px;
+}
+#ModalMailHit .form-static input[type="checkbox"] {
+    width: auto;
+    height: auto;
+}
+
+#ModalMailHit .modal-footer {
+    text-align: left;
+    font-size: 10px;
+}
+
+#ModalMailHit .form-static textarea {
+    margin-top: 20px;
 }
 
 #ModalAkcia .modal-dialog {

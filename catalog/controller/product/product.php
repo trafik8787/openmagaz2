@@ -836,6 +836,89 @@ class ControllerProductProduct extends Controller {
 	}
 
 
+    public function send_hit (){
+        if (in_ajax()) {
+
+            if ($this->validate_hit()) {
+                $data_text_email = array();
+
+                $this->load->model('catalog/product');
+                $product = $this->model_catalog_product->getProduct($this->request->post['product_id']);
+
+                //dd($product, true);
+
+                $data_text_email['friend_name'] = $this->request->post['friend_name'];
+                $data_text_email['friend_email'] = $this->request->post['friend_email'];
+                $data_text_email['your_name'] = $this->request->post['your_name'];
+                $data_text_email['your_email'] = $this->request->post['your_email'];
+                $data_text_email['another_friend'] = $this->request->post['another_friend'];
+
+                $data_text_email['image'] = $this->url->urlLink('image/' . $product['image']);
+                $data_text_email['name'] = $product['name'];
+                $data_text_email['description'] = $product['description'];
+                $data_text_email['href'] = $this->url->link('product/product', 'product_id=' . $product['product_id']);
+
+                $data_email['message'] = $this->load->view($this->config->get('config_template') . '/template/mail/text_hit_mail.tpl', $data_text_email);
+                $data_email['email_to'] = $this->request->post['friend_email'];
+
+                $mail = new Mail();
+                $mail->protocol = $this->config->get('config_mail_protocol');
+                $mail->parameter = $this->config->get('config_mail_parameter');
+                $mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
+                $mail->smtp_username = $this->config->get('config_mail_smtp_username');
+                $mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
+                $mail->smtp_port = $this->config->get('config_mail_smtp_port');
+                $mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
+
+                $mail->setTo($this->request->post['friend_email']);
+                $mail->setFrom($this->request->post['your_email']);
+                $mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
+                $mail->setSubject($this->request->post['your_name'].' sent you a link from BrilliantCanary.com');
+                $mail->setHtml($this->load->view($this->config->get('config_template') . '/template/mail/email_technik.tpl', $data_email));
+                $mail->send();
+                $json['success'] = 'The letter was sent successfully';
+
+            } else {
+                $json['error'] = $this->error;
+            }
+
+            $this->response->addHeader('Content-Type: application/json');
+            $this->response->setOutput(json_encode($json));
+        }
+	}
+
+    protected function validate_hit() {
+
+        if ($this->request->post['friend_name'] == '') {
+            $this->error['friend_name'] = 'This field is required.';
+        }
+
+        if ($this->request->post['friend_email'] == '') {
+
+            $this->error['friend_email'] = 'This field is required.';
+        } else {
+            if (!filter_var($this->request->post['friend_email'], FILTER_VALIDATE_EMAIL)) {
+                $this->error['friend_email'] = 'Please enter a valid email address.';
+            }
+        }
+
+        if ($this->request->post['your_name'] == '') {
+            $this->error['your_name'] = 'This field is required.';
+        }
+
+        if ($this->request->post['your_email'] == '') {
+            $this->error['your_email'] = 'This field is required.';
+
+        } else {
+            if (!filter_var($this->request->post['your_email'], FILTER_VALIDATE_EMAIL)) {
+                $this->error['your_email'] = 'Please enter a valid email address.';
+            }
+        }
+
+        return !$this->error;
+
+    }
+
 }
 
 
