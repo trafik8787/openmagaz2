@@ -364,7 +364,7 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/device.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.js" ></script>
-<script type="text/javascript" src="/catalog/view/javascript/app-1479932591445.js" ></script>
+<script type="text/javascript" src="/catalog/view/javascript/app-1479932591446.js" ></script>
 <script type="text/javascript" src="/catalog/view/javascript/common-1479080055291.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.easydropdown.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
