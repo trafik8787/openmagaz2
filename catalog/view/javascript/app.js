@@ -58,6 +58,7 @@ $(document).ready(function() {
 
     $('.bxslider').slick({
         infinite: true,
+        speed: 5000,
         autoplay: true,
         prevArrow: '<a href="#" class="bx-prev"></a>',
         nextArrow: '<a href="#" class="bx-next"></a>',
