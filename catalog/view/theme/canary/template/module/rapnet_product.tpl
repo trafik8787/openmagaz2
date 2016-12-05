@@ -51,9 +51,9 @@
                         <li>
                             <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.addDiamond('<?=$product->response->body->diamond->diamond_id?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                         </li>
-                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
+                        <li><a href="#" class="it-list-link" data-toggle="modal" data-target="#ModalMailHit"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
                         <!--*<li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>*-->
-                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
+                        <li><a href="#" onclick="window.print();"  class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                         <li>
                             <!-- space for chare -->
                             <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
@@ -258,9 +258,9 @@
                         <li>
                             <a href="#" class="it-list-link wishlist-btn-item" data-toggle="tooltip" onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                         </li>
-                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
+                        <li><a href="#" class="it-list-link" data-toggle="modal" data-target="#ModalMailHit"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
                         <!--*<li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>*-->
-                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
+                        <li><a href="#" onclick="window.print();" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                         <li>
                             <!-- space for chare -->
                             <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
@@ -325,6 +325,79 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+    <div class="modal fade" id="ModalMailHit" tabindex="-1" role="dialog" aria-labelledby="ModalMailHitLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+                </div>
+                <div class="modal-body form-static">
+
+                    <div class="row body-modal-content">
+                        <div class="col-md-12 paging-bottom-20">
+
+                            <span class="h3">
+                                Drop a Hint
+                            </span>
+                            <div>
+                                <span>Don’t keep it to yourself! Share what you like with your friends or loved ones.</span>
+                            </div>
+
+                        </div>
+                        <form class="form-inline" role="form" id="form-email-hit">
+                            <div class="col-md-6">
+                                <input type="text" name="friend_name" placeholder="Friend’s Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="friend_email" placeholder="Friend’s Email Address">
+                            </div>
+                            <div class="col-md-12">
+                                <textarea name="another_friend" rows="3" placeholder="Add Another Friend"></textarea>
+                            </div>
+
+                            <div class="col-md-6">
+                                <input type="text" name="your_name" placeholder="Your Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="your_email" placeholder="Your Email Address">
+                            </div>
+                            <div class="form-group paging-top-20">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> Send Me Brilliant Canary Exclusive Offers and Updates
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 paging-top-20 text-center">
+                                <input type="hidden" name="product_id" value="<?=$product_id?>">
+                                <button value="1" name="submit_hit_email" class="btn w-btn-orange2 button-send-hit" type="submit">SEND</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <span>
+                        YOUR EMAIL ADDRESS WILL ONLY BE USED TO LET YOUR FRIEND KNOW WHO SENT THE EMAIL, UNLESS YOU CHOOSE TO RECEIVE OFFERS AND UPDATES FROM BRILLIANT CANARY. VIEW OUR <a href="/privacy">PRIVACY POLICY</a>.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
 </main>
 
 

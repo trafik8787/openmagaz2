@@ -39,8 +39,21 @@
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/easydropdown.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565511.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style-1480414222863.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop-1480446257643.css"/>
+
+    <style media="print" rel="stylesheet" type="text/css">
+        .w-bredcrum-border,
+        .static-page .w-blocs-complects,
+        .product-need-help,
+        .product-advantages,
+        .include-section,
+        .similar-section,
+        footer,
+        header {
+            display: none
+        }
+    </style>
 
     <?//=$stylelink?>
 

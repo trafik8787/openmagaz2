@@ -66,7 +66,7 @@
                         </li>
                         <li><a href="#" class="it-list-link" data-toggle="modal" data-target="#ModalMailHit"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
-                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
+                        <li><a href="#" onclick="window.print();" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                         <li>
                             <!-- space for chare -->
                             <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
@@ -127,7 +127,7 @@
                                    onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top"
                                    title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                             </li>
-                            <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
+                            <li><a href="#" class="it-list-link" data-toggle="modal" data-target="#ModalMailHit"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
                             <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
                             <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                             <li>
@@ -365,7 +365,7 @@
                                onclick="wishlist.add('<?php echo $product_id; ?>'); return false;" data-placement="top" title=""
                                data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                         </li>
-                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
+                        <li><a href="#" class="it-list-link" data-toggle="modal" data-target="#ModalMailHit"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
                         <!--*<li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>*-->
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                         <li>
@@ -688,7 +688,7 @@
                             </div>
                         </div>
                         <button type="button" data-dismiss="modal" aria-hidden="true" id="button-cart"
-                                data-loading-text="<?php echo $text_loading; ?>" class="btn w-btn-orange btn-lg text-center"><span
+                                data-loading-text="<?php echo $text_loading; ?>" class="btn w-btn-grey text-center"><span
                                     class="add-tocart-ico"></span> Add to Cart
                         </button>
                     </div>
