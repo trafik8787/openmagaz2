@@ -10,7 +10,7 @@
                 <ul class="breadcrumbs">
                     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
                     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-                    <li> »</li>
+                    <li>&nbsp;»&nbsp;</li>
                     <?php } ?>
                 </ul>
             </div>
@@ -244,7 +244,7 @@
                                         </div>
                                         <?php if ($options) :?>
                                         <div class="text-right">
-                                            <a href="#" class="your-ring-size">Select your ring size</a>
+                                            <span class="icon_black_pdf"></span><a href="/Ring-Sizer_print.pdf" target="_blank" class="your-ring-size">Select your ring size</a>
                                         </div>
                                         <?endif?>
                                     </div>

@@ -16,7 +16,7 @@
                     <ul class="breadcrumbs">
                         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
                         <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-                        <li> » </li>
+                        <li>&nbsp;»&nbsp;</li>
                         <?php } ?>
                     </ul>
                 </div>
