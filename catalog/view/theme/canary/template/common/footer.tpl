@@ -254,7 +254,7 @@
                                 <?endforeach?>
                             </dl>
                         </div>
-                        <div class="col-md-3 col-sm-4 col-xs-6">
+                        <div class="col-md-3 col-sm-4 col-xs-6 padding-0">
                             <dl>
                                 <dt>CONTACT US</dt>
                                 <dd><a href="mailto:info@brilliantcanary.com"><span class="icon-email"></span>info@brilliantcanary.com</a></dd>
@@ -365,8 +365,7 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/device.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.js" ></script>
 <script type="text/javascript" src="/catalog/view/javascript/app-1479932591447.js" ></script>
-<!--*<script type="text/javascript" src="/catalog/view/javascript/common-1479080055291.js" ></script>*-->
-<script type="text/javascript" src="/catalog/view/javascript/common.js" ></script>
+<script type="text/javascript" src="/catalog/view/javascript/common-1479080055292.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.easydropdown.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>

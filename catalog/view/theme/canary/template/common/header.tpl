@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css">
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/easydropdown.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565511.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565512.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style-1480414222864.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop-1480446257643.css"/>
