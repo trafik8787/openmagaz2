@@ -140,6 +140,16 @@
                 </div>
             <?else:?>
                 <div class="center-bl clearfix">
+                    <div class="row form-static w-page-search">
+                        <div class="col-md-10 col-sm-9 col-xs-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="search" placeholder="Search">
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-12 col-sm-3 text-center">
+                            <button class="btn w-btn-orange2">SEARCH</button>
+                        </div>
+                    </div>
                     <p><?php echo $text_empty; ?></p>
                 </div>
             <?endif?>

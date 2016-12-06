@@ -331,7 +331,7 @@
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">What form of payments does Brilliant Canary accept?</div>
                                         <p>
-                                            Brilliant Canary accepts all major credit cards, PayPal and wire transfer. All orders paid via bank wire transfer will receive an additional 1.5% discount!
+                                            Brilliant Canary accepts all major credit cards, PayPal and wire transfer. All orders paid via bank wire transfer will receive an additional 2% discount!
                                         </p>
                                     </div>
                                 </li>

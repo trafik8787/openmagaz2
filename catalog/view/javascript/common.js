@@ -63,11 +63,29 @@ $(document).ready(function() {
 		location = url;
 	});
 
+    $('.w-page-search button').on('click', function() {
+		url = '/index.php?route=product/search';
+
+		var value = $('.w-page-search input[name=\'search\']').val();
+
+		if (value) {
+			url += '&search=' + encodeURIComponent(value);
+		}
+
+		location = url;
+	});
+
 	$('#search input[name=\'search\']').on('keydown', function(e) {
 		if (e.keyCode == 13) {
 			$('header input[name=\'search\']').parent().find('button, a').trigger('click');
 		}
 	});
+
+    $('.w-page-search input[name=\'search\']').on('keydown', function(e) {
+        if (e.keyCode == 13) {
+            $('.w-page-search button').trigger('click');
+        }
+    });
 
 	// Menu
 	$('#menu .dropdown-menu').each(function() {
