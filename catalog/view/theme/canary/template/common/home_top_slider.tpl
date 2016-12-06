@@ -1,4 +1,4 @@
-<div class="w-right-home-top-slider">
+<div class="w-right-home-top-slider" style="display: none;">
     <div class="panel panel-default">
         <div class="panel-body">
             <div class="text-center">

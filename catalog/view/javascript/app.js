@@ -169,6 +169,8 @@ $(document).ready(function() {
         ]
     });
 
+    $('.w-right-home-top-slider').show();
+
     //$('.bxslider-blog').bxSlider({
     //    auto: true,
     //    minSlides: 1,
