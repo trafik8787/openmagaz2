@@ -39,7 +39,7 @@
         </div>
             <div class="list-product w-category-ajax">
                 <div class="filter-product-line">
-                    <div class="center-bl clearfix">
+                    <div class="center-bl clearfix" style="max-width: 1247px;">
                         <div class="pull-left left-drop-f">
                             <span>Sort By:</span>
                             <div class="dropdown">
@@ -73,6 +73,7 @@
                                 </select>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="wrapper-product-table <?=$table_bloc?> main-catalog-container">
