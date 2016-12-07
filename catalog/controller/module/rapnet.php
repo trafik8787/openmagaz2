@@ -11,6 +11,9 @@ class ControllerModuleRapnet extends Controller {
     private $fluorescence_intensities_arr;
     private $url_paginate;
 
+    private $carat_from;
+    private $carat_to;
+
     private $page;
     private $cache_key;
 
@@ -49,10 +52,13 @@ class ControllerModuleRapnet extends Controller {
             "Very Slight", "Faint", "Medium", "Slight", "Strong", "Very Strong","None"
         );
 
+
+        $this->carat_from = 0.25;
+        $this->carat_to = 15;
         //sort
         $this->show = 15;
 
-            $this->page = 1;
+        $this->page = 1;
     }
 
 	public function index($setting) {
@@ -298,8 +304,8 @@ class ControllerModuleRapnet extends Controller {
             $carat_from = $carat_ex[0];
             $carat_to = $carat_ex[1];
         } else {
-            $carat_from = 0.25;
-            $carat_to = 15;
+            $carat_from = $this->carat_from;
+            $carat_to = $this->carat_to;
         }
 
         if (!empty($this->request->get['price'])) {
@@ -407,7 +413,6 @@ class ControllerModuleRapnet extends Controller {
         if (empty($this->cache_key)) {
             $this->cache_key = $page;
         }
-
 
 
         if (empty($this->GetCache($this->cache_key))) {
@@ -618,6 +623,8 @@ class ControllerModuleRapnet extends Controller {
         $data = array();
         $this->show = 4;
         $this->shapes_arr = array(mod_shape($diamond->response->body->diamond->shape));
+        $this->carat_from = $diamond->response->body->diamond->size - 1;
+        $this->carat_to = $diamond->response->body->diamond->size + 1;
         $this->page = 2;
         $this->cache_key = 'similar_'.$diamond->response->body->diamond->diamond_id;
         $json = $this->parse();
