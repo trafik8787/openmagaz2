@@ -1092,6 +1092,16 @@ left: 399px!important;
 @media  (max-width: 480px){
 
 
+    .yellow-block .one-block > * {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .yellow-block .one-block {
+        vertical-align: top;
+    }
+
     #ModalAkcia .modal-dialog {
         width: 356px;
         margin: 0 auto;
@@ -1303,7 +1313,7 @@ padding-bottom: 11px;
 
   .wrapper-cart-box .one-line .box-img {
     width: 100%;
-    height: 130px;
+    /*height: 130px;*/
     position: relative;
     top: inherit;
     left: inherit;

@@ -8285,7 +8285,7 @@ footer > section .row {
 .wrapper-cart-box .one-line{
   min-height: 130px;
   margin-bottom: 20px;
-  padding: 25px 300px 25px 165px;
+  padding: 10px 300px 10px 165px;
   position: relative;
   border: 1px solid #cdcbcb;
   background: -moz-linear-gradient(top, #ffffff 0%, #fafafa 100%);
@@ -8299,10 +8299,11 @@ footer > section .row {
 }
 
 .wrapper-cart-box .one-line .box-img img{
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  left: 50%;
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  /*left: 50%;*/
+    position: relative;
 }
 
 .w-cc-payment p{
