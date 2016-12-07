@@ -37,7 +37,7 @@
         <div class="bl-input must">
 
             <select name="country_id" id="input-payment-country">
-                <option value=""><?php echo $text_select; ?></option>
+                <option value="">Select Country</option>
                 <?php foreach ($countries as $country) { ?>
                 <?php if ($country['country_id'] == $country_id) { ?>
                 <option value="<?php echo $country['country_id']; ?>"
