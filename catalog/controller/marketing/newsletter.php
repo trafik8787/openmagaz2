@@ -36,29 +36,22 @@ class ControllerMarketingNewsletter extends Controller {
                 if (!empty($this->request->post['coupon']) and $this->request->post['coupon'] == 1) {
 
                     $data_text_email = array();
-                    $data_email['message'] = $this->load->view($this->config->get('config_template') . '/template/mail/text_coupon_email.tpl', $data_text_email);
-                    $data_email['email_to'] = $this->request->post['email'];
+                    $data_html = $this->load->view($this->config->get('config_template') . '/template/mail/text_coupon_email.tpl', $data_text_email);
 
-                    $mail = new Mail();
-                    $mail->protocol = $this->config->get('config_mail_protocol');
-                    $mail->parameter = $this->config->get('config_mail_parameter');
-                    $mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
-                    $mail->smtp_username = $this->config->get('config_mail_smtp_username');
-                    $mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
-                    $mail->smtp_port = $this->config->get('config_mail_smtp_port');
-                    $mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
+                    $this->load->controller('email/email/email_tehnic', array($this->request->post['email'], 'Welcome to Brilliant Canary - $100 Off Your First Order', $data_html));
 
-                    $mail->setTo($this->request->post['email']);
-                    $mail->setFrom($this->config->get('config_email'));
-                    $mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));
-                    $mail->setSubject('Welcome to Brilliant Canary - $100 Off Your First Order');
-                    $mail->setHtml($this->load->view($this->config->get('config_template') . '/template/mail/email_technik.tpl', $data_email));
-                    $mail->send();
+                    $text_info = $this->request->post['email'].' joined your mailing list and recieved 100$ off coupon';
+                    //отправляем соробщение о подпищике на купон
+                    $this->load->controller('email/email/email_tehnic', array('info@brilliantcanary.com', $this->request->post['email'].' just joined your mailing list and recieved 100$ off coupon', $text_info));
+
 
                 }
 
                 $json['susses'] = 'Thank you for signing up for our exclusive offers.';
             } else {
+                $text_info = $this->request->post['email'].' just joined your mailing list';
+                //отправляем соробщение о подпищике
+                $this->load->controller('email/email/email_tehnic', array('info@brilliantcanary.com', $this->request->post['email'].' just joined your mailing list', $text_info));
                 $json['error'] = 'You are already subscribed';
             }
 

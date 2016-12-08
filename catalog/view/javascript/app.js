@@ -894,7 +894,9 @@ $(function() {
                 + '<span style="font-size:13px"><i class="fa fa-angle-down" aria-hidden="true"></i></span>'
                 + '</a><ul class="w-top-children-menu">' + menuhtml + '</ul></li>');
             $("#horizontal li.hideshow ul").css("top", "40px");
-            $("#horizontal li.hideshow").click(function () {
+            $("#horizontal li.hideshow").hover(function () {
+                $(this).children("ul.w-top-children-menu").toggle();
+            }, function () {
                 $(this).children("ul.w-top-children-menu").toggle();
             });
         }
