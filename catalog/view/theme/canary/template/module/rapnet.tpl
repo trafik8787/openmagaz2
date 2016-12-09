@@ -8,7 +8,7 @@
                         <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
 
                             <div class="all-line-filter">
-                                <a href="#" class="active">All</a>
+                                <a href="#" class="active shape-all">All</a>
                             </div>
                             <label class="btn btn-filter brackets">
                                 <input type="radio" value="Round" name="shape" id="option1" autocomplete="off" checked>
@@ -685,6 +685,15 @@
 
         });
 
+        $(document).on('click', '.shape-all', function(){
+
+            $url_shape = '';
+            $('.w-group-shape .btn-filter.brackets').removeClass('active');
+            redirect = generate_url();
+            history.pushState('', '', redirect);
+
+            ajaxdata(redirect);
+        });
 
         $(document).on('change', '.w-group-labs input', function(){
 
