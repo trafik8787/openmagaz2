@@ -409,7 +409,14 @@
                                             <div class="box-tovar-th">
                                                 <div class="name"><?=$row['name']?></div>
 
-                                                <span class="price"><?=$row['price']?></span>
+
+                                                <?php if (!$row['special']):?>
+                                                    <span class="price"><?php echo $row['price']; ?></span>
+                                                <?else:?>
+                                                    <b class="w-special-price"> <?php echo $row['price']; ?></b>
+                                                    <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $row['special']; ?></span>
+                                                <?endif?>
+                                                <!--*<span class="price"><?=$row['price']?></span>*-->
                                             </div>
                                         </div>
                                     </td>
@@ -450,8 +457,13 @@
                                             <div class="box-tovar-th">
                                                 <div class="name"><?=$matching['name']?></div>
 
-                                                <span class="price"><?=$matching['price']?></span>
-
+                                                <!--*<span class="price"><?=$matching['price']?></span>*-->
+                                                <?php if (!$row['special']):?>
+                                                    <span class="price"><?php echo $row['price']; ?></span>
+                                                <?else:?>
+                                                    <b class="w-special-price"> <?php echo $row['price']; ?></b>
+                                                    <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $row['special']; ?></span>
+                                                <?endif?>
 
                                             </div>
                                         </div>
@@ -494,7 +506,14 @@
                                     </div>
                                     <div class="box-tovar-th">
                                         <div class="name"><?=$row['name']?></div>
-                                        <span class="price"><?=$row['price']?></span>
+
+                                        <?php if (!$row['special']):?>
+                                            <span class="price"><?php echo $row['price']; ?></span>
+                                        <?else:?>
+                                            <b class="w-special-price"> <?php echo $row['price']; ?></b>
+                                            <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $row['special']; ?></span>
+                                        <?endif?>
+
                                     </div>
                                 </div>
                             </td>
