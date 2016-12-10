@@ -871,13 +871,13 @@ $(function() {
 
     function alignMenu() {
         var w = 0;
-        var mw = $("#horizontal").width() - 60;
+        var mw = $("#horizontal").width() - 65;
         var i = -1;
         var menuhtml = '';
         var flag_more = false;
         jQuery.each($("#horizontal").children('li'), function() {
             i++;
-            w += $(this).outerWidth(true);
+            w += $(this).outerWidth(true) +5;
             if (mw < w) {
                 menuhtml += $('<div>').append($(this).clone()).html();
                 $(this).remove();
