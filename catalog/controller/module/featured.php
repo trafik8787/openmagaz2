@@ -41,7 +41,7 @@ class ControllerModuleFeatured extends Controller {
 					}
 
 					if ((float)$product_info['special']) {
-						$special = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+						$special = $this->currency->format($this->tax->calculate(floor($product_info['special']), $product_info['tax_class_id'], $this->config->get('config_tax')));
 					} else {
 						$special = false;
 					}

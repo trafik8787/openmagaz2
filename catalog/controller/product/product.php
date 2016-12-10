@@ -358,7 +358,7 @@ class ControllerProductProduct extends Controller {
 			}
 
 			if ((float)$product_info['special']) {
-				$data['special'] = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+				$data['special'] = $this->currency->format($this->tax->calculate(floor($product_info['special']), $product_info['tax_class_id'], $this->config->get('config_tax')));
 			} else {
 				$data['special'] = false;
 			}
@@ -475,7 +475,7 @@ class ControllerProductProduct extends Controller {
 				}
 
 				if ((float)$result['special']) {
-					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
+					$special = $this->currency->format($this->tax->calculate(floor($result['special']), $result['tax_class_id'], $this->config->get('config_tax')));
 				} else {
 					$special = false;
 				}
@@ -799,7 +799,7 @@ class ControllerProductProduct extends Controller {
             }
 
             if ((float)$matching_info['special']) {
-                $special = $this->currency->format($this->tax->calculate($matching_info['special'], $matching_info['tax_class_id'], $this->config->get('config_tax')));
+                $special = $this->currency->format($this->tax->calculate(floor($matching_info['special']), $matching_info['tax_class_id'], $this->config->get('config_tax')));
             } else {
                 $special = false;
             }

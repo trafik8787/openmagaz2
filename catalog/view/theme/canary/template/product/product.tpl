@@ -413,8 +413,8 @@
                                                 <?php if (!$row['special']):?>
                                                     <span class="price"><?php echo $row['price']; ?></span>
                                                 <?else:?>
-                                                    <b class="w-special-price"> <?php echo $row['price']; ?></b>
                                                     <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $row['special']; ?></span>
+                                                    <b class="w-special-price"> <?php echo $row['price']; ?></b>
                                                 <?endif?>
                                                 <!--*<span class="price"><?=$row['price']?></span>*-->
                                             </div>
@@ -461,8 +461,8 @@
                                                 <?php if (!$row['special']):?>
                                                     <span class="price"><?php echo $row['price']; ?></span>
                                                 <?else:?>
-                                                    <b class="w-special-price"> <?php echo $row['price']; ?></b>
                                                     <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $row['special']; ?></span>
+                                                    <b class="w-special-price"> <?php echo $row['price']; ?></b>
                                                 <?endif?>
 
                                             </div>
@@ -510,8 +510,8 @@
                                         <?php if (!$row['special']):?>
                                             <span class="price"><?php echo $row['price']; ?></span>
                                         <?else:?>
-                                            <b class="w-special-price"> <?php echo $row['price']; ?></b>
                                             <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $row['special']; ?></span>
+                                            <b class="w-special-price"> <?php echo $row['price']; ?></b>
                                         <?endif?>
 
                                     </div>

@@ -264,7 +264,8 @@ class ControllerProductCategory extends Controller {
 				}
 
 				if ((float)$result['special']) {
-					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
+					$special = $this->currency->format($this->tax->calculate(floor($result['special']), $result['tax_class_id'], $this->config->get('config_tax')));
+					//$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
 				} else {
 					$special = false;
 				}
