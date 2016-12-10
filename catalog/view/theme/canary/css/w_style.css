@@ -5133,7 +5133,7 @@ text-align: left;
 
     .w-special-price {
     position: relative;
-    top: -11px;
+    /*top: -11px;*/
     }
 
     .wrapper-product-table.list-view .table tbody tr td:nth-child(1) {

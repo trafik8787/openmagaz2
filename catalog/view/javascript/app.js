@@ -138,6 +138,8 @@ $(document).ready(function() {
         ]
     });
 
+    $('.bxslider-blog').show();
+
     $('.bxslider-blog').slick({
         infinite: true,
         prevArrow: '<div class="blog-control-prev"><a class="bx-prev" href="">Prev</a></div>',
@@ -170,6 +172,7 @@ $(document).ready(function() {
     });
 
     $('.w-right-home-top-slider').show();
+
 
     //$('.bxslider-blog').bxSlider({
     //    auto: true,
