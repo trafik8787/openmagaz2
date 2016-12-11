@@ -25,40 +25,16 @@
             $.src="//v2.zopim.com/?4M8liu0cc8LxpPuHuyEXmPGmiS7VjRPM";z.t=+new Date;$.
                     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     </script>
-
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/font-awesome.min.css">
-    <link href="/catalog/view/theme/canary/vendor/slickslider/slick.css" rel="stylesheet">
-    <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/normalize.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css"/>
-    <link rel="stylesheet" href="/catalog/view/javascript/jquery/magnific/magnific-popup.css"/>
-    <link rel="stylesheet" href="/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css">
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/easydropdown.css"/>
+    <?=$stylelink?>
+    <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565512.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style-1480414222864.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop-1480446257643.css"/>
-
     <style media="print" rel="stylesheet" type="text/css">
-        .w-bredcrum-border,
-        .static-page .w-blocs-complects,
-        .product-need-help,
-        .product-advantages,
-        .include-section,
-        .similar-section,
-        footer,
-        header {
-            display: none
-        }
+        .w-bredcrum-border, .static-page .w-blocs-complects, .product-need-help, .product-advantages, .include-section, .similar-section, footer, header {  display: none  }
     </style>
-
-    <?//=$stylelink?>
-
-    <script type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script async="async" type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <script async="async" type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <?php foreach ($analytics as $analytic) { ?>

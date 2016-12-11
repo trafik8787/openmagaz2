@@ -25,7 +25,7 @@ class ControllerCommonHeader extends Controller {
         }
 
         $data['title'] = $this->document->getTitle();
-        //$data['stylelink'] = $this->GetStyle();
+        $data['stylelink'] = $this->GetStyle();
 
         //$data['base'] = $server;
         $data['description'] = $this->document->getDescription();
@@ -199,18 +199,18 @@ class ControllerCommonHeader extends Controller {
         $style = array(
             '/catalog/view/theme/canary/css/font-awesome.min.css',
             '/catalog/view/theme/canary/vendor/slickslider/slick.css',
-            '/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.min.css',
+//            '/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.min.css',
             '/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.css',
-            '/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel.css',
+            '/catalog/view/theme/canary/vendor/owl.carousel/owl.carousel-1480427970000.css',
             '/catalog/view/theme/canary/vendor/jquery.sliderPro/slider-pro.min.css',
             '/catalog/view/javascript/jquery/magnific/magnific-popup.css',
             '/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css',
             '/catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css',
             '/catalog/view/theme/canary/css/easydropdown.css',
-            '/catalog/view/theme/canary/css/style-1480021565512.css',
-            '/catalog/view/theme/canary/stylesheet/stacktable/stacktable.css',
-            '/catalog/view/theme/canary/css/w_style-1480414222864.css',
-            '/catalog/view/theme/canary/css/desktop-1480446257643.css'
+//            '/catalog/view/theme/canary/css/style-1480021565512.css',
+            '/catalog/view/theme/canary/stylesheet/stacktable/stylesheet-1457910874844.css',
+//            '/catalog/view/theme/canary/css/w_style-1480414222864.css',
+//            '/catalog/view/theme/canary/css/desktop-1480446257643.css'
         );
         $string = '';
 
