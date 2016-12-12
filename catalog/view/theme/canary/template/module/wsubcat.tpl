@@ -193,10 +193,10 @@
                                     <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[6]['href']?>&filter=7"> <i class="own-b own-b-gemstone-fashion-necklace"></i>*-->
                                     <br>Gemstone <br>pendants
                                 </label>
-                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[7]['cat_id']):?> active <?endif?> brackets">
-                                    <a href="<?php echo $wsubcategory[7]['href']?>"><i class="own-b own-b-12"></i></a>
+                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[10]['cat_id']):?> active <?endif?> brackets">
+                                    <a href="<?php echo $wsubcategory[10]['href']?>"><i class="own-b own-b-12"></i></a>
                                     <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[7]['href']?>"> <i class="own-b own-b-12"></i>*-->
-                                    <br>Fashion <br>necklaces
+                                    <br>Diamond <br>necklaces
                                 </label>
                                 <label class="btn btn-filter <?php if ($child_id == $wsubcategory[8]['cat_id']):?> active <?endif?> brackets">
                                     <a href="<?php echo $wsubcategory[8]['href']?>"><i class="own-b own-b-diamond-bracelet"></i></a>
