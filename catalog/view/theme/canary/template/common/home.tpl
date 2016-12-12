@@ -239,9 +239,6 @@
                     <div class="title">Necklaces</div>
                     <ul class="style-br-long ul-first-drop fine-jewerly-ul">
                         <li>
-                            <a href="<?php echo $categories[3]['children'][5]['href']?>" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-14" ></i></span> <span><?php echo $categories[3]['children'][5]['name']?></span></a>
-                        </li>
-                        <li>
                             <a href="<?php echo $categories[3]['children'][6]['href']?>&filter=7" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-12" ></i></span> <span><?php echo $categories[3]['children'][6]['name']?></span></a>
                         </li>
                         <li>

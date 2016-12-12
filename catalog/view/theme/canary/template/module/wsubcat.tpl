@@ -183,11 +183,6 @@
                                     <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[4]['href']?>&filter=7"> <i class="own-b own-b-15"></i>*-->
                                     <br>Gemstone <br>rings
                                 </label>
-                                <label class="btn btn-filter <?php if ($child_id == $wsubcategory[5]['cat_id']):?> active <?endif?> brackets">
-                                    <a href="<?php echo $wsubcategory[5]['href']?>"><i class="own-b own-b-14"></i></a>
-                                    <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[5]['href']?>"> <i class="own-b own-b-14"></i>*-->
-                                    <br>Diamond <br>pendants
-                                </label>
                                 <label class="btn btn-filter <?php if ($child_id == $wsubcategory[6]['cat_id']):?> active <?endif?> brackets">
                                     <a href="<?php echo $wsubcategory[6]['href']?>&filter=7"><i class="own-b own-b-gemstone-fashion-necklace"></i></a>
                                     <!--*<input type="radio" name="fine_jewerly" class="w-wsubcat" data-href="<?php echo $wsubcategory[6]['href']?>&filter=7"> <i class="own-b own-b-gemstone-fashion-necklace"></i>*-->
