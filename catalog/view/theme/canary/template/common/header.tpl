@@ -33,8 +33,8 @@
     <style media="print" rel="stylesheet" type="text/css">
         .w-bredcrum-border, .static-page .w-blocs-complects, .product-need-help, .product-advantages, .include-section, .similar-section, footer, header {  display: none  }
     </style>
-    <script async="async" type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
-    <script async="async" type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/javascript/jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/catalog/view/theme/canary/vendor/jquery-ui/jquery-ui.min.js"></script>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <?php foreach ($analytics as $analytic) { ?>
