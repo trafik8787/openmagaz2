@@ -157,7 +157,7 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td><span>L/W RATIO: 1.01</span></td>
+                                                    <td><span>L/W RATIO: <?=round($product->response->body->diamond->meas_length/$product->response->body->diamond->meas_width, 2)?></span></td>
                                                     <td><span>DEPTH %: <?=$product->response->body->diamond->depth_percent?></span></td>
                                                 </tr>
                                                 <tr>
