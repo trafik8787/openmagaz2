@@ -798,6 +798,16 @@ section.containaer-home > .row {margin-left: 0;margin-right: 0;}
   background-color: #1C3061;
 }
 
+.top-menu-b > li.active {
+    background-color: #1C3061;
+}
+
+.top-menu-b > li.active a span {
+    font-weight: bold;
+    font-size: 14.7px;
+}
+
+
 .top-menu-b > li.triangle {
   position: relative; }
 .top-menu-b > li.triangle > a {
@@ -832,7 +842,7 @@ input:focus{
   padding-right: 13px;
   display: inline-block;
   position: relative;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 
 .top-menu-b > li.cart-bl.open .cart-basket {
@@ -5191,6 +5201,7 @@ footer > section .row {
   z-index: 1;
   position: relative;
   text-align: center;
+  cursor: pointer;
   vertical-align: bottom; }
 .slider-lables li:after {
   width: 1px;

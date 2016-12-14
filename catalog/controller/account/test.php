@@ -36,7 +36,11 @@ class ControllerAccountTest extends Controller {
     }
 
     public function test() {
-        $this->load->controller('email/email/email_tehnic', array('beliar87@mail.ru', 'sdfsdfsfsdfsfws', 'qweqweqweqw qweqweqweqwe qweqwe qw'));
+        //$this->load->controller('email/email/email_tehnic', array('beliar87@mail.ru', 'sdfsdfsfsdfsfws', 'qweqweqweqw qweqweqweqwe qweqwe qw'));
+    }
+
+    public function test2() {
+        dd(date('F d'));
     }
 
 }

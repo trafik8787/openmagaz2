@@ -69,12 +69,12 @@
                     <div class="filter-col-options">
                         <div class="filter-block filter1">
                             <div id="w-slider-cut"></div>
-                            <div class="wrapper-table">
+                            <div class="wrapper-table w-slider-cut-li">
                                 <ul class="slider-lables">
-                                    <li title="slightly colored">Fair</li>
-                                    <li title="near colorless">Good</li>
-                                    <li title="near colorless">Very Good</li>
-                                    <li title="near colorless">Excellent</li>
+                                    <li title="slightly colored" data-item="0">Fair</li>
+                                    <li title="near colorless" data-item="1">Good</li>
+                                    <li title="near colorless" data-item="2">Very Good</li>
+                                    <li title="near colorless" data-item="3">Excellent</li>
                                 </ul>
                             </div>
                         </div>
@@ -87,19 +87,18 @@
                     <div class="filter-col-options">
                         <div class="filter-block filter1">
                             <div id="w-slider-color"></div>
-                            <div class="wrapper-table">
+                            <div class="wrapper-table w-slider-color-li">
                                 <ul class="slider-lables">
-                                    <li title="slightly colored">M</li>
-                                    <li title="near colorless">L</li>
-
-                                    <li title="near colorless">K</li>
-                                    <li title="near colorless">J</li>
-                                    <li title="near colorless">I</li>
-                                    <li title="near colorless">H</li>
-                                    <li title="near colorless">G</li>
-                                    <li title="colorless">F</li>
-                                    <li title="colorless">E</li>
-                                    <li title="colorless">D</li>
+                                    <li title="slightly colored" data-item="0">M</li>
+                                    <li title="near colorless" data-item="1">L</li>
+                                    <li title="near colorless" data-item="2">K</li>
+                                    <li title="near colorless" data-item="3">J</li>
+                                    <li title="near colorless" data-item="4">I</li>
+                                    <li title="near colorless" data-item="5">H</li>
+                                    <li title="near colorless" data-item="6">G</li>
+                                    <li title="colorless" data-item="7">F</li>
+                                    <li title="colorless" data-item="8">E</li>
+                                    <li title="colorless" data-item="9">D</li>
                                 </ul>
                             </div>
                         </div>
@@ -124,16 +123,16 @@
                     <div class="filter-col-options">
                         <div class="filter-block filter1">
                             <div id="w-slider-clarity"></div>
-                            <div class="wrapper-table">
+                            <div class="wrapper-table w-slider-clarity-li">
                                 <ul class="slider-lables">
-                                    <li title="slightly colored">I1</li>
-                                    <li title="near colorless">SI2</li>
-                                    <li title="near colorless">SI1</li>
-                                    <li title="near colorless">VS2</li>
-                                    <li title="near colorless">VS1</li>
-                                    <li title="colorless">VVS2</li>
-                                    <li title="colorless">VVS1</li>
-                                    <li title="colorless">IF</li>
+                                    <li title="slightly colored" data-item="0">I1</li>
+                                    <li title="near colorless" data-item="1">SI2</li>
+                                    <li title="near colorless" data-item="2">SI1</li>
+                                    <li title="near colorless" data-item="3">VS2</li>
+                                    <li title="near colorless" data-item="4">VS1</li>
+                                    <li title="colorless" data-item="5">VVS2</li>
+                                    <li title="colorless" data-item="6">VVS1</li>
+                                    <li title="colorless" data-item="7">IF</li>
                                 </ul>
                             </div>
                         </div>
@@ -824,7 +823,6 @@
 
 
 
-
         var $w_slider_color = $('#w-slider-color').slider({
             min: 0,
             max: 10,
@@ -849,7 +847,6 @@
 
             }
         });
-
 
 
         var $w_slider_clarity = $('#w-slider-clarity').slider({
@@ -941,6 +938,18 @@
             $w_slider_carat.slider("values", 1, $(this).val());
         });
 
+
+        $(document).on('click', '.w-slider-color-li li', function () {
+            $w_slider_color.slider("values", 0, parseInt($(this).data('item')));
+        });
+
+        $(document).on('click', '.w-slider-clarity-li li', function () {
+            $w_slider_clarity.slider("values", 0, parseInt($(this).data('item')));
+        });
+
+        $(document).on('click', '.w-slider-cut-li li', function () {
+            $w_slider_cut.slider("values", 0, parseInt($(this).data('item')));
+        });
 
         $('.w-input-price-from').val(numeral($get_price_from).format('$0,0'));
         $('.w-input-price-to').val(numeral($get_price_to).format('$0,0'));

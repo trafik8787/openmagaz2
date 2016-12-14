@@ -84,14 +84,10 @@
 
                     <?endforeach?>
 
-                    <tr class="pagination-tr">
-                        <td colspan="8">
-                            <div class="w-pagination-diamonts text-center"><?=isset($pagination)? $pagination : ''?></div>
-                        </td>
-                    </tr>
 
                     </tbody>
                 </table>
+                <div><div class="w-pagination-diamonts text-center"><?=isset($pagination)? $pagination : ''?></div></div>
             </div>
             <div class="diamond-catalog-right">
 

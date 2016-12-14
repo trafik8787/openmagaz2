@@ -7,7 +7,7 @@
             <div id="product-advantages-next" class="small-controls-right"></div>
         </div>
     </div>
-    <div class="product-advantages-list clearfix">
+    <div class="product-advantages-list clearfix" style="display: none;">
         <div class="product-advantages-col">
             <a href="/about-us#free-and-fast-shipping">
                 <div class="product-advantages-item">

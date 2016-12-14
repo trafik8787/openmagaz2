@@ -31,7 +31,9 @@ $(document).ready(function() {
     //    // prevSelector: '.icons-prev_slider_icon'
     //
     //});
-
+    $('.one-product-slider .slider-for').show();
+    $('.one-product-slider .slider-nav').show();
+    $('.product-advantages-list').show();
 
     $(document).on('click', '.button-send-hit', function () {
         $.ajax({

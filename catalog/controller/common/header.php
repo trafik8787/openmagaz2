@@ -130,6 +130,12 @@ class ControllerCommonHeader extends Controller {
 
         $data['categories'] = $categories2;
 
+        if (!empty($this->request->get['_route_'])) {
+            $data['_route_'] = $this->request->get['_route_'];
+        } else {
+            $data['_route_'] = null;
+        }
+
         if (!empty($this->request->get['path'])) {
             $data['path'] = $this->request->get['path'];
         } else {
@@ -207,8 +213,8 @@ class ControllerCommonHeader extends Controller {
             '/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css',
             '/catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css',
             '/catalog/view/theme/canary/css/easydropdown.css',
-//            '/catalog/view/theme/canary/css/style-1480021565512.css',
-            '/catalog/view/theme/canary/stylesheet/stacktable/stylesheet-1457910874844.css',
+//            '/catalog/view/theme/canary/css/style-1480021565513.css',
+            //'/catalog/view/theme/canary/stylesheet/stylesheet-1457910874844.css',
 //            '/catalog/view/theme/canary/css/w_style-1480414222865.css',
 //            '/catalog/view/theme/canary/css/desktop-1480446257643.css'
         );

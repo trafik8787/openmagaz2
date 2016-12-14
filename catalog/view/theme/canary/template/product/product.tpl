@@ -31,7 +31,7 @@
             <div class="one-product clearfix">
 
                 <div class="one-product-slider hidden-xs">
-                    <div class="slider-for">
+                    <div class="slider-for" style="display: none;">
                         <?php foreach ($images as $image):?>
                         <?if (!empty($image['video'])):?>
                         <div>
@@ -45,7 +45,7 @@
                         <?endif?>
                         <?endforeach?>
                     </div>
-                    <div class="slider-nav">
+                    <div class="slider-nav" style="display: none;">
                         <?php foreach ($images as $image):?>
                         <?if (!empty($image['video'])):?>
                         <div class="wrapper-img-slider">

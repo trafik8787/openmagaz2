@@ -27,7 +27,7 @@
     </script>
     <?=$stylelink?>
     <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565512.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565513.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style-1480414222865.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop-1480446257643.css"/>
     <style media="print" rel="stylesheet" type="text/css">
@@ -52,12 +52,12 @@
         <div class="center-bl top-header clearfix">
             <div class="col-md-4 col-sm-3 block-phone-header">
                 <a href="/" class="logo w-general-category"><img src="/catalog/view/theme/canary/img/logo.png" alt="briliantcanary"></a>
-                <div class="telephone font-montserrat-regular"><span><?php echo $telephone; ?> | 24/7</span></div>
+                <div class="telephone font-montserrat-regular"><span><?php echo $telephone; ?> <span style="opacity: 0.7;">|</span> 24/7</span></div>
             </div>
             <div class="col-md-6 col-sm-7">
                 <a class="w-tel-xs" href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?> | 24/7</a>
                 <ul class="top-menu-b main-page">
-                    <li>
+                    <li <?if ($_route_ == 'login'):?>class="active"<?endif?>>
                         <?php if ($logged) { ?>
                         <a href="<?php echo $account; ?>" class="w-general-category">
                             <i class="icons-login_icon"></i>
@@ -70,7 +70,7 @@
                         </a>
                         <?php } ?>
                     </li>
-                    <li>
+                    <li <?if ($_route_ == 'wishlist'):?>class="active"<?endif?>>
                         <a href="<?php echo $wishlist; ?>" id="wishlist-total" class="w-general-category" title="<?php echo $text_wishlist; ?>">
                             <i class="icons-wishlist_icon"></i>
                             <?if (!empty($text_wishlist_count)):?>
@@ -79,7 +79,8 @@
                             <span class="span1">Wish List</span>
                         </a>
                     </li>
-                    <li><a href="/compare" id="compare-total">
+                    <li <?if ($_route_ == 'compare'):?>class="active"<?endif?>>
+                        <a href="/compare" id="compare-total">
                             <i class="icons-compare_icon"></i>
                                 <?if (!empty($count_compare)):?>
                                     <span class="w-count-circle"><?=$count_compare?></span>
