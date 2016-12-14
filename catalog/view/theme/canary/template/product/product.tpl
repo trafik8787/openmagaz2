@@ -73,7 +73,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="one-product-info" id="product">
+                <div class="one-product-info" id="product"><?//dd($category_info)?>
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-6">
                             <?if ($category_info['category_id'] != 87 AND  $category_info['category_id'] != 90  AND $category_info['category_id'] != 91 AND $category_info['category_id'] != 93 AND $category_info['category_id'] != 94):?>
