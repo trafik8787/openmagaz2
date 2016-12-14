@@ -65,7 +65,7 @@
                                data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                         </li>
                         <li><a href="#" class="it-list-link" data-toggle="modal" data-target="#ModalMailHit"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
-                        <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
+                        <li><a href="#" onclick="compare.add('<?php echo $product_id; ?>');" class="it-list-link"><i class="it-ico it-ico-star"></i> Compare</a></li>
                         <li><a href="#" onclick="window.print();" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                         <li>
                             <!-- space for chare -->
@@ -128,7 +128,7 @@
                                    title="" data-original-title="Add to Wish List"><i class="it-ico it-ico-heart"></i> Wish It</a>
                             </li>
                             <li><a href="#" class="it-list-link" data-toggle="modal" data-target="#ModalMailHit"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
-                            <li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>
+                            <li><a href="#" onclick="compare.add('<?php echo $product_id; ?>');" class="it-list-link"><i class="it-ico it-ico-star"></i> Compare</a></li>
                             <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                             <li>
                                 <!-- space for chare -->

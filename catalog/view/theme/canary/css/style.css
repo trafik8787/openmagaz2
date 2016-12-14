@@ -5377,13 +5377,21 @@ footer > section .row {
 .list-product .filter-product-line .view-product .btn-view {
   margin: -3px 0;
   margin-left: 5px;
-  padding: 9px 13px;
+  padding: 8px 13px;
   color: #b7b7b7;
   border: 1px solid white;
   background-color: transparent;
   -webkit-border-radius:3px;
   -moz-border-radius:3px;
   border-radius:3px;
+}
+.fa-list {
+    font-size: 19px;
+    color: #fff;
+}
+.fa-th-large {
+    font-size: 18px;
+    color: #fff;
 }
 .list-ico{
   width: 16px;

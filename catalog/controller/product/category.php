@@ -96,6 +96,8 @@ class ControllerProductCategory extends Controller {
 			'href' => $this->url->link('common/home')
 		);
 
+        $data['count_compare'] = isset($this->session->data['compare']) ? count($this->session->data['compare']): null;
+
 		if (isset($this->request->get['path'])) {
 			$url = '';
 
