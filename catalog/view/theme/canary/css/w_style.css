@@ -3053,7 +3053,7 @@ text-align: left;
 }
 
 .diamond-catalog-right-container {
-    padding: 25px 5px 15px;
+    padding: 17px 5px 4px;
 }
 
 .diamond-catalog-right-container .rating {
@@ -3114,11 +3114,11 @@ text-align: left;
 
 .right-stone-details {
     max-width: 260px;
-    margin: 25px auto 0;
+    margin: 11px auto 0;
 }
 
 .right-stone-details p {
-    margin: 0 0 10px;
+    margin: 0 0 7px;
 }
 
 .right-stone-details strong {
