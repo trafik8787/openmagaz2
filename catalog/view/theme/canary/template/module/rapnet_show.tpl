@@ -87,13 +87,12 @@
 
                     </tbody>
                 </table>
-                <div><div class="w-pagination-diamonts text-center"><?=isset($pagination)? $pagination : ''?></div></div>
             </div>
             <div class="diamond-catalog-right">
 
             </div>
         </div>
-
+        <div><div class="w-pagination-diamonts text-center"><?=isset($pagination)? $pagination : ''?></div></div>
         <?=$blok_need_help?>
         <!--*<p class="diamonds-catalog-star-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, repellendus.</p>*-->
 
