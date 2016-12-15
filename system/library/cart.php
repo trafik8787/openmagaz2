@@ -248,7 +248,7 @@ class Cart {
                 } else {
                     $recurring = false;
                 }
-
+                //dd($product_query->row);
                 $this->product_data[] = array(
                     'cart_id' => $cart['cart_id'],
                     'category_id' => !empty($cart['category_id']) ? $cart['category_id'] : '',
@@ -275,6 +275,7 @@ class Cart {
                     'width' => $product_query->row['width'],
                     'height' => $product_query->row['height'],
                     'length_class_id' => $product_query->row['length_class_id'],
+                    'manufacturer_id' => $product_query->row['manufacturer_id'],
                     'recurring' => $recurring,
                     'complect' => $cart['complect'],
                 );

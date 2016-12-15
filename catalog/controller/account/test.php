@@ -40,7 +40,10 @@ class ControllerAccountTest extends Controller {
     }
 
     public function test2() {
-        dd(date('F d'));
+        $date = strtotime('+7 days');
+        dd(date('F d', $date));
+
+        dd(strftime("%A", strtotime($date)));
     }
 
 }

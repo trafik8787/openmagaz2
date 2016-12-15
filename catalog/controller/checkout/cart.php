@@ -250,7 +250,8 @@ class ControllerCheckoutCart extends Controller {
                         'reward' => ($product['reward'] ? sprintf($this->language->get('text_points'), $product['reward']) : ''),
                         'price' => $price,
                         'total' => $total,
-                        'href' => $href
+                        'href' => $href,
+                        'manufacturer_id' => $product['manufacturer_id'],
                     );
 
                 }
@@ -337,6 +338,12 @@ class ControllerCheckoutCart extends Controller {
 					$data[$extension] = $this->load->controller('total/' . $extension);
 				}
 			}
+
+
+            $date = strtotime('+14 days');
+            //месяц и день
+            $data['mont_dey'] = date('F, d', $date);
+            $data['dey_ned'] = strftime("%A", strtotime($date));
 
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');

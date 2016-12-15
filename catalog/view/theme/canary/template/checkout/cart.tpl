@@ -90,7 +90,7 @@
                 </div>
                 <div class="wrapper-cart-box">
 
-
+                    <?//dd($products)?>
                     <form action="<?php echo $action; ?>" method="post" class="w-form-cart-sub" enctype="multipart/form-data">
 
                         <?php foreach ($products as $product) :?>
@@ -257,8 +257,16 @@
                 <div class="cards-box clearfix">
                     <div class="text">
                         <div class="title">Shipping Information</div>
-                        Receive on: Tuesday, September, 27<br/>
-                        Via FedEx Priority Overnight <sup>®</sup>
+                        Receive by: <?=$dey_ned?>, <?=$mont_dey?><br/>
+                        <?foreach ($totals as $row):?>
+                        <?if ($row['title'] == 'Total'):?>
+                        <?if ($row['value'] > 500):?>
+                        FedEx Priority Overnight &reg;
+                        <?else:?>
+                        FedEx Ground &reg;
+                        <?endif?>
+                        <?endif?>
+                        <?endforeach?>
                     </div>
                     <div class="all-cards clearfix">
                         <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card1.png" alt="card"></a>
