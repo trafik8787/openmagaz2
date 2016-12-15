@@ -823,13 +823,15 @@
 
 <script type="text/javascript">
 
+    $(document).ready(function () {
+        $('.one-product-slider .slider-for').show();
+        $('.one-product-slider .slider-nav').show();
+        $('.product-advantages-list').show();
+    });
 
     $(document).on('click', '#write-review', function () {
         $('#write-review-form').collapse('toggle');
     });
-
-
-
 
 
     $('select[name=\'recurring_id\'], input[name="quantity"]').change(function () {
