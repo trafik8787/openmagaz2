@@ -100,9 +100,9 @@
                                                 <td>Fedex Shipping:</td>
                                                 <td>
                                                     <?if ($row['value'] > 500):?>
-                                                    FedEx Priority Overnight &reg;
+                                                    FedEx Priority Overnight &reg;: Free
                                                     <?else:?>
-                                                    FedEx Ground &reg;
+                                                    FedEx Ground &reg;: Free
                                                     <?endif?>
                                                 </td>
                                             </tr>
@@ -120,15 +120,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
 
 
                     <div class="col-md-8">

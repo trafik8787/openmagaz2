@@ -8,7 +8,7 @@
                     <div class="filter-col wide-title">
                         <div class="filter-col-title">Style</div>
                         <div class="filter-col-options">
-                            <div class=" btn-group-filter box-color gemstones-box rings-box" >
+                            <div class=" btn-group-filter box-color gemstones-box rings-box engagament-submeny" >
                                 <div class="all-line-filter">
                                     <a href="/engagement-rings" class="active">All</a>
                                 </div>
@@ -39,13 +39,13 @@
                                             break;
                                     }
                                 ?>
-                                <label class="btn btn-filter <?php if ($child_id == $row['cat_id']):?> active <?endif?> brackets">
-                                    <a href="<?php echo $row['href']?>"><i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i></a>
+                                <a href="<?php echo $row['href']?>"><label class="btn btn-filter <?php if ($child_id == $row['cat_id']):?> active <?endif?> brackets">
+                                    <span class="engagament-span"><i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i></span>
 
                                     <!--*<input type="radio" class="w-wsubcat" data-href="<?php echo $row['href']?>"> <i class="brilliant-ico brilliant-s<?=$brilliant_s?>"></i>*-->
                                     <br>
-                                    <a href="<?php echo $row['href']?>"><?php echo $row['name']?></a>
-                                </label>
+                                    <span class="engagament-span"><?php echo $row['name']?></span>
+                                </label></a>
                                 <?endforeach?>
                             </div>
                         </div>

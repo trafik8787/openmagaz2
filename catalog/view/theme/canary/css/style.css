@@ -8529,7 +8529,7 @@ footer > section .row {
   width: 100%;
 }
 .total-cart-pay .all-numbers{
-  width: 340px;
+  width: 390px;
   float: right;
 }
 
@@ -8743,14 +8743,14 @@ footer > section .row {
 }
 
 .scheckout-page .box-order .wrapper-t{
-  padding: 0 30px;
+  padding: 0 6px;
 }
 
 .scheckout-page .box-order table td{
   padding-bottom: 5px;
 }
 .scheckout-page .box-order table td:nth-child(2){
-  font-size: 17px;
+  font-size: 13px;
   font-family: "Montserrat-Regular";
 }
 .scheckout-page .box-order table .total{

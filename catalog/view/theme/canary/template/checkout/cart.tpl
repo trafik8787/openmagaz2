@@ -110,9 +110,9 @@
                                         SKU: <?=$product[0]['sku']?> <?foreach ($product[0]['option'] as $row):?>
                                         | <?=$row['name']?> <?=$row['value']?>
                                         <?endforeach?>
-                                        <!--*<label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>*-->
+                                        <label class="catCheck1" style="border-bottom: 1px dashed #000080;padding-left: 0;margin-left: 50px;cursor: pointer;">Would you like to engrave your ring? It's FREE!</label>
+                                        <input type="text" name="engrave" id="newGroup" style="display:none" />
                                         <p>SKU: <?=$product[1]['sku']?></p>
-                                        
                                     </div>
                                     <div class="number-block">
                                         <div class="price"><?=$product[0]['total']?></div><br/>
@@ -134,7 +134,8 @@
                                         <?foreach ($product['option'] as $row):?>
                                             | <?=$row['name']?> <?=$row['value']?>
                                         <?endforeach?>
-                                        <!--*<label for="catCheck1"><input type="checkbox" id="catCheck1">Would you like to engrave your ring? It's FREE!</label>*-->
+                                        <label class="catCheck1" style="border-bottom: 1px dashed #000080;padding-left: 0;margin-left: 50px;cursor: pointer;">Would you like to engrave your ring? It's FREE!</label>
+                                        <input type="text" name="engrave" id="newGroup" style="display:none" />
                                     </div>
                                     <div class="number-block">
                                         <?if($product['category_id'] != 94 AND $product['category_id'] != 68 AND $product['category_id'] != ''):?>
@@ -213,9 +214,9 @@
                                         <td>Fedex Shipping:</td>
                                         <td>
                                             <?if ($row['value'] > 500):?>
-                                            FedEx Priority Overnight &reg;
+                                            FedEx Priority Overnight &reg;: Free
                                             <?else:?>
-                                            FedEx Ground &reg;
+                                            FedEx Ground &reg;: Free
                                             <?endif?>
                                         </td>
                                     </tr>
@@ -261,9 +262,9 @@
                         <?foreach ($totals as $row):?>
                         <?if ($row['title'] == 'Total'):?>
                         <?if ($row['value'] > 500):?>
-                        FedEx Priority Overnight &reg;
+                        FedEx Priority Overnight &reg;: Free
                         <?else:?>
-                        FedEx Ground &reg;
+                        FedEx Ground &reg;: Free
                         <?endif?>
                         <?endif?>
                         <?endforeach?>
@@ -312,6 +313,10 @@
        $(document).on('change', '.quantity-input', function () {
             $('.w-form-cart-sub').submit();
        });
+
+        $(document).on('click', '.catCheck1', function () {
+            $("#newGroup").toggle('slow');
+        });
 
 //        $(document).on('click', '.remove-ico', function () {
 //            $(this).closest('.one-line').detach();

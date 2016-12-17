@@ -3627,6 +3627,14 @@ text-align: left;
     white-space: normal;
 }
 
+.filter-col-options .btn-filter .engagament-span {
+    line-height: 0;
+}
+
+.engagament-submeny > a {
+    color: black;
+}
+
 .filter-col-options .btn-filter {
     width: 59px;
 }
@@ -4500,6 +4508,7 @@ text-align: left;
 
     .diamond-catalog-right-inner {
         max-height: 100%;
+        overflow: hidden;
     }
 
     .diamond-catalog-table thead td {
@@ -4737,6 +4746,7 @@ text-align: left;
 
     .diamond-catalog {
         margin-bottom: 25px;
+        height: 750px;
     }
 
     .w-product-name-h1 {
