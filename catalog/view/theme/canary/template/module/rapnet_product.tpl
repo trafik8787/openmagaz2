@@ -386,7 +386,7 @@
                 </div>
                 <div class="modal-footer">
                     <span>
-                        YOUR EMAIL ADDRESS WILL ONLY BE USED TO LET YOUR FRIEND KNOW WHO SENT THE EMAIL, UNLESS YOU CHOOSE TO RECEIVE OFFERS AND UPDATES FROM BRILLIANT CANARY. VIEW OUR <a href="/privacy">PRIVACY POLICY</a>.
+                        YOUR EMAIL ADDRESS WILL ONLY BE USED TO LET YOUR FRIEND KNOW WHO SENT THE EMAIL, UNLESS YOU CHOOSE TO RECEIVE OFFERS AND UPDATES FROM BRILLIANT CANARY. VIEW OUR <a href="/information/policies/privacy-policy">PRIVACY POLICY</a>.
                     </span>
                 </div>
             </div>

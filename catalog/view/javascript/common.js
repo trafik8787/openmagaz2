@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 	/* Search */
 	$('#search input[name=\'search\']').parent().find('button, a').on('click', function() {
-		url = '/index.php?route=product/search';
+		url = '/search';
 
 		var value = $('header input[name=\'search\']').val();
 
@@ -64,7 +64,7 @@ $(document).ready(function() {
 	});
 
     $('.w-page-search button').on('click', function() {
-		url = '/index.php?route=product/search';
+		url = '/search';
 
 		var value = $('.w-page-search input[name=\'search\']').val();
 

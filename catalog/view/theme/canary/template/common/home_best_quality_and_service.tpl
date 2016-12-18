@@ -9,7 +9,7 @@
             </div>
             <div class="row w-best-quality">
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <a href="/about-us#free-and-fast-shipping">
+                    <a href="/company#free-and-fast-shipping">
                         <div class="alert alert-info">
                             <div class="media">
                                         <span class="pull-left">
@@ -25,7 +25,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <a href="/about-us#no-hassle-returns">
+                    <a href="/company#no-hassle-returns">
                         <div class="alert alert-info">
                             <div class="media">
                                         <span class="pull-left">
@@ -41,7 +41,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <a href="/about-us#free-engraving">
+                    <a href="/company#free-engraving">
                         <div class="alert alert-info">
                             <div class="media">
                                         <span class="pull-left">
@@ -57,7 +57,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <a href="/about-us#helping-others">
+                    <a href="/company#helping-others">
                         <div class="alert alert-info">
                             <div class="media">
                                 <span class="pull-left">

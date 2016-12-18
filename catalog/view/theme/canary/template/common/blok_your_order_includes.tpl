@@ -5,7 +5,7 @@
             <div class="icons-quality_service_icon"></div>
         </div>
         <div class="p-include-list clearfix">
-            <a href="/about-us#beautiful-packaging" class="p-include-item">
+            <a href="/company#beautiful-packaging" class="p-include-item">
                 <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-1.jpg" alt=""></span>
                 <span class="p-include-title">Beautiful Packaging</span>
                 <span class="p-include-dot"></span>
@@ -14,7 +14,7 @@
                             and Gift Wrapping
                         </span>
             </a>
-            <a href="/about-us#lifetime-warranty" class="p-include-item">
+            <a href="/company#lifetime-warranty" class="p-include-item">
                 <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-2.jpg" alt=""></span>
                 <span class="p-include-title">Lifetime Warranty</span>
                 <span class="p-include-dot"></span>
@@ -23,7 +23,7 @@
                             Our Jewelry
                         </span>
             </a>
-            <a href="/about-us#free-engraving" class="p-include-item">
+            <a href="/company#free-engraving" class="p-include-item">
                 <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-3.jpg" alt=""></span>
                 <span class="p-include-title">Free Engraving</span>
                 <span class="p-include-dot"></span>
@@ -33,7 +33,7 @@
                         </span>
             </a>
             <?if (isset($diamond)):?>
-            <a href="/about-us#free-appraisal" class="p-include-item">
+            <a href="/company#free-appraisal" class="p-include-item">
                 <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-4.jpg" alt=""></span>
                 <span class="p-include-title">Diamond Certificate</span>
                 <span class="p-include-dot"></span>
@@ -43,7 +43,7 @@
                             </span>
             </a>
             <?else:?>
-            <a href="/about-us#free-appraisal" class="p-include-item">
+            <a href="/company#free-appraisal" class="p-include-item">
                 <span class="p-include-img"><img src="/catalog/view/theme/canary/img/p-include-5.png" alt=""></span>
                 <span class="p-include-title">Free Appraisal</span>
                 <span class="p-include-dot"></span>

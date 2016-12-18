@@ -308,7 +308,7 @@
                                     <div class="faq-answer-block">
                                         <div class="faq-answer-block-close">X</div>
                                         <div class="answer-block-question">Is my personal information protected?</div>
-                                        <p>Yes!  Please review our  <a href="/privacy">Privacy Policy</a></p>
+                                        <p>Yes!  Please review our  <a href="/information/policies/privacy-policy">Privacy Policy</a></p>
                                     </div>
                                 </li>
                                 <li>

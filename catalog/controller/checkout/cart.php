@@ -251,7 +251,7 @@ class ControllerCheckoutCart extends Controller {
                         'price' => $price,
                         'total' => $total,
                         'href' => $href,
-                        'manufacturer_id' => $product['manufacturer_id'],
+                        'manufacturer_id' => !empty($product['manufacturer_id']) ? $product['manufacturer_id'] : 0,
                     );
 
                 }

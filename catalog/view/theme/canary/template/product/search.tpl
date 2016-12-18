@@ -178,7 +178,7 @@
 <script type="text/javascript">
 $('#button-search').on('click', function() {
 
-	url = 'index.php?route=product/search';
+	url = '/search';
 
 	var search = $('#content input[name=\'search\']').prop('value');
 

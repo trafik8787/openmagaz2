@@ -21,8 +21,13 @@ class ControllerCommonSeoUrl extends Controller {
         'checkout/checkout' => 'shop-checkout',
         'product/search' => 'search',
         'account/forgotten' => 'account/forgotten',
-        'information/about_us' => 'about-us',
+        'information/about_us' => 'company',
         'account/unsubscribe' => 'unsubscribe',
+        'information/information/privacyPolicy' => 'information/policies/privacy-policy',
+        'information/information/TermsConditions' => 'information/policies/terms-conditions',
+        'information/information/CookiePolicy' => 'information/policies/cookie-policy',
+        'information/information/ReturnPolicy' => 'information/policies/return-policy',
+        'information/information/DeliveryPolicy' => 'information/policies/delivery-policy'
     );
 
 	public function index() {

@@ -9,14 +9,14 @@
     </div>
     <div class="product-advantages-list clearfix" style="display: none;">
         <div class="product-advantages-col">
-            <a href="/about-us#free-and-fast-shipping">
+            <a href="/company#free-and-fast-shipping">
                 <div class="product-advantages-item">
                     <div class="product-advantages-item-img"><img
                                 src="/catalog/view/theme/canary/img/p-advantage-1.png" alt=""></div>
                     <div class="product-advantages-item-text">Free and fast Shipping</div>
                 </div>
             </a>
-            <a href="/about-us#no-hassle-returns">
+            <a href="/company#no-hassle-returns">
                 <div class="product-advantages-item">
                     <div class="product-advantages-item-img"><img
                                 src="/catalog/view/theme/canary/img/p-advantage-3.png" alt=""></div>
@@ -27,14 +27,14 @@
             </a>
         </div>
         <div class="product-advantages-col">
-            <a href="/about-us#no-hassle-returns">
+            <a href="/company#no-hassle-returns">
                 <div class="product-advantages-item">
                     <div class="product-advantages-item-img"><img
                                 src="/catalog/view/theme/canary/img/p-advantage-2.png" alt=""></div>
                     <div class="product-advantages-item-text">No Hassle Returns</div>
                 </div>
             </a>
-            <a href="/about-us#helping-others">
+            <a href="/company#helping-others">
                 <div class="product-advantages-item">
                     <div class="product-advantages-item-img"><img
                                 src="/catalog/view/theme/canary/img/p-advantage-4.png" alt=""></div>
@@ -43,14 +43,14 @@
             </a>
         </div>
         <div class="product-advantages-col">
-            <a href="/about-us#lifetime-warranty">
+            <a href="/company#lifetime-warranty">
                 <div class="product-advantages-item">
                     <div class="product-advantages-item-img"><img
                                 src="/catalog/view/theme/canary/img/p-advantage-5.png" alt=""></div>
                     <div class="product-advantages-item-text">Made in USA</div>
                 </div>
             </a>
-            <a href="/about-us#free-engraving">
+            <a href="/company#free-engraving">
                 <div class="product-advantages-item">
                     <div class="product-advantages-item-img"><img
                                 src="/catalog/view/theme/canary/img/p-advantage-6.png" alt=""></div>
@@ -59,14 +59,14 @@
             </a>
         </div>
         <div class="product-advantages-col">
-            <a href="/about-us#free-appraisal">
+            <a href="/company#free-appraisal">
                 <div class="product-advantages-item">
                     <div class="product-advantages-item-img"><img
                                 src="/catalog/view/theme/canary/img/p-advantage-7.png" alt=""></div>
                     <div class="product-advantages-item-text">Free Appraisal</div>
                 </div>
             </a>
-            <a href="/about-us#military-discount">
+            <a href="/company#military-discount">
                 <div class="product-advantages-item">
                     <div class="product-advantages-item-img"><img
                                 src="/catalog/view/theme/canary/img/p-advantage-8.png" alt=""></div>

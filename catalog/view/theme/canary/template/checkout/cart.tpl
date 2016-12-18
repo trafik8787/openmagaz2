@@ -134,8 +134,10 @@
                                         <?foreach ($product['option'] as $row):?>
                                             | <?=$row['name']?> <?=$row['value']?>
                                         <?endforeach?>
-                                        <label class="catCheck1" style="border-bottom: 1px dashed #000080;padding-left: 0;margin-left: 50px;cursor: pointer;">Would you like to engrave your ring? It's FREE!</label>
-                                        <input type="text" name="engrave" id="newGroup" style="display:none" />
+                                        <?if ($product['diamond'] == 0):?>
+                                            <label class="catCheck1" style="border-bottom: 1px dashed #000080;padding-left: 0;margin-left: 50px;cursor: pointer;">Would you like to engrave your ring? It's FREE!</label>
+                                            <input type="text" name="engrave" id="newGroup" style="display:none" />
+                                        <?endif?>
                                     </div>
                                     <div class="number-block">
                                         <?if($product['category_id'] != 94 AND $product['category_id'] != 68 AND $product['category_id'] != ''):?>

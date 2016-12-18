@@ -144,7 +144,7 @@
                                 <div id="collapse1" class="panel-collapse collapse">
                                     <div class="panel-body">
                                         <ul>
-                                            <li><a href="/about-us">About Us</a></li>
+                                            <li><a href="/company">About Us</a></li>
                                             <?php foreach ($informations as $information):?>
                                                 <?if ($information['top'] == 1):?>
                                                     <li><a href="<?php echo $information['href']; ?>" class="w-general-category"><?php echo $information['title']; ?></a></li>
@@ -207,10 +207,10 @@
                         <div class="text-left margin-top-20 w-copirait mobile-none">
                             <p>© 2016. All rights reserved.</p>
                             <p>
-                                <a href="/privacy">Privacy Policy</a><span>|</span>
-                                <a href="/terms">Terms & Conditions</a><span>|</span>
-                                <a href="/cookie_policy">Cookie Policy</a><span>|</span>
-                                <a href="/return_policy">Return Policy</a>
+                                <a href="/information/policies/privacy-policy">Privacy Policy</a><span>|</span>
+                                <a href="/information/policies/terms-conditions">Terms & Conditions</a><span>|</span>
+                                <a href="/information/policies/cookie-policy">Cookie Policy</a><span>|</span>
+                                <a href="/information/policies/return-policy">Return Policy</a>
                             </p>
                         </div>
                     </div>
@@ -221,7 +221,9 @@
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <dl>
                                 <dt>INFORMATION</dt>
-                                <dd><a href="/about-us">About Us</a></dd>
+                                <dd><a href="/company">About Us</a></dd>
+                                <dd><a href="/information/policies/delivery-policy">Delivery Information</a></dd>
+
                                 <?php foreach ($informations as $information):?>
 
                                     <?if ($information['top'] == 1):?>
@@ -266,10 +268,10 @@
             </div>
             <div class="text-left margin-top-20 w-copirait mobile-block">
                 <p>© 2016. All rights reserved.
-                    <a href="/privacy">Privacy Policy</a><span>|</span>
-                    <a href="/terms">Terms & Conditions</a><span>|</span>
-                    <a href="/cookie_policy">Cookie Policy</a><span>|</span>
-                    <a href="/return_policy">Return Policy</a>
+                    <a href="/information/policies/privacy-policy">Privacy Policy</a><span>|</span>
+                    <a href="/information/policies/terms-conditions">Terms & Conditions</a><span>|</span>
+                    <a href="/information/policies/cookie-policy">Cookie Policy</a><span>|</span>
+                    <a href="/information/policies/return-policy">Return Policy</a>
                 </p>
             </div>
         </section>
@@ -365,7 +367,7 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/device.min.js"></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/stylesheet/stacktable/stacktable.js" ></script>
 <script type="text/javascript" src="/catalog/view/javascript/app-1479932591451.js" ></script>
-<script type="text/javascript" src="/catalog/view/javascript/common-1479080055292.js" ></script>
+<script type="text/javascript" src="/catalog/view/javascript/common-1479080055293.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.easydropdown.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
