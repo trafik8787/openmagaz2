@@ -61,21 +61,6 @@ class ControllerProductCategory extends Controller {
 
 
 
-
-        if (isset($this->request->get['sort'])) {
-			$sort = $this->request->get['sort'];
-		} else {
-			//$sort = 'p.price';
-			$sort = 'p.best_order';
-		}
-
-		if (isset($this->request->get['order'])) {
-			$order = $this->request->get['order'];
-		} else {
-            //$order = 'ASC';
-			$order = 'DESC';
-		}
-
 		if (isset($this->request->get['page'])) {
 			$page = $this->request->get['page'];
 		} else {
@@ -141,6 +126,30 @@ class ControllerProductCategory extends Controller {
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
+
+
+        $general_cat = !empty($path) ? $path : $category_id;
+
+        if (isset($this->request->get['sort'])) {
+            $sort = $this->request->get['sort'];
+        } else {
+            if ($general_cat != 82 and $general_cat != 94) {
+
+                $sort = 'p.best_order';
+            } else {
+                $sort = 'p.price';
+            }
+        }
+
+        if (isset($this->request->get['order'])) {
+            $order = $this->request->get['order'];
+        } else {
+            if ($general_cat != 82 and $general_cat != 94) {
+                $order = 'DESC';
+            } else {
+                $order = 'ASC';
+            }
+        }
 
 
 		if ($category_info) {
@@ -367,11 +376,14 @@ class ControllerProductCategory extends Controller {
 			);
 
 
-            $data['sorts'][] = array(
-                'text'  => 'Best Sellers',
-                'value' => 'p.best_order-DESC',
-                'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.best_order&order=DESC' . $url)
-            );
+            //dd($general_cat);
+            if ($general_cat != 82 and $general_cat != 94) {
+                $data['sorts'][] = array(
+                    'text' => 'Best Sellers',
+                    'value' => 'p.best_order-DESC',
+                    'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.best_order&order=DESC' . $url)
+                );
+            }
 
 			if ($this->config->get('config_review_status')) {
 				$data['sorts'][] = array(

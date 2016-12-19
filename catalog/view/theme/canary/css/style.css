@@ -1645,7 +1645,7 @@ footer > section .row {
 }
 
 .w-footer-newsletter {
-  background: url("/catalog/view/theme/canary/img/demo_new_template/backgraund-footer.jpg");
+  background: url("/catalog/view/theme/canary/img/demo_new_template/backgraund-footer2.jpg");
   background-repeat: no-repeat;
   color: #ffffff;
   height: 140px;
@@ -5716,14 +5716,14 @@ footer > section .row {
 }
 
 .wrapper-product-table.list-view .table tbody tr:before {
-  content: "";
-  position: absolute;
-  top: calc(100% + 1px);
-  left: 0;
-  width: 100%;
-  height: 7px;
-  background: url("/catalog/view/theme/canary/img/comments-shadow.png") no-repeat top;
-  background-size: contain;
+    content: "";
+    position: absolute;
+    box-shadow: 0px 1px 9px 3px #ccc;
+    height: 2px;
+    bottom: 1px;
+    z-index: -1;
+    left: 2.2%;
+    width: 95%;
 }
 .wrapper-product-table.list-view .table tbody tr .stnumber-td {
   color: #9c9a9a;

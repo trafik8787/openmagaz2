@@ -14,7 +14,7 @@
                         <?php } ?>
                     </select>
                 </div>
-                <span>Product compare (<?=$count_compare?>)</span>
+                <span>Product compare (<?=!empty($count_compare) ? $count_compare : 0?>)</span>
             </div>
             <div class="view-product">
                 <button class="list-btn btn-view" data-toggle="tooltip" data-placement="top" title="list"><i class="list-ico"></i></button>

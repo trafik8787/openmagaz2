@@ -6,6 +6,7 @@ class ControllerCommonSeoUrl extends Controller {
         'module/complect/complete_diamond' => 'complete_diamond',
         'information/faq' => 'information/faq',
         'information/contact' => 'company/contacts',
+        'information/contact/success' => 'company/contacts/success',
         'information/education' => 'information/education',
         'information/education/page_find' => 'information/education_find',
         'module/login_facebook' => 'loginfacebook',

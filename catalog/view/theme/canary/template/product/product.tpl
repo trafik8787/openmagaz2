@@ -153,14 +153,14 @@
                                             <?endif?>
                                             <?if (!empty($attribute_groups)):?>
                                             <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
-                                                <?if (!empty($row)):?>
-                                                    <tr>
+                                                <tr>
+                                                    <?if (!empty($row[0]['text'])):?>
                                                         <td><span><?=$row[0]['name']?>: <?=$row[0]['text']?></span></td>
-                                                        <?if (!empty($row[1])):?>
+                                                    <?endif?>
+                                                    <?if (!empty($row[1]['text'])):?>
                                                         <td><span><?=$row[1]['name']?>: <?=$row[1]['text']?></span></td>
-                                                        <?endif?>
-                                                    </tr>
-                                                <?endif?>
+                                                    <?endif?>
+                                                </tr>
                                             <?endforeach?>
                                             <?endif?>
 
@@ -312,12 +312,14 @@
 
                                             <?if (!empty($attribute_groups)):?>
                                                 <?foreach (array_chunk($attribute_groups[0]['attribute'], 2) as $row):?>
-                                                    <?if (!empty($row)):?>
-                                                        <tr>
+                                                    <tr>
+                                                        <?if (!empty($row[0]['text'])):?>
                                                             <td><span><?=$row[0]['name']?>: <?=$row[0]['text']?></span></td>
+                                                        <?endif?>
+                                                        <?if (!empty($row[1]['text'])):?>
                                                             <td><span><?=$row[1]['name']?>: <?=$row[1]['text']?></span></td>
-                                                        </tr>
-                                                    <?endif?>
+                                                        <?endif?>
+                                                    </tr>
                                                 <?endforeach?>
                                             <?endif?>
 
