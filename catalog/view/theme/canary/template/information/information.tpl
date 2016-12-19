@@ -7,7 +7,11 @@
                 <div class="col-md-5 col-sm-5 hidden-xs ">
                     <ul class="breadcrumbs">
                         <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+                        <?if (!empty($breadcrumb['href'])):?>
                         <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+                        <?else:?>
+                        <li><?php echo $breadcrumb['text']; ?></li>
+                        <?endif?>
                         <li>&nbsp;»&nbsp;</li>
                         <?php } ?>
                     </ul>

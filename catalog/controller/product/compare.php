@@ -34,7 +34,7 @@ class ControllerProductCompare extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('product/compare')
+			//'href' => $this->url->link('product/compare')
 		);
 
 		$data['heading_title'] = $this->language->get('heading_title');

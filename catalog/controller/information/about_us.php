@@ -17,7 +17,7 @@ class ControllerInformationAboutUs extends Controller {
         );
         $data['breadcrumbs'][] = array(
             'text' => 'About Us',
-            'href' => ''
+           // 'href' => ''
         );
 
         $this->document->setTitle('about');

@@ -221,7 +221,7 @@ class ControllerProductProduct extends Controller {
 
 			$data['breadcrumbs'][] = array(
 				'text' => $product_info['name'],
-				'href' => $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id'])
+				//'href' => $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id'])
 			);
 
 			$this->document->setTitle($product_info['meta_title']);

@@ -18,7 +18,7 @@ class ControllerInformationFaq extends Controller {
         );
         $data['breadcrumbs'][] = array(
             'text' => 'Faq',
-            'href' => $this->url->link('information/faq')
+            //'href' => $this->url->link('information/faq')
         );
 
         $this->document->setTitle('faq');

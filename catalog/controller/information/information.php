@@ -165,7 +165,7 @@ class ControllerInformationInformation extends Controller {
 
             $this->data['breadcrumbs'][] = array(
                 'text' => $information_info['title'],
-                'href' => $this->url->link('information/information', 'information_id=' .  $information_id)
+                //'href' => $this->url->link('information/information', 'information_id=' .  $information_id)
             );
 
             $this->data['heading_title'] = $information_info['title'];

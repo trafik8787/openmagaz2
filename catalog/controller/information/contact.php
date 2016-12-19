@@ -36,7 +36,7 @@ class ControllerInformationContact extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('information/contact')
+			//'href' => $this->url->link('information/contact')
 		);
 
 		$data['heading_title'] = $this->language->get('heading_title');

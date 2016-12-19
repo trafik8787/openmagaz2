@@ -53,7 +53,7 @@ class ControllerAccountWishList extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('account/wishlist')
+			//'href' => $this->url->link('account/wishlist')
 		);
 
 

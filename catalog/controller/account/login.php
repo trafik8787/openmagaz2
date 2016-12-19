@@ -114,7 +114,7 @@ class ControllerAccountLogin extends Controller {
 
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_login'),
-			'href' => $this->url->link('account/login', '', 'SSL')
+			//'href' => $this->url->link('account/login', '', 'SSL')
 		);
 
 		$data['heading_title'] = $this->language->get('heading_title');
