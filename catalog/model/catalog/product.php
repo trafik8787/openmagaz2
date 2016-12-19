@@ -459,7 +459,7 @@ class ModelCatalogProduct extends Model {
 		return $query->rows;
 	}
 
-	public function getProductRelated($product_id, $count_product = 3) {
+	public function getProductRelated($product_id, $count_product) {
 		$product_data = array();
 
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_related pr LEFT JOIN "
