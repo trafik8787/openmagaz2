@@ -25,8 +25,8 @@
                         <li><a href="<?php echo $categories[4]['href']?>"><?php echo $categories[4]['name']?></a></li>
                         <li><span>.</span></li>
                         <li><a href="<?php echo $categories[3]['href']?>"><?php echo $categories[3]['name']?></a></li>
-                        <li><span>.</span></li>
-                        <li><a href="/education">INFO</a></li>
+                        <!--*<li><span>.</span></li>*-->
+                        <!--*<li><a href="/information/education">INFO</a></li>*-->
                     </ul>
                 </div>
             </div>

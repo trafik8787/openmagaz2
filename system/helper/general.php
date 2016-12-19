@@ -351,11 +351,11 @@ function arr_primary_color ($value = null) {
 function get_baners_top_random () {
 
     $arr = array(
-        array('/image/baners-top/baner1.jpg','/about-us#free-engraving'),
-        array('/image/baners-top/baner2.jpg','/about-us#lifetime-warranty'),
-        array('/image/baners-top/baner3.jpg','/about-us#no-hassle-returns'),
-        array('/image/baners-top/baner4.jpg','/about-us#free-appraisal'),
-        array('/image/baners-top/baner5.jpg','/about-us#free-appraisal')
+        array('/image/baners-top/baner1.jpg','/company#free-engraving'),
+        array('/image/baners-top/baner2.jpg','/company#lifetime-warranty'),
+        array('/image/baners-top/baner3.jpg','/company#no-hassle-returns'),
+        array('/image/baners-top/baner4.jpg','/company#free-appraisal'),
+        array('/image/baners-top/baner5.jpg','/company#free-appraisal')
     );
     $key = array_rand($arr, 1);
 

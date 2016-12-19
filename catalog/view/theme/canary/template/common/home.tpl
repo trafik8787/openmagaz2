@@ -316,7 +316,7 @@
     <ul class="mobile-link-menu">
         <li><a href="/education">EDUCATION</a></li>
         <li><a href="/information/faq">FAQ</a></li>
-        <li><a href="/about_us">ABOUT</a></li>
+        <li><a href="/company">ABOUT</a></li>
     </ul>
 </main>
 <?php echo $footer; ?>

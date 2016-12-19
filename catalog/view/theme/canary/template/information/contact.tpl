@@ -26,7 +26,7 @@
                     <div class="wrapper-menu-stat">
                         <div class="title">INFORMATION</div>
                         <ul class="menu-block-stat">
-                            <li><a href="/about_us">About Us</a></li>
+                            <li><a href="/company">About Us</a></li>
                             <li><a href="/information/policies/delivery-policy">Delivery Information</a></li>
                             <li><a href="http://blog.brilliantcanary.com/" target="_blank">Blog</a></li>
                             <li><a href="/information/faq">FAQ</a></li>
