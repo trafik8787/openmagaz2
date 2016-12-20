@@ -90,7 +90,7 @@
                 </div>
                 <div class="wrapper-cart-box">
 
-                    <?//dd($products)?>
+                    <?dd($products)?>
                     <form action="<?php echo $action; ?>" method="post" class="w-form-cart-sub" enctype="multipart/form-data">
 
                         <?php foreach ($products as $product) :?>
@@ -134,7 +134,7 @@
                                         <?foreach ($product['option'] as $row):?>
                                             | <?=$row['name']?> <?=$row['value']?>
                                         <?endforeach?>
-                                        <?if ($product['diamond'] == 0):?>
+                                        <?if ($product['diamond'] == 0 And $product['category_id'] != 94):?>
                                             <label class="catCheck1" style="border-bottom: 1px dashed #000080;padding-left: 0;margin-left: 50px;cursor: pointer;">Would you like to engrave your ring? It's FREE!</label>
                                             <input type="text" class="w-add-engrave" name="engrave[<?php echo $product['cart_id']; ?>]" value="<?=$product['engrave']?>" <?if(empty($product['engrave'])):?> style="display:none" <?endif?> />
                                         <?endif?>
