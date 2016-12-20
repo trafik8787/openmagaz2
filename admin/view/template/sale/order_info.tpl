@@ -165,7 +165,11 @@
                 <?php } else { ?>
                 &nbsp;<small> - <?php echo $option['name']; ?>: <a href="<?php echo $option['href']; ?>"><?php echo $option['value']; ?></a></small>
                 <?php } ?>
-                <?php } ?></td>
+                <?php } ?>
+                  <?if (!empty($product['engrave'])):?>
+                    <p><b>Engrave:</b> <?=$product['engrave']?></p>
+                  <?endif?>
+              </td>
               <td class="text-left"><?php echo $product['model']; ?></td>
               <td class="text-right"><?php echo $product['quantity']; ?></td>
               <td class="text-right"><?php echo $product['price']; ?></td>

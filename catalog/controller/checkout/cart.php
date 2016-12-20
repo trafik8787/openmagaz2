@@ -178,6 +178,7 @@ class ControllerCheckoutCart extends Controller {
                 if ($product['complect'] != 0) {
 
                     $tmp_complect = array();
+                    //dd($products3_complect);
                     foreach ($products3_complect as $key => $product_rows) {
                         if ($product['complect'] == $product_rows['complect']) {
 
@@ -204,7 +205,7 @@ class ControllerCheckoutCart extends Controller {
                             } else {
                                 $href = $this->url->link('product/product', 'product_id=' . $product_rows['product_id']);
                             }
-
+                            //dd($product_rows);
                             $tmp_complect[] = array(
                                 'cart_id' => $product_rows['cart_id'],
                                 'diamond' => isset($product_rows['diamond']) ? $product_rows['diamond'] : 0, //добавлен флаг
@@ -212,6 +213,7 @@ class ControllerCheckoutCart extends Controller {
                                 'thumb' => $image,
                                 'name' => $product_rows['name'],
                                 'model' => $product_rows['model'],
+                                'engrave' => isset($product_rows['engrave']) ? $product_rows['engrave'] : null,
                                 'option' => $option_data,
                                 'recurring' => $recurring,
                                 'quantity' => $product_rows['quantity'],
@@ -243,6 +245,7 @@ class ControllerCheckoutCart extends Controller {
                         'thumb' => $image,
                         'name' => $product['name'],
                         'model' => $product['model'],
+                        'engrave' => isset($product['engrave']) ? $product['engrave'] : null,
                         'option' => $option_data,
                         'recurring' => $recurring,
                         'quantity' => $product['quantity'],
@@ -549,6 +552,14 @@ class ControllerCheckoutCart extends Controller {
 		$this->load->language('checkout/cart');
 
 		$json = array();
+
+        //dd($this->request->post['engrave'], true);
+        if (!empty($this->request->post['engrave'])) {
+            foreach ($this->request->post['engrave'] as $key => $value) {
+                dd($value);
+                $this->cart->update_engrave($key, $value);
+            }
+        }
 
 		// Update
 		if (!empty($this->request->post['quantity'])) {

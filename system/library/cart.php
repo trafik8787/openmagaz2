@@ -44,7 +44,7 @@ class Cart {
         //add  AND diamond <> 0
 		$cart_query = $this->db->query("SELECT DISTINCT  * FROM " . DB_PREFIX . "cart cr LEFT JOIN ". DB_PREFIX ."product_to_category ptc ON (cr.product_id = ptc.product_id) INNER JOIN ".DB_PREFIX."category cat ON (ptc.category_id = cat.category_id) WHERE cr.customer_id = '" . (int)$this->customer->getId() . "' AND cr.session_id = '" . $this->db->escape($this->session->getId()) . "' AND cr.diamond = 0 AND cat.parent_id = 0");
         //$cart_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND diamond = 0");
-       // dd($cart_query->rows, true);
+        //dd($cart_query->rows, true);
 
 
         foreach ($cart_query->rows as $cart) {
@@ -256,6 +256,7 @@ class Cart {
                     'product_id' => $product_query->row['product_id'],
                     'name' => $product_query->row['name'],
                     'model' => $product_query->row['model'],
+                    'engrave' => $cart['engrave'],
                     'shipping' => $product_query->row['shipping'],
                     'image' => $product_query->row['image'],
                     'option' => $option_data,
@@ -387,6 +388,10 @@ class Cart {
 	public function update($cart_id, $quantity) {
 		$this->db->query("UPDATE " . DB_PREFIX . "cart SET quantity = '" . (int)$quantity . "' WHERE cart_id = '" . (int)$cart_id . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
 	}
+
+    public function update_engrave($cart_id, $engrave) {
+        $this->db->query("UPDATE " . DB_PREFIX . "cart SET engrave = '" . $this->db->escape($engrave) . "' WHERE cart_id = '" . (int)$cart_id . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
+    }
 
 	public function remove($cart_id) {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "cart WHERE cart_id = '" . (int)$cart_id . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");

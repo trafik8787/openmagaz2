@@ -214,7 +214,6 @@ class ControllerCheckoutConfirm extends Controller {
 
 			foreach ($this->cart->getProducts() as $product) {
 				$option_data = array();
-
 				foreach ($product['option'] as $option) {
 					$option_data[] = array(
 						'product_option_id'       => $option['product_option_id'],
@@ -230,6 +229,7 @@ class ControllerCheckoutConfirm extends Controller {
 				$order_data['products'][] = array(
 					'product_id' => $product['product_id'],
 					'name'       => $product['name'],
+                    'engrave'    => $product['engrave'],
 					'model'      => $product['model'],
 					'option'     => $option_data,
 					'download'   => $product['download'],

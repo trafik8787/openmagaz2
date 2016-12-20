@@ -10,7 +10,7 @@ class ModelCheckoutOrder extends Model {
 		// Products
 		if (isset($data['products'])) {
 			foreach ($data['products'] as $product) {
-				$this->db->query("INSERT INTO " . DB_PREFIX . "order_product SET order_id = '" . (int)$order_id . "', product_id = '" . (int)$product['product_id'] . "', name = '" . $this->db->escape($product['name']) . "', model = '" . $this->db->escape($product['model']) . "', quantity = '" . (int)$product['quantity'] . "', price = '" . (float)$product['price'] . "', total = '" . (float)$product['total'] . "', tax = '" . (float)$product['tax'] . "', reward = '" . (int)$product['reward'] . "'");
+				$this->db->query("INSERT INTO " . DB_PREFIX . "order_product SET order_id = '" . (int)$order_id . "', product_id = '" . (int)$product['product_id'] . "', name = '" . $this->db->escape($product['name']) . "', model = '" . $this->db->escape($product['model']) . "', engrave = '" . $this->db->escape($product['engrave']) . "', quantity = '" . (int)$product['quantity'] . "', price = '" . (float)$product['price'] . "', total = '" . (float)$product['total'] . "', tax = '" . (float)$product['tax'] . "', reward = '" . (int)$product['reward'] . "'");
 
 				$order_product_id = $this->db->getLastId();
 
@@ -565,6 +565,7 @@ class ModelCheckoutOrder extends Model {
 					$data['products'][] = array(
 						'name'     => $product['name'],
 						'model'    => $product['model'],
+                        'engrave'  => $product['engrave'],
 						'option'   => $option_data,
 						'quantity' => $product['quantity'],
 						'price'    => $this->currency->format($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),

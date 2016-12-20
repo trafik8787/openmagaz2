@@ -111,7 +111,7 @@
                                         | <?=$row['name']?> <?=$row['value']?>
                                         <?endforeach?>
                                         <label class="catCheck1" style="border-bottom: 1px dashed #000080;padding-left: 0;margin-left: 50px;cursor: pointer;">Would you like to engrave your ring? It's FREE!</label>
-                                        <input type="text" name="engrave" id="newGroup" style="display:none" />
+                                        <input type="text" class="w-add-engrave" name="engrave[<?php echo $product[0]['cart_id']; ?>]" value="<?=$product[0]['engrave']?>" <?if(empty($product['engrave'])):?> style="display:none" <?endif?> />
                                         <p>SKU: <?=$product[1]['sku']?></p>
                                     </div>
                                     <div class="number-block">
@@ -123,7 +123,7 @@
 
                             <?else:?>
 
-                                <div class="one-line">
+                                <div class="one-line"><?//dd($product)?>
                                     <div class="box-img">
                                         <img src="<?=$product['thumb']?>" width="100%" alt="img">
                                     </div>
@@ -136,7 +136,7 @@
                                         <?endforeach?>
                                         <?if ($product['diamond'] == 0):?>
                                             <label class="catCheck1" style="border-bottom: 1px dashed #000080;padding-left: 0;margin-left: 50px;cursor: pointer;">Would you like to engrave your ring? It's FREE!</label>
-                                            <input type="text" name="engrave" id="newGroup" style="display:none" />
+                                            <input type="text" class="w-add-engrave" name="engrave[<?php echo $product['cart_id']; ?>]" value="<?=$product['engrave']?>" <?if(empty($product['engrave'])):?> style="display:none" <?endif?> />
                                         <?endif?>
                                     </div>
                                     <div class="number-block">
@@ -317,7 +317,7 @@
        });
 
         $(document).on('click', '.catCheck1', function () {
-            $("#newGroup").toggle('slow');
+            $(this).parent().find('.w-add-engrave').toggle('slow');
         });
 
 //        $(document).on('click', '.remove-ico', function () {
@@ -325,6 +325,25 @@
 //            return false;
 //
 //       });
+
+        $(document).on('change', '.w-add-engrave', function () {
+            $.ajax({
+                url: '/index.php?route=checkout/cart/edit',
+                type: 'post',
+                dataType: 'json',
+                data: $(this),
+                beforeSend: function () {
+
+                },
+                complete: function () {
+
+                },
+                success: function (json) {
+                    console.log(json);
+                }
+            });
+        });
+
     });
 </script>
 

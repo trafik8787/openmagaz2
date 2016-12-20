@@ -85,7 +85,11 @@
           <?php foreach ($product['option'] as $option) { ?>
           <br />
           &nbsp;<small> - <?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
-          <?php } ?></td>
+          <?php } ?>
+            <?if (!empty($product['engrave'])):?>
+            <p><b>Engrave:</b> <?=$product['engrave']?></p>
+            <?endif?>
+        </td>
         <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: left; padding: 7px;"><?php echo $product['model']; ?></td>
         <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><?php echo $product['quantity']; ?></td>
         <td style="font-size: 12px;	border-right: 1px solid #DDDDDD; border-bottom: 1px solid #DDDDDD; text-align: right; padding: 7px;"><?php echo $product['price']; ?></td>

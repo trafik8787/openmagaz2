@@ -407,6 +407,7 @@ class ControllerModuleParseGemstons extends Controller {
                    $this->metal = $this->metal_gemstone[$curent[15]][0];
 
                    $category = $this->category_gemstone_arr[$curent[1]];
+                   $this->category[] = 82;
                    $this->category[] =  $category;
 
                    $this->image_general = 'catalog/img_gemstones/' . $curent[22];
