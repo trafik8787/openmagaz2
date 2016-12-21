@@ -113,6 +113,35 @@
                                         <label class="catCheck1" style="border-bottom: 1px dashed #000080;padding-left: 0;margin-left: 50px;cursor: pointer;">Would you like to engrave your ring? It's FREE!</label>
                                         <input type="text" class="w-add-engrave" name="engrave[<?php echo $product[0]['cart_id']; ?>]" value="<?=$product[0]['engrave']?>" <?if(empty($product['engrave'])):?> style="display:none" <?endif?> />
                                         <p>SKU: <?=$product[1]['sku']?></p>
+
+                                        <div>
+                                            <?php foreach ($options as $id_product => $option):?>
+                                            <?if ($id_product == $product[0]['product_id']):?>
+                                            <?php if ($option['type'] == 'select' AND $option['name'] == 'SIZE'):?>
+                                            <?$chec = !empty($product[0]['option']) ? $product[0]['option'][0]['value']: null?>
+                                            <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
+                                                <b>SIZE:</b>
+                                                <select name="option[<?php echo $option['product_option_id']; ?>]"
+                                                        data-id_cart="<?=$product[0]['cart_id']?>"
+                                                        data-product_option_id="<?php echo $option['product_option_id']; ?>"
+                                                        id="input-option<?php echo $option['product_option_id']; ?>"
+                                                        class="w-option-size">
+                                                    <option value="">Select Size</option>
+                                                    <?php foreach ($option['product_option_value'] as $option_value) { ?>
+                                                    <option <?if ($chec == $option_value['name']):?> selected <?endif?> value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                                                    <?php if ($option_value['price']) { ?>
+                                                    (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>
+                                                    )
+                                                    <?php } ?>
+                                                    </option>
+                                                    <?php } ?>
+                                                </select>
+                                            </div>
+                                            <?endif?>
+                                            <?endif?>
+                                            <?endforeach?>
+                                        </div>
+
                                     </div>
                                     <div class="number-block">
                                         <div class="price"><?=$product[0]['total']?></div><br/>
@@ -123,7 +152,7 @@
 
                             <?else:?>
 
-                                <div class="one-line"><?//dd($product)?>
+                                <div class="one-line"><?//dd($options)?>
                                     <div class="box-img">
                                         <img src="<?=$product['thumb']?>" width="100%" alt="img">
                                     </div>
@@ -138,6 +167,35 @@
                                             <label class="catCheck1" style="border-bottom: 1px dashed #000080;padding-left: 0;margin-left: 50px;cursor: pointer;">Would you like to engrave your ring? It's FREE!</label>
                                             <input type="text" class="w-add-engrave" name="engrave[<?php echo $product['cart_id']; ?>]" value="<?=$product['engrave']?>" <?if(empty($product['engrave'])):?> style="display:none" <?endif?> />
                                         <?endif?>
+
+                                        <div>
+                                            <?php foreach ($options as $id_product => $option):?>
+                                                <?if ($id_product == $product['product_id']):?>
+                                                    <?php if ($option['type'] == 'select' AND $option['name'] == 'SIZE'):?>
+                                                        <?$chec = !empty($product['option']) ? $product['option'][0]['value']: null?>
+                                                        <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
+                                                            <b>SIZE:</b>
+                                                            <select name="option[<?php echo $option['product_option_id']; ?>]"
+                                                                    data-id_cart="<?=$product['cart_id']?>"
+                                                                    data-product_option_id="<?php echo $option['product_option_id']; ?>"
+                                                                    id="input-option<?php echo $option['product_option_id']; ?>"
+                                                                    class="w-option-size">
+                                                                <option value="">Select Size</option>
+                                                                <?php foreach ($option['product_option_value'] as $option_value) { ?>
+                                                                <option <?if ($chec == $option_value['name']):?> selected <?endif?> value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                                                                    <?php if ($option_value['price']) { ?>
+                                                                    (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>
+                                                                    )
+                                                                    <?php } ?>
+                                                                </option>
+                                                                <?php } ?>
+                                                            </select>
+                                                        </div>
+                                                    <?endif?>
+                                                <?endif?>
+                                            <?endforeach?>
+                                        </div>
+
                                     </div>
                                     <div class="number-block">
                                         <?if($product['category_id'] != 94 AND $product['category_id'] != 68 AND $product['category_id'] != ''):?>
@@ -342,6 +400,30 @@
                     console.log(json);
                 }
             });
+        });
+
+
+        $(document).on('change', '.w-option-size', function () {
+            //alert($(this).data('id_product'));
+//            alert($(this).attr('name'));
+//            var opt = $(this).attr('name');
+//            console.log($(this).val());
+            $.ajax({
+                url: '/index.php?route=checkout/cart/edit',
+                type: 'post',
+                dataType: 'json',
+                data: {id_cart: $(this).data('id_cart'), option_index:  $(this).data('product_option_id'), option_value: $(this).val()},
+                beforeSend: function () {
+
+                },
+                complete: function () {
+
+                },
+                success: function (json) {
+                    console.log(json);
+                }
+            });
+
         });
 
     });

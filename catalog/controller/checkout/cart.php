@@ -76,6 +76,9 @@ class ControllerCheckoutCart extends Controller {
 
 			$this->load->model('tool/image');
 			$this->load->model('tool/upload');
+            $this->load->model('catalog/product');
+
+
 
 			$data['products'] = array();
 
@@ -211,6 +214,7 @@ class ControllerCheckoutCart extends Controller {
                                 'diamond' => isset($product_rows['diamond']) ? $product_rows['diamond'] : 0, //добавлен флаг
                                 'sku'   => $product_rows['sku'],
                                 'thumb' => $image,
+                                'product_id' => $product_rows['product_id'],
                                 'name' => $product_rows['name'],
                                 'model' => $product_rows['model'],
                                 'engrave' => isset($product_rows['engrave']) ? $product_rows['engrave'] : null,
@@ -225,7 +229,38 @@ class ControllerCheckoutCart extends Controller {
                                 'complect' => $product_rows['complect']
                             );
 
+                            foreach ($this->model_catalog_product->getProductOptions($product_rows['product_id']) as $option) {
+                                $product_option_value_data = array();
 
+                                foreach ($option['product_option_value'] as $option_value) {
+                                    if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
+                                        if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
+                                            $price = $this->currency->format($this->tax->calculate($option_value['price'], $product_rows['tax_class_id'], $this->config->get('config_tax') ? 'P' : false));
+                                        } else {
+                                            $price = false;
+                                        }
+
+                                        $product_option_value_data[] = array(
+                                            'product_option_value_id' => $option_value['product_option_value_id'],
+                                            'option_value_id'         => $option_value['option_value_id'],
+                                            'name'                    => $option_value['name'],
+                                            'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
+                                            'price'                   => $price,
+                                            'price_prefix'            => $option_value['price_prefix']
+                                        );
+                                    }
+                                }
+
+                                $data['options'][$product_rows['product_id']] = array(
+                                    'product_option_id'    => $option['product_option_id'],
+                                    'product_option_value' => $product_option_value_data,
+                                    'option_id'            => $option['option_id'],
+                                    'name'                 => $option['name'],
+                                    'type'                 => $option['type'],
+                                    'value'                => $option['value'],
+                                    'required'             => $option['required']
+                                );
+                            }
 
                         }
                     }
@@ -243,6 +278,7 @@ class ControllerCheckoutCart extends Controller {
                         'diamond' => isset($product['diamond']) ? $product['diamond'] : 0, //добавлен флаг
                         'sku'     => $product['sku'],
                         'thumb' => $image,
+                        'product_id' => $product['product_id'],
                         'name' => $product['name'],
                         'model' => $product['model'],
                         'engrave' => isset($product['engrave']) ? $product['engrave'] : null,
@@ -256,6 +292,44 @@ class ControllerCheckoutCart extends Controller {
                         'href' => $href,
                         'manufacturer_id' => !empty($product['manufacturer_id']) ? $product['manufacturer_id'] : 0,
                     );
+
+
+
+                    foreach ($this->model_catalog_product->getProductOptions($product['product_id']) as $option) {
+                        $product_option_value_data = array();
+
+                        foreach ($option['product_option_value'] as $option_value) {
+                            if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
+                                if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
+                                    $price = $this->currency->format($this->tax->calculate($option_value['price'], $product['tax_class_id'], $this->config->get('config_tax') ? 'P' : false));
+                                } else {
+                                    $price = false;
+                                }
+
+                                $product_option_value_data[] = array(
+                                    'product_option_value_id' => $option_value['product_option_value_id'],
+                                    'option_value_id'         => $option_value['option_value_id'],
+                                    'name'                    => $option_value['name'],
+                                    'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
+                                    'price'                   => $price,
+                                    'price_prefix'            => $option_value['price_prefix']
+                                );
+                            }
+                        }
+
+                        $data['options'][$product['product_id']] = array(
+                            'product_option_id'    => $option['product_option_id'],
+                            'product_option_value' => $product_option_value_data,
+                            'option_id'            => $option['option_id'],
+                            'name'                 => $option['name'],
+                            'type'                 => $option['type'],
+                            'value'                => $option['value'],
+                            'required'             => $option['required']
+                        );
+                    }
+
+
+
 
                 }
 
@@ -556,9 +630,16 @@ class ControllerCheckoutCart extends Controller {
         //dd($this->request->post['engrave'], true);
         if (!empty($this->request->post['engrave'])) {
             foreach ($this->request->post['engrave'] as $key => $value) {
-                dd($value);
                 $this->cart->update_engrave($key, $value);
             }
+        }
+
+        if (!empty($this->request->post['option_index'])) {
+            $option[$this->request->post['option_index']] = $this->request->post['option_value'];
+
+            $id_cart = $this->request->post['id_cart'];
+            $option = array_filter($option);
+            $this->cart->update_option($id_cart, $option);
         }
 
 		// Update

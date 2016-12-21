@@ -393,6 +393,10 @@ class Cart {
         $this->db->query("UPDATE " . DB_PREFIX . "cart SET engrave = '" . $this->db->escape($engrave) . "' WHERE cart_id = '" . (int)$cart_id . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
     }
 
+    public function update_option($cart_id, $option = array()) {
+        $this->db->query("UPDATE " . DB_PREFIX . "cart SET `option` = '" . $this->db->escape(json_encode($option)) . "' WHERE cart_id = '" . (int)$cart_id . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
+    }
+
 	public function remove($cart_id) {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "cart WHERE cart_id = '" . (int)$cart_id . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
 	}

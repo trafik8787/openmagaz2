@@ -375,8 +375,8 @@ $(document).on('click', '#w-button-add-product-complect', function(){
     $('.text-danger').detach();
 
     if ($('*').is(".w-option-size")) {
-
-        if ($("select option:selected").val()) {
+        //if ($("select option:selected").val()) {
+        if (true) {
 
             $.ajax({
                 url: '/index.php?route=module/complect/add_product_complect',
