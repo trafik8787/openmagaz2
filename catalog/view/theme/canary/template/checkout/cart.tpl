@@ -337,7 +337,7 @@
                         <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card5.png" alt="card"></a>
                         <a href="#" class="one-card"><img src="/catalog/view/theme/canary/img/card6.png" alt="card"></a>
                     </div>
-                    <a href="<?php echo $checkout; ?>" class="btn w-btn-orange btn-lg w-general-category" onmouseup="ga('send', 'event', 'button, 'click', 'Checkout');" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
+                    <a href="<?php echo $checkout; ?>" class="btn w-btn-orange btn-lg w-general-category w-checkout" onmouseup="ga('send', 'event', 'button, 'click', 'Checkout');" role="button"><div class="icons-checkout"></div>CHECKOUT</a>
                     <a href="<?=$continue_shoping?>" class="btn w-btn-white btn-lg" role="button"><i class="fa fa-chevron-right" aria-hidden="true"></i>Continue shopping</a>
                 </div>
                 <div class="cart-page-info">
@@ -404,10 +404,7 @@
 
 
         $(document).on('change', '.w-option-size', function () {
-            //alert($(this).data('id_product'));
-//            alert($(this).attr('name'));
-//            var opt = $(this).attr('name');
-//            console.log($(this).val());
+
             $.ajax({
                 url: '/index.php?route=checkout/cart/edit',
                 type: 'post',
@@ -423,6 +420,17 @@
                     console.log(json);
                 }
             });
+
+        });
+
+
+        $(document).on('click', '.w-checkout', function () {
+            if (!$("select.w-option-size option:selected").val()) {
+
+                $("select.w-option-size").css('border', '2px solid red');
+                alert('Ring size is required');
+                return false;
+            }
 
         });
 
