@@ -43,7 +43,7 @@
             </a>
         </div>
         <div class="product-advantages-col">
-            <a href="/company#lifetime-warranty">
+            <a href="/company#made-in-usa">
                 <div class="product-advantages-item">
                     <div class="product-advantages-item-img"><img
                                 src="/catalog/view/theme/canary/img/p-advantage-5.png" alt=""></div>

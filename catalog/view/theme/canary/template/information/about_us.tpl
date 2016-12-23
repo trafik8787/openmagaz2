@@ -31,7 +31,7 @@
                         <div class="about-title">ABOUT COMPANY</div>
                         <div class="icons-quality_service_icon"></div>
                     </div>
-                    <div class="about-top-container">
+                    <div class="about-top-container" id="made-in-usa">
                         <div class="left">
                             <img src="/catalog/view/theme/canary/img/about-top-photo.jpg" alt="">
                         </div>
