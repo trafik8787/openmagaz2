@@ -76,3 +76,8 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('.product-advantages-list').show();
+    });
+</script>
