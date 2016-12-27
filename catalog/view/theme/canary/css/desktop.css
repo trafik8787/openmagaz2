@@ -1133,9 +1133,11 @@ left: 399px!important;
     .w-ac-baner-text {
         font-weight: bold;
         position: relative;
-        top: 5px;
+        top: 21px;
     }
+    .w-ac-baner-text0 {
 
+    }
     .w-ac-baner-text1 {
 
 font-size: 26px;
@@ -1147,9 +1149,9 @@ margin-top: 7px;
 
 font-size: 12px;
 
-margin-bottom: 0;
 
 margin-top: 17px;
+margin-bottom: 13px;
 }
 
     .w-btn-wiath {

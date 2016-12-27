@@ -393,19 +393,25 @@ ul.w-top-children-menu .dropdown-inside {
 }
 
 .w-ac-baner-text {
-    font-weight: bold;
+    /* font-weight: bold; */
     position: relative;
-    top: 72px;
+    top: 111px;
     line-height: 1;
+    font-family: "Felix Titling", fantasy;
+}
+
+.w-ac-baner-text0 {
+    color: #2f4680;
+    font-family: Raleway-Regular, fantasy;
+    margin-bottom: 23px;
+    font-size: 19px;
 }
 
 .w-ac-baner-text1 {
-    
-font-size: 50px;
-font-weight: initial;
-color: #2f4680;
-    
-/* line-height: 0.8; */
+    font-size: 51px;
+    font-weight: initial;
+    color: #2f4680;
+    /* line-height: 0.8; */
 }
 
 .w-shop-now-bloc a {
@@ -417,8 +423,8 @@ color: #2f4680;
 }
 
 .w-shop-now-bloc .shop-now {
-    
-width: 175px;
+    width: 175px;
+    box-shadow: 0px 2px 2px 1px #dcdcdc;
 }
 
 .w-shop-now-bloc i {
@@ -429,18 +435,12 @@ width: 175px;
 }
 
 .w-ac-baner-text2 {
-
-font-size: 24px;
-
-margin-top: 24px;
-
-margin-bottom: 46px;
-
-color: #2f4680;
-
-/* top: 29px; */
-
-position: relative;
+font-size: 25px;
+margin-top: 15px;
+margin-bottom: 80px;
+color: #2f4680;
+/* top: 29px; */
+position: relative;
 }
 
 .w-btn-wiath {

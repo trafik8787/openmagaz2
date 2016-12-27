@@ -12,16 +12,17 @@
                         <div class="center-bl w-content-baner clearfix">
                             <div class="col-md-6 col-sm-5 col-xs-12">
                                 <div class="w-ac-baner-text">
-                                    <div class="w-ac-baner-text1">The Perfect Holiday Gift</div>
-                                    <div class="w-ac-baner-text2">Up To 35% OFF All Jewelry + FREE Shipping*</div>
+                                    <div class="w-ac-baner-text0">Buy Engagement Ring and</div>
+                                    <div class="w-ac-baner-text1">GET 20% OFF</div>
+                                    <div class="w-ac-baner-text2">YOUR WEDDING BAND</div>
                                     <div class="w-shop-now-bloc">
-                                        <i></i>
+                                        <!--*<i></i>*-->
                                         <a href="/fine-jewelry" role="button" class="btn w-btn-orange2 shop-now">SHOP NOW</a>
                                     </div>
-                                    <span class="w-button-btn">
-                                        <p>*Does not include loose diamonds. Cannot be combined with any other offer.</p>
-                                        <p>Promotion ends December 24 at 11:59PM CST.</p>
-                                    </span>
+                                    <!--*<span class="w-button-btn">*-->
+                                        <!--*<p>*Does not include loose diamonds. Cannot be combined with any other offer.</p>*-->
+                                        <!--*<p>Promotion ends December 24 at 11:59PM CST.</p>*-->
+                                    <!--*</span>*-->
                                 </div>
                                 <!--*<div class="w-button-in-baner">*-->
                                     <!--*<a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>*-->
