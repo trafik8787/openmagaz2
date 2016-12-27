@@ -77,8 +77,8 @@ class ControllerModuleComplect extends Controller {
             } else {
 
                 if (!empty($this->request->post['option'])) {
-                    $option = array('option' => $this->request->post['option']);
-                    $option = http_build_query($option);
+                    //$option = array('option' => $this->request->post['option']);
+                    $option = current($this->request->post['option']);
                 }
 
 
@@ -182,6 +182,8 @@ class ControllerModuleComplect extends Controller {
     public function complete_diamond(){
 
         $data = array();
+        $this->load->model('tool/image');
+        $this->load->model('tool/upload');
         $this->load->model('catalog/product');
         $data_cookie = array();
 
@@ -205,11 +207,11 @@ class ControllerModuleComplect extends Controller {
         }
 
 
-
+        $product_id = $data_cookie['CanaryProductCom']['id_product'];
         //$this->load->model('tool/image');
         //$results_img = $this->model_catalog_product->getProductImages($data['CanaryProductCom']['id_product']);
-
-        $data['CanaryProductCom'] = $this->model_catalog_product->getProduct($data_cookie['CanaryProductCom']['id_product']);
+        //dd($data_cookie['CanaryProductCom']['option']);
+        $data['CanaryProductCom'] = $this->model_catalog_product->getProduct($product_id);
         $data['CanaryProductCom']['option'] = $data_cookie['CanaryProductCom']['option'];
 
         //$data['CanaryProductCom']['image'] = $this->model_tool_image->resize($results_img[0]['image'], $this->config->get('config_image_popup_width'), $this->config->get('config_image_popup_height'));
@@ -223,6 +225,40 @@ class ControllerModuleComplect extends Controller {
             'text' => 'Complete Ring',
             'href' => '/complete_diamond'
         );
+
+//        dd($data['CanaryProductCom'], true);
+        foreach ($this->model_catalog_product->getProductOptions($product_id) as $option) {
+            $product_option_value_data = array();
+
+            foreach ($option['product_option_value'] as $option_value) {
+                if (!$option_value['subtract'] || ($option_value['quantity'] > 0)) {
+                    if ((($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) && (float)$option_value['price']) {
+                        $price = $this->currency->format($this->tax->calculate($option_value['price'],  $data['CanaryProductCom']['tax_class_id'], $this->config->get('config_tax') ? 'P' : false));
+                    } else {
+                        $price = false;
+                    }
+
+                    $product_option_value_data[] = array(
+                        'product_option_value_id' => $option_value['product_option_value_id'],
+                        'option_value_id'         => $option_value['option_value_id'],
+                        'name'                    => $option_value['name'],
+                        'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
+                        'price'                   => $price,
+                        'price_prefix'            => $option_value['price_prefix']
+                    );
+                }
+            }
+
+            $data['options'] = array(
+                'product_option_id'    => $option['product_option_id'],
+                'product_option_value' => $product_option_value_data,
+                'option_id'            => $option['option_id'],
+                'name'                 => $option['name'],
+                'type'                 => $option['type'],
+                'value'                => $option['value'],
+                'required'             => $option['required']
+            );
+        }
 
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['column_right'] = $this->load->controller('common/column_right');

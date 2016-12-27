@@ -1789,7 +1789,7 @@ star-rating
 }
 .product-buy-details .right {
     float: right;
-    width: 220px;
+    width: 235px;
     max-width: calc(50% - 15px);
 }
 

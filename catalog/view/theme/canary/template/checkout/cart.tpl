@@ -90,6 +90,7 @@
                 </div>
                 <div class="wrapper-cart-box">
 
+                    <?//dd($options)?>
                     <?//dd($products)?>
                     <form action="<?php echo $action; ?>" method="post" class="w-form-cart-sub" enctype="multipart/form-data">
 

@@ -43,7 +43,7 @@
                         <div class="wrapper-cart-box">
                             <div class="one-line">
                                 <div class="box-img">
-                                    <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" width="47" title="<?php echo $product['name']; ?>"></a>
+                                    <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" width="auto" title="<?php echo $product['name']; ?>"></a>
                                 </div>
                                 <div class="text-box">
                                     <!--*<div class="type">Diamond</div>*-->

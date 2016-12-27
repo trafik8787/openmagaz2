@@ -5,7 +5,7 @@
 <?//dd($CanaryProductCom)?>
 <?//dd($CanaryDiamontCom)?>
 
-<main class="w-diamonds-product w-general-container">
+<main class="w-diamonds-product w-general-container w-complete-diamond">
     <div class="margin-buttom-30 w-bredcrum-border">
         <div class="center-bl">
             <div class="row">
@@ -45,31 +45,46 @@
                     <input type="hidden" id="w-diamond-com-id" value="<?php echo $CanaryDiamontCom->diamond_id?>">
                     <input type="hidden" id="w-product-option" value="<?=!empty($CanaryProductCom['option']) ? $CanaryProductCom['option'] : ''?>">
                     <div class="one-product-slider hidden-xs">
-                        <div class="slider-for">
-                            <div><img src="<?=imageDiamont($CanaryDiamontCom->shape)?>" width="auto" title="" alt=""></div>
-                            <div><img src="/image/<?php echo $CanaryProductCom['image'] ?>" width="auto" title="<?php echo $CanaryProductCom['name'] ?>" alt="<?php echo $CanaryProductCom['name'] ?>"></div>
+                        <div class="slider-for-complect" >
+                            <div class="complect-general-img"><img src="<?=imageDiamont($CanaryDiamontCom->shape)?>" width="auto" title="" alt="" style="display: none"></div>
+                            <div class="complect-general-img"><img src="/image/<?php echo $CanaryProductCom['image'] ?>" width="auto" title="<?php echo $CanaryProductCom['name'] ?>" alt="<?php echo $CanaryProductCom['name'] ?>"></div>
                         </div>
-                        <div class="slider-nav">
-                            <div class="wrapper-img-slider"><img src="<?=imageDiamont($CanaryDiamontCom->shape)?>" title="" alt=""></div>
-                            <div class="wrapper-img-slider"><img src="/image/<?php echo $CanaryProductCom['image'] ?>" title="" alt=""></div>
+                        <div class="slider-nav-complect">
+                            <div class="wrapper-img-slider"><img src="<?=imageDiamont($CanaryDiamontCom->shape)?>" width="100px" title="" alt=""></div>
+                            <div class="wrapper-img-slider" style="display: none"><img src="/image/<?php echo $CanaryProductCom['image'] ?>"  width="100px" title="" alt=""></div>
                         </div>
 
                     </div>
                     <div class="one-product-info" id="product">
                         <div class="row">
-                            <div class="col-md-8 col-sm-8 col-xs-8">
-                                <h1 class="w-product-name-h1"> <?php echo $CanaryProductCom['name'] ?></h1>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-                                <strong>SKU: <?php echo $CanaryProductCom['sku'] ?></strong>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-8 col-xs-8">
+                                        <h1 class="w-product-name-h1"> <?php echo $CanaryProductCom['name'] ?></h1>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                                        <strong>SKU: <?php echo $CanaryProductCom['sku'] ?></strong>
+                                        <?if (!empty($CanaryProductCom['special'])):?>
+                                        <span class="w-special-price"><?=Currency::formatStat($CanaryProductCom['price'])?></span>
+                                        <span><?=Currency::formatStat($CanaryProductCom['special'])?></span>
+                                        <?else:?>
+                                        <span><?=Currency::formatStat($CanaryProductCom['price'])?></span>
+                                        <?endif?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-8 col-sm-8 col-xs-8">
-                                <h1 class="w-product-name-h1"> <?=$CanaryDiamontCom->shape?> <?=$CanaryDiamontCom->size?> CARAT <?=$CanaryDiamontCom->color?> <?=$CanaryDiamontCom->clarity?></h1>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-                                <strong>SKU: <?=$CanaryDiamontCom->diamond_id?></strong>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-8 col-xs-8">
+                                        <h1 class="w-product-name-h1"> <?=$CanaryDiamontCom->shape?> <?=$CanaryDiamontCom->size?> CARAT <?=$CanaryDiamontCom->color?> <?=$CanaryDiamontCom->clarity?></h1>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                                        <strong>SKU: <?=$CanaryDiamontCom->diamond_id?></strong>
+                                        <p><span><?=Currency::formatStat($CanaryDiamontCom->total_sales_price)?></span></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -101,38 +116,32 @@
                                     <div class="alert alert-info margin-buttom-0 product-buy-details complet-yellow clearfix">
                                         <div class="clearfix">
                                             <div class="left">
-                                                <p><?php echo $CanaryProductCom['name'] ?></p>
+                                                <select name="option[<?php echo $options['product_option_id']; ?>]"
+                                                        data-product_option_id="<?php echo $options['product_option_id']; ?>"
+                                                        id="input-option<?php echo $options['product_option_id']; ?>"
+                                                        class="w-option-size dropdown">
+                                                    <option value="">Select Size</option>
+                                                    <?php foreach ($options['product_option_value'] as $option_value) { ?>
+                                                        <option <?if ($CanaryProductCom['option'] ==  $option_value['product_option_value_id']):?> selected <?endif?> value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                                                        <?php if ($option_value['price']) { ?>
+                                                        (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>
+                                                        )
+                                                        <?php } ?>
+                                                        </option>
+                                                    <?php } ?>
+                                                </select>
                                             </div>
                                             <div class="right price-product">
-                                                <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
                                                 <?if (!empty($CanaryProductCom['special'])):?>
-                                                    <span class="w-special-price"><?=Currency::formatStat($CanaryProductCom['price'])?></span>
-                                                    <span><?=Currency::formatStat($CanaryProductCom['special'])?></span>
+                                                <div class="price-product total-price"><span class="total-complet">Total:</span><?=Currency::formatStat($CanaryProductCom['special'] + $CanaryDiamontCom->total_sales_price)?></div>
                                                 <?else:?>
-                                                    <span><?=Currency::formatStat($CanaryProductCom['price'])?></span>
+                                                <div class="price-product total-price"><span class="total-complet">Total:</span><?=Currency::formatStat($CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price)?></div>
                                                 <?endif?>
-
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="clearfix">
-                                            <div class="left">
-                                                <p><?=$CanaryDiamontCom->shape?> <?=$CanaryDiamontCom->size?> CARAT <?=$CanaryDiamontCom->color?> <?=$CanaryDiamontCom->clarity?></p>
-                                            </div>
-                                            <div class="right price-product">
-                                                <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-                                                <p><span><?=Currency::formatStat($CanaryDiamontCom->total_sales_price)?></span></p>
                                             </div>
                                         </div>
                                         <div class="clearfix">
                                             <div class="left">
-                                                <?if (!empty($CanaryProductCom['special'])):?>
-                                                    <div class="price-product total-price"><span class="total-complet">Total:</span><?=Currency::formatStat($CanaryProductCom['special'] + $CanaryDiamontCom->total_sales_price)?></div>
-                                                <?else:?>
-                                                    <div class="price-product total-price"><span class="total-complet">Total:</span><?=Currency::formatStat($CanaryProductCom['price'] + $CanaryDiamontCom->total_sales_price)?></div>
-                                                <?endif?>
+
 
                                             </div>
                                             <div class="right">
@@ -188,31 +197,53 @@
                     <input type="hidden" id="w-gemston-com-id" value="<?php echo $CanaryProductComGemstonToRing['product_id']?>">
                     <input type="hidden" id="w-product-option" value="<?=!empty($CanaryProductCom['option']) ? $CanaryProductCom['option'] : ''?>">
                     <div class="one-product-slider hidden-xs">
-                        <div class="slider-for">
-                            <div><img src="/image/<?php echo $CanaryProductComGemstonToRing['image'] ?>" width="auto" title="" alt=""></div>
-                            <div><img src="/image/<?php echo $CanaryProductCom['image'] ?>" width="auto" title="<?php echo $CanaryProductCom['name'] ?>" alt="<?php echo $CanaryProductCom['name'] ?>"></div>
+                        <div class="slider-for-complect">
+                            <div class="complect-general-img"><img src="/image/<?php echo $CanaryProductComGemstonToRing['image'] ?>" width="auto" title="" alt="" style="display: none"></div>
+                            <div class="complect-general-img"><img src="/image/<?php echo $CanaryProductCom['image'] ?>" width="auto" title="<?php echo $CanaryProductCom['name'] ?>" alt="<?php echo $CanaryProductCom['name'] ?>"></div>
                         </div>
-                        <div class="slider-nav">
+                        <div class="slider-nav-complect">
                             <div class="wrapper-img-slider"><img src="/image/<?php echo $CanaryProductComGemstonToRing['image'] ?>" title="" alt=""></div>
-                            <div class="wrapper-img-slider"><img src="/image/<?php echo $CanaryProductCom['image'] ?>" title="" alt=""></div>
+                            <div class="wrapper-img-slider" style="display: none"><img src="/image/<?php echo $CanaryProductCom['image'] ?>" title="" alt=""></div>
                         </div>
 
                     </div>
                     <div class="one-product-info" id="product">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <span class="title-complect">Congratulations!<br> Here is your complete ring desing!</span>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-8 col-sm-8 col-xs-8">
                                 <h1 class="w-product-name-h1"> <?php echo $CanaryProductCom['name'] ?></h1>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-4 text-right">
                                 <strong>SKU: <?php echo $CanaryProductCom['sku'] ?></strong>
+                                <p>
+                                    <?if (!empty($CanaryProductCom['special'])):?>
+                                        <span class="w-special-price"><?=Currency::formatStat($CanaryProductCom['price'])?></span>
+                                        <span class="w-price-complect"><?=Currency::formatStat($CanaryProductCom['special'])?></span>
+                                    <?else:?>
+                                        <span class="w-price-complect"><?=Currency::formatStat($CanaryProductCom['price'])?></span>
+                                    <?endif?>
+                                </p>
                             </div>
                         </div>
                         <div class="row">
+                            <hr class="margin-top-0 margin-buttom-20">
                             <div class="col-md-8 col-sm-8 col-xs-8">
                                 <h1 class="w-product-name-h1"> <?php echo $CanaryProductComGemstonToRing['name'] ?></h1>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-4 text-right">
                                 <strong>SKU: <?php echo $CanaryProductComGemstonToRing['sku'] ?></strong>
+                                <p>
+                                    <?if (!empty($CanaryProductComGemstonToRing['special'])):?>
+                                        <span class="w-special-price"><?=Currency::formatStat($CanaryProductComGemstonToRing['price'])?></span>
+                                        <span class="w-price-complect"><?=Currency::formatStat($CanaryProductComGemstonToRing['special'])?></span>
+                                    <?else:?>
+                                        <span class="w-price-complect"><?=Currency::formatStat($CanaryProductComGemstonToRing['price'])?></span>
+                                    <?endif?>
+                                </p>
                             </div>
                         </div>
                         <div class="row">
@@ -242,29 +273,42 @@
                                         </div>
                                     </div>
                                     <div class="alert alert-info margin-buttom-0 product-buy-details complet-yellow clearfix">
-                                        <div class="clearfix">
-                                            <div class="left">
-                                                <p><?php echo $CanaryProductCom['name'] ?></p>
-                                            </div>
-                                            <div class="right price-product">
-                                                <input type="hidden" name="quantity" value="<?php echo $minimum; ?>" size="1" id="input-quantity" />
-                                                <span>$<?php echo round($CanaryProductCom['price'], 2)?></span>
-                                            </div>
-                                        </div>
-
 
                                         <div class="clearfix">
                                             <div class="left">
-                                                <p><?php echo $CanaryProductComGemstonToRing['name'] ?></p>
+                                                <select name="option[<?php echo $options['product_option_id']; ?>]"
+                                                        data-product_option_id="<?php echo $options['product_option_id']; ?>"
+                                                        id="input-option<?php echo $options['product_option_id']; ?>"
+                                                        class="w-option-size dropdown">
+                                                    <option value="">Select Size</option>
+                                                    <?php foreach ($options['product_option_value'] as $option_value) { ?>
+                                                    <option <?if ($CanaryProductCom['option'] ==  $option_value['product_option_value_id']):?> selected <?endif?> value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
+                                                    <?php if ($option_value['price']) { ?>
+                                                    (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>
+                                                    )
+                                                    <?php } ?>
+                                                    </option>
+                                                    <?php } ?>
+                                                </select>
                                             </div>
                                             <div class="right price-product">
                                                 <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
-                                                <p><span>$<?php echo round($CanaryProductComGemstonToRing['price'], 2)?></span></p>
+                                                <div class="price-product total-price">
+                                                    <span class="total-complet">
+                                                        <?if (!empty($CanaryProductCom['special']) and empty($CanaryProductComGemstonToRing['special'])):?>
+                                                            Total: <?php echo Currency::formatStat($CanaryProductCom['special'] + $CanaryProductComGemstonToRing['price'])?>
+                                                        <?elseif(!empty($CanaryProductComGemstonToRing['special']) and empty($CanaryProductCom['special'])):?>
+                                                            Total: <?php echo Currency::formatStat($CanaryProductCom['price'] + $CanaryProductComGemstonToRing['special'])?>
+                                                        <?else:?>
+                                                            Total: <?php echo Currency::formatStat($CanaryProductCom['price'] + $CanaryProductComGemstonToRing['price'])?>
+                                                        <?endif?>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="clearfix">
                                             <div class="left">
-                                                <div class="price-product total-price"><span class="total-complet">Total:</span>$<?php echo $CanaryProductCom['price'] + $CanaryProductComGemstonToRing['price']?></div>
+
                                             </div>
                                             <div class="right">
                                                 <button class="btn w-btn-orange btn-lg" id="w-complect-button-cart" onmouseup="ga('send', 'event', 'button, 'click', 'Add to Cart');" data-loading-text="Loading..." role="button" type="button" > <i class="bold-angle-right"></i> Add to cart</button>
@@ -332,6 +376,26 @@
 
 
 <script>
+
+
+    $(document).ready(function () {
+//        $('.one-product-slider .slider-for').show();
+//        $('.one-product-slider .slider-nav').show();
+
+//        $(document).on('change','.w-option-size', function () {
+//            alert($('.w-option-size').val());
+//        });
+        $(document).on('click','.slider-nav-complect .wrapper-img-slider', function () {
+
+             $('.slider-nav-complect .wrapper-img-slider').show();
+             $(this).toggle();
+             $('.slider-for-complect img').toggle('slow');
+        });
+
+        $('.product-advantages-list').show();
+    });
+
+
     <?if (!empty($CanaryDiamontCom)):?>
         //complect to cart
         $(document).on('click', '#w-complect-button-cart', function(){
@@ -340,7 +404,8 @@
             $.ajax({
                 url: 'index.php?route=checkout/cart/add_complect',
                 type: 'POST',
-                data: 'diamond_id='+$('#w-diamond-com-id').val()+'&product_id='+$('#w-product-com-id').val()+'&'+$('#w-product-option').val(),
+
+                data: {diamond_id: $('#w-diamond-com-id').val(), product_id: $('#w-product-com-id').val(), option_index: $('.w-option-size').data('product_option_id'), option_value: $('.w-option-size').val()},
                 dataType: 'json',
                 beforeSend: function() {
                     $('.container-loader').show();
@@ -373,7 +438,7 @@
                 $.ajax({
                     url: 'index.php?route=checkout/cart/add_complect',
                     type: 'POST',
-                    data: 'gemston_id='+$('#w-gemston-com-id').val()+'&product_id='+$('#w-product-com-id').val()+'&'+$('#w-product-option').val(),
+                    data: {gemston_id: $('#w-gemston-com-id').val(), product_id: $('#w-product-com-id').val(), option_index: $('.w-option-size').data('product_option_id'), option_value: $('.w-option-size').val()},
                     dataType: 'json',
                     beforeSend: function() {
                         $('.container-loader').show();

@@ -803,6 +803,11 @@ class ControllerCheckoutCart extends Controller {
     public function add_complect () {
 
         $this->uid = uniqid(rand(),1);
+        //dd($this->request->post, true);
+
+        if (!empty($this->request->post['option_index'])) {
+            $this->request->post['option'][$this->request->post['option_index']] = $this->request->post['option_value'];
+        }
 
         if (!empty($this->request->post['gemston_id'])) {
             $this->add($this->request->post['gemston_id']);
@@ -815,6 +820,8 @@ class ControllerCheckoutCart extends Controller {
         if (!empty($this->request->post['product_id'])) {
             $this->add($this->request->post['product_id']);
         }
+
+        //
 
         Cookie::delete('CanaryProductComGemstonToRing');
         Cookie::delete('CanaryProductCom');
