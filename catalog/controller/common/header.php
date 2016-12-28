@@ -213,7 +213,7 @@ class ControllerCommonHeader extends Controller {
             '/catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css',
             '/catalog/view/theme/canary/vendor/select2/dist/css/select2.min.css',
             '/catalog/view/theme/canary/css/easydropdown.css',
-//            '/catalog/view/theme/canary/css/style-1480021565519.css',
+//            '/catalog/view/theme/canary/css/style-1480021565520.css',
             //'/catalog/view/theme/canary/stylesheet/stylesheet-1457910874844.css',
 //            '/catalog/view/theme/canary/css/w_style-1480414222870.css',
 //            '/catalog/view/theme/canary/css/desktop-1480446257644.css'

@@ -26,7 +26,8 @@ class ControllerCommonHome extends Controller {
 
         $data['home_search_for_diamond'] = $this->load->view($this->config->get('config_template') . '/template/common/home_search_for_diamond.tpl');
         $data['home_best_quality_and_service'] = $this->load->view($this->config->get('config_template') . '/template/common/home_best_quality_and_service.tpl');
-        $data['home_banner'] = $this->load->view($this->config->get('config_template') . '/template/common/home_banner.tpl');
+//        $data['home_banner'] = $this->load->view($this->config->get('config_template') . '/template/common/home_banner.tpl');
+        $data['home_banner'] = null;
         $data['home_top_slider'] = $this->load->view($this->config->get('config_template') . '/template/common/home_top_slider.tpl', $data);
         $data['home_bloc_category'] = $this->load->view($this->config->get('config_template') . '/template/common/home_bloc_category.tpl');
 
