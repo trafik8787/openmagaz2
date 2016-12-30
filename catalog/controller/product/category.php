@@ -20,7 +20,7 @@ class ControllerProductCategory extends Controller {
 			$filter = '';
 		}
 
-       // dd($this->request->get);
+        //dd($this->request->post);
         //передача параметров для фильтра цены
         if (isset($this->request->get['PriceFrom']) and isset($this->request->get['PriceTo'])) {
             //dd($this->request->get);
@@ -229,6 +229,15 @@ class ControllerProductCategory extends Controller {
 
 			$data['products'] = array();
 
+            $start = ($page - 1) * $limit;
+
+            //загрузка товаров по скролу
+            if (!empty($this->request->post['startFrom'])) {
+                $start = $this->request->post['startFrom'];
+                $limit = 8;
+            }
+
+
 			$filter_data = array(
 				'filter_category_id' => $category_id,
 				'filter_filter'      => $filter,
@@ -239,7 +248,7 @@ class ControllerProductCategory extends Controller {
                 'gemston_primary_color' => $gemston_primary_color,
 				'sort'               => $sort,
 				'order'              => $order,
-				'start'              => ($page - 1) * $limit,
+				'start'              => $start,
 				'limit'              => $limit
 			);
 
@@ -247,7 +256,7 @@ class ControllerProductCategory extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
-            //dd($results);
+           // dd(count($results));
 
 			foreach ($results as $result) {
 				if ($result['image']) {
@@ -553,19 +562,31 @@ class ControllerProductCategory extends Controller {
             //текущий url для фильтра(при нажатии на фильт обнулялась подкатегория теперь путь берется из скрытого поля <input type="hidden" class="w-action_page" >)
             $data['action_page'] = $this->url->link('product/category', 'path=' . $this->request->get['path']);
 
+            if (in_ajax()) {
+                if (!empty($this->request->post['startFrom'])) {
+                    $data['ajax'] = true;
+                }
+
+            }
+
+            //шаблон одиночного товара
+            $product_item = $this->load->view($this->config->get('config_template') . '/template/product/category_item.tpl', $data);
+            $data['product_item'] = $product_item;
+
 			if (in_ajax()) {
 
+                if (!empty($this->request->post['startFrom'])) {
+                    echo $product_item;
+                }
 
-                if (empty($_POST['general_category'])) {
+                if (empty($_POST['general_category']) and empty($this->request->post['startFrom'])) {
                     echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax.tpl', $data);
                 } else {
-
-                   echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax_general.tpl', $data);
-
+                   //echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax_general.tpl', $data);
                 }
 
 			} else {
-
+                //dd($product_item);
 				$data['footer'] = $this->load->controller('common/footer');
 				$data['header'] = $this->load->controller('common/header');
 

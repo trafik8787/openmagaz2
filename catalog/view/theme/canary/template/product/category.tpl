@@ -38,7 +38,7 @@
             <!--*<h2><?php echo $heading_title; ?></h2>*-->
         </div>
             <div class="list-product w-category-ajax">
-                <div class="filter-product-line">
+                <div class="filter-product-line w-ajax-loader-page">
                     <div class="center-bl clearfix" style="max-width: 1247px;">
                         <div class="pull-left left-drop-f">
                             <span>Sort By:</span>
@@ -90,49 +90,15 @@
                         </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($products as $product):?>
-                                <tr>
-                                    <td>
-                                        <div class="product-item">
-                                            <div class="box-img">
-                                                <a href="<?php echo $product['href']; ?>" ><img src="<?php echo $product['thumb']; ?>"  alt="<?php echo $product['name']; ?>"
-                                                                 title="<?php echo $product['name']; ?>"></a>
-                                            </div>
-                                            <div class="box-tovar-th">
-                                                <div class="name"><?php echo $product['name']; ?></div>
 
-                                                <?php if (!$product['special']):?>
-                                                    <span class="price"><?php echo $product['price']; ?></span>
-                                                <?else:?>
-                                                    <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $product['special']; ?></span>
-                                                    <b class="w-special-price"> <?php echo $product['price']; ?></b>
-                                                <?endif?>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td data-th="Name"><?php echo $product['name']; ?></td>
-                                    <td data-th="Stock Number" class="stnumber-td"><?=$product['sku']?></td>
-                                    <td data-th="Price">
-                                        <?php if (!$product['special']):?>
-                                            <span class="price"><?php echo $product['price']; ?></span>
-                                        <?else:?>
-                                            <b class="w-special-price"> <?php echo $product['price']; ?></b>
-                                            <span class="price" style="color: #2b2a29; font-size: 18px!important; font-weight: bold;"><?php echo $product['special']; ?></span>
-                                        <?endif?>
-                                    </td>
-                                    <td></td>
-                                    <td>
-                                        <a href="#" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-exchange"></i></a>
-                                        <a href="#" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-heart"></i></a>
-                                    </td>
-                                </tr>
-                            <?endforeach?>
+                            <?=$product_item?>
+
                         </tbody>
                     </table>
                 </div>
-                <div class="center-bl clearfix">
-                    <div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>
-                </div>
+                <!--*<div class="center-bl clearfix">*-->
+                    <!--*<div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>*-->
+                <!--*</div>*-->
                 <?if (!empty(strip_tags($description))):?>
 
                     <div class="box-stat-text center-bl">

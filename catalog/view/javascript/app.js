@@ -74,6 +74,48 @@ $(document).ready(function() {
     });
 
 
+    var inProgress = false;
+    var startFrom = 16;
+
+    $(document).on("DOMSubtreeModified",function(){
+        inProgress = false;
+    });
+
+    $(window).scroll(function() {
+        if ($('.w-ajax-loader-page').length>0) {
+            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 800 && !inProgress) {
+
+                $.ajax({
+                    url: location,
+                    type: 'post',
+                    data:  {"startFrom" : startFrom},
+                    dataType: 'html',
+                    beforeSend: function () {
+                        $('.container-loader').show();
+                        inProgress = true;
+                    },
+                    complete: function () {
+                        $('.container-loader').hide();
+                        startFrom += 8;
+                    },
+                    success: function (json) {
+
+
+                        if (json.length > 0) {
+                            var $ner = $(json);
+                            $('.main-catalog-container table tbody').append($ner);
+                            $ner.fadeIn("slow");
+                            inProgress = false;
+                        } else {
+                            console.log(json);
+                            inProgress = true;
+                        }
+                    }
+                });
+            }
+        }
+    });
+
 
 
     $('.stack-responsive').stacktable();
