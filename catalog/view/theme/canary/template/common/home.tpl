@@ -12,9 +12,9 @@
                         <div class="center-bl w-content-baner clearfix">
                             <div class="col-md-6 col-sm-5 col-xs-12">
                                 <div class="w-ac-baner-text">
-                                    <div class="w-ac-baner-text0">Buy Engagement Ring and</div>
+                                    <div class="w-ac-baner-text0">Buy an Engagement Ring and</div>
                                     <div class="w-ac-baner-text1">GET 20% OFF</div>
-                                    <div class="w-ac-baner-text2">YOUR WEDDING BAND</div>
+                                    <div class="w-ac-baner-text2">YOUR WEDDING RING</div>
                                     <div class="w-shop-now-bloc">
                                         <!--*<i></i>*-->
                                         <a href="/fine-jewelry" role="button" class="btn w-btn-orange2 shop-now">SHOP NOW</a>

@@ -13,9 +13,14 @@
 @media screen and (max-width: 1200px){
 
     .w-ac-baner-text {
-
-top: 20px;
+text-align: center;
+top: 128px;
 }
+
+    .home-top-baneer {
+        background: url("/catalog/view/theme/canary/img/demo_new_template/BANNER_MOB_15.jpg") no-repeat center/cover!important;
+        width: 100%;
+    }
 
   .line-cart-low-price > div{
     width: 100%;
@@ -395,6 +400,15 @@ top: 20px;
 }
 
 @media  (max-width: 768px){
+
+    .home-top-baneer {
+        background: url("/catalog/view/theme/canary/img/demo_new_template/BANNER_MOB_15.jpg") no-repeat center/cover!important;
+        width: 100%;
+    }
+
+    .w-ac-baner-text {
+        text-align: center;
+    }
 
   .w-copirait{
     margin: 20px 15px;
@@ -1093,6 +1107,12 @@ left: 399px!important;
 @media  (max-width: 480px){
 
 
+
+    .home-top-baneer {
+        background: url("/catalog/view/theme/canary/img/demo_new_template/BANNER_MOB_15.jpg") no-repeat center/cover!important;
+        width: 100%;
+    }
+
     .yellow-block .one-block > * {
         display: block;
         text-align: center;
@@ -1131,12 +1151,13 @@ left: 399px!important;
     }
 
     .w-ac-baner-text {
-        font-weight: bold;
+        /*font-weight: bold;*/
         position: relative;
         top: 21px;
+        text-align: center;
     }
     .w-ac-baner-text0 {
-
+        margin-bottom: 17px;
     }
     .w-ac-baner-text1 {
 
