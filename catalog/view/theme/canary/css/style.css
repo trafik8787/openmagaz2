@@ -5452,8 +5452,8 @@ footer > section .row {
   display: flex;
 }
 .wrapper-product-table.th-view .product-item .box-img img {
-  max-height: 100% !important;
   -webkit-border-radius:10px;
+  /* max-height: 100%!important; */
   -moz-border-radius:10px;
   border-radius:10px;
 }
@@ -5513,7 +5513,7 @@ footer > section .row {
 .wrapper-product-table.th-view .box-tovar-th {
   width: 100%;
   position: absolute;
-  top: 175px;
+  top: 218px;
   left: 0;
   display: block;
   font-size: 18px;
@@ -5535,7 +5535,7 @@ footer > section .row {
   display: none;
 }
 .wrapper-product-table.th-view tbody tr {
-  height: 360px;
+  height: 380px;
   width: 22%;
   margin-bottom: 30px;
   margin-right: 3.8%;
@@ -5577,7 +5577,8 @@ footer > section .row {
   font-size: 16px;
   text-align: center; }
 .wrapper-product-table .table tbody tr td:nth-child(1) {
-  width: 285px; }
+  width: 300px;
+  }
 .wrapper-product-table .table tbody tr td .price {
   color: #2f2e2d;
   font-size: 15px!important;
@@ -5586,38 +5587,22 @@ footer > section .row {
 }
 .wrapper-product-table .table tbody tr td i {
   font-size: 16px; }
-.wrapper-product-table .table tbody tr td .product-item:after{
-  width: 270px;
-  height: 7px;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  content: "";
-  background: url("/catalog/view/theme/canary/img/shedow-item.png") no-repeat center / contain;
-}
+
 .wrapper-product-table .table tbody tr td .product-item {
   overflow: hidden;
   padding: 5px;
-  border: 1px solid #cfcfcf;
+  border: 1px solid transparent;
   text-align: center;
   position: relative;
   -webkit-border-radius:5px;
   -moz-border-radius:5px;
   border-radius:5px;
-  background: -moz-linear-gradient(top, #ffffff 66%, #ededed 100%);
-  background: -webkit-linear-gradient(top, #ffffff 66%, #ededed 100%);
-  background: -o-linear-gradient(top, #ffffff 66%, #ededed 100%);
-  background: -ms-linear-gradient(top, #ffffff 66%, #ededed 100%);
-  background: linear-gradient(top, #ffffff 66%, #ededed 100%);
 }
 .wrapper-product-table .table tbody tr td .product-item img {
-  max-width: 70%;
-  max-height: 130px; }
+  max-width: 100%;
+  }
 .wrapper-product-table .table tbody tr td .product-item:hover {
-  border: 1px solid #a4c0eb;
-  -webkit-box-shadow: 0 0 14px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0 0 14px rgba(0,0,0,0.2);
-  box-shadow: 0 0 14px rgba(0,0,0,0.2);
+  border: 1px solid #d0cfcf;
 }
 /*.wrapper-product-table .table tbody tr td .product-item:hover .btn-box {*/
 /*top: 31px;*/

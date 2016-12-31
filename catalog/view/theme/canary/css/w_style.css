@@ -5121,7 +5121,7 @@ text-align: left;
 @media (max-width: 640px) {
     .main-catalog-container.wrapper-product-table.th-view tbody tr {
         width: 50%;
-        height: 260px;
+        height: 270px;
     }
 
     .main-catalog-container.wrapper-product-table.th-view .product-item .name {
@@ -5133,7 +5133,7 @@ text-align: left;
     }
 
     .main-catalog-container.wrapper-product-table.th-view .box-tovar-th {
-        top: 100px;
+        top: 125px;
     }
 
     .main-catalog-container.wrapper-product-table.th-view .price {
