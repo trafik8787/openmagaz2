@@ -2,6 +2,10 @@
     <tr <?if(isset($ajax)):?>style="display: none;"<?endif?>>
         <td>
             <div class="product-item">
+                <span class="w-item-glyphicon-bloc">
+                    <i class="glyphicon glyphicon-heart w-glyphicon-heart <?if ($product['wishlist']):?> active <?endif?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;" style="display: none"></i>
+                    <i class="fa fa-exchange w-glyphicon-sort <?if ($product['compare']):?> active <?endif?>" aria-hidden="true" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;" style="display: none"></i>
+                </span>
                 <div class="box-img">
                     <a href="<?php echo $product['href']; ?>" ><img src="<?php echo $product['thumb']; ?>"  alt="<?php echo $product['name']; ?>"
                                                                     title="<?php echo $product['name']; ?>"></a>

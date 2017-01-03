@@ -5598,6 +5598,45 @@ footer > section .row {
   -moz-border-radius:5px;
   border-radius:5px;
 }
+
+.w-item-glyphicon-bloc .w-glyphicon-heart {
+    color: transparent;
+    -webkit-text-stroke: 1px #969594;
+    font-size: 22px!important;
+    font-weight: bold;
+}
+
+.w-item-glyphicon-bloc .w-glyphicon-sort.active,
+.w-item-glyphicon-bloc .w-glyphicon-heart.active {
+    color: #9ab6d9;
+    display: inline-block!important;
+    -webkit-text-stroke: inherit;
+}
+
+.w-item-glyphicon-bloc .w-glyphicon-sort {
+    font-size: 20px!important;
+    color: #969594;
+    position: relative;
+    top: -4px;
+    margin-left: 8px;
+}
+.w-glyphicon-sort:hover {
+    color: #9ab6d9;
+}
+.w-glyphicon-heart:hover {
+    color: #9ab6d9;
+    -webkit-text-stroke: inherit;
+}
+.w-item-glyphicon-bloc {
+    
+display: block;
+    
+position: absolute;
+    
+right: 16px;
+    
+top: 12px;
+}
 .wrapper-product-table .table tbody tr td .product-item img {
   max-width: 100%;
   }

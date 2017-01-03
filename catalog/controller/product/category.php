@@ -302,6 +302,12 @@ class ControllerProductCategory extends Controller {
 					$rating = false;
 				}
 
+				if (in_array($result['product_id'], $this->session->data['compare'])) {
+                    $compare = true;
+                } else {
+                    $compare = false;
+                }
+
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
@@ -313,7 +319,9 @@ class ControllerProductCategory extends Controller {
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
 					'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url),
-                    'sku'         => $result['sku']
+                    'sku'         => $result['sku'],
+                    'wishlist'    => isset($this->session->data['wishlist'][$result['product_id']]) ? $this->session->data['wishlist'][$result['product_id']]: null,
+                    'compare'     => $compare
 				);
 			}
 
@@ -558,6 +566,7 @@ class ControllerProductCategory extends Controller {
             $data['column_right'] = $this->load->controller('common/column_right');
             $data['content_top'] = $this->load->controller('common/content_top');
             $data['content_bottom'] = $this->load->controller('common/content_bottom');
+
 
             //текущий url для фильтра(при нажатии на фильт обнулялась подкатегория теперь путь берется из скрытого поля <input type="hidden" class="w-action_page" >)
             $data['action_page'] = $this->url->link('product/category', 'path=' . $this->request->get['path']);
