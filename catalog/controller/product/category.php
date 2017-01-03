@@ -302,8 +302,12 @@ class ControllerProductCategory extends Controller {
 					$rating = false;
 				}
 
-				if (in_array($result['product_id'], $this->session->data['compare'])) {
-                    $compare = true;
+				if (!empty($this->session->data['compare'])) {
+                    if (in_array($result['product_id'], $this->session->data['compare'])) {
+                        $compare = true;
+                    } else {
+                        $compare = false;
+                    }
                 } else {
                     $compare = false;
                 }
