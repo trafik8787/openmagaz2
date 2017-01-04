@@ -27,7 +27,7 @@
     </script>
     <?=$stylelink?>
     <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565524.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565525.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style-1480414222872.css"/>
     <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop-1480446257645.css"/>
     <style media="print" rel="stylesheet" type="text/css">
