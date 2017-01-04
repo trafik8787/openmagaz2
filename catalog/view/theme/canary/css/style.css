@@ -706,10 +706,10 @@ section.containaer-home > .row {margin-left: 0;margin-right: 0;}
   box-shadow: inset 0 3px 10px rgba(156, 155, 155, 0.89), 0 -1px 1px rgba(160, 158, 156, 0.53);
 }
 .w-baner-rings {
-    background: url("/catalog/view/theme/canary/img/demo_new_template/RING_16.png") no-repeat;
+    background: url("/catalog/view/theme/canary/img/demo_new_template/RING_16.jpg") no-repeat;
     width: 100%;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 19%;
     z-index: 0;
     height: 100%;

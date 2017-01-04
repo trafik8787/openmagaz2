@@ -10,7 +10,7 @@
                 <div class="home-top-baneer">
                     <div class="row">
                         <div class="center-bl w-content-baner clearfix">
-                            <div class="w-baner-rings"></div>
+                            <div class="w-baner-rings hidden-xs hidden-sm hidden-md"></div>
                             <div class="col-md-6 col-sm-5 col-xs-12">
                                 <div class="w-ac-baner-text">
                                     <div class="w-ac-baner-text0">Buy an Engagement Ring and</div>
