@@ -355,8 +355,8 @@ function get_baners_top_random () {
         array('/image/baners-top/baner2.jpg','/company#lifetime-warranty'),
         array('/image/baners-top/baner3.jpg','/company#no-hassle-returns'),
         array('/image/baners-top/baner4.jpg','/company#free-appraisal'),
-        array('/image/baners-top/baner5.jpg','/company#free-appraisal'),
-        array('/image/baners-top/baner6.jpg','/wedding-rings')
+        array('/image/baners-top/baner5.jpg','/company#free-appraisal')
+//        array('/image/baners-top/baner6.jpg','/wedding-rings')
     );
     $key = array_rand($arr, 1);
 

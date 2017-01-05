@@ -216,11 +216,25 @@ class ControllerProductSearch extends Controller {
 
 
 			foreach ($results as $result) {
-				if ($result['image']) {
-					$image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
-				} else {
+
+                if ($result['image']) {
+
+                    $ext = pathinfo(basename($result['image']));
+                    if (!empty($ext['extension']) and $ext['extension'] == 'jpe') {
+                        $image = HostSite('/image/'.$result['image']);
+                    } else {
+
+                        $image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+                        if (empty($image)) {
+                            $image = '/catalog/view/theme/canary/img/preloader.png';
+                        }
+                    }
+
+                } else {
+                    //$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
                     $image = '/catalog/view/theme/canary/img/preloader.png';
-				}
+                }
+
 
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
@@ -460,15 +474,42 @@ class ControllerProductSearch extends Controller {
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
-        if (!in_ajax()) {
-            $data['footer'] = $this->load->controller('common/footer');
-            $data['header'] = $this->load->controller('common/header');
+
+
+        if (in_ajax()) {
+            if (!empty($this->request->post['startFrom'])) {
+                $data['ajax'] = true;
+            }
+
         }
 
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/search.tpl')) {
-			$this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/search.tpl', $data));
-		} else {
-			$this->response->setOutput($this->load->view('default/template/product/search.tpl', $data));
-		}
+        //шаблон одиночного товара
+        $product_item = $this->load->view($this->config->get('config_template') . '/template/product/category_item.tpl', $data);
+        $data['product_item'] = $product_item;
+
+        if (in_ajax()) {
+            if (!empty($this->request->post['startFrom'])) {
+                echo $product_item;
+            }
+
+            if (empty($_POST['general_category']) and empty($this->request->post['startFrom'])) {
+                echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax.tpl', $data);
+            } else {
+                //echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax_general.tpl', $data);
+            }
+
+        } else {
+
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+
+            if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/search.tpl')) {
+                $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/search.tpl', $data));
+            } else {
+                $this->response->setOutput($this->load->view('default/template/product/search.tpl', $data));
+            }
+        }
+
+
 	}
 }

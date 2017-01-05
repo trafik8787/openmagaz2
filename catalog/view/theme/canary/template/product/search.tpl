@@ -38,7 +38,7 @@
         <div class="list-product w-category-ajax">
 
             <?php if ($products) :?>
-                <div class="filter-product-line">
+                <div class="filter-product-line w-ajax-loader-page">
                     <div class="center-bl clearfix">
                         <div class="pull-left left-drop-f">
                             <span>Sort By:</span>
@@ -53,27 +53,27 @@
                                     <?php } ?>
                                 </select>
                             </div>
-                            <span>Product compare (0)</span>
+                            <!--*<span>Product compare (0)</span>*-->
                         </div>
 
                         <div class="view-product">
-                            <button class="list-btn btn-view" data-toggle="tooltip" data-placement="top" title="list"><i class="list-ico"></i></button>
-                            <button class="th-btn btn-view active" data-toggle="tooltip" data-placement="top" title="block"><i class="block-ico"></i></button>
+                            <button class="list-btn btn-view" data-toggle="tooltip" data-placement="top" title="list"><i class="fa fa-list" aria-hidden="true"></i></button>
+                            <button class="th-btn btn-view active" data-toggle="tooltip" data-placement="top" title="block"><i class="fa fa-th-large" aria-hidden="true"></i></button>
                         </div>
-                        <div class="show-b">
-                            <span>Show:</span>
-                            <div class="dropdown">
-                                <select id="input-limit" class="form-control" onchange="input_sort(this.value);">
-                                    <?php foreach ($limits as $limits) { ?>
-                                    <?php if ($limits['value'] == $limit) { ?>
-                                    <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-                                    <?php } else { ?>
-                                    <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-                                    <?php } ?>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                        </div>
+                        <!--*<div class="show-b">*-->
+                            <!--*<span>Show:</span>*-->
+                            <!--*<div class="dropdown">*-->
+                                <!--*<select id="input-limit" class="form-control" onchange="input_sort(this.value);">*-->
+                                    <!--*<?php foreach ($limits as $limits) { ?>*-->
+                                    <!--*<?php if ($limits['value'] == $limit) { ?>*-->
+                                    <!--*<option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>*-->
+                                    <!--*<?php } else { ?>*-->
+                                    <!--*<option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>*-->
+                                    <!--*<?php } ?>*-->
+                                    <!--*<?php } ?>*-->
+                                <!--*</select>*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
                     </div>
                 </div>
 
@@ -95,41 +95,7 @@
                         <tbody>
 
 
-                        <?//dd($products)?>
-                        <?php foreach ($products as $product):?>
-                        <tr>
-                            <td>
-                                <div class="product-item">
-                                    <div class="box-img">
-                                        <a href="<?php echo $product['href']; ?>" ><img src="<?php echo $product['thumb']; ?>"  alt="<?php echo $product['name']; ?>"
-                                                                                        title="<?php echo $product['name']; ?>"></a>
-                                    </div>
-
-
-                                    <div class="box-tovar-th">
-                                        <div class="name"><?php echo $product['name']; ?></div>
-
-                                        <?php if (!$product['special']):?>
-                                        <span class="price"><?php echo $product['price']; ?></span>
-                                        <?else:?>
-                                        <span class="price"><?php echo $product['special']; ?></span>
-                                        <span class="discount"> <?php echo $product['price']; ?></span>
-                                        <?endif?>
-
-
-                                    </div>
-                                </div>
-                            </td>
-                            <td data-th="Name"><?php echo $product['name']; ?></td>
-                            <td data-th="Stock Number" class="stnumber-td"><?=$product['sku']?></td>
-                            <td data-th="Price"><div class="price"><?php echo $product['price']; ?></div></td>
-                            <td></td>
-                            <td>
-                                <a href="#" onclick="compare.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-exchange"></i></a>
-                                <a href="#" onclick="wishlist.add('<?php echo $product['product_id']; ?>'); return false;"><i class="fa fa-heart"></i></a>
-                            </td>
-                        </tr>
-                        <?endforeach?>
+                        <?=!empty($product_item) ? $product_item : 'No search'?>
 
 
 
@@ -139,9 +105,9 @@
                 </div>
 
 
-                <div class="center-bl clearfix">
-                    <div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>
-                </div>
+                <!--*<div class="center-bl clearfix">*-->
+                    <!--*<div class="text-center w-pagination-product"><?=isset($pagination)? $pagination : ''?></div>*-->
+                <!--*</div>*-->
             <?else:?>
                 <div class="center-bl clearfix">
                     <div class="row form-static w-page-search">

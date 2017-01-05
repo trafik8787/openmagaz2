@@ -61,20 +61,20 @@
                             <button class="list-btn btn-view" data-toggle="tooltip" data-placement="top" title="list"><i class="fa fa-list" aria-hidden="true"></i></button>
                             <button class="th-btn btn-view active" data-toggle="tooltip" data-placement="top" title="block"><i class="fa fa-th-large" aria-hidden="true"></i></button>
                         </div>
-                        <div class="show-b">
-                            <span>Show:</span>
-                            <div class="dropdown">
-                                <select id="input-limit" class="form-control" onchange="input_sort(this.value);">
-                                    <?php foreach ($limits as $limits) { ?>
-                                    <?php if ($limits['value'] == $limit) { ?>
-                                    <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-                                    <?php } else { ?>
-                                    <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-                                    <?php } ?>
-                                    <?php } ?>
-                                </select>
-                            </div>
-                        </div>
+                        <!--*<div class="show-b">*-->
+                            <!--*<span>Show:</span>*-->
+                            <!--*<div class="dropdown">*-->
+                                <!--*<select id="input-limit" class="form-control" onchange="input_sort(this.value);">*-->
+                                    <!--*<?php foreach ($limits as $limits) { ?>*-->
+                                    <!--*<?php if ($limits['value'] == $limit) { ?>*-->
+                                    <!--*<option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>*-->
+                                    <!--*<?php } else { ?>*-->
+                                    <!--*<option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>*-->
+                                    <!--*<?php } ?>*-->
+                                    <!--*<?php } ?>*-->
+                                <!--*</select>*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
 
                     </div>
                 </div>
