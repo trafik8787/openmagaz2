@@ -107,8 +107,8 @@ $(document).ready(function() {
                             $ner.fadeIn("slow");
                             inProgress = false;
                         } else {
-                            console.log(json);
                             inProgress = true;
+                            startFrom = 16;
                         }
                     }
                 });
