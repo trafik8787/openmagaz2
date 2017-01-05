@@ -12,7 +12,7 @@
                             </div>
                             <?php foreach (arr_filtr_stone_type() as $val => $rows) :?>
                             <label class="btn btn-filter brackets">
-                                <input type="checkbox" name="stone_type_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($stone_type_gem) and in_array($val, $stone_type_gem)) :?> checked="checked" <?endif?>>
+                                <input type="radio" name="stone_type_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($stone_type_gem) and in_array($val, $stone_type_gem)) :?> checked="checked" <?endif?>>
                                 <i class="brilliant-ico2 brilliant-s1"></i>
                                 <span><?php echo $rows; ?></span>
                             </label>
@@ -45,7 +45,7 @@
                             </div>
                             <?php foreach (arr_primary_color() as $val => $rows) :?>
                             <label class="btn btn-filter brackets">
-                                <input type="checkbox" name="primary_color_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($primary_color_gem) and in_array($val, $primary_color_gem)) :?> checked="checked" <?endif?>>
+                                <input type="radio" name="primary_color_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($primary_color_gem) and in_array($val, $primary_color_gem)) :?> checked="checked" <?endif?>>
                                 <i class="color-circle" style="border-color: <?php echo $rows[1]; ?>"></i>
                                 <span><?php echo $rows[0]; ?></span>
                             </label>
@@ -73,13 +73,13 @@
                         <div class="btn-group-filter w-group-shape box-color gemstones-box rings-box" data-toggle="buttons">
 
                             <div class="all-line-filter-gem btn btn-filter brackets" style="width: 35px;margin-right: 0;">
-                                <input type="checkbox" name="shape_gem" value="0" class="checkbox" <? if (in_array(0, $shape_gem)) :?> checked="checked" <?endif?>>
+                                <input type="radio" name="shape_gem" value="0" class="checkbox" <? if (in_array(0, $shape_gem)) :?> checked="checked" <?endif?>>
                                 <span class="color-all">All</span>
                             </div>
 
                             <?php foreach (arr_filtr_shape() as $val => $rows) :?>
                                 <label class="btn btn-filter brackets <? if (is_array($shape_gem) and in_array($val, $shape_gem)) :?> active <?endif?>">
-                                    <input type="checkbox" name="shape_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($shape_gem) and in_array($val, $shape_gem)) :?> checked="checked" <?endif?>>
+                                    <input type="radio" name="shape_gem[]" value="<?php echo $val; ?>" class="checkbox" <? if (is_array($shape_gem) and in_array($val, $shape_gem)) :?> checked="checked" <?endif?>>
                                     <i class="<?php echo $rows[1]; ?>"></i>
                                     <span><?php echo $rows[0]; ?></span>
                                 </label>
