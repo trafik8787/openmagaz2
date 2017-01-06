@@ -251,8 +251,8 @@ class ControllerModuleParseGemstons extends Controller {
         $this->category[] = 94;
 
         $this->deleteProduct();
-        //$filePath = '/home/canary/www/sylviogems.csv';
-        $filePath = '/home/brilliantcanary/gems_pars/sylviogems.csv';
+        $filePath = '/home/canary/www/sylviogems.csv';
+        //$filePath = '/home/brilliantcanary/gems_pars/sylviogems.csv';
         $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
@@ -270,7 +270,7 @@ class ControllerModuleParseGemstons extends Controller {
             $this->image_galery = array();
             $curent = $file->current();
 
-            if (!empty($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'RBL' AND $curent[2] !== 'GB' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0) {
+            if (!empty($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'RBL' AND $curent[2] !== 'GB' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0 AND $curent[6]{0} != 'x' AND $curent[6]{0} != 'X') {
            //dd($curent);
                 if ($this->copyImage($curent[8]) OR true) {
 
