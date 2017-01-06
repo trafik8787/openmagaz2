@@ -1408,6 +1408,13 @@ input:focus{
   background-repeat: no-repeat;
 }
 
+.icon-ab-seal {
+    background: url("/catalog/view/theme/canary/img/ab-seal-horizontal.png") no-repeat center/contain;
+    display: inline-block;
+    height: 39px;
+    width: 104px;
+}
+
 .icon-facebook {
   background-position: 0 0;
   display: inline-block;
