@@ -196,6 +196,15 @@ class ControllerProductSearch extends Controller {
 
 		$data['products'] = array();
 
+        $start = ($page - 1) * $limit;
+
+        //загрузка товаров по скролу
+        if (!empty($this->request->post['startFrom'])) {
+            $start = $this->request->post['startFrom'];
+            $limit = 16;
+        }
+
+
 		if (isset($this->request->get['search']) || isset($this->request->get['tag'])) {
 			$filter_data = array(
 				'filter_name'         => $search,
@@ -205,7 +214,7 @@ class ControllerProductSearch extends Controller {
 				'filter_sub_category' => $sub_category,
 				'sort'                => $sort,
 				'order'               => $order,
-				'start'               => ($page - 1) * $limit,
+				'start'               => $start,
 				'limit'               => $limit
 			);
 
@@ -237,7 +246,7 @@ class ControllerProductSearch extends Controller {
 
 
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+					$price = $this->currency->format($this->tax->calculate(ceil($result['price']), $result['tax_class_id'], $this->config->get('config_tax')));
 				} else {
 					$price = false;
 				}

@@ -26,7 +26,7 @@
 
         <div class="about-wrapper">
             <div class="about-top">
-                <div class="center-bl">
+                <div class="center-bl" id="production-and-delivery">
                     <div class="about-header">
                         <div class="about-title">ABOUT COMPANY</div>
                         <div class="icons-quality_service_icon"></div>
