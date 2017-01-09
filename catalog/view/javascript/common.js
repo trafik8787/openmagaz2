@@ -57,7 +57,7 @@ $(document).ready(function() {
 		var value = $('header input[name=\'search\']').val();
 
 		if (value) {
-			url += '&search=' + encodeURIComponent(value);
+			url += '?search=' + encodeURIComponent(value);
 		}
 
 		location = url;
@@ -69,7 +69,7 @@ $(document).ready(function() {
 		var value = $('.w-page-search input[name=\'search\']').val();
 
 		if (value) {
-			url += '&search=' + encodeURIComponent(value);
+			url += '?search=' + encodeURIComponent(value);
 		}
 
 		location = url;

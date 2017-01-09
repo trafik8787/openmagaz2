@@ -164,7 +164,7 @@ $('#button-search').bind('click', function() {
 	var search = $('#content input[name=\'search\']').prop('value');
 
 	if (search) {
-		url += '&search=' + encodeURIComponent(search);
+		url += '?search=' + encodeURIComponent(search);
 	}
 
 	var category_id = $('#content select[name=\'category_id\']').prop('value');
