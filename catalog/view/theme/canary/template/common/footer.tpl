@@ -192,7 +192,7 @@
                             <div class="box-right-footer">
                                 <div class="title-follow ">Follow us</div>
                                 <ul class="list-inline text-right">
-                                    <li><span class="icon-ab-seal"></span></li>
+                                    <li><a href="https://www.bbb.org/nashville/business-reviews/jewelers-retail/brilliant-canary-in-nashville-tn-37144907"><span class="icon-ab-seal"></span></a></li>
                                     <li><a href="https://www.facebook.com/BrilliantCanaryRings" target="_blank" class="icon-facebook"></a></li>
                                     <li><a href="https://twitter.com/TheBrilliantC" target="_blank" class="icon-twitter"></a></li>
                                     <li><a href="https://www.instagram.com/brilliantcanaryrings/" target="_blank" class="icon-instagram"></a></li>

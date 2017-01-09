@@ -37,7 +37,7 @@
                         </div>
                         <div class="right">
                             <div class="title">Brilliant Canary was formed with the customer in mind. Through many years of working in the industry, we heard the wants and needs of our customers.</div>
-                            With these in mind, we established a company that puts an emphasis on providing exceptional education, quality and service at the best price. Our jewelry is designed and crafted in the United States of America. By supporting manufacturers in the United States, we can provide our customers with the highest quality jewelry at a faster delivery time and an exceptional price.
+                            With these in mind, we established a company that puts an emphasis on providing exceptional education, quality and service at the best price. Our jewelry is designed and crafted in the United States of America. By supporting manufacturers in the United States, we can provide our customers with the highest quality jewelry at a faster delivery time and an exceptional price. Most orders are complete in less than two weeks.
                         </div>
                     </div>
                 </div>
