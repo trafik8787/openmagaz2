@@ -234,7 +234,7 @@ class ControllerProductCategory extends Controller {
             //загрузка товаров по скролу
             if (!empty($this->request->post['startFrom'])) {
                 $start = $this->request->post['startFrom'];
-                $limit = 8;
+                $limit = 16;
             }
 
 
@@ -278,7 +278,7 @@ class ControllerProductCategory extends Controller {
 				}
 
 				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+					$price = $this->currency->format($this->tax->calculate(ceil($result['price']), $result['tax_class_id'], $this->config->get('config_tax')));
 				} else {
 					$price = false;
 				}

@@ -83,7 +83,7 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
         if ($('.w-ajax-loader-page').length>0) {
-            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 800 && !inProgress) {
+            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1800 && !inProgress) {
 
                 $.ajax({
                     url: location,
@@ -91,12 +91,12 @@ $(document).ready(function() {
                     data:  {"startFrom" : startFrom},
                     dataType: 'html',
                     beforeSend: function () {
-                        $('.container-loader').show();
+                        //$('.container-loader').show();
                         inProgress = true;
                     },
                     complete: function () {
-                        $('.container-loader').hide();
-                        startFrom += 8;
+                        //$('.container-loader').hide();
+                        startFrom += 16;
                     },
                     success: function (json) {
 
