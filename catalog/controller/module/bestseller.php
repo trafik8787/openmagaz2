@@ -17,6 +17,7 @@ class ControllerModuleBestSeller extends Controller {
 
 		$data['products'] = array();
 
+
 		$results = $this->model_catalog_product->getBestSellerProducts($setting['limit']);
 
 		if ($results) {
