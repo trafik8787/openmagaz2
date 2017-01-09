@@ -86,7 +86,7 @@ $(document).ready(function() {
             if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1800 && !inProgress) {
 
                 $.ajax({
-                    url: location,
+                    url: location.pathname,
                     type: 'post',
                     data:  {"startFrom" : startFrom},
                     dataType: 'html',
@@ -99,7 +99,6 @@ $(document).ready(function() {
                         startFrom += 16;
                     },
                     success: function (json) {
-
 
                         if (json.length > 0) {
                             var $ner = $(json);
