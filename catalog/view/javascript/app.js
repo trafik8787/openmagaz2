@@ -84,7 +84,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
          if ($('.w-ajax-loader-page').length>0) {
             if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1800 && !inProgress) {
-
+                inProgress = true;
                 $.ajax({
                     url: location.pathname,
                     type: 'post',
@@ -92,7 +92,6 @@ $(document).ready(function() {
                     dataType: 'html',
                     beforeSend: function () {
                         //$('.container-loader').show();
-                        inProgress = true;
                     },
                     complete: function () {
                         //$('.container-loader').hide();
