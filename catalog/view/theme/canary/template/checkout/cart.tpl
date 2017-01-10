@@ -155,7 +155,7 @@
 
                                 <div class="one-line"><?//dd($options)?>
                                     <div class="box-img">
-                                        <img src="<?=$product['thumb']?>" width="100%" alt="img">
+                                        <a href="<?=$product['href']?>"><img src="<?=$product['thumb']?>" width="100%" alt="img"></a>
                                     </div>
                                     <div class="text-box">
                                         <div class="type"><?if ($product['diamond'] == 1):?>Diamond<?else:?>Rings<?endif?></div>

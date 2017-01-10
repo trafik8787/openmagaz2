@@ -101,10 +101,26 @@ class ControllerCheckoutCart extends Controller {
                 }
 
                 if ($product['image']) {
-                    $image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+
+                    $ext = pathinfo(basename($product['image']));
+                    if (!empty($ext['extension']) and $ext['extension'] == 'jpe') {
+                        $image = HostSite('/image/'.$product['image']);
+                    } else {
+                        $image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+                        if (empty($image)) {
+                            $image = '/catalog/view/theme/canary/img/preloader.png';
+                        }
+                    }
                 } else {
-                    $image = '';
+                    //$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+                    $image = '/catalog/view/theme/canary/img/preloader.png';
                 }
+
+//                if ($product['image']) {
+//                    $image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+//                } else {
+//                    $image = '';
+//                }
 
 
                 //картинка diamond для ресайза
