@@ -111,11 +111,28 @@ class ControllerCommonCart extends Controller {
         $products3_complect = $products;
         foreach ($products as $product) {
 
+
             if ($product['image']) {
-                $image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+
+                $ext = pathinfo(basename($product['image']));
+                if (!empty($ext['extension']) and $ext['extension'] == 'jpe') {
+                    $image = HostSite('/image/'.$product['image']);
+                } else {
+                    $image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+                    if (empty($image)) {
+                        $image = '/catalog/view/theme/canary/img/preloader.png';
+                    }
+                }
             } else {
-                $image = '';
+                //$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+                $image = '/catalog/view/theme/canary/img/preloader.png';
             }
+
+//            if ($product['image']) {
+//                $image = $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
+//            } else {
+//                $image = '';
+//            }
 
             if (!empty($product['diamond']) AND $product['diamond'] == 1) {
                 $image = $product['image'];
@@ -173,30 +190,11 @@ class ControllerCommonCart extends Controller {
 
                         unset($products3_complect[$key]);
 
-
                         if ($product_rows['image']) {
-
-                            $ext = pathinfo(basename($product_rows['image']));
-                            if (!empty($ext['extension']) and $ext['extension'] == 'jpe') {
-                                $images = HostSite('/image/'.$product_rows['image']);
-                            } else {
-
-                                $images = $this->model_tool_image->resize($product_rows['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
-                                if (empty($images)) {
-                                    $images = '/catalog/view/theme/canary/img/preloader.png';
-                                }
-                            }
-
+                            $images = $this->model_tool_image->resize($product_rows['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
                         } else {
-                            //$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
-                            $images = '/catalog/view/theme/canary/img/preloader.png';
+                            $images = '';
                         }
-
-//                        if ($product_rows['image']) {
-//                            $images = $this->model_tool_image->resize($product_rows['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height'));
-//                        } else {
-//                            $images = '';
-//                        }
 
                         if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
                             $prices = $this->currency->format($this->tax->calculate($product_rows['price'], $product_rows['tax_class_id'], $this->config->get('config_tax')));
