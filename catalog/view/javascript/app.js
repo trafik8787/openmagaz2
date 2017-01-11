@@ -81,9 +81,11 @@ $(document).ready(function() {
         inProgress = false;
     });
 
+
     $(window).scroll(function() {
          if ($('.w-ajax-loader-page').length>0) {
             if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1800 && !inProgress) {
+                console.log(startFrom);
                 inProgress = true;
                 $.ajax({
                     url: location.pathname,
@@ -99,15 +101,16 @@ $(document).ready(function() {
                     success: function (json) {
 
                         if (json.length > 0) {
-                            var $ner = $(json);
+                            $ner = $(json);
                             $('.main-catalog-container table tbody').append($ner);
                             $ner.fadeIn("slow");
                             inProgress = false;
                             startFrom += 16;
                         } else {
-                            inProgress = true;
+                            //inProgress = true;
                             startFrom = 16;
                         }
+                        json = null;
                     }
                 });
             }

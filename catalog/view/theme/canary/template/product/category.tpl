@@ -91,7 +91,7 @@
                         </thead>
                         <tbody>
 
-                            <?=$product_item?>
+                            <?//=$product_item?>
 
                         </tbody>
                     </table>
@@ -121,5 +121,32 @@
         $(this).find('.w-glyphicon-heart').not('.w-glyphicon-sort.active').hide();
         $(this).find('.w-glyphicon-sort').not('.w-glyphicon-sort.active').hide();
     });
+
+    $(function () {
+
+        $.ajax({
+            url: location.pathname,
+            type: 'post',
+            data:  {"startFrom" : 1},
+            dataType: 'html',
+            beforeSend: function () {
+                $('.container-loader').show();
+            },
+            complete: function () {
+                $('.container-loader').hide();
+            },
+            success: function (json) {
+
+                if (json.length > 0) {
+                    $ner = $(json);
+                    $('.main-catalog-container table tbody').html($ner);
+                    $ner.fadeIn("slow");
+                }
+
+            }
+        });
+
+    });
+
 </script>
 <?php echo isset($footer) ? $footer : ''; ?>

@@ -256,8 +256,6 @@ class ControllerProductCategory extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
-           // dd(count($results));
-
 			foreach ($results as $result) {
 				if ($result['image']) {
 
