@@ -234,7 +234,7 @@ class ControllerProductCategory extends Controller {
             //загрузка товаров по скролу
             if (!empty($this->request->post['startFrom'])) {
                 $start = $this->request->post['startFrom'];
-                $limit = 16;
+                $limit = 12;
             }
 
 

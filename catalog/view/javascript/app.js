@@ -75,7 +75,7 @@ $(document).ready(function() {
 
 
     var inProgress = false;
-    var startFrom = 16;
+    var startFrom = 12;
 
     $(document).on("DOMSubtreeModified",function(){
         inProgress = false;
@@ -105,10 +105,10 @@ $(document).ready(function() {
                             $('.main-catalog-container table tbody').append($ner);
                             $ner.fadeIn("slow");
                             inProgress = false;
-                            startFrom += 16;
+                            startFrom += 12;
                         } else {
                             //inProgress = true;
-                            startFrom = 16;
+                            startFrom = 12;
                         }
                         json = null;
                     }

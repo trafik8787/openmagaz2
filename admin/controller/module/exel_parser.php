@@ -47,8 +47,49 @@ class ControllerModuleExelParser extends Controller {
     private $price;
     private $file_path;
 
+
+
+    private $fields_tmp;
+    private $category_list_arr;
+
     public function __construct($registry){
         parent::__construct($registry);
+
+        $this->category_list_arr = array(
+            'ENGAGEMENT_RINGS' => 20,
+            'Three-stone' => 63,
+            'Vintage' => 66,
+            'Bezel set' => 64,
+            'Halo' => 65,
+            'Bypass' => 62,
+            'Pave' => 60,
+            'Solitaire' => 59,
+            'Modern'    => 89,
+            'Channel Set' => 61,
+            'JEWELRY_&_GIFTS' => 82,
+            'Diamond Bracelets' => 85,
+            'Diamond Earrings' => 84,
+            'Diamond Pendant' => 86,
+            'Diamond Rings' => 88,
+            'Diamond Studs' => 83,
+            'Diamond Fashion Necklace' => 92,
+            'Gemstone Bracelets' => 93,
+            'Gemstone Earrings' => 87,
+            'Gemstone Pendants' => 91,
+            'Gemstone Rings' => 90,
+            'WEDDING RINGS' => 69,
+            'ALL WOMAN' => 96,
+            'Classic Woman' => 77,
+            'Stackable Woman' => 78,
+            'Eternity Woman' => 81,
+            'Diamond Woman' => 79,
+            'ALL MAN' => 95,
+            'Modern Man' => 75,
+            'Diamond Man' => 74,
+            'Classic Man' => 72,
+            'Carved Man' => 73
+
+        );
 
         $this->list_metal = array(
             '14K White Gold' => 'white_gold_14',
@@ -93,15 +134,22 @@ class ControllerModuleExelParser extends Controller {
         //подключаем файл модели
         $this->load->model('setting/setting');
 
-        if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate() && !$this->request->post['parsing_success']) {
 
-            // dd($this->request->post, true);
-            $this->model_setting_setting->editSetting('exel_parser', $this->request->post);
+        if (!empty($this->request->post['generate_csv'])) {
+            $this->generate_csv();
 
-            $this->session->data['success'] = $this->language->get('text_success');
-
-            $this->response->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'));
         }
+
+//        if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate() && !$this->request->post['parsing_success']) {
+//
+//            // dd($this->request->post, true);
+//            $this->model_setting_setting->editSetting('exel_parser', $this->request->post);
+//
+//            $this->session->data['success'] = $this->language->get('text_success');
+//
+//            $this->response->redirect($this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'));
+//        }
+
 
         if (!empty($this->request->post['parsing_success'])) {
             $data['progres'] = 'Syccess';
@@ -127,7 +175,7 @@ class ControllerModuleExelParser extends Controller {
 
                     break;
                 case 82: //JEWELRY & GIFTS
-                    $this->category_tmp[] = 20;
+                    $this->category_tmp[] = 82;
 
                     $this->category_arr = array(
                         'Diamond Bracelets' => 85,
@@ -466,6 +514,92 @@ class ControllerModuleExelParser extends Controller {
         $this->addProductMetal();
 
     }
+
+
+    public function generate_csv () {
+
+        $title_list = array('Product_ID',
+            'Model',
+            'SKU',
+            'Product Name',
+            'Description',
+            'Meta Tag Title',
+            'Meta Tag Description',
+            'Meta Tag Keywords',
+            'Product Tags',
+            'Width',
+            'Metal',
+            'Manufacturer',
+            'Price',
+            'Discount Price',
+            'Category1',
+            'Category2',
+            'Category3',
+            'Category4',
+            'CARAT WEIGHT',
+            'NUMBER OF DIAMONDS',
+            'AVERAGE COLOR',
+            'AVERAGE CLARITY'
+        );
+
+        $category = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_to_category");
+
+
+        $result =  $this->db->query("SELECT pr.product_id, pr.model, pr.sku, pd.name, pd.description, pd.meta_title, 
+                pd.meta_description,
+                pd.meta_keyword,
+                pd.tag,
+                pr.width,
+                pr.metal,
+                pr.manufacturer_id,
+                pr.price,
+                ps.price as specialPrice 
+                
+                    FROM " . DB_PREFIX . "product as pr 
+                    LEFT JOIN " . DB_PREFIX . "product_description as pd ON (pr.product_id = pd.product_id)
+                    LEFT JOIN " . DB_PREFIX . "product_special as ps ON (pr.product_id = ps.product_id)
+                    WHERE manufacturer_id NOT IN (14,13)");
+       // dd($result->rows, true);
+       // dd('sdf', true);
+
+        $delimiter = ';';
+        $file = new SplFileObject('/home/canary/www/data.csv', 'w');
+        $file->setCsvControl($delimiter);
+
+        $file->fputcsv($title_list);
+
+        $manufacture = array_flip($this->list_manufactured);
+        $metal = array_flip($this->list_metal);
+        $category_list_id = array_flip($this->category_list_arr);
+
+
+        foreach ($result->rows as $fields) {
+
+            $this->fields_tmp = $fields;
+            $cat = array_filter($category->rows, function ($innerArray){
+                return ($innerArray['product_id'] == $this->fields_tmp['product_id']);
+            });
+
+            $cat = array_values($cat);
+
+            $fields['metal'] = $metal[$fields['metal']];
+            $fields['manufacturer_id'] = $manufacture[$fields['manufacturer_id']];
+
+            //dd($cat);
+            $fields['Category1'] = isset($category_list_id[$cat[0]['category_id']]) ? $category_list_id[$cat[0]['category_id']] : null;
+            $fields['Category2'] = isset($category_list_id[$cat[1]['category_id']]) ? $category_list_id[$cat[1]['category_id']] : null;
+            $fields['Category3'] = isset($category_list_id[$cat[2]['category_id']]) ? $category_list_id[$cat[2]['category_id']] : null;
+            $fields['Category4'] = isset($category_list_id[$cat[3]['category_id']]) ? $category_list_id[$cat[3]['category_id']] : null;
+
+            $file->fputcsv($fields);
+        }
+
+        header('Content-Type: text/csv');
+        header('Content-Disposition: Attachment; filename=data.csv');
+        readfile("/home/canary/www/data.csv");
+        exit();
+    }
+
 
 
     private function addProduct() {

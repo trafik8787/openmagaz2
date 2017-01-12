@@ -84,6 +84,15 @@
                         </div>
                     </div>
                 </form>
+
+                <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data"  class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-button-generate_csv">Generate CSV</label>
+                        <div class="col-sm-10">
+                            <button type="submit" id="input-button-generate_csv" name="generate_csv" value="1" class="btn btn-success">Generate</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
