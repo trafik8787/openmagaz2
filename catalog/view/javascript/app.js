@@ -75,7 +75,7 @@ $(document).ready(function() {
 
 
     var inProgress = false;
-    var startFrom = 12;
+    var startFrom = 2;
 
     $(document).on("DOMSubtreeModified",function(){
         inProgress = false;
@@ -85,7 +85,6 @@ $(document).ready(function() {
     $(window).scroll(function() {
          if ($('.w-ajax-loader-page').length>0) {
             if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1800 && !inProgress) {
-                console.log(startFrom);
                 inProgress = true;
                 $.ajax({
                     url: location.pathname,
@@ -101,16 +100,16 @@ $(document).ready(function() {
                     success: function (json) {
 
                         if (json.length > 0) {
+                            console.log(startFrom);
                             $ner = $(json);
                             $('.main-catalog-container table tbody').append($ner);
                             $ner.fadeIn("slow");
                             inProgress = false;
-                            startFrom += 12;
+                            startFrom += 1;
                         } else {
                             //inProgress = true;
-                            startFrom = 12;
+                            startFrom = 1;
                         }
-                        json = null;
                     }
                 });
             }

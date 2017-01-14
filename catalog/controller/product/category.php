@@ -63,7 +63,9 @@ class ControllerProductCategory extends Controller {
 
 		if (isset($this->request->get['page'])) {
 			$page = $this->request->get['page'];
-		} else {
+		} elseif (!empty($this->request->post['startFrom'])) {
+            $page = $this->request->post['startFrom'];
+        } else {
 			$page = 1;
 		}
 
@@ -232,10 +234,10 @@ class ControllerProductCategory extends Controller {
             $start = ($page - 1) * $limit;
 
             //загрузка товаров по скролу
-            if (!empty($this->request->post['startFrom'])) {
-                $start = $this->request->post['startFrom'];
-                $limit = 12;
-            }
+//            if (!empty($this->request->post['startFrom'])) {
+//                $start = $this->request->post['startFrom'];
+//                $limit = 12;
+//            }
 
 
 			$filter_data = array(
