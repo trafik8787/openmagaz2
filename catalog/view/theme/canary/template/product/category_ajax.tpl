@@ -15,7 +15,7 @@
                     </select>
                 </div>
 
-                <span>Product compare (<?=!empty($count_compare) ? $count_compare : 0?>)</span>
+                <!--*<span>Product compare (<?=!empty($count_compare) ? $count_compare : 0?>)</span>*-->
 
             </div>
             <div class="view-product">

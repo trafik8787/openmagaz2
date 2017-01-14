@@ -3,6 +3,7 @@
 <?//dd($category_info['category_id'])?>
 <?//dd($attribute_groups)?>
 <?//dd($products_metal)?>
+
 <main class="w-general-container">
     <div class="row margin-buttom-30 w-bredcrum-border">
         <div class="center-bl">
@@ -72,10 +73,31 @@
                         <li><a href="#" class="it-list-link" data-toggle="modal" data-target="#ModalMailHit"><i class="it-ico it-ico-mail"></i> Hint it</a></li>
                         <li><a href="#" onclick="compare.add('<?php echo $product_id; ?>');" class="it-list-link"><i class="it-ico it-ico-star"></i> Compare</a></li>
                         <li><a href="#" onclick="window.print();" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
+
                         <li>
-                            <!-- space for chare -->
-                            <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
+
+
+                            <div id="fb-root"></div>
+                            <script>(function(d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) return;
+                                    js = d.createElement(s); js.id = id;
+                                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));</script>
+
+                            <!-- Your share button code -->
+                            <div class="fb-share-button"
+                                 data-href="<?=RecuestUri()?>"
+                                 data-layout="button_count">
+                            </div>
+
+
                         </li>
+                        <li>
+                            <a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=<?=RecuestUri()?>&media=<?php echo $images[0]['popup']; ?>&description=<?=$name?>" data-pin-custom="true"><img src="https://addons.opera.com/media/extensions/55/19155/1.1-rev1/icons/icon_64x64.png" width="25" height="25"></a>
+                        </li>
+
                     </ul>
                 </div>
                 <div class="one-product-info" id="product"><?//dd($category_info)?>
@@ -136,9 +158,29 @@
                             <li><a href="#" onclick="compare.add('<?php echo $product_id; ?>');" class="it-list-link"><i class="it-ico it-ico-star"></i> Compare</a></li>
                             <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                             <li>
-                                <!-- space for chare -->
-                                <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
+
+
+                                <div id="fb-root"></div>
+                                <script>(function(d, s, id) {
+                                        var js, fjs = d.getElementsByTagName(s)[0];
+                                        if (d.getElementById(id)) return;
+                                        js = d.createElement(s); js.id = id;
+                                        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+                                        fjs.parentNode.insertBefore(js, fjs);
+                                    }(document, 'script', 'facebook-jssdk'));</script>
+
+                                <!-- Your share button code -->
+                                <div class="fb-share-button"
+                                     data-href="<?=RecuestUri()?>"
+                                     data-layout="button_count">
+                                </div>
+
+
                             </li>
+                            <li>
+                                <a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=<?=RecuestUri()?>&media=<?php echo $images[0]['popup']; ?>&description=<?=$name?>" data-pin-custom="true"><img src="https://addons.opera.com/media/extensions/55/19155/1.1-rev1/icons/icon_64x64.png" width="25" height="25"></a>
+                            </li>
+
                         </ul>
                     </div>
                     <div class="row">
@@ -378,8 +420,27 @@
                         <!--*<li><a href="#" class="it-list-link"><i class="it-ico it-ico-star"></i> Rate it</a></li>*-->
                         <li><a href="#" class="it-list-link"><i class="it-ico it-ico-print"></i> Print it</a></li>
                         <li>
-                            <!-- space for chare -->
-                            <img src="/catalog/view/theme/canary/img/share-space.jpg" alt="">
+
+
+                            <div id="fb-root"></div>
+                            <script>(function(d, s, id) {
+                                    var js, fjs = d.getElementsByTagName(s)[0];
+                                    if (d.getElementById(id)) return;
+                                    js = d.createElement(s); js.id = id;
+                                    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));</script>
+
+                            <!-- Your share button code -->
+                            <div class="fb-share-button"
+                                 data-href="<?=RecuestUri()?>"
+                                 data-layout="button_count">
+                            </div>
+
+
+                        </li>
+                        <li>
+                            <a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=<?=RecuestUri()?>&media=<?php echo $images[0]['popup']; ?>&description=<?=$name?>" data-pin-custom="true"><img src="https://addons.opera.com/media/extensions/55/19155/1.1-rev1/icons/icon_64x64.png" width="25" height="25"></a>
                         </li>
 
                     </ul>

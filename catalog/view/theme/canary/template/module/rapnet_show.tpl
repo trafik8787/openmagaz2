@@ -10,7 +10,7 @@
         <div class="diamond-catalog-top clearfix">
             <div class="left">
                 <div class="total-items">Total <?=$total_diamonds?> items</div>
-                <div class="diamond-catalog-tocompare"><a href="#">Product compare (0)</a></div>
+                <!--*<div class="diamond-catalog-tocompare"><a href="#">Product compare (0)</a></div>*-->
             </div>
             <div class="center w-pagination-diamonts">
 

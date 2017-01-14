@@ -71,7 +71,13 @@ function HostSite ($link = null)
 }
 
 function RecuestUri () {
-    return 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
+    $http = 'http';
+    if (!empty($_SERVER['HTTPS'])) {
+        $http = 'https';
+    }
+
+    return $http.'://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
 
 
