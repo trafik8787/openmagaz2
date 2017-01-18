@@ -11,8 +11,22 @@ class ControllerModuleBloges extends Controller {
     public function index() {
 
         $data = array();
-        $result_arr = array();
 
+
+        $data['bloges'] = $this->getBloges();
+
+
+        if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/bloges.tpl')) {
+            return $this->load->view($this->config->get('config_template') . '/template/module/bloges.tpl', $data);
+        } else {
+            return $this->load->view('No page');
+        }
+    }
+
+
+    public function getBloges () {
+
+        $result_arr = array();
         $this->load->model('tool/image');
 
         $rss = new DOMDocument();
@@ -40,14 +54,8 @@ class ControllerModuleBloges extends Controller {
             $result_arr = $this->cache->get('bloges');
         }
 
-        $data['bloges'] = $result_arr;
+        return $result_arr;
 
-
-        if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/bloges.tpl')) {
-            return $this->load->view($this->config->get('config_template') . '/template/module/bloges.tpl', $data);
-        } else {
-            return $this->load->view('No page');
-        }
     }
 
 }

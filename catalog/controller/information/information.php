@@ -181,6 +181,8 @@ class ControllerInformationInformation extends Controller {
             $this->data['content_top'] = $this->load->controller('common/content_top');
             $this->data['content_bottom'] = $this->load->controller('common/content_bottom');
 
+            $this->data['bloges'] = array_slice($this->load->controller('module/bloges/getBloges'),0,2);
+
             if (!in_ajax()) {
                 $this->data['footer'] = $this->load->controller('common/footer');
                 $this->data['header'] = $this->load->controller('common/header');

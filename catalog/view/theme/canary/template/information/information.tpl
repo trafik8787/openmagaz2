@@ -45,28 +45,25 @@
                         </div>
                         <div class="wrapper-post-stat">
                             <div class="title">FEATURED POSTS<br/> FROM THE BLOG:</div>
-                            <div class="thumbnail">
-                                <div class="marc-date">
-                                    <strong>Sep</strong>
-                                    <div>29</div>
-                                </div>
-                                <img src="/catalog/view/theme/canary/img/img262.png" alt="img">
-                                <div class="caption">
-                                    Ancient India and the Origins of Diamond Investing
-                                </div>
-                                <a href="#" class="btn btn-default">Read more</a>
-                            </div>
-                            <div class="thumbnail">
-                                <div class="marc-date">
-                                    <strong>Aug</strong>
-                                    <div>25</div>
-                                </div>
-                                <img src="/catalog/view/theme/canary/img/img263.png" alt="img">
-                                <div class="caption">
-                                    The Pink Star set to Smash Auction Records 2016
-                                </div>
-                                <a href="#" class="btn btn-default">Read more</a>
-                            </div>
+
+                            <?if (!empty($bloges)):?>
+
+                                <?foreach ($bloges as $row):?>
+                                    <div class="thumbnail">
+                                        <div class="marc-date">
+                                            <strong><?=$row['date_m']?></strong>
+                                            <div><?=$row['date_d']?></div>
+                                        </div>
+                                        <img src="<?=$row['img']?>" alt="img">
+                                        <div class="caption">
+                                            <?=$row['title']?>
+                                        </div>
+                                        <a href="<?=$row['link']?>" class="btn btn-default">Read more</a>
+                                    </div>
+                                <?endforeach?>
+
+                            <?endif?>
+
                         </div>
                     </div>
                     <div class="right-q">
