@@ -623,8 +623,8 @@ class ControllerModuleRapnet extends Controller {
         $data = array();
         $this->show = 4;
         $this->shapes_arr = array(mod_shape($diamond->response->body->diamond->shape));
-        $this->carat_from = $diamond->response->body->diamond->size;
-        $this->carat_to = $diamond->response->body->diamond->size + 0.01;
+        $this->carat_from = $diamond->response->body->diamond->size - 0.1;
+        $this->carat_to = $diamond->response->body->diamond->size + 0.1;
         $this->page = 2;
         $this->cache_key = 'similar_'.$diamond->response->body->diamond->diamond_id;
         $json = $this->parse();

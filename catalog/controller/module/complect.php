@@ -189,16 +189,19 @@ class ControllerModuleComplect extends Controller {
 
         $data_cookie = $this->getProductsCoolies();
         //dd($data_cookie);
-        if (empty($data_cookie)) {
+        if ((empty($data_cookie['CanaryDiamontCom']) or empty($data_cookie['CanaryProductCom'])) AND (empty($data_cookie['CanaryProductCom']) or empty($data_cookie['CanaryProductComGemstonToRing']))) {
             $this->response->redirect('/');
         }
 
         //брилиант
         if (!empty($data_cookie['CanaryDiamontCom'])) {
+            //dd($data_cookie);
             $rapnet_controller = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $data_cookie['CanaryDiamontCom']['id_product']));
 
             $rapnet_controller = json_decode($rapnet_controller);
             $data['CanaryDiamontCom'] = $rapnet_controller->response->body->diamond;
+        } else {
+            Cookie::delete('CanaryDiamontCom');
         }
 
         //цветной камень
