@@ -84,7 +84,7 @@ $(document).ready(function() {
 
     $(window).scroll(function() {
          if ($('.w-ajax-loader-page').length>0) {
-            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1800 && !inProgress) {
+            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 2000 && !inProgress) {
                 inProgress = true;
                 $.ajax({
                     url: $('#input-sort option:selected').val()+'&srol=1'+'&page='+startFrom,
