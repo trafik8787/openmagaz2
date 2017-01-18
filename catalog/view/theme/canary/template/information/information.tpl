@@ -78,19 +78,20 @@
                         </div>
 
 
-                        <div class="title-stat">FORM IN THE TEXT</div>
+                        <div class="title-stat margin-top-10">Send us a Message</div>
+                        <span>We will reply to all questions within one business day</span>
                         <div class="form-static">
                             <form action="">
-                                <textarea placeholder="Enter your text here"></textarea>
+                                <textarea placeholder="Message"></textarea>
                                 <div class="row">
                                     <div class="col-md-3 col-sm-3 col-xs-4">
-                                        <input type="text" placeholder="Enter First Name">
+                                        <input type="text" placeholder="Name">
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-4">
-                                        <input type="text" placeholder="Enter Second Name">
+                                        <input type="email" placeholder="E-mail">
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-4">
-                                        <input type="text" placeholder="Enter Email">
+                                        <input type="tel" placeholder="Phone">
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-12">
                                         <button class="btn w-btn-orange btn-lg"><div class="icons-rings_icon"></div>SEND</button>

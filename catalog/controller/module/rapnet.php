@@ -518,8 +518,12 @@ class ControllerModuleRapnet extends Controller {
         $data['content_bottom'] = $this->load->controller('common/content_bottom');
 
         $diamond = json_decode($this->getDaimondsId());
+
+        if ($diamond->response->header->error_code != 0) {
+            $this->response->redirect('/diamonds');
+        }
+
         $data['product'] = $diamond;
-//        dd($diamond);
 
         //$diamond_name = $diamond->response->body->diamond->shape.' '.$diamond->response->body->diamond->size .' CARAT '.$diamond->response->body->diamond->color .' '. $diamond->response->body->diamond->clarity;
         $diamond_name = $diamond->response->body->diamond->size.' CARAT '
