@@ -87,9 +87,9 @@ $(document).ready(function() {
             if ($(window).scrollTop() + $(window).height() >= $(document).height() - 1800 && !inProgress) {
                 inProgress = true;
                 $.ajax({
-                    url: location.pathname,
-                    type: 'post',
-                    data:  {"startFrom" : startFrom},
+                    url: $('#input-sort option:selected').val()+'&srol=1'+'&page='+startFrom,
+                    type: 'get',
+                    //data:  {"startFrom" : startFrom},
                     dataType: 'html',
                     beforeSend: function () {
                         //$('.container-loader').show();
@@ -100,7 +100,6 @@ $(document).ready(function() {
                     success: function (json) {
 
                         if (json.length > 0) {
-                            console.log(startFrom);
                             $ner = $(json);
                             $('.main-catalog-container table tbody').append($ner);
                             $ner.fadeIn("slow");

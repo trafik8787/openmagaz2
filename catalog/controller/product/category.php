@@ -63,8 +63,6 @@ class ControllerProductCategory extends Controller {
 
 		if (isset($this->request->get['page'])) {
 			$page = $this->request->get['page'];
-		} elseif (!empty($this->request->post['startFrom'])) {
-            $page = $this->request->post['startFrom'];
         } else {
 			$page = 1;
 		}
@@ -233,12 +231,6 @@ class ControllerProductCategory extends Controller {
 
             $start = ($page - 1) * $limit;
 
-            //загрузка товаров по скролу
-//            if (!empty($this->request->post['startFrom'])) {
-//                $start = $this->request->post['startFrom'];
-//                $limit = 12;
-//            }
-
 
 			$filter_data = array(
 				'filter_category_id' => $category_id,
@@ -253,7 +245,7 @@ class ControllerProductCategory extends Controller {
 				'start'              => $start,
 				'limit'              => $limit
 			);
-
+            //dd($filter_data);
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
@@ -577,7 +569,7 @@ class ControllerProductCategory extends Controller {
             $data['action_page'] = $this->url->link('product/category', 'path=' . $this->request->get['path']);
 
             if (in_ajax()) {
-                if (!empty($this->request->post['startFrom'])) {
+                if (!empty($this->request->get['srol'])) {
                     $data['ajax'] = true;
                 }
 
@@ -589,11 +581,11 @@ class ControllerProductCategory extends Controller {
 
 			if (in_ajax()) {
 
-                if (!empty($this->request->post['startFrom'])) {
+                if (!empty($this->request->get['srol'])) {
                     echo $product_item;
                 }
 
-                if (empty($_POST['general_category']) and empty($this->request->post['startFrom'])) {
+                if (empty($_POST['general_category']) and empty($this->request->get['srol'])) {
                     echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax.tpl', $data);
                 } else {
                    //echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax_general.tpl', $data);

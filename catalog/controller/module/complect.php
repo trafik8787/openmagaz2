@@ -199,6 +199,11 @@ class ControllerModuleComplect extends Controller {
             $rapnet_controller = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $data_cookie['CanaryDiamontCom']['id_product']));
 
             $rapnet_controller = json_decode($rapnet_controller);
+
+            if ($rapnet_controller->response->header->error_code != 0) {
+                Cookie::delete('CanaryDiamontCom');
+            }
+
             $data['CanaryDiamontCom'] = $rapnet_controller->response->body->diamond;
         } else {
             Cookie::delete('CanaryDiamontCom');
