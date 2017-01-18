@@ -185,8 +185,8 @@
                                     <?if (!empty(Cookie::get('CanaryProductCom')) OR !empty(Cookie::get('CanaryDiamontCom')) OR !empty(Cookie::get('CanaryProductComGemstonToRing'))):?>
                                         <button type="button" id="w-button-add-diamond-complect" data-loading-text="Loading..."
                                                 data-dismiss="modal" aria-hidden="true"
-                                                data-idproduct="<?php echo $diamond->diamond_id ?>"
-                                                data-shape="<?php echo $diamond->shape?>"
+                                                data-idproduct="<?php echo $product->response->body->diamond->diamond_id ?>"
+                                                data-shape="<?php echo $product->response->body->diamond->shape?>"
                                                 class="btn w-btn-orange btn-lg text-center"><i class="bold-angle-right"></i> Select this Item</button>
                                     <?else:?>
                                         <button type="button" data-toggle="modal" data-target="#w-modal-cart" class="btn w-btn-orange btn-lg"><i class="bold-angle-right"></i> Select this Item</button>

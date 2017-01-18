@@ -44,23 +44,30 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label" for="input-progres">Category</label>
+                        <label class="col-sm-2 control-label" for="exampleInputFile">File input</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="category" required="required">
-                                <option value="20">ENGAGEMENT RINGS</option>
-                                <option value="82">JEWELRY & GIFTS</option>
-                                <option value="100">WEDDING RINGS WOMAN</option>
-                                <option value="200">WEDDING RINGS MAN</option>
-                            </select>
+                            <input type="file" name="file_data_parsing" id="exampleInputFile">
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label" for="input-progres">Path</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" required="required" name="path_file">
-                        </div>
-                    </div>
+                    <!--*<div class="form-group">*-->
+                        <!--*<label class="col-sm-2 control-label" for="input-progres">Category</label>*-->
+                        <!--*<div class="col-sm-10">*-->
+                            <!--*<select class="form-control" name="category" required="required">*-->
+                                <!--*<option value="20">ENGAGEMENT RINGS</option>*-->
+                                <!--*<option value="82">JEWELRY & GIFTS</option>*-->
+                                <!--*<option value="100">WEDDING RINGS WOMAN</option>*-->
+                                <!--*<option value="200">WEDDING RINGS MAN</option>*-->
+                            <!--*</select>*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
+
+                    <!--*<div class="form-group">*-->
+                        <!--*<label class="col-sm-2 control-label" for="input-progres">Path</label>*-->
+                        <!--*<div class="col-sm-10">*-->
+                            <!--*<input type="text" class="form-control" required="required" name="path_file">*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
 
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="input-button-pars">Parsing</label>
@@ -69,20 +76,20 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>
-                        <div class="col-sm-10">
-                            <select name="rapnet_status" id="input-status" class="form-control">
-                                <?php if ($exel_parser_status) { ?>
-                                <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
-                                <option value="0"><?php echo $text_disabled; ?></option>
-                                <?php } else { ?>
-                                <option value="1"><?php echo $text_enabled; ?></option>
-                                <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </div>
+                    <!--*<div class="form-group">*-->
+                        <!--*<label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>*-->
+                        <!--*<div class="col-sm-10">*-->
+                            <!--*<select name="rapnet_status" id="input-status" class="form-control">*-->
+                                <!--*<?php if ($exel_parser_status) { ?>*-->
+                                <!--*<option value="1" selected="selected"><?php echo $text_enabled; ?></option>*-->
+                                <!--*<option value="0"><?php echo $text_disabled; ?></option>*-->
+                                <!--*<?php } else { ?>*-->
+                                <!--*<option value="1"><?php echo $text_enabled; ?></option>*-->
+                                <!--*<option value="0" selected="selected"><?php echo $text_disabled; ?></option>*-->
+                                <!--*<?php } ?>*-->
+                            <!--*</select>*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
                 </form>
 
                 <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data"  class="form-horizontal">

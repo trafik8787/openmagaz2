@@ -46,7 +46,7 @@ class ControllerModuleExelParser extends Controller {
 
     private $price;
     private $file_path;
-
+    private $name_file;
 
 
     private $fields_tmp;
@@ -152,8 +152,15 @@ class ControllerModuleExelParser extends Controller {
 
 
         if (!empty($this->request->post['parsing_success'])) {
+            $info = new SplFileInfo($_FILES['file_data_parsing']['name']);
+
             $data['progres'] = 'Syccess';
-            $this->file_path = $this->request->post['path_file'];
+            $this->name_file = basename($_FILES['file_data_parsing']['tmp_name']).'.'.$info->getExtension();
+            //$this->file_path = $_FILES['file_data_parsing']['tmp_name'].'.'.$info->getExtension();
+            $uploadfile = $_SERVER['DOCUMENT_ROOT'].'/'.$this->name_file;
+            if (move_uploaded_file($_FILES['file_data_parsing']['tmp_name'], $uploadfile)) {
+                $this->file_path = $_SERVER['DOCUMENT_ROOT'].'/'.$this->name_file;
+            }
 
             switch ($this->request->post['category']) {
                 case 20: //ENGAGEMENT RINGS
@@ -300,36 +307,14 @@ class ControllerModuleExelParser extends Controller {
     private function  fixParse (){
 
         //$filePath = '/home/canary/www/website.csv';
-        //$filePath = '/home/canary/www/website_weding_woman.csv';
-        //$filePath = '/home/canary/www/fashion_jewelry.csv';
-        //$filePath = '/home/canary/www/diamonds_rings_jewelry.csv';
-        //$filePath = '/home/canary/www/new_engagement_rings.csv';
-        //$filePath = '/home/canary/www/matching bands.csv';
-        //$filePath = '/home/canary/www/solitaire engagement rings.csv';
-        //$filePath = '/home/canary/www/Pave Engagement Rings-NO HALO.csv';
-        //$filePath = '/home/canary/www/diamond hoops.csv';
-        //$filePath = '/home/canary/www/diamond hoops 2.csv';
-        //$filePath = '/home/canary/www/channel set engagement rings-STULLER.csv';
-        //$filePath = '/home/canary/www/channel set engagement rings.csv';
-        //$filePath = '/home/canary/www/diamond earrings.csv';
-        //$filePath = '/home/canary/www/Stuller Classic Bands Mens.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/Stuller Classic Bands Mens.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/diamond earrings.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/channel set engagement rings.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/channel set engagement rings-STULLER.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/diamond hoops 2.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/Copy of diamond studs.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/diamond hoops.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/Pave Engagement Rings-NO HALO.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/solitaire engagement rings.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/matching bands.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/new_engagement_rings.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/diamonds_rings_jewelry.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/fashion_jewelry.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/website_weding_woman.csv';
-        //$filePath = '/home/brilliantcanary/htdocs/website.csv';
 
-        $filePath = $_SERVER['DOCUMENT_ROOT'].'/'.trim($this->file_path);
+        //$filePath = '/home/brilliantcanary/htdocs/Stuller Classic Bands Mens.csv';
+
+        //$filePath = $_SERVER['DOCUMENT_ROOT'].'/'.trim($this->file_path);
+
+
+
+        $filePath = $this->file_path;
 
         $delimiter = ';';
         $file = new SplFileObject($filePath, 'r');
@@ -337,6 +322,8 @@ class ControllerModuleExelParser extends Controller {
         $file->setCsvControl($delimiter);
         //dd($file->current());
         $file->seek(2);
+
+        dd($file->current(), true);
 
         while (!$file->eof()) {
 
@@ -346,6 +333,7 @@ class ControllerModuleExelParser extends Controller {
             $this->category = $this->category_tmp;
             $curent = $file->current();
 
+            //update
             if (!empty($curent[0])) {
                 //metal
                 $metal = trim($curent[9]);
@@ -532,18 +520,19 @@ class ControllerModuleExelParser extends Controller {
             'Manufacturer',
             'Price',
             'Discount Price',
+            'Maching ID',
             'Category1',
             'Category2',
             'Category3',
             'Category4',
-            'CARAT WEIGHT',
-            'NUMBER OF DIAMONDS',
-            'AVERAGE COLOR',
-            'AVERAGE CLARITY'
+            'CARAT WEIGHT', //15
+            'NUMBER OF DIAMONDS', //16
+            'AVERAGE COLOR', //17
+            'AVERAGE CLARITY' //18
         );
 
         $category = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_to_category");
-
+        $product_atribute = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_attribute");
 
         $result =  $this->db->query("SELECT pr.product_id, pr.model, pr.sku, pd.name, pd.description, pd.meta_title, 
                 pd.meta_description,
@@ -553,8 +542,8 @@ class ControllerModuleExelParser extends Controller {
                 pr.metal,
                 pr.manufacturer_id,
                 pr.price,
-                ps.price as specialPrice 
-                
+                ps.price as specialPrice,
+                pr.matching_id 
                     FROM " . DB_PREFIX . "product as pr 
                     LEFT JOIN " . DB_PREFIX . "product_description as pd ON (pr.product_id = pd.product_id)
                     LEFT JOIN " . DB_PREFIX . "product_special as ps ON (pr.product_id = ps.product_id)
@@ -580,16 +569,49 @@ class ControllerModuleExelParser extends Controller {
                 return ($innerArray['product_id'] == $this->fields_tmp['product_id']);
             });
 
+
             $cat = array_values($cat);
 
             $fields['metal'] = $metal[$fields['metal']];
             $fields['manufacturer_id'] = $manufacture[$fields['manufacturer_id']];
+
+            //atribute
+            $atribut = array_filter($product_atribute->rows, function ($innerArray){
+
+                return ($innerArray['product_id'] == $this->fields_tmp['product_id']);
+            });
+
+            $c_tmp = null;
+            $n_f_d = null;
+            $a_col = null;
+            $a_clar = null;
+
+            foreach ($atribut as $item) {
+               switch ($item['attribute_id']) {
+                   case 15:
+                       $c_tmp = $item['text'];
+                       break;
+                   case 16:
+                       $n_f_d = $item['text'];
+                       break;
+                   case 17:
+                       $a_col = $item['text'];
+                       break;
+                   case 18:
+                       $a_clar = $item['text'];
+                       break;
+               }
+            }
 
             //dd($cat);
             $fields['Category1'] = isset($category_list_id[$cat[0]['category_id']]) ? $category_list_id[$cat[0]['category_id']] : null;
             $fields['Category2'] = isset($category_list_id[$cat[1]['category_id']]) ? $category_list_id[$cat[1]['category_id']] : null;
             $fields['Category3'] = isset($category_list_id[$cat[2]['category_id']]) ? $category_list_id[$cat[2]['category_id']] : null;
             $fields['Category4'] = isset($category_list_id[$cat[3]['category_id']]) ? $category_list_id[$cat[3]['category_id']] : null;
+            $fields['CARAT WEIGHT'] = $c_tmp;
+            $fields['NUMBER OF DIAMONDS'] = $n_f_d;
+            $fields['AVERAGE COLOR'] = $a_col;
+            $fields['AVERAGE CLARITY'] = $a_clar;
 
             $file->fputcsv($fields);
         }
