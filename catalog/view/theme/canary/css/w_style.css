@@ -5133,7 +5133,7 @@ text-align: left;
 @media (max-width: 640px) {
     .main-catalog-container.wrapper-product-table.th-view tbody tr {
         width: 50%;
-        height: 270px;
+        height: 313px;
     }
 
     .main-catalog-container.wrapper-product-table.th-view .product-item .name {
