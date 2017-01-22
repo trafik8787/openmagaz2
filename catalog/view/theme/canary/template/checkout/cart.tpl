@@ -426,11 +426,12 @@
 
 
         $(document).on('click', '.w-checkout', function () {
-            if (!$("select.w-option-size option:selected").val()) {
-
-                $("select.w-option-size").css('border', '2px solid red');
-                alert('Ring size is required');
-                return false;
+            if ($('select').is('.w-option-size')) {
+                if (!$("select.w-option-size option:selected").val()) {
+                    $("select.w-option-size").css('border', '2px solid red');
+                    alert('Ring size is required');
+                    return false;
+                }
             }
 
         });

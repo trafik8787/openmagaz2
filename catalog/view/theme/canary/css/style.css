@@ -8779,6 +8779,7 @@ top: 12px;
   background: url("/catalog/view/theme/canary/img/p-include-shadow.png") no-repeat top / contain;
 }
 
+.w-popover-title:after,
 .scheckout-page .box-order .title:after {
   width: 118px;
   height: 11px;
@@ -8791,6 +8792,65 @@ top: 12px;
   background: url("/catalog/view/theme/canary/img/bord-custom-order.png") no-repeat;
 }
 
+
+.help-cvv {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding-left: 7px;
+    margin-left: 8px;
+    font-size: 19px;
+    border: 1px solid #fbfdfe;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.w-popover.top>.arrow {
+    left: 82%;
+}
+
+.w-popover {
+    left: 43%;
+    top: -319px;
+    display: block;
+    max-width: 500px;
+}
+.help-form-group .popover {
+    /*width: 500px;*/
+    max-width: 500px;
+}
+.help-form-group .popover-content {
+    color: #000000;
+}
+
+.w-popover-bloc {
+    background: url("/catalog/view/theme/canary/img/cart-help.jpg") no-repeat;
+    width: 407px;
+    height: 155px;
+}
+
+.w-popover-bloc .w-popover-bloc-text1 {
+    position: absolute;
+    top: 69%;
+    left: 97px;
+}
+
+.w-popover-bloc .w-popover-bloc-text2 {
+    position: absolute;
+    top: 69%;
+    left: 300px;
+}
+
+.w-close-popover {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    color: #c9c8c8;
+    border: 1px solid #c9c8c8;
+    border-radius: 2px;
+}
+
+.w-popover-title,
 .scheckout-page .box-order .title {
   margin-bottom: 30px;
   padding-bottom: 20px;
