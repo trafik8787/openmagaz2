@@ -11,6 +11,8 @@ class ControllerPaymentPPExpress extends Controller {
 		 */
 		unset($this->session->data['paypal']);
 
+        $data['logged'] = $this->customer->isLogged();
+
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/pp_express.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/payment/pp_express.tpl', $data);
 		} else {
@@ -1266,7 +1268,7 @@ class ControllerPaymentPPExpress extends Controller {
 		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
 			$this->response->redirect($this->url->link('checkout/cart'));
 		}
-
+       //dd($this->session->data);
 		$this->load->model('payment/pp_express');
 		$this->load->model('tool/image');
 		$this->load->model('checkout/order');

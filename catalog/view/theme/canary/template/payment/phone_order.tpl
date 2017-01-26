@@ -12,7 +12,11 @@
 
 
 <script type="text/javascript"><!--
-$('.box-btn-checkout').html('<button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-confirm" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>');
+    <?if ($logged):?>
+        $('.box-btn-checkout').html('<button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-confirm" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>');
+    <?else:?>
+        $('.box-btn-checkout').html('<button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-register" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>');
+    <?endif?>
 $(document).on('click', '#button-confirm',   function() {
 	$.ajax({
 		type: 'get',

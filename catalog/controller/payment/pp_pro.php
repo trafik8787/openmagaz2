@@ -81,6 +81,8 @@ class ControllerPaymentPPPro extends Controller {
 			);
 		}
 
+        $data['logged'] = $this->customer->isLogged();
+
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/pp_pro.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/payment/pp_pro.tpl', $data);
 		} else {
@@ -88,7 +90,7 @@ class ControllerPaymentPPPro extends Controller {
 		}
 	}
 
-	public function send() {
+	public function send($flag = null) {
 		if (!$this->config->get('pp_pro_transaction')) {
 			$payment_type = 'Authorization';
 		} else {
@@ -197,7 +199,11 @@ class ControllerPaymentPPPro extends Controller {
 			$json['error'] = $response_info['L_LONGMESSAGE0'];
 		}
 
-		$this->response->addHeader('Content-Type: application/json');
-		$this->response->setOutput(json_encode($json));
+		if ($flag != null) {
+            return $json;
+        } else {
+            $this->response->addHeader('Content-Type: application/json');
+            $this->response->setOutput(json_encode($json));
+        }
 	}
 }

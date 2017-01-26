@@ -123,61 +123,60 @@
 
 
                     <div class="col-md-8">
-                        <form action="">
+                        <!--*<form action="">*-->
 
                             <div class="right-checkout">
 
                                 <div id="collapse-payment-address">
-                                    <?=$payment_address?>
+                                    <?if ($logged):?>
+                                        <?=$logined_address?>
+                                    <?else:?>
+                                        <?=$payment_address?>
+                                    <?endif?>
                                 </div>
 
 
-
-                                <?if ($logged):?>
-                                    <div class="airplane-block w-calculate-cost">
-                                        <div class="check-bl radio-bl">
-                                            <div class="title-c">CALCULATE SHIPPING COST</div>
-                                            <div>
-                                                <input type="radio" value="0" id="cost1" name="cost" checked="checked"><label for="cost1">FedEx Priority Overnight®: $0,00</label>
-                                            </div>
-                                            <div>
-                                                <input type="radio" value="35" id="cost2" name="cost"><label for="cost2">Saturday Delivery (Priority): $35,00</label>
-                                            </div>
-                                            <div>
-                                                <input type="radio" value="0" id="cost3" name="cost"><label for="cost3">Hold at Location (FedEx): $0,00</label>
-                                            </div>
+                                <div class="airplane-block w-calculate-cost">
+                                    <div class="check-bl radio-bl">
+                                        <div class="title-c">CALCULATE SHIPPING COST</div>
+                                        <div>
+                                            <input type="radio" value="0" id="cost1" name="cost" checked="checked"><label for="cost1">FedEx Priority Overnight®: $0,00</label>
                                         </div>
-                                        <img src="/catalog/view/theme/canary/img/airplane.png" alt="airplane" class="airplane-img">
+                                        <div>
+                                            <input type="radio" value="35" id="cost2" name="cost"><label for="cost2">Saturday Delivery (Priority): $35,00</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" value="0" id="cost3" name="cost"><label for="cost3">Hold at Location (FedEx): $0,00</label>
+                                        </div>
                                     </div>
-                                    <div class="check-bl radio-bl" id="collapse-payment-method">
+                                    <img src="/catalog/view/theme/canary/img/airplane.png" alt="airplane" class="airplane-img">
+                                </div>
+                                <div class="check-bl radio-bl" id="collapse-payment-method">
 
-                                        <?=$payment_method?>
+                                    <?=$payment_method?>
 
-                                    </div>
+                                </div>
 
-                                    <div class="blue-check">
+                                <div class="blue-check">
 
 
-                                    </div>
-                                <?endif?>
+                                </div>
+
                             </div>
-                                <?if ($logged):?>
-                                    <div class="agree-checkout-box">
-                                        <input type="checkbox" id="agreeCheckout"><label for="agreeCheckout">I've read and agree to Brilliant Canary's <a class="agree" href="/index.php?route=information/information/agree&information_id=5">Terms & Conditions</a> and <a class="agree" href="/index.php?route=information/information/agree&information_id=3">Privacy Policy</a></label>
-                                    </div>
-                                    <div class="box-btn-checkout">
-                                        <button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-confirm" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>
 
-                                    </div>
-                                <?endif?>
-                        </form>
+                            <div class="agree-checkout-box">
+                                <input type="checkbox" id="agreeCheckout"><label for="agreeCheckout">I've read and agree to Brilliant Canary's <a class="agree" href="/index.php?route=information/information/agree&information_id=5">Terms & Conditions</a> and <a class="agree" href="/index.php?route=information/information/agree&information_id=3">Privacy Policy</a></label>
+                            </div>
+                            <div class="box-btn-checkout">
+                                <button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-register" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>
+
+                            </div>
+
+                        <!--*</form>*-->
                     </div>
 
 
-
-
                 </div>
-
 
             </div>
         </div>
@@ -208,17 +207,11 @@
 </main>
 
 
-
-
-
-
-
-
-
-
-
-
-
+<style>
+    .error {
+        color: red;
+    }
+</style>
 
 <script type="text/javascript">
     $(document).ready(function() {
@@ -255,68 +248,96 @@
 
         //$('.w-calculate-cost').prop('checked')
 
-    <?if ($logged):?>
 
 
-            $.ajax({
-                url: 'index.php?route=checkout/payment_address',
-                dataType: 'html',
-                success: function(html) {
-                    $('#collapse-payment-address').html(html);
-
-                },
-                error: function(xhr, ajaxOptions, thrownError) {
-                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                }
-            });
 
 
-            $.ajax({
-                url: 'index.php?route=checkout/payment_method/save',
-                type: 'post',
-                data: $('#collapse-payment-method input[type=\'radio\']:checked, #collapse-payment-method input[type=\'checkbox\']:checked, #collapse-payment-method input#w-agree, #collapse-payment-method textarea'),
-                dataType: 'json',
-                beforeSend: function() {
-                    $('#button-payment-method').button('loading');
-                },
-                success: function(json) {
-                    //console.log(json);
-                    $('.alert, .text-danger').remove();
+        $.ajax({
+            url: 'index.php?route=checkout/payment_method/save',
+            type: 'post',
+            data: $('#collapse-payment-method input[type=\'radio\']:checked, #collapse-payment-method input[type=\'checkbox\']:checked, #collapse-payment-method input#w-agree, #collapse-payment-method textarea'),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#button-payment-method').button('loading');
+            },
+            success: function(json) {
+                //console.log(json);
+                $('.alert, .text-danger').remove();
 
-                    if (json['redirect']) {
-                        //location = json['redirect'];
-                    } else if (json['error']) {
-                        if (json['error']['warning']) {
-                            $('#collapse-payment-method').prepend('<div class="alert alert-warning">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                        }
-                    } else {
-
-                        $.ajax({
-                            url: 'index.php?route=checkout/confirm',
-                            type: 'post',
-                            dataType: 'html',
-                            data: '&flag_load_paymants_form=1',
-                            complete: function() {
-                                $('#button-payment-method').button('reset');
-                            },
-                            success: function(html) {
-
-                                $('.blue-check').html(html);
-
-                            },
-                            error: function(xhr, ajaxOptions, thrownError) {
-                                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-                            }
-                        });
-
+                if (json['redirect']) {
+                    //location = json['redirect'];
+                } else if (json['error']) {
+                    if (json['error']['warning']) {
+                        $('#collapse-payment-method').prepend('<div class="alert alert-warning">' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
                     }
-                },
-                error: function(xhr, ajaxOptions, thrownError) {
-                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                } else {
+
+                    $.ajax({
+                        url: 'index.php?route=checkout/confirm',
+                        type: 'post',
+                        dataType: 'html',
+                        data: '&flag_load_paymants_form=1',
+                        complete: function() {
+                            $('#button-payment-method').button('reset');
+                        },
+                        success: function(html) {
+
+                            $('.blue-check').html(html);
+
+                        },
+                        error: function(xhr, ajaxOptions, thrownError) {
+                            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                        }
+                    });
+
                 }
-            });
-        <?endif?>
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                //alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
         });
+
+
+        $('#w-form-regystry-checkout').validate({
+            rules:{
+
+                email:{
+                    required: true,
+                    email: true
+                },
+
+                firstname: {
+                    required: true
+                },
+
+                lastname: {
+                    required: true
+                },
+
+                address_1: {
+                    required: true
+                },
+                city: {
+                    required: true
+                },
+                postcode: {
+                    required: true,
+                    number: true
+                },
+                country_id: {
+                    required: true
+                },
+                telephone: {
+                    required: true,
+                    number: true
+                }
+
+            }
+
+
+        });
+
+    });
 
 
 
@@ -460,63 +481,76 @@ $(document).on('click', '#button-account', function() {
 
 // Register
 $(document).on('click', '#button-register', function() {
-    $.ajax({
-        url: 'index.php?route=checkout/register/save',
-        type: 'post',
-        data: $('#collapse-payment-address input[type=\'text\'], #collapse-payment-address input[type=\'date\'], #collapse-payment-address input[type=\'datetime-local\'], #collapse-payment-address input[type=\'time\'], #collapse-payment-address input[type=\'password\'], #collapse-payment-address input[type=\'hidden\'], #collapse-payment-address input[type=\'checkbox\']:checked, #collapse-payment-address input[type=\'radio\']:checked, #collapse-payment-address textarea, #collapse-payment-address select'),
-        dataType: 'json',
-        beforeSend: function() {
-			$('#button-register').button('loading');
-		},
-        success: function(json) {
-            $('.alert, .text-danger').remove();
-            $('.cc-shipping-row').removeClass('has-error');
-            console.log(json);
-            if (json['redirect']) {
-                location = json['redirect'];
-            } else if (json['error']) {
-                $('#button-register').button('reset');
 
-                if (json['error']['warning']) {
-                    $('#collapse-payment-address').prepend('<div class="alert alert-danger we"><i class="fa fa-exclamation-circle"></i> ' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
-                }
+    if ($('#w-form-regystry-checkout').valid()) {
 
-				for (i in json['error']) {
-					var element = $('#input-payment-' + i.replace('_', '-'));
+        $.ajax({
+            url: 'index.php?route=checkout/register/save',
+            type: 'post',
+            data: $('#collapse-payment-address input[type=\'text\'], #collapse-payment-address input[type=\'date\'], #collapse-payment-address input[type=\'datetime-local\'], #collapse-payment-address input[type=\'time\'], #collapse-payment-address input[type=\'password\'], #collapse-payment-address input[type=\'hidden\'], #collapse-payment-address input[type=\'checkbox\']:checked, #collapse-payment-address input[type=\'radio\']:checked, #collapse-payment-address textarea, #collapse-payment-address select, #collapse-payment-method input[type=\'radio\']:checked, #collapse-payment-method input[type=\'checkbox\']:checked'),
+            dataType: 'json',
+            beforeSend: function() {
+                $('#button-register').button('loading');
+            },
+            success: function(json) {
+                $('.alert, .text-danger').remove();
+                $('.cc-shipping-row').removeClass('has-error');
 
-					if ($(element).parent().hasClass('input-group')) {
-						$(element).parent().after('<div class="text-danger">' + json['error'][i] + '</div>');
-					} else {
-						$(element).after('<div class="text-danger">' + json['error'][i] + '</div>');
-					}
-				}
+                if (json['redirect']) {
+                    location = json['redirect'];
+                } else if (json['error']) {
+                    $('#button-register').button('reset');
 
-				// Highlight any found errors
-				$('.text-danger').parent().addClass('has-error');
-            } else {
-
-                $.ajax({
-                    url: 'index.php?route=checkout/payment_address',
-                    dataType: 'html',
-                    complete: function() {
-                        $('#button-register').button('reset');
-                    },
-                    success: function(html) {
-                        $('#collapse-payment-address').html(html);
-
-                    },
-                    error: function(xhr, ajaxOptions, thrownError) {
-                        alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                    if (json['error']['warning']) {
+                        $('#collapse-payment-address').prepend('<div class="alert alert-danger we"><i class="fa fa-exclamation-circle"></i> ' + json['error']['warning'] + '<button type="button" class="close" data-dismiss="alert">&times;</button></div>');
                     }
-                });
 
-                location.reload();
+                    for (i in json['error']) {
+                        var element = $('#input-payment-' + i.replace('_', '-'));
+
+                        if ($(element).parent().hasClass('input-group')) {
+                            $(element).parent().after('<div class="text-danger">' + json['error'][i] + '</div>');
+                        } else {
+                            $(element).after('<div class="text-danger">' + json['error'][i] + '</div>');
+                        }
+                    }
+
+                    // Highlight any found errors
+                    $('.text-danger').parent().addClass('has-error');
+                } else {
+
+                    $.ajax({
+                        url: 'index.php?route=checkout/payment_address',
+                        type: 'post',
+                        data: $('#payment :input'),
+                        dataType: 'html',
+                        complete: function() {
+                            $('#button-register').button('reset');
+                        },
+                        success: function(html) {
+                            $('#collapse-payment-address').html(html);
+                            location = '<?php echo $continue; ?>';
+
+                        },
+                        error: function(xhr, ajaxOptions, thrownError) {
+                            location.reload();
+                            // alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                        }
+                    });
+
+                    //location.reload();
+                }
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
             }
-        },
-        error: function(xhr, ajaxOptions, thrownError) {
-            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    });
+        });
+    } else {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    }
+
+
+
     return false;
 });
 

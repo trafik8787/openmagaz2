@@ -373,6 +373,8 @@
 <script type="text/javascript" src="/catalog/view/theme/canary/js/jquery.inputmask.bundle.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/inputmask.numeric.extensions.min.js" ></script>
 <script type="text/javascript" src="/catalog/view/theme/canary/js/numeral.min.js" ></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery.validate.min.js" ></script>
+
 <script async="async" type="text/javascript">
     var google_tag_params = {
         ecomm_prodid: 'REPLACE_WITH_VALUE',

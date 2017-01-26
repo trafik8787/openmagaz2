@@ -1,256 +1,257 @@
-<div class="line-with-input">
-    <div class="title-c">CUSTOMER INFORMATION</div>
+<form action="" id="w-form-regystry-checkout">
+    <div class="line-with-input">
+        <div class="title-c">CUSTOMER INFORMATION</div>
+        <div class="clearfix">
+            <div class="bl-input must">
+                <input type="text" name="email" id="input-payment-email" value="<?=$v_email?>" placeholder="Enter Email" >
+            </div>
+            <div class="text-right-input">
+                or <a href="/login">login</a> with an existing account and return to checkout
+            </div>
+        </div>
+    </div>
+
+    <div class="line-with-input">
+    <div class="title-c">DELIVERY  INFORMATION</div>
     <div class="clearfix">
         <div class="bl-input must">
-            <input type="text" name="email" id="input-payment-email" value="<?=$v_email?>" placeholder="Enter Email" >
-        </div>
-        <div class="text-right-input">
-            or <a href="/login">login</a> with an existing account and return to checkout
-        </div>
-    </div>
-</div>
-
-<div class="line-with-input">
-<div class="title-c">DELIVERY  INFORMATION</div>
-<div class="clearfix">
-    <div class="bl-input must">
-        <input type="text" name="firstname" value="<?=$v_firstname?>" id="input-payment-firstname" placeholder="First name">
-    </div>
-    <div class="bl-input must">
-        <input type="text" name="lastname"  value="<?=$v_lastname?>" id="input-payment-lastname" placeholder="Last name">
-    </div>
-</div>
-<div class="clearfix">
-    <div class="bl-input must">
-        <input type="text" name="address_1" id="input-payment-address-1" placeholder="Address">
-    </div>
-    <div class="bl-input">
-        <input type="text" name="address_2" id="input-payment-address-2" placeholder="Address (cont.)">
-    </div>
-</div>
-
-<div class="clearfix">
-    <div class="bl-input must">
-        <input type="text" name="city" id="input-payment-city" placeholder="City">
-    </div>
-    <div class="bl-input clearfix">
-        <div class="bl-input must">
-
-            <select name="country_id" id="input-payment-country">
-                <option value="">Select Country</option>
-                <?php foreach ($countries as $country) { ?>
-                <?php if ($country['country_id'] == $country_id) { ?>
-                <option value="<?php echo $country['country_id']; ?>"
-                        selected="selected"><?php echo $country['name']; ?></option>
-                <?php } else { ?>
-                <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
-                <?php } ?>
-                <?php } ?>
-            </select>
-
+            <input type="text" name="firstname" value="<?=$v_firstname?>" id="input-payment-firstname" placeholder="First name">
         </div>
         <div class="bl-input must">
-            <select name="zone_id" id="input-payment-zone">
-            </select>
+            <input type="text" name="lastname"  value="<?=$v_lastname?>" id="input-payment-lastname" placeholder="Last name">
         </div>
     </div>
-</div>
-
-
-<div class="clearfix">
-    <div class="bl-input must">
-        <input type="text" name="postcode" id="input-payment-postcode" placeholder="Postal code">
-    </div>
-    <div class="bl-input must">
-        <input type="text" name="telephone" id="input-payment-telephone" placeholder="Phone number">
-    </div>
-</div>
-
-
-
-<?php foreach ($custom_fields as $custom_field) { ?>
-<?php if ($custom_field['location'] == 'address') { ?>
-<?php if ($custom_field['type'] == 'select') { ?>
-<div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-     class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
-    <label class="control-label"
-           for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
-    <select name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
-            id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-            class="shipping-input styled-select" style="width: 100%">
-        <option value=""><?php echo $text_select; ?></option>
-        <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
-        <option value="<?php echo $custom_field_value['custom_field_value_id']; ?>"><?php echo $custom_field_value['name']; ?></option>
-        <?php } ?>
-    </select>
-</div>
-<?php } ?>
-<?php if ($custom_field['type'] == 'radio') { ?>
-<div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-     class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
-    <label class="control-label"><?php echo $custom_field['name']; ?></label>
-    <div id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>">
-        <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
-        <div class="radio">
-            <label>
-                <input type="radio"
-                       name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
-                       value="<?php echo $custom_field_value['custom_field_value_id']; ?>"/>
-                <?php echo $custom_field_value['name']; ?></label>
+    <div class="clearfix">
+        <div class="bl-input must">
+            <input type="text" name="address_1" id="input-payment-address-1" placeholder="Address">
         </div>
-        <?php } ?>
-    </div>
-</div>
-<?php } ?>
-<?php if ($custom_field['type'] == 'checkbox') { ?>
-<div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-     class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
-    <label class="control-label"><?php echo $custom_field['name']; ?></label>
-    <div id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>">
-        <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"
-                       name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>][]"
-                       value="<?php echo $custom_field_value['custom_field_value_id']; ?>"/>
-                <?php echo $custom_field_value['name']; ?></label>
+        <div class="bl-input">
+            <input type="text" name="address_2" id="input-payment-address-2" placeholder="Address (cont.)">
         </div>
-        <?php } ?>
     </div>
-</div>
-<?php } ?>
-<?php if ($custom_field['type'] == 'text') { ?>
-<div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-     class="bl-input must" data-sort="<?php echo $custom_field['sort_order']; ?>">
-    <input type="text"
-           name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
-           value="<?php echo $custom_field['value']; ?>" placeholder="<?php echo $custom_field['name']; ?>"
-           id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"/>
-</div>
-<?php } ?>
-<?php if ($custom_field['type'] == 'textarea') { ?>
-<div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-     class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
-    <label class="control-label"
-           for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
-    <textarea
-            name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
-            rows="5" placeholder="<?php echo $custom_field['name']; ?>"
-            id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-            class="form-control"><?php echo $custom_field['value']; ?></textarea>
-</div>
-<?php } ?>
-<?php if ($custom_field['type'] == 'file') { ?>
-<div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-     class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
-    <label class="control-label"><?php echo $custom_field['name']; ?></label>
-    <br/>
-    <button type="button" id="button-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-            data-loading-text="<?php echo $text_loading; ?>" class="btn btn-default"><i
-                class="fa fa-upload"></i> <?php echo $button_upload; ?></button>
-    <input type="hidden"
-           name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
-           value="" id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"/>
-</div>
-<?php } ?>
-<?php if ($custom_field['type'] == 'date') { ?>
-<div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-     class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
-    <label class="control-label"
-           for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
-    <div class="input-group date">
+
+    <div class="clearfix">
+        <div class="bl-input must">
+            <input type="text" name="city" id="input-payment-city" placeholder="City">
+        </div>
+        <div class="bl-input clearfix">
+            <div class="bl-input must">
+
+                <select name="country_id" class="required" id="input-payment-country">
+                    <option disabled value="">Select Country</option>
+                    <?php foreach ($countries as $country) { ?>
+                    <?php if ($country['country_id'] == $country_id) { ?>
+                    <option value="<?php echo $country['country_id']; ?>"
+                            selected="selected"><?php echo $country['name']; ?></option>
+                    <?php } else { ?>
+                    <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
+                    <?php } ?>
+                    <?php } ?>
+                </select>
+
+            </div>
+            <div class="bl-input must">
+                <select class="required" name="zone_id" id="input-payment-zone">
+                </select>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="clearfix">
+        <div class="bl-input must">
+            <input type="text" name="postcode" id="input-payment-postcode" placeholder="Postal code">
+        </div>
+        <div class="bl-input must">
+            <input type="text" name="telephone" id="input-payment-telephone" placeholder="Phone number">
+        </div>
+    </div>
+
+
+
+    <?php foreach ($custom_fields as $custom_field) { ?>
+    <?php if ($custom_field['location'] == 'address') { ?>
+    <?php if ($custom_field['type'] == 'select') { ?>
+    <div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+         class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
+        <label class="control-label"
+               for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
+        <select name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
+                id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+                class="shipping-input styled-select" style="width: 100%">
+            <option value=""><?php echo $text_select; ?></option>
+            <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
+            <option value="<?php echo $custom_field_value['custom_field_value_id']; ?>"><?php echo $custom_field_value['name']; ?></option>
+            <?php } ?>
+        </select>
+    </div>
+    <?php } ?>
+    <?php if ($custom_field['type'] == 'radio') { ?>
+    <div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+         class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
+        <label class="control-label"><?php echo $custom_field['name']; ?></label>
+        <div id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>">
+            <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
+            <div class="radio">
+                <label>
+                    <input type="radio"
+                           name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
+                           value="<?php echo $custom_field_value['custom_field_value_id']; ?>"/>
+                    <?php echo $custom_field_value['name']; ?></label>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+    <?php } ?>
+    <?php if ($custom_field['type'] == 'checkbox') { ?>
+    <div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+         class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
+        <label class="control-label"><?php echo $custom_field['name']; ?></label>
+        <div id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>">
+            <?php foreach ($custom_field['custom_field_value'] as $custom_field_value) { ?>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"
+                           name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>][]"
+                           value="<?php echo $custom_field_value['custom_field_value_id']; ?>"/>
+                    <?php echo $custom_field_value['name']; ?></label>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+    <?php } ?>
+    <?php if ($custom_field['type'] == 'text') { ?>
+    <div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+         class="bl-input must" data-sort="<?php echo $custom_field['sort_order']; ?>">
         <input type="text"
                name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
-               value="<?php echo $custom_field['value']; ?>"
-               placeholder="<?php echo $custom_field['name']; ?>" data-date-format="YYYY-MM-DD"
-               id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-               class="form-control"/>
-        <span class="input-group-btn">
-          <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
-          </span></div>
-</div>
-<?php } ?>
-<?php if ($custom_field['type'] == 'time') { ?>
-<div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-     class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
-    <label class="control-label"
-           for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
-    <div class="input-group time">
-        <input type="text"
+               value="<?php echo $custom_field['value']; ?>" placeholder="<?php echo $custom_field['name']; ?>"
+               id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"/>
+    </div>
+    <?php } ?>
+    <?php if ($custom_field['type'] == 'textarea') { ?>
+    <div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+         class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
+        <label class="control-label"
+               for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
+        <textarea
+                name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
+                rows="5" placeholder="<?php echo $custom_field['name']; ?>"
+                id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+                class="form-control"><?php echo $custom_field['value']; ?></textarea>
+    </div>
+    <?php } ?>
+    <?php if ($custom_field['type'] == 'file') { ?>
+    <div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+         class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
+        <label class="control-label"><?php echo $custom_field['name']; ?></label>
+        <br/>
+        <button type="button" id="button-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+                data-loading-text="<?php echo $text_loading; ?>" class="btn btn-default"><i
+                    class="fa fa-upload"></i> <?php echo $button_upload; ?></button>
+        <input type="hidden"
                name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
-               value="<?php echo $custom_field['value']; ?>"
-               placeholder="<?php echo $custom_field['name']; ?>" data-date-format="HH:mm"
-               id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-               class="form-control"/>
-        <span class="input-group-btn">
-          <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
-          </span></div>
-</div>
-<?php } ?>
-<?php if ($custom_field['type'] == 'datetime') { ?>
-<div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-     class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
-    <label class="control-label"
-           for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
-    <div class="input-group datetime">
-        <input type="text"
-               name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
-               value="<?php echo $custom_field['value']; ?>"
-               placeholder="<?php echo $custom_field['name']; ?>" data-date-format="YYYY-MM-DD HH:mm"
-               id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
-               class="form-control"/>
-        <span class="input-group-btn">
-          <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
-          </span></div>
-</div>
-<?php } ?>
-<?php } ?>
-<?php } ?>
+               value="" id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"/>
+    </div>
+    <?php } ?>
+    <?php if ($custom_field['type'] == 'date') { ?>
+    <div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+         class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
+        <label class="control-label"
+               for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
+        <div class="input-group date">
+            <input type="text"
+                   name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
+                   value="<?php echo $custom_field['value']; ?>"
+                   placeholder="<?php echo $custom_field['name']; ?>" data-date-format="YYYY-MM-DD"
+                   id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+                   class="form-control"/>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+              </span></div>
+    </div>
+    <?php } ?>
+    <?php if ($custom_field['type'] == 'time') { ?>
+    <div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+         class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
+        <label class="control-label"
+               for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
+        <div class="input-group time">
+            <input type="text"
+                   name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
+                   value="<?php echo $custom_field['value']; ?>"
+                   placeholder="<?php echo $custom_field['name']; ?>" data-date-format="HH:mm"
+                   id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+                   class="form-control"/>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+              </span></div>
+    </div>
+    <?php } ?>
+    <?php if ($custom_field['type'] == 'datetime') { ?>
+    <div id="payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+         class="form-group custom-field" data-sort="<?php echo $custom_field['sort_order']; ?>">
+        <label class="control-label"
+               for="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"><?php echo $custom_field['name']; ?></label>
+        <div class="input-group datetime">
+            <input type="text"
+                   name="custom_field[<?php echo $custom_field['location']; ?>][<?php echo $custom_field['custom_field_id']; ?>]"
+                   value="<?php echo $custom_field['value']; ?>"
+                   placeholder="<?php echo $custom_field['name']; ?>" data-date-format="YYYY-MM-DD HH:mm"
+                   id="input-payment-custom-field<?php echo $custom_field['custom_field_id']; ?>"
+                   class="form-control"/>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+              </span></div>
+    </div>
+    <?php } ?>
+    <?php } ?>
+    <?php } ?>
 
-<?php echo $captcha; ?>
+    <?php echo $captcha; ?>
 
-<div class="include-price-row">
-    <input type="checkbox" class="styled-checkbox styled-checkbox-before" name="newsletter" value="1" id="newsletter"/>
-    <label for="newsletter"><?php echo $entry_newsletter; ?></label>
-</div>
+    <div class="include-price-row">
+        <input type="checkbox" class="styled-checkbox styled-checkbox-before" name="newsletter" value="1" id="newsletter"/>
+        <label for="newsletter"><?php echo $entry_newsletter; ?></label>
+    </div>
 
-<?php if ($shipping_required):?>
-<div class="include-price-row">
-    <input type="checkbox" id="ps2" class="styled-checkbox styled-checkbox-before" name="shipping_address" value="1"
-           checked="checked"/>
-    <label for="ps2"><?php echo $entry_shipping; ?></label>
-</div>
-<?php endif?>
-
-
-<?php if ($text_agree) : ?>
-
-<div class="include-price-row no-bottom-margin" style="display: none">
-    <input type="checkbox" class="styled-checkbox styled-checkbox-before" checked="checked" id="pc3" name="agree" value="1">
-    <label for="pc3"><?php echo $text_agree; ?></label>
-</div>
+    <?php if ($shipping_required):?>
+    <div class="include-price-row">
+        <input type="checkbox" id="ps2" class="styled-checkbox styled-checkbox-before" name="shipping_address" value="1"
+               checked="checked"/>
+        <label for="ps2"><?php echo $entry_shipping; ?></label>
+    </div>
+    <?php endif?>
 
 
-<div class="text-right">
-    <button class="btn login-form-btn btn-lg active-c" id="button-register" data-loading-text="<?php echo $text_loading; ?>"
-            style="width: 200px; display: inline-block;"><?php echo $button_continue; ?></button>
-</div>
-<?php else : ?>
-<div class="include-price-row no-bottom-margin">
-    <button class="btn w-btn-orange2" id="button-register"
-            data-loading-text="<?php echo $text_loading; ?>"><?php echo $button_continue; ?></button>
-</div>
+    <?php if ($text_agree) : ?>
 
-<?php endif ?>
+    <div class="include-price-row no-bottom-margin" style="display: none">
+        <input type="checkbox" class="styled-checkbox styled-checkbox-before" checked="checked" id="pc3" name="agree" value="1">
+        <label for="pc3"><?php echo $text_agree; ?></label>
+    </div>
 
 
-<p>
-    Orders cannot be shipped to a P.O. Box<br/>
-    Please make sure to provide a street address where a signature can be obtained for receipt
-</p>
+    <!--*<div class="text-right">*-->
+        <!--*<button class="btn login-form-btn btn-lg active-c" id="button-register" data-loading-text="<?php echo $text_loading; ?>"*-->
+                <!--*style="width: 200px; display: inline-block;"><?php echo $button_continue; ?></button>*-->
+    <!--*</div>*-->
+    <?php else : ?>
+    <div class="include-price-row no-bottom-margin">
+        <button class="btn w-btn-orange2" id="button-register"
+                data-loading-text="<?php echo $text_loading; ?>"><?php echo $button_continue; ?></button>
+    </div>
 
-</div>
+    <?php endif ?>
 
+
+    <p>
+        Orders cannot be shipped to a P.O. Box<br/>
+        Please make sure to provide a street address where a signature can be obtained for receipt
+    </p>
+
+    </div>
+</form>
 
 <script type="text/javascript"><!--
     // Sort the custom fields
@@ -380,7 +381,7 @@
                     $('#collapse-payment-address input[name=\'postcode\']').parent().parent().removeClass('required');
                 }
 
-                html = '<option value=""><?php echo $text_select; ?></option>';
+                html = '<option selected disabled value=""><?php echo $text_select; ?></option>';
 
                 if (json['zone'] && json['zone'] != '') {
                     for (i = 0; i < json['zone'].length; i++) {

@@ -5,7 +5,7 @@ class ControllerCheckoutPaymentMethod extends Controller {
         $this->load->model('account/address');
 //        $this->load->model('checkout/order');
 //
-//        dd($this->model_checkout_order->getOrder($this->session->data['order_id']));
+//        dd($this->model_checkout_order->getOrder($this->session->data['order_id']$this->session->data['order_id']));
         //ОТКРІВАЕМ ДОСТУП К ВЫБОРУ МЕТОДА КОГДА АДРЕС СУЩЕСТВУЕТ
 		if (isset($this->session->data['payment_address'])) {
             $this->getMetodsPymant();
@@ -91,7 +91,6 @@ class ControllerCheckoutPaymentMethod extends Controller {
 		$this->load->language('checkout/checkout');
 
 		$json = array();
-
 		// Validate if payment address has been set.
 		if (!isset($this->session->data['payment_address'])) {
 			$json['redirect'] = $this->url->link('checkout/checkout', '', 'SSL');
@@ -138,9 +137,11 @@ class ControllerCheckoutPaymentMethod extends Controller {
 		}
 
 		if (!$json) {
+            $this->getMetodsPymant();
 			$this->session->data['payment_method'] = $this->session->data['payment_methods'][$this->request->post['payment_method']];
 
 			//$this->session->data['comment'] = strip_tags($this->request->post['comment']);
+
             $this->session->data['comment'] = '';
 		}
 

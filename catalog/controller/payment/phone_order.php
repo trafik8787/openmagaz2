@@ -11,7 +11,7 @@ class ControllerPaymentPhoneOrder extends Controller {
 		$data['button_confirm'] = $this->language->get('button_confirm');
 
 		$data['bank'] = nl2br($this->config->get('phone_order_bank' . $this->config->get('config_language_id')));
-
+        $data['logged'] = $this->customer->isLogged();
 		$data['continue'] = $this->url->link('checkout/success');
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/phone_order.tpl')) {

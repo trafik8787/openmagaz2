@@ -1,8 +1,7 @@
 <?php
 class ControllerCheckoutConfirm extends Controller {
-	public function index() {
+	public function index($flag_load_paymants_form = null, $flag = null) {
 		$redirect = '';
-
         $this->load->model('account/address');
         $this->session->data['payment_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
 
@@ -63,12 +62,12 @@ class ControllerCheckoutConfirm extends Controller {
         }
 
 		//dd($this->request->post, true);
-		if (!empty($this->request->post['flag_load_paymants_form']) AND $this->request->post['flag_load_paymants_form'] == 1) {
+		if ((!empty($this->request->post['flag_load_paymants_form']) or $flag_load_paymants_form !== null)  AND ($this->request->post['flag_load_paymants_form'] == 1 or $flag_load_paymants_form == 1)) {
             $data['payment'] = $this->load->controller('payment/' . $this->session->data['payment_method']['code']);
         }
 
         //и если идет оплата то сохраняем ордер в базу
-		if (!$redirect and !empty($this->request->post['flag_load_paymants_form']) AND $this->request->post['flag_load_paymants_form'] == 2) {
+		if (!$redirect and (!empty($this->request->post['flag_load_paymants_form']) or $flag_load_paymants_form !== null) AND ($this->request->post['flag_load_paymants_form'] == 2 or $flag_load_paymants_form == 2)) {
 
 			$order_data = array();
 

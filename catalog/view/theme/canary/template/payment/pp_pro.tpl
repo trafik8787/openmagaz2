@@ -39,7 +39,7 @@
         </div>
           <div class="form-group help-form-group">
               <span class="help-cvv" rel="popover"  data-container=".help-form-group" data-html="true" data-toggle="popover" data-placement="top" data-content='
-<div class="w-popover-content">
+                        <div class="w-popover-content">
 
                             <div class="w-popover-title">SECURITY CODE</div>
                             <button type="button" class="w-close-popover" >x</button>
@@ -108,8 +108,11 @@
             return false;
         });
     });
-
-    $('.box-btn-checkout').html('<button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-confirm" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>');
+    <?if ($logged):?>
+        $('.box-btn-checkout').html('<button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-confirm" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>');
+    <?else:?>
+        $('.box-btn-checkout').html('<button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-register" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>');
+    <?endif?>
     $('#button-confirm').bind('click', function() {
         $.ajax({
             url: 'index.php?route=payment/pp_pro/send',

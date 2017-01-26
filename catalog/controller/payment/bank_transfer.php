@@ -14,6 +14,8 @@ class ControllerPaymentBankTransfer extends Controller {
 
 		$data['continue'] = $this->url->link('checkout/success');
 
+        $data['logged'] = $this->customer->isLogged();
+
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/bank_transfer.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/payment/bank_transfer.tpl', $data);
 		} else {
@@ -22,6 +24,7 @@ class ControllerPaymentBankTransfer extends Controller {
 	}
 
 	public function confirm() {
+        //dd($this->session->data, true);
 		if ($this->session->data['payment_method']['code'] == 'bank_transfer') {
 			$this->load->language('payment/bank_transfer');
 

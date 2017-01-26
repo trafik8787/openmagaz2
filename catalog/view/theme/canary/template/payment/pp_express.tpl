@@ -14,6 +14,9 @@
 <!--*</div>*-->
 
 <script type="text/javascript"><!--
-    $('.box-btn-checkout').html('<a href="<?php echo $button_continue_action; ?>" class="btn login-form-btn btn-lg w-submit-order-checout"><i class="submit-order-ico"></i> SUBMIT ORDER</a>');
-
+    <?if ($logged):?>
+        $('.box-btn-checkout').html('<a href="<?php echo $button_continue_action; ?>" class="btn login-form-btn btn-lg w-submit-order-checout"><i class="submit-order-ico"></i> SUBMIT ORDER</a>');
+    <?else:?>
+        $('.box-btn-checkout').html('<a id="button-register" class="btn login-form-btn btn-lg w-submit-order-checout"><i class="submit-order-ico"></i> SUBMIT ORDER</a>');
+    <?endif?>
 //--></script>

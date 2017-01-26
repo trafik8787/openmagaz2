@@ -1,6 +1,6 @@
 <?php
 class ControllerCheckoutPaymentAddress extends Controller {
-	public function index() {
+	public function index($flag = null) {
 		$this->load->language('checkout/checkout');
 
 		$data['text_address_existing'] = $this->language->get('text_address_existing');
@@ -66,12 +66,32 @@ class ControllerCheckoutPaymentAddress extends Controller {
                 $data['payment_address_custom_field'] = array();
             }
 
-
-            if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/payment_address.tpl')) {
-                $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/payment_address.tpl', $data));
-            } else {
-                $this->response->setOutput($this->load->view('default/template/checkout/payment_address.tpl', $data));
+            if ($this->session->data['payment_method']['code'] == 'bank_transfer') {
+                $this->load->controller('checkout/confirm', 2);
+                $this->load->controller('payment/bank_transfer/confirm');
+            } elseif ($this->session->data['payment_method']['code'] == 'pp_pro') {
+                $this->load->controller('checkout/confirm', 2);
+                $this->load->controller('payment/pp_pro/send');
+            } elseif ($this->session->data['payment_method']['code'] == 'pp_express') {
+                $this->load->controller('checkout/confirm', 2);
+                $this->load->controller('payment/pp_express/checkout');
+                unset($this->session->data['payment_method']['code']);
+                  //$this->response->redirect($this->url->link('payment/pp_express/checkout', '', 'SSL'));
+            } elseif ($this->session->data['payment_method']['code'] == 'phone_order') {
+                $this->load->controller('checkout/confirm', 2);
+                $this->load->controller('payment/phone_order/confirm');
             }
+
+            if ($flag != null) {
+                return $this->load->view($this->config->get('config_template') . '/template/checkout/payment_address.tpl', $data);
+            } else {
+                if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/payment_address.tpl')) {
+                    $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/checkout/payment_address.tpl', $data));
+                } else {
+                    $this->response->setOutput($this->load->view('default/template/checkout/payment_address.tpl', $data));
+                }
+            }
+
         } else {
             $this->response->setOutput($this->load->controller('checkout/register', true));
         }

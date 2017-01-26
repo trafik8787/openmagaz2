@@ -112,8 +112,6 @@ class ControllerCheckoutRegister extends Controller {
        // $data['address_id'] = $this->customer->getAddressId();
 
 
-
-
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/checkout/register.tpl')) {
 
             if ($render == false) {
@@ -320,11 +318,18 @@ class ControllerCheckoutRegister extends Controller {
 				$json['redirect'] = $this->url->link('account/success');
 			}
 
-			unset($this->session->data['guest']);
-			unset($this->session->data['shipping_method']);
-			unset($this->session->data['shipping_methods']);
-			unset($this->session->data['payment_method']);
-			unset($this->session->data['payment_methods']);
+
+//            dd($this->session->data);
+//            dd($this->request->post, true);
+
+
+//			unset($this->session->data['guest']);
+//			unset($this->session->data['shipping_method']);
+//			unset($this->session->data['shipping_methods']);
+//			unset($this->session->data['payment_method']);
+//			unset($this->session->data['payment_methods']);
+
+
 
 			// Add to activity log
 			$this->load->model('account/activity');
@@ -335,6 +340,7 @@ class ControllerCheckoutRegister extends Controller {
 			);
 
 			$this->model_account_activity->addActivity('register', $activity_data);
+            
 		}
 
 		$this->response->addHeader('Content-Type: application/json');
