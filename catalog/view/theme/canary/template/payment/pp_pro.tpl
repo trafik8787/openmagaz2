@@ -34,7 +34,7 @@
         </div>
         <div class="form-group required">
 
-            <input type="text" name="cc_cvv2" value="" placeholder="<?php echo $entry_cc_cvv2; ?>" id="input-cc-cvv2" class="form-control" />
+            <input type="text" name="cc_cvv2" value="" placeholder="CVV" id="input-cc-cvv2" class="form-control" />
 
         </div>
           <div class="form-group help-form-group">
