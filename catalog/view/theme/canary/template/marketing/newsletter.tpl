@@ -10,7 +10,7 @@
     </div>
 
     <button value="1" name="sex" class="w-newsletter-button btn w-btn-orange2" onmouseup="ga('send', 'event', 'button, 'click', 'Email Subscription');" type="submit">Woman</button>
-    <button value="2"  name="sex" class="w-newsletter-button btn w-btn-orange2" onmouseup="ga('send', 'event', 'button, 'click', 'Email Subscription');" type="submit">Men</button>
+    <button value="2"  name="sex" class="w-newsletter-button btn w-btn-orange2" onmouseup="ga('send', 'event', 'button, 'click', 'Email Subscription');" type="submit">Man</button>
 </form>
 
 

@@ -6,26 +6,26 @@
 <?//dd($cards)?>
 
 <div class="clearfix box-card-l" >
-    <form class="form-inline" role="form">
+    <span class="form-inline" role="form">
       <fieldset id="payment" style="color: #fff;">
         <!--*<legend><?php echo $text_credit_card; ?></legend>*-->
-          <input type="hidden" name="cc_type" id="input-cc-type">
+        <input type="hidden" name="cc_type" id="input-cc-type">
 
         <div class="form-group required">
-
-            <input type="text" name="cc_number" value="" placeholder="<?php echo $entry_cc_number; ?>" id="input-cc-number" class="form-control" />
-
+            <input type="text" name="cc_number" value="" placeholder="Cart Number" id="input-cc-number" class="form-control" />
         </div>
 
         <div class="form-group required">
 
-            <select name="cc_expire_date_month" id="input-cc-expire-date" class="form-control">
+            <select name="cc_expire_date_month" id="input-cc-expire-date" class="form-control required">
+                <option value="" selected disabled>Month</option>
               <?php foreach ($months as $month) { ?>
               <option value="<?php echo $month['value']; ?>"><?php echo $month['text']; ?></option>
               <?php } ?>
             </select>
 
-            <select name="cc_expire_date_year" class="form-control">
+            <select name="cc_expire_date_year" class="form-control required">
+                <option value="" selected disabled>Year</option>
               <?php foreach ($year_expire as $year) { ?>
               <option value="<?php echo $year['value']; ?>"><?php echo $year['text']; ?></option>
               <?php } ?>
@@ -64,7 +64,7 @@
           <input type="hidden" name="cc_issue" value="" id="input-cc-issue">
 
       </fieldset>
-    </form>
+    </span>
 </div>
 
 <!--*<div class="buttons">*-->

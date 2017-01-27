@@ -121,60 +121,60 @@
                         </div>
                     </div>
 
+                    <form action="" id="w-form-regystry-checkout">
+                        <div class="col-md-8">
+                            <!--*<form action="">*-->
 
-                    <div class="col-md-8">
-                        <!--*<form action="">*-->
+                                <div class="right-checkout">
 
-                            <div class="right-checkout">
-
-                                <div id="collapse-payment-address">
-                                    <?if ($logged):?>
-                                        <?=$logined_address?>
-                                    <?else:?>
-                                        <?=$payment_address?>
-                                    <?endif?>
-                                </div>
-
-
-                                <div class="airplane-block w-calculate-cost">
-                                    <div class="check-bl radio-bl">
-                                        <div class="title-c">CALCULATE SHIPPING COST</div>
-                                        <div>
-                                            <input type="radio" value="0" id="cost1" name="cost" checked="checked"><label for="cost1">FedEx Priority Overnight®: $0,00</label>
-                                        </div>
-                                        <div>
-                                            <input type="radio" value="35" id="cost2" name="cost"><label for="cost2">Saturday Delivery (Priority): $35,00</label>
-                                        </div>
-                                        <div>
-                                            <input type="radio" value="0" id="cost3" name="cost"><label for="cost3">Hold at Location (FedEx): $0,00</label>
-                                        </div>
+                                    <div id="collapse-payment-address">
+                                        <?if ($logged):?>
+                                            <?=$logined_address?>
+                                        <?else:?>
+                                            <?=$payment_address?>
+                                        <?endif?>
                                     </div>
-                                    <img src="/catalog/view/theme/canary/img/airplane.png" alt="airplane" class="airplane-img">
+
+
+                                    <div class="airplane-block w-calculate-cost">
+                                        <div class="check-bl radio-bl">
+                                            <div class="title-c">CALCULATE SHIPPING COST</div>
+                                            <div>
+                                                <input type="radio" value="0" id="cost1" name="cost" checked="checked"><label for="cost1">FedEx Priority Overnight®: $0,00</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" value="35" id="cost2" name="cost"><label for="cost2">Saturday Delivery (Priority): $35,00</label>
+                                            </div>
+                                            <div>
+                                                <input type="radio" value="0" id="cost3" name="cost"><label for="cost3">Hold at Location (FedEx): $0,00</label>
+                                            </div>
+                                        </div>
+                                        <img src="/catalog/view/theme/canary/img/airplane.png" alt="airplane" class="airplane-img">
+                                    </div>
+                                    <div class="check-bl radio-bl" id="collapse-payment-method">
+
+                                        <?=$payment_method?>
+
+                                    </div>
+
+                                    <div class="blue-check">
+
+
+                                    </div>
+
                                 </div>
-                                <div class="check-bl radio-bl" id="collapse-payment-method">
 
-                                    <?=$payment_method?>
+                                <div class="agree-checkout-box">
+                                    <input type="checkbox" name="agreeCheckout" id="agreeCheckout"><label for="agreeCheckout">I've read and agree to Brilliant Canary's <a class="agree" href="/index.php?route=information/information/agree&information_id=5">Terms & Conditions</a> and <a class="agree" href="/index.php?route=information/information/agree&information_id=3">Privacy Policy</a></label>
+                                </div>
+                                <div class="box-btn-checkout">
+                                    <button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-register" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>
 
                                 </div>
 
-                                <div class="blue-check">
 
-
-                                </div>
-
-                            </div>
-
-                            <div class="agree-checkout-box">
-                                <input type="checkbox" id="agreeCheckout"><label for="agreeCheckout">I've read and agree to Brilliant Canary's <a class="agree" href="/index.php?route=information/information/agree&information_id=5">Terms & Conditions</a> and <a class="agree" href="/index.php?route=information/information/agree&information_id=3">Privacy Policy</a></label>
-                            </div>
-                            <div class="box-btn-checkout">
-                                <button class="btn login-form-btn btn-lg w-submit-order-checout" id="button-register" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>
-
-                            </div>
-
-                        <!--*</form>*-->
-                    </div>
-
+                        </div>
+                    </form>
 
                 </div>
 
@@ -211,19 +211,22 @@
     .error {
         color: red;
     }
+
+    select.error,
+    input.error {
+       border: 1px solid red!important;
+    }
 </style>
 
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#button-confirm').prop('disabled', true);
+
 
         $(document).on('change', '#agreeCheckout', function () {
             if ($(this).prop('checked')) {
                 $('.w-submit-order-checout').addClass('active-c');
-                $('.w-submit-order-checout').prop('disabled', false);
             } else {
                 $('.w-submit-order-checout').removeClass('active-c');
-                $('.w-submit-order-checout').prop('disabled', true);
             }
 
         });
@@ -330,10 +333,53 @@
                 telephone: {
                     required: true,
                     number: true
+                },
+                cc_number: {
+                    required: true,
+                    number: true
+                },
+                cc_expire_date_month: {
+                    required: true
+                },
+                cc_expire_date_year: {
+                    required: true
+                },
+                cc_cvv2: {
+                    required: true,
+                    number: true,
+                    minlength: 3,
+                    maxlength: 3
+                },
+                agreeCheckout: {
+                    required: true
                 }
 
-            }
+            },
+            submitHandler: function() {
+               // $('.w-submit-order-checout').addClass('active-c');
 
+            },
+            invalidHandler: function() {
+                //$('.w-submit-order-checout').removeClass('active-c');
+            },
+            highlight: function(element, errorClass) {
+
+                $(element).addClass('error');
+            },
+            unhighlight: function(element) {
+                $(element).removeClass('error');
+            },
+            errorPlacement: function(error, element) {
+                if (element.attr("name") == "cc_number"
+                        || element.attr("name") == "cc_expire_date_month"
+                        || element.attr("name") == "cc_expire_date_year"
+                        || element.attr("name") == "cc_cvv2") {
+                    return false;
+                    //error.insertBefore(element);
+                } else {
+                    error.insertAfter(element);
+                }
+            }
 
         });
 
@@ -349,6 +395,7 @@
 $(document).on('change', '#collapse-payment-method input[type=\'radio\']', function () {
 
     //$('select[name="address_id"]').val();
+    $('#agreeCheckout').removeAttr("checked");
 
     $.ajax({
         url: 'index.php?route=checkout/payment_method/save',

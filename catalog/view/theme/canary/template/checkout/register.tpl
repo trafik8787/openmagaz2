@@ -1,5 +1,4 @@
-<form action="" id="w-form-regystry-checkout">
-    <div class="line-with-input">
+ <div class="line-with-input">
         <div class="title-c">CUSTOMER INFORMATION</div>
         <div class="clearfix">
             <div class="bl-input must">
@@ -250,8 +249,8 @@
         Please make sure to provide a street address where a signature can be obtained for receipt
     </p>
 
-    </div>
-</form>
+ </div>
+
 
 <script type="text/javascript"><!--
     // Sort the custom fields
