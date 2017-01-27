@@ -24,6 +24,7 @@ class ControllerCommonSeoUrl extends Controller {
         'account/forgotten' => 'account/forgotten',
         'information/about_us' => 'company',
         'account/unsubscribe' => 'unsubscribe',
+        'feed/google_sitemap' => 'sitemap',
         'information/information/privacyPolicy' => 'information/policies/privacy-policy',
         'information/information/TermsConditions' => 'information/policies/terms-conditions',
         'information/information/CookiePolicy' => 'information/policies/cookie-policy',
