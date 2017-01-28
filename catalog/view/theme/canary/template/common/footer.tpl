@@ -212,7 +212,6 @@
                                 <a href="/information/policies/terms-conditions">Terms & Conditions</a><span>|</span>
                                 <a href="/information/policies/cookie-policy">Cookie Policy</a><span>|</span>
                                 <a href="/information/policies/return-policy">Return Policy</a><span>|</span>
-                                <a href="/sitemap">Sitemap</a>
                             </p>
                         </div>
                     </div>
