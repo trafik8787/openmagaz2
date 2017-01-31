@@ -38,6 +38,12 @@ class ControllerModuleExelParser extends Controller {
     private $filter;
 
     private $width;
+    private $status;
+    private $tag;
+    private $special_price;
+    private $matching_id;
+    private $error_text_validation;
+    private $option_size; //1 или 0
 
     private $image_general;
     private $image_galery;
@@ -59,20 +65,29 @@ class ControllerModuleExelParser extends Controller {
             'ENGAGEMENT_RINGS' => 20,
             'Three-stone' => 63,
             'Vintage' => 66,
+            'VINTAGE' => 66,
             'Bezel set' => 64,
+            'BEZEL SET' => 64,
             'Halo' => 65,
+            'HALO' => 65,
             'Bypass' => 62,
+            'BYPASS' => 62,
             'Pave' => 60,
+            'PAVE' => 60,
             'Solitaire' => 59,
+            'SOLITAIRE' => 59,
             'Modern'    => 89,
+            'MODERN'    => 89,
             'Channel Set' => 61,
+            'CHANNEL SET' => 61,
             'JEWELRY_&_GIFTS' => 82,
             'Diamond Bracelets' => 85,
             'Diamond Earrings' => 84,
             'Diamond Pendant' => 86,
             'Diamond Rings' => 88,
             'Diamond Studs' => 83,
-            'Diamond Fashion Necklace' => 92,
+            'Diamond Necklaces' => 97,
+            'Fashion Necklace' => 92,
             'Gemstone Bracelets' => 93,
             'Gemstone Earrings' => 87,
             'Gemstone Pendants' => 91,
@@ -162,73 +177,75 @@ class ControllerModuleExelParser extends Controller {
                 $this->file_path = $_SERVER['DOCUMENT_ROOT'].'/'.$this->name_file;
             }
 
-            switch ($this->request->post['category']) {
-                case 20: //ENGAGEMENT RINGS
-                    $this->category_tmp[] = 20;
-
-                    $this->category_arr = array(
-                        'Three-stone' => 63,
-                        'Three Stone' => 63,
-                        'Vintage' => 66,
-                        'Bezel set' => 64,
-                        'Halo' => 65,
-                        'Bypass' => 62,
-                        'Pave' => 60,
-                        'Solitaire' => 59,
-                        'Modern'    => 89,
-                        'Channel'   => 61,
-                        'Channel Set' => 61
-                    );
-
-                    break;
-                case 82: //JEWELRY & GIFTS
-                    $this->category_tmp[] = 82;
-
-                    $this->category_arr = array(
-                        'Diamond Bracelets' => 85,
-                        'Diamond Earrings' => 84,
-                        'Diamond Pendant' => 86,
-                        'Diamond Rings' => 88,
-                        'Diamond Studs' => 83,
-                        'Diamond Fashion Necklace' => 92,
-                        'Gemstone Bracelets' => 93,
-                        'Gemstone Earrings' => 87,
-                        'Gemstone Pendants' => 91,
-                        'Gemstone Rings' => 90
-                    );
-
-                    break;
-                case 100: //WEDDING RINGS WOMAN
-                    $this->category_tmp[] = 69;
-                    $this->category_tmp[] = 96;
-
-                    $this->category_arr = array(
-                        'Classic' => 77,
-                        'classic' => 77,
-                        'Stackable' => 78,
-                        'stackable' => 78,
-                        'Eternity' => 81,
-                        'eternity' => 81,
-                        'Diamond' => 79,
-                        'diamond' => 79
-                    );
-
-                    break;
-                case 200;
-                    $this->category_tmp[] = 69;
-                    $this->category_tmp[] = 95;
-
-                    $this->category_arr = array(
-                        'Modern' => 75,
-                        'Diamond' => 74,
-                        'Classic' => 72,
-                        'Carved' => 73
-                    );
-
-                    break;
-            }
+//            switch ($this->request->post['category']) {
+//                case 20: //ENGAGEMENT RINGS
+//                    $this->category_tmp[] = 20;
+//
+//                    $this->category_arr = array(
+//                        'Three-stone' => 63,
+//                        'Three Stone' => 63,
+//                        'Vintage' => 66,
+//                        'Bezel set' => 64,
+//                        'Halo' => 65,
+//                        'Bypass' => 62,
+//                        'Pave' => 60,
+//                        'Solitaire' => 59,
+//                        'Modern'    => 89,
+//                        'Channel'   => 61,
+//                        'Channel Set' => 61
+//                    );
+//
+//                    break;
+//                case 82: //JEWELRY & GIFTS
+//                    $this->category_tmp[] = 82;
+//
+//                    $this->category_arr = array(
+//                        'Diamond Bracelets' => 85,
+//                        'Diamond Earrings' => 84,
+//                        'Diamond Pendant' => 86,
+//                        'Diamond Rings' => 88,
+//                        'Diamond Studs' => 83,
+//                        'Diamond Fashion Necklace' => 92,
+//                        'Gemstone Bracelets' => 93,
+//                        'Gemstone Earrings' => 87,
+//                        'Gemstone Pendants' => 91,
+//                        'Gemstone Rings' => 90
+//                    );
+//
+//                    break;
+//                case 100: //WEDDING RINGS WOMAN
+//                    $this->category_tmp[] = 69;
+//                    $this->category_tmp[] = 96;
+//
+//                    $this->category_arr = array(
+//                        'Classic' => 77,
+//                        'classic' => 77,
+//                        'Stackable' => 78,
+//                        'stackable' => 78,
+//                        'Eternity' => 81,
+//                        'eternity' => 81,
+//                        'Diamond' => 79,
+//                        'diamond' => 79
+//                    );
+//
+//                    break;
+//                case 200;
+//                    $this->category_tmp[] = 69;
+//                    $this->category_tmp[] = 95;
+//
+//                    $this->category_arr = array(
+//                        'Modern' => 75,
+//                        'Diamond' => 74,
+//                        'Classic' => 72,
+//                        'Carved' => 73
+//                    );
+//
+//                    break;
+//            }
 
             $this->fixParse();
+
+            $data['eror_text'] = !empty($this->error_text_validation) ? implode("<br>", $this->error_text_validation) : null;
         }
 
 
@@ -321,185 +338,341 @@ class ControllerModuleExelParser extends Controller {
         $file->setFlags(SplFileObject::READ_CSV);
         $file->setCsvControl($delimiter);
         //dd($file->current());
-        $file->seek(2);
+        $file->seek(1);
 
-        dd($file->current(), true);
-
+//        dd($file->current(), true);
+        $i = 1;
         while (!$file->eof()) {
 
+            $i++;
+
+            $err = null;
             $metal = null;
             $this->filter = array();
             $name_file_general_img = null;
-            $this->category = $this->category_tmp;
+            //$this->category = $this->category_tmp;
+            $this->category = array();
             $curent = $file->current();
 
-            //update
+            //update если нету product_id то добавление нового товара
             if (!empty($curent[0])) {
-                //metal
-                $metal = trim($curent[9]);
-                $sku = trim($curent[0]);
-                //filters
-                $this->filter[] = $this->list_filtr['Price'];
-                $this->filter[] = $this->list_filtr['All metals'];
 
-                //METAL
-                if ($metal == '14K White Gold' OR $metal == '14k White Gold') {
-                    $this->metal = $this->list_metal['14K White Gold'];
-                    $this->sku = $curent[1] . '-W14';
-                    $this->filter[] = $this->list_filtr['14K White Gold'];
+                $err = $this->validationUpdate($curent, $i);
+                //если ошибок нет
+                if (!$err) {
 
-                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
-                        $name_file_general_img = $sku.'_w_1.jpg';
+                    //dd($curent);
+                    //metal
+                    $metal = trim($curent[9]);
+                    $this->sku = trim($curent[1]);
+                    $this->special_price = $curent[12];
+                    //filters
+                    $this->filter[] = $this->list_filtr['Price'];
+                    $this->filter[] = $this->list_filtr['All metals'];
+
+                    //METAL
+                    if ($metal == '14K White Gold' OR $metal == '14k White Gold') {
+                        $this->metal = $this->list_metal['14K White Gold'];
+                        $this->filter[] = $this->list_filtr['14K White Gold'];
+
+                    } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
+                        $this->metal = $this->list_metal['14K Yellow Gold'];
+                        $this->filter[] = $this->list_filtr['14K Yellow Gold'];
+
+                    } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
+                        $this->metal = $this->list_metal['14K Rose Gold'];
+                        $this->filter[] = $this->list_filtr['14K Rose Gold'];
+
+                    } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
+                        $this->metal = $this->list_metal['18K White Gold'];
+                        $this->filter[] = $this->list_filtr['18K White Gold'];
+
+                    } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
+                        $this->metal = $this->list_metal['18K Yellow Gold'];
+                        $this->filter[] = $this->list_filtr['18K Yellow Gold'];
+
+                    } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
+                        $this->metal = $this->list_metal['18K Rose Gold'];
+                        $this->filter[] = $this->list_filtr['18K Rose Gold'];
+
+                    } elseif ($metal == 'Platinum' OR $metal == 'platinum') {
+                        $this->metal = $this->list_metal['Platinum'];
+                        $this->filter[] = $this->list_filtr['Platinum'];
+
+                    } elseif ($metal == 'Palladium' or $metal == 'palladium') {
+                        $this->metal = $this->list_metal['Palladium'];
+                        $this->filter[] = $this->list_filtr['Palladium'];
+
                     }
 
-                } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
-                    $this->metal = $this->list_metal['14K Yellow Gold'];
-                    $this->sku = $curent[1] . '-Y14';
-                    $this->filter[] = $this->list_filtr['14K Yellow Gold'];
+                    //galery image
+                    //$this->GaleryUrlImg($metal, $this->sku);
 
-                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_y_1.jpg')) {
-                        $name_file_general_img = $sku.'_y_1.jpg';
+
+                    if (!empty($curent[16])) {
+                        $this->category[] = $this->category_list_arr[trim($curent[16])];
+                    }
+                    if (!empty($curent[17])) {
+                        $this->category[] = $this->category_list_arr[trim($curent[17])];
+                    }
+                    if (!empty($curent[18])) {
+                        $this->category[] = $this->category_list_arr[trim($curent[18])];
+                    }
+                    if (!empty($curent[19])) {
+                        $this->category[] = $this->category_list_arr[trim($curent[19])];
                     }
 
-                } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
-                    $this->metal = $this->list_metal['14K Rose Gold'];
-                    $this->sku = $curent[1] . '-R14';
-                    $this->filter[] = $this->list_filtr['14K Rose Gold'];
+                    //image general
+                    //$this->image_general = 'catalog/galery_rings2/'.$name_file_general_img;
+                    //$this->image_general = '';
 
-                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_r_1.jpg')) {
-                        $name_file_general_img = $sku.'_r_1.jpg';
+
+                    $this->model = $this->sku;
+
+                    $this->name = $curent[2];
+                    $this->description = $curent[3];
+                    $this->title_seo = $curent[4];
+                    $this->description_seo = $curent[5];
+                    $this->keywords_seo = $curent[6];
+                    $this->tag = $curent[7];
+                    $this->width = $curent[8];
+                    $this->matching_id = $curent[13];
+                    $this->option_size = $curent[15];
+
+                    if (!empty($curent[10])) {
+                        $this->manufactured = $this->list_manufactured[trim($curent[10])];
+                    } else {
+                        $this->manufactured = '';
                     }
 
-                } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
-                    $this->metal = $this->list_metal['18K White Gold'];
-                    $this->sku = $curent[1] . '-W18';
-                    $this->filter[] = $this->list_filtr['18K White Gold'];
 
-                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
-                        $name_file_general_img = $sku.'_w_1.jpg';
+                    //$this->width = substr($curent[8],0,-2);
+
+                    //atribute
+                    $this->list_atribute[15] = $curent[20];//19
+                    $this->list_atribute[16] = $curent[21];//20
+                    $this->list_atribute[17] = $curent[22];//21
+                    $this->list_atribute[18] = $curent[23];//22
+
+
+                    $tmp_price = strripos($curent[11], '$');
+
+                    if ($tmp_price === false) {
+                        $this->price = $curent[11];
+                    } else {
+                        $this->price = (int)substr(str_replace(" ", "", $curent[11]), 1);
                     }
 
-                } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
-                    $this->metal = $this->list_metal['18K Yellow Gold'];
-                    $this->sku = $curent[1] . '-Y18';
-                    $this->filter[] = $this->list_filtr['18K Yellow Gold'];
+                    $this->UpdateProduct($curent[0]);
+                    $this->UpdateDescription($curent[0]);
+                    $this->UpdateCategory($curent[0]);
+                    $this->UpdateFilters($curent[0]);
+                    $this->UpdateAtribute($curent[0]);
+                    $this->UpdateDiscount($curent[0]);
+                    $this->UpdateOptions($curent[0]);
 
-                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_y_1.jpg')) {
-                        $name_file_general_img = $sku.'_y_1.jpg';
-                    }
-
-                } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
-                    $this->metal = $this->list_metal['18K Rose Gold'];
-                    $this->sku = $curent[1] . '-R18';
-                    $this->filter[] = $this->list_filtr['18K Rose Gold'];
-
-                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_r_1.jpg')) {
-                        $name_file_general_img = $sku.'_r_1.jpg';
-                   }
-
-                } elseif ($metal == 'Platinum' OR $metal == 'platinum') {
-                    $this->metal = $this->list_metal['Platinum'];
-                    $this->sku = $curent[1] . '-PL';
-                    $this->filter[] = $this->list_filtr['Platinum'];
-
-                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
-                        $name_file_general_img = $sku.'_w_1.jpg';
-                    }
-
-                } elseif ($metal == 'Palladium' or $metal == 'palladium') {
-                    $this->metal = $this->list_metal['Palladium'];
-                    $this->sku = $curent[1] . '-PA';
-                    $this->filter[] = $this->list_filtr['Palladium'];
-
-                    if (file_exists($this->request->server['DOCUMENT_ROOT'].'/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
-                        $name_file_general_img = $sku.'_w_1.jpg';
-                    }
-
-                }
-
-                //galery image
-                $this->GaleryUrlImg($metal, $sku);
-
-
-                //ENGAGEMENT RINGS
-                //$this->category[] = 20;
-
-                //WEDDING RINGS
-                //$this->category[] = 69;
-                //WOMAN
-                //$this->category[] = 96;
-
-                //FINE JEWERLY
-                //$this->category[] = 82;
-
-                if (!empty($curent[11])) {
-                    $this->category[] = $this->category_arr[trim($curent[11])];
-                }
-                if (!empty($curent[12])) {
-                    $this->category[] = $this->category_arr[trim($curent[12])];
-                }
-                if (!empty($curent[13])) {
-                    $this->category[] = $this->category_arr[trim($curent[13])];
-                }
-
-
-                //image general
-                $this->image_general = 'catalog/galery_rings2/'.$name_file_general_img;
-                //$this->image_general = '';
-
-
-                $this->model = $this->sku;
-
-                $this->name = $curent[2];
-                $this->description = $curent[3];
-                $this->title_seo = $curent[4];
-                $this->description_seo = $curent[5];
-                $this->keywords_seo = $curent[6];
-
-                if (!empty($curent[10])) {
-                    $this->manufactured = $this->list_manufactured[trim($curent[10])];
+                    //если при валидации возникли ошибки
                 } else {
-                    $this->manufactured = '';
+
+                    $this->error_text_validation[] = $err;
+
                 }
 
 
-                $this->width = substr($curent[8],0,-2);
-
-                //atribute
-                $this->list_atribute[16] = $curent[14];
-                $this->list_atribute[15] = $curent[15];
-                $this->list_atribute[17] = $curent[16];
-                $this->list_atribute[18] = $curent[17];
 
 
-                $tmp_price = strripos($curent[18], '$');
 
-                if ($tmp_price === false) {
-                    $this->price = $curent[18];
-                } else {
-                    $this->price = (int)substr(str_replace(" ","",$curent[18]), 1);
+            } else { //insert
+
+
+
+
+                //dd($curent);
+
+
+
+
+
+
+
+
+               // если нет названия товара то загрузка не осуществляется
+                if (!empty($curent[1]) and !empty($curent[2]) and !empty($curent[9]) and !empty($curent[10]) and !empty($curent[11])) {
+
+                    //metal
+                    $metal = trim($curent[9]);
+                    $sku = trim($curent[1]);
+                    //filters
+                    $this->filter[] = $this->list_filtr['Price'];
+                    $this->filter[] = $this->list_filtr['All metals'];
+
+                    //METAL
+                    if ($metal == '14K White Gold' OR $metal == '14k White Gold') {
+                        $this->metal = $this->list_metal['14K White Gold'];
+                        $this->sku = $curent[1] . '-W14';
+                        $this->filter[] = $this->list_filtr['14K White Gold'];
+
+                        if (file_exists($this->request->server['DOCUMENT_ROOT'] . '/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
+                            $name_file_general_img = $sku . '_w_1.jpg';
+                        }
+
+                    } elseif ($metal == '14K Yellow Gold' OR $metal == '14k Yellow Gold') {
+                        $this->metal = $this->list_metal['14K Yellow Gold'];
+                        $this->sku = $curent[1] . '-Y14';
+                        $this->filter[] = $this->list_filtr['14K Yellow Gold'];
+
+                        if (file_exists($this->request->server['DOCUMENT_ROOT'] . '/image/catalog/galery_rings2/' . $sku . '_y_1.jpg')) {
+                            $name_file_general_img = $sku . '_y_1.jpg';
+                        }
+
+                    } elseif ($metal == '14K Rose Gold' OR $metal == '14k Rose Gold') {
+                        $this->metal = $this->list_metal['14K Rose Gold'];
+                        $this->sku = $curent[1] . '-R14';
+                        $this->filter[] = $this->list_filtr['14K Rose Gold'];
+
+                        if (file_exists($this->request->server['DOCUMENT_ROOT'] . '/image/catalog/galery_rings2/' . $sku . '_r_1.jpg')) {
+                            $name_file_general_img = $sku . '_r_1.jpg';
+                        }
+
+                    } elseif ($metal == '18K White Gold' OR $metal == '18k White Gold') {
+                        $this->metal = $this->list_metal['18K White Gold'];
+                        $this->sku = $curent[1] . '-W18';
+                        $this->filter[] = $this->list_filtr['18K White Gold'];
+
+                        if (file_exists($this->request->server['DOCUMENT_ROOT'] . '/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
+                            $name_file_general_img = $sku . '_w_1.jpg';
+                        }
+
+                    } elseif ($metal == '18K Yellow Gold' OR $metal == '18k Yellow Gold') {
+                        $this->metal = $this->list_metal['18K Yellow Gold'];
+                        $this->sku = $curent[1] . '-Y18';
+                        $this->filter[] = $this->list_filtr['18K Yellow Gold'];
+
+                        if (file_exists($this->request->server['DOCUMENT_ROOT'] . '/image/catalog/galery_rings2/' . $sku . '_y_1.jpg')) {
+                            $name_file_general_img = $sku . '_y_1.jpg';
+                        }
+
+                    } elseif ($metal == '18K Rose Gold' OR $metal == '18k Rose Gold') {
+                        $this->metal = $this->list_metal['18K Rose Gold'];
+                        $this->sku = $curent[1] . '-R18';
+                        $this->filter[] = $this->list_filtr['18K Rose Gold'];
+
+                        if (file_exists($this->request->server['DOCUMENT_ROOT'] . '/image/catalog/galery_rings2/' . $sku . '_r_1.jpg')) {
+                            $name_file_general_img = $sku . '_r_1.jpg';
+                        }
+
+                    } elseif ($metal == 'Platinum' OR $metal == 'platinum') {
+                        $this->metal = $this->list_metal['Platinum'];
+                        $this->sku = $curent[1] . '-PL';
+                        $this->filter[] = $this->list_filtr['Platinum'];
+
+                        if (file_exists($this->request->server['DOCUMENT_ROOT'] . '/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
+                            $name_file_general_img = $sku . '_w_1.jpg';
+                        }
+
+                    } elseif ($metal == 'Palladium' or $metal == 'palladium') {
+                        $this->metal = $this->list_metal['Palladium'];
+                        $this->sku = $curent[1] . '-PA';
+                        $this->filter[] = $this->list_filtr['Palladium'];
+
+                        if (file_exists($this->request->server['DOCUMENT_ROOT'] . '/image/catalog/galery_rings2/' . $sku . '_w_1.jpg')) {
+                            $name_file_general_img = $sku . '_w_1.jpg';
+                        }
+
+                    }
+
+                    //galery image
+                    $this->GaleryUrlImg($metal, $sku);
+
+
+                    //ENGAGEMENT RINGS
+                    //$this->category[] = 20;
+
+                    //WEDDING RINGS
+                    //$this->category[] = 69;
+                    //WOMAN
+                    //$this->category[] = 96;
+
+                    //FINE JEWERLY
+                    //$this->category[] = 82;
+
+
+                    if (!empty($curent[16])) {
+                        $this->category[] = $this->category_list_arr[trim($curent[16])];
+                    }
+                    if (!empty($curent[17])) {
+                        $this->category[] = $this->category_list_arr[trim($curent[17])];
+                    }
+                    if (!empty($curent[18])) {
+                        $this->category[] = $this->category_list_arr[trim($curent[18])];
+                    }
+                    if (!empty($curent[19])) {
+                        $this->category[] = $this->category_list_arr[trim($curent[19])];
+                    }
+
+                    //image general
+                    $this->image_general = 'catalog/galery_rings2/' . $name_file_general_img;
+                    //$this->image_general = '';
+
+
+                    $this->model = $this->sku;
+
+                    $this->name = $curent[2];
+                    $this->description = $curent[3];
+                    $this->title_seo = $curent[4];
+                    $this->description_seo = $curent[5];
+                    $this->keywords_seo = $curent[6];
+                    $this->tag = $curent[7];
+                    $this->width = $curent[8];
+                    $this->matching_id = $curent[13];
+                    $this->option_size = $curent[15];
+
+                    if (!empty($curent[10])) {
+                        $this->manufactured = $this->list_manufactured[trim($curent[10])];
+                    } else {
+                        $this->manufactured = '';
+                    }
+
+
+                    //$this->width = substr($curent[8], 0, -2);
+
+                    //atribute
+                    $this->list_atribute[15] = $curent[20];//19
+                    $this->list_atribute[16] = $curent[21];//20
+                    $this->list_atribute[17] = $curent[22];//21
+                    $this->list_atribute[18] = $curent[23];//22
+
+                    $tmp_price = strripos($curent[11], '$');
+
+                    if ($tmp_price === false) {
+                        $this->price = $curent[11];
+                    } else {
+                        $this->price = (int)substr(str_replace(" ", "", $curent[11]), 1);
+                    }
+
+                    $this->product_id_insert = $this->addProduct();
+                    $this->addDescription();
+                    $this->addCategory();
+                    $this->addFilters();
+                    $this->addUrl();
+                    $this->addGalery();
+                    $this->addStore();
+
+                    $this->addOption();
+                    $this->addAtribute();
+
+                    $this->product_id_insert_arr[] = $this->product_id_insert;
+                    dd($this->product_id_insert);
                 }
-
-
-                $this->product_id_insert = $this->addProduct();
-                $this->addDescription();
-                $this->addCategory();
-                $this->addFilters();
-                $this->addUrl();
-                $this->addGalery();
-                $this->addStore();
-
-                $this->addOption();
-                $this->addAtribute();
-
-                $this->product_id_insert_arr[] = $this->product_id_insert;
-                dd($this->product_id_insert);
             }
 
             $file->next();
         }
 
-        $this->addProductMetal();
+        //проверка масива добавленных строк хранит индекси product_id для метода добавления продуктов других металов
+        if (!empty($this->product_id_insert_arr)) {
+            $this->addProductMetal();
+        }
 
     }
 
@@ -507,7 +680,6 @@ class ControllerModuleExelParser extends Controller {
     public function generate_csv () {
 
         $title_list = array('Product_ID',
-            'Model',
             'SKU',
             'Product Name',
             'Description',
@@ -521,6 +693,8 @@ class ControllerModuleExelParser extends Controller {
             'Price',
             'Discount Price',
             'Maching ID',
+            'Status',
+            'Option Size',
             'Category1',
             'Category2',
             'Category3',
@@ -534,7 +708,7 @@ class ControllerModuleExelParser extends Controller {
         $category = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_to_category");
         $product_atribute = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_attribute");
 
-        $result =  $this->db->query("SELECT pr.product_id, pr.model, pr.sku, pd.name, pd.description, pd.meta_title, 
+        $result =  $this->db->query("SELECT pr.product_id, pr.sku, pd.name, pd.description, pd.meta_title, 
                 pd.meta_description,
                 pd.meta_keyword,
                 pd.tag,
@@ -543,11 +717,14 @@ class ControllerModuleExelParser extends Controller {
                 pr.manufacturer_id,
                 pr.price,
                 ps.price as specialPrice,
-                pr.matching_id 
+                pr.matching_id,
+                pr.status,
+                po.option_id 
                     FROM " . DB_PREFIX . "product as pr 
                     LEFT JOIN " . DB_PREFIX . "product_description as pd ON (pr.product_id = pd.product_id)
                     LEFT JOIN " . DB_PREFIX . "product_special as ps ON (pr.product_id = ps.product_id)
-                    WHERE manufacturer_id NOT IN (14,13)");
+                    LEFT JOIN " . DB_PREFIX . "product_option as po ON (pr.product_id = po.product_id)
+                    WHERE manufacturer_id NOT IN (14,13) ORDER BY pr.product_id ASC");
        // dd($result->rows, true);
        // dd('sdf', true);
 
@@ -573,7 +750,7 @@ class ControllerModuleExelParser extends Controller {
             $cat = array_values($cat);
 
             $fields['metal'] = $metal[$fields['metal']];
-            $fields['manufacturer_id'] = $manufacture[$fields['manufacturer_id']];
+            $fields['manufacturer_id'] = !empty($manufacture[$fields['manufacturer_id']]) ? $manufacture[$fields['manufacturer_id']] : null;
 
             //atribute
             $atribut = array_filter($product_atribute->rows, function ($innerArray){
@@ -604,14 +781,41 @@ class ControllerModuleExelParser extends Controller {
             }
 
             //dd($cat);
-            $fields['Category1'] = isset($category_list_id[$cat[0]['category_id']]) ? $category_list_id[$cat[0]['category_id']] : null;
-            $fields['Category2'] = isset($category_list_id[$cat[1]['category_id']]) ? $category_list_id[$cat[1]['category_id']] : null;
-            $fields['Category3'] = isset($category_list_id[$cat[2]['category_id']]) ? $category_list_id[$cat[2]['category_id']] : null;
-            $fields['Category4'] = isset($category_list_id[$cat[3]['category_id']]) ? $category_list_id[$cat[3]['category_id']] : null;
+
+
+            if (!empty($cat[0]['category_id']) and !empty($category_list_id[$cat[0]['category_id']])) {
+                $fields['Category1'] = $category_list_id[$cat[0]['category_id']];
+            } else {
+                $fields['Category1'] = null;
+            }
+            if (!empty($cat[1]['category_id']) and !empty($category_list_id[$cat[1]['category_id']])) {
+                $fields['Category2'] = $category_list_id[$cat[1]['category_id']];
+            } else {
+                $fields['Category2'] = null;
+            }
+            if (!empty($cat[2]['category_id']) and !empty($category_list_id[$cat[2]['category_id']])) {
+                $fields['Category3'] = $category_list_id[$cat[2]['category_id']];
+            } else {
+                $fields['Category3'] = null;
+            }
+            if (!empty($cat[3]['category_id']) and !empty($category_list_id[$cat[3]['category_id']])) {
+                $fields['Category4'] = $category_list_id[$cat[3]['category_id']];
+            } else {
+                $fields['Category4'] = null;
+            }
+
+            if (!empty($fields['option_id'])) {
+                $fields['option_id'] = 1;
+            } else {
+                $fields['option_id'] = 0;
+            }
+
             $fields['CARAT WEIGHT'] = $c_tmp;
             $fields['NUMBER OF DIAMONDS'] = $n_f_d;
             $fields['AVERAGE COLOR'] = $a_col;
             $fields['AVERAGE CLARITY'] = $a_clar;
+
+
 
             $file->fputcsv($fields);
         }
@@ -661,6 +865,21 @@ class ControllerModuleExelParser extends Controller {
     }
 
 
+    private function UpdateProduct($product_id) {
+
+        $query = $this->db->query("UPDATE " . DB_PREFIX . "product
+            SET 
+            metal = '".$this->db->escape($this->metal)."', 
+            model = '" . $this->db->escape($this->model) . "', 
+            sku = '" . $this->db->escape($this->sku) . "', 
+            manufacturer_id = '" . $this->manufactured . "',
+            matching_id = '".$this->matching_id."',
+            price = '" . $this->price . "', 
+            width = '" . $this->width . "',
+            status = '" . $this->status . "'
+                WHERE product_id = '".$product_id."'");
+    }
+
     private function addDescription() {
 
         $this->db->query("INSERT INTO " . DB_PREFIX . "product_description SET 
@@ -675,6 +894,16 @@ class ControllerModuleExelParser extends Controller {
 
     }
 
+    private function UpdateDescription($product_id) {
+        $this->db->query("UPDATE " . DB_PREFIX . "product_description SET 
+            name = '" . $this->name . "', 
+            description = '" . $this->description . "', 
+            tag = '" . $this->tag . "', 
+            meta_title = '" . $this->title_seo . "', 
+            meta_description = '" . $this->description_seo . "', 
+            meta_keyword = '" . $this->keywords_seo . "' WHERE product_id = '".$product_id."'");
+    }
+
     private function addCategory (){
 
         foreach ($this->category as $category_id) {
@@ -685,6 +914,17 @@ class ControllerModuleExelParser extends Controller {
 
     }
 
+    private function UpdateCategory ($product_id) {
+
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_to_category WHERE product_id = ".$product_id);
+
+        foreach ($this->category as $category_id) {
+            $this->db->query("INSERT INTO " . DB_PREFIX . "product_to_category SET 
+                product_id = '" . $product_id . "', 
+                category_id = '" . (int)$category_id . "'");
+        }
+
+    }
 
     private function addUrl() {
 
@@ -699,6 +939,18 @@ class ControllerModuleExelParser extends Controller {
         foreach ($this->filter as $filter_id) {
             $this->db->query("INSERT INTO " . DB_PREFIX . "product_filter SET 
             product_id = '" . (int)$this->product_id_insert . "', 
+            filter_id = '" . (int)$filter_id . "'");
+        }
+    }
+
+
+    private function UpdateFilters ($product_id){
+
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_filter WHERE product_id = ".$product_id);
+
+        foreach ($this->filter as $filter_id) {
+            $this->db->query("INSERT INTO " . DB_PREFIX . "product_filter SET 
+            product_id = '" . $product_id . "', 
             filter_id = '" . (int)$filter_id . "'");
         }
     }
@@ -748,6 +1000,37 @@ class ControllerModuleExelParser extends Controller {
 
     }
 
+    private function UpdateOptions($product_id) {
+
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_option WHERE product_id = ".$product_id);
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_option_value WHERE product_id = ".$product_id);
+
+        if ($this->option_size == 1) {
+
+            $this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET
+            product_id = '" . $product_id . "',
+            option_id = '" . 11 . "',
+            required = '" . 1 . "'");
+
+            $product_option_id = $this->db->getLastId();
+
+            foreach ($this->list_options as $product_option_value) {
+                $this->db->query("INSERT INTO " . DB_PREFIX . "product_option_value SET
+                product_option_id = '" . (int)$product_option_id . "',
+                product_id = '" . (int)$this->product_id_insert . "',
+                option_id = '" . 11 . "',
+                option_value_id = '" . (int)$product_option_value . "',
+                quantity = '" . 0 . "',
+                subtract = '" . 0 . "',
+                price = '" . 0.0000 . "',
+                price_prefix = '" . $this->db->escape('+') . "',
+                points = '" . 0 . "',
+                points_prefix = '" . $this->db->escape('+') . "',
+                weight = '" . 0.00000000 . "',
+                weight_prefix = '" . $this->db->escape('+') . "'");
+            }
+        }
+    }
 
     private function addAtribute () {
 
@@ -762,6 +1045,32 @@ class ControllerModuleExelParser extends Controller {
         }
     }
 
+    private function UpdateAtribute ($product_id) {
+
+        foreach ($this->list_atribute as $key => $product_attribute) {
+
+            $this->db->query("UPDATE " . DB_PREFIX . "product_attribute SET  
+            text = '" .  $this->db->escape($product_attribute) . "' 
+            WHERE attribute_id = '" . (int)$key . "' AND product_id = ".$product_id);
+
+        }
+    }
+
+    private function UpdateDiscount ($product_id) {
+        //$this->special_price
+        $this->db->query("DELETE FROM " . DB_PREFIX . "product_special WHERE product_id = ".$product_id);
+
+        if (!empty($this->special_price)) {
+            $this->db->query("INSERT INTO " . DB_PREFIX . "product_special SET
+            product_id = '".$product_id."',
+            customer_group_id = 1,
+            priority = 0,
+            price = '" . $this->special_price . "',
+            date_start = '0000-00-00',
+            date_end = '0000-00-00'");
+        }
+
+    }
 
     private function addProductMetal () {
 
@@ -862,5 +1171,87 @@ class ControllerModuleExelParser extends Controller {
 
     }
 
+    //метод валидации при обновлении
+    private function validationUpdate ($curent, $i) {
+
+        $tmp_str_eror = null;
+
+        //SKU
+        if (empty($curent[1])) {
+            $tmp_str_eror = ' Err:SKU ';
+        }
+        //Product Name
+        if (empty($curent[2])) {
+            $tmp_str_eror .= ' Err:ProductName ';
+        }
+        //Width
+        //dd((int)$curent[8]);
+        if (is_string((int)$curent[8])) {
+            $tmp_str_eror .= ' Err:Width ';
+        }
+        //Metal
+        if (empty($this->list_metal[$curent[9]])) {
+            $tmp_str_eror .= ' Err:Metal ';
+        }
+        //Manufacturer
+        if (empty($this->list_manufactured[$curent[10]])) {
+            $tmp_str_eror .= ' Err:Manufacturer ';
+        }
+        //Price
+        if (is_string((int)$curent[11])) {
+            $tmp_str_eror .= ' Err:Price ';
+        }
+        //Discount Price
+        if (is_string((int)$curent[12])) {
+            $tmp_str_eror .= ' Err:DiscountPrice ';
+        }
+        //Maching ID
+        if (is_string((int)$curent[13])) {
+            $tmp_str_eror .= ' Err:Maching ';
+        }
+        //Status
+        if ((is_string((int)$curent[14])) and ($curent[14] != 0 or $curent[14] != 1)) {
+            $tmp_str_eror .= ' Err:Status ';
+        }
+        //Option Size
+        if ((is_string((int)$curent[15])) and ($curent[15] != 0 or $curent[15] != 1)) {
+            $tmp_str_eror .= ' Err:Status ';
+        }
+        //Category1
+        if (!empty($curent[16])) {
+            if (empty($this->category_list_arr[$curent[16]])) {
+                $tmp_str_eror .= ' Err:Category1 ';
+            }
+        } else {
+            $tmp_str_eror .= ' Err:not category ';
+        }
+        //Category2
+        if (!empty($curent[17])) {
+            if (empty($this->category_list_arr[$curent[17]])) {
+                $tmp_str_eror .= ' Err:Category2 ';
+            }
+        }
+        //Category3
+        if (!empty($curent[18])) {
+            if (empty($this->category_list_arr[$curent[18]])) {
+                $tmp_str_eror .= ' Err:Category3 ';
+            }
+        }
+        //Category4
+        if (!empty($curent[19])) {
+            if (empty($this->category_list_arr[$curent[19]])) {
+                $tmp_str_eror .= ' Err:Category4 ';
+            }
+        }
+
+
+        if (!empty($tmp_str_eror)) {
+            return 'Line:'.$i.':'.$tmp_str_eror;
+        } else {
+            //если нет ошибок
+            return false;
+        }
+
+    }
 
 }

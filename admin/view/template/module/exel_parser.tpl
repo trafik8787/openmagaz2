@@ -39,7 +39,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="input-progres">List</label>
                         <div class="col-sm-10">
-                            <textarea cols="30" rows="10" class="form-control"></textarea>
+                            <div class="well" style="color: red"><?=!empty($eror_text) ? $eror_text : '' ?></div>
                         </div>
                     </div>
 
