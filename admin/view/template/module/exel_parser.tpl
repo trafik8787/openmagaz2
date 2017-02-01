@@ -32,14 +32,18 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="input-progres">Progres</label>
                         <div class="col-sm-10">
-                            <?=!empty($progres) ? $progres : ''?>
+                            <!--*<?=!empty($progres) ? $progres : ''?>*-->
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="input-progres">List</label>
                         <div class="col-sm-10">
-                            <div class="well" style="color: red"><?=!empty($eror_text) ? $eror_text : '' ?></div>
+                            <div class="well" style="color: red">
+                                <?=!empty($eror_text) ? $eror_text : '' ?>
+                                <?=!empty($added_text) ? $added_text : '' ?>
+
+                            </div>
                         </div>
                     </div>
 

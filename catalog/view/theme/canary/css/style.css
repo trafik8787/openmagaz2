@@ -803,7 +803,7 @@ section.containaer-home > .row {margin-left: 0;margin-right: 0;}
   border-right: 1px solid #4f6394;
 }
 
-.top-menu-b > li:hover:not(.cart-bl) {
+.top-menu-b > li:hover {
   background-color: #1C3061;
 }
 
