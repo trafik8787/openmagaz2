@@ -143,6 +143,7 @@ class ControllerModuleExelParser extends Controller {
 
 
     public function index (){
+        //dd($_SERVER['DOCUMENT_ROOT']);
         //подключаем языковой файл
         $this->load->language('module/exel_parser');
         //Выводим имя модуля в списке модулей
@@ -738,7 +739,7 @@ class ControllerModuleExelParser extends Controller {
        // dd('sdf', true);
 
         $delimiter = ';';
-        $file = new SplFileObject('/home/canary/www/data.csv', 'w');
+        $file = new SplFileObject($_SERVER['DOCUMENT_ROOT']."/uploddata/data.csv", 'w');
         $file->setCsvControl($delimiter);
 
         $file->fputcsv($title_list);
@@ -831,7 +832,7 @@ class ControllerModuleExelParser extends Controller {
 
         header('Content-Type: text/csv');
         header('Content-Disposition: Attachment; filename=data.csv');
-        readfile("/home/canary/www/data.csv");
+        readfile($_SERVER['DOCUMENT_ROOT']."/uploddata/data.csv");
         exit();
     }
 
