@@ -443,6 +443,7 @@ class ControllerModuleExelParser extends Controller {
                     $this->width = $curent[8];
                     $this->matching_id = $curent[13];
                     $this->option_size = $curent[15];
+                    $this->status = $curent[14];
 
                     if (!empty($curent[10])) {
                         $this->manufactured = $this->list_manufactured[trim($curent[10])];
@@ -634,6 +635,7 @@ class ControllerModuleExelParser extends Controller {
                         $this->width = $curent[8];
                         $this->matching_id = $curent[13];
                         $this->option_size = $curent[15];
+                        $this->status = $curent[14];
 
                         if (!empty($curent[10])) {
                             $this->manufactured = $this->list_manufactured[trim($curent[10])];
@@ -866,7 +868,7 @@ class ControllerModuleExelParser extends Controller {
             width = '" . $this->width . "', 
             height = '" . 0.00000000 . "', 
             length_class_id = '" . 2 . "', 
-            status = '" . 1 . "', 
+            status = '" . $this->status . "', 
             tax_class_id = '" . 0 . "', 
             sort_order = '" . 0 . "', 
             date_added = NOW()");
