@@ -110,7 +110,7 @@
     </div>
     </div>
     <div class="functional-filter filter-buttons clearfix">
-        <button class="filter-default-result w-clear-filtr-product">Clear filter</button>
+        <button class="filter-default-result w-clear-filtr-product"> Clear filter</button>
         <button class="filter-change"><span><span class="text1">Hide</span><span class="text2">Show</span> Filters</span></button>
         <!--*<button class="apply-btn"><i class="fa fa-angle-right" aria-hidden="true"></i>Apply Filter</button>*-->
     </div>
@@ -133,10 +133,6 @@
 
 $(document).ready(function () {
 
-
-    $(document).on('click', '.w-clear-filtr-product', function () {
-        $('span[data-text="All metals"]').trigger('click');
-    });
 
     $('input[name^=\'filter\']').on('change', function () {
         history.pushState('', '', '');
@@ -269,6 +265,22 @@ $(document).ready(function () {
     });
 
 
+    $(document).on('click', '.w-clear-filtr-product', function () {
+        $('input[value="7"]').trigger('click');
+        slider.slider("values", 0, min);
+        slider.slider("values", 1, max);
+        $('.dop-filtr-price-min').val(min);
+        $('.dop-filtr-price-max').val(max);
+
+        min_price = '&PriceFrom='+numeral().unformat($(".dop-filtr-price-min").val());
+        max_price = '&PriceTo='+numeral().unformat($(".dop-filtr-price-max").val());
+
+        var action = $('.w-action_page').val();
+        redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
+        history.pushState('', '', redirect);
+
+        return false;
+    });
 
     var min_weight_min = parseFloat("<?=$min_weight ?>");
     var max_weight_max = parseFloat("<?=$max_weight ?>");
