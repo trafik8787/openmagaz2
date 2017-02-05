@@ -2717,7 +2717,7 @@ left: 7px;
 
 text-align: center;
 
-font-family: 'Montserrat-Regular', fantasy;
+font-family: 'Raleway-Regular', fantasy;
 
 color: #1e3e7e;
 
@@ -2909,6 +2909,10 @@ width: 98px;
 #w-modal-newslrtter.modal {
     text-align: center;
     padding: 0!important;
+}
+
+#w-modal-newslrtter.modal button.w-btn-orange2 {
+    width: 200px!important;
 }
 
 #w-modal-newslrtter.modal:before {

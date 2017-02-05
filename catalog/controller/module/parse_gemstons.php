@@ -74,6 +74,8 @@ class ControllerModuleParseGemstons extends Controller {
 
         $this->filter_stone_type = array(
             'SA' => 1,
+            'Y. SAP' => 1,
+            'P. SAP' => 1,
             'RU' => 2,
             'EM' => 3,
             'YS' => 4,
