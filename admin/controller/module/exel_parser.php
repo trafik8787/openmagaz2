@@ -64,10 +64,13 @@ class ControllerModuleExelParser extends Controller {
 
         $this->category_list_arr = array(
             'ENGAGEMENT_RINGS' => 20,
+            'ENGAGEMENT RINGS' => 20,
             'Three-stone' => 63,
+            'Three stone' => 63,
             'Vintage' => 66,
             'VINTAGE' => 66,
             'Bezel set' => 64,
+            'Bezel Set' => 64,
             'BEZEL SET' => 64,
             'Halo' => 65,
             'HALO' => 65,
@@ -82,28 +85,48 @@ class ControllerModuleExelParser extends Controller {
             'Channel Set' => 61,
             'CHANNEL SET' => 61,
             'JEWELRY_&_GIFTS' => 82,
+            'JEWELRY & GIFTS' => 82,
             'Diamond Bracelets' => 85,
+            'DIAMOND BRACELETS' => 85,
             'Diamond Earrings' => 84,
+            'DIAMOND EARRINGS' => 84,
             'Diamond Pendant' => 86,
+            'DIAMOND PENDANT' => 86,
             'Diamond Rings' => 88,
+            'DIAMOND RINGS' => 88,
             'Diamond Studs' => 83,
+            'DIAMOND STUDS' => 83,
             'Diamond Necklaces' => 97,
+            'DIAMOND NECKLACES' => 97,
             'Fashion Necklace' => 92,
+            'FASHION NECKLACE' => 92,
             'Gemstone Bracelets' => 93,
+            'GEMSTONE BRACELETS' => 93,
             'Gemstone Earrings' => 87,
+            'GEMSTONE EARRINGS' => 87,
             'Gemstone Pendants' => 91,
+            'GEMSTONE PENDANTS' => 91,
             'Gemstone Rings' => 90,
+            'GEMSTONE RINGS' => 90,
             'WEDDING RINGS' => 69,
             'ALL WOMAN' => 96,
             'Classic Woman' => 77,
+            'CLASSIC WOMAN' => 77,
             'Stackable Woman' => 78,
+            'STACKABLE WOMAN' => 78,
             'Eternity Woman' => 81,
+            'ETERNITY WOMAN' => 81,
             'Diamond Woman' => 79,
+            'DIAMOND WOMAN' => 79,
             'ALL MAN' => 95,
             'Modern Man' => 75,
+            'MODERN MAN' => 75,
             'Diamond Man' => 74,
+            'DIAMOND MAN' => 74,
             'Classic Man' => 72,
-            'Carved Man' => 73
+            'CLASSIC MAN' => 72,
+            'Carved Man' => 73,
+            'CARVED MAN' => 73
 
         );
 
@@ -338,7 +361,7 @@ class ControllerModuleExelParser extends Controller {
 
         $filePath = $this->file_path;
 
-        $delimiter = ';';
+        $delimiter = ',';
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
         $file->setCsvControl($delimiter);

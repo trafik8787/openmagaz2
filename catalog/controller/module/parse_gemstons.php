@@ -74,8 +74,6 @@ class ControllerModuleParseGemstons extends Controller {
 
         $this->filter_stone_type = array(
             'SA' => 1,
-            'Y. SAP' => 1,
-            'P. SAP' => 1,
             'RU' => 2,
             'EM' => 3,
             'YS' => 4,
@@ -271,8 +269,19 @@ class ControllerModuleParseGemstons extends Controller {
             $this->filter = array();
             $this->image_galery = array();
             $curent = $file->current();
-
-            if (!empty($curent[8]) AND $curent[2] !== 'CC' AND $curent[2] !== 'TR' AND $curent[2] !== 'RBL' AND $curent[2] !== 'GB' AND $curent[2] !== 'TRAP' AND $curent[2] !== 'STB' AND $curent[1] !== 'WS' AND $curent[5] != 0 AND $curent[6]{0} != 'x' AND $curent[6]{0} != 'X') {
+            //Y. SAP
+            if (!empty($curent[8]) AND $curent[2] !== 'CC'
+                AND $curent[2] !== 'TR'
+                AND $curent[2] !== 'RBL'
+                AND $curent[1] !== 'RBL'
+                AND $curent[1] !== 'Y. SAP'
+                AND $curent[1] !== 'P. SAP'
+                AND $curent[2] !== 'GB'
+                AND $curent[2] !== 'TRAP'
+                AND $curent[2] !== 'STB'
+                AND $curent[1] !== 'WS'
+                AND $curent[5] != 0
+                AND $curent[6]{0} != 'x' AND $curent[6]{0} != 'X') {
            //dd($curent);
                 if ($this->copyImage($curent[8]) OR true) {
 
