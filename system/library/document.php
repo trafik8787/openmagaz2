@@ -6,6 +6,7 @@ class Document {
 	private $links = array();
 	private $styles = array();
 	private $scripts = array();
+	private $meta = array();
 
 	public function setTitle($title) {
 		$this->title = $title;
@@ -49,6 +50,14 @@ class Document {
 			'media' => $media
 		);
 	}
+
+    public function getMeta (){
+        return $this->meta;
+	}
+
+    public function addMeta ($option, $value){
+        $this->meta[$option] = $value;
+    }
 
 	public function getStyles() {
 		return $this->styles;

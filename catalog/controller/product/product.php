@@ -356,6 +356,10 @@ class ControllerProductProduct extends Controller {
 				);
 			}
 
+            if (!empty($data['images'][1]['popup'])) {
+                $this->document->addMeta('og:image', $data['images'][1]['popup']);
+			}
+
 			if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
 				$data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
 			} else {

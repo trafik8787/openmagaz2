@@ -11,6 +11,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
+    <?if (!empty($meta)):?>
+        <?foreach ($meta as $option => $row):?>
+            <meta property="<?=$option?>" content="<?=$row?>"/>
+        <?endforeach?>
+    <?endif?>
+
     <title><?php echo $title; ?></title>
     <?php if ($description) { ?>
         <meta name="description" content="<?php echo $description; ?>"/>

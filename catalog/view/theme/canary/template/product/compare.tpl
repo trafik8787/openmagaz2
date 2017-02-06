@@ -84,12 +84,7 @@
                         <td><?php echo $product['model']; ?></td>
                         <?php } ?>
                     </tr>
-                    <tr>
-                        <td><?php echo $text_manufacturer; ?></td>
-                        <?php foreach ($products as $product) { ?>
-                        <td><?php echo $product['manufacturer']; ?></td>
-                        <?php } ?>
-                    </tr>
+
                     <tr>
                         <td><?php echo $text_availability; ?></td>
                         <?php foreach ($products as $product) { ?>
