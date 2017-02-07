@@ -67,6 +67,8 @@ class ControllerModuleExelParser extends Controller {
             'ENGAGEMENT RINGS' => 20,
             'Three-stone' => 63,
             'Three stone' => 63,
+            'THREE STONE' => 63,
+            'THREE-STONE' => 63,
             'Vintage' => 66,
             'VINTAGE' => 66,
             'Bezel set' => 64,
