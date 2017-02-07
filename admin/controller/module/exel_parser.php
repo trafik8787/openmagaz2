@@ -162,7 +162,7 @@ class ControllerModuleExelParser extends Controller {
             'Stuller' => 12
         );
 
-        $this->list_options = array(46,47,48,55,56,57,58,59,60,68,69);
+        $this->list_options = array(46,47,48,55,56,57,58,59,60,68,69,70,71,72,73,74,75,76,77,78,79);
 
     }
 
@@ -318,7 +318,7 @@ class ControllerModuleExelParser extends Controller {
             //$this->category = $this->category_tmp;
             $this->category = array();
             $curent = $file->current();
-
+            //dd($curent, true);
             //update если нету product_id то добавление нового товара
             if (!empty($curent[0])) {
 
@@ -951,7 +951,7 @@ class ControllerModuleExelParser extends Controller {
         $this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET
             product_id = '" . (int)$this->product_id_insert . "',
             option_id = '" . 11 . "',
-            required = '" . 1 . "'");
+            required = '" . 0 . "'");
         $product_option_id = $this->db->getLastId();
 
         foreach ($this->list_options as $product_option_value) {
@@ -982,14 +982,14 @@ class ControllerModuleExelParser extends Controller {
             $this->db->query("INSERT INTO " . DB_PREFIX . "product_option SET
             product_id = '" . $product_id . "',
             option_id = '" . 11 . "',
-            required = '" . 1 . "'");
+            required = '" . 0 . "'");
 
             $product_option_id = $this->db->getLastId();
 
             foreach ($this->list_options as $product_option_value) {
                 $this->db->query("INSERT INTO " . DB_PREFIX . "product_option_value SET
                 product_option_id = '" . (int)$product_option_id . "',
-                product_id = '" . (int)$this->product_id_insert . "',
+                product_id = '" . (int)$product_id . "',
                 option_id = '" . 11 . "',
                 option_value_id = '" . (int)$product_option_value . "',
                 quantity = '" . 0 . "',
