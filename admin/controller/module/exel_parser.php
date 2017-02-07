@@ -202,71 +202,6 @@ class ControllerModuleExelParser extends Controller {
                 $this->file_path = $_SERVER['DOCUMENT_ROOT'].'/'.$this->name_file;
             }
 
-//            switch ($this->request->post['category']) {
-//                case 20: //ENGAGEMENT RINGS
-//                    $this->category_tmp[] = 20;
-//
-//                    $this->category_arr = array(
-//                        'Three-stone' => 63,
-//                        'Three Stone' => 63,
-//                        'Vintage' => 66,
-//                        'Bezel set' => 64,
-//                        'Halo' => 65,
-//                        'Bypass' => 62,
-//                        'Pave' => 60,
-//                        'Solitaire' => 59,
-//                        'Modern'    => 89,
-//                        'Channel'   => 61,
-//                        'Channel Set' => 61
-//                    );
-//
-//                    break;
-//                case 82: //JEWELRY & GIFTS
-//                    $this->category_tmp[] = 82;
-//
-//                    $this->category_arr = array(
-//                        'Diamond Bracelets' => 85,
-//                        'Diamond Earrings' => 84,
-//                        'Diamond Pendant' => 86,
-//                        'Diamond Rings' => 88,
-//                        'Diamond Studs' => 83,
-//                        'Diamond Fashion Necklace' => 92,
-//                        'Gemstone Bracelets' => 93,
-//                        'Gemstone Earrings' => 87,
-//                        'Gemstone Pendants' => 91,
-//                        'Gemstone Rings' => 90
-//                    );
-//
-//                    break;
-//                case 100: //WEDDING RINGS WOMAN
-//                    $this->category_tmp[] = 69;
-//                    $this->category_tmp[] = 96;
-//
-//                    $this->category_arr = array(
-//                        'Classic' => 77,
-//                        'classic' => 77,
-//                        'Stackable' => 78,
-//                        'stackable' => 78,
-//                        'Eternity' => 81,
-//                        'eternity' => 81,
-//                        'Diamond' => 79,
-//                        'diamond' => 79
-//                    );
-//
-//                    break;
-//                case 200;
-//                    $this->category_tmp[] = 69;
-//                    $this->category_tmp[] = 95;
-//
-//                    $this->category_arr = array(
-//                        'Modern' => 75,
-//                        'Diamond' => 74,
-//                        'Classic' => 72,
-//                        'Carved' => 73
-//                    );
-//
-//                    break;
-//            }
 
             $this->fixParse();
 
@@ -763,7 +698,7 @@ class ControllerModuleExelParser extends Controller {
        // dd($result->rows, true);
        // dd('sdf', true);
 
-        $delimiter = ';';
+        $delimiter = ',';
         $file = new SplFileObject($_SERVER['DOCUMENT_ROOT']."/uploddata/data.csv", 'w');
         $file->setCsvControl($delimiter);
 
