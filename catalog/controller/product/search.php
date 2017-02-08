@@ -497,11 +497,11 @@ class ControllerProductSearch extends Controller {
         $data['product_item'] = $product_item;
 
         if (in_ajax()) {
-            if (!empty($this->request->post['startFrom'])) {
+            if (!empty($this->request->get['srol'])) {
                 echo $product_item;
             }
 
-            if (empty($_POST['general_category']) and empty($this->request->post['startFrom'])) {
+            if (empty($_POST['general_category']) and empty($this->request->get['srol'])) {
                 echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax.tpl', $data);
             } else {
                 //echo $this->load->view($this->config->get('config_template') . '/template/product/category_ajax_general.tpl', $data);
