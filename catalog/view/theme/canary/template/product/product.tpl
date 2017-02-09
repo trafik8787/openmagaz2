@@ -318,29 +318,23 @@
                                                         class="bold-angle-right"></i> <?php echo $button_cart; ?></button>
 
                                             <?elseif ($path == 94): //GEMSTONES?>
-                                            <?if (!empty(Cookie::get('CanaryProductCom')) OR !empty(Cookie::get('CanaryDiamontCom')) OR !empty(Cookie::get('CanaryProductComGemstonToRing'))):?>
-                                            <button class="btn w-btn-orange btn-lg text-center" type="button"
-                                                    id="w-button-add-product-complect-gemstone-to-ring"><i
-                                                        class="bold-angle-right"></i> Select this Item
-                                            </button>
+                                                <?if (!empty(Cookie::get('CanaryProductCom')) OR !empty(Cookie::get('CanaryDiamontCom')) OR !empty(Cookie::get('CanaryProductComGemstonToRing'))):?>
+                                                    <button class="btn w-btn-orange btn-lg text-center" type="button"
+                                                            id="w-button-add-product-complect-gemstone-to-ring"><i
+                                                                class="bold-angle-right"></i> Select this Item
+                                                    </button>
+                                                <?else:?>
+                                                    <button class="btn w-btn-orange btn-lg" role="button" type="button"
+                                                            data-toggle="modal" data-target="#w-modal-cart-gemstones"><i
+                                                                class="bold-angle-right"></i> Select this Item
+                                                    </button>
+                                                <?endif?>
                                             <?else:?>
-                                            <button class="btn w-btn-orange btn-lg" role="button" type="button"
-                                                    data-toggle="modal" data-target="#w-modal-cart-gemstones"><i
-                                                        class="bold-angle-right"></i> Select this Item
-                                            </button>
-                                            <?endif?>
-                                            <?else:?>
-                                            <?if (!empty(Cookie::get('CanaryProductCom')) OR !empty(Cookie::get('CanaryDiamontCom')) OR !empty(Cookie::get('CanaryProductComGemstonToRing'))):?>
-                                            <button class="btn w-btn-orange btn-lg text-center" type="button" data-flag="pendant"
-                                                    id="w-button-add-product-complect"><i class="bold-angle-right"></i> Select
-                                                this Item
-                                            </button>
-                                            <?else:?>
-                                            <button class="btn w-btn-orange btn-lg" role="button" type="button"
-                                                    data-toggle="modal" data-target="#w-modal-cart"><i
-                                                        class="bold-angle-right"></i> Select this Item
-                                            </button>
-                                            <?endif?>
+
+                                                <button class="btn w-btn-orange btn-lg" role="button" type="button"
+                                                        data-toggle="modal" data-target="#w-modal-cart"><i
+                                                            class="bold-angle-right"></i> Select this Item
+                                                </button>
                                             <?endif?>
                                         </div>
                                     </div>
