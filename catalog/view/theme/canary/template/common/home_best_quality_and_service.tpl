@@ -49,7 +49,7 @@
                                         </span>
                                 <div class="media-body">
                                     <h4 class="media-heading"><b>Free Resizing and Engraving</b></h4>
-                                    <small>On All Bridal Jewerly</small>
+                                    <small>On All Bridal Jewelry</small>
                                 </div>
                             </div>
                         </div>

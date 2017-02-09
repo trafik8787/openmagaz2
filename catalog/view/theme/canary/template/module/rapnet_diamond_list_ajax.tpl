@@ -21,7 +21,7 @@
         <div class="diamond-catalog-right-message">
             <div><img src="/catalog/view/theme/canary/img/diamond-catalog-message.jpg" alt=""></div>
             <p>Order loose diamond now for free
-                5 days delivery. Add to jewerly
+                5 days delivery. Add to jewelry
                 for 2 weeks delivery
             </p>
 
