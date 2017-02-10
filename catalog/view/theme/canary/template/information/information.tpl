@@ -31,10 +31,51 @@
                     <div class="left-q">
                         <div class="wrapper-menu-stat">
                             <div class="title">INFORMATION</div>
-                            <ul class="menu-block-stat">
-                                <li><a href="/company">About Us</a></li>
-                                <li><a href="/information/policies/delivery-policy">Delivery Information</a></li>
-                                <li><a href="/company/contacts">Contact Us</a></li>
+                            <ul class="menu-block-stat" id="accordion">
+                                <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" >About Us</a></li>
+                                <li class="no-marcer collapse" id="collapse1">
+                                    <ul class="menu-block-stat">
+                                        <li><a href="/company">About Us</a></li>
+                                        <li><a href="/company">Quality</a></li>
+                                        <li><a href="/company">Military Discount</a></li>
+                                        <li><a href="/company">Helping Others</a></li>
+                                        <li><a href="/company">Made in USA</a></li>
+                                        <li><a href="/company">Why Pick Brilliant Canary</a></li>
+                                    </ul>
+                                </li>
+                                <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Services</a></li>
+                                <li class="no-marcer collapse" id="collapse2">
+                                    <ul class="menu-block-stat">
+                                        <li><a href="">Free Insured Shipping</a></li>
+                                        <li><a href="">GIA Certified Gemologist Appraisals</a></li>
+                                        <li><a href="">Price Match Guarantee</a></li>
+                                        <li><a href="">Lifetime Warranty</a></li>
+                                        <li><a href="">Free Ring Resizing</a></li>
+                                        <li><a href="">Free Ring Engraving</a></li>
+                                        <li><a href="">Made in USA</a></li>
+                                        <li><a href="">Helping Others</a></li>
+                                        <li><a href="">Military Discount</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Policies</a></li>
+                                <li class="no-marcer collapse" id="collapse3">
+                                    <ul class="menu-block-stat">
+                                        <li><a href="">Terms & Conditions</a></li>
+                                        <li><a href="">Privacy Policy</a></li>
+                                        <li><a href="">Cookie Policy</a></li>
+                                        <li><a href="">Return Policy</a></li>
+                                        <li><a href="">Conflict Free Diamonds</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <!--*<li><a href="/information/policies/delivery-policy">Delivery Information</a></li>*-->
+                                <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Contact Us</a></li>
+                                <li class="no-marcer collapse" id="collapse4">
+                                    <ul class="menu-block-stat">
+                                        <li><a href="/company/contacts">Contact Us</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="http://blog.brilliantcanary.com/" target="_blank">Blog</a></li>
                                 <li><a href="/information/faq">FAQ</a></li>
                                 <!--*<li><a href="#">Site Map</a></li>*-->

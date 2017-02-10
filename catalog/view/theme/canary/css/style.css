@@ -8092,6 +8092,30 @@ top: 12px;
   -moz-osx-font-smoothing: grayscale;
 }
 
+li.no-marcer:before {
+    display: none;
+}
+
+li.no-marcer {
+    padding-left: 3px!important;
+}
+
+li.no-marcer ul.menu-block-stat {
+
+}
+li.no-marcer ul.menu-block-stat li:before {
+    left: 11px!important;
+}
+
+li.no-marcer ul.menu-block-stat li:hover {
+    background-color: #dfe6ed;
+    cursor: pointer;
+}
+
+li.no-marcer ul.menu-block-stat li.active {
+    background-color: #dfe6ed;
+}
+
 .menu-block-stat li:last-child{
   border-bottom: 0;
 }
