@@ -151,7 +151,159 @@ class ControllerInformationInformation extends Controller {
         $this->getInformrendering(14);
     }
 
+    public function Quality () {
+        $this->load->language('information/information');
 
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(28);
+    }
+
+    public function MilitaryDiscount () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(26);
+    }
+
+    public function HelpingOthers () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(26);
+    }
+
+    public function ConflictFreeDiamonds () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(29);
+    }
+
+    public function FreeAndInsuredShipping () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(21);
+    }
+
+    public function CertifiedGemologistAppraisals () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(30);
+    }
+
+    public function PriceMatchGuarantee () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(31);
+    }
+
+    public function LifetimeWarranty () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(32);
+    }
+
+    public function FreeRingResizing () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(33);
+    }
+
+    public function FreeEngraving () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(11);
+    }
+
+    public function MadeInUSA () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(34);
+    }
 
     private function getInformrendering($information_id) {
 

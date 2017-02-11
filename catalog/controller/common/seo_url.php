@@ -29,7 +29,18 @@ class ControllerCommonSeoUrl extends Controller {
         'information/information/TermsConditions' => 'information/policies/terms-conditions',
         'information/information/CookiePolicy' => 'information/policies/cookie-policy',
         'information/information/ReturnPolicy' => 'information/policies/return-policy',
-        'information/information/DeliveryPolicy' => 'information/policies/delivery-policy'
+        'information/information/DeliveryPolicy' => 'information/policies/delivery-policy',
+        'information/information/Quality' => 'information/policies/quality',
+        'information/information/MilitaryDiscount' => 'information/policies/military-discount',
+        'information/information/HelpingOthers' => 'information/policies/helping-others',
+        'information/information/ConflictFreeDiamonds' => 'information/policies/conflict-free-diamonds',
+        'information/information/FreeAndInsuredShipping' => 'information/policies/free-and-insured-shipping',
+        'information/information/CertifiedGemologistAppraisals' => 'information/policies/certified-gemologist-appraisals',
+        'information/information/PriceMatchGuarantee' => 'information/policies/price-match-guarantee',
+        'information/information/LifetimeWarranty' => 'information/policies/lifetime-warranty',
+        'information/information/FreeRingResizing' => 'information/policies/free-ring-resizing',
+        'information/information/FreeEngraving' => 'information/policies/free_engraving',
+        'information/information/MadeInUSA' => 'information/policies/made-in-usa',
     );
 
 	public function index() {

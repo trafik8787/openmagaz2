@@ -36,36 +36,36 @@
                                 <li class="no-marcer collapse" id="collapse1">
                                     <ul class="menu-block-stat">
                                         <li><a href="/company">About Us</a></li>
-                                        <li><a href="/company">Quality</a></li>
-                                        <li><a href="/company">Military Discount</a></li>
-                                        <li><a href="/company">Helping Others</a></li>
-                                        <li><a href="/company">Made in USA</a></li>
+                                        <li><a href="/information/policies/quality">Quality</a></li>
+                                        <li><a href="/company#military-discount">Military Discount</a></li>
+                                        <li><a href="/company#helping-others">Helping Others</a></li>
+                                        <li><a href="/company#made-in-usa">Made in USA</a></li>
                                         <li><a href="/company">Why Pick Brilliant Canary</a></li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Services</a></li>
                                 <li class="no-marcer collapse" id="collapse2">
                                     <ul class="menu-block-stat">
-                                        <li><a href="">Free Insured Shipping</a></li>
-                                        <li><a href="">GIA Certified Gemologist Appraisals</a></li>
-                                        <li><a href="">Price Match Guarantee</a></li>
-                                        <li><a href="">Lifetime Warranty</a></li>
-                                        <li><a href="">Free Ring Resizing</a></li>
-                                        <li><a href="">Free Ring Engraving</a></li>
+                                        <li><a href="/information/policies/free-and-insured-shipping">Free Insured Shipping</a></li>
+                                        <li><a href="/information/policies/certified-gemologist-appraisals">GIA Certified Gemologist Appraisals</a></li>
+                                        <li><a href="/information/policies/price-match-guarantee">Price Match Guarantee</a></li>
+                                        <li><a href="/information/policies/lifetime-warranty">Lifetime Warranty</a></li>
+                                        <li><a href="/information/policies/free-ring-resizing">Free Ring Resizing</a></li>
+                                        <li><a href="/information/policies/free_engraving">Free Ring Engraving</a></li>
                                         <li><a href="">Made in USA</a></li>
-                                        <li><a href="">Helping Others</a></li>
-                                        <li><a href="">Military Discount</a></li>
+                                        <li><a href="/information/policies/helping-others">Helping Others</a></li>
+                                        <li><a href="/information/policies/military-discount">Military Discount</a></li>
                                     </ul>
                                 </li>
 
                                 <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Policies</a></li>
                                 <li class="no-marcer collapse" id="collapse3">
                                     <ul class="menu-block-stat">
-                                        <li><a href="">Terms & Conditions</a></li>
-                                        <li><a href="">Privacy Policy</a></li>
-                                        <li><a href="">Cookie Policy</a></li>
-                                        <li><a href="">Return Policy</a></li>
-                                        <li><a href="">Conflict Free Diamonds</a></li>
+                                        <li><a href="/information/policies/terms-conditions">Terms & Conditions</a></li>
+                                        <li><a href="/information/policies/privacy-policy">Privacy Policy</a></li>
+                                        <li><a href="/information/policies/cookie-policy">Cookie Policy</a></li>
+                                        <li><a href="/information/policies/return-policy">Return Policy</a></li>
+                                        <li><a href="/information/policies/conflict-free-diamonds">Conflict Free Diamonds</a></li>
                                     </ul>
                                 </li>
                                 
