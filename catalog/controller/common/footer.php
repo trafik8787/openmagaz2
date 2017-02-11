@@ -51,6 +51,9 @@ class ControllerCommonFooter extends Controller {
         $data['newsletter_coupon'] = $this->load->controller('marketing/newsletter', array('coupon' => true));
         $data['newsletter'] = $this->load->controller('marketing/newsletter');
 
+        $data['mailchimp_newslrtter_form'] = $this->load->controller('module/mailchimp_integration');
+
+
 
         if (empty(Cookie::get('NewsletModal'))) {
             $data['newsletter_cookie'] = 1;

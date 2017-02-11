@@ -1,4 +1,5 @@
 <footer>
+
     <section>
         <div class="row w-footer-newsletter">
             <div class="center-bl">
@@ -8,7 +9,8 @@
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-8">
-                    <?=$newsletter?>
+                    <!--*<?=$newsletter?>*-->
+                    <?=$mailchimp_newslrtter_form?>
                 </div>
             </div>
         </div>

@@ -14,25 +14,25 @@
                 <?//определяем в какой категории или странице находимся?>
                 <?if ((!empty($path) AND $path == 68) OR (!empty($path) AND $path == 'diamond_page')): //если находимся либо на странице каталога брилиантов либо на карточке брилианта?>
 
-                    <?show_diamond_complect_bloc (1, null, 1)?>
+                    <?show_diamond_complect_bloc (1, null, null)?>
                     <?show_product_complect_bloc (2)?>
                     <?show_complite_complect_bloc ()?>
 
                 <?elseif ((!empty($path) AND $path == 94)): //находимся на странице цветного камня или каталога цветных камней?>
 
-                    <?show_gemston_complect_bloc (1, null, 1)?>
+                    <?show_gemston_complect_bloc (1, null, null)?>
                     <?show_product_complect_bloc (2)?>
                     <?show_complite_complect_bloc ()?>
 
                 <?elseif ((!empty($path) AND $path == 82)): //находимся на jeverrly?>
 
-                    <?show_jeverly_complect_bloc (1, null, 1)?>
+                    <?show_jeverly_complect_bloc (1, null, null)?>
                     <?show_diamond_complect_bloc (2)?>
                     <?show_complite_complect_bloc ()?>
 
                 <?else: //все остальные?>
 
-                    <?show_product_complect_bloc (1, null, 1)?>
+                    <?show_product_complect_bloc (1, null, null)?>
                     <?show_diamond_complect_bloc (2)?>
                     <?show_complite_complect_bloc ()?>
 
@@ -44,25 +44,25 @@
                 <?if ((!empty($path) AND $path == 68) OR (!empty($path) AND $path == 'diamond_page')): //если находимся либо на странице каталога брилиантов либо на карточке брилианта?>
 
                     <?show_product_complect_bloc (1, $CanaryProductCom, 1)?>
-                    <?show_diamond_complect_bloc (2, null, 1)?>
+                    <?show_diamond_complect_bloc (2, null, null)?>
                     <?show_complite_complect_bloc ()?>
 
                 <?elseif ((!empty($path) AND $path == 94)): //находимся на странице цветного камня или каталога цветных камней?>
 
                     <?show_product_complect_bloc (1, $CanaryProductCom, 1)?>
-                    <?show_gemston_complect_bloc (2, null, 1)?>
+                    <?show_gemston_complect_bloc (2, null, null)?>
                     <?show_complite_complect_bloc ()?>
 
                 <?elseif ((!empty($path) AND $path == 82)): //находимся на jeverrly?>
 
                     <?show_jeverly_complect_bloc (1, $CanaryProductCom, 1)?>
-                    <?show_diamond_complect_bloc (2, null, 1)?>
+                    <?show_diamond_complect_bloc (2, null, null)?>
                     <?show_complite_complect_bloc ()?>
 
                 <?else: //все остальные?>
 
                     <?show_product_complect_bloc (1, $CanaryProductCom, 1)?>
-                    <?show_diamond_complect_bloc (2, null, 1)?>
+                    <?show_diamond_complect_bloc (2, null, null)?>
                     <?show_complite_complect_bloc ()?>
 
                 <?endif?>

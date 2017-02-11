@@ -492,7 +492,7 @@ class Mailchimp_Integration {
 			}
 		}
 		
-		return ($errors) ? '&bull; ' . implode('<br />&bull; ', $errors) : '';
+		return ($errors) ? '' . implode('<br />&bull; ', $errors) : '';
 	}
 	
 	//==============================================================================
