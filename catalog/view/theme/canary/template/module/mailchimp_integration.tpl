@@ -12,6 +12,11 @@
 
 
             <div class="mi-block form-group">
+                <?if (!empty($coupon)):?>
+                <input type="hidden" name="coupon" value="1">
+                <?else:?>
+                <input type="hidden" name="coupon" value="0">
+                <?endif?>
                 <input type="text" data-container="body" data-placement="top" data-content="" placeholder="Enter e-mail" class="form-control newslet-email" name="email" onkeydown="if (event.keyCode == 13) miSubscribe<?php echo $module_id; ?>($(this))" <?php if ($email) echo 'value="' . $email . '" disabled="disabled"'; ?> />
             </div>
 
@@ -105,6 +110,7 @@
 								$('#mi-modal-overlay, .mailchimp-integration').fadeOut();
 							<?php } else { ?>
 								//message.html(messageText).addClass('success alert alert-success').slideDown();
+                                $('#ModalHomeSubskribe').modal('hide');
                                 $('#w-modal-newslrtter').modal('show');
 							<?php } ?>
 						} 

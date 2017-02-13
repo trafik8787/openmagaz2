@@ -48,10 +48,11 @@ class ControllerCommonFooter extends Controller {
 
 		$data['powered'] = sprintf($this->language->get('text_powered'), $this->config->get('config_name'), date('Y', time()));
 
-        $data['newsletter_coupon'] = $this->load->controller('marketing/newsletter', array('coupon' => true));
-        $data['newsletter'] = $this->load->controller('marketing/newsletter');
+        //$data['newsletter_coupon'] = $this->load->controller('marketing/newsletter', array('coupon' => true));
+        //$data['newsletter'] = $this->load->controller('marketing/newsletter');
 
         $data['mailchimp_newslrtter_form'] = $this->load->controller('module/mailchimp_integration');
+        $data['mailchimp_newslrtter_form2'] = $this->load->controller('module/mailchimp_integration', array('coupon' => true));
 
 
 

@@ -27,11 +27,15 @@ class ControllerModuleMailchimpIntegration extends Controller {
 		}
 	}
 	
-	public function index() {
+	public function index($coupon = null) {
 		$data['settings'] = $this->getSettings();
 		$data['type'] = $this->type;
 		$data['name'] = $this->name;
-		
+
+        if (!empty($coupon)) {
+            $data['coupon'] = true;
+        }
+
 		$data['popup'] = $this->popup;
 		if (empty($this->session->data[$this->name . '_popup']) && $data['popup'] == 'auto') {
 			$this->session->data[$this->name . '_popup'] = 'triggered';
@@ -140,7 +144,7 @@ class ControllerModuleMailchimpIntegration extends Controller {
 	
 	public function subscribe() {
 		if (empty($this->request->post)) return;
-		
+
 		$customer_id = (int)$this->customer->getId();
 		
 		if ($customer_id) {
@@ -165,6 +169,7 @@ class ControllerModuleMailchimpIntegration extends Controller {
 		
 		if (!$error && $customer_id && !$this->customer->getNewsletter()) {
 			$this->db->query("UPDATE " . DB_PREFIX . "customer SET newsletter = 1 WHERE customer_id = " . $customer_id);
+            $this->load->controller('marketing/newsletter/add');
 		}
 		
 		echo str_replace('Use PUT to insert or update list members.', '', $error);

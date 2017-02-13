@@ -282,9 +282,9 @@
     <?if (!empty($newsletter_cookie)):?>
         <script>
             $(function () {
-                setTimeout(function(){
+//                setTimeout(function(){
                     $('#ModalHomeSubskribe').modal('show');
-                }, 60000);
+//                }, 60000);
             });
         </script>
         <div class="modal fade hidden-xs" id="ModalHomeSubskribe" tabindex="-1" role="dialog" aria-labelledby="ModalHomeSubskribeLabel" aria-hidden="true">
@@ -309,7 +309,8 @@
                                         jewelry trends and brilliant updates.
                                     </span>
                                 </div>
-                                <?=$newsletter_coupon?>
+                                <!--*<?=$newsletter_coupon?>*-->
+                                <?=$mailchimp_newslrtter_form2?>
                             </div>
                         </div>
                     </div>
