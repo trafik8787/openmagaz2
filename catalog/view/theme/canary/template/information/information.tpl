@@ -36,25 +36,25 @@
                                 <li class="no-marcer collapse" id="collapse1">
                                     <ul class="menu-block-stat">
                                         <li><a href="/company">About Us</a></li>
-                                        <li><a href="/information/policies/quality">Quality</a></li>
-                                        <li><a href="/company#military-discount">Military Discount</a></li>
-                                        <li><a href="/company#helping-others">Helping Others</a></li>
-                                        <li><a href="/company#made-in-usa">Made in USA</a></li>
-                                        <li><a href="/company">Why Pick Brilliant Canary</a></li>
+                                        <li><a href="/information/about-us/quality">Quality</a></li>
+                                        <li><a href="/information/services/military-discount">Military Discount</a></li>
+                                        <li><a href="/information/policies/helping-others">Helping Others</a></li>
+                                        <li><a href="/information/services/made-in-usa">Made in USA</a></li>
+                                        <li><a href="/information/about-us/why-pick-brilliant-canary">Why Pick Brilliant Canary</a></li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Services</a></li>
                                 <li class="no-marcer collapse" id="collapse2">
                                     <ul class="menu-block-stat">
-                                        <li><a href="/information/policies/free-and-insured-shipping">Free Insured Shipping</a></li>
-                                        <li><a href="/information/policies/certified-gemologist-appraisals">GIA Certified Gemologist Appraisals</a></li>
-                                        <li><a href="/information/policies/price-match-guarantee">Price Match Guarantee</a></li>
-                                        <li><a href="/information/policies/lifetime-warranty">Lifetime Warranty</a></li>
-                                        <li><a href="/information/policies/free-ring-resizing">Free Ring Resizing</a></li>
-                                        <li><a href="/information/policies/free_engraving">Free Ring Engraving</a></li>
-                                        <li><a href="">Made in USA</a></li>
-                                        <li><a href="/information/policies/helping-others">Helping Others</a></li>
-                                        <li><a href="/information/policies/military-discount">Military Discount</a></li>
+                                        <li><a href="/information/services/free-and-insured-shipping">Free Insured Shipping</a></li>
+                                        <li><a href="/information/services/certified-gemologist-appraisals">GIA Certified Gemologist Appraisals</a></li>
+                                        <li><a href="/information/services/price-match-guarantee">Price Match Guarantee</a></li>
+                                        <li><a href="/information/services/lifetime-warranty">Lifetime Warranty</a></li>
+                                        <li><a href="/information/services/free-ring-resizing">Free Ring Resizing</a></li>
+                                        <li><a href="/information/services/free_engraving">Free Ring Engraving</a></li>
+                                        <li><a href="/information/services/made-in-usa">Made in USA</a></li>
+                                        <li><a href="/information/services/helping-others">Helping Others</a></li>
+                                        <li><a href="/information/services/military-discount">Military Discount</a></li>
                                     </ul>
                                 </li>
 
@@ -145,7 +145,20 @@
     </section>
 </main>
 
-
+<script>
+    $(function () {
+       $('#accordion li a').each(function () {
+           if ($(this).attr('href') == location.pathname) {
+               $(this).parents('.collapse').collapse('show');
+               $(this).parent().addClass('active');
+           } else {
+               $(this).parent().removeClass('active');
+           }
+//           console.log($(this).attr('href'));
+       });
+    });
+//    console.log(location.pathname);
+</script>
 
 
 <?php echo !empty($footer) ? $footer : '' ?>

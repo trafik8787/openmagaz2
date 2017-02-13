@@ -305,6 +305,20 @@ class ControllerInformationInformation extends Controller {
         $this->getInformrendering(34);
     }
 
+    public function WhyPickBrilliantCanary () {
+        $this->load->language('information/information');
+
+        $this->load->model('catalog/information');
+
+        $this->data['breadcrumbs'] = array();
+
+        $this->data['breadcrumbs'][] = array(
+            'text' => $this->language->get('text_home'),
+            'href' => $this->url->link('common/home')
+        );
+        $this->getInformrendering(35);
+    }
+
     private function getInformrendering($information_id) {
 
 
