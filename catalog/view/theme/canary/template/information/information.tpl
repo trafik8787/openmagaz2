@@ -38,7 +38,7 @@
                                         <li><a href="/company">About Us</a></li>
                                         <li><a href="/information/about-us/quality">Quality</a></li>
                                         <li><a href="/information/services/military-discount">Military Discount</a></li>
-                                        <li><a href="/information/policies/helping-others">Helping Others</a></li>
+                                        <li><a href="/information/services/helping-others">Helping Others</a></li>
                                         <li><a href="/information/services/made-in-usa">Made in USA</a></li>
                                         <li><a href="/information/about-us/why-pick-brilliant-canary">Why Pick Brilliant Canary</a></li>
                                     </ul>

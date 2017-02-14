@@ -190,7 +190,7 @@ class ControllerInformationInformation extends Controller {
             'text' => $this->language->get('text_home'),
             'href' => $this->url->link('common/home')
         );
-        $this->getInformrendering(26);
+        $this->getInformrendering(16);
     }
 
     public function ConflictFreeDiamonds () {
