@@ -40,7 +40,7 @@
                                         <li><a href="/information/services/military-discount">Military Discount</a></li>
                                         <li><a href="/information/services/helping-others">Helping Others</a></li>
                                         <li><a href="/information/services/made-in-usa">Made in USA</a></li>
-                                        <li><a href="/information/about-us/why-pick-brilliant-canary">Why Pick Brilliant Canary</a></li>
+                                        <li><a href="/information/policies/conflict-free-diamonds">Conflict Free Diamonds</a></li>
                                     </ul>
                                 </li>
                                 <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Services</a></li>
@@ -52,9 +52,6 @@
                                         <li><a href="/information/services/lifetime-warranty">Lifetime Warranty</a></li>
                                         <li><a href="/information/services/free-ring-resizing">Free Ring Resizing</a></li>
                                         <li><a href="/information/services/free_engraving">Free Ring Engraving</a></li>
-                                        <li><a href="/information/services/made-in-usa">Made in USA</a></li>
-                                        <li><a href="/information/services/helping-others">Helping Others</a></li>
-                                        <li><a href="/information/services/military-discount">Military Discount</a></li>
                                     </ul>
                                 </li>
 
@@ -65,7 +62,6 @@
                                         <li><a href="/information/policies/privacy-policy">Privacy Policy</a></li>
                                         <li><a href="/information/policies/cookie-policy">Cookie Policy</a></li>
                                         <li><a href="/information/policies/return-policy">Return Policy</a></li>
-                                        <li><a href="/information/policies/conflict-free-diamonds">Conflict Free Diamonds</a></li>
                                     </ul>
                                 </li>
                                 
@@ -116,7 +112,7 @@
                         </div>
 
 
-                        <div class="title-stat margin-top-10">Send us a Message</div>
+                        <div class="title-stat margin-top-30">Send us a Message</div>
                         <span>We will reply to all questions within one business day</span>
                         <div class="form-static">
                             <form action="">

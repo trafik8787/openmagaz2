@@ -8077,6 +8077,7 @@ top: 12px;
 .menu-block-stat li a{
   color: #1a1a18;
   font-size: 15px;
+  display: block;
 }
 
 .menu-block-stat li:before{
@@ -8108,7 +8109,7 @@ li.no-marcer ul.menu-block-stat li:before {
 }
 
 li.no-marcer ul.menu-block-stat li:hover {
-    background-color: #dfe6ed;
+    background-color: rgb(195, 209, 222);
     cursor: pointer;
 }
 
