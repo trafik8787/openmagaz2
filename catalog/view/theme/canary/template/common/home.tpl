@@ -18,7 +18,7 @@
                                     <div class="w-ac-baner-text2">YOUR WEDDING RING</div>
                                     <div class="w-shop-now-bloc">
                                         <!--*<i></i>*-->
-                                        <a href="/fine-jewelry" role="button" class="btn w-btn-orange2 shop-now">SHOP NOW</a>
+                                        <a href="/engagement-rings" role="button" class="btn w-btn-orange2 shop-now">SHOP NOW</a>
                                     </div>
                                     <!--*<span class="w-button-btn">*-->
                                         <!--*<p>*Does not include loose diamonds. Cannot be combined with any other offer.</p>*-->

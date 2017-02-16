@@ -166,6 +166,10 @@ class ControllerModuleMailchimpIntegration extends Controller {
 		$data = array_merge($this->request->post, array('newsletter' => 1, 'update_existing' => (bool)($this->customer->isLogged() || !empty($settings['interest_groups']))));
 		
 		$error = $mailchimp_integration->send($data);
+
+		if (!$error) {
+            $this->load->controller('marketing/newsletter/add');
+        }
 		
 		if (!$error && $customer_id && !$this->customer->getNewsletter()) {
 			$this->db->query("UPDATE " . DB_PREFIX . "customer SET newsletter = 1 WHERE customer_id = " . $customer_id);
