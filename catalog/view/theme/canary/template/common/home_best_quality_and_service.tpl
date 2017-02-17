@@ -57,7 +57,7 @@
                     </a>
                 </div>
                 <div class="col-md-3 col-sm-3 col-xs-6">
-                    <a href="/company#helping-others">
+                    <a href="/information/services/helping-others">
                         <div class="alert alert-info">
                             <div class="media">
                                 <span class="pull-left">

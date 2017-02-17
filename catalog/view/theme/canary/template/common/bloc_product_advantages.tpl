@@ -34,7 +34,7 @@
                     <div class="product-advantages-item-text">No Hassle Returns</div>
                 </div>
             </a>
-            <a href="/company#helping-others">
+            <a href="/information/services/helping-others">
                 <div class="product-advantages-item">
                     <div class="product-advantages-item-img"><img
                                 src="/catalog/view/theme/canary/img/p-advantage-4.png" alt=""></div>
