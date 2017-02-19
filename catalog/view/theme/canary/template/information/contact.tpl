@@ -82,11 +82,11 @@
                                             <input id="it2" type="text" name="email" value="<?php echo $email; ?>" class="required" placeholder="E-mail" required>
                                         </div>
                                         <div class="col-sm-4">
-                                            <input id="it3" type="text" class="required" placeholder="Phone" required>
+                                            <input id="it3" type="text" class="required" name="phone" placeholder="Phone">
                                         </div>
                                     </div>
                                     <textarea id="ta1" cols="30" name="enquiry" rows="5" class="required" placeholder="Message" required><?php echo $enquiry; ?></textarea>
-                                    <button class="btn w-btn-orange btn-lg"><i class="icons-rings_icon"></i>SEND</button>
+                                    <button type="submit" class="btn w-btn-orange btn-lg"><i class="icons-rings_icon"></i>SEND</button>
                                 </form>
                             </div>
                         </div>

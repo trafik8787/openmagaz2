@@ -41,6 +41,7 @@ class ControllerInformationInformation extends Controller {
 
 			$this->response->addHeader($this->request->server['SERVER_PROTOCOL'] . ' 404 Not Found');
 
+
             $this->data['column_left'] = $this->load->controller('common/column_left');
             $this->data['column_right'] = $this->load->controller('common/column_right');
             $this->data['content_top'] = $this->load->controller('common/content_top');
@@ -333,6 +334,8 @@ class ControllerInformationInformation extends Controller {
                 'text' => $information_info['title'],
                 //'href' => $this->url->link('information/information', 'information_id=' .  $information_id)
             );
+
+            $this->data['action'] = $this->url->link('information/contact', '', 'SSL');
 
             $this->data['heading_title'] = $information_info['title'];
 

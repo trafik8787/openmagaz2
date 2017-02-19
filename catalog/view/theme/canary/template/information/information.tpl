@@ -115,20 +115,20 @@
                         <div class="title-stat margin-top-30">Send us a Message</div>
                         <span>We will reply to all questions within one business day</span>
                         <div class="form-static">
-                            <form action="">
-                                <textarea placeholder="Message"></textarea>
+                            <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+                                <textarea placeholder="Message" name="enquiry" required></textarea>
                                 <div class="row">
                                     <div class="col-md-3 col-sm-3 col-xs-4">
-                                        <input type="text" placeholder="Name">
+                                        <input type="text" placeholder="Name" name="name" required>
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-4">
-                                        <input type="email" placeholder="E-mail">
+                                        <input type="email" placeholder="E-mail" name="email" required>
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-4">
-                                        <input type="tel" placeholder="Phone">
+                                        <input type="tel" placeholder="Phone" name="phone">
                                     </div>
                                     <div class="col-md-3 col-sm-3 col-xs-12">
-                                        <button class="btn w-btn-orange btn-lg"><div class="icons-rings_icon"></div>SEND</button>
+                                        <button type="submit" class="btn w-btn-orange btn-lg"><div class="icons-rings_icon"></div>SEND</button>
                                     </div>
                                 </div>
                             </form>
