@@ -1214,7 +1214,7 @@
                     $('.container-loader').hide();
                 },
                 success: function (response) {
-                    $('html, body').animate({scrollTop: 600}, 'slow');
+                    $('html, body').animate({scrollTop: 200}, 'slow');
                     $('.w-category-ajax').empty();
                     $('.w-category-ajax').html(response);
 
