@@ -6,6 +6,7 @@ class ControllerProductSearch extends Controller {
 		$this->load->model('catalog/category');
 
 		$this->load->model('catalog/product');
+		$this->load->model('catalog/information');
 
 		$this->load->model('tool/image');
 
@@ -222,6 +223,10 @@ class ControllerProductSearch extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
+			if (empty($results)) {
+                $data['search_information'] = $this->model_catalog_information->getSearchInformation($search);
+            }
+           // dd($results_search);
 
 
 			foreach ($results as $result) {
@@ -512,10 +517,17 @@ class ControllerProductSearch extends Controller {
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');
 
-            if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/search.tpl')) {
-                $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/search.tpl', $data));
+            if (!empty($data['search_information'])) {
+
+                $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/search_inform.tpl', $data));
+
             } else {
-                $this->response->setOutput($this->load->view('default/template/product/search.tpl', $data));
+
+                if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/product/search.tpl')) {
+                    $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/product/search.tpl', $data));
+                } else {
+                    $this->response->setOutput($this->load->view('default/template/product/search.tpl', $data));
+                }
             }
         }
 

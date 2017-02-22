@@ -21,4 +21,15 @@ class ModelCatalogInformation extends Model {
 			return 0;
 		}
 	}
+
+    public function getSearchInformation ($search) {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "information i LEFT JOIN " . DB_PREFIX . "information_description id ON (i.information_id = id.information_id) LEFT JOIN " . DB_PREFIX . "information_to_store i2s ON (i.information_id = i2s.information_id) WHERE (id.description LIKE '%" . $search . "%' OR id.title LIKE '%" . $search . "%')  AND id.language_id = '" . (int)$this->config->get('config_language_id') . "' AND i2s.store_id = '" . (int)$this->config->get('config_store_id') . "' AND i.status = '1'");
+        //href' => $this->url->link('information/information', 'information_id=' .  $information_id)
+
+        foreach ($query->rows as $key => $item) {
+            $query->rows[$key]['href'] =  $this->url->link('information/information', 'information_id=' .  $item['information_id']);
+        }
+
+        return $query->rows;
+    }
 }
