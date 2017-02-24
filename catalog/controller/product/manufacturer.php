@@ -1,6 +1,9 @@
 <?php
 class ControllerProductManufacturer extends Controller {
 	public function index() {
+
+        $this->response->redirect('/');
+
 		$this->load->language('product/manufacturer');
 
 		$this->load->model('catalog/manufacturer');
@@ -66,6 +69,9 @@ class ControllerProductManufacturer extends Controller {
 	}
 
 	public function info() {
+
+        $this->response->redirect('/');
+
 		$this->load->language('product/manufacturer');
 
 		$this->load->model('catalog/manufacturer');

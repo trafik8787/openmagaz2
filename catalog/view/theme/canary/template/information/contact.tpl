@@ -29,9 +29,47 @@
                 <div class="left-q">
                     <div class="wrapper-menu-stat">
                         <div class="title">INFORMATION</div>
-                        <ul class="menu-block-stat">
-                            <li><a href="/company">About Us</a></li>
-                            <li><a href="/information/policies/delivery-policy">Delivery Information</a></li>
+                        <ul class="menu-block-stat" id="accordion">
+                            <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" >About Us</a></li>
+                            <li class="no-marcer collapse" id="collapse1">
+                                <ul class="menu-block-stat">
+                                    <li><a href="/company">About Us</a></li>
+                                    <li><a href="/information/about-us/quality">Quality</a></li>
+                                    <li><a href="/information/services/military-discount">Military Discount</a></li>
+                                    <li><a href="/information/services/helping-others">Helping Others</a></li>
+                                    <li><a href="/information/services/made-in-usa">Made in USA</a></li>
+                                    <li><a href="/information/policies/conflict-free-diamonds">Conflict Free Diamonds</a></li>
+                                </ul>
+                            </li>
+                            <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Services</a></li>
+                            <li class="no-marcer collapse" id="collapse2">
+                                <ul class="menu-block-stat">
+                                    <li><a href="/information/services/free-and-insured-shipping">Free Insured Shipping</a></li>
+                                    <li><a href="/information/services/certified-gemologist-appraisals">GIA Certified Gemologist Appraisals</a></li>
+                                    <li><a href="/information/services/price-match-guarantee">Price Match Guarantee</a></li>
+                                    <li><a href="/information/services/lifetime-warranty">Lifetime Warranty</a></li>
+                                    <li><a href="/information/services/free-ring-resizing">Free Ring Resizing</a></li>
+                                    <li><a href="/information/services/free_engraving">Free Ring Engraving</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Policies</a></li>
+                            <li class="no-marcer collapse" id="collapse3">
+                                <ul class="menu-block-stat">
+                                    <li><a href="/information/policies/terms-conditions">Terms & Conditions</a></li>
+                                    <li><a href="/information/policies/privacy-policy">Privacy Policy</a></li>
+                                    <li><a href="/information/policies/cookie-policy">Cookie Policy</a></li>
+                                    <li><a href="/information/policies/return-policy">Return Policy</a></li>
+                                </ul>
+                            </li>
+
+                            <!--*<li><a href="/information/policies/delivery-policy">Delivery Information</a></li>*-->
+                            <li><a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Contact Us</a></li>
+                            <li class="no-marcer collapse" id="collapse4">
+                                <ul class="menu-block-stat">
+                                    <li><a href="/company/contacts">Contact Us</a></li>
+                                </ul>
+                            </li>
                             <li><a href="http://blog.brilliantcanary.com/" target="_blank">Blog</a></li>
                             <li><a href="/information/faq">FAQ</a></li>
                             <!--*<li><a href="#">Site Map</a></li>*-->
