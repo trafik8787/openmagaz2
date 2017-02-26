@@ -34,7 +34,7 @@
                     <div class="wish-login-text">To save your wish list, create an account or log in</div>
                     <?php if ($logged == null):?>
                         <div class="wish-login-block">
-                            <a href="/login" class="btn w-btn-orange btn-lg">Login in</a>
+                            <a href="/login" class="btn w-btn-orange btn-lg">Login</a>
                         </div>
                     <?endif?>
                 </div>

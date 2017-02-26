@@ -25,6 +25,8 @@ class ControllerInformationFaq extends Controller {
         $this->document->setDescription('faq');
         $this->document->setKeywords('faq');
 
+        $data['information_meny'] = $this->load->view($this->config->get('config_template') . '/template/information/information_meny.tpl', array('bloges' => array_slice($this->load->controller('module/bloges/getBloges'),0,2)));
+
         if (!in_ajax()) {
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');

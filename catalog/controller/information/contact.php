@@ -153,6 +153,8 @@ class ControllerInformationContact extends Controller {
 			$data['captcha'] = '';
 		}
 
+        $data['information_meny'] = $this->load->view($this->config->get('config_template') . '/template/information/information_meny.tpl', array('bloges' => array_slice($this->load->controller('module/bloges/getBloges'),0,2)));
+
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');

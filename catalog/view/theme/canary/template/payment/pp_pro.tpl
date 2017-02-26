@@ -12,7 +12,7 @@
         <input type="hidden" name="cc_type" id="input-cc-type">
 
         <div class="form-group required">
-            <input type="text" name="cc_number" value="" placeholder="Cart Number" id="input-cc-number" class="form-control" />
+            <input type="text" name="cc_number" value="" placeholder="Card Number" id="input-cc-number" class="form-control" />
         </div>
 
         <div class="form-group required">
