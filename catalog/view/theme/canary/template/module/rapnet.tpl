@@ -71,10 +71,10 @@
                             <div id="w-slider-cut"></div>
                             <div class="wrapper-table w-slider-cut-li">
                                 <ul class="slider-lables">
-                                    <li title="slightly colored" data-item="0">Fair</li>
-                                    <li title="near colorless" data-item="1">Good</li>
-                                    <li title="near colorless" data-item="2">Very Good</li>
-                                    <li title="near colorless" data-item="3">Excellent</li>
+                                    <li  data-item="0">Fair</li>
+                                    <li  data-item="1">Good</li>
+                                    <li data-item="2">Very Good</li>
+                                    <li  data-item="3">Excellent</li>
                                 </ul>
                             </div>
                         </div>
@@ -89,16 +89,16 @@
                             <div id="w-slider-color"></div>
                             <div class="wrapper-table w-slider-color-li">
                                 <ul class="slider-lables">
-                                    <li title="slightly colored" data-item="0">M</li>
-                                    <li title="near colorless" data-item="1">L</li>
-                                    <li title="near colorless" data-item="2">K</li>
-                                    <li title="near colorless" data-item="3">J</li>
-                                    <li title="near colorless" data-item="4">I</li>
-                                    <li title="near colorless" data-item="5">H</li>
-                                    <li title="near colorless" data-item="6">G</li>
-                                    <li title="colorless" data-item="7">F</li>
-                                    <li title="colorless" data-item="8">E</li>
-                                    <li title="colorless" data-item="9">D</li>
+                                    <li  data-item="0">M</li>
+                                    <li  data-item="1">L</li>
+                                    <li  data-item="2">K</li>
+                                    <li  data-item="3">J</li>
+                                    <li  data-item="4">I</li>
+                                    <li  data-item="5">H</li>
+                                    <li  data-item="6">G</li>
+                                    <li  data-item="7">F</li>
+                                    <li  data-item="8">E</li>
+                                    <li  data-item="9">D</li>
                                 </ul>
                             </div>
                         </div>
@@ -125,14 +125,14 @@
                             <div id="w-slider-clarity"></div>
                             <div class="wrapper-table w-slider-clarity-li">
                                 <ul class="slider-lables">
-                                    <li title="slightly colored" data-item="0">I1</li>
-                                    <li title="near colorless" data-item="1">SI2</li>
-                                    <li title="near colorless" data-item="2">SI1</li>
-                                    <li title="near colorless" data-item="3">VS2</li>
-                                    <li title="near colorless" data-item="4">VS1</li>
-                                    <li title="colorless" data-item="5">VVS2</li>
-                                    <li title="colorless" data-item="6">VVS1</li>
-                                    <li title="colorless" data-item="7">IF</li>
+                                    <li  data-item="0">I1</li>
+                                    <li  data-item="1">SI2</li>
+                                    <li  data-item="2">SI1</li>
+                                    <li  data-item="3">VS2</li>
+                                    <li  data-item="4">VS1</li>
+                                    <li  data-item="5">VVS2</li>
+                                    <li  data-item="6">VVS1</li>
+                                    <li  data-item="7">IF</li>
                                 </ul>
                             </div>
                         </div>
@@ -170,10 +170,10 @@
                                             <div id="w-slider-polish"></div>
                                             <div class="wrapper-table">
                                                 <ul class="slider-lables">
-                                                    <li title="colorless">Fair</li>
-                                                    <li title="colored">Good</li>
-                                                    <li title="colorless">Very Good</li>
-                                                    <li title="colorless">Excellent</li>
+                                                    <li >Fair</li>
+                                                    <li >Good</li>
+                                                    <li >Very Good</li>
+                                                    <li >Excellent</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -186,10 +186,10 @@
                                             <div id="w-slider-symmetry"></div>
                                             <div class="wrapper-table">
                                                 <ul class="slider-lables">
-                                                    <li title="colorless">Fair</li>
-                                                    <li title="colored">Good</li>
-                                                    <li title="colorless">Very Good</li>
-                                                    <li title="colorless">Excellent</li>
+                                                    <li >Fair</li>
+                                                    <li >Good</li>
+                                                    <li >Very Good</li>
+                                                    <li >Excellent</li>
                                                 </ul>
                                             </div>
                                         </div>
