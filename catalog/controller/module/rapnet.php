@@ -29,7 +29,7 @@ class ControllerModuleRapnet extends Controller {
         );
 
         $this->clarity_arr = array(
-            'I1','SI3','SI2','SI1','VS2','VS1','VVS2','VVS1','IF'
+            'I1','SI2','SI1','VS2','VS1','VVS2','VVS1','IF'
         );
 
         $this->cut_arr = array(
@@ -282,10 +282,10 @@ class ControllerModuleRapnet extends Controller {
             $this->url_paginate .= '&clarity='.$this->request->get['clarity'];
             $clarity_ex = explode(',', $this->request->get['clarity']);
             $clarity_from = $this->clarity_arr[$clarity_ex[0]];
-            $clarity_to = $this->clarity_arr[$clarity_ex[1]];
+            $clarity_to = $this->clarity_arr[$clarity_ex[1]-1];
         } else {
             $clarity_from = $this->clarity_arr[0];
-            $clarity_to = $this->clarity_arr[8];
+            $clarity_to = $this->clarity_arr[7];
         }
 
         if (!empty($this->request->get['cut'])) {
