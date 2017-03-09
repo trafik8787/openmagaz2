@@ -318,7 +318,7 @@ class ControllerModuleExelParser extends Controller {
             //$this->category = $this->category_tmp;
             $this->category = array();
             $curent = $file->current();
-            //dd($curent, true);
+
             //update если нету product_id то добавление нового товара
             if (!empty($curent[0])) {
 
@@ -471,6 +471,7 @@ class ControllerModuleExelParser extends Controller {
                         //metal
                         $metal = trim($curent[9]);
                         $sku = trim($curent[1]);
+                        $this->special_price = $curent[12];
                         //filters
                         $this->filter[] = $this->list_filtr['Price'];
                         $this->filter[] = $this->list_filtr['All metals'];
@@ -627,13 +628,17 @@ class ControllerModuleExelParser extends Controller {
                         $this->addUrl();
                         $this->addGalery();
                         $this->addStore();
-
+                        $this->addDiscount();
                         $this->addOption();
                         $this->addAtribute();
 
                         $this->product_id_insert_arr[] = $this->product_id_insert;
                         $this->product_id_insert_added[] = '<span style="color: green">Added ID - '.$this->product_id_insert.'</span>';
                         //dd($this->product_id_insert);
+                    } else {
+
+                        $this->error_text_validation[] = $err;
+
                     }
                 }
             }
@@ -1035,6 +1040,21 @@ class ControllerModuleExelParser extends Controller {
         if (!empty($this->special_price)) {
             $this->db->query("INSERT INTO " . DB_PREFIX . "product_special SET
             product_id = '".$product_id."',
+            customer_group_id = 1,
+            priority = 0,
+            price = '" . $this->special_price . "',
+            date_start = '0000-00-00',
+            date_end = '0000-00-00'");
+        }
+
+    }
+
+
+    private function addDiscount () {
+
+        if (!empty($this->special_price)) {
+            $this->db->query("INSERT INTO " . DB_PREFIX . "product_special SET
+            product_id = '".$this->product_id_insert."',
             customer_group_id = 1,
             priority = 0,
             price = '" . $this->special_price . "',
