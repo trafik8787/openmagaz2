@@ -1182,7 +1182,7 @@ class ControllerModuleExelParser extends Controller {
             $tmp_str_eror .= ' Err:Width ';
         }
         //Metal
-        if (empty($this->list_metal[$curent[9]])) {
+        if (empty($this->list_metal[trim($curent[9])])) {
             $tmp_str_eror .= ' Err:Metal ';
         }
         //Manufacturer
@@ -1211,7 +1211,7 @@ class ControllerModuleExelParser extends Controller {
         }
         //Category1
         if (!empty($curent[16])) {
-            if (empty($this->category_list_arr[$curent[16]])) {
+            if (empty($this->category_list_arr[trim($curent[16])])) {
                 $tmp_str_eror .= ' Err:Category1 ';
             }
         } else {
@@ -1219,19 +1219,19 @@ class ControllerModuleExelParser extends Controller {
         }
         //Category2
         if (!empty($curent[17])) {
-            if (empty($this->category_list_arr[$curent[17]])) {
+            if (empty($this->category_list_arr[trim($curent[17])])) {
                 $tmp_str_eror .= ' Err:Category2 ';
             }
         }
         //Category3
         if (!empty($curent[18])) {
-            if (empty($this->category_list_arr[$curent[18]])) {
+            if (empty($this->category_list_arr[trim($curent[18])])) {
                 $tmp_str_eror .= ' Err:Category3 ';
             }
         }
         //Category4
         if (!empty($curent[19])) {
-            if (empty($this->category_list_arr[$curent[19]])) {
+            if (empty($this->category_list_arr[trim($curent[19])])) {
                 $tmp_str_eror .= ' Err:Category4 ';
             }
         }
