@@ -37,8 +37,7 @@
         </section>
     </main>
 
-<!-- Google Code for Sale Conversion Page --> <script
-        type="text/javascript">
+<!-- Google Code for Sale Conversion Page --> <script type="text/javascript">
     /* <![CDATA[ */
     var google_conversion_id = 878299355;
     var google_conversion_language = "en";

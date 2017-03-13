@@ -15,7 +15,7 @@
                                 <div class="w-ac-baner-text">
                                     <div class="w-ac-baner-text0">Buy an Engagement Ring and</div>
                                     <div class="w-ac-baner-text1">GET 20% OFF</div>
-                                    <div class="w-ac-baner-text2">YOUR WEDDING RING <p style="font-size: 16px;margin-top: 8px;">Enter code <b>WEDDING20</b> at checkout</p> </div>
+                                    <div class="w-ac-baner-text2">YOUR WEDDING RING <p style="font-size: 14px;margin-top: 8px;">Enter code <b>WEDDING20</b> at checkout</p> </div>
                                     <div class="w-shop-now-bloc">
                                         <!--*<i></i>*-->
                                         <a href="/engagement-rings" role="button" class="btn w-btn-orange2 shop-now">SHOP NOW</a>
