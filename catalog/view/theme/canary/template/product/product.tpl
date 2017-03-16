@@ -845,7 +845,7 @@
                                 <input type="email" name="friend_email" placeholder="Friend’s Email Address">
                             </div>
                             <div class="col-md-12">
-                                <textarea name="another_friend" rows="3" placeholder="Add Another Friend"></textarea>
+                                <textarea name="another_friend" rows="3" placeholder="Your Message"></textarea>
                             </div>
 
                             <div class="col-md-6">
