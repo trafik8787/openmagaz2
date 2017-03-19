@@ -185,17 +185,23 @@ class ModelCatalogProduct extends Model {
 
 			if (!empty($data['filter_name'])) {
 				$implode = array();
+                $implode_d = array();
 
 				$words = explode(' ', trim(preg_replace('/\s+/', ' ', $data['filter_name'])));
 
 				foreach ($words as $word) {
-					$implode[] = "pd.name LIKE '%" . $this->db->escape($word) . "%'";
+					$implode[] = " pd.name LIKE '%" . $this->db->escape($word) . "%' ";
+                    $implode_d[] = " OR pd.description LIKE '%" . $this->db->escape($word) . "%' ";
 				}
 
 				if ($implode) {
-					$sql .= " " . implode(" AND ", $implode) . "";
+					$sql .= " " . implode(" OR ", $implode) . " ";
 				}
 
+                if ($implode_d) {
+                    $sql .= " " . implode(" ", $implode_d) . " ";
+                }
+                //dd($sql);
 				if (!empty($data['filter_description'])) {
 					$sql .= " OR pd.description LIKE '%" . $this->db->escape($data['filter_name']) . "%'";
 				}
