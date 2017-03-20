@@ -41,7 +41,7 @@
             <div class="dropdown-inside">
                 <div class="clearfix">
                     <div class="col-md-8 col-sm-8 col-xs-8">
-                        <div class="title">BROWSE WEDDING RINGS FOR WOMAN</div><!--*woman*-->
+                        <div class="title">BROWSE WEDDING RINGS FOR WOMEN</div><!--*woman*-->
                         <ul class="brilliant-style brilliant-style-long ul-first-drop">
                             <li><a href="<?php echo $categories[2]['children'][2]['href']?>" class="w-general-category"><i class="wedding1"></i><br/>CLASSIC</a></li>
                             <li><a href="<?php echo $categories[2]['children'][3]['href']?>" class="w-general-category"><i class="wedding3"></i><br/>DIAMOND</a></li>
