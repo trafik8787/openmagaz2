@@ -33,7 +33,7 @@ $(document).ready(function() {
     //});
     // $('.one-product-slider .slider-for').show();
     // $('.one-product-slider .slider-nav').show();
-     $('.product-advantages-list').show();
+    $('.product-advantages-list').show();
 
     $(document).on('click', '.button-send-hit', function () {
         $.ajax({
@@ -76,10 +76,6 @@ $(document).ready(function() {
 
     var inProgress = false;
     var startFrom = 2;
-    // var get = getUrlVars();
-    // if (get["page"] !== 2 && get === undefined) {
-    //     startFrom = get["page"];
-    // }
 
     $(document).on("DOMSubtreeModified",function(){
         inProgress = false;
@@ -87,12 +83,11 @@ $(document).ready(function() {
 
 
     $(window).scroll(function() {
-         if ($('.w-ajax-loader-page').length>0) {
+        if ($('.w-ajax-loader-page').length>0) {
             if ($(window).scrollTop() + $(window).height() >= $(document).height() - 2000 && !inProgress) {
                 inProgress = true;
-                urlData = $('#input-sort option:selected').val()+'&srol=1'+'&page='+startFrom;
                 $.ajax({
-                    url:  urlData,
+                    url: $('#input-sort option:selected').val()+'&srol=1'+'&page='+startFrom,
                     type: 'get',
                     //data:  {"startFrom" : startFrom},
                     dataType: 'html',
@@ -105,14 +100,6 @@ $(document).ready(function() {
                     success: function (json) {
 
                         if (json.length > 0) {
-                             console.log(window.location.href);
-                            if (startFrom !== undefined && startFrom !== 2) {
-                                // if (startFrom > 2) {
-                                //     startFrom = startFrom-1;
-                                // }
-                                history.pushState({'page': startFrom}, '', window.location.href);
-                            }
-
                             $ner = $(json);
                             $('.main-catalog-container table tbody').append($ner);
                             $ner.fadeIn("slow");
@@ -125,16 +112,9 @@ $(document).ready(function() {
                     }
                 });
             }
-         }
+        }
     });
 
-    function getUrlVars() {
-        var vars = {};
-        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-            vars[key] = value;
-        });
-        return vars;
-    }
 
 
     $('.stack-responsive').stacktable();
@@ -307,67 +287,6 @@ $(document).ready(function() {
         return false;
 
     });
-
-
-    //загрузка товаров из подкатегории
-    // $(document).on('change', '.w-wsubcat' ,function(){
-    //     input_sort ($(this).data('href'));
-    //     history.pushState('', '', $(this).data('href'));
-    //     if ($(document).scrollTop() < 500) {
-    //         $('html, body').animate({scrollTop: 500}, 'slow');
-    //     }
-    //     return false;
-    // });
-
-
-    //модуль подкатегорий добавление класса по клике
-    //$(document).on('click', '.w-group-wsubcat a' ,function(){
-    //
-    //    $('.w-group-wsubcat a').removeClass('active');
-    //    $(this).addClass('active');
-    //
-    //});
-
-
-
-
-
-
-
-
-
-    //load controller general category
-
-    // $(document).on('click', '.w-general-category', function(){
-    //
-    //     var $url = $(this).attr('href');
-    //     history.pushState('', '', $url);
-    //
-    //     $.ajax({ // описываем наш запрос
-    //         type: "POST", // будем передавать данные через POST
-    //         dataType: "HTML", // указываем, что нам вернется JSON
-    //         url: $url,
-    //         data: 'general_category=1',
-    //         beforeSend: function() {
-    //             $('.container-loader').show();
-    //             $(".menu > ul > li > .dropdown-inside").hide();
-    //         },
-    //         complete: function() {
-    //             $('.container-loader').hide();
-    //         },
-    //         success: function (response) { // когда получаем ответ
-    //
-    //             $('.w-general-container').empty();
-    //             $('.w-general-container').html(response);
-    //             $('.question-filter-btn').popover();
-    //
-    //         }
-    //
-    //     });
-    //
-    //     $('html, body').animate({ scrollTop: 0 }, 'slow');
-    //     return false;
-    // });
 
 
 
@@ -833,26 +752,16 @@ $(document).on('click', '#w-complide-view', function() {
 
 
 
-    $(document).mouseup(function (e) {
-        if ($('.cart-basket').is(":visible")) {
-            var container = $("#w-but-cart, .cart-basket");
-            if (container.has(e.target).length === 0) {
-                //container.hide();
-                container.trigger('click');
-            }
+$(document).mouseup(function (e) {
+    if ($('.cart-basket').is(":visible")) {
+        var container = $("#w-but-cart, .cart-basket");
+        if (container.has(e.target).length === 0) {
+            //container.hide();
+            container.trigger('click');
         }
-    });
+    }
+});
 
-// $(window).on('popstate', function(event) {
-//     console.log( window.location.href);
-//     // history.replaceState({ path: window.location.href }, '');
-//     window.location.replace(window.location.href);
-// });
-
-// window.onpopstate =  function(event) {
-//     // console.log( window.location.href);
-//     window.location.replace(window.location.href);
-// };
 
 
 
