@@ -1,4 +1,5 @@
 
+
 <?if (!empty($data_error)):?>
     <hr>
     <p class="text-center"><b><?=$data_error?></b></p>
@@ -50,37 +51,37 @@
                     </thead>
                     <tbody>
                     <?php foreach ($data as $row):?>
-                    <?//dd($row)?>
-                    <tr class="diamond-tr" data-diamond-id="<?=$row->diamond_id?>">
-                        <!--*<td>*-->
-                            <!--*<input id="diamond<?=$row->diamond_id?>" type="checkbox" class="diamond-compare-checkbox">*-->
-                            <!--*<label for="diamond<?=$row->diamond_id?>" class="diamond-catalog-label"></label>*-->
-                        <!--*</td>*-->
-                        <td>
-                            <span style="display: block;width: 40%;margin: 0 auto;text-align: left;">
-                                <span class="diamond-table-shapeimg">
-                                    <img src="<?=imageDiamontIcon($row->shape)?>" alt="">
+                        <?//dd($row)?>
+                        <tr class="diamond-tr" data-diamond-id="<?=$row->diamond_id?>">
+                            <!--*<td>*-->
+                                <!--*<input id="diamond<?=$row->diamond_id?>" type="checkbox" class="diamond-compare-checkbox">*-->
+                                <!--*<label for="diamond<?=$row->diamond_id?>" class="diamond-catalog-label"></label>*-->
+                            <!--*</td>*-->
+                            <td>
+                                <span style="display: block;width: 40%;margin: 0 auto;text-align: left;">
+                                    <span class="diamond-table-shapeimg">
+                                        <img src="<?=imageDiamontIcon($row->shape)?>" alt="">
+                                    </span>
+                                    <span class="hide-shapename"><?=mod_shape($row->shape)?></span>
                                 </span>
-                                <span class="hide-shapename"><?=mod_shape($row->shape)?></span>
-                            </span>
-                        </td>
-                        <td><?=$row->color?></td>
-                        <td><?=$row->clarity?></td>
-                        <td><?=$row->cut?></td>
-                        <td><?=$row->size?>
-                            <!--*<i class="fa fa-exclamation-triangle"></i>*-->
-                        </td>
-                        <!--*<td class="sort-col">*-->
-                        <!--*<div class="rating">*-->
-                        <!--*<i class="star active"></i>*-->
-                        <!--*<i class="star active"></i>*-->
-                        <!--*<i class="star active"></i>*-->
-                        <!--*<i class="star active"></i>*-->
-                        <!--*<i class="star"></i>*-->
-                        <!--*</div>*-->
-                        <!--*</td>*-->
-                        <td><?=Currency::formatStat($row->total_sales_price)?></td>
-                    </tr>
+                            </td>
+                            <td><?=$row->color?></td>
+                            <td><?=$row->clarity?></td>
+                            <td><?=$row->cut?></td>
+                            <td><?=$row->size?>
+                                <!--*<i class="fa fa-exclamation-triangle"></i>*-->
+                            </td>
+                            <!--*<td class="sort-col">*-->
+                            <!--*<div class="rating">*-->
+                            <!--*<i class="star active"></i>*-->
+                            <!--*<i class="star active"></i>*-->
+                            <!--*<i class="star active"></i>*-->
+                            <!--*<i class="star active"></i>*-->
+                            <!--*<i class="star"></i>*-->
+                            <!--*</div>*-->
+                            <!--*</td>*-->
+                            <td><?=Currency::formatStat($row->total_sales_price)?></td>
+                        </tr>
 
                     <?endforeach?>
 
@@ -105,6 +106,8 @@
     </div>
 
 <?endif?>
+
+<div id="modal-diamond-item-aapendto"></div>
 
 <script>
 
@@ -136,57 +139,57 @@
         return false;
     });
 
+
+
     $('.diamond-tr').on('click', function(event) {
+        var self = $(this);
 
-        var self = $(this),
-            diamondId = $(this).attr('data-diamond-id'), // <-- diamond id
-            catalogClass = $('.diamond-catalog');
+        if (self.hasClass('active')) {
+             self.removeClass('active');
+            $('.diamond-down').slideUp('slow');
+        } else {
+            $('.diamond-down').detach();
+            $('.diamond-tr').removeClass('active');
+            self.addClass('active');
 
-       // console.log(diamondId);
+            self.after('<tr class="diamond-down" style="display: none;"><td colspan="6"></td></tr>');
 
-        $.ajax({
-            url: 'index.php?route=module/rapnet/getproductListAjax',
-            type: 'POST',
-            data: 'diamond_id='+diamondId,
-            dataType: 'HTML',
-            beforeSend: function() {
-                //$('#w-diamont-button-cart').button('loading');
-            },
-            complete: function() {
-                //$('#w-diamont-button-cart').button('reset');
-            },
-            success: function(json) {
-                $('.diamond-catalog-right').html(json);
+            diamondId = $(this).attr('data-diamond-id');
 
-            },
-            error: function(xhr, ajaxOptions, thrownError) {
-                alert('ошибочка вышла');
-            }
-        });
+            $.ajax({
+                url: 'index.php?route=module/rapnet/getproductListAjax',
+                type: 'POST',
+                data: 'diamond_id='+diamondId,
+                dataType: 'HTML',
+                beforeSend: function() {
+                    $('.container-loader').show();
+                },
+                complete: function() {
+                    $('#w-modal-cart').appendTo('#modal-diamond-item-aapendto');
+                    $('.container-loader').hide();
+                    $('.diamond-down').fadeIn('slow');
 
+                },
+                success: function(json) {
 
-        if (!$(event.target).is('.diamond-compare-checkbox') && !$(event.target).is('.diamond-catalog-label')) {
-            if (self.hasClass('active')) {
-                catalogClass.removeClass('show-detail');
-                self.removeClass('active');
-            } else {
-                catalogClass.addClass('show-detail');
-                $('.diamond-tr').removeClass('active');
-                self.addClass('active');
+                    $('.diamond-down td').html(json);
 
-                // ajax here
-
-            }
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert('ошибочка вышла');
+                }
+            });
         }
 
 
+
     });
 
-    $(document).on('click', '.diamond-right-close', function(event) {
-        event.preventDefault();
-        $('.diamond-catalog').removeClass('show-detail');
-        $('.diamond-tr').removeClass('active');
-    });
+//    $(document).on('click', '.diamond-right-close', function(event) {
+//        event.preventDefault();
+//        $('.diamond-catalog').removeClass('show-detail');
+//        $('.diamond-tr').removeClass('active');
+//    });
 
 
 

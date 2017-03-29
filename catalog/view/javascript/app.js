@@ -76,6 +76,10 @@ $(document).ready(function() {
 
     var inProgress = false;
     var startFrom = 2;
+    // var get = getUrlVars();
+    // if (get["page"] !== 2 && get === undefined) {
+    //     startFrom = get["page"];
+    // }
 
     $(document).on("DOMSubtreeModified",function(){
         inProgress = false;
@@ -86,8 +90,9 @@ $(document).ready(function() {
          if ($('.w-ajax-loader-page').length>0) {
             if ($(window).scrollTop() + $(window).height() >= $(document).height() - 2000 && !inProgress) {
                 inProgress = true;
+                urlData = $('#input-sort option:selected').val()+'&srol=1'+'&page='+startFrom;
                 $.ajax({
-                    url: $('#input-sort option:selected').val()+'&srol=1'+'&page='+startFrom,
+                    url:  urlData,
                     type: 'get',
                     //data:  {"startFrom" : startFrom},
                     dataType: 'html',
@@ -100,6 +105,14 @@ $(document).ready(function() {
                     success: function (json) {
 
                         if (json.length > 0) {
+                             console.log(window.location.href);
+                            if (startFrom !== undefined && startFrom !== 2) {
+                                // if (startFrom > 2) {
+                                //     startFrom = startFrom-1;
+                                // }
+                                history.pushState({'page': startFrom}, '', window.location.href);
+                            }
+
                             $ner = $(json);
                             $('.main-catalog-container table tbody').append($ner);
                             $ner.fadeIn("slow");
@@ -115,6 +128,13 @@ $(document).ready(function() {
          }
     });
 
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
 
 
     $('.stack-responsive').stacktable();

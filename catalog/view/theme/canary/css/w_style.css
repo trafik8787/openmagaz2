@@ -3304,12 +3304,12 @@ text-align: left;
     top: 0;
     width: 100%;
     display: block;
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
 }
 
 .diamond-catalog-table tbody {
-    max-height: 780px;
-    overflow-y: scroll;
+    /*max-height: 780px;*/
+    /*overflow-y: scroll;*/
     display: block;
     margin-top: 42px;
     text-align: center;
@@ -4762,7 +4762,7 @@ text-align: left;
 
     .diamond-catalog {
         margin-bottom: 25px;
-        height: 750px;
+        /*height: 750px;*/
     }
 
     .w-product-name-h1 {
@@ -5206,9 +5206,9 @@ text-align: left;
 }
 
 @media (max-width: 480px) {
-    .diamond-catalog-table td:nth-child(1) {
-        display: none;
-    }
+    /*.diamond-catalog-table td:nth-child(1) {*/
+        /*display: none;*/
+    /*}*/
     .diamond-catalog-table tbody td {
         font-size: 10px;
     }
@@ -5520,6 +5520,138 @@ text-align: left;
 }
 
 
+.diamond-down {
+    cursor: inherit!important;
+}
+
+.diamond-down:hover {
+    background: inherit!important;
+}
+
+.diamond-down td {
+    padding: 0!important;
+}
+.diamond-down td:after {
+    content: none!important;
+}
+
+.diamond-down-show .diamond-catalog-right-img {
+    margin: 0 auto 17px;
+}
+
+
+.diamond-down-show > div[class^=col-md-] {
+    border-right: 1px solid #ccc;
+    padding: 30px 0 20px 0;
+    height: 24vh;
+
+}
+
+/*.diamond-down-show > div[class^=col-xs-] {*/
+/*height: 24vh;*/
+/*}*/
+
+.diamond-down-show > div[class^=col-md-]:last-child {
+    border-right: none;
+
+}
+
+.diamond-down-show-bloc1 p a {
+    color: #2f4680;
+}
+
+.diamond-down-show-bloc2 .diamond-catalog-right-price {
+    font-size: 15px;
+}
+.diamond-down-show-bloc2 .certif-link a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.diamond-down-show-bloc3 {
+    font-family: "Raleway-Regular", fantasy;
+}
+
+.diamond-down-show-bloc3 .bloc3-1,
+.diamond-down-show-bloc3 .bloc3-2 {
+    margin: 0 auto;
+    width: 66%;
+}
+
+.diamond-down-show-bloc3 ul {
+    list-style: initial;
+
+}
+
+.diamond-down-show-bloc4 {
+    padding: 25px 35px 0 35px!important;
+}
+
+.diamond-down-show-bloc4 p {
+    padding-top: 10px;
+    padding-bottom: 22px;
+    color: #2f4680;
+}
+
+.diamond-down-show-bloc4 button {
+    margin-right: 0!important;
+}
+
+.diamond-down-show-bloc2 {
+    background: #f3f9ff;
+    color: #2b2a29;
+    padding-top: 37px!important;
+    font-family: "Raleway-Regular", fantasy;
+}
+
+.diamond-down.show-detail-new {
+    width: 100%;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}
+
+@media (max-width: 480px) {
+
+    .diamond-down-show > div[class^=col-xs-] {
+        height: 26vh;
+    }
+
+    .diamond-down-show-bloc1 {
+        padding: 16px 0 0px 0!important;
+    }
+
+
+    .diamond-down-show-bloc2 {
+        padding-top: 15px!important;
+    }
+
+    .diamond-down-show-bloc3 .icons-quality_service_icon {
+        margin-bottom: 16px;
+    }
+
+    .diamond-down-show-bloc3 {
+        font-size: 15px;
+        padding: 10px 0 0 0!important;
+    }
+
+    .diamond-down-show-bloc4 {
+        margin-bottom: 23px;
+        padding-top: 8px!important;
+    }
+
+    .diamond-catalog-right-name {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .diamond-down-show > div[class^=col-md-] {
+        height: 48vh;
+    }
+}
 
 
 

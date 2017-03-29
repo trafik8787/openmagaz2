@@ -617,7 +617,7 @@ class ControllerModuleRapnet extends Controller {
 
 
         if (in_ajax()) {
-            $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_diamond_list_ajax.tpl', $data));
+            $this->response->setOutput($this->load->view($this->config->get('config_template') . '/template/module/rapnet_diamond_list_ajax2.tpl', $data));
         }
     }
 
