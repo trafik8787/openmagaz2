@@ -33,6 +33,7 @@
                         <label class="col-sm-2 control-label" for="input-progres">Progres</label>
                         <div class="col-sm-10">
                             <!--*<?=!empty($progres) ? $progres : ''?>*-->
+                            <input type="text" name="delimiter" value=",">
                         </div>
                     </div>
 

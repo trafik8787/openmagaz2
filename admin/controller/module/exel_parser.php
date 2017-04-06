@@ -59,6 +59,9 @@ class ControllerModuleExelParser extends Controller {
     private $fields_tmp;
     private $category_list_arr;
 
+
+    private $delimiter; //разделитель
+
     public function __construct($registry){
         parent::__construct($registry);
 
@@ -204,6 +207,7 @@ class ControllerModuleExelParser extends Controller {
                 $this->file_path = $_SERVER['DOCUMENT_ROOT'].'/'.$this->name_file;
             }
 
+            $this->delimiter = $this->request->post['delimiter'];
 
             $this->fixParse();
 
@@ -298,7 +302,7 @@ class ControllerModuleExelParser extends Controller {
 
         $filePath = $this->file_path;
 
-        $delimiter = ',';
+        $delimiter = $this->delimiter;
         $file = new SplFileObject($filePath, 'r');
         $file->setFlags(SplFileObject::READ_CSV);
         $file->setCsvControl($delimiter);
