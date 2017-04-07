@@ -9,7 +9,7 @@
             </div>
         </div>
     </div>
-
+    <hr>
     <div class="line-with-input">
     <div class="title-c">DELIVERY  INFORMATION</div>
     <div class="clearfix">
@@ -34,6 +34,12 @@
             <input type="text" name="city" id="input-payment-city" placeholder="City">
         </div>
         <div class="bl-input clearfix">
+
+            <div class="bl-input must">
+                <select class="required" name="zone_id" id="input-payment-zone">
+                </select>
+            </div>
+
             <div class="bl-input must">
 
                 <select name="country_id" class="required" id="input-payment-country">
@@ -49,10 +55,7 @@
                 </select>
 
             </div>
-            <div class="bl-input must">
-                <select class="required" name="zone_id" id="input-payment-zone">
-                </select>
-            </div>
+
         </div>
     </div>
 

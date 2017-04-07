@@ -200,7 +200,7 @@ class ControllerPaymentPPPro extends Controller {
 		}
 
 		if ($flag != null) {
-            return $json;
+            //return $json;
         } else {
             $this->response->addHeader('Content-Type: application/json');
             $this->response->setOutput(json_encode($json));

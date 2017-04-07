@@ -71,7 +71,7 @@ class ControllerCheckoutPaymentAddress extends Controller {
                 $this->load->controller('payment/bank_transfer/confirm');
             } elseif ($this->session->data['payment_method']['code'] == 'pp_pro') {
                 $this->load->controller('checkout/confirm', 2);
-                $this->load->controller('payment/pp_pro/send');
+                $this->load->controller('payment/pp_pro/send', 1);
             } elseif ($this->session->data['payment_method']['code'] == 'pp_express') {
                 $this->load->controller('checkout/confirm', 2);
                 $this->load->controller('payment/pp_express/checkout');
