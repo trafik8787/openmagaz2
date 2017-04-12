@@ -374,10 +374,10 @@
                                                     or we will be unable to process your payment
                                                 </div>
 
+                                                <?if (!empty($json_pp_pro)):?>
+                                                <div class="alert alert-danger"><?=$json_pp_pro?></div>
+                                                <?endif?>
                                                 <div class="clearfix box-card-l" >
-                                                    <?if (!empty($json_pp_pro)):?>
-                                                        <div class="alert alert-danger"><?=$json_pp_pro?></div>
-                                                    <?endif?>
                                                     <span class="form-inline" role="form">
                                                       <fieldset id="payment" style="color: #fff;">
                                                           <input type="hidden" name="cc_type" id="input-cc-type">
@@ -476,7 +476,7 @@
                                         <input type="checkbox" name="agreeCheckout" id="agreeCheckout"><label for="agreeCheckout">I've read and agree to Brilliant Canary's <a class="agree" href="/index.php?route=information/information/agree&information_id=5">Terms & Conditions</a> and <a class="agree" href="/index.php?route=information/information/agree&information_id=3">Privacy Policy</a></label>
                                     </div>
                                     <div class="box-btn-checkout">
-                                        <button class="btn login-form-btn btn-lg" type="submit" id="button-register" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>
+                                        <button class="btn login-form-btn btn-lg" type="submit" disabled="disabled" id="button-register" data-loading-text="Loading..."> <i class="submit-order-ico"></i> SUBMIT ORDER</button>
 
                                     </div>
                                     <!--*<button type="submit">Submit</button>*-->
@@ -532,6 +532,17 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
+        $("[data-toggle=popover]").popover();
+
+        $(document).on('change', '#agreeCheckout', function () {
+            //$('#button-register').toggle('disabled', true);
+            if ($(this).prop("checked")) {
+                $('#button-register').prop('disabled', false);
+            } else {
+                $('#button-register').prop('disabled', true);
+            }
+            $('#button-register').toggleClass('active-c');
+        });
 
         $(document).on('click', '#shiping_adress', function () {
             $('#shiping_adress_form').toggle('hide');

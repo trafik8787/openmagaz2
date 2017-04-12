@@ -9,7 +9,6 @@
 class ControllerCheckoutCheckoutNew extends Controller {
 
     public $data;
-    public $json_pp_pro;
 
 
     public function index() {
@@ -93,15 +92,11 @@ class ControllerCheckoutCheckoutNew extends Controller {
                     }
 
                     $this->confirm();
-                    $this->shipping_address();
                     $this->payment_method_save();
                     $this->confirm_motod_payment();
                 }
             }
 
-            if (!empty($this->json_pp_pro)) {
-                $this->data['json_pp_pro'] = $this->json_pp_pro;
-            }
 
         }
 
@@ -166,7 +161,6 @@ class ControllerCheckoutCheckoutNew extends Controller {
         }
 
 
-        $this->data['json_pp_pro'] = $this->json_pp_pro;
         $this->data['pp_express'] = $this->load->controller('payment/pp_express');
 
 
@@ -291,7 +285,7 @@ class ControllerCheckoutCheckoutNew extends Controller {
         }
 
 //        if ($this->cart->hasShipping()) {
-        if ($this->request->post['shiping_adress'] == 1) {
+        if (!empty($this->request->post['shiping_adress']) AND $this->request->post['shiping_adress'] == 1) {
             $order_data['shipping_firstname'] = $this->session->data['shipping_address']['firstname'];
             $order_data['shipping_lastname'] = $this->session->data['shipping_address']['lastname'];
             $order_data['shipping_company'] = $this->session->data['shipping_address']['company'];
@@ -317,18 +311,34 @@ class ControllerCheckoutCheckoutNew extends Controller {
 //            } else {
 //                $order_data['shipping_code'] = '';
 //            }
-        } else {
-            $order_data['shipping_firstname'] = $this->request->post['firstname_s'];
-            $order_data['shipping_lastname'] = $this->request->post['lastname_s'];
+        } elseif (!empty($this->request->post['shiping_adress'])) {
+            $order_data['shipping_firstname'] = !empty($this->request->post['firstname_s']) ? $this->request->post['firstname_s'] : '' ;
+            $order_data['shipping_lastname'] = !empty($this->request->post['lastname_s']) ? $this->request->post['lastname_s'] : '';
             $order_data['shipping_company'] = '';
-            $order_data['shipping_address_1'] = $this->request->post['address_1_s'];
-            $order_data['shipping_address_2'] = $this->request->post['address_2_s'];
-            $order_data['shipping_city'] = $this->request->post['city_s'];
-            $order_data['shipping_postcode'] = $this->request->post['postcode_s'];
+            $order_data['shipping_address_1'] = !empty($this->request->post['address_1_s']) ? $this->request->post['address_1_s'] : '';
+            $order_data['shipping_address_2'] = !empty($this->request->post['address_2_s']) ? $this->request->post['address_2_s'] : '';
+            $order_data['shipping_city'] = !empty($this->request->post['city_s']) ? $this->request->post['city_s'] : '';
+            $order_data['shipping_postcode'] = !empty($this->request->post['postcode_s']) ? $this->request->post['postcode_s'] : '';
             $order_data['shipping_zone'] = '';
-            $order_data['shipping_zone_id'] = $this->request->post['zone_id_s'];
+            $order_data['shipping_zone_id'] = !empty($this->request->post['zone_id_s']) ? $this->request->post['zone_id_s'] : '';
             $order_data['shipping_country'] = '';
-            $order_data['shipping_country_id'] = $this->request->post['country_id_s'];
+            $order_data['shipping_country_id'] = !empty($this->request->post['country_id_s']) ? $this->request->post['country_id_s'] : '';
+            $order_data['shipping_address_format'] = '';
+            $order_data['shipping_custom_field'] = array();
+            $order_data['shipping_method'] = '';
+            $order_data['shipping_code'] = '';
+        } else {
+            $order_data['shipping_firstname'] = '' ;
+            $order_data['shipping_lastname'] = '';
+            $order_data['shipping_company'] = '';
+            $order_data['shipping_address_1'] = '';
+            $order_data['shipping_address_2'] = '';
+            $order_data['shipping_city'] = '';
+            $order_data['shipping_postcode'] = '';
+            $order_data['shipping_zone'] = '';
+            $order_data['shipping_zone_id'] = '';
+            $order_data['shipping_country'] = '';
+            $order_data['shipping_country_id'] = '';
             $order_data['shipping_address_format'] = '';
             $order_data['shipping_custom_field'] = array();
             $order_data['shipping_method'] = '';
@@ -565,8 +575,9 @@ class ControllerCheckoutCheckoutNew extends Controller {
 
         if ($this->session->data['payment_method']['code'] == 'pp_pro') {
             $json_pp_pro = $this->send_pp_pro();
+            //dd($json_pp_pro);
             if (!empty($json_pp_pro['error'])) {
-                $this->json_pp_pro = $json_pp_pro['error'];
+                $this->data['json_pp_pro'] = $json_pp_pro['error'];
             } else {
                 $this->response->redirect($this->url->link('checkout/success'));
             }
@@ -644,7 +655,7 @@ class ControllerCheckoutCheckoutNew extends Controller {
                 break;
             }
         }
-       // $this->session->data['payment_methods'][$this->request->post['payment_method']];
+        // $this->session->data['payment_methods'][$this->request->post['payment_method']];
 //        if (!isset($this->request->post['payment_method'])) {
 //            $json['error']['warning'] = $this->language->get('error_payment');
 //        } elseif (!isset($this->session->data['payment_methods'][$this->request->post['payment_method']])) {
@@ -948,11 +959,11 @@ class ControllerCheckoutCheckoutNew extends Controller {
 
 
 
-			unset($this->session->data['guest']);
-			unset($this->session->data['shipping_method']);
-			unset($this->session->data['shipping_methods']);
+            unset($this->session->data['guest']);
+            unset($this->session->data['shipping_method']);
+            unset($this->session->data['shipping_methods']);
 //			unset($this->session->data['payment_method']);
-			unset($this->session->data['payment_methods']);
+            unset($this->session->data['payment_methods']);
 
 
 
@@ -1092,7 +1103,7 @@ class ControllerCheckoutCheckoutNew extends Controller {
             $json['error'] = $response_info['L_LONGMESSAGE0'];
         }
 
-       return $json;
+        return $json;
     }
 
 
@@ -1228,7 +1239,7 @@ class ControllerCheckoutCheckoutNew extends Controller {
             }
         }
 
-       return $json;
+        return $json;
     }
 
 
