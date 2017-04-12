@@ -385,6 +385,10 @@ class Cart {
 
 
 
+    public function update_customer_cart ($cart_id) {
+        $this->db->query("UPDATE " . DB_PREFIX . "cart SET customer_id = '" . (int)$this->customer->getId() . "' WHERE cart_id = '" . (int)$cart_id . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
+    }
+
 	public function update($cart_id, $quantity) {
 		$this->db->query("UPDATE " . DB_PREFIX . "cart SET quantity = '" . (int)$quantity . "' WHERE cart_id = '" . (int)$cart_id . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
 	}

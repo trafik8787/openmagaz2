@@ -20,6 +20,7 @@ class ControllerCommonSeoUrl extends Controller {
         'checkout/success' => 'checkout_success',
         'checkout/cart' => 'shop-cart',
         'checkout/checkout' => 'shop-checkout',
+        'checkout/checkout_new' => 'shop-checkout_new',
         'product/search' => 'search',
         'account/forgotten' => 'account/forgotten',
         'information/about_us' => 'company',
