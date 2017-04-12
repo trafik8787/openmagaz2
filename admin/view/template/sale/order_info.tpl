@@ -130,7 +130,7 @@
           <thead>
             <tr>
               <td style="width: 50%;" class="text-left"><?php echo $text_payment_address; ?></td>
-              <?php if ($shipping_method) { ?>
+              <?php if ($shipping_method or true) { ?>
               <td style="width: 50%;" class="text-left"><?php echo $text_shipping_address; ?>
                 <?php } ?></td>
             </tr>
@@ -138,7 +138,7 @@
           <tbody>
             <tr>
               <td class="text-left"><?php echo $payment_address; ?></td>
-              <?php if ($shipping_method) { ?>
+              <?php if ($shipping_method or true) { ?>
               <td class="text-left"><?php echo $shipping_address; ?></td>
               <?php } ?>
             </tr>

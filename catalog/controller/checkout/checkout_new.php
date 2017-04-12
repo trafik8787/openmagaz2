@@ -9,6 +9,8 @@
 class ControllerCheckoutCheckoutNew extends Controller {
 
     public $data;
+    public $json_pp_pro;
+
 
     public function index() {
 
@@ -97,6 +99,10 @@ class ControllerCheckoutCheckoutNew extends Controller {
                 }
             }
 
+            if (!empty($this->json_pp_pro)) {
+                $this->data['json_pp_pro'] = $this->json_pp_pro;
+            }
+
         }
 
 
@@ -160,7 +166,7 @@ class ControllerCheckoutCheckoutNew extends Controller {
         }
 
 
-
+        $this->data['json_pp_pro'] = $this->json_pp_pro;
         $this->data['pp_express'] = $this->load->controller('payment/pp_express');
 
 
@@ -312,17 +318,17 @@ class ControllerCheckoutCheckoutNew extends Controller {
 //                $order_data['shipping_code'] = '';
 //            }
         } else {
-            $order_data['shipping_firstname'] = '';
-            $order_data['shipping_lastname'] = '';
+            $order_data['shipping_firstname'] = $this->request->post['firstname_s'];
+            $order_data['shipping_lastname'] = $this->request->post['lastname_s'];
             $order_data['shipping_company'] = '';
-            $order_data['shipping_address_1'] = '';
-            $order_data['shipping_address_2'] = '';
-            $order_data['shipping_city'] = '';
-            $order_data['shipping_postcode'] = '';
+            $order_data['shipping_address_1'] = $this->request->post['address_1_s'];
+            $order_data['shipping_address_2'] = $this->request->post['address_2_s'];
+            $order_data['shipping_city'] = $this->request->post['city_s'];
+            $order_data['shipping_postcode'] = $this->request->post['postcode_s'];
             $order_data['shipping_zone'] = '';
-            $order_data['shipping_zone_id'] = '';
+            $order_data['shipping_zone_id'] = $this->request->post['zone_id_s'];
             $order_data['shipping_country'] = '';
-            $order_data['shipping_country_id'] = '';
+            $order_data['shipping_country_id'] = $this->request->post['country_id_s'];
             $order_data['shipping_address_format'] = '';
             $order_data['shipping_custom_field'] = array();
             $order_data['shipping_method'] = '';
@@ -558,8 +564,13 @@ class ControllerCheckoutCheckoutNew extends Controller {
         //dd($this->session->data, true);
 
         if ($this->session->data['payment_method']['code'] == 'pp_pro') {
-            $this->send_pp_pro();
-            $this->response->redirect($this->url->link('checkout/success'));
+            $json_pp_pro = $this->send_pp_pro();
+            if (!empty($json_pp_pro['error'])) {
+                $this->json_pp_pro = $json_pp_pro['error'];
+            } else {
+                $this->response->redirect($this->url->link('checkout/success'));
+            }
+
         }
 
         if ($this->session->data['payment_method']['code'] == 'bank_transfer') {
@@ -1077,7 +1088,6 @@ class ControllerCheckoutCheckoutNew extends Controller {
 
             $this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('pp_pro_order_status_id'), $message, false);
 
-            $json['success'] = $this->url->link('checkout/success');
         } else {
             $json['error'] = $response_info['L_LONGMESSAGE0'];
         }
@@ -1222,7 +1232,31 @@ class ControllerCheckoutCheckoutNew extends Controller {
     }
 
 
+    public function country() {
+        $json = array();
 
+        $this->load->model('localisation/country');
+
+        $country_info = $this->model_localisation_country->getCountry($this->request->get['country_id']);
+
+        if ($country_info) {
+            $this->load->model('localisation/zone');
+
+            $json = array(
+                'country_id'        => $country_info['country_id'],
+                'name'              => $country_info['name'],
+                'iso_code_2'        => $country_info['iso_code_2'],
+                'iso_code_3'        => $country_info['iso_code_3'],
+                'address_format'    => $country_info['address_format'],
+                'postcode_required' => $country_info['postcode_required'],
+                'zone'              => $this->model_localisation_zone->getZonesByCountryId($this->request->get['country_id']),
+                'status'            => $country_info['status']
+            );
+        }
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
+    }
 
 
 }

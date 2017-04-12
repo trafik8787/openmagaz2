@@ -375,9 +375,11 @@
                                                 </div>
 
                                                 <div class="clearfix box-card-l" >
+                                                    <?if (!empty($json_pp_pro)):?>
+                                                        <div class="alert alert-danger"><?=$json_pp_pro?></div>
+                                                    <?endif?>
                                                     <span class="form-inline" role="form">
                                                       <fieldset id="payment" style="color: #fff;">
-                                                        <!--*<legend><?php echo $text_credit_card; ?></legend>*-->
                                                           <input type="hidden" name="cc_type" id="input-cc-type">
 
                                                         <div class="form-group required">
@@ -539,7 +541,7 @@
             $(this).tab('show');
         });
 
-        $('#collapse-payment-address select[name=\'country_id\']').on('change', function () {
+        $(document).on('change', '#collapse-payment-address select[name=\'country_id\']', function () {
             $.ajax({
                 url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
                 dataType: 'json',
@@ -606,87 +608,88 @@
             });
         });
 
-//        $('#w-form-regystry-checkout').validate({
-//            rules:{
-//
-//                email:{
-//                    required: true,
-//                    email: true
-//                },
-//
-//                firstname: {
-//                    required: true
-//                },
-//
-//                lastname: {
-//                    required: true
-//                },
-//
-//                address_1: {
-//                    required: true
-//                },
-//                city: {
-//                    required: true
-//                },
-//                postcode: {
-//                    required: true,
-//                    number: true
-//                },
-//                country_id: {
-//                    required: true
-//                },
-//                telephone: {
-//                    required: true,
-//                    number: true
-//                },
-//                cc_number: {
-//                    required: true,
-//                    number: true
-//                },
-//                cc_expire_date_month: {
-//                    required: true
-//                },
-//                cc_expire_date_year: {
-//                    required: true
-//                },
-//                cc_cvv2: {
-//                    required: true,
-//                    number: true,
-//                    minlength: 3,
-//                    maxlength: 3
-//                },
-//                agreeCheckout: {
-//                    required: true
-//                }
-//
-//            },
+        $('#w-form-regystry-checkout').validate({
+            rules:{
+
+                email:{
+                    required: true,
+                    email: true
+                },
+
+                firstname: {
+                    required: true
+                },
+
+                lastname: {
+                    required: true
+                },
+
+                address_1: {
+                    required: true
+                },
+                city: {
+                    required: true
+                },
+                postcode: {
+                    required: true,
+                    number: true
+                },
+                country_id: {
+                    required: true
+                },
+                telephone: {
+                    required: true,
+                    number: true
+                },
+                cc_number: {
+                    required: true,
+                    number: true
+                },
+                cc_expire_date_month: {
+                    required: true
+                },
+                cc_expire_date_year: {
+                    required: true
+                },
+                cc_cvv2: {
+                    required: true,
+                    number: true,
+                    minlength: 3,
+                    maxlength: 3
+                },
+                agreeCheckout: {
+                    required: true
+                }
+
+            },
 //            submitHandler: function() {
+//                alert('ads');
 //                // $('.w-submit-order-checout').addClass('active-c');
 //
 //            },
-//            invalidHandler: function() {
-//                //$('.w-submit-order-checout').removeClass('active-c');
-//            },
-//            highlight: function(element, errorClass) {
-//
-//                $(element).addClass('error');
-//            },
-//            unhighlight: function(element) {
-//                $(element).removeClass('error');
-//            },
-//            errorPlacement: function(error, element) {
-//                if (element.attr("name") == "cc_number"
-//                    || element.attr("name") == "cc_expire_date_month"
-//                    || element.attr("name") == "cc_expire_date_year"
-//                    || element.attr("name") == "cc_cvv2") {
-//                    return false;
-//                    //error.insertBefore(element);
-//                } else {
-//                    error.insertAfter(element);
-//                }
-//            }
-//
-//        });
+            invalidHandler: function() {
+                //$('.w-submit-order-checout').removeClass('active-c');
+            },
+            highlight: function(element, errorClass) {
+
+                $(element).addClass('error');
+            },
+            unhighlight: function(element) {
+                $(element).removeClass('error');
+            },
+            errorPlacement: function(error, element) {
+                if (element.attr("name") == "cc_number"
+                    || element.attr("name") == "cc_expire_date_month"
+                    || element.attr("name") == "cc_expire_date_year"
+                    || element.attr("name") == "cc_cvv2") {
+                    return false;
+                    //error.insertBefore(element);
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+
+        });
 
 
     });
