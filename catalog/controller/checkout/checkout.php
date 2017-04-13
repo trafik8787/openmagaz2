@@ -91,8 +91,8 @@ class ControllerCheckoutCheckout extends Controller {
                         $this->cart->update_customer_cart($item);
                     }
 
-                    $this->confirm();
                     $this->payment_method_save();
+                    $this->confirm();
                     $this->confirm_motod_payment();
                 }
             }
@@ -300,6 +300,8 @@ class ControllerCheckoutCheckout extends Controller {
             $order_data['shipping_address_format'] = $this->session->data['shipping_address']['address_format'];
             $order_data['shipping_custom_field'] = (isset($this->session->data['shipping_address']['custom_field']) ? $this->session->data['shipping_address']['custom_field'] : array());
 
+            $order_data['shipping_method'] = 'Fedex';
+            $order_data['shipping_code'] = '11';
 //            if (isset($this->session->data['shipping_method']['title'])) {
 //                $order_data['shipping_method'] = $this->session->data['shipping_method']['title'];
 //            } else {
@@ -396,7 +398,7 @@ class ControllerCheckoutCheckout extends Controller {
             }
         }
 
-        $order_data['comment'] = $this->session->data['comment'];
+        $order_data['comment'] = ' ';
         $order_data['total'] = $total;
 
         if (isset($this->request->cookie['tracking'])) {
@@ -579,7 +581,7 @@ class ControllerCheckoutCheckout extends Controller {
             if (!empty($json_pp_pro['error'])) {
                 $this->data['json_pp_pro'] = $json_pp_pro['error'];
             } else {
-                $this->response->redirect($this->url->link('checkout/success'));
+                $this->response->redirect($this->url->link('checkout/success','', 'SSL'));
             }
 
         }
@@ -611,7 +613,7 @@ class ControllerCheckoutCheckout extends Controller {
             $comment .= $this->language->get('text_payment');
 
             $this->model_checkout_order->addOrderHistory($this->session->data['order_id'], $this->config->get('phone_order_order_status_id'), $comment, true);
-            $this->response->redirect($this->url->link('checkout/success'));
+            $this->response->redirect($this->url->link('checkout/success','', 'SSL'));
         }
     }
 
