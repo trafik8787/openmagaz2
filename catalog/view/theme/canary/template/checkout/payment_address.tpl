@@ -1,6 +1,6 @@
 
 <div class="line-with-input">
-    <div class="title-c">BILLING INFORMATION</div>
+    <div class="title-c">SHIPPING ADDRESS</div>
 
 
     <address>
@@ -18,22 +18,8 @@
           </div>
 
 
-          <!--*<div id="payment-existing">*-->
-            <!--*<select name="address_id" class="shipping-input styled-select" style="width: 100%">*-->
-              <!--*<?php foreach ($addresses as $address) { ?>*-->
-              <!--*<?php if ($address['address_id'] == $address_id) { ?>*-->
-              <!--*<option value="<?php echo $address['address_id']; ?>" selected="selected"><?php echo $address['firstname']; ?> <?php echo $address['lastname']; ?>, <?php echo $address['address_1']; ?>, <?php echo $address['city']; ?>, <?php echo $address['zone']; ?>, <?php echo $address['country']; ?></option>*-->
-              <!--*<?php } else { ?>*-->
-              <!--*<option value="<?php echo $address['address_id']; ?>"><?php echo $address['firstname']; ?> <?php echo $address['lastname']; ?>, <?php echo $address['address_1']; ?>, <?php echo $address['city']; ?>, <?php echo $address['zone']; ?>, <?php echo $address['country']; ?></option>*-->
-              <!--*<?php } ?>*-->
-              <!--*<?php } ?>*-->
-            <!--*</select>*-->
-          <!--*</div>*-->
-          <!--*<div class="radio">*-->
-            <!--*<label>*-->
-              <!--*<input type="radio" name="payment_address" value="new" />*-->
-              <!--*<?php echo $text_address_new; ?></label>*-->
-          <!--*</div>*-->
+
+        <a href="" class="btn btn-primary btn-xs">Edit</a>
       <?php } ?>
       <br />
 

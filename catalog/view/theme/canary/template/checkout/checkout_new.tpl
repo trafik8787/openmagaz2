@@ -159,7 +159,7 @@
 
                                                 <hr>
                                                 <div class="line-with-input">
-                                                    <div class="title-c">DELIVERY  INFORMATION</div>
+                                                    <div class="title-c">BILLING ADDRESS</div>
                                                     <div class="clearfix">
                                                         <div class="bl-input must">
                                                             <input type="text" name="firstname"  id="input-payment-firstname" placeholder="First name">
@@ -240,7 +240,7 @@
                                                 </div>
                                                 <hr>
                                                 <div class="line-with-input">
-                                                    <div class="title-c">BILLING INFORMATION</div>
+                                                    <div class="title-c">SHIPPING ADDRESS</div>
 
                                                     <div class="include-price-row">
                                                         <input type="checkbox" class="styled-checkbox styled-checkbox-before" name="shiping_adress" value="1" checked="checked" id="shiping_adress"/>
@@ -552,7 +552,7 @@
             $(this).tab('show');
         });
 
-        $(document).on('change', '#collapse-payment-address select[name=\'country_id\']', function () {
+        $(document).on('change', '#collapse-payment-address select[name=\'country_id\'], #collapse-payment-address select[name=\'country_id_s\']', function () {
             $.ajax({
                 url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
                 dataType: 'json',
@@ -586,6 +586,7 @@
                     }
 
                     $('#collapse-payment-address select[name=\'zone_id\']').html(html);
+                    $('#collapse-payment-address select[name=\'zone_id_s\']').html(html);
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);

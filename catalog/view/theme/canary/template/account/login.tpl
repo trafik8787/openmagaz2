@@ -61,11 +61,11 @@
                                     I have an account.
                                 </div>
                                 <div class="contacts-form-row">
-                                    <input id="lit1" type="text" name="email" value="<?php echo $email; ?>" class="contacts-input login-input required">
+                                    <input id="lit1" type="text" name="email" value="<?php echo $email; ?>" placeholder="Enter Email" class="contacts-input login-input required">
                                     <label for="lit1" class="login-label-placeholder"><i class="envelope-ico"></i><span class="hide-when-valid">e-mail</span><span class="reqstar">*</span></label>
                                 </div>
                                 <div class="contacts-form-row contacts-form-row-mend login-password-row">
-                                    <input id="lit2" type="password" name="password" value="<?php echo $password; ?>" class="contacts-input login-input required">
+                                    <input id="lit2" type="password" name="password" placeholder="Password" value="<?php echo $password; ?>" class="contacts-input login-input required">
                                     <label for="lit2" class="login-label-placeholder"><i class="lock-ico"></i><span class="hide-when-valid">password</span><span class="reqstar">*</span></label>
                                     <a href="#" class="show-password-btn"></a>
                                 </div>
