@@ -152,166 +152,168 @@
                                                             <input type="text" name="email" id="input-payment-email"  placeholder="Enter Email" >
                                                         </div>
                                                         <div class="text-right-input">
-                                                            or <a href="/login">login</a> with an existing account and return to checkout
+                                                            or <a href="/login" style="text-decoration: underline;"><b>login</b></a> with an existing account and return to checkout
                                                         </div>
                                                     </div>
                                                 </div>
 
                                                 <hr>
-                                                <div class="line-with-input">
-                                                    <div class="title-c">BILLING ADDRESS</div>
-                                                    <div class="clearfix">
-                                                        <div class="bl-input must">
-                                                            <input type="text" name="firstname"  id="input-payment-firstname" placeholder="First name">
-                                                        </div>
-                                                        <div class="bl-input must">
-                                                            <input type="text" name="lastname"  id="input-payment-lastname" placeholder="Last name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="clearfix">
-                                                        <div class="bl-input must">
-                                                            <input type="text" name="address_1" id="input-payment-address-1" placeholder="Address">
-                                                        </div>
-                                                        <div class="bl-input">
-                                                            <input type="text" name="address_2" id="input-payment-address-2" placeholder="Address (cont.)">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="clearfix">
-                                                        <div class="bl-input must">
-                                                            <input type="text" name="city" id="input-payment-city" placeholder="City">
-                                                        </div>
-                                                        <div class="bl-input clearfix">
-
+                                                 <div class="w-register-address">
+                                                    <div class="line-with-input">
+                                                        <div class="title-c">BILLING ADDRESS</div>
+                                                        <div class="clearfix">
                                                             <div class="bl-input must">
-                                                                <select class="required" name="zone_id" id="input-payment-zone">
-                                                                </select>
+                                                                <input type="text" name="firstname"  id="input-payment-firstname" placeholder="First name">
                                                             </div>
-
                                                             <div class="bl-input must">
+                                                                <input type="text" name="lastname"  id="input-payment-lastname" placeholder="Last name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="clearfix">
+                                                            <div class="bl-input must">
+                                                                <input type="text" name="address_1" id="input-payment-address-1" placeholder="Address">
+                                                            </div>
+                                                            <div class="bl-input">
+                                                                <input type="text" name="address_2" id="input-payment-address-2" placeholder="Address (cont.)">
+                                                            </div>
+                                                        </div>
 
-                                                                <select name="country_id" class="required" id="input-payment-country">
-                                                                    <option disabled value="">Select Country</option>
-                                                                    <?php foreach ($countries as $country) { ?>
-                                                                    <?php if ($country['country_id'] == $country_id) { ?>
-                                                                    <option value="<?php echo $country['country_id']; ?>"
-                                                                            selected="selected"><?php echo $country['name']; ?></option>
-                                                                    <?php } else { ?>
-                                                                    <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
-                                                                    <?php } ?>
-                                                                    <?php } ?>
-                                                                </select>
+                                                        <div class="clearfix">
+                                                            <div class="bl-input must">
+                                                                <input type="text" name="city" id="input-payment-city" placeholder="City">
+                                                            </div>
+                                                            <div class="bl-input clearfix">
+
+                                                                <div class="bl-input must">
+                                                                    <select class="required" name="zone_id" id="input-payment-zone">
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="bl-input must">
+
+                                                                    <select name="country_id" class="required" id="input-payment-country">
+                                                                        <option disabled value="">Select Country</option>
+                                                                        <?php foreach ($countries as $country) { ?>
+                                                                        <?php if ($country['country_id'] == $country_id) { ?>
+                                                                        <option value="<?php echo $country['country_id']; ?>"
+                                                                                selected="selected"><?php echo $country['name']; ?></option>
+                                                                        <?php } else { ?>
+                                                                        <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
+                                                                        <?php } ?>
+                                                                        <?php } ?>
+                                                                    </select>
+
+                                                                </div>
 
                                                             </div>
-
                                                         </div>
-                                                    </div>
 
 
-                                                    <div class="clearfix">
-                                                        <div class="bl-input must">
-                                                            <input type="text" name="postcode" id="input-payment-postcode" placeholder="Postal code">
-                                                        </div>
-                                                        <div class="bl-input must">
-                                                            <input type="text" name="telephone" id="input-payment-telephone" placeholder="Phone number">
-                                                        </div>
-                                                    </div>
-
-
-
-
-                                                    <div class="include-price-row">
-                                                        <input type="checkbox" class="styled-checkbox styled-checkbox-before" name="newsletter" value="1" id="newsletter"/>
-                                                        <label for="newsletter">I wish to subscribe to the Brilliant Canary newsletter.</label>
-                                                    </div>
-
-
-                                                    <div class="include-price-row no-bottom-margin" style="display: none">
-                                                        <input type="checkbox" class="styled-checkbox styled-checkbox-before" checked="checked" id="pc3" name="agree" value="1">
-                                                        <label for="pc3"><?php echo $text_agree; ?></label>
-                                                    </div>
-
-                                                    <p>
-                                                        Orders cannot be shipped to a P.O. Box<br/>
-                                                        Please make sure to provide a street address where a signature can be obtained for receipt
-                                                    </p>
-
-
-                                                </div>
-                                                <hr>
-                                                <div class="line-with-input">
-                                                    <div class="title-c">SHIPPING ADDRESS</div>
-
-                                                    <div class="include-price-row">
-                                                        <input type="checkbox" class="styled-checkbox styled-checkbox-before" name="shiping_adress" value="1" checked="checked" id="shiping_adress"/>
-                                                        <label for="shiping_adress">My billing information is the same my delivery information</label>
-                                                    </div>
-
-                                                    <div id="shiping_adress_form">
-
-                                                        <div class="line-with-input">
-
-                                                            <div class="clearfix">
-                                                                <div class="bl-input must">
-                                                                    <input type="text" name="firstname_s"  id="input-payment-firstname" placeholder="First name">
-                                                                </div>
-                                                                <div class="bl-input must">
-                                                                    <input type="text" name="lastname_s"  id="input-payment-lastname" placeholder="Last name">
-                                                                </div>
+                                                        <div class="clearfix">
+                                                            <div class="bl-input must">
+                                                                <input type="text" name="postcode" id="input-payment-postcode" placeholder="Postal code">
                                                             </div>
-                                                            <div class="clearfix">
-                                                                <div class="bl-input must">
-                                                                    <input type="text" name="address_1_s" id="input-payment-address-1" placeholder="Address">
-                                                                </div>
-                                                                <div class="bl-input">
-                                                                    <input type="text" name="address_2_s" id="input-payment-address-2" placeholder="Address (cont.)">
-                                                                </div>
+                                                            <div class="bl-input must">
+                                                                <input type="text" name="telephone" id="input-payment-telephone" placeholder="Phone number">
                                                             </div>
+                                                        </div>
 
-                                                            <div class="clearfix">
-                                                                <div class="bl-input must">
-                                                                    <input type="text" name="city_s" id="input-payment-city" placeholder="City">
-                                                                </div>
-                                                                <div class="bl-input clearfix">
 
+
+
+                                                        <div class="include-price-row">
+                                                            <input type="checkbox" class="styled-checkbox styled-checkbox-before" name="newsletter" value="1" id="newsletter"/>
+                                                            <label for="newsletter">I wish to subscribe to the Brilliant Canary newsletter.</label>
+                                                        </div>
+
+
+                                                        <div class="include-price-row no-bottom-margin" style="display: none">
+                                                            <input type="checkbox" class="styled-checkbox styled-checkbox-before" checked="checked" id="pc3" name="agree" value="1">
+                                                            <label for="pc3"><?php echo $text_agree; ?></label>
+                                                        </div>
+
+                                                        <p>
+                                                            Orders cannot be shipped to a P.O. Box<br/>
+                                                            Please make sure to provide a street address where a signature can be obtained for receipt
+                                                        </p>
+
+
+                                                    </div>
+                                                    <hr>
+                                                    <div class="line-with-input">
+                                                        <div class="title-c">SHIPPING ADDRESS</div>
+
+                                                        <div class="include-price-row">
+                                                            <input type="checkbox" class="styled-checkbox styled-checkbox-before" name="shiping_adress" value="1" checked="checked" id="shiping_adress"/>
+                                                            <label for="shiping_adress">My billing information is the same my delivery information</label>
+                                                        </div>
+
+                                                        <div id="shiping_adress_form">
+
+                                                            <div class="line-with-input">
+
+                                                                <div class="clearfix">
                                                                     <div class="bl-input must">
-                                                                        <select class="required" name="zone_id_s" id="input-payment-zone">
-                                                                        </select>
+                                                                        <input type="text" name="firstname_s"  id="input-payment-firstname" placeholder="First name">
                                                                     </div>
-
                                                                     <div class="bl-input must">
+                                                                        <input type="text" name="lastname_s"  id="input-payment-lastname" placeholder="Last name">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="clearfix">
+                                                                    <div class="bl-input must">
+                                                                        <input type="text" name="address_1_s" id="input-payment-address-1" placeholder="Address">
+                                                                    </div>
+                                                                    <div class="bl-input">
+                                                                        <input type="text" name="address_2_s" id="input-payment-address-2" placeholder="Address (cont.)">
+                                                                    </div>
+                                                                </div>
 
-                                                                        <select name="country_id_s" class="required" id="input-payment-country">
-                                                                            <option disabled value="">Select Country</option>
-                                                                            <?php foreach ($countries as $country) { ?>
-                                                                            <?php if ($country['country_id'] == $country_id) { ?>
-                                                                            <option value="<?php echo $country['country_id']; ?>"
-                                                                                    selected="selected"><?php echo $country['name']; ?></option>
-                                                                            <?php } else { ?>
-                                                                            <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
-                                                                            <?php } ?>
-                                                                            <?php } ?>
-                                                                        </select>
+                                                                <div class="clearfix">
+                                                                    <div class="bl-input must">
+                                                                        <input type="text" name="city_s" id="input-payment-city" placeholder="City">
+                                                                    </div>
+                                                                    <div class="bl-input clearfix">
+
+                                                                        <div class="bl-input must">
+                                                                            <select class="required" name="zone_id_s" id="input-payment-zone">
+                                                                            </select>
+                                                                        </div>
+
+                                                                        <div class="bl-input must">
+
+                                                                            <select name="country_id_s" class="required" id="input-payment-country">
+                                                                                <option disabled value="">Select Country</option>
+                                                                                <?php foreach ($countries as $country) { ?>
+                                                                                <?php if ($country['country_id'] == $country_id) { ?>
+                                                                                <option value="<?php echo $country['country_id']; ?>"
+                                                                                        selected="selected"><?php echo $country['name']; ?></option>
+                                                                                <?php } else { ?>
+                                                                                <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
+                                                                                <?php } ?>
+                                                                                <?php } ?>
+                                                                            </select>
+
+                                                                        </div>
 
                                                                     </div>
-
                                                                 </div>
-                                                            </div>
 
 
-                                                            <div class="clearfix">
-                                                                <div class="bl-input must">
-                                                                    <input type="text" name="postcode_s" id="input-payment-postcode" placeholder="Postal code">
+                                                                <div class="clearfix">
+                                                                    <div class="bl-input must">
+                                                                        <input type="text" name="postcode_s" id="input-payment-postcode" placeholder="Postal code">
+                                                                    </div>
+                                                                    <div class="bl-input must">
+                                                                        <input type="text" name="telephone_s" id="input-payment-telephone" placeholder="Phone number">
+                                                                    </div>
                                                                 </div>
-                                                                <div class="bl-input must">
-                                                                    <input type="text" name="telephone_s" id="input-payment-telephone" placeholder="Phone number">
-                                                                </div>
+
                                                             </div>
 
                                                         </div>
-
                                                     </div>
-                                                </div>
+                                                 </div>
 
                                             <?endif?>
                                         </div>
@@ -552,21 +554,21 @@
             $(this).tab('show');
         });
 
-        $(document).on('change', '#collapse-payment-address select[name=\'country_id\'], #collapse-payment-address select[name=\'country_id_s\']', function () {
+        $(document).on('change', '#collapse-payment-address .w-register-address select[name=\'country_id\']', function () {
             $.ajax({
                 url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
                 dataType: 'json',
                 beforeSend: function () {
-                    $('#collapse-payment-address select[name=\'country_id\']').after(' <i class="fa fa-circle-o-notch fa-spin"></i>');
+                    $('#collapse-payment-address .w-register-address select[name=\'country_id\']').after(' <i class="fa fa-circle-o-notch fa-spin"></i>');
                 },
                 complete: function () {
                     $('.fa-spin').remove();
                 },
                 success: function (json) {
                     if (json['postcode_required'] == '1') {
-                        $('#collapse-payment-address input[name=\'postcode\']').parent().parent().addClass('required');
+                        $('#collapse-payment-address .w-register-address input[name=\'postcode\']').parent().parent().addClass('required');
                     } else {
-                        $('#collapse-payment-address input[name=\'postcode\']').parent().parent().removeClass('required');
+                        $('#collapse-payment-address .w-register-address input[name=\'postcode\']').parent().parent().removeClass('required');
                     }
 
                     html = '<option selected disabled value="">Select State</option>';
@@ -585,16 +587,57 @@
                         html += '<option value="0" selected="selected">None</option>';
                     }
 
-                    $('#collapse-payment-address select[name=\'zone_id\']').html(html);
-                    $('#collapse-payment-address select[name=\'zone_id_s\']').html(html);
+                    $('#collapse-payment-address .w-register-address select[name=\'zone_id\']').html(html);
                 },
                 error: function (xhr, ajaxOptions, thrownError) {
                     alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
                 }
             });
         });
-        $('#collapse-payment-address select[name=\'country_id\']').trigger('change');
+        $('#collapse-payment-address .w-register-address select[name=\'country_id\']').trigger('change');
 
+
+        $(document).on('change', '#collapse-payment-address .w-register-address select[name=\'country_id_s\']', function () {
+            $.ajax({
+                url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
+                dataType: 'json',
+                beforeSend: function () {
+                    $('#collapse-payment-address .w-register-address select[name=\'country_id\']').after(' <i class="fa fa-circle-o-notch fa-spin"></i>');
+                },
+                complete: function () {
+                    $('.fa-spin').remove();
+                },
+                success: function (json) {
+                    if (json['postcode_required'] == '1') {
+                        $('#collapse-payment-address .w-register-address input[name=\'postcode\']').parent().parent().addClass('required');
+                    } else {
+                        $('#collapse-payment-address .w-register-address input[name=\'postcode\']').parent().parent().removeClass('required');
+                    }
+
+                    html = '<option selected disabled value="">Select State</option>';
+
+                    if (json['zone'] && json['zone'] != '') {
+                        for (i = 0; i < json['zone'].length; i++) {
+                            html += '<option value="' + json['zone'][i]['zone_id'] + '"';
+
+                            if (json['zone'][i]['zone_id'] == '<?php echo $zone_id; ?>') {
+                                html += ' selected="selected"';
+                            }
+
+                            html += '>' + json['zone'][i]['name'] + '</option>';
+                        }
+                    } else {
+                        html += '<option value="0" selected="selected">None</option>';
+                    }
+
+                    $('#collapse-payment-address .w-register-address select[name=\'zone_id_s\']').html(html);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                }
+            });
+        });
+        $('#collapse-payment-address .w-register-address select[name=\'country_id_s\']').trigger('change');
 
         $(document).on('change', '#input-cc-number', function () {
             $(this).validateCreditCard(function(result) {

@@ -311,7 +311,7 @@ class ControllerCheckoutCheckoutNew extends Controller {
 //            } else {
 //                $order_data['shipping_code'] = '';
 //            }
-        } elseif (!empty($this->request->post['shiping_adress'])) {
+        } elseif (isset($this->request->post['shiping_adress']) and $this->request->post['shiping_adress'] != 1) {
             $order_data['shipping_firstname'] = !empty($this->request->post['firstname_s']) ? $this->request->post['firstname_s'] : '' ;
             $order_data['shipping_lastname'] = !empty($this->request->post['lastname_s']) ? $this->request->post['lastname_s'] : '';
             $order_data['shipping_company'] = '';
@@ -327,7 +327,7 @@ class ControllerCheckoutCheckoutNew extends Controller {
             $order_data['shipping_custom_field'] = array();
             $order_data['shipping_method'] = '';
             $order_data['shipping_code'] = '';
-        } else {
+        } elseif (!isset($this->request->post['shiping_adress'])) {
             $order_data['shipping_firstname'] = '' ;
             $order_data['shipping_lastname'] = '';
             $order_data['shipping_company'] = '';

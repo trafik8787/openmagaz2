@@ -90,6 +90,24 @@ class ModelAccountAddress extends Model {
 		}
 	}
 
+
+    public function addShippingAddresses($data) {
+        $this->db->query("INSERT INTO " . DB_PREFIX . "address_shipping SET customer_id = '" . (int)$this->customer->getId() . "', firstname = '" . $this->db->escape($data['firstname_s']) . "', lastname = '" . $this->db->escape($data['lastname_s']) . "', address_1 = '" . $this->db->escape($data['address_1_s']) . "', address_2 = '" . $this->db->escape($data['address_2_s']) . "', postcode = '" . $this->db->escape($data['postcode_s']) . "', city = '" . $this->db->escape($data['city_s']) . "', zone_id = '" . (int)$data['zone_id_s'] . "', country_id = '" . (int)$data['country_id_s'] ."'");
+        $address_id = $this->db->getLastId();
+        $this->db->query("UPDATE " . DB_PREFIX . "customer SET shipping_address_id = '" . (int)$address_id . "' WHERE customer_id = '" . (int)$this->customer->getId() . "'");
+        return $address_id;
+    }
+
+
+    public function getShippingAddresses() {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "address_shipping WHERE customer_id = '" . (int)$this->customer->getId() . "'");
+        return $query->row;
+    }
+
+    public function editShippingAddress($data) {
+        $this->db->query("UPDATE " . DB_PREFIX . "address_shipping SET firstname = '" . $this->db->escape($data['firstname_s']) . "', lastname = '" . $this->db->escape($data['lastname_s']) . "', address_1 = '" . $this->db->escape($data['address_1_s']) . "', address_2 = '" . $this->db->escape($data['address_2_s']) . "', postcode = '" . $this->db->escape($data['postcode_s']) . "', city = '" . $this->db->escape($data['city_s']) . "', zone_id = '" . (int)$data['zone_id_s'] . "', country_id = '" . (int)$data['country_id_s'] . "' WHERE customer_id = '" . (int)$this->customer->getId() . "'");
+    }
+
 	public function getAddresses() {
 		$address_data = array();
 
