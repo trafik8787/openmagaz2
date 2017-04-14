@@ -787,13 +787,17 @@ class ControllerCheckoutCheckout extends Controller {
 
         $data['addresses'] = $this->model_account_address->getAddresses();
         $data['shipping_addresses'] = $this->model_account_address->getShippingAddresses();
+
+        if (empty($data['shipping_addresses']['country_id'])) {
+            $data['shipping_addresses']['country_id'] = $this->config->get('config_country_id');
+        }
        // dd( $data['shipping_addresses']);
         //если адрес существует
 
 
         $this->session->data['payment_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
 
-        if (isset($this->session->data['payment_address']['country_id'])) {
+        if (isset($this->session->data['payment_address']['country_id']) AND $this->session->data['payment_address']['country_id'] != 0) {
             $data['country_id'] = $this->session->data['payment_address']['country_id'];
         } else {
             $data['country_id'] = $this->config->get('config_country_id');

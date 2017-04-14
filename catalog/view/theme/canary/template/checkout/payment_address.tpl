@@ -1,16 +1,9 @@
 
-<div class="line-with-input">
+<div class="line-with-input w-register-address">
     <div class="title-c">BILLING ADDRESS</div>
 
-
-    <address>
-        <b><?=$addresses[$address_id]['firstname']?> <?=$addresses[$address_id]['lastname']?></b><br>
-        <?=$addresses[$address_id]['address_1']?><br>
-        <?=$addresses[$address_id]['country']?> <?=$addresses[$address_id]['zone']?>, <?=$addresses[$address_id]['postcode']?><br>
-        <?=$addresses[$address_id]['address_2']?>
-    </address>
     <form class="form-horizontal">
-      <?php if ($addresses) { ?>
+      <?php if ($addresses):?>
           <div class="radio">
             <label>
               <input type="radio" name="payment_address" value="existing" checked="checked" />
@@ -19,8 +12,76 @@
 
 
 
+        <address>
+            <b><?=$addresses[$address_id]['firstname']?> <?=$addresses[$address_id]['lastname']?></b><br>
+            <?=$addresses[$address_id]['address_1']?><br>
+            <?=$addresses[$address_id]['country']?> <?=$addresses[$address_id]['zone']?>, <?=$addresses[$address_id]['postcode']?><br>
+            <?=$addresses[$address_id]['address_2']?>
+        </address>
+
         <a href="/index.php?route=account/address/edit&address_id=<?=$address_id?>" class="btn btn-primary btn-xs">Edit</a>
-      <?php } ?>
+      <?else:?>
+
+
+            <div class="clearfix">
+                <div class="bl-input must">
+                    <input type="text" name="firstname"  id="input-payment-firstname" placeholder="First name">
+                </div>
+                <div class="bl-input must">
+                    <input type="text" name="lastname"  id="input-payment-lastname" placeholder="Last name">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="bl-input must">
+                    <input type="text" name="address_1" id="input-payment-address-1" placeholder="Address">
+                </div>
+                <div class="bl-input">
+                    <input type="text" name="address_2" id="input-payment-address-2" placeholder="Address (cont.)">
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <div class="bl-input must">
+                    <input type="text" name="city" id="input-payment-city" placeholder="City">
+                </div>
+                <div class="bl-input clearfix">
+
+                    <div class="bl-input must">
+                        <select class="required" name="zone_id" id="input-payment-zone">
+                        </select>
+                    </div>
+
+                    <div class="bl-input must">
+
+                        <select name="country_id" class="required" id="input-payment-country">
+                            <option disabled value="">Select Country</option>
+                            <?php foreach ($countries as $country) { ?>
+                            <?php if ($country['country_id'] == $country_id) { ?>
+                            <option value="<?php echo $country['country_id']; ?>"
+                                    selected="selected"><?php echo $country['name']; ?></option>
+                            <?php } else { ?>
+                            <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
+                            <?php } ?>
+                            <?php } ?>
+                        </select>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="clearfix">
+                <div class="bl-input must">
+                    <input type="text" name="postcode" id="input-payment-postcode" placeholder="Postal code">
+                </div>
+                <div class="bl-input must">
+                    <input type="text" name="telephone" id="input-payment-telephone" placeholder="Phone number">
+                </div>
+            </div>
+
+
+      <?endif?>
 
         <hr>
 
@@ -34,24 +95,24 @@
 
                     <div class="clearfix">
                         <div class="bl-input must">
-                            <input type="text" name="firstname_s"  id="input-payment-firstname" value="<?=$shipping_addresses['firstname']?>" placeholder="First name">
+                            <input type="text" name="firstname_s"  id="input-payment-firstname" value="<?=!empty($shipping_addresses['firstname']) ? $shipping_addresses['firstname'] : '' ?>" placeholder="First name">
                         </div>
                         <div class="bl-input must">
-                            <input type="text" name="lastname_s"  id="input-payment-lastname" value="<?=$shipping_addresses['lastname']?>" placeholder="Last name">
+                            <input type="text" name="lastname_s"  id="input-payment-lastname" value="<?=!empty($shipping_addresses['lastname']) ? $shipping_addresses['lastname'] : '' ?>" placeholder="Last name">
                         </div>
                     </div>
                     <div class="clearfix">
                         <div class="bl-input must">
-                            <input type="text" name="address_1_s" id="input-payment-address-1" value="<?=$shipping_addresses['address_1']?>" placeholder="Address">
+                            <input type="text" name="address_1_s" id="input-payment-address-1" value="<?=!empty($shipping_addresses['address_1']) ? $shipping_addresses['address_1'] : ''?>" placeholder="Address">
                         </div>
                         <div class="bl-input">
-                            <input type="text" name="address_2_s" id="input-payment-address-2" value="<?=$shipping_addresses['address_2']?>" placeholder="Address (cont.)">
+                            <input type="text" name="address_2_s" id="input-payment-address-2" value="<?=!empty($shipping_addresses['address_2']) ? $shipping_addresses['address_2'] : ''?>" placeholder="Address (cont.)">
                         </div>
                     </div>
 
                     <div class="clearfix">
                         <div class="bl-input must">
-                            <input type="text" name="city_s" id="input-payment-city" value="<?=$shipping_addresses['city']?>" placeholder="City">
+                            <input type="text" name="city_s" id="input-payment-city" value="<?=!empty($shipping_addresses['city']) ? $shipping_addresses['city'] : ''?>" placeholder="City">
                         </div>
                         <div class="bl-input clearfix">
 
@@ -82,7 +143,7 @@
 
                     <div class="clearfix">
                         <div class="bl-input must">
-                            <input type="text" name="postcode_s" id="input-payment-postcode" value="<?=$shipping_addresses['postcode']?>" placeholder="Postal code">
+                            <input type="text" name="postcode_s" id="input-payment-postcode" value="<?=!empty($shipping_addresses['postcode']) ? $shipping_addresses['postcode'] : ''?>" placeholder="Postal code">
                         </div>
                     </div>
 
@@ -129,7 +190,7 @@
                         html += '>' + json['zone'][i]['name'] + '</option>';
                     }
                 } else {
-                    html += '<option value="0" selected="selected"><?php echo $text_none; ?></option>';
+                    html += '<option value="0" selected="selected"><?=!empty($text_none) ? $text_none : "" ?></option>';
                 }
 
                 $('#collapse-payment-address_shipping select[name=\'zone_id_s\']').html(html);
