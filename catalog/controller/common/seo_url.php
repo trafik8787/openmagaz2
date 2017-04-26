@@ -43,6 +43,7 @@ class ControllerCommonSeoUrl extends Controller {
         'information/information/FreeEngraving' => 'information/services/free_engraving',
         'information/information/MadeInUSA' => 'information/services/made-in-usa',
         'information/information/WhyPickBrilliantCanary' => '/information/about-us/why-pick-brilliant-canary',
+        //'product/category&filter=11' => 'engagement-rings/dfg'
     );
 
 	public function index() {
@@ -95,8 +96,16 @@ class ControllerCommonSeoUrl extends Controller {
 					break;
 				}
 			}
+//
 
+            //dd(explode("/", $this->request->get['_route_']));
 
+            if (url_filtr_metal($this->request->get['_route_'])) {
+                $this->request->get['filter'] = url_filtr_metal($this->request->get['_route_']);
+                $this->request->get['route'] = 'product/category';
+            }
+
+//            dd($this->setURL($this->request->get['_route_']));
             /* SEO Custom URL */
             if ( $_s = $this->setURL($this->request->get['_route_']) ) {
                 $this->request->get['route'] = $_s;

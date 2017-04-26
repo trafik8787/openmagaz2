@@ -42,14 +42,14 @@
                     <?php if (in_array($filter['filter_id'], $filter_category)): ?>
                     <li class="list__item btn">
                         <label class="label--checkbox">
-                            <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" checked="checked">
+                            <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>" data-url="/<?=filtr_url_metal($filter['filter_id'])?>" class="checkbox" checked="checked">
                             <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
                         </label>
                     </li>
                     <?else:?>
                     <li class="list__item btn">
                         <label class="label--checkbox">
-                            <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>" class="checkbox" >
+                            <input type="radio" name="filter" value="<?php echo $filter['filter_id']; ?>" data-url="/<?=filtr_url_metal($filter['filter_id'])?>" class="checkbox" >
                             <span data-text="<?php echo $filter['name']; ?>"><span class="number-circle"><?php echo $filter['name_count']; ?></span><?php echo $filter['name']; ?></span>
                         </label>
                     </li>
@@ -138,7 +138,8 @@ $(document).ready(function () {
         history.pushState('', '', '');
         filter = [];
         $('input[name^=\'filter\']:checked').each(function (element) {
-            filter.push(this.value);
+//            filter.push(this.value);
+            filter.push($(this).data('url'));
         });
         var min_price_val = numeral().unformat($('input[name=\'min_price\']').val());
         var max_price_val = numeral().unformat($('input[name=\'max_price\']').val());
@@ -170,7 +171,8 @@ $(document).ready(function () {
         }
 
         var action = $('.w-action_page').val();
-        redirect = action + '&filter=' + filter.join(',') + min_price + max_price + min_weight + max_weight;
+//        redirect = action + '&filter=' + filter.join(',') + min_price + max_price + min_weight + max_weight;
+        redirect = action + filter.join(',') + min_price + max_price + min_weight + max_weight;
         history.pushState('', '', redirect);
 
        // console.log(location.search);
@@ -181,7 +183,8 @@ $(document).ready(function () {
             type: "GET", // будем передавать данные через POST
             dataType: "HTML", // указываем, что нам вернется JSON
             url: redirect,
-            data: '&filter=' + filter.join(',') + min_price + max_price + min_weight + max_weight, // передаем данные из формы
+           // data: '&filter=' + filter.join(',') + min_price + max_price + min_weight + max_weight, // передаем данные из формы
+            data:  filter.join(',') + min_price + max_price + min_weight + max_weight, // передаем данные из формы
             success: function (response) { // когда получаем ответ
                 // console.log(response);
 
@@ -230,14 +233,16 @@ $(document).ready(function () {
 
             filter = [];
             $('input[name^=\'filter\']:checked').each(function (element) {
-                filter.push(this.value);
+//                filter.push(this.value);
+                filter.push($(this).data('url'));
             });
 
             min_price = '&PriceFrom='+numeral().unformat($(".dop-filtr-price-min").val());
             max_price = '&PriceTo='+numeral().unformat($(".dop-filtr-price-max").val());
 
             var action = $('.w-action_page').val();
-            redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
+           // redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
+            redirect = action + filter.join(',') + min_price + max_price;
             history.pushState('', '', redirect);
 
 
@@ -245,7 +250,8 @@ $(document).ready(function () {
                 type: "GET", // будем передавать данные через POST
                 dataType: "HTML", // указываем, что нам вернется JSON
                 url: redirect,
-                data: '&filter=' + filter.join(',') + min_price + max_price, // передаем данные из формы
+                //data: '&filter=' + filter.join(',') + min_price + max_price, // передаем данные из формы
+                data: filter.join(',') + min_price + max_price, // передаем данные из формы
                 success: function (response) { // когда получаем ответ
 
                     $('.w-category-ajax').empty();
@@ -276,7 +282,8 @@ $(document).ready(function () {
         max_price = '&PriceTo='+numeral().unformat($(".dop-filtr-price-max").val());
 
         var action = $('.w-action_page').val();
-        redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
+        //redirect = action + '&filter=' + filter.join(',') + min_price + max_price;
+        redirect = action + filter.join(',') + min_price + max_price;
         history.pushState('', '', redirect);
 
         return false;
@@ -313,7 +320,8 @@ $(document).ready(function () {
             max_weight = '&WeightTo='+$(".dop-filtr-weight-max").val();
 
             var action = $('.w-action_page').val();
-            redirect = action + '&filter=' + filter.join(',') + min_weight + max_weight;
+            //redirect = action + '&filter=' + filter.join(',') + min_weight + max_weight;
+            redirect = action + filter.join(',') + min_weight + max_weight;
             history.pushState('', '', redirect);
 
 
@@ -321,7 +329,8 @@ $(document).ready(function () {
                 type: "GET", // будем передавать данные через POST
                 dataType: "HTML", // указываем, что нам вернется JSON
                 url: redirect,
-                data: '&filter=' + filter.join(',') + min_weight + max_weight, // передаем данные из формы
+                //data: '&filter=' + filter.join(',') + min_weight + max_weight, // передаем данные из формы
+                data:  filter.join(',') + min_weight + max_weight, // передаем данные из формы
                 success: function (response) { // когда получаем ответ
 
                     $('.w-category-ajax').empty();

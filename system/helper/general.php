@@ -379,3 +379,51 @@ function mod_shape ($shape) {
 }
 
 
+
+function filtr_url_metal ($value = null) {
+    $arr = array(
+            14 => '14-rose-gold',
+            15 => '18-rose-gold',
+            11 => '14-yellow-gold',
+            12 => '18-yellow-gold',
+            6 => '14-white-gold',
+            5 => '18-white-gold',
+            13 => 'platinum',
+            16 => 'palladium',
+            7 => 'all-metals'
+    );
+    return $arr[$value];
+}
+
+
+function url_filtr_metal ($value) {
+
+    if (!empty($value)) {
+        $path = explode("/", $value);
+
+        $arr = array(
+            '14-rose-gold' => 14,
+            '18-rose-gold' => 15,
+            '14-yellow-gold' => 11,
+            '18-yellow-gold' => 12,
+            '14-white-gold' => 6,
+            '18-white-gold' => 5,
+            'platinum' => 13,
+            'palladium' => 16,
+            'all-metals' => 7,
+        );
+
+
+        if (!empty($path[1])) {
+            if (!empty($arr[$path[1]])) {
+                return $arr[$path[1]];
+            } else {
+                return false;
+            }
+
+        }
+    }
+
+}
+
+
