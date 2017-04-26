@@ -43,7 +43,6 @@ class ControllerCommonSeoUrl extends Controller {
         'information/information/FreeEngraving' => 'information/services/free_engraving',
         'information/information/MadeInUSA' => 'information/services/made-in-usa',
         'information/information/WhyPickBrilliantCanary' => '/information/about-us/why-pick-brilliant-canary',
-        //'product/category&filter=11' => 'engagement-rings/dfg'
     );
 
 	public function index() {

@@ -59,16 +59,16 @@
                     <div class="w-category-gradient"></div>
                     <div class="h3 text-center">
                         <div class="icons-marcer_desing_left_icon"></div>
-                        <a href="/fine-jewelry/gemstone_rings&filter=7">Gemstone Jewelry</a>
+                        <a href="/fine-jewelry/gemstone_rings/all-metals">Gemstone Jewelry</a>
                         <div class="icons-marcer_desing_right_icon"></div>
                     </div>
-                    <a href="/fine-jewelry/gemstone_rings&filter=7"><img src="/catalog/view/theme/canary/img/demo_new_template/gemstones_jewelry.jpg" alt=""></a>
+                    <a href="/fine-jewelry/gemstone_rings/all-metals"><img src="/catalog/view/theme/canary/img/demo_new_template/gemstones_jewelry.jpg" alt=""></a>
                 </div>
                 <div class="list-group text-center">
-                    <a href="/fine-jewelry/gemstone_earrings&filter=7" class="w-list-group-item">Gemstone Earrings <span class="w-cur-left"></span></a>
-                    <a href="/fine-jewelry/gemstone_pendants&filter=7" class="w-list-group-item">Gemstone Pendants <span class="w-cur-left"></span></a>
-                    <a href="/fine-jewelry/gemstone_rings&filter=7" class="w-list-group-item">Gemstone Rings <span class="w-cur-left"></span></a>
-                    <a href="/fine-jewelry/gemstone_bracelets&filter=7" class="w-list-group-item">Gemstone Bracelets <span class="w-cur-left"></span></a>
+                    <a href="/fine-jewelry/gemstone_earrings/all-metals" class="w-list-group-item">Gemstone Earrings <span class="w-cur-left"></span></a>
+                    <a href="/fine-jewelry/gemstone_pendants/all-metals" class="w-list-group-item">Gemstone Pendants <span class="w-cur-left"></span></a>
+                    <a href="/fine-jewelry/gemstone_rings/all-metals" class="w-list-group-item">Gemstone Rings <span class="w-cur-left"></span></a>
+                    <a href="/fine-jewelry/gemstone_bracelets/all-metals" class="w-list-group-item">Gemstone Bracelets <span class="w-cur-left"></span></a>
                 </div>
             </div>
             <div class="w-shadow-slider"></div>

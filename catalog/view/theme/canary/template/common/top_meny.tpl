@@ -19,15 +19,15 @@
                 <div class="clearfix">
                     <div class="col-xs-7">
                         <ul class="w-checed-list engagement-list-colorfull">
-                            <li class="list__item btn"><a href="/engagement-rings&filter=13" class="label--checkbox"><span><span class="number-circle"></span>Platinum</span></a></li>
-                            <li class="list__item btn"><a href="/engagement-rings&filter=11" class="label--checkbox"><span class="yellow-g"><span class="number-circle">14</span>Yellow Gold</span></a></li>
-                            <li class="list__item btn"><a href="/engagement-rings&filter=12" class="label--checkbox"><span class="yellow-g"><span class="number-circle">18</span>Yellow Gold</span></a></li>
-                            <li class="list__item btn"><a href="/engagement-rings&filter=6" class="label--checkbox"><span><span class="number-circle">14</span>White Gold</span></a></li>
-                            <li class="list__item btn"><a href="/engagement-rings&filter=5" class="label--checkbox"><span><span class="number-circle">18</span>White Gold</span></a></li>
-                            <li class="list__item btn"><a href="/engagement-rings&filter=14" class="label--checkbox"><span class="rose-g"><span class="number-circle">14</span>Rose Gold</span></a></li>
-                            <li class="list__item btn"><a href="/engagement-rings&filter=15" class="label--checkbox"><span class="rose-g"><span class="number-circle">18</span>Rose Gold</span></a></li>
-                            <li class="list__item btn"><a href="/engagement-rings&filter=16" class="label--checkbox"><span><span class="number-circle"></span>Palladium</span></a></li>
-                            <li class="list__item btn all-label"><a href="/engagement-rings&filter=7" class="label--checkbox"><i class="all-menu-i"></i><span>All</span></a></li>
+                            <li class="list__item btn"><a href="/engagement-rings/platinum" class="label--checkbox"><span><span class="number-circle"></span>Platinum</span></a></li>
+                            <li class="list__item btn"><a href="/engagement-rings/14-yellow-gold" class="label--checkbox"><span class="yellow-g"><span class="number-circle">14</span>Yellow Gold</span></a></li>
+                            <li class="list__item btn"><a href="/engagement-rings/18-yellow-gold" class="label--checkbox"><span class="yellow-g"><span class="number-circle">18</span>Yellow Gold</span></a></li>
+                            <li class="list__item btn"><a href="/engagement-rings/14-white-gold" class="label--checkbox"><span><span class="number-circle">14</span>White Gold</span></a></li>
+                            <li class="list__item btn"><a href="/engagement-rings/18-white-gold" class="label--checkbox"><span><span class="number-circle">18</span>White Gold</span></a></li>
+                            <li class="list__item btn"><a href="/engagement-rings/14-rose-gold" class="label--checkbox"><span class="rose-g"><span class="number-circle">14</span>Rose Gold</span></a></li>
+                            <li class="list__item btn"><a href="/engagement-rings/18-rose-gold" class="label--checkbox"><span class="rose-g"><span class="number-circle">18</span>Rose Gold</span></a></li>
+                            <li class="list__item btn"><a href="/engagement-rings/palladium" class="label--checkbox"><span><span class="number-circle"></span>Palladium</span></a></li>
+                            <li class="list__item btn all-label"><a href="/engagement-rings/all-metals" class="label--checkbox"><i class="all-menu-i"></i><span>All</span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -152,10 +152,10 @@
                     <div class="col-md-4 col-sm-4 col-xs-4">
                         <div class="title">Browse jewelry by type</div>
                         <ul class="style-br-long ul-first-drop">
-                            <li><a href="<?php echo $categories[3]['children'][4]['href']?>&filter=7"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-15" style="background-position-y: 5px; background-position-x: -4px;"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a></li>
-                            <li><a href="<?php echo $categories[3]['children'][2]['href']?>&filter=7"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-earring" style="background-position-y: -12px;"></i></span> <span><?php echo $categories[3]['children'][2]['name']?></span></a></li>
-                            <li><a href="<?php echo $categories[3]['children'][6]['href']?>&filter=7" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-fashion-necklace" style="background-position-y: -8px;"></i></span> <span><?php echo $categories[3]['children'][6]['name']?></span></a></li>
-                            <li><a href="<?php echo $categories[3]['children'][9]['href']?>&filter=7"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-gemstone-bracelet"></i></span> <span><?php echo $categories[3]['children'][9]['name']?></span></a></li>
+                            <li><a href="<?php echo $categories[3]['children'][4]['href']?>/all-metals"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-15" style="background-position-y: 5px; background-position-x: -4px;"></i></span> <span><?php echo $categories[3]['children'][4]['name']?></span></a></li>
+                            <li><a href="<?php echo $categories[3]['children'][2]['href']?>/all-metals"  class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-earring" style="background-position-y: -12px;"></i></span> <span><?php echo $categories[3]['children'][2]['name']?></span></a></li>
+                            <li><a href="<?php echo $categories[3]['children'][6]['href']?>/all-metals" class="w-general-category"><span class="wrap-ico2"><i class="own-b own-b-gemstone-fashion-necklace" style="background-position-y: -8px;"></i></span> <span><?php echo $categories[3]['children'][6]['name']?></span></a></li>
+                            <li><a href="<?php echo $categories[3]['children'][9]['href']?>/all-metals"  class="w-general-category"><span class="wrap-ico3"><i class="own-b own-b-gemstone-bracelet"></i></span> <span><?php echo $categories[3]['children'][9]['name']?></span></a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-4">

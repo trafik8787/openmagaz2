@@ -414,14 +414,22 @@ function url_filtr_metal ($value) {
         );
 
 
-        if (!empty($path[1])) {
-            if (!empty($arr[$path[1]])) {
-                return $arr[$path[1]];
+        if (!empty($path[2]) AND $path[2] !== '') {
+            $uri_path = $path[2];
+        } else {
+            if (!empty($path[1])) {
+                $uri_path = $path[1];
+            }
+        }
+
+        if (!empty($uri_path)) {
+            if (!empty($arr[$uri_path])) {
+                return $arr[$uri_path];
             } else {
                 return false;
             }
-
         }
+
     }
 
 }

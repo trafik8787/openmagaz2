@@ -231,10 +231,10 @@
                             <div id="MenuMobile4" class="panel-collapse collapse">
                                 <div class="panel-body">
                                     <ul class="main-rubric">
-                                        <li><a href="<?php echo $categories[3]['children'][6]['href']?>&filter=7"><?php echo $categories[3]['children'][6]['name']?></a></li>
-                                        <li><a href="<?php echo $categories[3]['children'][4]['href']?>&filter=7"><?php echo $categories[3]['children'][4]['name']?></a></li>
-                                        <li><a href="<?php echo $categories[3]['children'][2]['href']?>&filter=7"><?php echo $categories[3]['children'][2]['name']?></a></li>
-                                        <li><a href="<?php echo $categories[3]['children'][9]['href']?>&filter=7"><?php echo $categories[3]['children'][9]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][6]['href']?>/all-metals"><?php echo $categories[3]['children'][6]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][4]['href']?>/all-metals"><?php echo $categories[3]['children'][4]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][2]['href']?>/all-metals"><?php echo $categories[3]['children'][2]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][9]['href']?>/all-metals"><?php echo $categories[3]['children'][9]['name']?></a></li>
                                         <li><a href="<?php echo $categories[3]['children'][7]['href']?>"><?php echo $categories[3]['children'][7]['name']?></a></li>
                                         <li><a href="<?php echo $categories[3]['children'][3]['href']?>"><?php echo $categories[3]['children'][3]['name']?></a></li>
                                         <li><a href="<?php echo $categories[3]['children'][0]['href']?>"><?php echo $categories[3]['children'][0]['name']?></a></li>
