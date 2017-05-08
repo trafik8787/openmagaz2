@@ -81,8 +81,17 @@ $(document).ready(function() {
         inProgress = false;
     });
 
+    // localStorage.setItem("page", 1);
+
+    //обновить при переключении метала
+    $('input[name^=\'filter\']').on('change', function () {
+        startFrom = 2;
+    });
+
 
     $(window).scroll(function() {
+
+        var htre = location.href;
         if ($('.w-ajax-loader-page').length>0) {
             if ($(window).scrollTop() + $(window).height() >= $(document).height() - 2000 && !inProgress) {
                 inProgress = true;
@@ -104,6 +113,11 @@ $(document).ready(function() {
                             $('.main-catalog-container table tbody').append($ner);
                             $ner.fadeIn("slow");
                             inProgress = false;
+                            //urk = $('#input-sort option:selected').val()+'&srol=1'+'&page='+startFrom;
+
+                            //history.pushState('', '', urk);
+
+                            //console.log(startFrom);
                             startFrom += 1;
                         } else {
                             //inProgress = true;
@@ -114,6 +128,12 @@ $(document).ready(function() {
             }
         }
     });
+
+    // $(window).on('popstate', function (e) {
+    //     var state = e.originalEvent.state;
+    //     alert('sdfsdf');
+    // });
+
 
 
 

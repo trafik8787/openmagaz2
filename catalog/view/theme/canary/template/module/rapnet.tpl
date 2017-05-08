@@ -109,8 +109,8 @@
                     <div class="filter-col-options">
                         <div class="filter-block filter1">
                             <div class="clearfix">
-                                <input type="text" id="amountCarat1" class="input-slider-p pull-left w-input-carat-from">
-                                <input type="text" id="amountCarat2" class="input-slider-p pull-right w-input-carat-to">
+                                <input type="number" step="0.01" min="0.25" max="15" id="amountCarat1" class="input-slider-p pull-left w-input-carat-from">
+                                <input type="number" step="0.01" min="0.26" max="15" id="amountCarat2" class="input-slider-p pull-right w-input-carat-to">
                             </div>
                             <div id="w-slider-carat"></div>
                         </div>
@@ -1214,7 +1214,7 @@
                     $('.container-loader').hide();
                 },
                 success: function (response) {
-                    $('html, body').animate({scrollTop: 200}, 'slow');
+//                    $('html, body').animate({scrollTop: 200}, 'slow');
                     $('.w-category-ajax').empty();
                     $('.w-category-ajax').html(response);
 

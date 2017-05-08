@@ -216,7 +216,7 @@ class ControllerCommonHeader extends Controller {
             '/catalog/view/theme/canary/css/easydropdown.css',
 //            '/catalog/view/theme/canary/css/style-1480021565530.css',
             //'/catalog/view/theme/canary/stylesheet/stylesheet-1457910874844.css',
-//            '/catalog/view/theme/canary/css/w_style-1480414222878.css',
+//            '/catalog/view/theme/canary/css/w_style-1480414222879.css',
 //            '/catalog/view/theme/canary/css/desktop-1480446257646.css'
         );
         $string = '';

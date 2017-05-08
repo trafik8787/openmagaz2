@@ -2,6 +2,17 @@
     .container-loader {
         left: 41%!important;
     }
+
+    .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+        top: -16px;
+        width: 34px;
+        height: 35px;
+        border: 0;
+        border-radius: 50%;
+        font-weight: bold;
+        background: #2f4680;
+    }
+
 }
 
 .col-md-12 > .h1{
@@ -4988,11 +4999,12 @@ text-align: left;
 
     .filter-col-options {
         display: block;
-        width: 100%;
+        width: 96%;
     }
 
     .filter-col-options .input-slider-p {
         margin-top: -30px;
+        margin-bottom: 25px;
     }
 
     .filter-col-options .all-line-filter {
