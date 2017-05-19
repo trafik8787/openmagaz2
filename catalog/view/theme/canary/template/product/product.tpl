@@ -33,6 +33,11 @@
         <div class="center-bl">
             <?php if ($special):?>
             <span class="scale-acsia hidden-xs"></span>
+
+                <?if (!empty($category_info['category_id'] == 20)):?>
+                    <span class="w-text-photo-render">*Ring includes complimentary CZ center</span>
+                <?endif?>
+
             <?endif?>
             <div class="one-product clearfix">
 

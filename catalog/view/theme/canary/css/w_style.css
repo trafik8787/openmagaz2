@@ -2647,6 +2647,12 @@ left: 7px;
     top: -5px;
 }
 
+.w-text-photo-render {
+    position: absolute;
+    top: 471px;
+    left: 30px;
+    z-index: 2;
+}
 
 .red-border {
     border: 1px solid red!important;
