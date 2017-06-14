@@ -206,7 +206,15 @@ class ControllerProductSearch extends Controller {
         }
 
 
+
 		if (isset($this->request->get['search']) || isset($this->request->get['tag'])) {
+            if ($page === 1 ) {
+                $controller_rapnet = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $this->request->get['search']));
+                $controller_rapnet = json_decode($controller_rapnet);
+                //dd($controller_rapnet->response->body->diamond);
+            }
+
+
 			$filter_data = array(
 				'filter_name'         => $search,
 				'filter_tag'          => $tag,
@@ -223,70 +231,91 @@ class ControllerProductSearch extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
+            if (!empty($controller_rapnet) and ($controller_rapnet->response->header->error_code === 0)) {
+                $results[] = (array) $controller_rapnet->response->body->diamond;
+                $product_total = $product_total + 1;
+            }
+
+            //dd($results);
 			if (empty($results)) {
                 $data['search_information'] = $this->model_catalog_information->getSearchInformation($search);
             }
-           // dd($results_search);
+           // dd($results);
 
 
 			foreach ($results as $result) {
 
-                if ($result['image']) {
+			    if (empty($result['diamond_id'])) {
+                    if ($result['image']) {
 
-                    $ext = pathinfo(basename($result['image']));
-                    if (!empty($ext['extension']) and $ext['extension'] == 'jpe') {
-                        $image = HostSite('/image/'.$result['image']);
-                    } else {
+                        $ext = pathinfo(basename($result['image']));
+                        if (!empty($ext['extension']) and $ext['extension'] == 'jpe') {
+                            $image = HostSite('/image/' . $result['image']);
+                        } else {
 
-                        $image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
-                        if (empty($image)) {
-                            $image = '/catalog/view/theme/canary/img/preloader.png';
+                            $image = $this->model_tool_image->resize($result['image'], $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+                            if (empty($image)) {
+                                $image = '/catalog/view/theme/canary/img/preloader.png';
+                            }
                         }
+
+                    } else {
+                        //$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
+                        $image = '/catalog/view/theme/canary/img/preloader.png';
                     }
 
+
+                    if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+                        $price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
+                    } else {
+                        $price = false;
+                    }
+
+                    if ((float)$result['special']) {
+                        $special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
+                    } else {
+                        $special = false;
+                    }
+
+                    if ($this->config->get('config_tax')) {
+                        $tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price']);
+                    } else {
+                        $tax = false;
+                    }
+
+                    if ($this->config->get('config_review_status')) {
+                        $rating = (int)$result['rating'];
+                    } else {
+                        $rating = false;
+                    }
+
+                    $data['products'][] = array(
+                        'product_id' => $result['product_id'],
+                        'sku' => $result['sku'],
+                        'thumb' => $image,
+                        'name' => $result['name'],
+                        'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
+                        'price' => $price,
+                        'special' => $special,
+                        'tax' => $tax,
+                        'minimum' => $result['minimum'] > 0 ? $result['minimum'] : 1,
+                        'rating' => $result['rating'],
+                        'href' => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
+                    );
+
                 } else {
-                    //$image = $this->model_tool_image->resize('placeholder.png', $this->config->get('config_image_product_width'), $this->config->get('config_image_product_height'));
-                    $image = '/catalog/view/theme/canary/img/preloader.png';
+                    $data['products'][] = array(
+                        'product_id' => $result['diamond_id'],
+                        'sku' => $result['diamond_id'],
+                        'thumb' => imageDiamont($result['shape']),
+                        'name' => $result['size'].' CARAT '
+                            .$result['color'].'-'.$result['clarity'].' '
+                            .$result['cut'].' CUT '.$result['shape'].' LOOSE GIA CERTIFIED DIAMOND',
+                        'special' => false,
+                        'price' => Currency::formatStat($result['total_sales_price']),
+                        'href' => '/diamond_page?diamond_id='.$result['diamond_id']
+                    );
                 }
-
-
-				if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
-					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')));
-				} else {
-					$price = false;
-				}
-
-				if ((float)$result['special']) {
-					$special = $this->currency->format($this->tax->calculate($result['special'], $result['tax_class_id'], $this->config->get('config_tax')));
-				} else {
-					$special = false;
-				}
-
-				if ($this->config->get('config_tax')) {
-					$tax = $this->currency->format((float)$result['special'] ? $result['special'] : $result['price']);
-				} else {
-					$tax = false;
-				}
-
-				if ($this->config->get('config_review_status')) {
-					$rating = (int)$result['rating'];
-				} else {
-					$rating = false;
-				}
-
-				$data['products'][] = array(
-					'product_id'  => $result['product_id'],
-                    'sku'         => $result['sku'],
-					'thumb'       => $image,
-					'name'        => $result['name'],
-					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
-					'price'       => $price,
-					'special'     => $special,
-					'tax'         => $tax,
-					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
-					'rating'      => $result['rating'],
-					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
-				);
 			}
 
 			$url = '';
