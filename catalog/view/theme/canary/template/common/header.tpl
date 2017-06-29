@@ -49,6 +49,27 @@
     <?//dd($categories)?>
 </head>
 <body>
+<script type="text/javascript">
+    var script = document.createElement("script");
+    script.async = true; script.type = "text/javascript";
+    var target = 'https://www.clickcease.com/monitor/stat.js';
+    script.src = target;
+    var elem = document.head;
+    elem.appendChild(script);
+</script>
+<noscript><a href="https://www.clickcease.com"><img src="https://monitor.clickcease.com/stats/stats.aspx" alt="Click Fraud Protection"/></a></noscript>
+
+<script type="text/javascript">
+    ccConVal = 0;
+    var script = document.createElement("script");
+    script.async = true;
+    script.type = "text/javascript";
+    var target = 'https://www.clickcease.com/monitor/cccontrack.js';
+    script.src = target; var elem = document.head; elem.appendChild(script);
+</script>
+<noscript>
+    <a href="https://www.clickcease.com"><img src="https://monitor.clickcease.com/conversions/conversions.aspx?value=0" alt="Click Fraud Monitoring"/></a>
+</noscript>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHJ8N6"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
