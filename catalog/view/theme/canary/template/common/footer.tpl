@@ -287,35 +287,74 @@
 //                }, 60000);
             });
         </script>
+        <!--*<div class="modal fade hidden-xs" id="ModalHomeSubskribe" tabindex="-1" role="dialog" aria-labelledby="ModalHomeSubskribeLabel" aria-hidden="true">*-->
+            <!--*<div class="modal-dialog">*-->
+                <!--*<div class="modal-content">*-->
+                    <!--*<div class="modal-header">*-->
+                        <!--*<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>*-->
+                        <!--*<h4 class="modal-title" id="myModalLabel">JOIN OUR MAILING LIST</h4>*-->
+                    <!--*</div>*-->
+                    <!--*<div class="modal-body">*-->
+                        <!--*<div class="modal-body-img">*-->
+                            <!--*<div>*-->
+                                <!--*<div class="top-body-text">*-->
+                                    <!--*<p class="top-body-text-1">SIGN UP NOW TO GET</p>*-->
+                                    <!--*<p class="top-body-text-2">$100 OFF &#42;</p>*-->
+                                    <!--*<p class="top-body-text-3">YOUR FIRST PURCHASE!</p>*-->
+                                <!--*</div>*-->
+                                <!--*<div class="text-center">*-->
+                                    <!--*<span class="text-centr-img">*-->
+                                        <!--*Be the first to hear <br>*-->
+                                        <!--*about exclusive offers <br>*-->
+                                        <!--*jewelry trends and brilliant updates.*-->
+                                    <!--*</span>*-->
+                                <!--*</div>*-->
+                                <!--*<?=$newsletter_coupon?>*-->
+                                <!--*<?=$mailchimp_newslrtter_form2?>*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
+                    <!--*<p>*-->
+                        <!--*&#42; Offer cannot be combined with any other offer, discount or promotion code.*-->
+                    <!--*</p>*-->
+                <!--*</div>*-->
+            <!--*</div>*-->
+        <!--*</div>*-->
         <div class="modal fade hidden-xs" id="ModalHomeSubskribe" tabindex="-1" role="dialog" aria-labelledby="ModalHomeSubskribeLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">JOIN OUR MAILING LIST</h4>
+                        <h4 class="modal-title" id="myModalLabel">LIMITED TIME OFFER</h4>
                     </div>
                     <div class="modal-body">
                         <div class="modal-body-img">
                             <div>
                                 <div class="top-body-text">
-                                    <p class="top-body-text-1">SIGN UP NOW TO GET</p>
-                                    <p class="top-body-text-2">$100 OFF &#42;</p>
-                                    <p class="top-body-text-3">YOUR FIRST PURCHASE!</p>
+                                    <p class="top-body-text-1">
+                                        <span>FREE</span> Wedding Ring
+                                    </p>
+                                    <!--*<p class="top-body-text-2">$100 OFF &#42;</p>*-->
+                                </div>
+                                <div class="centr-body-img-rings">
+
                                 </div>
                                 <div class="text-center">
-                                    <span class="text-centr-img">
-                                        Be the first to hear <br>
-                                        about exclusive offers <br>
-                                        jewelry trends and brilliant updates.
-                                    </span>
+                                        <span class="text-centr-img">
+                                           <a href="/14k-white-gold-petite-rope-band-B51695-14WW14-17187" class="btn btn-primary btn-lg">SHOP NOW</a>
+                                           <p class="top-body-text-3">SKU: B51695</p>
+                                        </span>
                                 </div>
                                 <!--*<?=$newsletter_coupon?>*-->
-                                <?=$mailchimp_newslrtter_form2?>
+                                <!--*<?=$mailchimp_newslrtter_form2?>*-->
                             </div>
                         </div>
                     </div>
-                    <p>
-                        &#42; Offer is valid for orders of $1000 or more cannot be combined with any other offer.
+                    <p class="modal-header-bootom-text">
+                        Spend $1000 or more on an engagement ring and get a FREE 14K gold wedding ring. Add the sku shown above to your shopping cart and enter code: FREEBAND at checkout.
+                    </p>
+                    <p class="modal-header-bootom-text2">
+                        Offer cannot be combined with any other offer, discount or promotion code.
                     </p>
                 </div>
             </div>

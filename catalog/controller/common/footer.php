@@ -56,9 +56,9 @@ class ControllerCommonFooter extends Controller {
 
 
 
-        if (empty(Cookie::get('NewsletModal'))) {
+        if (empty(Cookie::get('NewsletModal2'))) {
             $data['newsletter_cookie'] = 1;
-            Cookie::set('NewsletModal', 1);
+            Cookie::set('NewsletModal2', 1);
         }
 
         $this->load->model('catalog/category');

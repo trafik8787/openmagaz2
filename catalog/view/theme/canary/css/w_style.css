@@ -2575,14 +2575,13 @@ star-rating
 #ModalAkcia .modal-header,
 #ModalHomeSubskribe .modal-header {
     border: none;
-    color: #d5dced;
-    font-family: 'Felix Titling', fantasy;
+    color: #f6ebb5;
+    font-family: 'Garamond', fantasy;
 }
 
 #ModalHomeSubskribe .modal-header h4 {
-    font-size: 29px;
+    font-size: 57px;
     text-align: center;
-    padding: 10px 0 10px 0;
 }
 
 #ModalMailHit .modal-header .close,
@@ -2590,16 +2589,28 @@ star-rating
 #ModalHomeSubskribe .modal-header .close {
    
 width: 30px;
+   
 height: 30px;
+   
 border: 2px solid #d5dced;
+   
 opacity: 1;
+   
 color: #d2daeb;
+   
 border-radius: 50%;
+   
 position: absolute;
+   
 font-size: 25px;
+   
 display: block;
+   
 right: 12px;
+   
 font-weight: inherit;
+   
+background-color: #cccccc;
 }
 
 #ModalMailHit .modal-header .close > span,
@@ -2608,9 +2619,13 @@ font-weight: inherit;
 
 position: absolute;
 
-top: -1px;
+top: 0px;
 
-left: 7px;
+left: 6px;
+
+color: #000000;
+
+font-weight: bold;
 }
 
 .w-acsia-shild {
@@ -2726,11 +2741,26 @@ left: 7px;
     border-radius: inherit;
     background-color: #2f4680;
 }
+
+#ModalHomeSubskribe .modal-content .modal-header-bootom-text2 {
+    color: #f6ebb5;
+    padding: 0 0 20px;
+    font-family: 'Garamond', fantasy;
+    font-size: 18px;
+}
+
+#ModalHomeSubskribe .modal-content .modal-header-bootom-text {
+    color: #f6ebb5;
+    padding: 18px;
+    font-size: 25px;
+    line-height: 1.5;
+    font-family: 'Garamond', fantasy;
+}
+
 #ModalAkcia .modal-body,
 #ModalHomeSubskribe .modal-body {padding: 0 82px 0 82px;}
 
-#ModalAkcia.modal-body .top-body-text,
-#ModalHomeSubskribe .modal-body .top-body-text {
+#ModalAkcia.modal-body .top-body-text {
 
 text-align: center;
 
@@ -2740,10 +2770,30 @@ color: #1e3e7e;
 
 font-size: 16.6px;
 
-margin-bottom: 22%;
+margin-bottom: 2%;
 }
 
-#ModalHomeSubskribe .modal-body .top-body-text-1 {padding-bottom: 20px;}
+#ModalHomeSubskribe .modal-body .top-body-text {
+    font-family: 'Garamond', fantasy;
+}
+
+#ModalHomeSubskribe .modal-body .centr-body-img-rings {
+    background: url("/catalog/view/theme/canary/img/demo_new_template/weding-rings-free2.jpg") center / cover no-repeat;
+    height: 245px;
+}
+
+#ModalHomeSubskribe .modal-body .top-body-text-1 {
+    padding-bottom: 15px;
+    padding-top: 12px;
+    color: #2f4680;
+    font-size: 70px;
+    line-height: 1;
+    text-align: center;
+}
+#ModalHomeSubskribe .modal-body .top-body-text-1 > span {
+
+font-weight: bold;
+}
 #ModalHomeSubskribe .modal-body .top-body-text-2 {
 
 font-size: 60px;
@@ -2751,18 +2801,38 @@ font-size: 60px;
 font-weight: bold;
 }
 #ModalHomeSubskribe .modal-body .top-body-text-3 {
-
-padding-top: 23px;
+display: inline-block;
+left: 75%;
+position: absolute;
+top: 92%;
+font-size: 25px;
+font-family: 'Garamond', fantasy;
 }
 #ModalHomeSubskribe .modal-body .text-centr-img {
 
-font-family: 'Raleway-Regular', fantasy;
-    font-size: 14.5px;
+
+}
+#ModalHomeSubskribe .modal-body .text-centr-img a {
+
+font-size: 19.5px;
+
+background-color: #f6ebb5;
+
+border: 0;
+
+box-shadow: 1px 1px 4px 1px #a2a2a2;
+
+margin-bottom: 18px;
+
+color: #2f4680;
+
+font-weight: bold;
+
+margin-top: 22px;
 }
 
 #ModalHomeSubskribe .modal-dialog {
-    
-width: 711px;
+    width: 940px;
 }
 
 #ModalHomeSubskribe .modal-body .w-newsletter-form {text-align: center;width: 100%;display: inline-block;margin: 19px 0 28px 0;}
@@ -2784,10 +2854,13 @@ width: 98px;
 }
 
 #ModalHomeSubskribe .modal-body .modal-body-img {
-    background: url("/catalog/view/theme/canary/img/demo_new_template/modal-email-subskrib.png") 100% 100% no-repeat;
-    background-size: cover;
-    width: 100%;
-    padding-top: 24px;
+    /*background: url("/catalog/view/theme/canary/img/demo_new_template/modal-email-subskrib.png") 100% 100% no-repeat;*/
+    /*background-size: cover;*/
+    /*width: 100%;*/
+    /*padding-top: 24px;*/
+    background-color: #fff;
+    box-shadow: 0px 0px 33px 3px #292929;
+    padding: 0px 14px 0 14px;
 }
 .p-include-item:after {
     content: "";
