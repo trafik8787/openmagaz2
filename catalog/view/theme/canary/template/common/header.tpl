@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
+    <meta name="google-site-verification" content="WdtLcB8VEYoSe8n3wX1csioM1rorBh1C0YVEX2DDKM"/>
     <?if (!empty($meta)):?>
         <?foreach ($meta as $option => $row):?>
             <meta property="<?=$option?>" content="<?=$row?>"/>
