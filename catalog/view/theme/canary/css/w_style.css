@@ -2757,6 +2757,32 @@ font-weight: bold;
     font-family: 'Garamond', fantasy;
 }
 
+#ModalHomeSubskribe .bloc-demo-summer button.close {
+
+position: absolute;
+
+right: 30px;
+
+display: inline-block;
+
+background-color: #bbb9b9;
+
+height: 30px;
+
+width: 30px;
+
+top: 13px;
+
+border-radius: 50%;
+}
+
+#ModalHomeSubskribe .bloc-demo-summer button.close span {
+    font-size: 40px;
+    position: relative;
+    top: -8px;
+    left: 1px;
+}
+
 #ModalAkcia .modal-body,
 #ModalHomeSubskribe .modal-body {padding: 0 82px 0 82px;}
 
@@ -2801,12 +2827,18 @@ font-size: 60px;
 font-weight: bold;
 }
 #ModalHomeSubskribe .modal-body .top-body-text-3 {
-display: inline-block;
-left: 75%;
-position: absolute;
-top: 92%;
-font-size: 25px;
-font-family: 'Garamond', fantasy;
+
+display: inline-block;
+
+left: 75%;
+
+position: absolute;
+
+top: 92%;
+
+font-size: 25px;
+
+font-family: 'Garamond', fantasy;
 }
 #ModalHomeSubskribe .modal-body .text-centr-img {
 
@@ -2832,7 +2864,7 @@ margin-top: 22px;
 }
 
 #ModalHomeSubskribe .modal-dialog {
-    width: 940px;
+    width: 800px;
 }
 
 #ModalHomeSubskribe .modal-body .w-newsletter-form {text-align: center;width: 100%;display: inline-block;margin: 19px 0 28px 0;}

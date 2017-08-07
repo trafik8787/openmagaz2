@@ -322,41 +322,20 @@
         <!--*</div>*-->
         <div class="modal fade hidden-xs" id="ModalHomeSubskribe" tabindex="-1" role="dialog" aria-labelledby="ModalHomeSubskribeLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">LIMITED TIME OFFER</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-body-img">
-                            <div>
-                                <div class="top-body-text">
-                                    <p class="top-body-text-1">
-                                        <span>FREE</span> Wedding Ring
-                                    </p>
-                                    <!--*<p class="top-body-text-2">$100 OFF &#42;</p>*-->
-                                </div>
-                                <div class="centr-body-img-rings">
-
-                                </div>
-                                <div class="text-center">
-                                        <span class="text-centr-img">
-                                           <a href="/14k-white-gold-petite-rope-band-B51695-14WW14-17187" class="btn btn-primary btn-lg">SHOP NOW</a>
-                                           <p class="top-body-text-3">SKU: B51695</p>
-                                        </span>
-                                </div>
-                                <!--*<?=$newsletter_coupon?>*-->
-                                <!--*<?=$mailchimp_newslrtter_form2?>*-->
-                            </div>
-                        </div>
-                    </div>
-                    <p class="modal-header-bootom-text">
-                        Spend $1000 or more on an engagement ring and get a FREE 14K gold wedding ring. Add the sku shown above to your shopping cart and enter code: FREEBAND at checkout.
-                    </p>
-                    <p class="modal-header-bootom-text2">
-                        Offer cannot be combined with any other offer, discount or promotion code.
-                    </p>
+                <div class="row bloc-demo-summer">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
+                    <!--*<div class="col-md-6 w-left-bloc">*-->
+                        <!--*<div class="margin-top-40"><h1 class="text-center">end of the</h1></div>*-->
+                        <!--*<div><h1 class="text-summer text-center">SUMMER</h1></div>*-->
+                        <!--*<img src="/catalog/view/theme/canary/img/demo_new_template/sale_summer.jpg" alt="">*-->
+                    <!--*</div>*-->
+                    <!--*<div class="col-md-6 w-right-bloc">*-->
+                        <!--*<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>*-->
+                        <!--*sdf*-->
+                    <!--*</div>*-->
+                    <img src="/catalog/view/theme/canary/img/demo_new_template/summer.jpg" alt="">
                 </div>
+
             </div>
         </div>
     <?endif?>

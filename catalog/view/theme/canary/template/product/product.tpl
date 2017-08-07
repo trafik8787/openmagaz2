@@ -31,37 +31,37 @@
             <?php echo $content_top; ?>
         </div>
 
-        <div class="center-bl">
+        <!--*<div class="center-bl">*-->
 
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="baner-free-weding-rings-l" style="background-color: #36539a;
-    margin-bottom: 28px;
-    color: #fff;
-    font-size: 20px;
-    padding: 25px;">
-                        FREE WEDDING RING WITH ENGAGEMENT RING PURCHASE OF $1000 OR MORE!
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="baner-free-weding-rings-r" style="background: url('/catalog/view/theme/canary/img/demo_new_template/weding-rings-free.jpg') left / contain no-repeat; height: 68px;">
-                            </div>
-                        </div>
-                        <div class="col-md-5">
-                            <a href="/14k-white-gold-petite-rope-band-B51695-14WW14-17187" class="btn btn-primary btn-lg" style="background-color: #f6ebb5;
-    color: #2f4680;
-    font-weight: bold;
-    border: 0;
-    box-shadow: 0px 2px 5px 2px #ccc;     margin-top: 9px;">SHOP NOW</a>
-                        </div>
-                    </div>
+            <!--*<div class="row">*-->
+                <!--*<div class="col-md-8">*-->
+                    <!--*<div class="baner-free-weding-rings-l" style="background-color: #36539a;*-->
+    <!--*margin-bottom: 28px;*-->
+    <!--*color: #fff;*-->
+    <!--*font-size: 20px;*-->
+    <!--*padding: 25px;">*-->
+                        <!--*FREE WEDDING RING WITH ENGAGEMENT RING PURCHASE OF $1000 OR MORE!*-->
+                    <!--*</div>*-->
+                <!--*</div>*-->
+                <!--*<div class="col-md-4">*-->
+                    <!--*<div class="row">*-->
+                        <!--*<div class="col-md-7">*-->
+                            <!--*<div class="baner-free-weding-rings-r" style="background: url('/catalog/view/theme/canary/img/demo_new_template/weding-rings-free.jpg') left / contain no-repeat; height: 68px;">*-->
+                            <!--*</div>*-->
+                        <!--*</div>*-->
+                        <!--*<div class="col-md-5">*-->
+                            <!--*<a href="/14k-white-gold-petite-rope-band-B51695-14WW14-17187" class="btn btn-primary btn-lg" style="background-color: #f6ebb5;*-->
+    <!--*color: #2f4680;*-->
+    <!--*font-weight: bold;*-->
+    <!--*border: 0;*-->
+    <!--*box-shadow: 0px 2px 5px 2px #ccc;     margin-top: 9px;">SHOP NOW</a>*-->
+                        <!--*</div>*-->
+                    <!--*</div>*-->
 
 
-                </div>
-            </div>
-        </div>
+                <!--*</div>*-->
+            <!--*</div>*-->
+        <!--*</div>*-->
 
         <div class="center-bl">
             <?php if ($special):?>
