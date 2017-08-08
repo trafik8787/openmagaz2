@@ -12,7 +12,7 @@
                         <div class="center-bl w-content-baner clearfix">
                             <div class="w-baner-rings hidden-xs hidden-sm hidden-md"></div>
                             <div class="col-md-6 col-sm-5 col-xs-12">
-                                <div class="w-ac-baner-text">
+                                <div class="w-ac-baner-text hidden-xs">
                                     <div class="w-ac-baner-text0">Buy an Engagement Ring and</div>
                                     <div class="w-ac-baner-text1">GET 20% OFF</div>
                                     <div class="w-ac-baner-text2">YOUR WEDDING RING <p style="font-size: 14px;margin-top: 8px;">Enter code <b>WEDDING20</b> at checkout</p> </div>
@@ -24,6 +24,10 @@
                                         <!--*<p>*Does not include loose diamonds. Cannot be combined with any other offer.</p>*-->
                                         <!--*<p>Promotion ends December 24 at 11:59PM CST.</p>*-->
                                     <!--*</span>*-->
+                                </div>
+                                
+                                <div class="w-ac-baner-text visible-xs" style="top: 3px;">
+                                    <img src="/catalog/view/theme/canary/img/demo_new_template/MOBILE-3.png"  alt="">
                                 </div>
                                 <!--*<div class="w-button-in-baner">*-->
                                     <!--*<a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>*-->
