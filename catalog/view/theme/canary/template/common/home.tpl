@@ -27,7 +27,7 @@
                                 </div>
                                 
                                 <div class="w-ac-baner-text visible-xs" style="top: 3px;">
-                                    <img src="/catalog/view/theme/canary/img/demo_new_template/MOBILE-3.png"  alt="">
+                                    <img src="/catalog/view/theme/canary/img/demo_new_template/MOBILE-4.png"  alt="">
                                 </div>
                                 <!--*<div class="w-button-in-baner">*-->
                                     <!--*<a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>*-->
