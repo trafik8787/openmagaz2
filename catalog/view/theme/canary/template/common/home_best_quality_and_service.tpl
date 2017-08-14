@@ -65,7 +65,7 @@
                                 </span>
                                 <div class="media-body">
                                     <h4 class="media-heading"><b>Helping Others</b></h4>
-                                    <small>A Partion of Your Purchase Goes to Charity</small>
+                                    <small>A Portion of Your Purchase Goes to Charity</small>
                                 </div>
                             </div>
                         </div>

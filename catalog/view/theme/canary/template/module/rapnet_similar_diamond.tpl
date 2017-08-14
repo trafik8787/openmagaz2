@@ -1,4 +1,4 @@
-<?//dd($diamond_similar)?>
+cd ../<?//dd($diamond_similar)?>
 
 <div class="similar-section similar-stones">
     <div class="center-bl clearfix">
