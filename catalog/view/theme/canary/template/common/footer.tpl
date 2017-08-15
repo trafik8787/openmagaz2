@@ -284,6 +284,7 @@
             $(function () {
 //                setTimeout(function(){
                     $('#ModalHomeSubskribe').modal('show');
+
 //                }, 60000);
             });
         </script>
