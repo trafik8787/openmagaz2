@@ -48,6 +48,16 @@
         <?php echo $analytic; ?>
     <?php } ?>
     <?//dd($categories)?>
+    <script type="text/javascript">
+        var date = new Date();
+        function track_user() {
+            setInterval(function() {
+                date.setTime(date.getTime()+(2*1000));
+                document.cookie = "NewsletModal5=1; expires="+ date.toUTCString() + "; path=/";
+            }, 1000);
+        }
+        track_user();
+    </script>
 </head>
 <body>
 <script type="text/javascript">

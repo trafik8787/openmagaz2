@@ -55,10 +55,10 @@ class ControllerCommonFooter extends Controller {
         $data['mailchimp_newslrtter_form2'] = $this->load->controller('module/mailchimp_integration', array('coupon' => true));
 
         //$this->session->data['success']
-        if (empty($_COOKIE['NewsletModal4'])) {
+        if (empty($_COOKIE['NewsletModal5'])) {
             $data['newsletter_cookie'] = 1;
             //Cookie::set('NewsletModal3', 1);
-            setcookie("NewsletModal4", 1, time()+180);
+            setcookie("NewsletModal5", 1, time()+5);
 
         }
 
