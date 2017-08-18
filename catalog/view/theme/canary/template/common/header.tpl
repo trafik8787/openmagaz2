@@ -272,6 +272,7 @@
                                         <li><a href="<?php echo $categories[3]['children'][0]['href']?>"><?php echo $categories[3]['children'][0]['name']?></a></li>
                                         <li><a href="<?php echo $categories[3]['children'][1]['href']?>"><?php echo $categories[3]['children'][1]['name']?></a></li>
                                         <li><a href="<?php echo $categories[3]['children'][8]['href']?>"><?php echo $categories[3]['children'][8]['name']?></a></li>
+                                        <li><a href="<?php echo $categories[3]['children'][10]['href']?>"><?php echo $categories[3]['children'][10]['name']?></a></li>
                                     </ul>
                                 </div>
                             </div>
