@@ -5666,8 +5666,9 @@ text-align: left;
 .diamond-down-show > div[class^=col-md-] {
     border-right: 1px solid #ccc;
     padding: 30px 0 20px 0;
-    height: 24vh;
-
+    /* height: 24vh; */
+    position: relative;
+    height: 220px;
 }
 
 /*.diamond-down-show > div[class^=col-xs-] {*/
