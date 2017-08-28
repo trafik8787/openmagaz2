@@ -26,13 +26,46 @@ class ControllerModuleBloges extends Controller {
 
     public function getBloges () {
 
+
+//        $ch = curl_init();
+//        curl_setopt($ch, CURLOPT_FAILONERROR, 1);
+//        curl_setopt($ch, CURLOPT_RETURNTRANSFER,1);
+//        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
+//        curl_setopt($ch, CURLOPT_ENCODING, 'gzip,deflate');
+//        $headers = array( 'Expect:','Connection: Keep-Alive','Accept-Charset: utf-8,windows-1251;q=0.7,*;q=0.7' );
+//        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+//        curl_setopt($ch, CURLOPT_URL, $this->config->get('bloges_url')); // Адрес RSS
+//
+//        $rss_str = curl_exec($ch);
+//        if(!$rss_str) {
+//            print "Oooops. Can't get rss stream.\n";
+//            exit;
+//        }
+//
+//        $rss = simplexml_load_string($rss_str, 'SimpleXMLElement', LIBXML_NOCDATA);
+////        dd($rss, true);
+//
+//        foreach ($rss->channel->item as $node) {
+//            $result_arr[] = array(
+//                'title' => $node->title,
+//                'link' => $node->link,
+//                'date_m' => date('M', strtotime($node->pubDate)),
+//                'date_d' => date('d', strtotime($node->pubDate)),
+//                'desk' => text::limit_chars(strip_tags($node->description), 160 , null, true),
+//                'img' => $node->getElementsByTagName('content')->item(0)->getAttribute('url')
+//            );
+//        }
+
+
+
         $result_arr = array();
         $this->load->model('tool/image');
 
-        $rss = new DOMDocument();
-        $rss->load($this->config->get('bloges_url'));
 
         if (empty($this->cache->get('bloges'))) {
+
+            $rss = new DOMDocument();
+            $rss->load($this->config->get('bloges_url'));
 
             foreach ($rss->getElementsByTagName('item') as $node) {
 
