@@ -22,16 +22,6 @@
         </div>
     </div>
 
-    <div class="text-center">
-        <div class="btn-group" role="group" data-toggle="tab">
-
-            <a href=".tab1" data-toggle="tab"  class="btn btn-default btn-xs">Excellent Cut</a>
-            <a href=".tab2" data-toggle="tab" class="btn btn-default btn-xs">Very Good</a>
-            <a href=".tab3" data-toggle="tab" class="btn btn-default btn-xs">Good</a>
-            <a href=".tab4"  data-toggle="tab" class="btn btn-default btn-xs">Fair</a>
-
-        </div>
-    </div>
 
 </div>
 
@@ -82,22 +72,6 @@
         </div>
     </div>
 
-    <div class="text-center">
-        <div class="btn-group" role="group" data-toggle="tab">
-
-            <a href=".tab1" data-toggle="tab"  class="btn btn-default btn-xs"><b>D</b></a>
-            <a href=".tab2" data-toggle="tab" class="btn btn-default btn-xs"><b>E</b></a>
-            <a href=".tab3" data-toggle="tab" class="btn btn-default btn-xs"><b>F</b></a>
-            <a href=".tab4"  data-toggle="tab" class="btn btn-default btn-xs"><b>G</b></a>
-            <a href=".tab5"  data-toggle="tab" class="btn btn-default btn-xs"><b>H</b></a>
-            <a href=".tab6"  data-toggle="tab" class="btn btn-default btn-xs"><b>I</b></a>
-            <a href=".tab7"  data-toggle="tab" class="btn btn-default btn-xs"><b>J</b></a>
-            <a href=".tab8"  data-toggle="tab" class="btn btn-default btn-xs"><b>K</b></a>
-            <a href=".tab9"  data-toggle="tab" class="btn btn-default btn-xs"><b>L</b></a>
-            <a href=".tab10"  data-toggle="tab" class="btn btn-default btn-xs"><b>M</b></a>
-
-        </div>
-    </div>
 
 </div>
 
@@ -148,20 +122,5 @@
 
     </div>
 
-    <div class="text-center">
-        <div class="btn-group" role="group" data-toggle="tab">
-
-            <a href=".tab1" data-toggle="tab"  class="btn btn-default btn-xs"><b>FL</b></a>
-            <a href=".tab2" data-toggle="tab" class="btn btn-default btn-xs"><b>IF</b></a>
-            <a href=".tab3" data-toggle="tab" class="btn btn-default btn-xs"><b>VVS1</b></a>
-            <a href=".tab4"  data-toggle="tab" class="btn btn-default btn-xs"><b>VVS2</b></a>
-            <a href=".tab5"  data-toggle="tab" class="btn btn-default btn-xs"><b>VS1</b></a>
-            <a href=".tab6"  data-toggle="tab" class="btn btn-default btn-xs"><b>VS2</b></a>
-            <a href=".tab7"  data-toggle="tab" class="btn btn-default btn-xs"><b>SI1</b></a>
-            <a href=".tab8"  data-toggle="tab" class="btn btn-default btn-xs"><b>SI2</b></a>
-            <a href=".tab9"  data-toggle="tab" class="btn btn-default btn-xs"><b>I1</b></a>
-
-        </div>
-    </div>
 
 </div>

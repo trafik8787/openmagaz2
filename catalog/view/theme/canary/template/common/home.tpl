@@ -320,7 +320,7 @@
         </div>
     </div>
     <ul class="mobile-link-menu">
-        <li><a href="/education">EDUCATION</a></li>
+        <!--*<li><a href="/education">EDUCATION</a></li>*-->
         <li><a href="/information/faq">FAQ</a></li>
         <li><a href="/company">ABOUT</a></li>
     </ul>

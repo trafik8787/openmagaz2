@@ -38,24 +38,26 @@ class ControllerModuleBloges extends Controller {
 
             foreach ($rss->getElementsByTagName('item') as $node) {
 
-                $url = $node->getElementsByTagName('content')->item(0)->getAttribute('url');
-                $name_img = basename($url);
-                $url_img = copy($url, $_SERVER['DOCUMENT_ROOT'].'/image/bloges_img_tmp/'.$name_img);
+                if ($node->getElementsByTagName('content')->length !== 0) {
 
-                if ($url_img === true) {
-                    $url = '/image/bloges_img_tmp/'.$name_img;
+                    $url = $node->getElementsByTagName('content')->item(0)->getAttribute('url');
+                    $name_img = basename($url);
+                    $url_img = copy($url, $_SERVER['DOCUMENT_ROOT'] . '/image/bloges_img_tmp/' . $name_img);
+
+                    if ($url_img === true) {
+                        $url = '/image/bloges_img_tmp/' . $name_img;
+                    }
+
+                    $result_arr[] = array(
+                        'title' => $node->getElementsByTagName('title')->item(0)->nodeValue,
+                        'link' => $node->getElementsByTagName('link')->item(0)->nodeValue,
+                        'date_m' => date('M', strtotime($node->getElementsByTagName('pubDate')->item(0)->nodeValue)),
+                        'date_d' => date('d', strtotime($node->getElementsByTagName('pubDate')->item(0)->nodeValue)),
+                        'desk' => text::limit_chars(strip_tags($node->getElementsByTagName('encoded')->item(0)->nodeValue), 160, null, true),
+                        'img' => $url
+                    );
                 }
 
-                $result_arr[] = array(
-                    'title' => $node->getElementsByTagName('title')->item(0)->nodeValue,
-                    'link' => $node->getElementsByTagName('link')->item(0)->nodeValue,
-                    'date_m' => date('M', strtotime($node->getElementsByTagName('pubDate')->item(0)->nodeValue)),
-                    'date_d' => date('d', strtotime($node->getElementsByTagName('pubDate')->item(0)->nodeValue)),
-                    'desk' => text::limit_chars(strip_tags($node->getElementsByTagName('encoded')->item(0)->nodeValue), 160 , null, true),
-                    'img' => $url
-                );
-                //dd($node->getElementsByTagName('content')->item(0)->getAttribute('url'));
-                //dd($this->model_tool_image->resize($node->getElementsByTagName('content')->item(0)->getAttribute('url'), 285, 173));
             }
 
             $this->cache->set('bloges', $result_arr);
