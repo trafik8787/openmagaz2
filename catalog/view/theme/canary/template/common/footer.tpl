@@ -1,5 +1,4 @@
 <footer>
-
     <section>
         <div class="row w-footer-newsletter">
             <div class="center-bl">
