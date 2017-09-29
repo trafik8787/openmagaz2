@@ -20,14 +20,14 @@
                                         <!--*<i></i>*-->
                                         <a href="/engagement-rings" role="button" class="btn w-btn-orange2 shop-now">SHOP NOW</a>
                                     </div>
-                             
+
                                 </div>
                                 
                                 <!--*<div class="w-ac-baner-text visible-xs" style="top: 3px;">*-->
 
                                     <!--*<img src="/catalog/view/theme/canary/img/demo_new_template/MOBILE-4.png"  alt="">*-->
                                 <!--*</div>*-->
-                                <div class="w-button-in-baner">
+                                <div class="w-button-in-baner visible-xs">
                                     <a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
                                     <a href="/engagement-rings" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
                                 </div>
