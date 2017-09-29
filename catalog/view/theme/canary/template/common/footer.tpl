@@ -282,7 +282,7 @@
         <script>
             $(function () {
 //                setTimeout(function(){
-                    $('#ModalHomeSubskribe').modal('show');
+//                    $('#ModalHomeSubskribe').modal('show');
 
 //                }, 60000);
             });
