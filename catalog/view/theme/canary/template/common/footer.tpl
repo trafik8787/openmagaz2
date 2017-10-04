@@ -282,7 +282,7 @@
         <script>
             $(function () {
 //                setTimeout(function(){
-//                    $('#ModalHomeSubskribe').modal('show');
+                    $('#ModalHomeSubskribe').modal('show');
 
 //                }, 60000);
             });
@@ -333,7 +333,7 @@
                         <!--*<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>*-->
                         <!--*sdf*-->
                     <!--*</div>*-->
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/summer.jpg" alt="">
+                    <img src="/catalog/view/theme/canary/img/demo_new_template/FALL-SALE-3.jpg" alt="">
                 </div>
 
             </div>
