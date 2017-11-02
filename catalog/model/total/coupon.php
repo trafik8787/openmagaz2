@@ -12,17 +12,17 @@ class ModelTotalCoupon extends Model {
 			}
 
 			//todo делаем условие для купона fall2017
-            if ($coupon_query->row['name'] === 'fall2017') {
-			    $cart = $this->cart->getSubTotalCouponNotDiamond();
-			    if ($cart <= 1500) {
-                    $coupon_query->rows['discount'] = 10;
-                } elseif ($cart >= 1501 and $cart <= 2499) {
-                    $coupon_query->rows['discount'] = 20;
-                } elseif ($cart >= 2500) {
-                    $coupon_query->rows['discount'] = 25;
-                }
-                $status = true;
-            }
+//            if ($coupon_query->row['name'] === 'fall2017') {
+//			    $cart = $this->cart->getSubTotalCouponNotDiamond();
+//			    if ($cart <= 1500) {
+//                    $coupon_query->rows['discount'] = 10;
+//                } elseif ($cart >= 1501 and $cart <= 2499) {
+//                    $coupon_query->rows['discount'] = 20;
+//                } elseif ($cart >= 2500) {
+//                    $coupon_query->rows['discount'] = 25;
+//                }
+//                $status = true;
+//            }
 
 			$coupon_history_query = $this->db->query("SELECT COUNT(*) AS total FROM `" . DB_PREFIX . "coupon_history` ch WHERE ch.coupon_id = '" . (int)$coupon_query->row['coupon_id'] . "'");
 
@@ -157,16 +157,16 @@ class ModelTotalCoupon extends Model {
 						} elseif ($coupon_info['type'] == 'P') {
 
                             //todo делаем условие для купона fall2017
-                            if ($coupon_info['name'] === 'fall2017') {
-                                $cart = $this->cart->getSubTotalCouponNotDiamond();
-                                if ($cart <= 1500) {
-                                    $coupon_info['discount'] = 10;
-                                } elseif ($cart >= 1501 and $cart <= 2499) {
-                                    $coupon_info['discount'] = 20;
-                                } elseif ($cart >= 2500) {
-                                    $coupon_info['discount'] = 25;
-                                }
-                            }
+//                            if ($coupon_info['name'] === 'fall2017') {
+//                                $cart = $this->cart->getSubTotalCouponNotDiamond();
+//                                if ($cart <= 1500) {
+//                                    $coupon_info['discount'] = 10;
+//                                } elseif ($cart >= 1501 and $cart <= 2499) {
+//                                    $coupon_info['discount'] = 20;
+//                                } elseif ($cart >= 2500) {
+//                                    $coupon_info['discount'] = 25;
+//                                }
+//                            }
 
 						    //todo подсчет суммы без брилиантов на брилианты купоны действовать не должны
                             if (empty($product['diamond'])) {

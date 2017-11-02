@@ -333,7 +333,7 @@
                         <!--*<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>*-->
                         <!--*sdf*-->
                     <!--*</div>*-->
-                    <img src="/catalog/view/theme/canary/img/demo_new_template/FALL-SALE-3.jpg" alt="">
+                    <img src="/catalog/view/theme/canary/img/demo_new_template/summer.jpg" alt="">
                 </div>
 
             </div>
