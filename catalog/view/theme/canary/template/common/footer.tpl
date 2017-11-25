@@ -282,8 +282,7 @@
         <script>
             $(function () {
 //                setTimeout(function(){
-                    //$('#ModalHomeSubskribe').modal('show');
-                    $('#ModalAkcia').modal('show');
+                    $('#ModalHomeSubskribe').modal('show');
 
 //                }, 60000);
             });
@@ -365,7 +364,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <p>Promotion ends November 24 at 11:59pm CST.</p>
+                    <p>Promotion ends December 24 at 11:59PM CST.</p>
                     <p>&#42; Does not include loose diamonds. Cannot be combined with any other offer.</p>
                 </div>
             </div>

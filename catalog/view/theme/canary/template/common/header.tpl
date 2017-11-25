@@ -34,9 +34,9 @@
     </script>
     <?=$stylelink?>
     <link href="/catalog/view/theme/canary/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565531.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style-1480414222886.css"/>
-    <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop-1480446257647.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/style-1480021565530.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/w_style-1480414222885.css"/>
+    <link rel="stylesheet" href="/catalog/view/theme/canary/css/desktop-1480446257646.css"/>
     <style media="print" rel="stylesheet" type="text/css">
         .w-bredcrum-border, .static-page .w-blocs-complects, .product-need-help, .product-advantages, .include-section, .similar-section, footer, header {  display: none  }
     </style>

@@ -6,7 +6,7 @@
     <div class="margin-buttom-30 w-bredcrum-border">
        <div class="center-bl">
            <div class="row">
-               <span href="#" class="w-acsia-shild" data-toggle="modal" data-target="#ModalAkcia"><img src="/catalog/view/theme/canary/img/demo_new_template/akcia3.png" alt="briliantcanary"></span>
+               <span href="#" class="w-acsia-shild" data-toggle="modal"><img src="/catalog/view/theme/canary/img/demo_new_template/akcia3.jpg" alt="briliantcanary"></span>
                <div class="col-md-5 col-sm-5 hidden-xs ">
                    <ul class="breadcrumbs">
                        <?php foreach ($breadcrumbs as $breadcrumb) { ?>
