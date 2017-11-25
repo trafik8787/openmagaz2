@@ -403,7 +403,13 @@ ul.w-top-children-menu .dropdown-inside {
     /*box-shadow: inset 0 2px 3px rgba(0,0,0,0.1);*/
 }
 
-.w-ac-baner-text {font-weight: bold;position: relative;top: 72px;line-height: 1;}
+.w-ac-baner-text {
+    /* font-weight: bold; */
+    position: relative;
+    top: 111px;
+    line-height: 1;
+    font-family: "Felix Titling", fantasy;
+}
 
 .w-ac-baner-text0 {
     color: #2f4680;
@@ -412,7 +418,16 @@ ul.w-top-children-menu .dropdown-inside {
     font-size: 19px;
 }
 
-.w-ac-baner-text1 {font-size: 65px;color: #5fc4f0;/* line-height: 0.8; */}
+.w-ac-baner-text1 {
+
+    font-size: 51px;
+
+    font-weight: initial;
+
+    color: #2f4680;
+
+    /* line-height: 0.8; */
+}
 
 .w-shop-now-bloc a {
     margin-left: 0;
@@ -436,32 +451,62 @@ ul.w-top-children-menu .dropdown-inside {
     display: block;
 }
 
-.w-ac-baner-text2 {font-size: 24px;color: #5fc4f0;/* top: 29px; */position: relative;}
+.w-ac-baner-text2 {
 
-.w-btn-wiath {
-
+    font-size: 25px;
 
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9e9e9+100 */
- /* Old browsers */
- /* FF3.6-15 */
- /* Chrome10-25,Safari5.1-6 */
- /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
- /* IE6-9 */
-color: #111c4c!important;
-font-weight: bold;
-background: rgb(255,255,255);
-background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%);
-background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(233,233,233,1) 100%);
-background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(233,233,233,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9e9e9',GradientType=0 );
-position: relative;
-font-size: 16px;
-font-weight: bold;
-margin-top: 35px;
-padding: 13px 40px 13px 40px;
+    margin-top: 15px;
+
+    margin-bottom: 80px;
+
+    color: #2f4680;
+
+    /* top: 29px; */
+
+    position: relative;
 }
 
-.w-button-btn {position: relative;color: #b7c7e3;font-size: 14px;margin-top: 20px;display: block;}
+.w-btn-wiath {
+
+    color: #111c4c!important;
+
+    font-weight: bold;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9e9e9+100 */
+
+    background: rgb(255,255,255); /* Old browsers */
+
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(233,233,233,1) 100%); /* FF3.6-15 */
+
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(233,233,233,1) 100%); /* Chrome10-25,Safari5.1-6 */
+
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(233,233,233,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e9e9e9',GradientType=0 ); /* IE6-9 */
+
+    position: relative;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-top: 35px;
+
+    padding: 13px 40px 13px 40px;
+}
+
+.w-button-btn {
+
+    position: relative;
+
+    color: #7887ae;
+
+    font-size: 14.5px;
+
+    margin-top: 17%;
+
+    display: block;
+}
 
 .w-more-info {
     top: 17px;
@@ -2644,7 +2689,7 @@ star-rating
 
 #ModalAkcia .modal-content {
     border-radius: inherit;
-    background: url('/catalog/view/theme/canary/img/demo_new_template/modal-akcia3.jpg') no-repeat center/cover;
+    background: url('/catalog/view/theme/canary/img/demo_new_template/modal-akcia2.jpg') no-repeat center/cover;
     height: 548px;
     box-shadow: none;
     border: none;
