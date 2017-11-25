@@ -10,31 +10,31 @@
                 <div class="home-top-baneer">
                     <div class="row">
                         <div class="center-bl w-content-baner clearfix">
-                            <div class="w-baner-rings hidden-xs hidden-sm hidden-md"></div>
-                            <div class="col-md-6 col-sm-5 col-xs-12">
-                                <div class="w-ac-baner-text">
-                                    <div class="w-ac-baner-text0">Buy an Engagement Ring and</div>
-                                    <div class="w-ac-baner-text1">GET 20% OFF</div>
-                                    <div class="w-ac-baner-text2">YOUR WEDDING RING <p style="font-size: 14px;margin-top: 8px;">Enter code <b>WEDDING20</b> at checkout</p> </div>
-                                    <div class="w-shop-now-bloc">
-                                        <!--*<i></i>*-->
-                                        <a href="/engagement-rings" role="button" class="btn w-btn-orange2 shop-now">SHOP NOW</a>
-                                    </div>
-                                    <!--*<span class="w-button-btn">*-->
-                                    <!--*<p>*Does not include loose diamonds. Cannot be combined with any other offer.</p>*-->
-                                    <!--*<p>Promotion ends December 24 at 11:59PM CST.</p>*-->
-                                    <!--*</span>*-->
+                            <!--*<div class="w-baner-rings hidden-xs hidden-sm hidden-md"></div>*-->
+                            <div class="col-md-6 col-sm-5">
+
+                                <div class="w-ac-baner-text hidden-xs">
+                                    <div class="w-ac-baner-text1">Black Friday</div>
+                                    <div class="w-ac-baner-text2">Enjoy up to 50% OFF All Jewelry*</div>
+                                    <a href="/fine-jewelry" role="button" class="btn btn-primary btn-lg w-btn-wiath">SHOP NOW</a>
+                                    <span class="w-button-btn">
+                                        <p>*Offer does not include loose diamonds</p>
+                                        <p>Ends November 24 at 11:59pm CST</p>
+                                    </span>
                                 </div>
 
-                                
-                                <!--*<div class="w-ac-baner-text visible-xs" style="top: 3px;">*-->
+                                <div class="visible-xs mobile-friday-black">
+                                    <div class="img-mobile-friday-black"></div>
+                                    <span class="w-button-btn">
+                                        <p>*Offer does not include loose diamonds</p>
+                                        <p>Ends November 24 at 11:59pm CST</p>
+                                    </span>
+                                </div>
 
-                                    <!--*<img src="/catalog/view/theme/canary/img/demo_new_template/MOBILE-3.png"  alt="">*-->
-                                <!--*</div>*-->
-                                <!--*<div class="w-button-in-baner visible-xs">*-->
-                                    <!--*<a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>*-->
-                                    <!--*<a href="/engagement-rings" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>*-->
-                                <!--*</div>*-->
+                                <div class="w-button-in-baner hidden-xs">
+                                    <a href="/diamonds" class="btn w-btn-orange btn-lg" role="button"><div class="icons-diamond_icon"></div>Start With a Diamond</a>
+                                    <a href="/engagement-rings" class="btn w-btn-orange btn-lg" role="button"><div class="icons-rings_icon"></div>Start With a Setting</a>
+                                </div>
                             </div>
                             <div class="col-md-6 col-sm-7 hidden-xs">
                                 <?=$home_top_slider?>
