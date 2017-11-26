@@ -278,7 +278,7 @@
             </div>
         </section>
     </div>
-    <?if (!empty($newsletter_cookie) or 1):?>
+    <?if (!empty($newsletter_cookie)):?>
         <script>
             $(function () {
 //                setTimeout(function(){
