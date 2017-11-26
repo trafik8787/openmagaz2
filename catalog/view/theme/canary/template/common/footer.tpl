@@ -278,12 +278,12 @@
             </div>
         </section>
     </div>
-    <?if (!empty($newsletter_cookie)):?>
+    <?if (!empty($newsletter_cookie) or 1):?>
         <script>
             $(function () {
 //                setTimeout(function(){
-                    $('#ModalHomeSubskribe').modal('show');
-
+                    //$('#ModalHomeSubskribe').modal('show');
+                    $('#ModalAkcia').modal('show');
 //                }, 60000);
             });
         </script>
@@ -348,7 +348,7 @@
                 <div class="modal-body">
 
                     <div class="w-bloc-cat">
-
+                        <p class="dowm-text-baner-akcia">Enjoy additional 10% discount! Use code CYBER10 at checkout.</p>
                         <table class="w-list-cat">
                             <tr>
                                 <td><div class="w-item1"><a href="/engagement-rings">ENGAGEMENT RINGS</a></div></td>
@@ -364,8 +364,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <p>Promotion ends December 24 at 11:59PM CST.</p>
-                    <p>&#42; Does not include loose diamonds. Cannot be combined with any other offer.</p>
+                    <p>Offer does not include loose diamonds and cannot be combined with any other offer or discount code. Ends November 27 at 11:59pm CDT.</p>
                 </div>
             </div>
         </div>

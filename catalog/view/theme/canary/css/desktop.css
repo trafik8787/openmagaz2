@@ -18,7 +18,7 @@ top: 13px;
 }
 
     .home-top-baneer {
-        background: url("/catalog/view/theme/canary/img/demo_new_template/BANNER_MOB_15.jpg") no-repeat center/cover!important;
+        background: url("/catalog/view/theme/canary/img/demo_new_template/BANNER_13.jpg") no-repeat center/cover!important;
         width: 100%;
     }
 
@@ -402,7 +402,7 @@ top: 13px;
 @media  (max-width: 768px){
 
     .home-top-baneer {
-        background: url("/catalog/view/theme/canary/img/demo_new_template/BANNER_MOB_15.jpg") no-repeat center/cover!important;
+        background: url("/catalog/view/theme/canary/img/demo_new_template/BANNER_13.jpg") no-repeat center/cover!important;
         width: 100%;
     }
 
@@ -1096,20 +1096,40 @@ left: 399px!important;
     }
     #ModalAkcia .w-list-cat {
         margin: 0 auto;
-        top: 200px;
+        top: 161px;
     }
     #ModalAkcia .modal-content {
-        background: url("/catalog/view/theme/canary/img/demo_new_template/modal-akcia.jpg") no-repeat center/100%;
-        height: 413px;
+        background: url("/catalog/view/theme/canary/img/demo_new_template/modal-akcia4.jpg") no-repeat center/100%;
+        height: 374px;
+    }
+    #ModalAkcia .dowm-text-baner-akcia {
+        top: 166px;
+    }
+    .mobile-friday-black .img-mobile-friday-black {
+        background: url("/catalog/view/theme/canary/img/demo_new_template/akcia_mobile4.png") no-repeat center/100%;
+        height: 149px;
+        width: 450px;
+        margin: 0 auto;
+        top: 23px;
+        position: relative;
     }
 }
 
 @media  (max-width: 480px){
 
+    .mobile-friday-black .w-button-btn {
+        text-align: center;
+    }
+
+    .mobile-friday-black .img-mobile-friday-black {
+        background: url('/catalog/view/theme/canary/img/demo_new_template/akcia_mobile4.png') no-repeat center/100%;
+        height: 110px;
+        width: 100%;
+    }
 
 
     .home-top-baneer {
-        background: url("/catalog/view/theme/canary/img/demo_new_template/BANNER_MOB_15.jpg") no-repeat center/cover!important;
+        background: url("/catalog/view/theme/canary/img/demo_new_template/BANNER_13.jpg") no-repeat center/cover!important;
         width: 100%;
     }
 
@@ -1142,12 +1162,17 @@ left: 399px!important;
     }
 
     #ModalAkcia .modal-header .close {
-        top: 73px;
+        top: 60px;
     }
 
     #ModalAkcia .modal-content {
-        background: url("/catalog/view/theme/canary/img/demo_new_template/modal-akcia2.jpg") no-repeat center/100%;
-        height: 393px;
+        background: url("/catalog/view/theme/canary/img/demo_new_template/modal-akcia4.jpg") no-repeat center/100%;
+        height: 366px;
+    }
+
+    #ModalAkcia .dowm-text-baner-akcia {
+        top: 156px;
+        font-size: 11px;
     }
 
     .w-ac-baner-text {
