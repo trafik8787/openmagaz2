@@ -15,7 +15,8 @@
 
                                 <div class="w-ac-baner-text hidden-xs">
                                     <div class="w-ac-baner-text1">Cyber Monday</div>
-                                    <div class="w-ac-baner-text2">Enjoy up to 50% OFF All Jewelry*</div>
+                                    <div class="w-ac-baner-text2">Up to 50% OFF All Jewelry*</div>
+                                    <p style="color: #ffffff;padding-top: 11px;">Enjoy additional 10% discount! Use code CYBER10 at checkout.</p>
                                     <a href="/fine-jewelry" role="button" class="btn btn-primary btn-lg w-btn-wiath">SHOP NOW</a>
                                     <span class="w-button-btn">
                                         <p>*Offer does not include loose diamonds and cannot be combined</p>
