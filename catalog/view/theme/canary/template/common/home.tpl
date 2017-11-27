@@ -27,6 +27,7 @@
 
                                 <div class="visible-xs mobile-friday-black">
                                     <div class="img-mobile-friday-black"></div>
+                                    <p style="color: #ffffff;padding-top: 11px;text-align: center;">Enjoy additional 10% discount! Use code CYBER10 at checkout.</p>
                                     <span class="w-button-btn">
                                        <p>*Offer does not include loose diamonds and cannot be combined
                                         with any other offer or discount code.
