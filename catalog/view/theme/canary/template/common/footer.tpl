@@ -365,7 +365,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <p>Offer does not include loose diamonds and cannot be combined with any other offer or discount code. Ends November 27 at 11:59pm CDT.</p>
+                    <p>Offer does not include loose diamonds and cannot be combined with any other offer or discount code.</p>
                 </div>
             </div>
         </div>
