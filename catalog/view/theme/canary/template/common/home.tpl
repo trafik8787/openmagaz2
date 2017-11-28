@@ -8,6 +8,7 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 padding-0">
                 <div class="home-top-baneer">
+                    <span class="sale-extended" style="background-color: red; display: block;color: #ffffff;font-weight: bold;text-align: center;">SALE EXTENDED!</span>
                     <div class="row">
                         <div class="center-bl w-content-baner clearfix">
                             <!--*<div class="w-baner-rings hidden-xs hidden-sm hidden-md"></div>*-->
@@ -21,7 +22,6 @@
                                     <span class="w-button-btn">
                                         <p>*Offer does not include loose diamonds and cannot be combined</p>
                                         <p>with any other offer or discount code.</p>
-                                        <p>Ends November 27 at 11:59pm CDT.</p>
                                     </span>
                                 </div>
 
@@ -31,7 +31,7 @@
                                     <span class="w-button-btn">
                                        <p>*Offer does not include loose diamonds and cannot be combined
                                         with any other offer or discount code.
-                                        Ends November 27 at 11:59pm CDT.</p>
+                                        </p>
                                     </span>
                                 </div>
 

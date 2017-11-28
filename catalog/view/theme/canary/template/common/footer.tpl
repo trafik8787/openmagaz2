@@ -342,6 +342,7 @@
     <div class="modal fade hidden-xs" id="ModalAkcia" tabindex="-1" role="dialog" aria-labelledby="ModalAkciaLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
+                 <span class="sale-extended" style="background-color: red; display: block;color: #ffffff;font-weight: bold;text-align: center;">SALE EXTENDED!</span>
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span>&times;</span></button>
                 </div>
