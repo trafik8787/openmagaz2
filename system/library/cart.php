@@ -294,7 +294,57 @@ class Cart {
 
 
 
+    public function getProductsDiamondsOrderProduct () {
 
+        $cart_query_diamong = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND diamond = 1");
+
+        $result = array();
+        if (!empty($cart_query_diamong->rows)) {
+            foreach ($cart_query_diamong->rows as $row) {
+                $controller_rapnet = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $row['product_id']));
+                $controller_rapnet = json_decode($controller_rapnet);
+
+                 if (!empty($controller_rapnet) and ($controller_rapnet->response->header->error_code === 0)) {
+
+                     $data_arr_diamond = $controller_rapnet->response->body->diamond;
+
+                     $result[] = array(
+                         'cart_id' => $row['cart_id'],
+                         'sku'     => $data_arr_diamond->diamond_id,
+                         'product_id' => $row['product_id'],
+                         'diamond' => 1, //флаг означает что это брилиант
+                         'name' => $data_arr_diamond->shape.' '.$data_arr_diamond->size .' CARAT ' .$data_arr_diamond->color.' '.$data_arr_diamond->clarity,
+                         'model' => $data_arr_diamond->size . ' Carat ' . $data_arr_diamond->color . '-' . $data_arr_diamond->clarity . ' ' . $data_arr_diamond->cut . ' Cut ' . $data_arr_diamond->shape . ' Diamond ID-'.$data_arr_diamond->diamond_id,
+                         'shipping' => 1,
+                         'image' => imageDiamont($data_arr_diamond->shape),
+                         'option' => array(),
+                         'download' => array(),
+                         'quantity' => $row['quantity'],
+                         'minimum' => 1,
+                         'subtract' => 1,
+                         'stock' => 1,
+                         'price' => $data_arr_diamond->total_sales_price,
+                         'total' => $data_arr_diamond->total_sales_price,
+                         'reward' => 0,
+                         'points' => 0,
+                         'tax_class_id' => $this->config->get('rapnet_tax_class_id'), //налог
+                         'weight' => $data_arr_diamond->size,
+                         'weight_class_id' => 7,
+                         'length' => 0.00000000,
+                         'width' => 0.00000000,
+                         'height' => 0.00000000,
+                         'length_class_id' => 2,
+                         'recurring' => false,
+                         'complect' => $row['complect']
+                     );
+
+                 }
+
+            }
+        }
+
+        return $result;
+    }
 
 
 
@@ -306,7 +356,7 @@ class Cart {
     public function getProductsDiamondsCart() {
 
         $cart_query_diamong = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND diamond = 1");
-
+        //dd($cart_query_diamong->rows);
         if ($cart_query_diamong->num_rows) {
 
             foreach ($cart_query_diamong->rows as $row) {
@@ -435,13 +485,28 @@ class Cart {
 
 	public function getSubTotal() {
 		$total = 0;
-
+       // dd(23423423);
 		foreach ($this->getProducts() as $product) {
 			$total += $product['total'];
 		}
 
 		return $total;
 	}
+
+    public function getSubTotal2() {
+        $total = 0;
+        $products_s = $this->getProducts();
+        $diamond = $this->getProductsDiamondsOrderProduct();
+
+         $products_s = array_merge($products_s, $diamond);
+         //dd($products_s);
+        foreach ($products_s as $product) {
+            $total += $product['total'];
+        }
+
+        return $total;
+    }
+
 
 	//todo подсчет суммы без брилиантов на брилианты купоны действовать не должны
     public function getSubTotalCouponNotDiamond() {

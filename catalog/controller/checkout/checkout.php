@@ -379,6 +379,11 @@ class ControllerCheckoutCheckout extends Controller {
                 );
             }
 
+            $diamond = 0;
+            if ($product['diamond'] === 1) {
+                $diamond = 1;
+            }
+
             $order_data['products'][] = array(
                 'product_id' => $product['product_id'],
                 'name'       => $product['name'],
@@ -391,6 +396,7 @@ class ControllerCheckoutCheckout extends Controller {
                 'price'      => $product['price'],
                 'total'      => $product['total'],
                 'tax'        => $this->tax->getTax($product['price'], $product['tax_class_id']),
+                'diamond'    => $diamond,
                 'reward'     => $product['reward']
             );
         }

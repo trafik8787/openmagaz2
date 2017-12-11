@@ -9,6 +9,7 @@ class ControllerApiCart extends Controller {
 			$json['error']['warning'] = $this->language->get('error_permission');
 		} else {
 			if (isset($this->request->post['product'])) {
+
 				$this->cart->clear();
 
 				foreach ($this->request->post['product'] as $product) {
@@ -18,8 +19,10 @@ class ControllerApiCart extends Controller {
 						$option = array();
 					}
 
-					$this->cart->add($product['product_id'], $product['quantity'], $option);
+					$this->cart->add($product['product_id'], $product['quantity'], $option, 0, $product['diamond']);
 				}
+
+
 
 				$json['success'] = $this->language->get('text_success');
 
@@ -28,42 +31,61 @@ class ControllerApiCart extends Controller {
 				unset($this->session->data['payment_method']);
 				unset($this->session->data['payment_methods']);
 			} elseif (isset($this->request->post['product_id'])) {
-				$this->load->model('catalog/product');
+                $this->load->model('catalog/product');
 
-				$product_info = $this->model_catalog_product->getProduct($this->request->post['product_id']);
+                $product_info = $this->model_catalog_product->getProduct($this->request->post['product_id']);
+                //dd($product_info);
+                if ($product_info) {
+                    if (isset($this->request->post['quantity'])) {
+                        $quantity = $this->request->post['quantity'];
+                    } else {
+                        $quantity = 1;
+                    }
 
-				if ($product_info) {
-					if (isset($this->request->post['quantity'])) {
-						$quantity = $this->request->post['quantity'];
-					} else {
-						$quantity = 1;
-					}
+                    if (isset($this->request->post['option'])) {
+                        $option = array_filter($this->request->post['option']);
+                    } else {
+                        $option = array();
+                    }
 
-					if (isset($this->request->post['option'])) {
-						$option = array_filter($this->request->post['option']);
-					} else {
-						$option = array();
-					}
+                    $product_options = $this->model_catalog_product->getProductOptions($this->request->post['product_id']);
 
-					$product_options = $this->model_catalog_product->getProductOptions($this->request->post['product_id']);
+                    foreach ($product_options as $product_option) {
+                        if ($product_option['required'] && empty($option[$product_option['product_option_id']])) {
+                            $json['error']['option'][$product_option['product_option_id']] = sprintf($this->language->get('error_required'), $product_option['name']);
+                        }
+                    }
 
-					foreach ($product_options as $product_option) {
-						if ($product_option['required'] && empty($option[$product_option['product_option_id']])) {
-							$json['error']['option'][$product_option['product_option_id']] = sprintf($this->language->get('error_required'), $product_option['name']);
-						}
-					}
+                    if (!isset($json['error']['option'])) {
+                        $this->cart->add($this->request->post['product_id'], $quantity, $option);
 
-					if (!isset($json['error']['option'])) {
-						$this->cart->add($this->request->post['product_id'], $quantity, $option);
+                        $json['success'] = $this->language->get('text_success');
 
-						$json['success'] = $this->language->get('text_success');
+                        unset($this->session->data['shipping_method']);
+                        unset($this->session->data['shipping_methods']);
+                        unset($this->session->data['payment_method']);
+                        unset($this->session->data['payment_methods']);
+                    }
+                } elseif (!empty($this->request->post['id_diamond'])) {
 
-						unset($this->session->data['shipping_method']);
-						unset($this->session->data['shipping_methods']);
-						unset($this->session->data['payment_method']);
-						unset($this->session->data['payment_methods']);
-					}
-				} else {
+                    $controller_rapnet = $this->getDiamondId($this->request->post['id_diamond']);
+
+                    if ($controller_rapnet !== false) {
+
+
+                        $this->cart->add($controller_rapnet->diamond_id, 1, array(), 0, 1);
+
+                        $json['success'] = '0k';
+
+                        unset($this->session->data['shipping_method']);
+                        unset($this->session->data['shipping_methods']);
+                        unset($this->session->data['payment_method']);
+                        unset($this->session->data['payment_methods']);
+                    }
+
+
+
+                } else {
 					$json['error']['store'] = $this->language->get('error_store');
 				}
 			}
@@ -79,6 +101,19 @@ class ControllerApiCart extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+
+    public function getDiamondId ($id)
+    {
+        $controller_rapnet = $this->load->controller('module/rapnet/getDaimondsId', array('diamond_id' => $id));
+        $controller_rapnet = json_decode($controller_rapnet);
+
+        if (!empty($controller_rapnet) and ($controller_rapnet->response->header->error_code === 0)) {
+            return  $controller_rapnet->response->body->diamond;
+        }
+        return false;
+	}
+
 
 	public function edit() {
 		$this->load->language('api/cart');
@@ -146,6 +181,7 @@ class ControllerApiCart extends Controller {
 	}
 
 	public function products() {
+
 		$this->load->language('api/cart');
 
 		$json = array();
@@ -162,6 +198,9 @@ class ControllerApiCart extends Controller {
 			$json['products'] = array();
 
 			$products = $this->cart->getProducts();
+            $diamond = $this->cart->getProductsDiamondsOrderProduct();
+
+            $products = array_merge($products, $diamond);
 
 			foreach ($products as $product) {
 				$product_total = 0;
@@ -199,6 +238,7 @@ class ControllerApiCart extends Controller {
 					'shipping'   => $product['shipping'],
 					'price'      => $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax'))),
 					'total'      => $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')) * $product['quantity']),
+					'diamond'   => !empty($product['diamond']) ? 1 : 0,
 					'reward'     => $product['reward']
 				);
 			}
@@ -242,8 +282,7 @@ class ControllerApiCart extends Controller {
 			foreach ($results as $result) {
 				if ($this->config->get($result['code'] . '_status')) {
 					$this->load->model('total/' . $result['code']);
-
-					$this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes);
+					$this->{'model_total_' . $result['code']}->getTotal($total_data, $total, $taxes, true);
 				}
 			}
 
@@ -263,6 +302,7 @@ class ControllerApiCart extends Controller {
 					'text'  => $this->currency->format($total['value'])
 				);
 			}
+           /// dd($json['totals']);
 		}
 
 		if (isset($this->request->server['HTTP_ORIGIN'])) {

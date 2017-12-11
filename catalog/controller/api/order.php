@@ -554,7 +554,13 @@ class ControllerApiOrder extends Controller {
 					// Products
 					$order_data['products'] = array();
 
-					foreach ($this->cart->getProducts() as $product) {
+
+                    $products_s = $this->cart->getProducts();
+                    $diamond = $this->cart->getProductsDiamondsOrderProduct();
+
+                    $products_s = array_merge($products_s, $diamond);
+
+					foreach ($products_s as $product) {
 						$option_data = array();
 
 						foreach ($product['option'] as $option) {
@@ -580,6 +586,7 @@ class ControllerApiOrder extends Controller {
 							'price'      => $product['price'],
 							'total'      => $product['total'],
 							'tax'        => $this->tax->getTax($product['price'], $product['tax_class_id']),
+                            'diamond'    => isset($product['diamond']) ? $product['diamond'] : 0,
 							'reward'     => $product['reward']
 						);
 					}
@@ -624,10 +631,10 @@ class ControllerApiOrder extends Controller {
 						if ($this->config->get($result['code'] . '_status')) {
 							$this->load->model('total/' . $result['code']);
 
-							$this->{'model_total_' . $result['code']}->getTotal($order_data['totals'], $total, $taxes);
+							$this->{'model_total_' . $result['code']}->getTotal($order_data['totals'], $total, $taxes, true);
 						}
 					}
-
+                    //dd($order_data['totals']);
 					$sort_order = array();
 
 					foreach ($order_data['totals'] as $key => $value) {
@@ -663,6 +670,7 @@ class ControllerApiOrder extends Controller {
 						$order_data['affiliate_id'] = 0;
 						$order_data['commission'] = 0;
 					}
+
 
 					$this->model_checkout_order->editOrder($order_id, $order_data);
 

@@ -526,7 +526,7 @@ class ControllerSaleOrder extends Controller {
 			$data['order_products'] = array();
 
 			$products = $this->model_sale_order->getOrderProducts($this->request->get['order_id']);
-
+            //dd($products);
 			foreach ($products as $product) {
 				$data['order_products'][] = array(
 					'product_id' => $product['product_id'],
@@ -536,10 +536,11 @@ class ControllerSaleOrder extends Controller {
 					'quantity'   => $product['quantity'],
 					'price'      => $product['price'],
 					'total'      => $product['total'],
+					'diamond'    => $product['diamond'],
 					'reward'     => $product['reward']
 				);
 			}
-
+            //dd($data['order_products']);
 			// Vouchers
 			$data['order_vouchers'] = $this->model_sale_order->getOrderVouchers($this->request->get['order_id']);
 

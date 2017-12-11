@@ -252,10 +252,12 @@
                   <tbody id="cart">
                     <?php if ($order_products || $order_vouchers) { ?>
                     <?php $product_row = 0; ?>
+                    <?//dd($order_products)?>
                     <?php foreach ($order_products as $order_product) { ?>
                     <tr>
                       <td class="text-left"><?php echo $order_product['name']; ?><br />
                         <input type="hidden" name="product[<?php echo $product_row; ?>][product_id]" value="<?php echo $order_product['product_id']; ?>" />
+                        <input type="hidden" name="product[<?php echo $product_row; ?>][diamond]" value="<?php echo $order_product['diamond']; ?>" />
                         <?php foreach ($order_product['option'] as $option) { ?>
                         - <small><?php echo $option['name']; ?>: <?php echo $option['value']; ?></small><br />
                         <?php if ($option['type'] == 'select' || $option['type'] == 'radio' || $option['type'] == 'image') { ?>
@@ -313,8 +315,23 @@
               </ul>
               <div class="tab-content">
                 <div class="tab-pane active" id="tab-product">
+
                   <fieldset>
+
                     <legend><?php echo $text_product; ?></legend>
+
+                      <div class="form-group">
+                          <label class="col-sm-2 control-label" for="input-diamond">Diamond ID</label>
+                          <div class="col-lg-4">
+                              <div class="input-group">
+                                  <input type="number" name="id_diamond" value="" id="input-diamond" class="form-control" />
+                                  <span class="input-group-btn">
+                                    <button class="btn btn-primary" id="add-diamond" type="button"><i class="fa fa-plus-circle"></i> Add Diamond</button>
+                                  </span>
+                              </div>
+                          </div>
+                      </div>
+
                     <div class="form-group">
                       <label class="col-sm-2 control-label" for="input-product"><?php echo $entry_product; ?></label>
                       <div class="col-sm-10">
@@ -1074,7 +1091,7 @@ $('#button-refresh').on('click', function() {
 			var shipping = false;
 
 			html = '';
-
+            console.log(json['products']);
 			if (json['products'].length) {
 				for (i = 0; i < json['products'].length; i++) {
 					product = json['products'][i];
@@ -1105,10 +1122,14 @@ $('#button-refresh').on('click', function() {
 
 					html += '</td>';
 					html += '  <td class="text-left">' + product['model'] + '</td>';
-					html += '  <td class="text-right"><div class="input-group btn-block" style="max-width: 200px;"><input type="text" name="product[' + i + '][quantity]" value="' + product['quantity'] + '" class="form-control" /><span class="input-group-btn"><button type="button" data-toggle="tooltip" title="<?php echo $button_refresh; ?>" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><i class="fa fa-refresh"></i></button></span></div></td>';
+                    if (product['diamond'] == 0) {
+                        html += '  <td class="text-right"><div class="input-group btn-block" style="max-width: 200px;"><input type="text" name="product[' + i + '][quantity]" value="' + product['quantity'] + '" class="form-control" /><span class="input-group-btn"><button type="button" data-toggle="tooltip" title="<?php echo $button_refresh; ?>" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><i class="fa fa-refresh"></i></button></span></div></td>';
+                    } else {
+                        html += '  <td class="text-right"><div class="input-group btn-block" style="max-width: 200px;">1</div></td>';
+                    }
                     html += '  <td class="text-right">' + product['price'] + '</td>';
 					html += '  <td class="text-right">' + product['total'] + '</td>';
-					html += '  <td class="text-center" style="width: 3px;"><button type="button" value="' + product['cart_id'] + '" data-toggle="tooltip" title="<?php echo $button_remove; ?>" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
+                    html += '  <td class="text-center" style="width: 3px;"><button type="button" value="' + product['cart_id'] + '" data-toggle="tooltip" title="<?php echo $button_remove; ?>" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
 					html += '</tr>';
 
 					if (product['shipping'] != 0) {
@@ -1156,6 +1177,8 @@ $('#button-refresh').on('click', function() {
 				html += '  <td colspan="6" class="text-center"><?php echo $text_no_results; ?></td>';
 				html += '</tr>';
 			}
+
+          //  console.log(json['products']);
 
 			$('#cart').html(html);
 
@@ -1632,11 +1655,11 @@ $('#tab-product input[name=\'product\']').autocomplete({
 	}
 });
 
-$('#button-product-add').on('click', function() {
+$('#button-product-add, #add-diamond').on('click', function() {
 	$.ajax({
 		url: $('select[name=\'store\'] option:selected').val() + 'index.php?route=api/cart/add&token=' + token,
 		type: 'post',
-		data: $('#tab-product input[name=\'product_id\'], #tab-product input[name=\'quantity\'], #tab-product input[name^=\'option\'][type=\'text\'], #tab-product input[name^=\'option\'][type=\'hidden\'], #tab-product input[name^=\'option\'][type=\'radio\']:checked, #tab-product input[name^=\'option\'][type=\'checkbox\']:checked, #tab-product select[name^=\'option\'], #tab-product textarea[name^=\'option\']'),
+		data: $('#tab-product input[name=\'product_id\'], #tab-product input[name^=\'id_diamond\'], #tab-product input[name=\'quantity\'], #tab-product input[name^=\'option\'][type=\'text\'], #tab-product input[name^=\'option\'][type=\'hidden\'], #tab-product input[name^=\'option\'][type=\'radio\']:checked, #tab-product input[name^=\'option\'][type=\'checkbox\']:checked, #tab-product select[name^=\'option\'], #tab-product textarea[name^=\'option\']'),
 		dataType: 'json',
 		crossDomain: true,
 		beforeSend: function() {
