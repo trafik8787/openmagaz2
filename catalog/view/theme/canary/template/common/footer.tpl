@@ -283,7 +283,7 @@
             $(function () {
 //                setTimeout(function(){
                     //$('#ModalHomeSubskribe').modal('show');
-                    $('#ModalAkcia').modal('show');
+                    $('#ModalHomeSubskribe').modal('show');
 //                }, 60000);
             });
         </script>
